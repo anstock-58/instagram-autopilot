@@ -1,0 +1,22 @@
+name: Instagram Post Trigger
+
+on:
+  schedule:
+    # 17:55 Uhr CEST (Sommerzeit = UTC+2, also 15:55 UTC)
+    # Im Winter (CET = UTC+1) postet es um 16:55 Uhr — ggf. anpassen auf '55 16 * * *'
+    - cron: '55 15 * * *'
+  workflow_dispatch:  # Manueller Start über GitHub UI jederzeit möglich
+
+jobs:
+  post-trigger:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repo auschecken
+        uses: actions/checkout@v4
+
+      - name: Post-Trigger ausführen
+        shell: pwsh
+        env:
+          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+        run: ./scripts/post-trigger.ps1

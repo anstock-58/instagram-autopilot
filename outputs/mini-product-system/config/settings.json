@@ -1,0 +1,9 @@
+{
+  "activeProduct": "ki-content-starter-pack",
+  "price": 17,
+  "currency": "EUR",
+  "paypalLink": "https://paypal.me/anstock58/17",
+  "shopName": "Starter Pack Shop",
+  "contactEmail": "deine@email.de",
+  "adminPassword": "admin123"
+}

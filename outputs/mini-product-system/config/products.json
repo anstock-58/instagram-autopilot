@@ -1,0 +1,70 @@
+{
+  "products": [
+    {
+      "id": "ki-content-starter-pack",
+      "name": "KI Content Starter Pack",
+      "tagline": "Hol dir ein fertiges Starter Pack, mit dem du in wenigen Minuten neue Content Ideen, Hooks und Skripte für TikTok, Reels und Shorts bekommst.",
+      "description": "Für alle, die mit TikTok, Instagram oder Reels starten wollen — aber nicht wissen, was sie posten sollen.",
+      "contents": [
+        "30 Hook Vorlagen, die sofort Aufmerksamkeit erzeugen",
+        "15 fertige Video Ideen für TikTok, Reels und Shorts",
+        "10 Caption Vorlagen für sofortige Nutzung",
+        "7 Tage Posting Plan — ein klarer Fahrplan für den Start",
+        "ChatGPT Prompts, um eigene Inhalte schnell zu erstellen"
+      ],
+      "targetAudience": "Creator, Einsteiger, Selbstständige die online Content erstellen wollen",
+      "productFile": "produkt-ki-content-starter-pack.md",
+      "prompt": "Du bist Social Media Stratege und KI Content Experte.\n\nErstelle ein digitales Mini Produkt mit dem Titel: KI Content Starter Pack\n\nZiel:\nEinsteiger sollen schnell Content Ideen, Hooks und einfache Skripte für TikTok, Reels und Shorts bekommen.\n\nErstelle:\n1. Ein kurzes Vorwort (max. 150 Wörter)\n2. 30 Hook Vorlagen (nummeriert, direkt verwendbar)\n3. 15 Video Ideen (mit kurzem Titel und einem Satz Beschreibung)\n4. 10 Caption Vorlagen (für TikTok/Instagram, mit Hashtag-Platzhaltern)\n5. Einen 7 Tage Posting Plan (Tag 1-7, mit konkreten täglichen Aufgaben)\n6. 10 ChatGPT Prompts für eigene Inhalte (kopierbereit)\n\nSprache: Einfach, direkt, anfängerfreundlich, ohne leere Versprechen.\nFormat: Klar strukturiert mit Überschriften und Bulletpoints, direkt als PDF-Inhalt verwendbar.\nTon: Motivierend aber realistisch. Keine Hype-Sprache."
+    },
+    {
+      "id": "side-hustle-starter-kit",
+      "name": "Mini Side Hustle Starter Kit",
+      "tagline": "Du willst online Geld verdienen, weißt aber nicht womit? Dieses Kit gibt dir fünf realistische Wege und einen konkreten 7-Tage-Plan.",
+      "description": "Für alle, die online Geld verdienen wollen, aber sich in zu vielen Ideen und Tipps verlieren.",
+      "contents": [
+        "5 einfache Online Side Hustle Ideen, die heute noch starten können",
+        "Checkliste zur Auswahl des passenden Modells für dich",
+        "7 Tage Umsetzungsplan — konkret und alltagstauglich",
+        "DM Vorlagen für erste Kunden — kopieren und anpassen",
+        "ChatGPT Prompts zur Angebotserstellung"
+      ],
+      "targetAudience": "Einsteiger die online ein Nebeneinkommen aufbauen wollen",
+      "productFile": "produkt-side-hustle-starter-kit.md",
+      "prompt": "Du bist Online Business Stratege und Side Hustle Experte.\n\nErstelle ein digitales Mini Produkt mit dem Titel: Mini Side Hustle Starter Kit\n\nZiel:\nMenschen die online Geld verdienen wollen sollen einen klaren Einstiegspunkt bekommen — ohne Überforderung.\n\nErstelle:\n1. Ein kurzes Vorwort (max. 150 Wörter)\n2. 5 einfache Online Side Hustle Ideen (mit Beschreibung, Einstiegshürde 1-5, Zeitaufwand, Verdienstpotenzial)\n3. Checkliste zur Auswahl des passenden Modells (8-10 Fragen mit Ja/Nein)\n4. Einen 7 Tage Umsetzungsplan (Tag 1-7 mit konkreten täglichen Aufgaben)\n5. 10 DM Vorlagen für erste Kunden (für Instagram/TikTok DMs)\n6. 10 ChatGPT Prompts zur Angebotserstellung\n\nSprache: Einfach, direkt, anfängerfreundlich. Keine unrealistischen Versprechen.\nFormat: Klar strukturiert, direkt als PDF-Inhalt verwendbar.\nTon: Ermutigend aber ehrlich. Keine \"reich werden über Nacht\" Versprechen."
+    },
+    {
+      "id": "musterbriefe-senioren",
+      "name": "Musterbriefe Pack für Senioren",
+      "tagline": "25 fertige Briefe für den Alltag — einfach ausfüllen und abschicken. Für Krankenkasse, Vermieter, Verträge und Behörden.",
+      "description": "Für alle, die nicht wissen wie man Widersprüche, Kündigungen oder Beschwerden richtig formuliert.",
+      "contents": [
+        "5 Briefe für Krankenkasse und Gesundheit (Widerspruch, Pflegegrad, Zuzahlung)",
+        "5 Briefe für Vertragskündigungen (Handy, Abo, Versicherung, Fitness)",
+        "4 Briefe für Reklamation und Beschwerde (Handwerker, Nachbarn, Mahnung)",
+        "4 Briefe für Behörden und Ämter (Steuer, Rente, Rundfunkbeitrag, Schwerbehinderung)",
+        "3 Briefe für Wohnen und Vermieter (Mängel, Kündigung, Nebenkosten)",
+        "2 Briefe für Bank und Finanzen (Gebühren, Lastschrift)",
+        "2 Vorlagen für Vollmacht und allgemeine Behördenbriefe"
+      ],
+      "targetAudience": "Senioren 60+, Menschen die Behörden- und Alltagsbriefe einfach formulieren wollen",
+      "productFile": "produkt-musterbriefe-senioren.md",
+      "prompt": "Du bist Experte für einfache Alltagskommunikation und Verbraucherrechte.\n\nErstelle ein digitales Mini Produkt mit dem Titel: Musterbriefe Pack für Senioren\n\nZiel:\nSenioren und Menschen die keine Erfahrung mit Behördenbriefen haben sollen fertige, sofort nutzbare Musterbriefe bekommen.\n\nErstelle:\n1. Ein kurzes Vorwort (max. 150 Wörter)\n2. 5 Briefe für Krankenkasse/Gesundheit\n3. 5 Briefe für Kündigungen\n4. 4 Briefe für Reklamation und Beschwerde\n5. 4 Briefe für Behörden und Ämter\n6. Praktische Tipps zum Briefversand\n\nSprache: Sehr einfach, verständlich, kein Juristendeutsch. Lücken in [eckigen Klammern].\nFormat: Fertige Briefvorlagen, direkt ausfüllbar und druckfertig."
+    },
+    {
+      "id": "tiktok-content-ideen-pack",
+      "name": "TikTok Content Ideen Generator Pack",
+      "tagline": "50 Video Ideen, 25 Hooks, 10 Skript Vorlagen und ein 30 Tage Kalender — alles fertig, damit du täglich posten kannst ohne blank zu werden.",
+      "description": "Für Creator, Selbstständige oder Einsteiger, die täglich Content posten wollen, aber täglich neu überlegen müssen was.",
+      "contents": [
+        "50 TikTok Video Ideen — sofort verwendbar",
+        "25 starke Hook Sätze, die scrollen stoppen",
+        "10 einfache Skript Vorlagen (30-45 Sek. Format)",
+        "30 Tage Content Kalender — ausgefüllt und planbar",
+        "Vorlage für Bio und Call to Action"
+      ],
+      "targetAudience": "TikTok Creator, Selbstständige, Einsteiger die täglich posten wollen",
+      "productFile": "produkt-tiktok-content-ideen-pack.md",
+      "prompt": "Du bist TikTok Growth Spezialist und Content Stratege.\n\nErstelle ein digitales Mini Produkt mit dem Titel: TikTok Content Ideen Generator Pack\n\nZiel:\nCreator und Einsteiger sollen nie wieder blank sein beim täglichen Content — sie brauchen fertige Ideen, Hooks und Skripte.\n\nErstelle:\n1. Ein kurzes Vorwort (max. 150 Wörter)\n2. 50 TikTok Video Ideen (nummeriert, mit Titel und einem Satz Beschreibung, breit für Themen: KI, Online Business, Nebenverdienst, Produktivität, Content Creation)\n3. 25 starke Hook Sätze (nummeriert, direkt am Anfang eines Videos verwendbar)\n4. 10 Skript Vorlagen (Aufbau: Hook → Problem → Lösung → CTA, je 30-45 Sek.)\n5. 30 Tage Content Kalender (Datum, Thema, Hook, Format, CTA)\n6. Bio Vorlage und 5 Call to Action Varianten\n\nSprache: Einfach, direkt, creator-freundlich.\nFormat: Klar strukturiert, direkt als PDF-Inhalt verwendbar."
+    }
+  ]
+}

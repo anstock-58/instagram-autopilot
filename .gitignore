@@ -1,0 +1,20 @@
+# Sensitive Daten — niemals auf GitHub
+.env
+context/secrets.md
+
+# Logs und lokale Outputs
+outputs/post-trigger-log.txt
+outputs/post-archiv.csv
+
+# Claude Code — interne Plugin-Dateien (groß, nicht relevant)
+.claude/skills/
+
+# Node
+node_modules/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Claude lokale Einstellungen
+.claude/settings.local.json

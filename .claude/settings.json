@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '{\"systemMessage\": \"⚠️  Session nicht vergessen zu beenden! Tippe /shutdown um alles zu speichern.\"}'"
+          }
+        ]
+      }
+    ]
+  }
+}
