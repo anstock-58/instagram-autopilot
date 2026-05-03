@@ -28,7 +28,7 @@ try {
     exit 1
 }
 
-$heuteRow = $rows | Where-Object { $_.Datum -eq $heute }
+$heuteRow = $rows | Where-Object { $_.Datum -eq $heute } | Select-Object -First 1
 
 if (-not $heuteRow) {
     Write-Log "Kein Post fuer heute gefunden. Nichts zu tun."
