@@ -1,14 +1,13 @@
-# post-trigger.ps1
-# Liest das Contentplan-CSV, findet den heutigen Post und feuert den Make.com Webhook.
-# Laeuft taeglich um 17:55 Uhr via Windows Task Scheduler oder GitHub Actions.
+# post-trigger-tac.ps1
+# Liest den TAC-Contentplan, findet den heutigen Post und feuert den Make.com Webhook.
+# Laeuft taeglich um 17:55 Uhr via GitHub Actions.
 
-# Basis-Pfad: GitHub Actions oder lokaler PC
 $basePath   = if ($env:GITHUB_WORKSPACE) { $env:GITHUB_WORKSPACE } else { "C:\Users\andre\claude-workspace-vorlage" }
 
-$csvPath    = Join-Path $basePath "outputs\contentplan_mai_v2.csv"
-$webhookUrl = if ($env:NEUSTART_WEBHOOK_URL) { $env:NEUSTART_WEBHOOK_URL } else { "https://hook.eu1.make.com/q1np77hliej89lqdl38ux1bgj9as5xdw" }
-$logPath    = Join-Path $basePath "outputs\post-trigger-log.txt"
-$archivPath = Join-Path $basePath "outputs\post-archiv.csv"
+$csvPath    = Join-Path $basePath "outputs\contentplan_tac_juni.csv"
+$webhookUrl = $env:TAC_WEBHOOK_URL
+$logPath    = Join-Path $basePath "outputs\post-trigger-tac-log.txt"
+$archivPath = Join-Path $basePath "outputs\post-archiv-tac.csv"
 
 $heute = (Get-Date).ToString("dd.MM.yyyy")
 
@@ -19,7 +18,12 @@ function Write-Log {
     Write-Output $line
 }
 
-Write-Log "=== Trigger gestartet | Heute: $heute ==="
+Write-Log "=== TAC Trigger gestartet | Heute: $heute ==="
+
+if (-not $webhookUrl) {
+    Write-Log "FEHLER: TAC_WEBHOOK_URL nicht gesetzt. Abbruch."
+    exit 1
+}
 
 try {
     $rows = Import-Csv -Path $csvPath -Delimiter "," -Encoding UTF8
@@ -74,7 +78,6 @@ try {
     $response = Invoke-RestMethod -Uri $webhookUrl -Method POST -Body $jsonBytes -ContentType "application/json; charset=utf-8" -ErrorAction Stop
     Write-Log "Webhook erfolgreich. Antwort: $($response | ConvertTo-Json -Compress)"
 
-    # Archiv-Eintrag schreiben
     $archivZeile = "`"$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')`",`"$heute`",`"$typ`",`"$plattform`",`"$($heuteRow.Videoprompt)`",`"$($heuteRow.Text -replace '"','""')`""
     if (-not (Test-Path $archivPath)) {
         "Zeitstempel,Datum,Post-Typ,Plattform,Videoprompt,Caption" | Out-File -FilePath $archivPath -Encoding UTF8
