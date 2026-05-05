@@ -6,7 +6,7 @@
 | --- | --- | --- |
 | YouTube InnerCode (@innercode.projekt) | Laufend | Skripte und Upload-Pakete produzieren |
 | YouTube Bewusst Einfach | Laufend | Skripte im Bewusst-Einfach-Stil produzieren |
-| Instagram Autopilot System | Live ✅ | Facebook-Modul testen, Text-Overlay heute 18:00 prüfen |
+| Instagram Autopilot System | Live ✅ | Mai-Plan läuft — Overlay + Musik funktionieren, Facebook-Modul noch auf rohe fal.ai-URL (kein Overlay/Ton auf FB) |
 | Instagram Autopilot — Produkt | In Vorbereitung | Landingpage ALFIMA, ZIP-Paket, Launch |
 | ALFIMA Funnel „Neustart im Kopf" | Live ✅ | Freebie-Landingpage fertig, Traffic läuft |
 | Smart Profit KI Business (Sales Angels) | Aktiver Schwerpunkt | Digistore-Produkt bewerben |

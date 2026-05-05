@@ -62,7 +62,7 @@ $payload = @{
     link        = $heuteRow.Link
     bildprompt  = $heuteRow.Bildprompt
     videoprompt = $heuteRow.Videoprompt
-    textoverlay = $heuteRow.'Text-Overlay'
+    textoverlay = ($heuteRow.'Text-Overlay' -replace "`r`n", "\n" -replace "`n", "\n").Trim()
     datum       = $heute
 }
 
