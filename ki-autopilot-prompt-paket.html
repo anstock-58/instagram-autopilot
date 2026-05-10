@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>30 Tage Instagram-Content — KI-Prompt-Paket</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f5f5; color: #1a1a1a; font-size: 16px; line-height: 1.7; }
+
+    .header { background: #111; color: #fff; padding: 48px 24px; text-align: center; }
+    .header .badge { display: inline-block; background: rgba(249,115,22,0.15); border: 1px solid rgba(249,115,22,0.3); color: #f97316; font-size: 13px; padding: 5px 14px; border-radius: 999px; margin-bottom: 16px; }
+    .header h1 { font-size: clamp(22px, 4vw, 34px); font-weight: 800; margin-bottom: 10px; }
+    .header h1 span { color: #f97316; }
+    .header p { color: #999; font-size: 15px; max-width: 520px; margin: 0 auto; }
+
+    .container { max-width: 720px; margin: 0 auto; padding: 32px 20px 80px; }
+
+    .intro { background: #fff; border-radius: 14px; border: 2px solid #f97316; padding: 28px; margin-bottom: 32px; }
+    .intro h2 { font-size: 18px; font-weight: 800; margin-bottom: 12px; }
+    .intro p { color: #555; font-size: 15px; margin-bottom: 10px; }
+    .intro p:last-child { margin-bottom: 0; }
+
+    .anleitung { background: #fff; border-radius: 14px; border: 1px solid #e5e5e5; padding: 24px; margin-bottom: 32px; }
+    .anleitung h3 { font-size: 15px; font-weight: 700; margin-bottom: 14px; color: #111; }
+    .anleitung ol { padding-left: 20px; }
+    .anleitung ol li { margin-bottom: 8px; color: #444; font-size: 15px; }
+    .anleitung ol li strong { color: #111; }
+
+    .woche { margin-bottom: 40px; }
+    .woche-header { background: #111; color: #fff; border-radius: 12px 12px 0 0; padding: 16px 24px; display: flex; align-items: center; gap: 14px; }
+    .woche-num { background: #f97316; color: #fff; font-weight: 800; font-size: 14px; padding: 4px 12px; border-radius: 999px; flex-shrink: 0; }
+    .woche-header h2 { font-size: 16px; font-weight: 700; }
+    .woche-header p { font-size: 13px; color: #aaa; margin-top: 2px; }
+    .woche-body { background: #fff; border: 1px solid #e5e5e5; border-top: none; border-radius: 0 0 12px 12px; padding: 8px 0; }
+
+    .prompt-card { padding: 20px 24px; border-bottom: 1px solid #f3f4f6; }
+    .prompt-card:last-child { border-bottom: none; }
+    .prompt-nr { font-size: 11px; font-weight: 700; color: #f97316; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .prompt-thema { font-size: 16px; font-weight: 700; color: #111; margin-bottom: 12px; }
+    .prompt-box { background: #f9fafb; border: 1px solid #e5e7eb; border-left: 3px solid #f97316; border-radius: 0 8px 8px 0; padding: 14px 16px; font-size: 14px; color: #333; line-height: 1.7; margin-bottom: 10px; font-style: italic; }
+    .prompt-placeholder { color: #f97316; font-style: normal; font-weight: 600; }
+    .prompt-tipp { font-size: 13px; color: #888; }
+
+    .copy-hint { background: #fff8f3; border: 1px solid #fed7aa; border-radius: 10px; padding: 14px 18px; margin: 16px 0 0; font-size: 13px; color: #92400e; text-align: center; }
+
+    .bruecke { background: linear-gradient(135deg, #111, #1a1a1a); border-radius: 14px; padding: 40px 28px; text-align: center; margin-top: 40px; }
+    .bruecke .emoji { font-size: 40px; margin-bottom: 16px; }
+    .bruecke h2 { color: #fff; font-size: 22px; font-weight: 800; margin-bottom: 16px; }
+    .bruecke p { color: #aaa; font-size: 15px; max-width: 500px; margin: 0 auto 24px; line-height: 1.8; }
+    .bruecke .highlight { color: #f97316; font-weight: 700; }
+    .btn { display: inline-block; background: #f97316; color: #fff; font-weight: 700; font-size: 16px; padding: 16px 36px; border-radius: 10px; text-decoration: none; }
+
+    footer { text-align: center; color: #aaa; font-size: 13px; padding: 24px; }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">Dein kostenloses KI-Prompt-Paket</div>
+  <h1>30 Tage <span>Instagram-Content</span><br>— fertige KI-Prompts zum Kopieren</h1>
+  <p>Füge jeden Prompt in Claude oder ChatGPT ein und bekomm in Sekunden einen fertigen Reel-Text für deinen Account.</p>
+</div>
+
+<div class="container">
+
+  <!-- INTRO -->
+  <div class="intro">
+    <h2>So sparst du dir jeden Tag das Nachdenken.</h2>
+    <p>Content-Ideen, leeres Dokument, kein Anfang — das kennt jeder der auf Instagram postet. Diese 30 Prompts nehmen dir genau das ab.</p>
+    <p>Kopiere einfach den Prompt der zum heutigen Tag passt, füge ihn in Claude oder ChatGPT ein, ersetze die markierten Felder — und dein Text ist fertig.</p>
+  </div>
+
+  <!-- ANLEITUNG -->
+  <div class="anleitung">
+    <h3>⚡ So nutzt du dieses Paket</h3>
+    <ol>
+      <li>Wähle den Prompt der zum heutigen Thema passt</li>
+      <li>Kopiere ihn vollständig</li>
+      <li>Öffne <strong>Claude (claude.ai)</strong> oder <strong>ChatGPT</strong></li>
+      <li>Füge den Prompt ein und ersetze die <strong style="color:#f97316;">[MARKIERTEN FELDER]</strong> mit deinen Angaben</li>
+      <li>Fertig — poste den Text direkt auf Instagram</li>
+    </ol>
+  </div>
+
+  <!-- WOCHE 1 -->
+  <div class="woche">
+    <div class="woche-header">
+      <div>
+        <div class="woche-num">Woche 1</div>
+      </div>
+      <div>
+        <h2>Das Problem benennen</h2>
+        <p>Zeige deiner Zielgruppe, dass du ihren Schmerz kennst.</p>
+      </div>
+    </div>
+    <div class="woche-body">
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 01</div>
+        <div class="prompt-thema">Der Zeitmangel-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Man weiß, dass man auf Instagram präsent sein sollte — aber am Ende des Tages fehlt einfach die Zeit. Ton: <span class="prompt-placeholder">[DEIN TON — z.B. direkt, ehrlich, motivierend]</span>. Maximal 120 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Funktioniert besonders gut montags — wenn die Woche gerade anfängt und der Druck schon da ist.</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 02</div>
+        <div class="prompt-thema">Der Algorithmus-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Wer unregelmäßig postet, wird vom Algorithmus bestraft — egal wie gut der Content ist. Erkläre kurz warum Konstanz wichtiger ist als Perfektion. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Maximal 120 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Spricht jeden an der weiß dass er mehr posten sollte — aber es nicht tut.</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 03</div>
+        <div class="prompt-thema">Der Content-Ideen-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Jeden Tag vor der leeren Seite sitzen und nicht wissen was man posten soll — dieses Gefühl kennen fast alle. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Maximal 120 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Sehr hohe Identifikation — fast jeder kennt den "Was poste ich heute?" Moment.</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 04</div>
+        <div class="prompt-thema">Der Aufwand-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Ein einziger Instagram-Post kostet oft eine Stunde — Caption schreiben, Bild suchen, formatieren, hochladen — und nach 24 Stunden ist er weg. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Maximal 120 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Macht den unsichtbaren Aufwand sichtbar — erzeugt sofort Kopfnicken.</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 05</div>
+        <div class="prompt-thema">Der Wollen-aber-nicht-tun-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Man weiß genau was man tun müsste — täglich posten, Reels drehen, sichtbar sein. Aber zwischen Wissen und Tun liegt ein riesiger Graben. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Maximal 120 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Trifft den Nerv von jedem der sich selbst schon hundertmal vorgenommen hat, regelmäßiger zu posten.</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 06</div>
+        <div class="prompt-thema">Der Konkurrenz-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Während man selbst kämpft regelmäßig zu posten, postet die Konkurrenz täglich — und wächst. Nicht weil sie besseren Content hat, sondern weil sie ein System hat. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Maximal 120 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Weckt den Unternehmerinstinkt — niemand will systematisch verlieren.</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 07</div>
+        <div class="prompt-thema">Der Social-Media-Burnout-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Instagram fühlt sich wie ein Vollzeitjob an — dabei sollte es ein Kanal sein, nicht eine Bürde. Viele hören irgendwann einfach auf zu posten, weil es zu viel wird. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Maximal 120 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Für alle die schon mal eine Instagram-Pause gemacht haben — das sind viele.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- WOCHE 2 -->
+  <div class="woche">
+    <div class="woche-header">
+      <div>
+        <div class="woche-num">Woche 2</div>
+      </div>
+      <div>
+        <h2>Die Lösung andeuten</h2>
+        <p>KI und Automation als Ausweg — ohne das Produkt zu nennen.</p>
+      </div>
+    </div>
+    <div class="woche-body">
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 08</div>
+        <div class="prompt-thema">Der KI-schreibt-für-dich-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: KI kann heute in Sekunden Instagram-Captions schreiben die besser klingen als das was man nach einer Stunde selbst produziert. Das ist kein Zukunftsszenario — das ist jetzt möglich. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Maximal 120 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Weckt Neugier — zeigt dass es eine einfachere Alternative gibt.</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 09</div>
+        <div class="prompt-thema">Der System-statt-Chaos-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Der Unterschied zwischen denen die täglich auf Instagram präsent sind und denen die es nicht schaffen ist kein Talent — es ist ein System. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Maximal 120 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Nimmt den Druck raus — es liegt nicht an einem selbst, sondern am fehlenden System.</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 10</div>
+        <div class="prompt-thema">Der Was-wäre-wenn-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Was wäre, wenn Instagram jeden Tag automatisch bespielt wird — ohne dass man selbst einen Finger rührt? Nicht irgendwann. Heute schon möglich. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Maximal 120 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Öffnet den Kopf für eine neue Möglichkeit — ideal als Einstieg ins Thema Automation.</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 11</div>
+        <div class="prompt-thema">Der Contentplan-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Wer einen Contentplan hat postet regelmäßig — wer keinen hat postet wenn er Zeit und Lust hat. KI kann diesen Plan in Minuten erstellen. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Maximal 120 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Praxisnah — jeder versteht sofort den Unterschied zwischen mit und ohne Plan.</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 12</div>
+        <div class="prompt-thema">Der Zeit-zurückgewinnen-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Wer 5 Stunden pro Woche für Instagram aufwendet, gibt im Jahr über 260 Stunden aus — für einen Kanal. KI-Automation kann das auf unter eine Stunde reduzieren. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Maximal 120 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Die Zahl 260 Stunden macht den Aufwand greifbar — sehr starker Aha-Moment.</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 13</div>
+        <div class="prompt-thema">Der KI-Tools-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Es gibt heute KI-Tools die Instagram-Videos generieren, Voiceover einsprechen, Untertitel einblenden und direkt posten — vollautomatisch. Die meisten wissen das noch nicht. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Maximal 120 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Informationsvorsprung vermitteln — macht dich zur Expertenstimme.</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 14</div>
+        <div class="prompt-thema">Der Smarter-Weg-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Mehr arbeiten bringt mehr Reichweite — das stimmt nicht mehr. Smarter arbeiten schon. Wer ein automatisches System hat, gewinnt — nicht wer am längsten sitzt. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Maximal 120 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Spricht den Unternehmerinstinkt an — Effizienz schlägt Aufwand.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- WOCHE 3 -->
+  <div class="woche">
+    <div class="woche-header">
+      <div>
+        <div class="woche-num">Woche 3</div>
+      </div>
+      <div>
+        <h2>Vertrauen aufbauen</h2>
+        <p>Einblick geben, Ergebnisse zeigen, Glaubwürdigkeit stärken.</p>
+      </div>
+    </div>
+    <div class="woche-body">
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 15</div>
+        <div class="prompt-thema">Der Hinter-den-Kulissen-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: So sieht mein Instagram-Workflow heute aus — und warum ich keinen einzigen Post mehr manuell erstelle. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Persönlich und authentisch. Maximal 130 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Behind-the-Scenes-Content hat hohe Glaubwürdigkeit — zeigt was wirklich passiert.</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 16</div>
+        <div class="prompt-thema">Der Ergebnisse-nach-30-Tagen-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Was passiert wenn man 30 Tage lang täglich auf Instagram postet — ohne dafür täglich Zeit aufzuwenden. Zeige konkrete Veränderungen. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Maximal 130 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Ergebnisse sind der stärkste Beweis — je konkreter desto besser.</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 17</div>
+        <div class="prompt-thema">Der Fehler-den-ich-gemacht-habe-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Der größte Fehler den ich bei Instagram gemacht habe — und was ich heute anders mache. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Ehrlich und direkt. Maximal 130 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Fehler-Posts haben extrem hohe Glaubwürdigkeit — Verletzlichkeit erzeugt Vertrauen.</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 18</div>
+        <div class="prompt-thema">Der Tool-Empfehlung-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Das eine KI-Tool das meinen Instagram-Workflow komplett verändert hat — und warum ich es jedem empfehle der Zeit sparen will. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Maximal 120 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Tool-Empfehlungen performen stark — Menschen lieben konkrete Lösungen.</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 19</div>
+        <div class="prompt-thema">Der Meine-Routine-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Meine tägliche Routine für Instagram — die mich keine zehn Minuten kostet. Beschreibe wie Automation den Alltag verändert. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Persönlich. Maximal 120 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Routine-Posts sind beliebt — zeigt dass es wirklich funktioniert und umsetzbar ist.</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 20</div>
+        <div class="prompt-thema">Der Was-sich-verändert-hat-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Seit ich Instagram automatisiert habe hat sich eines verändert — ich denke gar nicht mehr daran. Es läuft einfach. Was das bedeutet. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Maximal 120 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Das Ziel ist "gar nicht mehr daran denken" — genau das wollen alle.</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 21</div>
+        <div class="prompt-thema">Der Mythen-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Drei Mythen über KI und Instagram die einfach nicht stimmen — und was wirklich dahintersteckt. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Sachlich und aufklärend. Maximal 130 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Mythen-Posts positionieren dich als Experten der Halbwahrheiten richtigstellt.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- WOCHE 4 -->
+  <div class="woche">
+    <div class="woche-header">
+      <div>
+        <div class="woche-num">Woche 4</div>
+      </div>
+      <div>
+        <h2>Kaufbereitschaft erzeugen</h2>
+        <p>Den letzten Schritt vorbereiten — von Interesse zu Entscheidung.</p>
+      </div>
+    </div>
+    <div class="woche-body">
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 22</div>
+        <div class="prompt-thema">Der Was-wäre-möglich-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Was wäre möglich wenn Instagram vollautomatisch läuft — täglich, pünktlich, ohne Aufwand? Was könnte man mit der gewonnenen Zeit anfangen? Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Inspirierend. Maximal 120 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Visualisierung des Ergebnisses — lässt den Leser selbst an die Möglichkeiten denken.</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 23</div>
+        <div class="prompt-thema">Der Kosten-Rechnung-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Was kostet ein manuell erstellter Instagram-Post wirklich — wenn man die eigene Stunde mit einem Stundensatz berechnet? Die Rechnung überrascht. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Provokativ und konkret. Maximal 120 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Stundensatz-Rechnung ist ein starkes Argument — macht den Status Quo teuer.</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 24</div>
+        <div class="prompt-thema">Der Einmal-einrichten-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Was wäre wenn man ein System einmal einrichtet — und es dann für immer läuft? Kein täglicher Aufwand mehr. Das ist kein Traum. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Maximal 120 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 "Einmal einrichten — für immer laufen" ist das stärkste Versprechen der Automation.</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 25</div>
+        <div class="prompt-thema">Der Wie-oft-postest-du-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Eine ehrliche Frage — wie oft postest du wirklich pro Woche? Und wie oft hattest du es dir vorgenommen? Der Unterschied zwischen Plan und Realität. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Direkt und ohne Urteil. Maximal 120 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Rhetorische Fragen erzeugen Selbstreflexion — sehr hohe Identifikation.</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 26</div>
+        <div class="prompt-thema">Der Wollen-und-Tun-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Der Unterschied zwischen denen die auf Instagram wachsen und denen die stagnieren ist nicht Talent oder Content — es ist ob sie ein System haben oder nicht. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Maximal 120 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Schiebt die Verantwortung auf das System — entlastet die Person, motiviert zum Handeln.</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 27</div>
+        <div class="prompt-thema">Der Weiter-kämpfen-oder-Post</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Zwei Wege: Weiter täglich kämpfen manuell zu posten — oder einmal ein System aufbauen das das für einen erledigt. Beide sind möglich. Nur einer macht Sinn. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Maximal 120 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Klare Entweder-oder-Entscheidung — erzeugt Dringlichkeit ohne Druck.</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 28</div>
+        <div class="prompt-thema">Der nächste Schritt</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span>. Thema: Wenn du bis hierher gelesen hast weißt du bereits was fehlt. Der nächste Schritt ist kein großer Schritt — er ist ein System. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Ruhig und einladend. Maximal 120 Wörter. Letzter Satz: "Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare."</div>
+        <div class="prompt-tipp">💡 Ideal als letzter Post vor dem direkten Angebot — baut sanft Kaufbereitschaft auf.</div>
+      </div>
+
+      <div class="prompt-card">
+        <div class="prompt-nr">Prompt 29 + 30</div>
+        <div class="prompt-thema">Bonus — freie Nutzung</div>
+        <div class="prompt-box">Schreibe einen Instagram Reel-Text für <span class="prompt-placeholder">[DEINE ZIELGRUPPE]</span> über <span class="prompt-placeholder">[DEIN THEMA DES TAGES]</span>. Ton: <span class="prompt-placeholder">[DEIN TON]</span>. Maximal 120 Wörter. Nutze folgende Struktur: 1. Aufmerksamkeit im ersten Satz. 2. Problem oder Frage die trifft. 3. Kurze Lösung oder Perspektive. 4. CTA: Kommentiere <span class="prompt-placeholder">[DEIN KEYWORD]</span> in die Kommentare.</div>
+        <div class="prompt-tipp">💡 Der Universal-Prompt — funktioniert für jedes Thema an jedem Tag.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="copy-hint">
+    💡 Tipp: Speichere dieses Dokument als Lesezeichen — so hast du die Prompts jederzeit griffbereit.
+  </div>
+
+  <!-- BRÜCKE ZUM PRODUKT -->
+  <div class="bruecke">
+    <div class="emoji">🤖</div>
+    <h2>Diese Prompts sparen dir Zeit beim Schreiben.</h2>
+    <p>Aber du musst immer noch <span class="highlight">selbst posten</span>. Jeden Tag. Manuell. Caption rein, hochladen, Uhrzeit wählen.</p>
+    <p>Das <span class="highlight">Instagram Autopilot System</span> übernimmt auch das — vollautomatisch, täglich zur eingestellten Uhrzeit, ohne dein Zutun. Einmal einrichten. Dann läuft es für immer.</p>
+    <a href="https://alfima.com/andreass95/instagram-autopilot-system" class="btn">Zum Instagram Autopilot System →</a>
+  </div>
+
+</div>
+
+<footer>KI-Prompt-Paket · kostenlos · erstellt von @ki_support</footer>
+
+</body>
+</html>
