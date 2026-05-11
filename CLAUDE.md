@@ -18,6 +18,18 @@ Dies ist ein **Claude Workspace Template** — eine strukturierte Umgebung, die 
 
 ---
 
+## Pflicht: Kontext sofort aktualisieren
+
+`context/current-data.md` MUSS **sofort und proaktiv** aktualisiert werden — nicht erst wenn der User fragt — sobald:
+- Ein Projekt einen neuen Status erreicht
+- Ein Tool oder Service verbunden, konfiguriert oder abgeschlossen wird
+- Ein Datum, nächster Schritt oder Preis sich ändert
+- Etwas erfolgreich abgeschlossen wurde (✅ setzen)
+
+Das ist keine Option, sondern Standard-Verhalten in jeder Session.
+
+---
+
 ## Die Claude-User-Beziehung
 
 Claude arbeitet als **Agenten-Assistent** mit Zugriff auf die Workspace-Ordner, Kontext-Dateien, Commands und Outputs. Die Beziehung ist:
