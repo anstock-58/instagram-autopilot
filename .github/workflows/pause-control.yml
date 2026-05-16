@@ -1,0 +1,37 @@
+name: Autopilot Pause Control
+
+on:
+  repository_dispatch:
+    types: [pause, start]
+
+jobs:
+  control:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Autopilot pausieren
+        if: github.event.action == 'pause'
+        run: |
+          echo "paused" > PAUSED
+          git config user.email "autopilot@github-actions"
+          git config user.name "Autopilot Bot"
+          git add PAUSED
+          git commit -m "Autopilot pausiert via Telegram"
+          git push
+
+      - name: Autopilot starten
+        if: github.event.action == 'start'
+        run: |
+          if [ -f "PAUSED" ]; then
+            git config user.email "autopilot@github-actions"
+            git config user.name "Autopilot Bot"
+            git rm PAUSED
+            git commit -m "Autopilot gestartet via Telegram"
+            git push
+          else
+            echo "Autopilot war nicht pausiert."
+          fi
