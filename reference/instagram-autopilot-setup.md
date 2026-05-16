@@ -1,131 +1,113 @@
-# Instagram Autopilot — Funktionierende Konfiguration
+# Instagram Autopilot — Aktuelle Konfiguration
 
-Stand: 05.05.2026
+Stand: 16.05.2026 — Vollständig auf GitHub Actions + Blotato umgestellt ✅
 
 ---
 
 ## Architektur
 
 ```
-contentplan_mai_v2.csv
-  → post-trigger.ps1 (17:55 Uhr täglich)
-    → Make.com Webhook (Neustart Webhook v3, Szenario 5524877)
-      → HTTP Module 3: fal.ai Kling AI (Video generieren)
-      → Creatomate Module 20: Video + Overlay + Musik rendern
-      → Sleep 120s
-      → Instagram Module 9: Reel posten
-      → Facebook Module 14: Reel posten
+contentplan_juni_v1.csv (Instagram)
+contentplan_mai_v2.csv  (LinkedIn + Mai-Reste)
+  → GitHub Actions (Cloud, PC muss NICHT an sein)
+    → scripts/post-trigger.ps1
+      → Blotato REST API
+        → Instagram @business.und.spirit
+        → LinkedIn Dipl.-Ing. Andreas Stock
 ```
 
----
-
-## Make.com Szenario
-
-- **Name**: Neustart Webhook v3
-- **ID**: 5524877
-- **Webhook-URL**: `https://hook.eu1.make.com/q1np77hliej89lqdl38ux1bgj9as5xdw`
-- **Toggle**: muss aktiv (blau) sein für automatischen Betrieb
+**Kein Make.com. Kein Webhook. Kein Windows Task Scheduler für Posting.**
 
 ---
 
-## Creatomate
+## GitHub Actions Zeitplan
 
-- **Template-ID**: `b7392c62-3d93-4ef5-8bd5-462fdc830815`
+| Workflow | Cron (UTC) | Lokale Zeit (CEST) | Was |
+|---|---|---|---|
+| autopilot-story.yml | `55 6 * * *` | 08:55 | Story posten |
+| autopilot-reel.yml | `55 15 * * *` | 17:55 | Reel/Foto posten |
+| pause-control.yml | via repository_dispatch | auf Anfrage | Pause/Start |
+
+Workflows liegen in `.github/workflows/`.
+
+---
+
+## Blotato API
+
+- **Endpoint**: `POST https://backend.blotato.com/v2/posts`
+- **Auth Header**: `blotato-api-key: KEY` (NICHT Authorization Bearer!)
 - **API Key**: in `context/secrets.md`
 
-### Creatomate Modul Body (Make.com Modul 20)
+### Account IDs
 
-```json
-{
-  "template_id": "b7392c62-3d93-4ef5-8bd5-462fdc830815",
-  "duration": 30,
-  "modifications": {
-    "video.source": "{{3.data.video.url}}",
-    "overlay_text.text": "{{1.textoverlay}}",
-    "music.source": "https://raw.githubusercontent.com/anstock-58/instagram-autopilot/master/music/background-chill.mp3",
-    "video.volume": 0,
-    "music.volume": 2,
-    "video.loop": true
-  }
-}
-```
+| Account | Blotato ID |
+|---|---|
+| @business.und.spirit (Instagram) | 46248 |
+| @andi.mit.system (Instagram) | 46471 |
+| @ki_support (Instagram) | 46341 |
+| LinkedIn Dipl.-Ing. Andreas Stock | 21656 |
+| LinkedIn Dropservice (Ersu/Leon) | 21657 |
 
-**Wichtig — Modification-Keys:**
-- `video.source` (nicht `video_url`) — Element-ID-Targeting
-- `overlay_text.text` (nicht `overlay_text`) — Element-ID-Targeting
-- `music.source` — überschreibt Template-URL (Template hat noch `/main/`, wir brauchen `/master/`)
-- `video.volume: 0` — Originalton des Quellvideos stummschalten
-- `music.volume: 2` — Musik verstärken (MP3 ist leise gemastert)
-- `video.loop: true` — Video wiederholt sich (Kling-AI-Videos sind ~7 Sek.)
-- `duration: 30` — Gesamtlänge auf 30 Sek. begrenzen
+### targetType-Werte
 
-**ACHTUNG:** `"sync": true` NICHT verwenden — führt zu Timeout (202 statt Render-URL)
+| Post-Typ | targetType |
+|---|---|
+| Instagram Feed (Reel/Foto) | `instagram` |
+| Instagram Story | `instagramStory` |
+| LinkedIn | `linkedin` |
 
 ---
 
-## Musik
+## CSVs
 
-- **Datei**: `music/background-chill.mp3` im GitHub-Repo
-- **URL**: `https://raw.githubusercontent.com/anstock-58/instagram-autopilot/master/music/background-chill.mp3`
-- **Repo muss public sein** — privates Repo → 404 bei Creatomate
+| Datei | Inhalt |
+|---|---|
+| `outputs/contentplan_juni_v1.csv` | 30 Stories (09:00) + 30 Reels (18:00) für Juni — Instagram |
+| `outputs/contentplan_mai_v2.csv` | Mai-Reste (16–31 Mai) + LinkedIn-Posts Mai+Juni |
 
----
+**Spalten**: Datum, Uhrzeit, Plattform, Post-Typ, Text, Link, Bild-URL, Bildprompt, Videoprompt, Text-Overlay, Karussell-Slides, Status, Musik-URL
 
-## Text-Overlay Format
-
-Im CSV (`outputs/contentplan_mai_v2.csv`) in der Spalte `Text-Overlay`:
-- Zeilenumbrüche im CSV werden automatisch zu `\n` konvertiert (post-trigger.ps1)
-- Creatomate rendert `\n` als echten Zeilenumbruch im Video
-
-**Empfohlene Struktur:**
-```
-[Hook-Aussage]
-[Zweite Zeile optional]
-
-👇 [CTA — z.B. "Kommentiere: Was bedeutet das für dich?"]
-```
-
-**Beispiel:**
-```
-Echte Stärke sieht anders aus.
-
-👇 Kommentiere: Was zeigt dir echte Stärke?
-```
+Das Skript wählt automatisch die CSV nach aktuellem Monat (v2 vor v1).
 
 ---
 
-## Facebook-Problem (noch offen)
+## Pause-Mechanismus
 
-Facebook-Modul (14) verwendet aktuell `3. data.video_url` (rohe fal.ai-URL) statt die Creatomate-URL. Deshalb: kein Text-Overlay, kein Ton auf Facebook.
-
-**Fix (noch ausstehend):** Facebook-Modul URL auf Creatomate-Output umstellen (Modul 20 Output-URL).
+- **PAUSED-Datei** im GitHub-Repo = Autopilot pausiert
+- **Datei fehlt** = Autopilot läuft
+- Gesteuert via GitHub repository_dispatch API (Telegram-Bot geplant)
+- GitHub PAT in `context/secrets.md`
 
 ---
 
-## post-trigger.ps1
+## Skript
 
 - **Pfad**: `scripts/post-trigger.ps1`
-- **CSV**: `outputs/contentplan_mai_v2.csv`
-- **Wichtig**: Textoverlay-Zeilenumbrüche werden zu `\n` konvertiert (nicht zu Leerzeichen!)
-- **Nicht implementiert**: Karussell-Posts, Facebook-only-Posts
+- **Log**: `outputs/post-trigger-log.txt`
+- **Archiv**: `outputs/post-archiv.csv`
+- Zeitfenster: -10 bis +45 Minuten um geplante Uhrzeit
+- Setzt Status auf "Gepostet" nach erfolgreichem Post
+
+**Unterstützte Post-Typen**: Reel, Foto, Story, Text  
+**Noch nicht implementiert**: Karussell, Facebook
+
+---
+
+## Bildgenerierung
+
+Bilder werden einmalig per Batch mit `scripts/generate-juni-images.ps1` via fal.ai FLUX Schnell generiert. Blotato generiert keine Bilder — nur posten. URLs werden in die CSV-Spalte `Bild-URL` eingetragen.
 
 ---
 
 ## GitHub Repo
 
 - **URL**: `https://github.com/anstock-58/instagram-autopilot`
-- **Branch**: `master` (nicht `main`!)
-- **Sichtbarkeit**: public (muss public bleiben für Musik-URL)
+- **Branch**: `master`
+- **Secret**: `BLOTATO_API_KEY` in GitHub Settings → Secrets → Actions
 
 ---
 
-## Bekannte Fehlerquellen
+## Was Make.com noch macht
 
-| Fehler | Ursache | Fix |
-|---|---|---|
-| Creatomate 404 music | Repo privat oder Branch `main` statt `master` | Repo public + URL auf `master` |
-| `{{video_url}}` not resolved | Falscher Modification-Key | `video.source` statt `video_url` |
-| JSON-Fehler im Webhook | Roher Zeilenumbruch in textoverlay | `\n` statt echtem Newline |
-| Make.com Webhook accepted, nichts passiert | Szenario-Toggle OFF | Toggle in Make.com aktivieren |
-| Video 2 Minuten lang | Kein `duration`-Limit | `"duration":30` in Creatomate-Body |
-| Video friert nach 7s ein | Kein Loop | `"video.loop":true` in Modifications |
+Make.com läuft noch für den **Telegram KI Agent** (@AndiKIAgent_bot, Szenario 5699211).  
+Für das Posting wird Make.com nicht mehr benötigt.

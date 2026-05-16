@@ -6,7 +6,8 @@
 | --- | --- | --- |
 | YouTube InnerCode (@innercode.projekt) | Laufend | Skripte und Upload-Pakete produzieren |
 | YouTube Bewusst Einfach | Laufend | Skripte im Bewusst-Einfach-Stil produzieren |
-| Instagram Autopilot System | Live ✅ | Architektur: CSV → post-trigger.ps1 → Blotato REST API → Instagram + LinkedIn (kein Make.com, kein Webhook mehr) — Windows Tasks: 08:55 (Story) + 17:55 (Reel) — Juni-Plan aktiv — Blotato Instagram ✅ + LinkedIn ✅ verbunden (ID 21657) — image-generator.ps1 gebaut ✅ — alle Mai+Juni LinkedIn-Bild-URLs im CSV eingetragen ✅ |
+| Instagram Autopilot System | Live ✅ | Architektur: CSV → post-trigger.ps1 → Blotato REST API → Instagram + LinkedIn — GitHub Actions: 06:55 UTC (Story) + 15:55 UTC (Reel) — kein Make.com, kein Windows Task nötig — Blotato Instagram ID 46248 (@business.und.spirit) ✅ + LinkedIn ID 21656 (Dipl.-Ing. Andreas Stock) ✅ — alle Mai+Juni Bild-URLs im CSV ✅ — Workflows committen contentplan_juni_v1.csv + contentplan_mai_v2.csv ✅ — LinkedIn Dropservice ID: 21657 |
+| @ki_support Autopilot (Systeme.io Affiliate) | Bereit ✅ | post-trigger-ki-support.ps1 erstellt — Blotato Account ID 46341 — contentplan_ki_support_juni_v1.csv (60 Posts: 30 Stories 09:00 + 30 Reels 18:00, alle Systeme.io Affiliate) — setup-tasks-ki-support.bat einmalig als Admin ausführen → Tasks KISupport_Story_0855 + KISupport_Reel_1755 |
 | Instagram Autopilot — Produkt | Live ✅ | Salespage + Komplettanleitung auf Single-Path umgestellt (nur Blotato 29$, kein Make.com+Creatomate mehr) — ALFIMA Willkommensmail aktiviert ✅ — ALFIMA Produktbeschreibung manuell eingetragen |
 | Content-Prompts Neustart im Kopf | Gespeichert ✅ | System Prompt + Contentplan Prompt für Instagram Reels → `reference/prompts-instagram-reels.md` |
 | ALFIMA Funnel „Neustart im Kopf" | Live ✅ | Freebie-Landingpage fertig, Traffic läuft |
@@ -14,7 +15,7 @@
 | „Neustart im Kopf" Hauptkurs | In ALFIMA installiert | Landingpage fehlt noch |
 | Minikurs „Raus dem Funktionsmodus" | In ALFIMA installiert | Landingpage fehlt noch |
 | Juni-Contentplan | Fertig ✅ | contentplan_juni_v1.csv — 30 Reels (18:00) + 30 Stories (09:00) — alle mit KLARHEIT-CTA — wartet auf Blotato API-Automation |
-| Blotato Direct-API-Automation | Live ✅ (16.05.2026) | Instagram + LinkedIn komplett auf Blotato umgestellt — post-trigger.ps1 postet direkt via Blotato REST API — 2 Windows-Tasks: 08:55 (Story) + 17:55 (Reel) — image-generator.ps1 generiert LinkedIn-Bilder via fal.ai und trägt URLs automatisch in CSV ein ✅ — **Make.com läuft noch NUR für Telegram Pause Bot** — sobald Telegram Pause Bot fertig, Make.com komplett abschalten |
+| Blotato Direct-API-Automation | Live ✅ (16.05.2026) | Instagram + LinkedIn komplett auf Blotato umgestellt — post-trigger.ps1 postet direkt via Blotato REST API — 2 Windows-Tasks: 08:55 (Story) + 17:55 (Reel) — image-generator.ps1 generiert LinkedIn-Bilder ✅ — Telegram Pause Bot ✅ fertig (telegram-pause-bot.ps1, Windows Task alle 5 Min) — Make.com manuell deaktiviert ✅ — System vollständig unabhängig |
 | ALFIMA API-Status | Geklärt ✅ | Ausgehende Webhooks möglich (ALFIMA → Make.com) — eingehende API/Webhooks noch nicht verfügbar — E-Mail-Automationen direkt in ALFIMA einrichten (Pro-Abo enthalten) |
 | Telegram KI Agent (@AndiKIAgent_bot) | Live ✅ | Make.com Szenario 5699211 aktiv — Telegram → Claude Haiku 4.5 → Telegram — Anleitung in `reference/telegram-ki-agent-setup.md` |
 | Julia Trost Kooperation | Ausstehend | Instagram-DM gesendet (09.05.2026) — auf Antwort warten |

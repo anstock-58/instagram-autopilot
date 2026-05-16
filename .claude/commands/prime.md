@@ -17,6 +17,7 @@ CLAUDE.md
 ./context/current-data.md
 ./context/cc-basics.md
 ./context/cc-anweisung.md
+./reference/instagram-autopilot-setup.md
 
 ## Zusammenfassung
 
