@@ -1,14 +1,13 @@
 # post-trigger.ps1
-# Liest das Contentplan-CSV, findet den heutigen Post und postet direkt ueber Blotato REST API.
-# Laeuft taeglich via Windows Task Scheduler (09:00 Story, 18:00 Reel).
-# Kein Make.com, kein Webhook — reiner Blotato-Direct-Post.
+# Erstellt Slideshow-Video via Blotato Visual Templates API und postet auf Instagram.
+# Laeuft taeglich via GitHub Actions (08:55 Story, 17:55 Reel).
 
 # ============================================================
 # KONFIGURATION
 # ============================================================
-$basePath      = if ($env:GITHUB_WORKSPACE) { $env:GITHUB_WORKSPACE } else { "C:\Users\andre\claude-workspace-vorlage" }
-$logPath       = Join-Path $basePath "outputs" "post-trigger-log.txt"
-$archivPath    = Join-Path $basePath "outputs" "post-archiv.csv"
+$basePath    = if ($env:GITHUB_WORKSPACE) { $env:GITHUB_WORKSPACE } else { "C:\Users\andre\claude-workspace-vorlage" }
+$logPath     = Join-Path $basePath "outputs" "post-trigger-log.txt"
+$archivPath  = Join-Path $basePath "outputs" "post-archiv.csv"
 
 # CSV automatisch nach aktuellem Monat waehlen
 $monatMap = @{1="januar";2="februar";3="maerz";4="april";5="mai";6="juni";
@@ -22,17 +21,11 @@ foreach ($name in $csvNamen) {
 }
 if (-not $csvPath) { Write-Output "FEHLER: Kein CSV fuer Monat '$monat' gefunden."; exit 1 }
 
-$apiKey        = if ($env:BLOTATO_API_KEY) { $env:BLOTATO_API_KEY } else { "blt_KiCyq1rBxLUqnWdUJaH6Qaij4V07Q6wvcIH8/aQLrXA=" }
-$apiBase       = "https://backend.blotato.com/v2"
-$accountIdIG   = "46248"   # @business.und.spirit Instagram
-$accountIdLI   = "21656"   # LinkedIn Dipl.-Ing. Andreas Stock
+$apiKey          = if ($env:BLOTATO_API_KEY) { $env:BLOTATO_API_KEY } else { "blt_KiCyq1rBxLUqnWdUJaH6Qaij4V07Q6wvcIH8/aQLrXA=" }
+$apiBase         = "https://backend.blotato.com/v2"
+$accountIdIG     = "46248"   # @business.und.spirit Instagram
+$slideshowTemplate = "/base/v2/image-slideshow/5903b592-1255-43b4-b9ac-f8ed7cbf6a5f/v1"
 
-# Pause-Dateien (gesetzt vom Telegram Pause Bot)
-$pauseIG       = Join-Path $basePath "outputs" "pause_instagram.txt"
-$pauseLI       = Join-Path $basePath "outputs" "pause_linkedin.txt"
-
-# Zeitfenster: Post gilt als "jetzt faellig" wenn er -10 bis +45 Minuten um die geplante Zeit liegt
-# (-10 weil Task 5 Minuten VOR der Postzeit startet, z.B. 08:55 fuer 09:00-Post)
 $zeitfensterFrueh = -10
 $zeitfensterSpaet = 45
 
@@ -46,50 +39,97 @@ function Write-Log {
     Write-Output $line
 }
 
-function Post-Blotato {
+function Create-Slideshow {
     param(
-        [string]$caption,
-        [string]$mediaUrl,
-        [string]$targetType,  # "instagram", "instagramStory", "linkedin"
-        [string]$accId
+        [string]$imageSource,   # Videoprompt aus CSV (Blotato generiert Bild)
+        [string]$textOverlay,   # Text-Overlay aus CSV
+        [string]$typ            # "Story" oder "Reel"/"Foto"
     )
 
-    $platformName = if ($targetType -eq "linkedin") { "linkedin" } else { "instagram" }
+    $aspectRatio = if ($typ -eq "Story") { "9:16" } else { "9:16" }
 
-    # Payload als JSON bauen
-    $payloadObj = @{
-        post = @{
-            accountId = $accId
-            content   = @{
-                text      = $caption
-                platform  = $platformName
-            }
-            target    = @{
-                targetType = $targetType
-            }
+    # Slides: Hauptbild + CTA-Slide
+    $slides = @(
+        @{ imageSource = $imageSource; textOverlay = $textOverlay },
+        @{ imageSource = $imageSource; textOverlay = "Kommentiere KLARHEIT - ich antworte dir" }
+    )
+
+    $payload = @{
+        templateId = $slideshowTemplate
+        inputs     = @{
+            slides      = $slides
+            textPosition = "bottom"
+            textStyle    = "bold"
+            aspectRatio  = $aspectRatio
+            transition   = "fade"
         }
+        render = $true
     }
 
-    # Media-URL nur hinzufuegen wenn vorhanden
-    if ($mediaUrl -and $mediaUrl.Trim() -ne "") {
-        $payloadObj.post.content.mediaUrls = @($mediaUrl.Trim())
-    }
-
-    $json      = $payloadObj | ConvertTo-Json -Depth 10 -Compress
+    $json      = $payload | ConvertTo-Json -Depth 10 -Compress
     $jsonBytes = [System.Text.Encoding]::UTF8.GetBytes($json)
     $headers   = @{
         "blotato-api-key" = $apiKey
         "Content-Type"    = "application/json; charset=utf-8"
     }
 
-    Write-Log "Sende an Blotato ($targetType): $json"
+    Write-Log "Erstelle Slideshow ($typ): $json"
+
+    try {
+        $response = Invoke-RestMethod -Uri "$apiBase/videos/from-templates" -Method POST -Headers $headers -Body $jsonBytes -ErrorAction Stop
+        Write-Log "Slideshow Response: $($response | ConvertTo-Json -Depth 5 -Compress)"
+        return $response
+    } catch {
+        Write-Log "FEHLER Slideshow-Erstellung: $_"
+        return $null
+    }
+}
+
+function Get-VideoUrl {
+    param($response)
+    # Verschiedene moegliche Response-Formate abfangen
+    if ($response.videoUrl)       { return $response.videoUrl }
+    if ($response.url)            { return $response.url }
+    if ($response.data.videoUrl)  { return $response.data.videoUrl }
+    if ($response.data.url)       { return $response.data.url }
+    if ($response.outputUrl)      { return $response.outputUrl }
+    return $null
+}
+
+function Post-Instagram {
+    param(
+        [string]$caption,
+        [string]$mediaUrl,
+        [string]$targetType   # "instagram" oder "instagramStory"
+    )
+
+    $payload = @{
+        post = @{
+            accountId = $accountIdIG
+            content   = @{
+                text      = $caption
+                platform  = "instagram"
+                mediaUrls = @($mediaUrl)
+            }
+            target    = @{ targetType = $targetType }
+        }
+    }
+
+    $json      = $payload | ConvertTo-Json -Depth 10 -Compress
+    $jsonBytes = [System.Text.Encoding]::UTF8.GetBytes($json)
+    $headers   = @{
+        "blotato-api-key" = $apiKey
+        "Content-Type"    = "application/json; charset=utf-8"
+    }
+
+    Write-Log "Poste auf Instagram ($targetType): Caption-Laenge $($caption.Length) Zeichen"
 
     try {
         $response = Invoke-RestMethod -Uri "$apiBase/posts" -Method POST -Headers $headers -Body $jsonBytes -ErrorAction Stop
-        Write-Log "Blotato OK. SubmissionId: $($response.postSubmissionId)"
+        Write-Log "Instagram OK. SubmissionId: $($response.postSubmissionId)"
         return $true
     } catch {
-        Write-Log "FEHLER Blotato-Post: $_"
+        Write-Log "FEHLER Instagram-Post: $_"
         return $false
     }
 }
@@ -97,12 +137,11 @@ function Post-Blotato {
 # ============================================================
 # HAUPTLOGIK
 # ============================================================
-$heute    = (Get-Date).ToString("dd.MM.yyyy")
-$jetzt    = Get-Date
+$heute = (Get-Date).ToString("dd.MM.yyyy")
+$jetzt = Get-Date
 
 Write-Log "=== Trigger gestartet | Heute: $heute | Jetzt: $($jetzt.ToString('HH:mm')) ==="
 
-# CSV laden
 try {
     $rows = Import-Csv -Path $csvPath -Delimiter "," -Encoding UTF8
 } catch {
@@ -110,107 +149,87 @@ try {
     exit 1
 }
 
-# Heutige, geplante Posts filtern
-$heuteRows = $rows | Where-Object { $_.Datum -eq $heute -and $_.Status -eq "Geplant" }
+$heuteRows = $rows | Where-Object { $_.Datum -eq $heute -and $_.Status -eq "Geplant" -and $_.Plattform -eq "Instagram" }
 
 if (-not $heuteRows) {
-    Write-Log "Kein geplanter Post fuer heute gefunden. Nichts zu tun."
+    Write-Log "Kein geplanter Instagram-Post fuer heute. Fertig."
     exit 0
 }
 
-Write-Log "$(@($heuteRows).Count) Post(s) fuer heute gefunden — pruefe Zeitfenster..."
+Write-Log "$(@($heuteRows).Count) Instagram-Post(s) fuer heute gefunden."
 
 foreach ($row in $heuteRows) {
 
-    $typ       = $row.'Post-Typ'.Trim()
-    $plattform = $row.Plattform.Trim()
-    $uhrzeit   = $row.Uhrzeit.Trim()    # Format: "09:00" oder "18:00"
+    $typ     = $row.'Post-Typ'.Trim()
+    $uhrzeit = $row.Uhrzeit.Trim()
 
-    # Plattform und Typ pruefen
-    if ($plattform -eq "Facebook") {
-        Write-Log "Facebook uebersprungen (noch nicht implementiert)."
-        continue
-    }
     if ($typ -eq "Karussell") {
-        Write-Log "Karussell uebersprungen (noch nicht implementiert)."
-        continue
-    }
-    $erlaubteTypen = @("Reel", "Foto", "Story", "Text")
-    if ($erlaubteTypen -notcontains $typ) {
-        Write-Log "Unbekannter Post-Typ '$typ' — uebersprungen."
+        Write-Log "Karussell uebersprungen (nicht implementiert)."
         continue
     }
 
     # Zeitfenster pruefen
     try {
-        $postZeit   = [datetime]::ParseExact("$heute $uhrzeit", "dd.MM.yyyy HH:mm", $null)
+        $postZeit    = [datetime]::ParseExact("$heute $uhrzeit", "dd.MM.yyyy HH:mm", $null)
         $diffMinuten = ($jetzt - $postZeit).TotalMinutes
         if ($diffMinuten -lt $zeitfensterFrueh -or $diffMinuten -gt $zeitfensterSpaet) {
-            Write-Log "Zeitfenster nicht passend fuer $typ um $uhrzeit (diff: $([math]::Round($diffMinuten,1)) min) — uebersprungen."
+            Write-Log "Zeitfenster nicht passend fuer $typ um $uhrzeit (diff: $([math]::Round($diffMinuten,1)) min)."
             continue
         }
     } catch {
-        Write-Log "WARNUNG: Uhrzeit '$uhrzeit' konnte nicht geparst werden — Post wird trotzdem gesendet."
+        Write-Log "WARNUNG: Uhrzeit '$uhrzeit' konnte nicht geparst werden."
     }
 
-    Write-Log "Post faellig: $typ | $plattform | $uhrzeit"
+    Write-Log "Post faellig: $typ | $uhrzeit"
 
-    # Media-URL holen
-    $mediaUrl = $row.'Bild-URL'.Trim()
-    if (-not $mediaUrl -or $mediaUrl -eq "") {
-        Write-Log "WARNUNG: Keine Bild-URL/Video-URL in CSV fuer $typ am $heute um $uhrzeit."
-        Write-Log "Bitte URL manuell in CSV eintragen. Post wird OHNE Bild gesendet (nur Caption)."
-        # Fuer Stories ohne Bild macht kein Sinn — ueberspringen
-        if ($typ -eq "Story") {
-            Write-Log "Story ohne Bild uebersprungen."
-            continue
-        }
+    $imageSource = $row.Videoprompt.Trim()
+    $textOverlay = $row.'Text-Overlay'.Trim()
+    $caption     = $row.Text
+
+    # Fallback: wenn kein Videoprompt, Bild-URL direkt nutzen
+    if (-not $imageSource -or $imageSource -eq "") {
+        $imageSource = $row.'Bild-URL'.Trim()
     }
 
-    # Pause-Check — Plattform pausiert?
-    if ($plattform -eq "LinkedIn" -and (Test-Path $pauseLI)) {
-        Write-Log "LinkedIn pausiert (pause_linkedin.txt gesetzt) — Post uebersprungen."
-        continue
-    }
-    if ($plattform -ne "LinkedIn" -and (Test-Path $pauseIG)) {
-        Write-Log "Instagram pausiert (pause_instagram.txt gesetzt) — Post uebersprungen."
+    if (-not $imageSource -or $imageSource -eq "") {
+        Write-Log "FEHLER: Weder Videoprompt noch Bild-URL vorhanden. Post uebersprungen."
         continue
     }
 
-    # Blotato targetType und AccountId bestimmen
-    if ($plattform -eq "LinkedIn") {
-        $targetType = "linkedin"
-        $accId      = $accountIdLI
-        if ($typ -eq "Foto" -and (-not $mediaUrl -or $mediaUrl -eq "")) {
-            Write-Log "LinkedIn Foto ohne Bild — uebersprungen."
-            continue
-        }
-    } else {
-        $accId = $accountIdIG
-        $targetType = switch ($typ) {
-            "Story" { "instagramStory" }
-            default { "instagram" }
-        }
+    # Slideshow erstellen
+    $slideshowResponse = Create-Slideshow -imageSource $imageSource -textOverlay $textOverlay -typ $typ
+    if (-not $slideshowResponse) {
+        Write-Log "Slideshow-Erstellung fehlgeschlagen. Post uebersprungen."
+        continue
     }
 
-    # Caption (Text + Musik-URL wird NICHT an Blotato uebergeben — Musik separat via UI)
-    $caption = $row.Text
+    # Video-URL aus Response extrahieren
+    $videoUrl = Get-VideoUrl -response $slideshowResponse
+    if (-not $videoUrl) {
+        Write-Log "Keine Video-URL in Response. Volle Response: $($slideshowResponse | ConvertTo-Json -Depth 5)"
+        Write-Log "Post uebersprungen."
+        continue
+    }
 
-    # Posten
-    $erfolg = Post-Blotato -caption $caption -mediaUrl $mediaUrl -targetType $targetType -accId $accId
+    Write-Log "Video-URL: $videoUrl"
+
+    # targetType bestimmen
+    $targetType = if ($typ -eq "Story") { "instagramStory" } else { "instagram" }
+
+    # Auf Instagram posten
+    $erfolg = Post-Instagram -caption $caption -mediaUrl $videoUrl -targetType $targetType
 
     if ($erfolg) {
-        # Archiv-Eintrag
+        # Archiv
         if (-not (Test-Path $archivPath)) {
             "Zeitstempel,Datum,Uhrzeit,Post-Typ,Plattform,Media-URL,Caption" | Out-File -FilePath $archivPath -Encoding UTF8
         }
-        $archivZeile = "`"$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')`",`"$heute`",`"$uhrzeit`",`"$typ`",`"$plattform`",`"$mediaUrl`",`"$($caption -replace '"','""')`""
+        $archivZeile = "`"$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')`",`"$heute`",`"$uhrzeit`",`"$typ`",`"Instagram`",`"$videoUrl`",`"$($caption -replace '"','""')`""
         $archivZeile | Out-File -FilePath $archivPath -Append -Encoding UTF8
-        Write-Log "Archiv gespeichert."
 
-        # Status im CSV auf "Gepostet" setzen
+        # Status setzen
         $rows | ForEach-Object {
-            if ($_.Datum -eq $heute -and $_.Uhrzeit -eq $uhrzeit -and $_.Plattform -eq $plattform -and $_.Status -eq "Geplant") {
+            if ($_.Datum -eq $heute -and $_.Uhrzeit -eq $uhrzeit -and $_.Plattform -eq "Instagram" -and $_.Status -eq "Geplant") {
                 $_.Status = "Gepostet"
             }
         }
