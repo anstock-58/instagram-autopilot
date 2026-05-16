@@ -25,7 +25,11 @@ if (-not $csvPath) { Write-Output "FEHLER: Kein CSV fuer Monat '$monat' gefunden
 $apiKey        = if ($env:BLOTATO_API_KEY) { $env:BLOTATO_API_KEY } else { "blt_KiCyq1rBxLUqnWdUJaH6Qaij4V07Q6wvcIH8/aQLrXA=" }
 $apiBase       = "https://backend.blotato.com/v2"
 $accountIdIG   = "46248"   # @business.und.spirit Instagram
-$accountIdLI   = "21657"   # LinkedIn Dipl.-Ing. Andreas Stock
+$accountIdLI   = "21656"   # LinkedIn Dipl.-Ing. Andreas Stock
+
+# Pause-Dateien (gesetzt vom Telegram Pause Bot)
+$pauseIG       = Join-Path $basePath "outputs" "pause_instagram.txt"
+$pauseLI       = Join-Path $basePath "outputs" "pause_linkedin.txt"
 
 # Zeitfenster: Post gilt als "jetzt faellig" wenn er -10 bis +45 Minuten um die geplante Zeit liegt
 # (-10 weil Task 5 Minuten VOR der Postzeit startet, z.B. 08:55 fuer 09:00-Post)
@@ -161,6 +165,16 @@ foreach ($row in $heuteRows) {
             Write-Log "Story ohne Bild uebersprungen."
             continue
         }
+    }
+
+    # Pause-Check — Plattform pausiert?
+    if ($plattform -eq "LinkedIn" -and (Test-Path $pauseLI)) {
+        Write-Log "LinkedIn pausiert (pause_linkedin.txt gesetzt) — Post uebersprungen."
+        continue
+    }
+    if ($plattform -ne "LinkedIn" -and (Test-Path $pauseIG)) {
+        Write-Log "Instagram pausiert (pause_instagram.txt gesetzt) — Post uebersprungen."
+        continue
     }
 
     # Blotato targetType und AccountId bestimmen
