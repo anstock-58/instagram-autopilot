@@ -39,6 +39,6 @@ jobs:
         run: |
           git config user.email "autopilot@github-actions"
           git config user.name "Instagram Autopilot"
-          git add outputs/contentplan_juni_v1.csv
+          git add outputs/contentplan_juni_v1.csv outputs/contentplan_mai_v2.csv || true
           git diff --staged --quiet || git commit -m "Auto: Story gepostet $(date +'%d.%m.%Y')"
           git push

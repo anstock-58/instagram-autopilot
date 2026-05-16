@@ -6,12 +6,18 @@
 | --- | --- | --- |
 | YouTube InnerCode (@innercode.projekt) | Laufend | Skripte und Upload-Pakete produzieren |
 | YouTube Bewusst Einfach | Laufend | Skripte im Bewusst-Einfach-Stil produzieren |
-| Instagram Autopilot System | Live ✅ | Mai-Plan läuft — Overlay + Musik funktionieren, Facebook-Modul noch auf rohe fal.ai-URL (kein Overlay/Ton auf FB) |
-| Instagram Autopilot — Produkt | In Vorbereitung | Landingpage ALFIMA, ZIP-Paket, Launch |
+| Instagram Autopilot System | Live ✅ | Architektur: CSV → post-trigger.ps1 → Blotato REST API → Instagram + LinkedIn (kein Make.com, kein Webhook mehr) — Windows Tasks: 08:55 (Story) + 17:55 (Reel) — Juni-Plan aktiv — Blotato Instagram ✅ + LinkedIn ✅ verbunden (ID 21657) — image-generator.ps1 gebaut ✅ — alle Mai+Juni LinkedIn-Bild-URLs im CSV eingetragen ✅ |
+| Instagram Autopilot — Produkt | Live ✅ | Salespage + Komplettanleitung auf Single-Path umgestellt (nur Blotato 29$, kein Make.com+Creatomate mehr) — ALFIMA Willkommensmail aktiviert ✅ — ALFIMA Produktbeschreibung manuell eingetragen |
+| Content-Prompts Neustart im Kopf | Gespeichert ✅ | System Prompt + Contentplan Prompt für Instagram Reels → `reference/prompts-instagram-reels.md` |
 | ALFIMA Funnel „Neustart im Kopf" | Live ✅ | Freebie-Landingpage fertig, Traffic läuft |
 | Smart Profit KI Business (Sales Angels) | Aktiver Schwerpunkt | Digistore-Produkt bewerben |
 | „Neustart im Kopf" Hauptkurs | In ALFIMA installiert | Landingpage fehlt noch |
 | Minikurs „Raus dem Funktionsmodus" | In ALFIMA installiert | Landingpage fehlt noch |
+| Juni-Contentplan | Fertig ✅ | contentplan_juni_v1.csv — 30 Reels (18:00) + 30 Stories (09:00) — alle mit KLARHEIT-CTA — wartet auf Blotato API-Automation |
+| Blotato Direct-API-Automation | Live ✅ (16.05.2026) | Instagram + LinkedIn komplett auf Blotato umgestellt — post-trigger.ps1 postet direkt via Blotato REST API — 2 Windows-Tasks: 08:55 (Story) + 17:55 (Reel) — image-generator.ps1 generiert LinkedIn-Bilder via fal.ai und trägt URLs automatisch in CSV ein ✅ — **Make.com läuft noch NUR für Telegram Pause Bot** — sobald Telegram Pause Bot fertig, Make.com komplett abschalten |
+| ALFIMA API-Status | Geklärt ✅ | Ausgehende Webhooks möglich (ALFIMA → Make.com) — eingehende API/Webhooks noch nicht verfügbar — E-Mail-Automationen direkt in ALFIMA einrichten (Pro-Abo enthalten) |
+| Telegram KI Agent (@AndiKIAgent_bot) | Live ✅ | Make.com Szenario 5699211 aktiv — Telegram → Claude Haiku 4.5 → Telegram — Anleitung in `reference/telegram-ki-agent-setup.md` |
+| Julia Trost Kooperation | Ausstehend | Instagram-DM gesendet (09.05.2026) — auf Antwort warten |
 | Dropservice (Ersu Consulting / Leon Weidner) | Laufend | Leads generieren via Facebook/WhatsApp |
 | TikTok @luzian_empire | Laufend | Inhalte nach Danil-Lenivov-System posten |
 | InnerCode KI-Assistent | In Planung | Wissen von Osho, Tolle, Dispenza etc. bündeln, Videokurs folgt |
@@ -51,6 +57,30 @@
 | --- | --- |
 | Selbstsabotage & Ego | Ca. 10 bis 12 Min., viraler Stil, tiefgründig und humorvoll |
 | Videoreihe zu „Das weise Herz" | Chronologisch, aufmerksamkeitsstarke Titel und Thumbnails |
+
+---
+
+## Social Media Accounts
+
+### Instagram
+- @business.und.spirit
+- @andi.mit.system
+- @andi.mentalgesund
+- @song.geschenke
+- @stock.und.partner
+- @ki_support
+
+### TikTok
+- @andi_digital58
+- @song.geschenke
+- @business.und.spirit
+
+### YouTube
+- @bewussteinfach (Bewusst Einfach)
+- @innercode.projekt (InnerCode)
+- @business.und.spirit
+- @andi.mentalgesund
+- @velvetvoltage.official
 
 ---
 
