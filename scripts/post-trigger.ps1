@@ -7,13 +7,25 @@
 # KONFIGURATION
 # ============================================================
 $basePath      = if ($env:GITHUB_WORKSPACE) { $env:GITHUB_WORKSPACE } else { "C:\Users\andre\claude-workspace-vorlage" }
-$csvPath       = Join-Path $basePath "outputs" "contentplan_juni_v1.csv"
 $logPath       = Join-Path $basePath "outputs" "post-trigger-log.txt"
 $archivPath    = Join-Path $basePath "outputs" "post-archiv.csv"
 
+# CSV automatisch nach aktuellem Monat waehlen
+$monatMap = @{1="januar";2="februar";3="maerz";4="april";5="mai";6="juni";
+              7="juli";8="august";9="september";10="oktober";11="november";12="dezember"}
+$monat    = $monatMap[(Get-Date).Month]
+$csvNamen = @("contentplan_${monat}_v2.csv", "contentplan_${monat}_v1.csv")
+$csvPath  = $null
+foreach ($name in $csvNamen) {
+    $pfad = Join-Path $basePath "outputs" $name
+    if (Test-Path $pfad) { $csvPath = $pfad; break }
+}
+if (-not $csvPath) { Write-Output "FEHLER: Kein CSV fuer Monat '$monat' gefunden."; exit 1 }
+
 $apiKey        = if ($env:BLOTATO_API_KEY) { $env:BLOTATO_API_KEY } else { "blt_KiCyq1rBxLUqnWdUJaH6Qaij4V07Q6wvcIH8/aQLrXA=" }
 $apiBase       = "https://backend.blotato.com/v2"
-$accountId     = "46248"   # @business.und.spirit
+$accountIdIG   = "46248"   # @business.und.spirit Instagram
+$accountIdLI   = "21657"   # LinkedIn Dipl.-Ing. Andreas Stock
 
 # Zeitfenster: Post gilt als "jetzt faellig" wenn er -10 bis +45 Minuten um die geplante Zeit liegt
 # (-10 weil Task 5 Minuten VOR der Postzeit startet, z.B. 08:55 fuer 09:00-Post)
@@ -34,16 +46,19 @@ function Post-Blotato {
     param(
         [string]$caption,
         [string]$mediaUrl,
-        [string]$targetType   # "instagram" fuer Feed/Reel, "instagramStory" fuer Story
+        [string]$targetType,  # "instagram", "instagramStory", "linkedin"
+        [string]$accId
     )
+
+    $platformName = if ($targetType -eq "linkedin") { "linkedin" } else { "instagram" }
 
     # Payload als JSON bauen
     $payloadObj = @{
         post = @{
-            accountId = $accountId
+            accountId = $accId
             content   = @{
                 text      = $caption
-                platform  = "instagram"
+                platform  = $platformName
             }
             target    = @{
                 targetType = $targetType
@@ -148,20 +163,27 @@ foreach ($row in $heuteRows) {
         }
     }
 
-    # Blotato targetType bestimmen
-    $targetType = switch ($typ) {
-        "Story"          { "instagramStory" }
-        "Reel"           { "instagram"       }
-        "Foto"           { "instagram"       }
-        "Text"           { "instagram"       }
-        default          { "instagram"       }
+    # Blotato targetType und AccountId bestimmen
+    if ($plattform -eq "LinkedIn") {
+        $targetType = "linkedin"
+        $accId      = $accountIdLI
+        if ($typ -eq "Foto" -and (-not $mediaUrl -or $mediaUrl -eq "")) {
+            Write-Log "LinkedIn Foto ohne Bild — uebersprungen."
+            continue
+        }
+    } else {
+        $accId = $accountIdIG
+        $targetType = switch ($typ) {
+            "Story" { "instagramStory" }
+            default { "instagram" }
+        }
     }
 
     # Caption (Text + Musik-URL wird NICHT an Blotato uebergeben — Musik separat via UI)
     $caption = $row.Text
 
     # Posten
-    $erfolg = Post-Blotato -caption $caption -mediaUrl $mediaUrl -targetType $targetType
+    $erfolg = Post-Blotato -caption $caption -mediaUrl $mediaUrl -targetType $targetType -accId $accId
 
     if ($erfolg) {
         # Archiv-Eintrag
