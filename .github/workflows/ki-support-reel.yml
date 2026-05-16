@@ -1,0 +1,44 @@
+name: KI-Support Autopilot - Reel (18:00)
+
+on:
+  schedule:
+    - cron: '55 15 * * *'  # 15:55 UTC = 17:55 CEST (Sommer)
+  workflow_dispatch:         # Manuell auslösbar über GitHub UI
+
+jobs:
+  post-reel:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Pause prüfen
+        id: pause_check
+        run: |
+          if [ -f "PAUSED" ]; then
+            echo "paused=true" >> $GITHUB_OUTPUT
+            echo "KI-Support Autopilot ist pausiert. Kein Post."
+          else
+            echo "paused=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Reel veröffentlichen
+        if: steps.pause_check.outputs.paused == 'false'
+        env:
+          BLOTATO_API_KEY: ${{ secrets.BLOTATO_API_KEY }}
+          GITHUB_WORKSPACE: ${{ github.workspace }}
+        shell: pwsh
+        run: |
+          & "${{ github.workspace }}/scripts/post-trigger-ki-support.ps1"
+
+      - name: CSV-Status committen
+        if: steps.pause_check.outputs.paused == 'false'
+        run: |
+          git config user.email "autopilot@github-actions"
+          git config user.name "KI-Support Autopilot"
+          git add outputs/contentplan_ki_support_*.csv || true
+          git diff --staged --quiet || git commit -m "Auto: KI-Support Reel gepostet $(date +'%d.%m.%Y')"
+          git push
