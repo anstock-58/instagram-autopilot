@@ -59,7 +59,7 @@ function Create-Slideshow {
         inputs     = @{
             slides      = $slides
             textPosition = "bottom"
-            textStyle    = "bold"
+            textStyle    = "elegant"
             aspectRatio  = $aspectRatio
             transition   = "fade"
         }
