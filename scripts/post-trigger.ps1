@@ -60,6 +60,7 @@ function Create-Slideshow {
             slides      = $slides
             textPosition = "bottom"
             textStyle    = "elegant"
+            textColor    = "#FFFFFF"
             aspectRatio  = $aspectRatio
             transition   = "fade"
         }
