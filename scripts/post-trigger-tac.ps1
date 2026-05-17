@@ -55,7 +55,7 @@ function Create-AIVideo {
         },
         @{
             mediaSource = $imagePrompt
-            script      = "Kommentiere INFO unter diesem Beitrag — ich schicke dir sofort alle Details zum TAC 3.0 Programm."
+            script      = "Kommentiere INFO unter diesem Beitrag — ich schicke dir sofort alle Details zum TAC 3.0 Workshop."
         }
     )
 
