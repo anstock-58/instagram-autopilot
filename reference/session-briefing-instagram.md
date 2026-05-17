@@ -53,6 +53,9 @@ Lies zuerst `/prime`, dann diesen Text.
 Gleiche Architektur, anderes CSV, andere Account-ID in `$accountIdIG`.
 Skript kopieren als `post-trigger-[account].ps1`, eigenen Workflow anlegen.
 
+**Standard-Template für ALLE Accounts: `ai-story-video` mit Voiceover.**
+Niemals Slideshow oder altes Template verwenden — nicht fragen, einfach ai-story-video nehmen.
+
 ---
 
 ## Was du als neue Session tun sollst
