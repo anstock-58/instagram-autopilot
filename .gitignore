@@ -18,3 +18,7 @@ Thumbs.db
 
 # Claude lokale Einstellungen
 .claude/settings.local.json
+
+# MCP Konfiguration (enthält keine Secrets, aber lokal halten)
+.mcp.json
+scripts/telegram-pause-bot.ps1
