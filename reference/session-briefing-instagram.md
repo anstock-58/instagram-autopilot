@@ -14,17 +14,18 @@ Lies zuerst `/prime`, dann diesen Text.
 ### Wie ein Post entsteht (Automation)
 1. GitHub Actions startet täglich: 08:55 CEST (Story) und 17:55 CEST (Reel)
 2. `scripts/post-trigger.ps1` liest das CSV
-3. Ruft `POST /v2/videos/from-templates` auf — Blotato generiert das Bild aus dem Videoprompt und erstellt eine Slideshow mit Text-Overlay
-4. Template-ID: `5903b592-1255-43b4-b9ac-f8ed7cbf6a5f` (Image Slideshow with Text Overlays)
-5. Slideshow hat 2 Slides: Hauptbild mit Text + CTA-Slide "Kommentiere KLARHEIT"
-6. Fertiges Video wird via `POST /v2/posts` auf Instagram gepostet
+3. Ruft `POST /v2/videos/from-templates` auf — Blotato generiert KI-Bild aus Videoprompt und spricht Voiceover
+4. Template: `ai-story-video` — ID: `5903fe43-514d-40ee-a060-0d6628c5f8fd` (AI Video with AI Voice)
+5. 2 Scenes: Scene 1 = Hauptbotschaft mit Voiceover | Scene 2 = CTA "Kommentiere KLARHEIT"
+6. Voiceover-Stimme: `Daniel (British, authoritative)` — spricht Deutsch via ElevenLabs multilingual
+7. Fertiges Video wird via `POST /v2/posts` auf Instagram gepostet
 
 ### Wie ein Post aussieht
-- Slideshow aus Bildern (Blotato generiert via AI)
-- Weißer Text unten auf dem Bild (textStyle: elegant, textColor: #FFFFFF)
-- Zweiter Slide immer mit CTA
+- KI-generiertes Bild (aus Videoprompt) mit animierten Captions unten (gelb hervorgehoben)
+- Voiceover liest den Text-Overlay-Inhalt vor (Daniel-Stimme, Deutsch)
+- Scene 2 mit CTA "Kommentiere KLARHEIT — ich antworte dir persönlich"
 - Caption darunter (der lange Fließtext aus der CSV-Spalte "Text")
-- Kein Voiceover, keine Musik (Template unterstützt es nicht — akzeptiert)
+- Übergang: Fade zwischen Scenes
 
 ### Was NICHT mehr genutzt wird
 - fal.ai (war für Bildgenerierung, jetzt macht Blotato das)
