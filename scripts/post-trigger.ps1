@@ -48,8 +48,11 @@ function Create-AIVideo {
         [string]$typ            # "Story" oder "Reel"/"Foto"
     )
 
+    # WICHTIG: Text-Overlay im CSV muss echte Umlaute enthalten (ü, ä, ö, ß)
+    # Nicht ue/ae/oe — ElevenLabs liest diese falsch vor.
+
     # Scene 1: Hauptbotschaft mit KI-Bild und Voiceover
-    # Scene 2: CTA-Scene mit gleichem Bild
+    # Scene 2: CTA mit Standortcheck-Hinweis
     $scenes = @(
         @{
             mediaSource = $imagePrompt
@@ -57,7 +60,7 @@ function Create-AIVideo {
         },
         @{
             mediaSource = $imagePrompt
-            script      = "Kommentiere KLARHEIT unter diesem Beitrag. Ich antworte dir persoenlich."
+            script      = "Kommentiere KLARHEIT unter diesem Beitrag — ich schicke dir sofort deinen kostenlosen Standortcheck."
         }
     )
 
