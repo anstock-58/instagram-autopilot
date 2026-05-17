@@ -56,6 +56,9 @@ Skript kopieren als `post-trigger-[account].ps1`, eigenen Workflow anlegen.
 **Standard-Template für ALLE Accounts: `ai-story-video` mit Voiceover.**
 Niemals Slideshow oder altes Template verwenden — nicht fragen, einfach ai-story-video nehmen.
 
+**Videoprompts aus dem CSV IMMER unverändert übernehmen.**
+Cinematic B-Roll-Stil funktioniert mit Blatotos Imagen4 direkt — kein Anpassen, kein Prüfen, kein Nachfragen.
+
 ---
 
 ## Was du als neue Session tun sollst
