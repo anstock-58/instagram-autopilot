@@ -1,5 +1,6 @@
 # post-trigger.ps1
-# Erstellt Slideshow-Video via Blotato Visual Templates API und postet auf Instagram.
+# Erstellt AI-Video mit Voiceover via Blotato Visual Templates API und postet auf Instagram.
+# Template: AI Video with AI Voice (ai-story-video)
 # Laeuft taeglich via GitHub Actions (08:55 Story, 17:55 Reel).
 
 # ============================================================
@@ -24,7 +25,8 @@ if (-not $csvPath) { Write-Output "FEHLER: Kein CSV fuer Monat '$monat' gefunden
 $apiKey          = if ($env:BLOTATO_API_KEY) { $env:BLOTATO_API_KEY } else { "blt_KiCyq1rBxLUqnWdUJaH6Qaij4V07Q6wvcIH8/aQLrXA=" }
 $apiBase         = "https://backend.blotato.com/v2"
 $accountIdIG     = "46248"   # @business.und.spirit Instagram
-$slideshowTemplate = "/base/v2/image-slideshow/5903b592-1255-43b4-b9ac-f8ed7cbf6a5f/v1"
+$aiVideoTemplate = "/base/v2/ai-story-video/5903fe43-514d-40ee-a060-0d6628c5f8fd/v1"
+$voiceName       = "Daniel (British, authoritative)"   # ElevenLabs-Stimme, klingt auf Deutsch professionell
 
 $zeitfensterFrueh = -10
 $zeitfensterSpaet = 45
@@ -39,30 +41,39 @@ function Write-Log {
     Write-Output $line
 }
 
-function Create-Slideshow {
+function Create-AIVideo {
     param(
-        [string]$imageSource,   # Videoprompt aus CSV (Blotato generiert Bild)
-        [string]$textOverlay,   # Text-Overlay aus CSV
+        [string]$imagePrompt,   # Videoprompt aus CSV (Blotato generiert KI-Bild)
+        [string]$voiceScript,   # Text-Overlay aus CSV (wird als Voiceover gesprochen)
         [string]$typ            # "Story" oder "Reel"/"Foto"
     )
 
-    $aspectRatio = if ($typ -eq "Story") { "9:16" } else { "9:16" }
-
-    # Slides: Hauptbild + CTA-Slide
-    $slides = @(
-        @{ imageSource = $imageSource; textOverlay = $textOverlay },
-        @{ imageSource = $imageSource; textOverlay = "Kommentiere KLARHEIT - ich antworte dir" }
+    # Scene 1: Hauptbotschaft mit KI-Bild und Voiceover
+    # Scene 2: CTA-Scene mit gleichem Bild
+    $scenes = @(
+        @{
+            mediaSource = $imagePrompt
+            script      = $voiceScript
+        },
+        @{
+            mediaSource = $imagePrompt
+            script      = "Kommentiere KLARHEIT unter diesem Beitrag. Ich antworte dir persoenlich."
+        }
     )
 
     $payload = @{
-        templateId = $slideshowTemplate
+        templateId = $aiVideoTemplate
         inputs     = @{
-            slides      = $slides
-            textPosition = "bottom"
-            textStyle    = "elegant"
-            textColor    = "#FFFFFF"
-            aspectRatio  = $aspectRatio
-            transition   = "fade"
+            scenes          = $scenes
+            enableVoiceover = $true
+            voiceName       = $voiceName
+            aiImageModel    = "fal-ai/imagen4/preview/fast"
+            animateAiImages = $false
+            captionPosition = "bottom"
+            highlightColor  = "#FFFF00"
+            transition      = "fade"
+            aspectRatio     = "9:16"
+            trimToVoiceover = $true
         }
         render = $true
     }
@@ -74,14 +85,14 @@ function Create-Slideshow {
         "Content-Type"    = "application/json; charset=utf-8"
     }
 
-    Write-Log "Erstelle Slideshow ($typ): $json"
+    Write-Log "Erstelle AI-Video ($typ) mit Voiceover: Prompt-Laenge $($imagePrompt.Length) | Script-Laenge $($voiceScript.Length)"
 
     try {
         $response = Invoke-RestMethod -Uri "$apiBase/videos/from-templates" -Method POST -Headers $headers -Body $jsonBytes -ErrorAction Stop
-        Write-Log "Slideshow Response: $($response | ConvertTo-Json -Depth 5 -Compress)"
+        Write-Log "AI-Video Response: $($response | ConvertTo-Json -Depth 5 -Compress)"
         return $response
     } catch {
-        Write-Log "FEHLER Slideshow-Erstellung: $_"
+        Write-Log "FEHLER AI-Video-Erstellung: $_"
         return $null
     }
 }
@@ -197,15 +208,15 @@ foreach ($row in $heuteRows) {
         continue
     }
 
-    # Slideshow erstellen
-    $slideshowResponse = Create-Slideshow -imageSource $imageSource -textOverlay $textOverlay -typ $typ
-    if (-not $slideshowResponse) {
-        Write-Log "Slideshow-Erstellung fehlgeschlagen. Post uebersprungen."
+    # AI-Video mit Voiceover erstellen
+    $videoResponse = Create-AIVideo -imagePrompt $imageSource -voiceScript $textOverlay -typ $typ
+    if (-not $videoResponse) {
+        Write-Log "AI-Video-Erstellung fehlgeschlagen. Post uebersprungen."
         continue
     }
 
     # Video-URL aus Response extrahieren
-    $videoUrl = Get-VideoUrl -response $slideshowResponse
+    $videoUrl = Get-VideoUrl -response $videoResponse
     if (-not $videoUrl) {
         Write-Log "Keine Video-URL in Response. Volle Response: $($slideshowResponse | ConvertTo-Json -Depth 5)"
         Write-Log "Post uebersprungen."
