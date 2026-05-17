@@ -7,8 +7,8 @@
 # KONFIGURATION
 # ============================================================
 $basePath    = if ($env:GITHUB_WORKSPACE) { $env:GITHUB_WORKSPACE } else { "C:\Users\andre\claude-workspace-vorlage" }
-$logPath     = Join-Path $basePath "outputs" "post-trigger-tac-log.txt"
-$archivPath  = Join-Path $basePath "outputs" "post-archiv-tac.csv"
+$logPath     = Join-Path $basePath "outputs\post-trigger-tac-log.txt"
+$archivPath  = Join-Path $basePath "outputs\post-archiv-tac.csv"
 
 # CSV automatisch nach aktuellem Monat waehlen
 $monatMap = @{1="januar";2="februar";3="maerz";4="april";5="mai";6="juni";
@@ -17,10 +17,10 @@ $monat    = $monatMap[(Get-Date).Month]
 $csvNamen = @("contentplan_tac_${monat}_v2.csv", "contentplan_tac_${monat}_v1.csv", "contentplan_tac_${monat}.csv")
 $csvPath  = $null
 foreach ($name in $csvNamen) {
-    $pfad = Join-Path $basePath "outputs" $name
+    $pfad = Join-Path $basePath "outputs\$name"
     if (Test-Path $pfad) { $csvPath = $pfad; break }
 }
-if (-not $csvPath) { Write-Output "FEHLER: Kein TAC-CSV fuer Monat '$monat' gefunden."; exit 1 }
+if (-not $csvPath) { Write-Host "FEHLER: Kein TAC-CSV fuer Monat '$monat' gefunden."; exit 1 }
 
 $apiKey          = if ($env:BLOTATO_API_KEY) { $env:BLOTATO_API_KEY } else { "blt_KiCyq1rBxLUqnWdUJaH6Qaij4V07Q6wvcIH8/aQLrXA=" }
 $apiBase         = "https://backend.blotato.com/v2"
@@ -38,7 +38,7 @@ function Write-Log {
     param([string]$msg)
     $line = "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') | $msg"
     $line | Out-File -FilePath $logPath -Append -Encoding UTF8
-    Write-Output $line
+    Write-Host $line
 }
 
 function Create-AIVideo {
@@ -55,7 +55,7 @@ function Create-AIVideo {
         },
         @{
             mediaSource = $imagePrompt
-            script      = "Kommentiere INFO unter diesem Beitrag. Ich antworte dir persoenlich."
+            script      = "Kommentiere INFO unter diesem Beitrag — ich schicke dir sofort alle Details zum TAC 3.0 Programm."
         }
     )
 
@@ -95,13 +95,48 @@ function Create-AIVideo {
     }
 }
 
-function Get-VideoUrl {
+function Wait-ForVideoUrl {
     param($response)
-    if ($response.videoUrl)       { return $response.videoUrl }
-    if ($response.url)            { return $response.url }
-    if ($response.data.videoUrl)  { return $response.data.videoUrl }
-    if ($response.data.url)       { return $response.data.url }
-    if ($response.outputUrl)      { return $response.outputUrl }
+    $headers = @{ "blotato-api-key" = $apiKey }
+
+    $jobId = $null
+    if ($response.item.id)  { $jobId = $response.item.id }
+    elseif ($response.id)   { $jobId = $response.id }
+
+    if ($response.item.mediaUrl) { return $response.item.mediaUrl }
+    if ($response.mediaUrl)      { return $response.mediaUrl }
+    if ($response.videoUrl)      { return $response.videoUrl }
+    if ($response.url)           { return $response.url }
+
+    if (-not $jobId) {
+        Write-Log "Keine Job-ID in Response gefunden. Response: $($response | ConvertTo-Json -Depth 3 -Compress)"
+        return $null
+    }
+
+    Write-Log "Rendering laeuft (Job: $jobId) - warte bis zu 5 Minuten..."
+    $maxWait = 60
+    for ($i = 1; $i -le $maxWait; $i++) {
+        Start-Sleep -Seconds 5
+        try {
+            $status = Invoke-RestMethod -Uri "$apiBase/videos/creations/$jobId" -Method GET -Headers $headers -ErrorAction Stop
+            $state  = $status.item.status
+            Write-Log "Render-Status ($i): $state"
+            if ($state -eq "done" -or $state -eq "completed" -or $state -eq "ready") {
+                if ($status.item.mediaUrl)  { return $status.item.mediaUrl }
+                if ($status.item.videoUrl)  { return $status.item.videoUrl }
+                if ($status.item.url)       { return $status.item.url }
+                Write-Log "Status done aber keine URL: $($status | ConvertTo-Json -Depth 5 -Compress)"
+                return $null
+            }
+            if ($state -eq "creation-from-template-failed" -or $state -eq "failed" -or $state -eq "error") {
+                Write-Log "Rendering fehlgeschlagen: $($status | ConvertTo-Json -Depth 5 -Compress)"
+                return $null
+            }
+        } catch {
+            Write-Log "Fehler beim Status-Check: $_"
+        }
+    }
+    Write-Log "Timeout: Video nach 5 Minuten noch nicht fertig."
     return $null
 }
 
@@ -206,7 +241,7 @@ foreach ($row in $heuteRows) {
     $videoResponse = Create-AIVideo -imagePrompt $imageSource -voiceScript $textOverlay -typ $typ
     if (-not $videoResponse) { Write-Log "AI-Video-Erstellung fehlgeschlagen. Post uebersprungen."; continue }
 
-    $videoUrl = Get-VideoUrl -response $videoResponse
+    $videoUrl = Wait-ForVideoUrl -response $videoResponse
     if (-not $videoUrl) {
         Write-Log "Keine Video-URL. Volle Response: $($slideshowResponse | ConvertTo-Json -Depth 5)"
         continue
