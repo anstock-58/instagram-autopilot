@@ -1,16 +1,39 @@
 # post-trigger-tac.ps1
-# Liest den TAC-Contentplan, findet den heutigen Post und feuert den Make.com Webhook.
-# Laeuft taeglich um 17:55 Uhr via GitHub Actions.
+# Erstellt AI-Video mit Voiceover via Blotato Visual Templates API und postet auf Instagram @andi.mit.system (TAC).
+# Template: AI Video with AI Voice (ai-story-video)
+# Laeuft taeglich via GitHub Actions (17:55 CEST).
 
-$basePath   = if ($env:GITHUB_WORKSPACE) { $env:GITHUB_WORKSPACE } else { "C:\Users\andre\claude-workspace-vorlage" }
+# ============================================================
+# KONFIGURATION
+# ============================================================
+$basePath    = if ($env:GITHUB_WORKSPACE) { $env:GITHUB_WORKSPACE } else { "C:\Users\andre\claude-workspace-vorlage" }
+$logPath     = Join-Path $basePath "outputs" "post-trigger-tac-log.txt"
+$archivPath  = Join-Path $basePath "outputs" "post-archiv-tac.csv"
 
-$csvPath    = Join-Path $basePath "outputs\contentplan_tac_juni.csv"
-$webhookUrl = $env:TAC_WEBHOOK_URL
-$logPath    = Join-Path $basePath "outputs\post-trigger-tac-log.txt"
-$archivPath = Join-Path $basePath "outputs\post-archiv-tac.csv"
+# CSV automatisch nach aktuellem Monat waehlen
+$monatMap = @{1="januar";2="februar";3="maerz";4="april";5="mai";6="juni";
+              7="juli";8="august";9="september";10="oktober";11="november";12="dezember"}
+$monat    = $monatMap[(Get-Date).Month]
+$csvNamen = @("contentplan_tac_${monat}_v2.csv", "contentplan_tac_${monat}_v1.csv", "contentplan_tac_${monat}.csv")
+$csvPath  = $null
+foreach ($name in $csvNamen) {
+    $pfad = Join-Path $basePath "outputs" $name
+    if (Test-Path $pfad) { $csvPath = $pfad; break }
+}
+if (-not $csvPath) { Write-Output "FEHLER: Kein TAC-CSV fuer Monat '$monat' gefunden."; exit 1 }
 
-$heute = (Get-Date).ToString("dd.MM.yyyy")
+$apiKey          = if ($env:BLOTATO_API_KEY) { $env:BLOTATO_API_KEY } else { "blt_KiCyq1rBxLUqnWdUJaH6Qaij4V07Q6wvcIH8/aQLrXA=" }
+$apiBase         = "https://backend.blotato.com/v2"
+$accountIdIG     = "46471"   # @andi.mit.system Instagram (TAC)
+$aiVideoTemplate = "/base/v2/ai-story-video/5903fe43-514d-40ee-a060-0d6628c5f8fd/v1"
+$voiceName       = "Daniel (British, authoritative)"   # ElevenLabs-Stimme, klingt auf Deutsch professionell
 
+$zeitfensterFrueh = -10
+$zeitfensterSpaet = 45
+
+# ============================================================
+# HILFSFUNKTIONEN
+# ============================================================
 function Write-Log {
     param([string]$msg)
     $line = "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') | $msg"
@@ -18,12 +41,115 @@ function Write-Log {
     Write-Output $line
 }
 
-Write-Log "=== TAC Trigger gestartet | Heute: $heute ==="
+function Create-AIVideo {
+    param(
+        [string]$imagePrompt,   # Videoprompt aus CSV (Blotato generiert KI-Bild)
+        [string]$voiceScript,   # Text-Overlay aus CSV (wird als Voiceover gesprochen)
+        [string]$typ
+    )
 
-if (-not $webhookUrl) {
-    Write-Log "FEHLER: TAC_WEBHOOK_URL nicht gesetzt. Abbruch."
-    exit 1
+    $scenes = @(
+        @{
+            mediaSource = $imagePrompt
+            script      = $voiceScript
+        },
+        @{
+            mediaSource = $imagePrompt
+            script      = "Kommentiere INFO unter diesem Beitrag. Ich antworte dir persoenlich."
+        }
+    )
+
+    $payload = @{
+        templateId = $aiVideoTemplate
+        inputs     = @{
+            scenes          = $scenes
+            enableVoiceover = $true
+            voiceName       = $voiceName
+            aiImageModel    = "fal-ai/imagen4/preview/fast"
+            animateAiImages = $false
+            captionPosition = "bottom"
+            highlightColor  = "#FFFF00"
+            transition      = "fade"
+            aspectRatio     = "9:16"
+            trimToVoiceover = $true
+        }
+        render = $true
+    }
+
+    $json      = $payload | ConvertTo-Json -Depth 10 -Compress
+    $jsonBytes = [System.Text.Encoding]::UTF8.GetBytes($json)
+    $headers   = @{
+        "blotato-api-key" = $apiKey
+        "Content-Type"    = "application/json; charset=utf-8"
+    }
+
+    Write-Log "Erstelle TAC AI-Video ($typ) mit Voiceover: Prompt-Laenge $($imagePrompt.Length) | Script-Laenge $($voiceScript.Length)"
+
+    try {
+        $response = Invoke-RestMethod -Uri "$apiBase/videos/from-templates" -Method POST -Headers $headers -Body $jsonBytes -ErrorAction Stop
+        Write-Log "AI-Video Response: $($response | ConvertTo-Json -Depth 5 -Compress)"
+        return $response
+    } catch {
+        Write-Log "FEHLER AI-Video-Erstellung: $_"
+        return $null
+    }
 }
+
+function Get-VideoUrl {
+    param($response)
+    if ($response.videoUrl)       { return $response.videoUrl }
+    if ($response.url)            { return $response.url }
+    if ($response.data.videoUrl)  { return $response.data.videoUrl }
+    if ($response.data.url)       { return $response.data.url }
+    if ($response.outputUrl)      { return $response.outputUrl }
+    return $null
+}
+
+function Post-Instagram {
+    param(
+        [string]$caption,
+        [string]$mediaUrl,
+        [string]$targetType
+    )
+
+    $payload = @{
+        post = @{
+            accountId = $accountIdIG
+            content   = @{
+                text      = $caption
+                platform  = "instagram"
+                mediaUrls = @($mediaUrl)
+            }
+            target    = @{ targetType = $targetType }
+        }
+    }
+
+    $json      = $payload | ConvertTo-Json -Depth 10 -Compress
+    $jsonBytes = [System.Text.Encoding]::UTF8.GetBytes($json)
+    $headers   = @{
+        "blotato-api-key" = $apiKey
+        "Content-Type"    = "application/json; charset=utf-8"
+    }
+
+    Write-Log "Poste TAC auf Instagram ($targetType): Caption-Laenge $($caption.Length) Zeichen"
+
+    try {
+        $response = Invoke-RestMethod -Uri "$apiBase/posts" -Method POST -Headers $headers -Body $jsonBytes -ErrorAction Stop
+        Write-Log "Instagram OK. SubmissionId: $($response.postSubmissionId)"
+        return $true
+    } catch {
+        Write-Log "FEHLER Instagram-Post: $_"
+        return $false
+    }
+}
+
+# ============================================================
+# HAUPTLOGIK
+# ============================================================
+$heute = (Get-Date).ToString("dd.MM.yyyy")
+$jetzt = Get-Date
+
+Write-Log "=== TAC Trigger gestartet | Heute: $heute | Jetzt: $($jetzt.ToString('HH:mm')) | CSV: $csvPath ==="
 
 try {
     $rows = Import-Csv -Path $csvPath -Delimiter "," -Encoding UTF8
@@ -32,62 +158,79 @@ try {
     exit 1
 }
 
-$heuteRow = $rows | Where-Object { $_.Datum -eq $heute } | Select-Object -First 1
+$heuteRows = $rows | Where-Object { $_.Datum -eq $heute -and $_.Status -eq "Geplant" -and $_.Plattform -eq "Instagram" }
 
-if (-not $heuteRow) {
-    Write-Log "Kein Post fuer heute gefunden. Nichts zu tun."
+if (-not $heuteRows) {
+    Write-Log "Kein geplanter TAC-Post fuer heute. Fertig."
     exit 0
 }
 
-$typ       = $heuteRow.'Post-Typ'.Trim()
-$plattform = $heuteRow.Plattform.Trim()
+Write-Log "$(@($heuteRows).Count) TAC-Post(s) fuer heute gefunden."
 
-Write-Log "Post gefunden: $typ | $plattform"
+foreach ($row in $heuteRows) {
 
-if ($plattform -eq "Facebook") {
-    Write-Log "Facebook-Post uebersprungen (noch nicht implementiert)."
-    exit 0
-}
+    $typ     = $row.'Post-Typ'.Trim()
+    $uhrzeit = $row.Uhrzeit.Trim()
 
-if ($typ -eq "Karussell") {
-    Write-Log "Karussell uebersprungen (noch nicht implementiert)."
-    exit 0
-}
-
-if ($typ -ne "Reel" -and $typ -ne "Foto") {
-    Write-Log "Unbekannter Post-Typ '$typ' - uebersprungen."
-    exit 0
-}
-
-$payload = @{
-    post_typ    = $typ
-    plattform   = $plattform
-    text        = $heuteRow.Text
-    link        = $heuteRow.Link
-    bildprompt  = $heuteRow.Bildprompt
-    videoprompt = $heuteRow.Videoprompt
-    textoverlay = $heuteRow.'Text-Overlay'
-    datum       = $heute
-}
-
-$json = $payload | ConvertTo-Json -Compress
-Write-Log "Sende Payload: $json"
-
-try {
-    $jsonBytes = [System.Text.Encoding]::UTF8.GetBytes($json)
-    $response = Invoke-RestMethod -Uri $webhookUrl -Method POST -Body $jsonBytes -ContentType "application/json; charset=utf-8" -ErrorAction Stop
-    Write-Log "Webhook erfolgreich. Antwort: $($response | ConvertTo-Json -Compress)"
-
-    $archivZeile = "`"$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')`",`"$heute`",`"$typ`",`"$plattform`",`"$($heuteRow.Videoprompt)`",`"$($heuteRow.Text -replace '"','""')`""
-    if (-not (Test-Path $archivPath)) {
-        "Zeitstempel,Datum,Post-Typ,Plattform,Videoprompt,Caption" | Out-File -FilePath $archivPath -Encoding UTF8
+    if ($typ -eq "Karussell") {
+        Write-Log "Karussell uebersprungen (nicht implementiert)."
+        continue
     }
-    $archivZeile | Out-File -FilePath $archivPath -Append -Encoding UTF8
-    Write-Log "Archiv-Eintrag gespeichert: $archivPath"
 
-} catch {
-    Write-Log "FEHLER Webhook: $_"
-    exit 1
+    try {
+        $postZeit    = [datetime]::ParseExact("$heute $uhrzeit", "dd.MM.yyyy HH:mm", $null)
+        $diffMinuten = ($jetzt - $postZeit).TotalMinutes
+        if ($diffMinuten -lt $zeitfensterFrueh -or $diffMinuten -gt $zeitfensterSpaet) {
+            Write-Log "Zeitfenster nicht passend fuer $typ um $uhrzeit (diff: $([math]::Round($diffMinuten,1)) min)."
+            continue
+        }
+    } catch {
+        Write-Log "WARNUNG: Uhrzeit '$uhrzeit' konnte nicht geparst werden."
+    }
+
+    Write-Log "TAC-Post faellig: $typ | $uhrzeit"
+
+    $imageSource = $row.Videoprompt.Trim()
+    $textOverlay = $row.'Text-Overlay'.Trim()
+    $caption     = $row.Text
+
+    if (-not $imageSource -or $imageSource -eq "") {
+        $imageSource = $row.'Bild-URL'.Trim()
+    }
+
+    if (-not $imageSource -or $imageSource -eq "") {
+        Write-Log "FEHLER: Weder Videoprompt noch Bild-URL vorhanden. Post uebersprungen."
+        continue
+    }
+
+    $videoResponse = Create-AIVideo -imagePrompt $imageSource -voiceScript $textOverlay -typ $typ
+    if (-not $videoResponse) { Write-Log "AI-Video-Erstellung fehlgeschlagen. Post uebersprungen."; continue }
+
+    $videoUrl = Get-VideoUrl -response $videoResponse
+    if (-not $videoUrl) {
+        Write-Log "Keine Video-URL. Volle Response: $($slideshowResponse | ConvertTo-Json -Depth 5)"
+        continue
+    }
+
+    Write-Log "Video-URL: $videoUrl"
+    $targetType = if ($typ -eq "Story") { "instagramStory" } else { "instagram" }
+    $erfolg = Post-Instagram -caption $caption -mediaUrl $videoUrl -targetType $targetType
+
+    if ($erfolg) {
+        if (-not (Test-Path $archivPath)) {
+            "Zeitstempel,Datum,Uhrzeit,Post-Typ,Plattform,Media-URL,Caption" | Out-File -FilePath $archivPath -Encoding UTF8
+        }
+        $archivZeile = "`"$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')`",`"$heute`",`"$uhrzeit`",`"$typ`",`"Instagram`",`"$videoUrl`",`"$($caption -replace '"','""')`""
+        $archivZeile | Out-File -FilePath $archivPath -Append -Encoding UTF8
+
+        $rows | ForEach-Object {
+            if ($_.Datum -eq $heute -and $_.Uhrzeit -eq $uhrzeit -and $_.Plattform -eq "Instagram" -and $_.Status -eq "Geplant") {
+                $_.Status = "Gepostet"
+            }
+        }
+        $rows | Export-Csv -Path $csvPath -Delimiter "," -Encoding UTF8 -NoTypeInformation
+        Write-Log "Status auf 'Gepostet' gesetzt."
+    }
 }
 
-Write-Log "=== Fertig ==="
+Write-Log "=== TAC Fertig ==="
