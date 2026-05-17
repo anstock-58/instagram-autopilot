@@ -18,7 +18,7 @@
 | Blotato Direct-API-Automation | Live ✅ (16.05.2026) | Instagram + LinkedIn komplett auf Blotato umgestellt — post-trigger.ps1 postet direkt via Blotato REST API — 2 Windows-Tasks: 08:55 (Story) + 17:55 (Reel) — image-generator.ps1 generiert LinkedIn-Bilder ✅ — Telegram Pause Bot ✅ fertig (telegram-pause-bot.ps1, Windows Task alle 5 Min) — Make.com manuell deaktiviert ✅ — System vollständig unabhängig |
 | ALFIMA API-Status | Geklärt ✅ | Ausgehende Webhooks möglich (ALFIMA → Make.com) — eingehende API/Webhooks noch nicht verfügbar — E-Mail-Automationen direkt in ALFIMA einrichten (Pro-Abo enthalten) |
 | Telegram KI Agent (@AndiKIAgent_bot) | Live ✅ | Make.com Szenario 5699211 aktiv — Telegram → Claude Haiku 4.5 → Telegram — System Prompt aktualisiert (17.05.2026): Befehle /pause /resume /status, Facebook Posts Neustart im Kopf, alle Accounts, Zielgruppe 50+, kurze Befehlsantworten — Anleitung in `reference/telegram-ki-agent-setup.md` |
-| Andi Ideen Bot (@AndiIdeenAgent_bot) | Bereit ⬜ | Make.com Szenario 5734031 — wartet auf freien Slot (nach Blotato-Umstieg) — speichert Ideen in Google Sheets Tab „Ideen" — Token: 8859511945:AAF80383RKIwJBGxiD62JVJ4YiEpQMDM21U |
+| Andi Ideen Bot (@AndiIdeenAgent_bot) | Bereit ⬜ | Make.com Szenario 5734031 — wartet auf freien Slot (nach Blotato-Umstieg) — speichert Ideen in Google Sheets Tab „Ideen" — Token: siehe context/secrets.md |
 | Claude App Projekt | Eingerichtet ✅ | Projektanweisungen mit vollem Kontext hinterlegt — Zielgruppe Männer 50+, alle Accounts, Facebook Post Stil, YouTube Stil |
 | Julia Trost Kooperation | Ausstehend | Instagram-DM gesendet (09.05.2026) — auf Antwort warten |
 | Dropservice (Ersu Consulting / Leon Weidner) | Laufend | Leads generieren via Facebook/WhatsApp |
