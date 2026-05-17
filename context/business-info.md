@@ -22,7 +22,6 @@ Andi vermittelt als Dropservice-Partner zwischen Unternehmern mit konkretem Beda
 ### Lead Generation
 
 - Teilnehmer im Lead Generation System von **Danil Lenivov**
-- TikTok-Profil **@luzian_empire** für Inhalte aus diesem System
 - Kündigung des Coachings bei Danil Lenivov läuft (Leistung aus Andis Sicht nicht erfüllt)
 
 ### Mentalcoaching und Spiritualität
@@ -33,6 +32,7 @@ Andi vermittelt als Dropservice-Partner zwischen Unternehmern mit konkretem Beda
 
 ### Affiliate und digitale Produkte
 
+- **ALFIMA:** Andi nutzt ALFIMA (nicht Systeme.io) als eigene Business-Plattform — für Kurse, Funnels, E-Mail-Automationen
 - **Kajinga Funnels:** YouTube-Videos zur Bewerbung
 - **Mentortools:** Zwei neue Affiliate-Lizenzen in Vermarktung
 - **Digistore-Produkt:** „Neustart im Kopf: Dein Weg zur inneren Stärke" — digitaler Videokurs, erstellt aus Copy-and-Paste-Sheet der Sales Angels

@@ -7,7 +7,7 @@
 | YouTube InnerCode (@innercode.projekt) | Laufend | Skripte und Upload-Pakete produzieren |
 | YouTube Bewusst Einfach | Laufend | Skripte im Bewusst-Einfach-Stil produzieren |
 | Instagram Autopilot System | Live ✅ | Architektur: CSV → post-trigger.ps1 → Blotato /v2/videos/from-templates → AI Video mit Voiceover → Instagram @business.und.spirit (ID 46248) — Template: ai-story-video (5903fe43) — 2 Scenes: Hauptbotschaft + CTA — Stimme: Daniel (British, authoritative) via ElevenLabs — Captions unten, gelb — GitHub Actions: 06:55 UTC (Story) + 15:55 UTC (Reel) |
-| @ki_support Autopilot (Systeme.io Affiliate) | Bereit ✅ | post-trigger-ki-support.ps1 erstellt — Blotato Account ID 46341 — contentplan_ki_support_juni_v1.csv (60 Posts: 30 Stories 09:00 + 30 Reels 18:00, alle Systeme.io Affiliate) — setup-tasks-ki-support.bat einmalig als Admin ausführen → Tasks KISupport_Story_0855 + KISupport_Reel_1755 |
+| @ki_support Autopilot | Bereit ✅ | Architektur: CSV → GitHub Actions → post-trigger-ki-support.ps1 → Blotato Slideshow Template → Instagram @ki_support (ID 46341) — GitHub Actions: 06:55 UTC (Story) + 15:55 UTC (Reel) — Produkte: ALFIMA, Instagram Autopilot (197€), Audio Empire (KI-Hörbuch), KI-Prompts Freebie, KI-Tipps — contentplan_ki_support_juni_v1.csv (90 Posts: 45 Stories 09:00 + 45 Reels 18:00, 17.05.–30.06.2026) |
 | Instagram Autopilot — Produkt | Live ✅ | Salespage + Komplettanleitung auf Single-Path umgestellt (nur Blotato 29$, kein Make.com+Creatomate mehr) — ALFIMA Willkommensmail aktiviert ✅ — ALFIMA Produktbeschreibung manuell eingetragen |
 | Content-Prompts Neustart im Kopf | Gespeichert ✅ | System Prompt + Contentplan Prompt für Instagram Reels → `reference/prompts-instagram-reels.md` |
 | ALFIMA Funnel „Neustart im Kopf" | Live ✅ | Freebie-Landingpage fertig, Traffic läuft |
@@ -17,10 +17,11 @@
 | Juni-Contentplan | Fertig ✅ | contentplan_juni_v1.csv — 30 Reels (18:00) + 30 Stories (09:00) — alle mit KLARHEIT-CTA — wartet auf Blotato API-Automation |
 | Blotato Direct-API-Automation | Live ✅ (16.05.2026) | Instagram + LinkedIn komplett auf Blotato umgestellt — post-trigger.ps1 postet direkt via Blotato REST API — 2 Windows-Tasks: 08:55 (Story) + 17:55 (Reel) — image-generator.ps1 generiert LinkedIn-Bilder ✅ — Telegram Pause Bot ✅ fertig (telegram-pause-bot.ps1, Windows Task alle 5 Min) — Make.com manuell deaktiviert ✅ — System vollständig unabhängig |
 | ALFIMA API-Status | Geklärt ✅ | Ausgehende Webhooks möglich (ALFIMA → Make.com) — eingehende API/Webhooks noch nicht verfügbar — E-Mail-Automationen direkt in ALFIMA einrichten (Pro-Abo enthalten) |
-| Telegram KI Agent (@AndiKIAgent_bot) | Live ✅ | Make.com Szenario 5699211 aktiv — Telegram → Claude Haiku 4.5 → Telegram — Anleitung in `reference/telegram-ki-agent-setup.md` |
+| Telegram KI Agent (@AndiKIAgent_bot) | Live ✅ | Make.com Szenario 5699211 aktiv — Telegram → Claude Haiku 4.5 → Telegram — System Prompt aktualisiert (17.05.2026): Befehle /pause /resume /status, Facebook Posts Neustart im Kopf, alle Accounts, Zielgruppe 50+, kurze Befehlsantworten — Anleitung in `reference/telegram-ki-agent-setup.md` |
+| Andi Ideen Bot (@AndiIdeenAgent_bot) | Bereit ⬜ | Make.com Szenario 5734031 — wartet auf freien Slot (nach Blotato-Umstieg) — speichert Ideen in Google Sheets Tab „Ideen" — Token: 8859511945:AAF80383RKIwJBGxiD62JVJ4YiEpQMDM21U |
+| Claude App Projekt | Eingerichtet ✅ | Projektanweisungen mit vollem Kontext hinterlegt — Zielgruppe Männer 50+, alle Accounts, Facebook Post Stil, YouTube Stil |
 | Julia Trost Kooperation | Ausstehend | Instagram-DM gesendet (09.05.2026) — auf Antwort warten |
 | Dropservice (Ersu Consulting / Leon Weidner) | Laufend | Leads generieren via Facebook/WhatsApp |
-| TikTok @luzian_empire | Laufend | Inhalte nach Danil-Lenivov-System posten |
 | InnerCode KI-Assistent | In Planung | Wissen von Osho, Tolle, Dispenza etc. bündeln, Videokurs folgt |
 | InnerCode Logo | In Planung | Logo-Entwurf erstellen |
 | Mentortools KI-Lizenz | Erworben | Präsentation und Canva-Folien mit Notizen erstellen |
@@ -75,6 +76,7 @@
 - @andi_digital58
 - @song.geschenke
 - @business.und.spirit
+
 
 ### YouTube
 - @bewussteinfach (Bewusst Einfach)
