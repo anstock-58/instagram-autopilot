@@ -1,4 +1,4 @@
-name: Andi-mit-System Autopilot - Reel (18:00)
+﻿name: Andi-mit-System Autopilot - Reel (18:00)
 
 on:
   schedule:
@@ -30,6 +30,7 @@ jobs:
         env:
           BLOTATO_API_KEY: ${{ secrets.BLOTATO_API_KEY }}
           GITHUB_WORKSPACE: ${{ github.workspace }}
+          TZ: Europe/Berlin
         shell: pwsh
         run: |
           & "${{ github.workspace }}/scripts/post-trigger-andi-mit-system.ps1"
