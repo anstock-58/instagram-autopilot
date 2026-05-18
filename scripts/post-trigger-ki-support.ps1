@@ -150,11 +150,11 @@ function Post-Instagram {
         [string]$caption,
         [string]$mediaUrl,
         [string]$targetType,
-        [string]$storyType = ""
+        [string]$mediaType = ""
     )
 
     $target = @{ targetType = $targetType }
-    if ($storyType -ne "") { $target["storyType"] = $storyType }
+    if ($mediaType -ne "") { $target["mediaType"] = $mediaType }
 
     $payload = @{
         post = @{
@@ -265,9 +265,9 @@ foreach ($row in $heuteRows) {
     Write-Log "Video-URL: $videoUrl"
 
     $targetType = "instagram"
-    $storyType  = if ($typ -eq "Story") { "story" } else { "" }
+    $mediaType  = if ($typ -eq "Story") { "story" } else { "reel" }
 
-    $erfolg = Post-Instagram -caption $caption -mediaUrl $videoUrl -targetType $targetType -storyType $storyType
+    $erfolg = Post-Instagram -caption $caption -mediaUrl $videoUrl -targetType $targetType -mediaType $mediaType
 
     if ($erfolg) {
         if (-not (Test-Path $archivPath)) {
