@@ -238,6 +238,7 @@ foreach ($row in $heuteRows) {
     $imageSource = $row.Videoprompt.Trim()
     $textOverlay = $row.'Text-Overlay'.Trim()
     $caption     = $row.Text
+    $link        = $row.Link.Trim()
 
     if (-not $imageSource -or $imageSource -eq "") {
         $imageSource = $row.'Bild-URL'.Trim()
@@ -248,8 +249,24 @@ foreach ($row in $heuteRows) {
         continue
     }
 
+    # Voiceover-Skript: Caption-Text bereinigen + passenden Abschluss anhaengen
+    $voiceoverBase = $caption -replace '[💡📲🎧🎁💻🧠🔥✅❌→←↑↓👆👇👉👈⚡✨🎯💰📈🏆🎤🎵🎶🎼🎙️]', ''
+    $voiceoverBase = $voiceoverBase -replace 'Link in Bio.*', ''
+    $voiceoverBase = $voiceoverBase -replace '#\S+', ''
+    $voiceoverBase = $voiceoverBase.Trim()
+
+    $abschluss = switch -Wildcard ($link) {
+        "*alfima*"                    { "Die All-in-One Plattform ALFIMA kostenlos testen — Button in meiner Bio." }
+        "*instagram-autopilot*"       { "Das Instagram Autopilot System fuer 197 Euro — Button in meiner Bio." }
+        "*ki-audio-empire*"           { "Dein KI-Hoerbuch erstellen — Button in meiner Bio." }
+        "*ki-prompt-paket*"           { "30 KI-Prompts kostenlos holen — Button in meiner Bio." }
+        default                       { "Mehr dazu — Link in meiner Bio." }
+    }
+
+    $voiceover = "$voiceoverBase $abschluss"
+
     # AI-Video mit Voiceover erstellen
-    $videoResponse = Create-AIVideo -imagePrompt $imageSource -voiceScript $textOverlay -typ $typ
+    $videoResponse = Create-AIVideo -imagePrompt $imageSource -voiceScript $voiceover -typ $typ
     if (-not $videoResponse) {
         Write-Log "AI-Video-Erstellung fehlgeschlagen. Post uebersprungen."
         continue
