@@ -256,11 +256,11 @@ foreach ($row in $heuteRows) {
     $voiceoverBase = $voiceoverBase.Trim()
 
     $abschluss = switch -Wildcard ($link) {
-        "*alfima*"                    { "Die All-in-One Plattform ALFIMA kostenlos testen — Button in meiner Bio." }
-        "*instagram-autopilot*"       { "Instagram Autopilot System — Button in meiner Bio." }
-        "*ki-audio-empire*"           { "Dein KI-Hoerbuch erstellen — Button in meiner Bio." }
-        "*ki-prompt-paket*"           { "30 KI-Prompts kostenlos holen — Button in meiner Bio." }
-        default                       { "Mehr dazu — Link in meiner Bio." }
+        "*alfima*"              { "ALFIMA — kostenlos in meiner Bio." }
+        "*instagram-autopilot*" { "Instagram Autopilot — in meiner Bio." }
+        "*ki-audio-empire*"     { "KI-Hoerbuch — in meiner Bio." }
+        "*ki-prompt-paket*"     { "30 Prompts gratis — in meiner Bio." }
+        default                 { "Mehr dazu — in meiner Bio." }
     }
 
     $voiceover = "$voiceoverBase $abschluss"
