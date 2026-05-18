@@ -149,7 +149,8 @@ function Post-Instagram {
     param(
         [string]$caption,
         [string]$mediaUrl,
-        [string]$targetType   # "instagram" oder "instagramStory"
+        [string]$targetType,
+        [string]$postType = "feed"
     )
 
     $payload = @{
@@ -160,7 +161,7 @@ function Post-Instagram {
                 platform  = "instagram"
                 mediaUrls = @($mediaUrl)
             }
-            target    = @{ targetType = $targetType }
+            target    = @{ targetType = $targetType; postType = $postType }
         }
     }
 
@@ -260,9 +261,10 @@ foreach ($row in $heuteRows) {
 
     Write-Log "Video-URL: $videoUrl"
 
-    $targetType = if ($typ -eq "Story") { "instagramStory" } else { "instagram" }
+    $targetType = "instagram"
+    $postType   = if ($typ -eq "Story") { "story" } else { "feed" }
 
-    $erfolg = Post-Instagram -caption $caption -mediaUrl $videoUrl -targetType $targetType
+    $erfolg = Post-Instagram -caption $caption -mediaUrl $videoUrl -targetType $targetType -postType $postType
 
     if ($erfolg) {
         if (-not (Test-Path $archivPath)) {
