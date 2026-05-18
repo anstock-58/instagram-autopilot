@@ -257,7 +257,7 @@ foreach ($row in $heuteRows) {
 
     $abschluss = switch -Wildcard ($link) {
         "*alfima*"                    { "Die All-in-One Plattform ALFIMA kostenlos testen — Button in meiner Bio." }
-        "*instagram-autopilot*"       { "Das Instagram Autopilot System fuer 197 Euro — Button in meiner Bio." }
+        "*instagram-autopilot*"       { "Instagram Autopilot System — Button in meiner Bio." }
         "*ki-audio-empire*"           { "Dein KI-Hoerbuch erstellen — Button in meiner Bio." }
         "*ki-prompt-paket*"           { "30 KI-Prompts kostenlos holen — Button in meiner Bio." }
         default                       { "Mehr dazu — Link in meiner Bio." }
