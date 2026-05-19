@@ -15,6 +15,7 @@ CLAUDE.md
 ./context/personal-info.md
 ./context/strategy.md
 ./context/current-data.md
+./context/instagram-accounts.md
 ./context/cc-basics.md
 ./context/cc-anweisung.md
 ./reference/instagram-autopilot-setup.md

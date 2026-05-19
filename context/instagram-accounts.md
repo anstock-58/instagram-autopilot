@@ -1,0 +1,87 @@
+# Instagram Accounts — Übersicht
+
+Alle aktiven Instagram-Accounts mit Automation, Thema und Zuordnung auf einen Blick.
+
+---
+
+## Accounts im Autopiloten
+
+| Account | Blotato ID | Thema | Skript | Story-Workflow | Reel-Workflow |
+|---|---|---|---|---|---|
+| @business.und.spirit | 46248 | Business, Mindset, Freiheit, Spirit | post-trigger-business-und-spirit.ps1 | bus-story.yml | bus-reel.yml |
+| @ki_support | 46341 | KI-Tipps, KI-Tools, Produktempfehlungen | post-trigger-ki-support.ps1 | ki-support-story.yml | ki-support-reel.yml |
+| @andi.mit.system | 46471 | Systeme, Effizienz, TAC 3.0 Workshop | post-trigger-andi-mit-system.ps1 | andi-mit-system-story.yml | andi-mit-system-reel.yml |
+
+---
+
+## Keyword-CTAs pro Account
+
+| Account | Scene-2-Keyword | Was passiert bei Kommentar |
+|---|---|---|
+| @business.und.spirit | KLARHEIT | Details zum Standortcheck |
+| @ki_support | KI | Kostenloses KI-Starter-Paket |
+| @andi.mit.system | INFO | Details zum TAC 3.0 Workshop |
+
+---
+
+## Produkte pro Account
+
+| Account | Beworbene Produkte | Keyword |
+|---|---|---|
+| @business.und.spirit | Standortcheck (kostenlos), Instagram Autopilot, Neustart Hauptkurs, Minikurs | KLARHEIT, AUTOPILOT |
+| @ki_support | KI-Starter-Paket (kostenlos), Instagram Autopilot (197 Euro), KI Audio Empire, KI-Prompt-Paket | KI, AUTOPILOT, HÖRBUCH, PROMPTS |
+| @andi.mit.system | TAC 3.0 Workshop | INFO |
+
+---
+
+## Contentplan-Dateien
+
+| Account | CSV-Namensschema | Beispiel |
+|---|---|---|
+| @business.und.spirit | contentplan_juni_v1.csv | outputs/contentplan_juni_v1.csv |
+| @ki_support | contentplan_ki_support_[monat]_v1.csv | outputs/contentplan_ki_support_juni_v1.csv |
+| @andi.mit.system | contentplan_andi_mit_system_[monat]_v1.csv | outputs/contentplan_andi_mit_system_juni_v1.csv |
+
+---
+
+## Voiceover-Logik
+
+Alle drei Accounts nutzen dasselbe Prinzip:
+
+- **Scene 1**: Caption-Text bereinigt (keine Emojis, keine Hashtags) plus produktspezifischer Abschluss-Satz mit Keyword
+- **Scene 2**: Fester CTA-Text mit dem Account-Keyword (KLARHEIT / KI / INFO)
+- **Stimme**: Daniel (British, authoritative) via ElevenLabs
+- **Captions**: unten, gelb (#FFFF00), Fade-Übergang, 9:16
+
+Regel: Kein Tool-Name im Voiceover, kein Preis, nur Produktnutzen und Keyword.
+
+---
+
+## Zielgruppe pro Account
+
+| Account | Zielgruppe |
+|---|---|
+| @business.und.spirit | Unternehmer und Führungskräfte 50+, im Funktionsmodus feststeckend, suchen Klarheit und Freiheit |
+| @ki_support | Menschen 40+, die KI im Alltag und Business nutzen wollen, ohne technischen Hintergrund |
+| @andi.mit.system | Unternehmer, die Systeme und Strukturen aufbauen wollen, Interessenten TAC 3.0 |
+
+---
+
+## Weitere Instagram-Accounts (kein Autopilot aktiv)
+
+| Account | Thema | Status |
+|---|---|---|
+| @andi.mentalgesund | Mental Health, Resilienz | Manuell |
+| @song.geschenke | Personalisierte Musikgeschenke | Manuell |
+| @stock.und.partner | Business/Beratung | Manuell |
+
+---
+
+## Technische Rahmendaten (alle Accounts gleich)
+
+- **Posting-Zeiten**: Story 09:00 CEST (06:55 UTC) / Reel 18:00 CEST (15:55 UTC)
+- **GitHub Actions**: 3 Retry-Versuche bei Push-Konflikt (10s Pause)
+- **PAUSED-Datei**: Im Repo-Root ablegen, um alle Workflows zu stoppen
+- **AI-Bildmodell**: fal-ai/imagen4/preview/fast
+- **Video-Template**: ai-story-video (5903fe43-514d-40ee-a060-0d6628c5f8fd)
+- **Repo**: https://github.com/anstock-58/instagram-autopilot
