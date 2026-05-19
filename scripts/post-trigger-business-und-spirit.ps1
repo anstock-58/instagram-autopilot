@@ -47,7 +47,8 @@ function Create-AIVideo {
     param(
         [string]$imagePrompt,
         [string]$voiceScript,
-        [string]$typ
+        [string]$typ,
+        [string]$videoName
     )
 
     $scenes = @(
@@ -57,6 +58,7 @@ function Create-AIVideo {
 
     $payload = @{
         templateId = $aiVideoTemplate
+        name       = $videoName
         inputs     = @{
             scenes          = $scenes
             enableVoiceover = $true
@@ -220,7 +222,8 @@ foreach ($row in $heuteRows) {
 
     $voiceover = "$voiceoverBase $abschluss"
 
-    $videoResponse = Create-AIVideo -imagePrompt $imageSource -voiceScript $voiceover -typ $typ
+    $videoName     = "Business-und-Spirit $typ $heute"
+    $videoResponse = Create-AIVideo -imagePrompt $imageSource -voiceScript $voiceover -typ $typ -videoName $videoName
     if (-not $videoResponse) { Write-Log "AI-Video fehlgeschlagen. Post uebersprungen."; continue }
 
     $videoUrl = Wait-ForVideoUrl -response $videoResponse

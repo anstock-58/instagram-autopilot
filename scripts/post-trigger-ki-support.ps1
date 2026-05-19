@@ -47,7 +47,8 @@ function Create-AIVideo {
     param(
         [string]$imagePrompt,   # Videoprompt aus CSV (Blotato generiert KI-Bild)
         [string]$voiceScript,   # Text-Overlay aus CSV (wird als Voiceover gesprochen)
-        [string]$typ            # "Story" oder "Reel"/"Foto"
+        [string]$typ,           # "Story" oder "Reel"/"Foto"
+        [string]$videoName      # Anzeigename in Blotato
     )
 
     # WICHTIG: Text-Overlay im CSV muss echte Umlaute enthalten (ü, ä, ö, ß)
@@ -67,6 +68,7 @@ function Create-AIVideo {
 
     $payload = @{
         templateId = $aiVideoTemplate
+        name       = $videoName
         inputs     = @{
             scenes          = $scenes
             enableVoiceover = $true
@@ -268,7 +270,8 @@ foreach ($row in $heuteRows) {
     $voiceover = "$voiceoverBase $abschluss"
 
     # AI-Video mit Voiceover erstellen
-    $videoResponse = Create-AIVideo -imagePrompt $imageSource -voiceScript $voiceover -typ $typ
+    $videoName     = "KI-Support $typ $heute"
+    $videoResponse = Create-AIVideo -imagePrompt $imageSource -voiceScript $voiceover -typ $typ -videoName $videoName
     if (-not $videoResponse) {
         Write-Log "AI-Video-Erstellung fehlgeschlagen. Post uebersprungen."
         continue
