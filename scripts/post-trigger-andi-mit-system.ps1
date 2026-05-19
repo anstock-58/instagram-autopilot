@@ -33,6 +33,9 @@ $zeitfensterFrueh = -10
 $zeitfensterSpaet = 45
 $isManualRun = $env:GITHUB_EVENT_NAME -eq "workflow_dispatch"
 
+$telegramToken  = if ($env:TELEGRAM_BOT_TOKEN) { $env:TELEGRAM_BOT_TOKEN } else { "8597315338:AAEZo3rE-pCQzZfDQU4nkoNlUohuWBl2bAY" }
+$telegramChatId = "1246764172"
+
 # ============================================================
 # HILFSFUNKTIONEN
 # ============================================================
@@ -41,6 +44,18 @@ function Write-Log {
     $line = "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') | $msg"
     $line | Out-File -FilePath $logPath -Append -Encoding UTF8
     Write-Host $line
+}
+
+function Send-Telegram {
+    param([string]$text)
+    try {
+        $body = @{ chat_id = $telegramChatId; text = $text } | ConvertTo-Json -Compress
+        $bodyBytes = [System.Text.Encoding]::UTF8.GetBytes($body)
+        Invoke-RestMethod -Uri "https://api.telegram.org/bot$telegramToken/sendMessage" `
+            -Method POST -ContentType "application/json; charset=utf-8" -Body $bodyBytes -ErrorAction Stop | Out-Null
+    } catch {
+        Write-Log "Telegram-Benachrichtigung fehlgeschlagen: $_"
+    }
 }
 
 function Create-AIVideo {
@@ -176,7 +191,7 @@ try {
 
 $heuteRows = $rows | Where-Object { $_.Datum -eq $heute -and $_.Status -eq "Geplant" -and $_.Plattform -eq "Instagram" }
 
-if (-not $heuteRows) { Write-Log "Kein geplanter Instagram-Post fuer heute. Fertig."; exit 0 }
+if (-not $heuteRows) { Write-Log "Kein geplanter Instagram-Post fuer heute. Fertig."; Send-Telegram "📅 @andi.mit.system — kein Post fuer heute geplant ($heute)"; exit 0 }
 
 Write-Log "$(@($heuteRows).Count) Instagram-Post(s) fuer heute gefunden."
 
@@ -245,6 +260,9 @@ foreach ($row in $heuteRows) {
         }
         $rows | Export-Csv -Path $csvPath -Delimiter "," -Encoding UTF8 -NoTypeInformation
         Write-Log "Status auf 'Gepostet' gesetzt."
+        Send-Telegram "✅ @andi.mit.system — $typ gepostet ($heute $uhrzeit)"
+    } else {
+        Send-Telegram "❌ @andi.mit.system — $typ fehlgeschlagen ($heute $uhrzeit)"
     }
 }
 
