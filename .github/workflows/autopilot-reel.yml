@@ -39,4 +39,8 @@ jobs:
           git config user.name "Instagram Autopilot"
           git add outputs/contentplan_juni_v1.csv outputs/contentplan_mai_v2.csv || true
           git diff --staged --quiet || git commit -m "Auto: Post veroeffentlicht $(date +'%d.%m.%Y')"
-          git push
+          for i in 1 2 3; do
+            git pull --rebase origin master && git push && break
+            echo "Push fehlgeschlagen (Versuch $i/3), warte 10s..."
+            sleep 10
+          done
