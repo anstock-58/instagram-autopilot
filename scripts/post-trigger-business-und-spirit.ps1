@@ -52,7 +52,7 @@ function Create-AIVideo {
 
     $scenes = @(
         @{ mediaSource = $imagePrompt; script = $voiceScript },
-        @{ mediaSource = $imagePrompt; script = "Kommentiere KLARHEIT — ich antworte dir persoenlich." }
+        @{ mediaSource = $imagePrompt; script = "Kommentiere jetzt KLARHEIT — ich schicke dir sofort alle Details zum Standortcheck." }
     )
 
     $payload = @{
@@ -205,15 +205,17 @@ foreach ($row in $heuteRows) {
 
     $voiceoverBase = $caption -replace '[💡📲🎧🎁💻🧠🔥✅❌→←↑↓👆👇👉👈⚡✨🎯💰📈🏆🎤🎵🎶🎼🎙️]', ''
     $voiceoverBase = $voiceoverBase -replace 'Link in Bio.*', ''
+    $voiceoverBase = $voiceoverBase -replace 'Kommentiere\s+KLARHEIT.*', ''  # CTA raus — kommt in Scene 2
     $voiceoverBase = $voiceoverBase -replace '#\S+', ''
     $voiceoverBase = $voiceoverBase.Trim()
 
     $abschluss = switch -Wildcard ($link) {
         "*alfima*"              { "ALFIMA — kostenlos in meiner Bio." }
         "*instagram-autopilot*" { "Instagram Autopilot — in meiner Bio." }
+        "*standortcheck*"       { "Den Standortcheck findest du in meiner Bio." }
         "*ki-audio-empire*"     { "KI-Hoerbuch — in meiner Bio." }
         "*ki-prompt-paket*"     { "30 Prompts gratis — in meiner Bio." }
-        default                 { "Mehr dazu — in meiner Bio." }
+        default                 { "Den Standortcheck findest du in meiner Bio." }
     }
 
     $voiceover = "$voiceoverBase $abschluss"
