@@ -31,6 +31,7 @@ $voiceName       = "Daniel (British, authoritative)"   # ElevenLabs-Stimme
 
 $zeitfensterFrueh = -10
 $zeitfensterSpaet = 45
+$isManualRun = $env:GITHUB_EVENT_NAME -eq "workflow_dispatch"
 
 # ============================================================
 # HILFSFUNKTIONEN
@@ -225,7 +226,7 @@ foreach ($row in $heuteRows) {
     try {
         $postZeit    = [datetime]::ParseExact("$heute $uhrzeit", "dd.MM.yyyy HH:mm", $null)
         $diffMinuten = ($jetzt - $postZeit).TotalMinutes
-        if ($diffMinuten -lt $zeitfensterFrueh -or $diffMinuten -gt $zeitfensterSpaet) {
+        if (-not $isManualRun -and ($diffMinuten -lt $zeitfensterFrueh -or $diffMinuten -gt $zeitfensterSpaet)) {
             Write-Log "Zeitfenster nicht passend fuer $typ um $uhrzeit (diff: $([math]::Round($diffMinuten,1)) min)."
             continue
         }
