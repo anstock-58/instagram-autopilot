@@ -42,4 +42,5 @@ jobs:
           git config user.name "Andi-mit-System Autopilot"
           git add outputs/contentplan_andi_mit_system_*.csv || true
           git diff --staged --quiet || git commit -m "Auto: Andi-mit-System Reel gepostet $(date +'%d.%m.%Y')"
+          git pull --rebase origin master || true
           git push
