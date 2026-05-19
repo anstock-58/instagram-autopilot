@@ -52,7 +52,7 @@ function Create-AIVideo {
 
     $scenes = @(
         @{ mediaSource = $imagePrompt; script = $voiceScript },
-        @{ mediaSource = $imagePrompt; script = "Du willst raus aus dem Hamsterrad? Schreib INFO in die Kommentare — ich zeig dir wie." }
+        @{ mediaSource = $imagePrompt; script = "Du willst raus aus dem Hamsterrad? Schreib INFO in die Kommentare und ich zeig dir wie." }
     )
 
     $payload = @{

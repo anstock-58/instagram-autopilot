@@ -52,7 +52,7 @@ function Create-AIVideo {
 
     $scenes = @(
         @{ mediaSource = $imagePrompt; script = $voiceScript },
-        @{ mediaSource = $imagePrompt; script = "Kommentiere jetzt KLARHEIT — ich schicke dir sofort alle Details zum Standortcheck." }
+        @{ mediaSource = $imagePrompt; script = "Kommentiere jetzt KLARHEIT und ich schicke dir sofort alle Details zu deinem persönlichen Standortcheck." }
     )
 
     $payload = @{
@@ -205,17 +205,17 @@ foreach ($row in $heuteRows) {
 
     $voiceoverBase = $caption -replace '[💡📲🎧🎁💻🧠🔥✅❌→←↑↓👆👇👉👈⚡✨🎯💰📈🏆🎤🎵🎶🎼🎙️]', ''
     $voiceoverBase = $voiceoverBase -replace 'Link in Bio.*', ''
-    $voiceoverBase = $voiceoverBase -replace 'Kommentiere\s+KLARHEIT.*', ''  # CTA raus — kommt in Scene 2
+    $voiceoverBase = $voiceoverBase -replace 'Kommentiere\s+KLARHEIT.*', ''  # CTA raus, kommt in Scene 2
     $voiceoverBase = $voiceoverBase -replace '#\S+', ''
     $voiceoverBase = $voiceoverBase.Trim()
 
     $abschluss = switch -Wildcard ($link) {
-        "*alfima*"              { "ALFIMA — kostenlos in meiner Bio." }
-        "*instagram-autopilot*" { "Instagram Autopilot — in meiner Bio." }
-        "*standortcheck*"       { "Den Standortcheck findest du in meiner Bio." }
-        "*ki-audio-empire*"     { "KI-Hoerbuch — in meiner Bio." }
-        "*ki-prompt-paket*"     { "30 Prompts gratis — in meiner Bio." }
-        default                 { "Den Standortcheck findest du in meiner Bio." }
+        "*instagram-autopilot*" { "Dein Instagram läuft automatisch. Kommentiere AUTOPILOT und ich schicke dir alle Infos." }
+        "*standortcheck*"       { "Kommentiere KLARHEIT und ich melde mich persönlich bei dir." }
+        "*ki-audio-empire*"     { "Das Hörbuch nimmt dich mit auf eine neue Ebene. Kommentiere HÖRBUCH und ich schicke dir den Link." }
+        "*ki-prompt-paket*"     { "Die besten Prompts bekommst du direkt. Kommentiere PROMPTS und ich schicke sie dir." }
+        "*alfima*"              { "Das Produkt bekommst du direkt. Kommentiere ALFIMA und ich schicke dir alle Details." }
+        default                 { "Kommentiere KLARHEIT für deinen persönlichen Standortcheck." }
     }
 
     $voiceover = "$voiceoverBase $abschluss"

@@ -61,7 +61,7 @@ function Create-AIVideo {
         },
         @{
             mediaSource = $imagePrompt
-            script      = "Kommentiere KI unter diesem Beitrag — ich schicke dir sofort dein kostenloses KI-Starter-Paket."
+            script      = "Kommentiere KI unter diesem Beitrag und ich schicke dir sofort dein kostenloses KI-Starter-Paket."
         }
     )
 
@@ -258,11 +258,11 @@ foreach ($row in $heuteRows) {
     $voiceoverBase = $voiceoverBase.Trim()
 
     $abschluss = switch -Wildcard ($link) {
-        "*alfima*"              { "ALFIMA — kostenlos in meiner Bio." }
-        "*instagram-autopilot*" { "Den Instagram Autopilot findest du in meiner Bio." }
-        "*ki-audio-empire*"     { "Das KI-Hörbuch findest du in meiner Bio." }
-        "*ki-prompt-paket*"     { "Die 30 KI-Prompts bekommst du kostenlos — in meiner Bio." }
-        default                 { "Das kostenlose KI-Starter-Paket bekommst du — kommentiere KI." }
+        "*instagram-autopilot*" { "Dein Instagram läuft automatisch. Kommentiere AUTOPILOT und ich schicke dir alle Infos." }
+        "*ki-audio-empire*"     { "Das Hörbuch nimmt dich mit auf eine neue Ebene. Kommentiere HÖRBUCH und ich schicke dir den Link." }
+        "*ki-prompt-paket*"     { "Die besten Prompts bekommst du direkt. Kommentiere PROMPTS und ich schicke sie dir." }
+        "*alfima*"              { "Das Produkt bekommst du direkt. Kommentiere ALFIMA und ich schicke dir alle Details." }
+        default                 { "Kommentiere KI und ich schicke dir sofort das kostenlose Starter-Paket." }
     }
 
     $voiceover = "$voiceoverBase $abschluss"
