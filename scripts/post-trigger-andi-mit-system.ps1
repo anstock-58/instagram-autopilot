@@ -52,7 +52,7 @@ function Create-AIVideo {
 
     $scenes = @(
         @{ mediaSource = $imagePrompt; script = $voiceScript },
-        @{ mediaSource = $imagePrompt; script = "Kommentiere jetzt INFO — ich schicke dir sofort alle Details zum Workshop." }
+        @{ mediaSource = $imagePrompt; script = "Du willst raus aus dem Hamsterrad? Schreib INFO in die Kommentare — ich zeig dir wie." }
     )
 
     $payload = @{
@@ -198,26 +198,11 @@ foreach ($row in $heuteRows) {
 
     $imageSource = $row.Videoprompt.Trim()
     $caption     = $row.Text
-    $link        = $row.Link.Trim()
+    $voiceover   = $row.'Text-Overlay'.Trim()
 
     if (-not $imageSource -or $imageSource -eq "") { $imageSource = $row.'Bild-URL'.Trim() }
     if (-not $imageSource -or $imageSource -eq "") { Write-Log "FEHLER: Kein Videoprompt/Bild-URL. Post uebersprungen."; continue }
-
-    $voiceoverBase = $caption -replace '[💡📲🎧🎁💻🧠🔥✅❌→←↑↓👆👇👉👈⚡✨🎯💰📈🏆🎤🎵🎶🎼🎙️]', ''
-    $voiceoverBase = $voiceoverBase -replace 'Link in Bio.*', ''
-    $voiceoverBase = $voiceoverBase -replace 'Kommentiere\s+INFO.*', ''   # CTA raus — kommt in Scene 2
-    $voiceoverBase = $voiceoverBase -replace 'Schreib\s+INFO.*', ''
-    $voiceoverBase = $voiceoverBase -replace '#\S+', ''
-    $voiceoverBase = $voiceoverBase.Trim()
-
-    $abschluss = switch -Wildcard ($link) {
-        "*alfima*"              { "ALFIMA — kostenlos in meiner Bio." }
-        "*instagram-autopilot*" { "Den Instagram Autopilot findest du in meiner Bio." }
-        "*workshop*"            { "Alle Details zum Workshop findest du in meiner Bio." }
-        default                 { "Alle Details zum Workshop — kommentiere INFO." }
-    }
-
-    $voiceover = "$voiceoverBase $abschluss"
+    if (-not $voiceover -or $voiceover -eq "") { Write-Log "FEHLER: Kein Text-Overlay fuer Voiceover. Post uebersprungen."; continue }
 
     $videoResponse = Create-AIVideo -imagePrompt $imageSource -voiceScript $voiceover -typ $typ
     if (-not $videoResponse) { Write-Log "AI-Video fehlgeschlagen. Post uebersprungen."; continue }
