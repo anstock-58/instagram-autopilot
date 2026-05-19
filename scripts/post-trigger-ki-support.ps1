@@ -253,15 +253,16 @@ foreach ($row in $heuteRows) {
     # Voiceover-Skript: Caption-Text bereinigen + passenden Abschluss anhaengen
     $voiceoverBase = $caption -replace '[💡📲🎧🎁💻🧠🔥✅❌→←↑↓👆👇👉👈⚡✨🎯💰📈🏆🎤🎵🎶🎼🎙️]', ''
     $voiceoverBase = $voiceoverBase -replace 'Link in Bio.*', ''
+    $voiceoverBase = $voiceoverBase -replace 'Kommentiere\s+KI.*', ''   # CTA raus — kommt in Scene 2
     $voiceoverBase = $voiceoverBase -replace '#\S+', ''
     $voiceoverBase = $voiceoverBase.Trim()
 
     $abschluss = switch -Wildcard ($link) {
         "*alfima*"              { "ALFIMA — kostenlos in meiner Bio." }
-        "*instagram-autopilot*" { "Instagram Autopilot — in meiner Bio." }
-        "*ki-audio-empire*"     { "KI-Hoerbuch — in meiner Bio." }
-        "*ki-prompt-paket*"     { "30 Prompts gratis — in meiner Bio." }
-        default                 { "Mehr dazu — in meiner Bio." }
+        "*instagram-autopilot*" { "Den Instagram Autopilot findest du in meiner Bio." }
+        "*ki-audio-empire*"     { "Das KI-Hörbuch findest du in meiner Bio." }
+        "*ki-prompt-paket*"     { "Die 30 KI-Prompts bekommst du kostenlos — in meiner Bio." }
+        default                 { "Das kostenlose KI-Starter-Paket bekommst du — kommentiere KI." }
     }
 
     $voiceover = "$voiceoverBase $abschluss"
