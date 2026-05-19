@@ -33,7 +33,7 @@ $zeitfensterFrueh = -10
 $zeitfensterSpaet = 45
 $isManualRun = $env:GITHUB_EVENT_NAME -eq "workflow_dispatch"
 
-$telegramToken  = if ($env:TELEGRAM_BOT_TOKEN) { $env:TELEGRAM_BOT_TOKEN } else { "8597315338:AAEZo3rE-pCQzZfDQU4nkoNlUohuWBl2bAY" }
+$telegramToken  = $env:TELEGRAM_BOT_TOKEN
 $telegramChatId = "1246764172"
 
 # ============================================================

@@ -31,7 +31,7 @@ $voiceName       = "Daniel (British, authoritative)"   # ElevenLabs-Stimme, klin
 $zeitfensterFrueh = -10
 $zeitfensterSpaet = 45
 
-$telegramToken  = if ($env:TELEGRAM_BOT_TOKEN) { $env:TELEGRAM_BOT_TOKEN } else { "8597315338:AAEZo3rE-pCQzZfDQU4nkoNlUohuWBl2bAY" }
+$telegramToken  = $env:TELEGRAM_BOT_TOKEN
 $telegramChatId = "1246764172"
 
 # ============================================================
