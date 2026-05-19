@@ -198,11 +198,25 @@ foreach ($row in $heuteRows) {
 
     $imageSource = $row.Videoprompt.Trim()
     $caption     = $row.Text
-    $voiceover   = $row.'Text-Overlay'.Trim()
+    $link        = $row.Link.Trim()
 
     if (-not $imageSource -or $imageSource -eq "") { $imageSource = $row.'Bild-URL'.Trim() }
     if (-not $imageSource -or $imageSource -eq "") { Write-Log "FEHLER: Kein Videoprompt/Bild-URL. Post uebersprungen."; continue }
-    if (-not $voiceover -or $voiceover -eq "") { Write-Log "FEHLER: Kein Text-Overlay fuer Voiceover. Post uebersprungen."; continue }
+
+    # Voiceover aus Caption-Text aufbauen (wie ki-support und business-und-spirit)
+    $voiceoverBase = $caption -replace '[💡📲🎧🎁💻🧠🔥✅❌→←↑↓👆👇👉👈⚡✨🎯💰📈🏆🎤🎵🎶🎼🎙️]', ''
+    $voiceoverBase = $voiceoverBase -replace 'Link in Bio.*', ''
+    $voiceoverBase = $voiceoverBase -replace 'Kommentiere\s+INFO.*', ''
+    $voiceoverBase = $voiceoverBase -replace '#\S+', ''
+    $voiceoverBase = $voiceoverBase.Trim()
+
+    $abschluss = switch -Wildcard ($link) {
+        "*tac*"                 { "Kommentiere INFO und ich schicke dir sofort alle Details zum Workshop." }
+        "*instagram-autopilot*" { "Dein Instagram laeuft automatisch. Kommentiere AUTOPILOT und ich schicke dir alle Infos." }
+        default                 { "Kommentiere INFO und ich schicke dir sofort alle Details." }
+    }
+
+    $voiceover = "$voiceoverBase $abschluss"
 
     $videoResponse = Create-AIVideo -imagePrompt $imageSource -voiceScript $voiceover -typ $typ
     if (-not $videoResponse) { Write-Log "AI-Video fehlgeschlagen. Post uebersprungen."; continue }
