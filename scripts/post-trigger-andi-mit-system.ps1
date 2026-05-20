@@ -235,11 +235,8 @@ foreach ($row in $heuteRows) {
     $voiceoverBase = $voiceoverBase -replace '#\S+', ''
     $voiceoverBase = $voiceoverBase.Trim()
 
-    $keyword = switch -Wildcard ($link) {
-        "*tac*"                 { "INFO" }
-        "*instagram-autopilot*" { "AUTOPILOT" }
-        default                 { "INFO" }
-    }
+    # @andi.mit.system: immer INFO
+    $keyword = "INFO"
     $ctaScript = "Kommentiere $keyword. Oder klick den Link in der Bio."
     $voiceover = $voiceoverBase
 

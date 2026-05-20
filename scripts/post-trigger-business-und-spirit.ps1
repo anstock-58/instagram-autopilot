@@ -234,13 +234,8 @@ foreach ($row in $heuteRows) {
     $voiceoverBase = $voiceoverBase -replace '#\S+', ''
     $voiceoverBase = $voiceoverBase.Trim()
 
-    # @business.und.spirit Keywords: KLARHEIT, AUTOPILOT, ALFIMA
-    $keyword = switch -Wildcard ($link) {
-        "*standortcheck*"       { "KLARHEIT" }
-        "*instagram-autopilot*" { "AUTOPILOT" }
-        "*alfima*"              { "ALFIMA" }
-        default                 { "KLARHEIT" }
-    }
+    # @business.und.spirit: immer KLARHEIT
+    $keyword = "KLARHEIT"
     $ctaScript = "Kommentiere $keyword. Oder klick den Link in der Bio."
     $voiceover = $voiceoverBase
 
