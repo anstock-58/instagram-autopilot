@@ -286,7 +286,7 @@ foreach ($row in $heuteRows) {
         "*instagram-autopilot*" { "AUTOPILOT" }
         "*ki-audio-empire*"     { "HÖRBUCH" }
         "*ki-prompt-paket*"     { "PROMPTS" }
-        "*alfima*"              { "ALFIMA" }
+        "*alfima*"              { "TOOL" }
         default                 { "KI" }
     }
     $ctaScript = "Kommentiere $keyword. Oder klick den Link in der Bio."
