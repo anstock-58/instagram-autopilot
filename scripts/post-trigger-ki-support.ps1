@@ -82,6 +82,7 @@ function Create-AIVideo {
 
     $payload = @{
         templateId = $aiVideoTemplate
+        title      = $videoName
         name       = $videoName
         inputs     = @{
             scenes          = $scenes
