@@ -1,8 +1,6 @@
 ﻿name: Andi-mit-System Autopilot - Reel (18:00)
 
 on:
-  schedule:
-    - cron: '55 15 * * *'  # 15:55 UTC = 17:55 CEST (Sommer)
   workflow_dispatch:         # Manuell auslÃ¶sbar Ã¼ber GitHub UI
 
 jobs:
