@@ -234,13 +234,11 @@ foreach ($row in $heuteRows) {
     $voiceoverBase = $voiceoverBase -replace '#\S+', ''
     $voiceoverBase = $voiceoverBase.Trim()
 
+    # @business.und.spirit Keywords: KLARHEIT, AUTOPILOT, ALFIMA
     $keyword = switch -Wildcard ($link) {
-        "*instagram-autopilot*" { "AUTOPILOT" }
         "*standortcheck*"       { "KLARHEIT" }
-        "*ki-audio-empire*"     { "HÖRBUCH" }
-        "*ki-prompt-paket*"     { "PROMPTS" }
+        "*instagram-autopilot*" { "AUTOPILOT" }
         "*alfima*"              { "ALFIMA" }
-        "*tac-workshop*"        { "INFO" }
         default                 { "KLARHEIT" }
     }
     $ctaScript = "Kommentiere $keyword. Oder klick den Link in der Bio."
