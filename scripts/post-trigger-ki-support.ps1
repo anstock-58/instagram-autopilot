@@ -90,11 +90,11 @@ function Create-AIVideo {
             aiImageModel    = "fal-ai/imagen4/preview/fast"
             animateAiImages = $false
             captionPosition = "bottom"
+            captionStyle    = "basic"
             highlightColor  = "#FFFF00"
             transition      = "fade"
             aspectRatio     = "9:16"
             trimToVoiceover = $true
-            wordsPerCaption = 1
         }
         render = $true
     }
