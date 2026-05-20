@@ -86,6 +86,7 @@ function Create-AIVideo {
             transition      = "fade"
             aspectRatio     = "9:16"
             trimToVoiceover = $true
+            wordsPerCaption = 1
         }
         render = $true
     }
