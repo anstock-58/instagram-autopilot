@@ -61,15 +61,14 @@ function Send-Telegram {
 function Create-AIVideo {
     param(
         [string]$imagePrompt,   # Videoprompt aus CSV (Blotato generiert KI-Bild)
-        [string]$voiceScript,   # Text-Overlay aus CSV (wird als Voiceover gesprochen)
+        [string]$voiceScript,   # Hauptbotschaft (ohne CTA)
+        [string]$ctaScript,     # CTA fuer Scene 2 (Keyword + Bio-Hinweis)
         [string]$typ,           # "Story" oder "Reel"/"Foto"
         [string]$videoName      # Anzeigename in Blotato
     )
 
-    # WICHTIG: Text-Overlay im CSV muss echte Umlaute enthalten (ü, ä, ö, ß)
-
-    # Scene 1: Hauptbotschaft mit KI-Bild und Voiceover
-    # Scene 2: CTA mit kostenlosem KI-Starter-Paket
+    # Scene 1: Hauptbotschaft mit KI-Bild und Voiceover (kein CTA)
+    # Scene 2: Einmal sauberer CTA mit richtigem Keyword
     $scenes = @(
         @{
             mediaSource = $imagePrompt
@@ -77,7 +76,7 @@ function Create-AIVideo {
         },
         @{
             mediaSource = $imagePrompt
-            script      = "Kommentiere KI unter diesem Beitrag und ich schicke dir sofort dein kostenloses KI-Starter-Paket."
+            script      = $ctaScript
         }
     )
 
@@ -275,26 +274,26 @@ foreach ($row in $heuteRows) {
         continue
     }
 
-    # Voiceover-Skript: Caption-Text bereinigen + passenden Abschluss anhaengen
+    # Voiceover: nur Hauptbotschaft, alle CTAs raus — CTA kommt einmal in Scene 2
     $voiceoverBase = $caption -replace '[💡📲🎧🎁💻🧠🔥✅❌→←↑↓👆👇👉👈⚡✨🎯💰📈🏆🎤🎵🎶🎼🎙️]', ''
     $voiceoverBase = $voiceoverBase -replace 'Link in Bio.*', ''
-    $voiceoverBase = $voiceoverBase -replace 'Kommentiere\s+KI.*', ''   # CTA raus — kommt in Scene 2
+    $voiceoverBase = $voiceoverBase -replace '(?i)(Kommentiere|Schreib)\s+\w+.*', ''  # alle CTAs raus
     $voiceoverBase = $voiceoverBase -replace '#\S+', ''
     $voiceoverBase = $voiceoverBase.Trim()
 
-    $abschluss = switch -Wildcard ($link) {
-        "*instagram-autopilot*" { "Dein Instagram läuft automatisch. Kommentiere AUTOPILOT und ich schicke dir alle Infos." }
-        "*ki-audio-empire*"     { "Das Hörbuch nimmt dich mit auf eine neue Ebene. Kommentiere HÖRBUCH und ich schicke dir den Link." }
-        "*ki-prompt-paket*"     { "Die besten Prompts bekommst du direkt. Kommentiere PROMPTS und ich schicke sie dir." }
-        "*alfima*"              { "Das Produkt bekommst du direkt. Kommentiere ALFIMA und ich schicke dir alle Details." }
-        default                 { "Kommentiere KI und ich schicke dir sofort das kostenlose Starter-Paket." }
+    $keyword = switch -Wildcard ($link) {
+        "*instagram-autopilot*" { "AUTOPILOT" }
+        "*ki-audio-empire*"     { "HÖRBUCH" }
+        "*ki-prompt-paket*"     { "PROMPTS" }
+        "*alfima*"              { "ALFIMA" }
+        default                 { "KI" }
     }
-
-    $voiceover = "$voiceoverBase $abschluss"
+    $ctaScript = "Kommentiere $keyword. Oder klick den Link in der Bio."
+    $voiceover = $voiceoverBase
 
     # AI-Video mit Voiceover erstellen
     $videoName     = "KI-Support $typ $heute"
-    $videoResponse = Create-AIVideo -imagePrompt $imageSource -voiceScript $voiceover -typ $typ -videoName $videoName
+    $videoResponse = Create-AIVideo -imagePrompt $imageSource -voiceScript $voiceover -ctaScript $ctaScript -typ $typ -videoName $videoName
     if (-not $videoResponse) {
         Write-Log "AI-Video-Erstellung fehlgeschlagen. Post uebersprungen."
         continue

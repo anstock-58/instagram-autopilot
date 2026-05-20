@@ -62,13 +62,14 @@ function Create-AIVideo {
     param(
         [string]$imagePrompt,
         [string]$voiceScript,
+        [string]$ctaScript,
         [string]$typ,
         [string]$videoName
     )
 
     $scenes = @(
         @{ mediaSource = $imagePrompt; script = $voiceScript },
-        @{ mediaSource = $imagePrompt; script = "Kommentiere jetzt KLARHEIT und ich schicke dir sofort alle Details zu deinem persönlichen Standortcheck." }
+        @{ mediaSource = $imagePrompt; script = $ctaScript }
     )
 
     $payload = @{
@@ -229,23 +230,24 @@ foreach ($row in $heuteRows) {
 
     $voiceoverBase = $caption -replace '[💡📲🎧🎁💻🧠🔥✅❌→←↑↓👆👇👉👈⚡✨🎯💰📈🏆🎤🎵🎶🎼🎙️]', ''
     $voiceoverBase = $voiceoverBase -replace 'Link in Bio.*', ''
-    $voiceoverBase = $voiceoverBase -replace 'Kommentiere\s+KLARHEIT.*', ''  # CTA raus, kommt in Scene 2
+    $voiceoverBase = $voiceoverBase -replace '(?i)(Kommentiere|Schreib)\s+\w+.*', ''  # alle CTAs raus
     $voiceoverBase = $voiceoverBase -replace '#\S+', ''
     $voiceoverBase = $voiceoverBase.Trim()
 
-    $abschluss = switch -Wildcard ($link) {
-        "*instagram-autopilot*" { "Dein Instagram läuft automatisch. Kommentiere AUTOPILOT und ich schicke dir alle Infos." }
-        "*standortcheck*"       { "Kommentiere KLARHEIT und ich melde mich persönlich bei dir." }
-        "*ki-audio-empire*"     { "Das Hörbuch nimmt dich mit auf eine neue Ebene. Kommentiere HÖRBUCH und ich schicke dir den Link." }
-        "*ki-prompt-paket*"     { "Die besten Prompts bekommst du direkt. Kommentiere PROMPTS und ich schicke sie dir." }
-        "*alfima*"              { "Das Produkt bekommst du direkt. Kommentiere ALFIMA und ich schicke dir alle Details." }
-        default                 { "Kommentiere KLARHEIT für deinen persönlichen Standortcheck." }
+    $keyword = switch -Wildcard ($link) {
+        "*instagram-autopilot*" { "AUTOPILOT" }
+        "*standortcheck*"       { "KLARHEIT" }
+        "*ki-audio-empire*"     { "HÖRBUCH" }
+        "*ki-prompt-paket*"     { "PROMPTS" }
+        "*alfima*"              { "ALFIMA" }
+        "*tac-workshop*"        { "INFO" }
+        default                 { "KLARHEIT" }
     }
-
-    $voiceover = "$voiceoverBase $abschluss"
+    $ctaScript = "Kommentiere $keyword. Oder klick den Link in der Bio."
+    $voiceover = $voiceoverBase
 
     $videoName     = "Business-und-Spirit $typ $heute"
-    $videoResponse = Create-AIVideo -imagePrompt $imageSource -voiceScript $voiceover -typ $typ -videoName $videoName
+    $videoResponse = Create-AIVideo -imagePrompt $imageSource -voiceScript $voiceover -ctaScript $ctaScript -typ $typ -videoName $videoName
     if (-not $videoResponse) { Write-Log "AI-Video fehlgeschlagen. Post uebersprungen."; continue }
 
     $videoUrl = Wait-ForVideoUrl -response $videoResponse

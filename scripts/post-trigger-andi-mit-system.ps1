@@ -62,13 +62,14 @@ function Create-AIVideo {
     param(
         [string]$imagePrompt,
         [string]$voiceScript,
+        [string]$ctaScript,
         [string]$typ,
         [string]$videoName
     )
 
     $scenes = @(
         @{ mediaSource = $imagePrompt; script = $voiceScript },
-        @{ mediaSource = $imagePrompt; script = "Du willst raus aus dem Hamsterrad? Schreib INFO in die Kommentare und ich zeig dir wie." }
+        @{ mediaSource = $imagePrompt; script = $ctaScript }
     )
 
     $payload = @{
@@ -230,20 +231,20 @@ foreach ($row in $heuteRows) {
     # Voiceover aus Caption-Text aufbauen (wie ki-support und business-und-spirit)
     $voiceoverBase = $caption -replace '[💡📲🎧🎁💻🧠🔥✅❌→←↑↓👆👇👉👈⚡✨🎯💰📈🏆🎤🎵🎶🎼🎙️]', ''
     $voiceoverBase = $voiceoverBase -replace 'Link in Bio.*', ''
-    $voiceoverBase = $voiceoverBase -replace 'Kommentiere\s+INFO.*', ''
+    $voiceoverBase = $voiceoverBase -replace '(?i)(Kommentiere|Schreib)\s+\w+.*', ''  # alle CTAs raus
     $voiceoverBase = $voiceoverBase -replace '#\S+', ''
     $voiceoverBase = $voiceoverBase.Trim()
 
-    $abschluss = switch -Wildcard ($link) {
-        "*tac*"                 { "Kommentiere INFO und ich schicke dir sofort alle Details zum Workshop." }
-        "*instagram-autopilot*" { "Dein Instagram laeuft automatisch. Kommentiere AUTOPILOT und ich schicke dir alle Infos." }
-        default                 { "Kommentiere INFO und ich schicke dir sofort alle Details." }
+    $keyword = switch -Wildcard ($link) {
+        "*tac*"                 { "INFO" }
+        "*instagram-autopilot*" { "AUTOPILOT" }
+        default                 { "INFO" }
     }
-
-    $voiceover = "$voiceoverBase $abschluss"
+    $ctaScript = "Kommentiere $keyword. Oder klick den Link in der Bio."
+    $voiceover = $voiceoverBase
 
     $videoName     = "Andi-mit-System $typ $heute"
-    $videoResponse = Create-AIVideo -imagePrompt $imageSource -voiceScript $voiceover -typ $typ -videoName $videoName
+    $videoResponse = Create-AIVideo -imagePrompt $imageSource -voiceScript $voiceover -ctaScript $ctaScript -typ $typ -videoName $videoName
     if (-not $videoResponse) { Write-Log "AI-Video fehlgeschlagen. Post uebersprungen."; continue }
 
     $videoUrl = Wait-ForVideoUrl -response $videoResponse
