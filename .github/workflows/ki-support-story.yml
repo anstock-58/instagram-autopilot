@@ -1,9 +1,9 @@
-name: KI-Support Autopilot - Story (09:00)
+﻿name: KI-Support Autopilot - Story (09:00)
 
 on:
   schedule:
     - cron: '55 6 * * *'   # 06:55 UTC = 08:55 CEST (Sommer)
-  workflow_dispatch:         # Manuell auslösbar über GitHub UI
+  workflow_dispatch:         # Manuell auslÃ¶sbar Ã¼ber GitHub UI
 
 jobs:
   post-story:
@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Pause prüfen
+      - name: Pause prÃ¼fen
         id: pause_check
         run: |
           if [ -f "PAUSED" ]; then
@@ -29,6 +29,8 @@ jobs:
         if: steps.pause_check.outputs.paused == 'false'
         env:
           BLOTATO_API_KEY: ${{ secrets.BLOTATO_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          POST_TYPE: story
           GITHUB_WORKSPACE: ${{ github.workspace }}
           TZ: Europe/Berlin
         shell: pwsh

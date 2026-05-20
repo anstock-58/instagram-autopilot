@@ -189,7 +189,14 @@ try {
     Write-Log "FEHLER: CSV konnte nicht gelesen werden: $_"; exit 1
 }
 
-$heuteRows = $rows | Where-Object { $_.Datum -eq $heute -and $_.Status -eq "Geplant" -and $_.Plattform -eq "Instagram" }
+$postType = $env:POST_TYPE  # "story" oder "reel" — von GitHub Actions gesetzt, leer bei lokalem Lauf
+
+$heuteRows = $rows | Where-Object {
+    $_.Datum -eq $heute -and $_.Status -eq "Geplant" -and $_.Plattform -eq "Instagram" -and
+    (-not $postType -or
+     ($postType -eq "story" -and $_.'Post-Typ' -eq "Story") -or
+     ($postType -eq "reel"  -and $_.'Post-Typ' -ne "Story" -and $_.'Post-Typ' -ne "Karussell"))
+}
 
 if (-not $heuteRows) { Write-Log "Kein geplanter Instagram-Post fuer heute. Fertig."; Send-Telegram "📅 @andi.mit.system — kein Post fuer heute geplant ($heute)"; exit 0 }
 
@@ -205,7 +212,7 @@ foreach ($row in $heuteRows) {
     try {
         $postZeit    = [datetime]::ParseExact("$heute $uhrzeit", "dd.MM.yyyy HH:mm", $null)
         $diffMinuten = ($jetzt - $postZeit).TotalMinutes
-        if (-not $isManualRun -and ($diffMinuten -lt $zeitfensterFrueh -or $diffMinuten -gt $zeitfensterSpaet)) {
+        if (-not $isManualRun -and -not $postType -and ($diffMinuten -lt $zeitfensterFrueh -or $diffMinuten -gt $zeitfensterSpaet)) {
             Write-Log "Zeitfenster nicht passend fuer $typ um $uhrzeit (diff: $([math]::Round($diffMinuten,1)) min)."
             continue
         }

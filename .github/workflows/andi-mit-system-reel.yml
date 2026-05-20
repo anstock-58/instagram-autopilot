@@ -1,9 +1,9 @@
-name: Andi-mit-System Autopilot - Reel (18:00)
+﻿name: Andi-mit-System Autopilot - Reel (18:00)
 
 on:
   schedule:
     - cron: '55 15 * * *'  # 15:55 UTC = 17:55 CEST (Sommer)
-  workflow_dispatch:         # Manuell auslösbar über GitHub UI
+  workflow_dispatch:         # Manuell auslÃ¶sbar Ã¼ber GitHub UI
 
 jobs:
   post-reel:
@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Pause prüfen
+      - name: Pause prÃ¼fen
         id: pause_check
         run: |
           if [ -f "PAUSED" ]; then
@@ -25,10 +25,12 @@ jobs:
             echo "paused=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Reel veröffentlichen
+      - name: Reel verÃ¶ffentlichen
         if: steps.pause_check.outputs.paused == 'false'
         env:
           BLOTATO_API_KEY: ${{ secrets.BLOTATO_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          POST_TYPE: reel
           GITHUB_WORKSPACE: ${{ github.workspace }}
           TZ: Europe/Berlin
         shell: pwsh
