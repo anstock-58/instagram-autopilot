@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram Autopilot — Andreas Stock</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+      padding: 55px 70px;
+      max-width: 820px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 45px;
+      border-bottom: 2px solid #1a1a1a;
+      padding-bottom: 25px;
+    }
+    .name { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #999; }
+    .title { font-size: 26px; font-weight: 700; margin-top: 6px; }
+    .badge {
+      background: #1a1a1a;
+      color: #fff;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      border-radius: 3px;
+      margin-top: 5px;
+    }
+    .intro {
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+      color: #333;
+      border-left: 3px solid #1a1a1a;
+      padding-left: 20px;
+    }
+    h2 {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 18px;
+      margin-top: 38px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 10px;
+    }
+    .card {
+      background: #f7f7f7;
+      padding: 22px 24px;
+      border-radius: 4px;
+    }
+    .card-title {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .card-text {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.55;
+    }
+    .steps {
+      counter-reset: steps;
+      list-style: none;
+    }
+    .steps li {
+      counter-increment: steps;
+      display: flex;
+      gap: 16px;
+      margin-bottom: 14px;
+      align-items: flex-start;
+    }
+    .steps li::before {
+      content: counter(steps);
+      background: #1a1a1a;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .steps li span {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.55;
+    }
+    .pricing {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 10px;
+    }
+    .price-card {
+      border: 2px solid #1a1a1a;
+      padding: 24px;
+      border-radius: 4px;
+    }
+    .price-card.featured {
+      background: #1a1a1a;
+      color: #fff;
+    }
+    .price-label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.6;
+      margin-bottom: 8px;
+    }
+    .price-name {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .price-amount {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    .price-amount span {
+      font-size: 14px;
+      font-weight: normal;
+      opacity: 0.6;
+    }
+    .price-includes {
+      font-size: 12px;
+      line-height: 1.7;
+      opacity: 0.8;
+    }
+    .footer {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #bbb;
+    }
+    @media print {
+      body { padding: 35px 50px; }
+      .price-card.featured { background: #1a1a1a !important; color: #fff !important; -webkit-print-color-adjust: exact; }
+      .badge { background: #1a1a1a !important; color: #fff !important; -webkit-print-color-adjust: exact; }
+      .steps li::before { background: #1a1a1a !important; color: #fff !important; -webkit-print-color-adjust: exact; }
+      .card { background: #f7f7f7 !important; -webkit-print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div>
+      <div class="name">Andreas Stock · Neustart im Kopf</div>
+      <div class="title">Instagram Autopilot System</div>
+    </div>
+    <div class="badge">KI-gestützt</div>
+  </div>
+
+  <div class="intro">
+    Ich schreibe einmal im Monat einen Plan. Jeden Tag erscheint automatisch ein professionelles Video auf Instagram — mit KI-generiertem Bild, Text und Musik. Ich drücke keinen Knopf. Das macht alles das System.
+  </div>
+
+  <h2>Was das System macht</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="card-title">📋 Contentplan per KI</div>
+      <div class="card-text">Auf Basis deines Themas, deiner Zielgruppe und deiner Positionierung erstellt die KI einen kompletten Monatsplan — Texte, Hooks, CTAs, alles.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🎬 KI-Video automatisch</div>
+      <div class="card-text">Jeden Tag wird ein professionelles Cinematic-Video generiert — passend zum Thema des Posts, vollautomatisch über fal.ai.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🎵 Text + Musik drauf</div>
+      <div class="card-text">Das fertige Video bekommt automatisch das Text-Overlay und Hintergrundmusik — kein Schnitt, kein Canva, kein manuelles Bearbeiten.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📲 Automatisch gepostet</div>
+      <div class="card-text">Täglich um 18 Uhr wird das fertige Reel direkt auf Instagram veröffentlicht — inklusive Caption und Hashtags.</div>
+    </div>
+  </div>
+
+  <h2>So läuft es ab</h2>
+  <ol class="steps">
+    <li><span><strong>Einmalig:</strong> Einrichtung des Systems mit deinen Zugangsdaten und deinem Profil (Tools: Make.com, fal.ai, Creatomate, Instagram Business).</span></li>
+    <li><span><strong>Einmalig:</strong> KI erstellt deinen ersten Contentplan — auf Basis deines Themas, deiner Zielgruppe, deiner Sprache.</span></li>
+    <li><span><strong>Täglich automatisch:</strong> System postet jeden Tag ein fertiges Reel. Du schaust nur noch kurz drauf — oder auch nicht.</span></li>
+    <li><span><strong>Monatlich:</strong> Neuer Contentplan per KI — dauert 10 Minuten. Alles andere läuft weiter von selbst.</span></li>
+  </ol>
+
+  <h2>Angebote</h2>
+  <div class="pricing">
+    <div class="price-card">
+      <div class="price-label">Für Selbermacher</div>
+      <div class="price-name">System-Paket</div>
+      <div class="price-amount">197 €<span> einmalig</span></div>
+      <div class="price-includes">
+        ✓ Alle Skripte und Vorlagen<br>
+        ✓ Make.com Blueprint (importfertig)<br>
+        ✓ Creatomate Template<br>
+        ✓ Schritt-für-Schritt Anleitung<br>
+        ✓ Contentplan-Vorlage
+      </div>
+    </div>
+    <div class="price-card featured">
+      <div class="price-label">Komplett-Service</div>
+      <div class="price-name">Setup + Contentplan</div>
+      <div class="price-amount">697 €<span> einmalig</span></div>
+      <div class="price-includes">
+        ✓ Alles aus dem System-Paket<br>
+        ✓ Ich richte alles für dich ein<br>
+        ✓ Individueller Contentplan per KI<br>
+        ✓ Angepasst auf dein Thema + Zielgruppe<br>
+        ✓ 1 Setup-Call (60 Min.)
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Andreas Stock · neustart-im-kopf.de</span>
+    <span>Stand Mai 2026</span>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿2026-05-20 18:29:46 | === KI-Support Trigger gestartet | Heute: 20.05.2026 | Jetzt: 18:29 ===
+2026-05-20 18:29:46 | 1 Instagram-Post(s) fuer heute gefunden.
+2026-05-20 18:29:46 | Post faellig: Reel | 18:00
+2026-05-20 18:29:46 | Erstelle KI-Support AI-Video (Reel) mit Voiceover: Prompt-Laenge 252 | Script-Laenge 457
+2026-05-20 18:29:46 | AI-Video Response: {"item":{"status":"queueing","id":"53a3d698-3ad3-46c2-a69b-c34ffd1cfaae"}}
+2026-05-20 18:29:46 | Rendering laeuft (Job: 53a3d698-3ad3-46c2-a69b-c34ffd1cfaae) - warte bis zu 5 Minuten...
+2026-05-20 18:29:52 | Render-Status (1): generating-script
+2026-05-20 18:29:57 | Render-Status (2): generating-script
+2026-05-20 18:30:02 | Render-Status (3): generating-script
+2026-05-20 18:30:07 | Render-Status (4): script-ready
+2026-05-20 18:30:13 | Render-Status (5): script-ready
+2026-05-20 18:30:18 | Render-Status (6): script-ready
+2026-05-20 18:30:23 | Render-Status (7): script-ready
+2026-05-20 18:30:28 | Render-Status (8): script-ready
+2026-05-20 18:30:34 | Render-Status (9): script-ready
+2026-05-20 18:30:39 | Render-Status (10): script-ready
+2026-05-20 18:30:45 | Render-Status (11): script-ready
+2026-05-20 18:30:50 | Render-Status (12): script-ready
+2026-05-20 18:30:55 | Render-Status (13): script-ready
+2026-05-20 18:31:00 | Render-Status (14): script-ready
+2026-05-20 18:31:06 | Render-Status (15): script-ready
+2026-05-20 18:31:11 | Render-Status (16): script-ready
+2026-05-20 18:31:17 | Render-Status (17): script-ready
+2026-05-20 18:31:22 | Render-Status (18): script-ready
+2026-05-20 18:31:27 | Render-Status (19): script-ready
+2026-05-20 18:31:32 | Render-Status (20): script-ready
+2026-05-20 18:31:38 | Render-Status (21): script-ready
+2026-05-20 18:31:43 | Render-Status (22): script-ready
+2026-05-20 18:31:48 | Render-Status (23): script-ready
+2026-05-20 18:31:53 | Render-Status (24): script-ready
+2026-05-20 18:31:59 | Render-Status (25): done
+2026-05-20 18:31:59 | Video-URL: https://database.blotato.io/storage/v1/object/public/public_media/3a07e527-cc16-4f58-8539-719f4c39ba64/videogen2-render-0f9a23ea-cd0a-4155-9fe0-905bc2e5ba79.mp4
+2026-05-20 18:31:59 | Poste auf Instagram (instagram): Caption-Laenge 570 Zeichen
+2026-05-20 18:31:59 | Instagram OK. SubmissionId: 91798e4b-ad00-45d2-97e7-5fe6d7d1a4c3
+2026-05-20 18:31:59 | Status auf 'Gepostet' gesetzt.
+2026-05-20 18:31:59 | Telegram-Benachrichtigung fehlgeschlagen: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-20 18:31:59 | === Fertig ===

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram Autopilot — Setup-Anleitung</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+      padding: 55px 70px;
+      max-width: 820px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 45px;
+      border-bottom: 2px solid #1a1a1a;
+      padding-bottom: 25px;
+    }
+    .name { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #999; }
+    .title { font-size: 26px; font-weight: 700; margin-top: 6px; }
+    .subtitle { font-size: 15px; color: #555; margin-top: 6px; font-weight: 400; }
+    .badge {
+      background: #1a1a1a;
+      color: #fff;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      border-radius: 3px;
+      margin-top: 5px;
+    }
+    .phase {
+      margin-bottom: 40px;
+    }
+    .phase-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .phase-num {
+      background: #1a1a1a;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .phase-label {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #999;
+    }
+    .phase-title {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .step {
+      margin-bottom: 22px;
+      padding-left: 42px;
+    }
+    .step-title {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    .step-text {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.6;
+    }
+    .hint {
+      background: #f7f7f7;
+      border-left: 3px solid #ccc;
+      padding: 12px 16px;
+      font-size: 13px;
+      color: #555;
+      margin-top: 10px;
+      border-radius: 0 3px 3px 0;
+      line-height: 1.55;
+    }
+    .important {
+      background: #f7f7f7;
+      border-left: 3px solid #1a1a1a;
+      padding: 14px 18px;
+      font-size: 14px;
+      color: #1a1a1a;
+      margin-top: 10px;
+      border-radius: 0 3px 3px 0;
+      line-height: 1.6;
+    }
+    .important strong {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      color: #1a1a1a;
+    }
+    .code-block {
+      background: #1a1a1a;
+      color: #e8e8e8;
+      font-family: 'Courier New', monospace;
+      font-size: 13px;
+      padding: 18px 22px;
+      border-radius: 4px;
+      margin-top: 10px;
+      line-height: 1.7;
+      white-space: pre;
+    }
+    .url {
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      color: #555;
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 2px;
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid #e8e8e8;
+      margin: 36px 0;
+    }
+    .footer {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #bbb;
+    }
+    @media print {
+      body { padding: 35px 50px; }
+      .phase-num { background: #1a1a1a !important; color: #fff !important; -webkit-print-color-adjust: exact; }
+      .badge { background: #1a1a1a !important; color: #fff !important; -webkit-print-color-adjust: exact; }
+      .code-block { background: #1a1a1a !important; color: #e8e8e8 !important; -webkit-print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div>
+      <div class="name">Instagram Autopilot System</div>
+      <div class="title">Setup-Anleitung</div>
+      <div class="subtitle">Detaillierte Erklärung — Schritt für Schritt.</div>
+    </div>
+    <div class="badge">Anleitung</div>
+  </div>
+
+  <!-- Phase 1 -->
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num">1</div>
+      <div>
+        <div class="phase-label">Phase 1</div>
+        <div class="phase-title">Accounts anlegen</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Make.com</div>
+      <div class="step-text">Gehe auf make.com und erstelle einen kostenlosen Account. Make.com ist die Automatisierungsplattform, die alles zusammenhält — sie empfängt den Trigger, steuert fal.ai und Creatomate und postet auf Instagram.</div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">fal.ai</div>
+      <div class="step-text">Erstelle einen Account auf fal.ai. Gehe in dein Dashboard → API Keys → neuen Key erstellen. Diesen Key sofort notieren — er wird in Make.com eingetragen. fal.ai generiert das KI-Video aus deinem Videoprompt.</div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Creatomate</div>
+      <div class="step-text">Erstelle einen Account auf creatomate.com (ab 29 $/Monat). Gehe in dein Dashboard → Account → API Access → API Key kopieren. Creatomate legt Text-Overlay und Musik auf das fertige Video.</div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Instagram auf Business umstellen</div>
+      <div class="step-text">Öffne Instagram → Einstellungen → Konto → Zu professionellem Konto wechseln → Business. Ohne Business-Account kann Make.com nicht auf Instagram posten.</div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">GitHub</div>
+      <div class="step-text">Erstelle einen kostenlosen Account auf github.com. GitHub dient als Speicherort für deine Musikdateien — öffentlich erreichbar, kostenlos, zuverlässig.</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Phase 2 -->
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num">2</div>
+      <div>
+        <div class="phase-label">Phase 2</div>
+        <div class="phase-title">GitHub einrichten</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Repository anlegen</div>
+      <div class="step-text">Gehe auf github.com → New repository. Name: <code>instagram-autopilot</code>. Sichtbarkeit: Public. README-Haken setzen. Repository erstellen.</div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Musik hochladen</div>
+      <div class="step-text">Im Repository: "Add file" → "Create new file". Dateiname: <code>music/deine-musik.mp3</code>. Dann "Upload files" auswählen und die MP3 hochladen. Commit bestätigen.</div>
+      <div class="hint">Der Ordner <code>music/</code> wird automatisch angelegt, wenn du den Dateinamen mit dem Slash eingibst.</div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Raw-URL notieren</div>
+      <div class="step-text">Klicke auf die hochgeladene MP3 → "Raw" Button → URL aus der Adressleiste kopieren. Diese URL trägst du später ins Creatomate-Template und in die CSV ein.</div>
+      <div class="hint">Format: <span class="url">https://raw.githubusercontent.com/USERNAME/instagram-autopilot/master/music/dateiname.mp3</span></div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Phase 3 -->
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num">3</div>
+      <div>
+        <div class="phase-label">Phase 3</div>
+        <div class="phase-title">Creatomate Template anlegen</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Template aus JSON erstellen</div>
+      <div class="step-text">Gehe auf app.creatomate.com → Templates → New Template → "Start from JSON". Kopiere den gesamten Inhalt der mitgelieferten Datei <code>creatomate-template.json</code> und füge ihn ein. Bestätigen.</div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Musik-URL anpassen</div>
+      <div class="step-text">Im JSON-Editor: suche nach der Musik-URL und ersetze sie durch deine eigene GitHub Raw-URL aus Phase 2. Dann speichern.</div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Template-ID notieren</div>
+      <div class="step-text">Nach dem Speichern siehst du in der Browser-URL deine Template-ID. Sie steht nach <code>/templates/</code> und sieht aus wie eine lange Buchstaben-Zahlen-Kombination. Diese ID gleich notieren.</div>
+      <div class="hint">Beispiel: <span class="url">app.creatomate.com/templates/<strong>abc123def456</strong>/edit</span> — der fett markierte Teil ist deine ID.</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Phase 4 -->
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num">4</div>
+      <div>
+        <div class="phase-label">Phase 4</div>
+        <div class="phase-title">Make.com einrichten</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Blueprint importieren</div>
+      <div class="step-text">Gehe auf make.com → Scenarios → oben rechts auf "Create a new scenario". Im leeren Szenario oben rechts auf die drei Punkte (…) klicken → "Import Blueprint" auswählen → Datei <code>make-blueprint.json</code> hochladen. Das Szenario baut sich automatisch auf.</div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">fal.ai Verbindung einrichten</div>
+      <div class="step-text">Klicke auf das fal.ai-Modul im Szenario → "Add" bei der Verbindung → API Key aus Phase 1 eintragen → speichern.</div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Creatomate Verbindung einrichten</div>
+      <div class="step-text">Klicke auf das Creatomate-Modul → "Add" bei der Verbindung → API Key aus Phase 1 eintragen → speichern.</div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Instagram Business Account verbinden</div>
+      <div class="step-text">Klicke auf das Instagram-Modul → "Add" → mit deinem Facebook/Instagram Business Account einloggen und Zugriff erlauben.</div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Template-ID in Modul 20 eintragen</div>
+      <div class="step-text">Öffne das Creatomate-Modul (Modul 20) im Szenario. Im Feld "Body" steht <code>DEINE-TEMPLATE-ID</code> — ersetze das durch die Template-ID aus Phase 3.</div>
+      <div class="step-text" style="margin-top: 10px;">Der Body soll danach so aussehen:</div>
+      <div class="code-block">{
+  "template_id": "DEINE-TEMPLATE-ID",
+  "modifications": {
+    "video.source": "{{3.data.video.url}}",
+    "overlay_text": "{{1.textoverlay}}",
+    "music.source": "{{1.musikurl}}",
+    "video.volume": 0,
+    "music.volume": 4
+  }
+}</div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Szenario aktivieren</div>
+      <div class="step-text">Unten links im Szenario den Toggle auf aktiv stellen — er muss blau leuchten.</div>
+      <div class="important">
+        <strong>Wichtig</strong>
+        Wenn der Toggle grau ist, ist das Szenario inaktiv — dann kommt kein Webhook an und nichts wird gepostet. Immer prüfen, dass er blau/aktiv ist.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Webhook-URL kopieren</div>
+      <div class="step-text">Klicke auf das erste Modul im Szenario (Webhook). Dort findest du die Webhook-URL. Diese URL komplett kopieren und sicher notieren — sie kommt in das PowerShell-Skript.</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Phase 5 -->
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num">5</div>
+      <div>
+        <div class="phase-label">Phase 5</div>
+        <div class="phase-title">Skript und Plan einrichten</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Ordner anlegen</div>
+      <div class="step-text">Erstelle einen neuen Ordner auf deinem Computer, z. B. <span class="url">C:\Instagram-Autopilot\</span>. Alle Projektdateien kommen hier rein.</div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Vorlagen reinkopieren</div>
+      <div class="step-text">Kopiere <code>post-trigger-VORLAGE.ps1</code> und <code>contentplan_vorlage.csv</code> aus dem Paket in diesen Ordner.</div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Skript konfigurieren</div>
+      <div class="step-text">Öffne <code>post-trigger-VORLAGE.ps1</code> mit dem Editor (Rechtsklick → Bearbeiten). Ganz oben stehen drei Zeilen zum Ausfüllen: Pfad zur CSV-Datei, Webhook-URL und Pfad für die Log-Datei. Alle drei eintragen und speichern.</div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Contentplan eintragen</div>
+      <div class="step-text">Erstelle deinen Contentplan per KI (Anleitung in <code>contentplan-per-ki.html</code>) und trage die Posts in die CSV-Datei ein. Jede Zeile ist ein Post.</div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Windows Task Scheduler einrichten</div>
+      <div class="step-text">Öffne den Windows Task Scheduler (Aufgabenplanung). Neue Aufgabe erstellen:</div>
+      <div class="hint" style="margin-top: 10px;">
+        <strong>Trigger:</strong> Täglich, 17:55 Uhr<br>
+        <strong>Aktion — Programm:</strong> <code>powershell.exe</code><br>
+        <strong>Aktion — Argument:</strong> <code>-ExecutionPolicy Bypass -File "C:\DEIN-PFAD\post-trigger-VORLAGE.ps1"</code>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Phase 6 -->
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num">6</div>
+      <div>
+        <div class="phase-label">Phase 6</div>
+        <div class="phase-title">Testen</div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Skript manuell ausführen</div>
+      <div class="step-text">PowerShell als Administrator öffnen. Befehl eingeben: <span class="url">& "C:\DEIN-PFAD\post-trigger-VORLAGE.ps1"</span>. Das Skript sucht in der CSV nach dem heutigen Datum und feuert den Webhook.</div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Make.com prüfen</div>
+      <div class="step-text">Gehe in Make.com → Scenarios → dein Szenario → "History". Ein neuer Eintrag sollte erscheinen (grüner Haken = Erfolg).</div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Creatomate prüfen</div>
+      <div class="step-text">Gehe auf app.creatomate.com → Renders. Der aktuelle Render sollte erscheinen. Status wechselt von "Queued" zu "Rendering" zu "Done" — dauert 2–4 Minuten.</div>
+    </div>
+
+    <div class="step">
+      <div class="step-title">Instagram prüfen</div>
+      <div class="step-text">Öffne dein Instagram-Profil. Das fertige Reel sollte erschienen sein — mit Text-Overlay, Musik und Caption.</div>
+      <div class="important">
+        <strong>Fertig</strong>
+        Ab jetzt läuft das System täglich automatisch. Du musst nichts mehr tun, außer einmal im Monat einen neuen Contentplan per KI zu erstellen.
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Instagram Autopilot System · Setup-Anleitung</span>
+    <span>Stand Mai 2026</span>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿2026-05-20 18:24:21 | === Business-und-Spirit Trigger gestartet | Heute: 20.05.2026 | Jetzt: 18:24 ===
+2026-05-20 18:24:21 | 1 Instagram-Post(s) fuer heute gefunden.
+2026-05-20 18:24:21 | Post faellig: Reel | 18:00
+2026-05-20 18:24:21 | Erstelle Business-und-Spirit AI-Video (Reel)
+2026-05-20 18:24:22 | AI-Video Response: {"item":{"status":"queueing","id":"b7963c2e-76da-45c8-a728-e22dc55baa6c"}}
+2026-05-20 18:24:22 | Rendering laeuft (Job: b7963c2e-76da-45c8-a728-e22dc55baa6c)...
+2026-05-20 18:24:27 | Render-Status (1): generating-script
+2026-05-20 18:24:33 | Render-Status (2): generating-script
+2026-05-20 18:24:38 | Render-Status (3): generating-script
+2026-05-20 18:24:43 | Render-Status (4): script-ready
+2026-05-20 18:24:48 | Render-Status (5): script-ready
+2026-05-20 18:24:54 | Render-Status (6): script-ready
+2026-05-20 18:24:59 | Render-Status (7): script-ready
+2026-05-20 18:25:04 | Render-Status (8): script-ready
+2026-05-20 18:25:09 | Render-Status (9): script-ready
+2026-05-20 18:25:15 | Render-Status (10): script-ready
+2026-05-20 18:25:20 | Render-Status (11): script-ready
+2026-05-20 18:25:26 | Render-Status (12): script-ready
+2026-05-20 18:25:31 | Render-Status (13): script-ready
+2026-05-20 18:25:36 | Render-Status (14): script-ready
+2026-05-20 18:25:42 | Render-Status (15): script-ready
+2026-05-20 18:25:47 | Render-Status (16): script-ready
+2026-05-20 18:25:52 | Render-Status (17): script-ready
+2026-05-20 18:25:58 | Render-Status (18): script-ready
+2026-05-20 18:26:03 | Render-Status (19): script-ready
+2026-05-20 18:26:08 | Render-Status (20): script-ready
+2026-05-20 18:26:14 | Render-Status (21): script-ready
+2026-05-20 18:26:19 | Render-Status (22): done
+2026-05-20 18:26:19 | Poste auf Instagram (instagram / reel)
+2026-05-20 18:26:19 | Instagram OK. SubmissionId: b94f0bc1-6e74-4ed8-84ac-be4cb37eea27
+2026-05-20 18:26:20 | Status auf 'Gepostet' gesetzt.
+2026-05-20 18:26:20 | Telegram-Benachrichtigung fehlgeschlagen: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-20 18:26:20 | === Fertig ===

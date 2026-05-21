@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram Autopilot — Contentplan per KI erstellen</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+      padding: 55px 70px;
+      max-width: 820px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 45px;
+      border-bottom: 2px solid #1a1a1a;
+      padding-bottom: 25px;
+    }
+    .name { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #999; }
+    .title { font-size: 26px; font-weight: 700; margin-top: 6px; }
+    .subtitle { font-size: 15px; color: #555; margin-top: 6px; font-weight: 400; }
+    .badge {
+      background: #1a1a1a;
+      color: #fff;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      border-radius: 3px;
+      margin-top: 5px;
+    }
+    .intro {
+      font-size: 16px;
+      line-height: 1.75;
+      margin-bottom: 40px;
+      color: #444;
+      border-left: 3px solid #1a1a1a;
+      padding-left: 20px;
+      font-style: italic;
+    }
+    .step {
+      margin-bottom: 38px;
+    }
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .step-num {
+      background: #1a1a1a;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .step-label {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #999;
+    }
+    .step-title {
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .step-body {
+      padding-left: 42px;
+    }
+    .step-text {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.65;
+      margin-bottom: 10px;
+    }
+    .hint {
+      background: #f7f7f7;
+      border-left: 3px solid #ccc;
+      padding: 12px 16px;
+      font-size: 13px;
+      color: #555;
+      margin-top: 10px;
+      border-radius: 0 3px 3px 0;
+      line-height: 1.6;
+    }
+    .hint em {
+      font-style: normal;
+      font-weight: 600;
+      color: #333;
+    }
+    .list {
+      list-style: none;
+      margin-top: 8px;
+    }
+    .list li {
+      font-size: 14px;
+      color: #444;
+      line-height: 1.6;
+      padding-left: 16px;
+      position: relative;
+      margin-bottom: 6px;
+    }
+    .list li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: #999;
+    }
+    .csv-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 14px;
+      font-size: 13px;
+    }
+    .csv-table th {
+      background: #1a1a1a;
+      color: #fff;
+      text-align: left;
+      padding: 10px 14px;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.3px;
+    }
+    .csv-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #eee;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    .csv-table tr:nth-child(even) td {
+      background: #fafafa;
+    }
+    .csv-table td:first-child {
+      font-weight: 600;
+      color: #1a1a1a;
+      white-space: nowrap;
+    }
+    .csv-table td:last-child {
+      color: #666;
+    }
+    .example-box {
+      background: #f7f7f7;
+      padding: 20px 24px;
+      border-radius: 4px;
+      margin-top: 14px;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .example-box .line {
+      display: block;
+      color: #333;
+    }
+    .example-box .cta {
+      color: #1a1a1a;
+      font-weight: 700;
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid #e8e8e8;
+      margin: 36px 0;
+    }
+    .finish-box {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 22px 26px;
+      border-radius: 4px;
+      font-size: 15px;
+      line-height: 1.7;
+      margin-top: 10px;
+    }
+    .footer {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #bbb;
+    }
+    @media print {
+      body { padding: 35px 50px; }
+      .step-num { background: #1a1a1a !important; color: #fff !important; -webkit-print-color-adjust: exact; }
+      .badge { background: #1a1a1a !important; color: #fff !important; -webkit-print-color-adjust: exact; }
+      .csv-table th { background: #1a1a1a !important; color: #fff !important; -webkit-print-color-adjust: exact; }
+      .finish-box { background: #1a1a1a !important; color: #fff !important; -webkit-print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div>
+      <div class="name">Instagram Autopilot System</div>
+      <div class="title">Contentplan per KI erstellen</div>
+      <div class="subtitle">30 Posts in 15 Minuten — mit ChatGPT oder Claude.</div>
+    </div>
+    <div class="badge">Contentplan</div>
+  </div>
+
+  <div class="intro">
+    Du brauchst kein Texterlebnis. Du gibst der KI deine Angaben — sie liefert 30 fertige Posts. Du kopierst sie ins CSV. Fertig.
+  </div>
+
+  <!-- Schritt 1 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">1</div>
+      <div>
+        <div class="step-label">Schritt 1</div>
+        <div class="step-title">Onboarding-Prompt verwenden</div>
+      </div>
+    </div>
+    <div class="step-body">
+      <div class="step-text">Im Paket liegt die Datei <code>onboarding-prompt.html</code> — öffne sie im Browser. Dort steht ein fertiger Prompt, der der KI alles erklärt was sie über dich, dein Thema und dein Format wissen muss.</div>
+      <ul class="list">
+        <li>Datei <code>onboarding-prompt.html</code> im Browser öffnen</li>
+        <li>Prompt komplett kopieren (Strg+A, Strg+C)</li>
+        <li>In ChatGPT (chatgpt.com) oder Claude (claude.ai) einfügen</li>
+        <li>Die Fragen der KI beantworten — dauert 5 Minuten</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Schritt 2 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">2</div>
+      <div>
+        <div class="step-label">Schritt 2</div>
+        <div class="step-title">Ergebnis prüfen</div>
+      </div>
+    </div>
+    <div class="step-body">
+      <div class="step-text">Die KI liefert für jeden Tag eine Caption, ein Text-Overlay und einen Videoprompt. Lies die Posts kurz durch — klingt einer nicht nach dir, kannst du ihn direkt anpassen lassen:</div>
+      <div class="hint">
+        <em>Beispiel:</em> "Post 5 bitte nochmal — mehr wie ein Gespräch, weniger werblich."<br>
+        Oder: "Die drei Posts zum Thema Erschöpfung bitte direkter formulieren."
+      </div>
+      <div class="step-text" style="margin-top: 14px;">Wenn alles passt, gehst du zu Schritt 3.</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Schritt 3 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">3</div>
+      <div>
+        <div class="step-label">Schritt 3</div>
+        <div class="step-title">In CSV eintragen</div>
+      </div>
+    </div>
+    <div class="step-body">
+      <div class="step-text">Öffne <code>contentplan_vorlage.csv</code> in Excel oder einem Texteditor. Jede Zeile ist ein Post. Hier die Spalten und was reinkommt:</div>
+
+      <table class="csv-table">
+        <thead>
+          <tr>
+            <th>Spalte</th>
+            <th>Inhalt / Beispiel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Datum</td>
+            <td>TT.MM.JJJJ — z. B. <code>15.06.2026</code></td>
+          </tr>
+          <tr>
+            <td>Uhrzeit</td>
+            <td><code>18:00</code> — Uhrzeit ist egal, das Skript feuert um 17:55 Uhr</td>
+          </tr>
+          <tr>
+            <td>Plattform</td>
+            <td><code>Instagram</code></td>
+          </tr>
+          <tr>
+            <td>Post-Typ</td>
+            <td><code>Reel</code></td>
+          </tr>
+          <tr>
+            <td>Text</td>
+            <td>Die lange Caption für den Post — mit Zeilenumbrüchen</td>
+          </tr>
+          <tr>
+            <td>Link</td>
+            <td>Deine Website — z. B. <code>https://deine-website.de</code></td>
+          </tr>
+          <tr>
+            <td>Videoprompt</td>
+            <td>KI-Videobeschreibung auf Englisch, geliefert vom Onboarding-Prompt</td>
+          </tr>
+          <tr>
+            <td>Text-Overlay</td>
+            <td>4 Zeilen, getrennt durch <code>\n</code> — Zeile 4 ist immer der CTA</td>
+          </tr>
+          <tr>
+            <td>Status</td>
+            <td><code>Geplant</code> — das Skript ändert es automatisch auf <code>Gesendet</code></td>
+          </tr>
+          <tr>
+            <td>Musik-URL</td>
+            <td>GitHub Raw-URL zur MP3 (aus Phase 2) — oder leer für Standard-Musik</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Schritt 4 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">4</div>
+      <div>
+        <div class="step-label">Schritt 4</div>
+        <div class="step-title">Fertig</div>
+      </div>
+    </div>
+    <div class="step-body">
+      <div class="step-text">CSV speichern. Ab dem nächsten Tag postet das System automatisch.</div>
+
+      <div class="finish-box">
+        CSV speichern. Ab dem nächsten Tag postet das System automatisch.
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Beispiel Text-Overlay -->
+  <div style="margin-bottom: 40px;">
+    <div style="font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #999; margin-bottom: 14px;">Beispiel Text-Overlay (4 Zeilen)</div>
+    <div class="example-box">
+      <span class="line">Nicht Burnout.</span>
+      <span class="line">Überlastung.</span>
+      <span class="line">Der Unterschied zählt.</span>
+      <span class="line cta">Schreib KLARHEIT – ich antworte dir</span>
+    </div>
+    <div class="hint" style="margin-top: 12px;">
+      Zeile 1–3: Der Kern des Posts in wenigen Worten. Zeile 4: immer der CTA — "Schreib STICHWORT – ich antworte dir." Das Stichwort ist dein DM-Trigger.
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Instagram Autopilot System · Contentplan per KI</span>
+    <span>Stand Mai 2026</span>
+  </div>
+
+</body>
+</html>

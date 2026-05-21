@@ -1,0 +1,43 @@
+Ich möchte ein vollautomatisches Instagram-Posting-System aufbauen.
+
+Das System soll täglich automatisch einen Post auf Instagram veröffentlichen —
+entweder ein KI-generiertes Reel (Kling v3 via fal.ai) oder ein KI-generiertes Foto
+(FLUX via fal.ai). Die Posts kommen aus einem Contentplan als CSV-Datei.
+
+ARCHITEKTUR:
+Contentplan CSV → Windows Task Scheduler → PowerShell Skript → Make.com Webhook
+→ fal.ai (Video oder Bild generieren) → Instagram Business Account (posten)
+
+SCHRITT 1 - WORKSPACE:
+Erstelle folgende Ordnerstruktur:
+- outputs/ (für Contentplan CSV und Logs)
+- scripts/ (für PowerShell Skript)
+- context/ (für Profil und Strategiedateien)
+
+SCHRITT 2 - CONTENTPLAN CSV:
+Erstelle outputs/contentplan.csv mit diesen Spalten:
+Datum, Uhrzeit, Plattform, Post-Typ, Text, Link, Bild-URL, Bildprompt, Videoprompt, Text-Overlay, Karussell-Slides, Status
+
+Befülle den Plan mit zehn Posts für die nächsten zwei Wochen passend zu meiner Nische.
+
+SCHRITT 3 - POWERSHELL SKRIPT:
+Erstelle scripts/post-trigger.ps1 das:
+- Den Contentplan CSV liest (UTF-8)
+- Den heutigen Post findet (nach Datum)
+- Den Post als JSON-Payload an den Make.com Webhook sendet (UTF-8 encoded)
+- Alles in outputs/post-trigger-log.txt protokolliert
+
+JSON-Felder: post_typ, datum, plattform, text, link, bildprompt, videoprompt, textoverlay
+
+SCHRITT 4 - WINDOWS TASK SCHEDULER:
+Zeig mir wie ich einen Task einrichte, der das Skript täglich zur gewünschten Uhrzeit ausführt.
+
+SCHRITT 5 - MAKE.COM BLUEPRINT:
+Ich habe die Blueprint-JSON bereits (make-blueprint-webhook-v3.json).
+Zeig mir wie ich diese importiere und Instagram + fal.ai einrichte.
+
+Meine Nische: [EINTRAGEN]
+Meine Zielgruppe: [EINTRAGEN]
+Mein Ton: [EINTRAGEN]
+
+Fang mit Schritt 1 an und warte auf meine Bestätigung.

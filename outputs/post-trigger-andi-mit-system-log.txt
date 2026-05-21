@@ -1,0 +1,35 @@
+﻿2026-05-20 18:26:35 | === Andi-mit-System Trigger gestartet | Heute: 20.05.2026 | Jetzt: 18:26 ===
+2026-05-20 18:26:35 | 1 Instagram-Post(s) fuer heute gefunden.
+2026-05-20 18:26:35 | Post faellig: Reel | 18:00
+2026-05-20 18:26:35 | Erstelle Andi-mit-System AI-Video (Reel)
+2026-05-20 18:26:36 | AI-Video Response: {"item":{"status":"queueing","id":"b99bf577-ac2c-4328-8a45-9d8937163362"}}
+2026-05-20 18:26:36 | Rendering laeuft (Job: b99bf577-ac2c-4328-8a45-9d8937163362)...
+2026-05-20 18:26:41 | Render-Status (1): generating-script
+2026-05-20 18:26:46 | Render-Status (2): generating-script
+2026-05-20 18:26:52 | Render-Status (3): generating-script
+2026-05-20 18:26:57 | Render-Status (4): generating-script
+2026-05-20 18:27:02 | Render-Status (5): script-ready
+2026-05-20 18:27:07 | Render-Status (6): script-ready
+2026-05-20 18:27:13 | Render-Status (7): script-ready
+2026-05-20 18:27:18 | Render-Status (8): script-ready
+2026-05-20 18:27:24 | Render-Status (9): script-ready
+2026-05-20 18:27:29 | Render-Status (10): script-ready
+2026-05-20 18:27:34 | Render-Status (11): script-ready
+2026-05-20 18:27:39 | Render-Status (12): script-ready
+2026-05-20 18:27:45 | Render-Status (13): script-ready
+2026-05-20 18:27:50 | Render-Status (14): script-ready
+2026-05-20 18:27:55 | Render-Status (15): script-ready
+2026-05-20 18:28:00 | Render-Status (16): script-ready
+2026-05-20 18:28:06 | Render-Status (17): script-ready
+2026-05-20 18:28:11 | Render-Status (18): script-ready
+2026-05-20 18:28:16 | Render-Status (19): script-ready
+2026-05-20 18:28:22 | Render-Status (20): script-ready
+2026-05-20 18:28:27 | Render-Status (21): script-ready
+2026-05-20 18:28:32 | Render-Status (22): script-ready
+2026-05-20 18:28:37 | Render-Status (23): script-ready
+2026-05-20 18:28:43 | Render-Status (24): done
+2026-05-20 18:28:43 | Poste auf Instagram (instagram / reel)
+2026-05-20 18:28:43 | Instagram OK. SubmissionId: 38cad59f-05ea-4895-970c-8b1893e2c00c
+2026-05-20 18:28:43 | Status auf 'Gepostet' gesetzt.
+2026-05-20 18:28:43 | Telegram-Benachrichtigung fehlgeschlagen: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-20 18:28:43 | === Fertig ===

@@ -1,0 +1,41 @@
+{
+  "output_format": "mp4",
+  "width": 1080,
+  "height": 1920,
+  "elements": [
+    {
+      "id": "video",
+      "type": "video",
+      "track": 1,
+      "loop": true,
+      "duration": "30 s",
+      "volume": 0,
+      "source": ""
+    },
+    {
+      "id": "music",
+      "type": "audio",
+      "track": 2,
+      "duration": "30 s",
+      "volume": 1,
+      "source": "https://raw.githubusercontent.com/DEIN-REPO/music/background-chill.mp3"
+    },
+    {
+      "id": "overlay_text",
+      "type": "text",
+      "track": 3,
+      "x": "50%",
+      "y": "72%",
+      "width": "85%",
+      "text": "{{overlay_text}}",
+      "color": "#1a1a1a",
+      "font_family": "Montserrat",
+      "font_weight": "700",
+      "font_size": "54 px",
+      "background_color": "#F1F1F1B3",
+      "background_x_padding": "6%",
+      "background_y_padding": "5%",
+      "background_border_radius": 50
+    }
+  ]
+}

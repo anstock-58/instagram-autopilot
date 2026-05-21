@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram Autopilot — Schritt-für-Schritt Checkliste</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+      padding: 55px 70px;
+      max-width: 820px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 45px;
+      border-bottom: 2px solid #1a1a1a;
+      padding-bottom: 25px;
+    }
+    .name { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: #999; }
+    .title { font-size: 26px; font-weight: 700; margin-top: 6px; }
+    .subtitle { font-size: 15px; color: #555; margin-top: 6px; font-weight: 400; }
+    .badge {
+      background: #1a1a1a;
+      color: #fff;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      border-radius: 3px;
+      margin-top: 5px;
+    }
+    .phase {
+      margin-bottom: 36px;
+    }
+    .phase-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .phase-num {
+      background: #1a1a1a;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .phase-title {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .phase-label {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #999;
+      margin-left: 2px;
+    }
+    .checklist {
+      list-style: none;
+      padding-left: 42px;
+    }
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #333;
+      line-height: 1.5;
+    }
+    .checkbox {
+      width: 16px;
+      height: 16px;
+      border: 1.5px solid #1a1a1a;
+      border-radius: 2px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .note {
+      font-size: 12px;
+      color: #888;
+      margin-left: 28px;
+      margin-top: -6px;
+      margin-bottom: 4px;
+    }
+    .url {
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      color: #555;
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 2px;
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid #e8e8e8;
+      margin: 32px 0;
+    }
+    .footer {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #bbb;
+    }
+    @media print {
+      body { padding: 35px 50px; }
+      .phase-num { background: #1a1a1a !important; color: #fff !important; -webkit-print-color-adjust: exact; }
+      .badge { background: #1a1a1a !important; color: #fff !important; -webkit-print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div>
+      <div class="name">Instagram Autopilot System</div>
+      <div class="title">Schritt-für-Schritt Checkliste</div>
+      <div class="subtitle">Von Null bis zum ersten automatischen Post.</div>
+    </div>
+    <div class="badge">Checkliste</div>
+  </div>
+
+  <!-- Phase 1 -->
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num">1</div>
+      <div>
+        <div class="phase-label">Phase 1</div>
+        <div class="phase-title">Accounts anlegen</div>
+      </div>
+    </div>
+    <ul class="checklist">
+      <li>
+        <div class="checkbox"></div>
+        <span>Make.com Account erstellen <span class="url">make.com</span> — kostenlos</span>
+      </li>
+      <li>
+        <div class="checkbox"></div>
+        <span>fal.ai Account erstellen + API Key notieren <span class="url">fal.ai</span></span>
+      </li>
+      <li>
+        <div class="checkbox"></div>
+        <span>Creatomate Account erstellen + API Key notieren <span class="url">creatomate.com</span> — ab 29 $/Monat</span>
+      </li>
+      <li>
+        <div class="checkbox"></div>
+        <span>Instagram auf Business umstellen: Einstellungen → Konto → Business</span>
+      </li>
+      <li>
+        <div class="checkbox"></div>
+        <span>GitHub Account erstellen <span class="url">github.com</span> — kostenlos</span>
+      </li>
+    </ul>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Phase 2 -->
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num">2</div>
+      <div>
+        <div class="phase-label">Phase 2</div>
+        <div class="phase-title">GitHub einrichten</div>
+      </div>
+    </div>
+    <ul class="checklist">
+      <li>
+        <div class="checkbox"></div>
+        <span>Neues öffentliches Repository anlegen — Name: <code>instagram-autopilot</code>, Public</span>
+      </li>
+      <li>
+        <div class="checkbox"></div>
+        <span>Musik-Ordner <code>music/</code> anlegen + MP3 hochladen</span>
+      </li>
+      <li>
+        <div class="checkbox"></div>
+        <span>URL notieren: <span class="url">https://raw.githubusercontent.com/USERNAME/instagram-autopilot/master/music/dateiname.mp3</span></span>
+      </li>
+    </ul>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Phase 3 -->
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num">3</div>
+      <div>
+        <div class="phase-label">Phase 3</div>
+        <div class="phase-title">Creatomate Template anlegen</div>
+      </div>
+    </div>
+    <ul class="checklist">
+      <li>
+        <div class="checkbox"></div>
+        <span>app.creatomate.com → Templates → New Template → "Start from JSON" → Inhalt von <code>creatomate-template.json</code> einfügen</span>
+      </li>
+      <li>
+        <div class="checkbox"></div>
+        <span>Musik-URL im JSON auf eigene GitHub-URL anpassen</span>
+      </li>
+      <li>
+        <div class="checkbox"></div>
+        <span>Template speichern → Template-ID aus der Browser-URL notieren</span>
+      </li>
+    </ul>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Phase 4 -->
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num">4</div>
+      <div>
+        <div class="phase-label">Phase 4</div>
+        <div class="phase-title">Make.com einrichten</div>
+      </div>
+    </div>
+    <ul class="checklist">
+      <li>
+        <div class="checkbox"></div>
+        <span>Blueprint importieren: Scenarios → neues Szenario → … → "Import Blueprint" → <code>make-blueprint.json</code> hochladen</span>
+      </li>
+      <li>
+        <div class="checkbox"></div>
+        <span>fal.ai Verbindung einrichten (API Key eintragen)</span>
+      </li>
+      <li>
+        <div class="checkbox"></div>
+        <span>Creatomate Verbindung einrichten (API Key eintragen)</span>
+      </li>
+      <li>
+        <div class="checkbox"></div>
+        <span>Instagram Business Account verbinden</span>
+      </li>
+      <li>
+        <div class="checkbox"></div>
+        <span>Im Creatomate-Modul (Modul 20): <code>DEINE-TEMPLATE-ID</code> durch eigene ID ersetzen</span>
+      </li>
+      <li>
+        <div class="checkbox"></div>
+        <span>Szenario-Toggle auf aktiv (blau) stellen</span>
+      </li>
+      <li>
+        <div class="checkbox"></div>
+        <span>Webhook-URL kopieren und notieren</span>
+      </li>
+    </ul>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Phase 5 -->
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num">5</div>
+      <div>
+        <div class="phase-label">Phase 5</div>
+        <div class="phase-title">Skript und Plan einrichten</div>
+      </div>
+    </div>
+    <ul class="checklist">
+      <li>
+        <div class="checkbox"></div>
+        <span>Ordner anlegen, z. B. <span class="url">C:\Instagram-Autopilot\</span></span>
+      </li>
+      <li>
+        <div class="checkbox"></div>
+        <span><code>post-trigger-VORLAGE.ps1</code> und <code>contentplan_vorlage.csv</code> in den Ordner kopieren</span>
+      </li>
+      <li>
+        <div class="checkbox"></div>
+        <span><code>post-trigger-VORLAGE.ps1</code> öffnen — die 3 Werte oben eintragen: CSV-Pfad, Webhook-URL, Log-Pfad</span>
+      </li>
+      <li>
+        <div class="checkbox"></div>
+        <span>Contentplan per KI erstellen (siehe <code>contentplan-per-ki.html</code>) und in CSV eintragen</span>
+      </li>
+      <li>
+        <div class="checkbox"></div>
+        <span>Windows Task Scheduler: täglich 17:55 Uhr, Programm <code>powershell.exe</code>, Argument: <span class="url">-ExecutionPolicy Bypass -File "C:\PFAD\post-trigger-VORLAGE.ps1"</span></span>
+      </li>
+    </ul>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Phase 6 -->
+  <div class="phase">
+    <div class="phase-header">
+      <div class="phase-num">6</div>
+      <div>
+        <div class="phase-label">Phase 6</div>
+        <div class="phase-title">Testen</div>
+      </div>
+    </div>
+    <ul class="checklist">
+      <li>
+        <div class="checkbox"></div>
+        <span>PowerShell öffnen → Skript manuell ausführen</span>
+      </li>
+      <li>
+        <div class="checkbox"></div>
+        <span>In Make.com prüfen, ob Webhook angekommen ist</span>
+      </li>
+      <li>
+        <div class="checkbox"></div>
+        <span>In Creatomate prüfen, ob Render läuft (2–4 Minuten)</span>
+      </li>
+      <li>
+        <div class="checkbox"></div>
+        <span>Auf Instagram prüfen, ob Reel erschienen ist</span>
+      </li>
+      <li>
+        <div class="checkbox"></div>
+        <span><strong>Fertig — läuft ab jetzt täglich automatisch.</strong></span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <span>Instagram Autopilot System · Checkliste</span>
+    <span>Stand Mai 2026</span>
+  </div>
+
+</body>
+</html>

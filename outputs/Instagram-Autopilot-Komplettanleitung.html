@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Reel Autopilot — Deine Anleitung</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f5f5; color: #1a1a1a; font-size: 16px; line-height: 1.7; }
+
+    .header { background: #111; color: #fff; padding: 40px 24px; text-align: center; }
+    .header .badge { display: inline-block; background: rgba(249,115,22,0.15); border: 1px solid rgba(249,115,22,0.3); color: #f97316; font-size: 13px; padding: 5px 14px; border-radius: 999px; margin-bottom: 16px; }
+    .header h1 { font-size: 28px; font-weight: 800; margin-bottom: 8px; }
+    .header h1 span { color: #f97316; }
+    .header p { color: #999; font-size: 15px; }
+
+    .container { max-width: 720px; margin: 0 auto; padding: 32px 20px 80px; }
+
+    .versprechen { background: #fff; border-radius: 14px; border: 2px solid #f97316; padding: 28px; margin-bottom: 32px; text-align: center; }
+    .versprechen h2 { font-size: 20px; font-weight: 800; margin-bottom: 10px; }
+    .versprechen p { color: #555; font-size: 15px; }
+
+    .kosten-box { background: #fff; border-radius: 14px; border: 1px solid #e5e5e5; padding: 24px; margin-bottom: 32px; }
+    .kosten-box h3 { font-size: 16px; font-weight: 700; margin-bottom: 14px; }
+    .kosten-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #f3f4f6; font-size: 15px; }
+    .kosten-row:last-child { border-bottom: none; font-weight: 700; }
+    .kosten-row span:last-child { color: #f97316; font-weight: 600; }
+    .kosten-hinweis { color: #888; font-size: 13px; margin-top: 12px; }
+
+    .schritt { background: #fff; border-radius: 14px; border: 1px solid #e5e5e5; margin-bottom: 20px; overflow: hidden; }
+    .schritt-header { background: #111; color: #fff; padding: 18px 24px; display: flex; align-items: center; gap: 16px; }
+    .schritt-num { background: #f97316; color: #fff; font-weight: 800; font-size: 16px; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .schritt-header h2 { font-size: 17px; font-weight: 700; }
+    .schritt-body { padding: 24px; }
+    .schritt-body p { color: #444; margin-bottom: 16px; }
+    .schritt-body ol { padding-left: 20px; }
+    .schritt-body ol li { margin-bottom: 10px; color: #333; }
+    .schritt-body ol li strong { color: #111; }
+
+    .claude-box { background: #f0fdf4; border: 1px solid #86efac; border-radius: 10px; padding: 18px 20px; margin: 16px 0; }
+    .claude-box .label { font-size: 12px; font-weight: 700; color: #16a34a; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .claude-box .prompt { background: #fff; border: 1px solid #d1fae5; border-radius: 8px; padding: 14px; font-size: 14px; color: #333; line-height: 1.6; font-style: italic; }
+
+    .info { background: #fff8f3; border: 1px solid #fed7aa; border-radius: 10px; padding: 16px 18px; margin: 16px 0; font-size: 14px; color: #555; }
+    .info strong { color: #f97316; }
+
+    .tipp { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 16px 18px; margin: 16px 0; font-size: 14px; color: #555; }
+    .tipp strong { color: #2563eb; }
+
+    .erklaerung { background: #fafafa; border-left: 3px solid #d1d5db; padding: 14px 18px; margin: 12px 0; border-radius: 0 8px 8px 0; }
+    .erklaerung .was { font-size: 12px; font-weight: 700; color: #999; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .erklaerung p { font-size: 14px; color: #555; margin: 0; }
+
+    .checkliste { list-style: none; }
+    .checkliste li { display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid #f3f4f6; font-size: 15px; color: #333; }
+    .checkliste li:last-child { border-bottom: none; }
+    .checkliste li input { width: 20px; height: 20px; accent-color: #f97316; flex-shrink: 0; margin-top: 2px; cursor: pointer; }
+
+    .fertig { background: linear-gradient(135deg, #111, #1a1a1a); border-radius: 14px; padding: 40px 24px; text-align: center; margin-top: 32px; }
+    .fertig h2 { color: #fff; font-size: 24px; margin-bottom: 12px; }
+    .fertig p { color: #999; font-size: 15px; }
+    .fertig .emoji { font-size: 48px; margin-bottom: 16px; }
+
+    footer { text-align: center; color: #aaa; font-size: 13px; padding: 24px; }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">Deine Schritt-für-Schritt Anleitung</div>
+  <h1>Instagram Reel <span>Autopilot</span></h1>
+  <p>Einmal einrichten · Dann läuft alles von selbst</p>
+</div>
+
+<div class="container">
+
+  <!-- VERSPRECHEN -->
+  <div class="versprechen">
+    <h2>Du musst kein Techniker sein.</h2>
+    <p>Claude Code übernimmt die komplette technische Einrichtung für dich. Du kopierst einen Prompt, beantwortest ein paar Fragen — Claude erledigt den Rest. Diese Anleitung zeigt dir genau was du wann tun musst.</p>
+  </div>
+
+  <!-- SUPPORT -->
+  <div class="kosten-box" style="border-left: 4px solid #f97316;">
+    <h3>🆘 Wenn du nicht weiterkommst</h3>
+
+    <p style="margin-bottom:16px; color:#444;">Bevor du jemanden fragst — frag zuerst Claude Code. Er kennt das System, weiß wie es funktioniert und erklärt dir jeden Schritt auf Deutsch. Das spart dir Zeit und du bekommst die Antwort sofort.</p>
+
+    <div class="info" style="margin-bottom:16px;">
+      <strong>Wichtig zu wissen:</strong> Claude Code ist manchmal zurückhaltend — er wartet darauf, dass du ihn forderst. Hab keine Scheu. Frag nach. Sag ihm wenn du etwas nicht verstehst. Bitte ihn es einfacher zu erklären. Er erklärt alles auch für absolute Einsteiger — ohne Fachwörter, ohne Ungeduld, so oft du willst. Du kannst nichts falsch machen.
+    </div>
+
+    <div class="claude-box" style="margin-bottom:20px;">
+      <div class="label">💬 So fragst du Claude Code bei Problemen</div>
+      <div class="prompt">Ich habe ein Problem bei Schritt [NUMMER]: [Beschreibe was du siehst oder was nicht funktioniert]. Erkläre es mir bitte so als wäre ich ein kompletter Anfänger.</div>
+    </div>
+
+    <div class="kosten-row"><span>📧 E-Mail Support</span><span style="color:#333; font-weight:400;">info@ansto-finaffairs.com · Antwort binnen 48h</span></div>
+    <div class="kosten-row" style="border-bottom:none;"><span>👥 Käufer-Community</span><span style="color:#333; font-weight:400;"><a href="https://t.me/instagram_autopilot_system" style="color:#f97316;">Telegram-Kanal beitreten →</a></span></div>
+  </div>
+
+  <!-- KOSTEN -->
+  <div class="kosten-box">
+    <h3>💰 Was das System laufend kostet — volle Transparenz</h3>
+
+    <div class="kosten-row"><span>Claude Pro</span><span>ab 15 €/Monat</span></div>
+    <div class="kosten-row"><span>Blotato (Video · Captions · Voiceover · Publishing)</span><span><a href="https://blotato.com/?ref=andreas7i" style="color:#f97316; text-decoration:none;">ca. 26€/Monat →</a></span></div>
+    <div class="kosten-row"><span>GitHub</span><span>kostenlos</span></div>
+
+    <p class="kosten-hinweis">Zum Vergleich: Ein Social Media Manager kostet ab 500 € pro Monat.</p>
+  </div>
+
+  <!-- SCHRITT 1 -->
+  <div class="schritt">
+    <div class="schritt-header">
+      <div class="schritt-num">1</div>
+      <h2>Accounts einrichten (einmalig · ca. 20 Min.)</h2>
+    </div>
+    <div class="schritt-body">
+      <p>Diese drei Konten brauchst du — sonst nichts:</p>
+
+      <ul class="checkliste">
+        <li><input type="checkbox"> <span><strong>Claude Pro</strong> — auf <a href="https://claude.ai/upgrade" style="color:#f97316;">claude.ai/upgrade registrieren →</a> · ab 15 €/Monat · Pflicht für Claude Code</span></li>
+        <li><input type="checkbox"> <span><strong>Blotato</strong> — auf <a href="https://blotato.com/?ref=andreas7i" style="color:#f97316;">blotato.com registrieren →</a> · ca. 26€/Monat · übernimmt Video, Captions, Voiceover und Publishing in einem</span></li>
+        <li><input type="checkbox"> <span><strong>GitHub</strong> — auf <a href="https://github.com" style="color:#f97316;">github.com registrieren →</a> · kostenlos · damit das System läuft wenn dein PC aus ist</span></li>
+        <li><input type="checkbox"> <span><strong>Instagram Business Account</strong> aktiv? In den Instagram-Einstellungen unter "Konto" → "Zu Professional Account wechseln"</span></li>
+      </ul>
+
+      <div class="tipp"><strong>💡 Tipp:</strong> Blotato ersetzt alle anderen Tools komplett — kein fal.ai, kein Creatomate, kein Make.com nötig. Ein Tool, alles drin.</div>
+    </div>
+  </div>
+
+  <!-- SCHRITT 2 -->
+  <div class="schritt">
+    <div class="schritt-header">
+      <div class="schritt-num">2</div>
+      <h2>Claude Code installieren (einmalig · ca. 10 Min.)</h2>
+    </div>
+    <div class="schritt-body">
+      <ol>
+        <li>Gehe auf <strong>claude.ai/download</strong></li>
+        <li>Claude Code herunterladen und installieren</li>
+        <li>Mit deinem Claude Pro Account einloggen</li>
+      </ol>
+      <div class="tipp"><strong>💡 Tipp:</strong> Claude Code ist wie ein sehr intelligenter Assistent, dem du auf Deutsch schreiben kannst was du brauchst — er erledigt dann alles für dich.</div>
+    </div>
+  </div>
+
+  <!-- SCHRITT 3 -->
+  <div class="schritt">
+    <div class="schritt-header">
+      <div class="schritt-num">3</div>
+      <h2>GitHub einrichten und mit Claude Code verbinden (ca. 15 Min.)</h2>
+    </div>
+    <div class="schritt-body">
+      <p>GitHub ist dein kostenloser Speicherort in der Cloud — und die Voraussetzung dafür, dass dein System auch läuft wenn dein PC aus ist.</p>
+
+      <div class="erklaerung">
+        <div class="was">Was ist GitHub?</div>
+        <p>Stell dir GitHub wie einen USB-Stick in der Cloud vor — deine Dateien sind sicher gespeichert und das System kann von dort aus täglich automatisch starten.</p>
+      </div>
+
+      <ol>
+        <li>Gehe auf <strong>github.com</strong> und erstelle einen kostenlosen Account</li>
+        <li>Öffne Claude Code</li>
+        <li>Kopiere den folgenden Text und füge ihn in Claude Code ein:</li>
+      </ol>
+
+      <div class="claude-box">
+        <div class="label">✂️ Diesen Text in Claude Code einfügen</div>
+        <div class="prompt">Verbinde meinen Claude Code Workspace mit GitHub. Ich habe gerade einen neuen GitHub Account erstellt. Mein Benutzername ist: [DEIN GITHUB BENUTZERNAME]. Richte alles ein damit meine Dateien dort gespeichert werden.</div>
+      </div>
+
+      <div class="tipp"><strong>💡 Tipp:</strong> Claude Code führt dich durch die Verbindung — du musst nichts selbst eintippen oder konfigurieren.</div>
+    </div>
+  </div>
+
+  <!-- SCHRITT 4 -->
+  <div class="schritt">
+    <div class="schritt-header">
+      <div class="schritt-num">4</div>
+      <h2>System aufbauen mit Claude Code (ca. 30 Min.)</h2>
+    </div>
+    <div class="schritt-body">
+      <p>Jetzt kommt der wichtigste Schritt — aber du musst nichts selbst programmieren. Kopiere einfach den folgenden Text und füge ihn in Claude Code ein:</p>
+
+      <div class="claude-box">
+        <div class="label">✂️ Diesen Text kopieren und in Claude Code einfügen</div>
+        <div class="prompt">
+          Ich möchte ein vollautomatisches Instagram-Posting-System aufbauen mit Blotato. Bitte richte alles für mich ein.<br><br>
+          Meine Nische: [HIER DEINE NISCHE EINTRAGEN — z.B. "Fitness für Frauen ab 40"]<br>
+          Meine Zielgruppe: [HIER EINTRAGEN — z.B. "Frauen ab 40 die gesund abnehmen wollen"]<br>
+          Mein Ton: [HIER EINTRAGEN — z.B. "motivierend, direkt, ohne Fachjargon"]<br>
+          Posting-Uhrzeit: [HIER EINTRAGEN — z.B. "18:00 Uhr"]<br>
+          Mein Blotato API-Key: [HIER EINTRAGEN — findest du in Blotato unter Settings → API]<br><br>
+          Bitte erstelle: Contentplan CSV für 4 Wochen, PowerShell Skript für Blotato und erkläre mir danach Schritt für Schritt wie ich GitHub Actions einrichte.
+        </div>
+      </div>
+
+      <div class="info"><strong>Was passiert jetzt?</strong> Claude Code erstellt automatisch alle Dateien die du brauchst und führt dich durch die restliche Einrichtung. Folge einfach seinen Anweisungen.</div>
+    </div>
+  </div>
+
+  <!-- SCHRITT 5 -->
+  <div class="schritt">
+    <div class="schritt-header">
+      <div class="schritt-num">5</div>
+      <h2>Blotato mit Instagram verbinden (ca. 10 Min.)</h2>
+    </div>
+    <div class="schritt-body">
+      <p>Damit Blotato automatisch auf Instagram posten kann, muss dein Account einmal verbunden werden. Das machst du direkt in Blotato:</p>
+
+      <ol>
+        <li>Gehe auf <strong>my.blotato.com</strong> und logge dich ein</li>
+        <li>Gehe zu <strong>Settings → Social Accounts</strong></li>
+        <li>Klicke auf <strong>Instagram</strong> und verbinde deinen Business Account</li>
+      </ol>
+
+      <div class="erklaerung">
+        <div class="was">Was macht Blotato?</div>
+        <p>Blotato generiert aus deinem Prompt automatisch ein fertiges Video — mit KI-Bildern, Voiceover, eingeblendeten Untertiteln und postet es direkt auf Instagram. Einmal verbunden, läuft alles automatisch.</p>
+      </div>
+
+      <div class="claude-box">
+        <div class="label">💬 Claude Code fragen wenn du nicht weiterkommst</div>
+        <div class="prompt">Ich bin bei Blotato und komme nicht weiter. Ich sehe: [beschreibe was du siehst]. Was soll ich jetzt tun?</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCHRITT 6 -->
+  <div class="schritt">
+    <div class="schritt-header">
+      <div class="schritt-num">6</div>
+      <h2>Automatischen Timer einrichten (ca. 15 Min.)</h2>
+    </div>
+    <div class="schritt-body">
+      <p>GitHub Actions startet dein System täglich zur eingestellten Uhrzeit — komplett in der Cloud, dein PC kann aus sein.</p>
+
+      <div class="erklaerung">
+        <div class="was">GitHub Actions (empfohlen)</div>
+        <p>Läuft komplett in der Cloud. Dein PC kann aus sein — der Post erscheint trotzdem pünktlich. Kostenlos. Das ist die professionelle Lösung.</p>
+      </div>
+
+      <div class="claude-box">
+        <div class="label">💬 Claude Code fragen</div>
+        <div class="prompt">Richte für mich GitHub Actions ein, damit mein Instagram Autopilot täglich um [UHRZEIT] automatisch startet — auch wenn mein PC aus ist.</div>
+      </div>
+
+      <div class="info"><strong>Unser Tipp:</strong> Einmal einrichten — läuft dann für immer, egal ob dein PC an oder aus ist.</div>
+    </div>
+  </div>
+
+  <!-- SCHRITT 7 -->
+  <div class="schritt">
+    <div class="schritt-header">
+      <div class="schritt-num">7</div>
+      <h2>Ersten Post testen ✅</h2>
+    </div>
+    <div class="schritt-body">
+      <p>Bevor das System im Autopilot läuft, testen wir einmal gemeinsam:</p>
+
+      <div class="claude-box">
+        <div class="label">💬 Claude Code fragen</div>
+        <div class="prompt">Das System ist eingerichtet. Hilf mir jetzt einen Testlauf zu machen — was muss ich prüfen damit ich sicher bin dass alles funktioniert?</div>
+      </div>
+
+      <ul class="checkliste" style="margin-top:16px;">
+        <li><input type="checkbox"> <span>Testlauf gestartet</span></li>
+        <li><input type="checkbox"> <span>Blotato hat das Video generiert</span></li>
+        <li><input type="checkbox"> <span>Post ist auf Instagram erschienen ✅</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SCHRITT 8 -->
+  <div class="schritt">
+    <div class="schritt-header">
+      <div class="schritt-num">8</div>
+      <h2>Contentplan befüllen — das war's</h2>
+    </div>
+    <div class="schritt-body">
+      <p>Ab jetzt läuft alles automatisch. Deine einzige Aufgabe: einmal pro Woche oder Monat den Contentplan mit neuen Posts befüllen. Auch das erledigt Claude Code für dich:</p>
+
+      <div class="claude-box">
+        <div class="label">💬 Claude Code fragen</div>
+        <div class="prompt">Erstelle mir neue Posts für die nächsten 2 Wochen. Meine Nische ist [NISCHE], mein Ton ist [TON]. Füge sie direkt in meinen Contentplan ein.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FERTIG -->
+  <div class="fertig">
+    <div class="emoji">🚀</div>
+    <h2>Das System läuft.</h2>
+    <p>Du hast jetzt ein vollautomatisches Instagram-Posting-System. Jeden Tag erscheint automatisch ein neuer Post — ohne dein Zutun.</p>
+  </div>
+
+</div>
+
+<footer>Instagram Reel Autopilot · Erstellt Mai 2026 · Bei Fragen: Claude Code fragen</footer>
+
+</body>
+</html>

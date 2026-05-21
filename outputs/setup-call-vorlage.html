@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Reel Autopilot — Setup Call</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f5f5; color: #1a1a1a; }
+
+    .header { background: #111; color: #fff; padding: 32px 40px; display: flex; justify-content: space-between; align-items: center; }
+    .header h1 { font-size: 22px; font-weight: 800; }
+    .header h1 span { color: #f97316; }
+    .header p { color: #888; font-size: 13px; margin-top: 4px; }
+    .header input { background: rgba(249,115,22,0.1); border: 1px solid rgba(249,115,22,0.4); color: #f97316; font-size: 13px; font-weight: 600; padding: 6px 14px; border-radius: 999px; outline: none; width: 200px; }
+    .header input::placeholder { color: rgba(249,115,22,0.5); }
+
+    .container { max-width: 860px; margin: 32px auto; padding: 0 24px 60px; }
+
+    .section { background: #fff; border-radius: 12px; border: 1px solid #e5e5e5; margin-bottom: 20px; overflow: hidden; }
+    .section-header { background: #111; color: #fff; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; }
+    .section-header h2 { font-size: 15px; font-weight: 700; }
+    .section-header .time { color: #f97316; font-size: 13px; font-weight: 600; }
+    .section-body { padding: 24px; }
+
+    .field { margin-bottom: 16px; }
+    .field label { display: block; font-size: 12px; font-weight: 600; color: #888; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .field input[type="text"] { width: 100%; border: 1.5px solid #e5e5e5; border-radius: 8px; padding: 9px 12px; font-size: 14px; font-family: inherit; color: #1a1a1a; outline: none; transition: border 0.2s; }
+    .field input[type="text"]:focus { border-color: #f97316; }
+    .field textarea { width: 100%; border: 1.5px solid #e5e5e5; border-radius: 8px; padding: 9px 12px; font-size: 14px; font-family: inherit; color: #1a1a1a; outline: none; resize: vertical; min-height: 70px; transition: border 0.2s; }
+    .field textarea:focus { border-color: #f97316; }
+
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    .checklist { list-style: none; }
+    .checklist li { display: flex; gap: 12px; align-items: center; padding: 10px 0; border-bottom: 1px solid #f3f4f6; font-size: 15px; color: #333; cursor: pointer; }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist li input[type="checkbox"] { width: 20px; height: 20px; accent-color: #f97316; cursor: pointer; flex-shrink: 0; }
+    .checklist li.done { color: #aaa; text-decoration: line-through; }
+
+    @media print {
+      body { background: #fff; }
+      .container { margin: 0; padding: 0 16px; }
+      .section { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <h1>Instagram Reel <span>Autopilot</span></h1>
+    <p>Komplett-Service · Setup Call · ca. 90 Minuten</p>
+  </div>
+  <input type="text" placeholder="@instagram_handle">
+</div>
+
+<div class="container">
+
+  <!-- TEIL 1 -->
+  <div class="section">
+    <div class="section-header">
+      <h2>Teil 1 — Informationen aufnehmen</h2>
+      <span class="time">15 Min.</span>
+    </div>
+    <div class="section-body">
+      <div class="grid2">
+        <div class="field"><label>Instagram Account</label><input type="text" placeholder="@"></div>
+        <div class="field"><label>Posting-Uhrzeit</label><input type="text" placeholder="z.B. 18:00 Uhr"></div>
+        <div class="field"><label>Nische</label><input type="text" placeholder=""></div>
+        <div class="field"><label>Ton / Stil</label><input type="text" placeholder="z.B. direkt, motivierend"></div>
+      </div>
+      <div class="field"><label>Zielgruppe</label><input type="text" placeholder=""></div>
+      <div class="field"><label>Themen für Posts</label><textarea placeholder=""></textarea></div>
+      <div class="field"><label>Tabu-Themen</label><input type="text" placeholder=""></div>
+      <div class="grid2">
+        <div class="field"><label>Standard-CTA</label><input type="text" placeholder="z.B. schreib NEUSTART in die Kommentare"></div>
+        <div class="field"><label>Hashtags</label><input type="text" placeholder="#KI #Instagram #Automation"></div>
+        <div class="field"><label>Verhältnis Reels : Fotos</label><input type="text" placeholder="z.B. 5 : 2"></div>
+        <div class="field"><label>Contentplan (Wochen)</label><input type="text" placeholder="z.B. 4 Wochen"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TEIL 2 -->
+  <div class="section">
+    <div class="section-header">
+      <h2>Teil 2 — Accounts einrichten</h2>
+      <span class="time">10 Min.</span>
+    </div>
+    <div class="section-body">
+      <ul class="checklist">
+        <li><input type="checkbox"> Instagram Business Account aktiv</li>
+        <li><input type="checkbox"> fal.ai Account erstellt + mind. 10 USD Guthaben</li>
+        <li><input type="checkbox"> Make.com Account erstellt</li>
+        <li><input type="checkbox"> Creatomate Account erstellt</li>
+        <li><input type="checkbox"> Facebook Developer Account vorhanden</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TEIL 3 -->
+  <div class="section">
+    <div class="section-header">
+      <h2>Teil 3 — Claude Code Setup</h2>
+      <span class="time">20 Min.</span>
+    </div>
+    <div class="section-body">
+      <ul class="checklist">
+        <li><input type="checkbox"> Claude Code geöffnet</li>
+        <li><input type="checkbox"> Setup-Prompt eingefügt — Nische, Zielgruppe, Ton eingetragen</li>
+        <li><input type="checkbox"> Contentplan CSV erstellt und befüllt (mind. 2 Wochen)</li>
+        <li><input type="checkbox"> PowerShell Skript erstellt (post-trigger.ps1)</li>
+        <li><input type="checkbox"> Pfade im Skript geprüft</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TEIL 4 -->
+  <div class="section">
+    <div class="section-header">
+      <h2>Teil 4 — Make.com einrichten</h2>
+      <span class="time">20 Min.</span>
+    </div>
+    <div class="section-body">
+      <ul class="checklist">
+        <li><input type="checkbox"> Blueprint importiert</li>
+        <li><input type="checkbox"> Instagram Business Verbindung hergestellt</li>
+        <li><input type="checkbox"> fal.ai API Key eingetragen (Reel-Pfad + Foto-Pfad)</li>
+        <li><input type="checkbox"> Creatomate API Key + Template ID eingetragen</li>
+        <li><input type="checkbox"> Webhook URL kopiert und ins PowerShell Skript eingetragen</li>
+        <li><input type="checkbox"> Szenario auf ON gestellt</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TEIL 5 -->
+  <div class="section">
+    <div class="section-header">
+      <h2>Teil 5 — Windows Task Scheduler</h2>
+      <span class="time">10 Min.</span>
+    </div>
+    <div class="section-body">
+      <ul class="checklist">
+        <li><input type="checkbox"> Aufgabe angelegt</li>
+        <li><input type="checkbox"> Trigger: täglich zur gewählten Uhrzeit</li>
+        <li><input type="checkbox"> Skript-Pfad korrekt eingetragen</li>
+        <li><input type="checkbox"> ExecutionPolicy Bypass gesetzt</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TEIL 6 -->
+  <div class="section">
+    <div class="section-header">
+      <h2>Teil 6 — Testlauf</h2>
+      <span class="time">10 Min.</span>
+    </div>
+    <div class="section-body">
+      <ul class="checklist">
+        <li><input type="checkbox"> Datum im CSV auf heute gesetzt, Status: geplant</li>
+        <li><input type="checkbox"> Skript manuell gestartet</li>
+        <li><input type="checkbox"> Log geprüft (post-trigger-log.txt)</li>
+        <li><input type="checkbox"> Make.com History geprüft</li>
+        <li><input type="checkbox"> Instagram geprüft — Post erschienen ✅</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TEIL 7 -->
+  <div class="section">
+    <div class="section-header">
+      <h2>Teil 7 — Übergabe</h2>
+      <span class="time">5 Min.</span>
+    </div>
+    <div class="section-body">
+      <ul class="checklist">
+        <li><input type="checkbox"> Kunde weiß wie er den Contentplan befüllt</li>
+        <li><input type="checkbox"> Kunde weiß wo das Log liegt</li>
+        <li><input type="checkbox"> Nächste Schritte erklärt</li>
+      </ul>
+      <div class="field" style="margin-top:16px;"><label>Offene Punkte / Notizen</label>
+        <textarea placeholder=""></textarea>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

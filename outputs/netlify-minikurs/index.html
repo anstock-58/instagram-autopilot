@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raus aus dem Funktionsmodus — Andreas Stock</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:       #0D0D10;
+    --surface:  #16161C;
+    --border:   #2A2A35;
+    --gold:     #C8A96E;
+    --gold-dim: #9E7E4A;
+    --text:     #E8E6E0;
+    --muted:    #8A8880;
+    --red:      #C84A4A;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: #0D0D10;
+    color: #E8E6E0;
+    font-family: 'Georgia', serif;
+    font-size: 17px;
+    line-height: 1.75;
+    overflow-x: hidden;
+  }
+
+  /* SCOPED WRAPPER — erzwingt Dark Theme auch in WordPress */
+  #lp {
+    background: #0D0D10 !important;
+    color: #E8E6E0 !important;
+    font-family: 'Georgia', serif !important;
+    font-size: 17px;
+    line-height: 1.75;
+    overflow-x: hidden;
+    min-height: 100vh;
+    padding-bottom: 80px; /* Platz für Sticky Bar */
+  }
+  #lp * { box-sizing: border-box; }
+  #lp p { margin-bottom: 16px; }
+  #lp p:last-child { margin-bottom: 0; }
+
+  /* NAV */
+  #lp-nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+    padding: 18px 32px;
+    display: flex; justify-content: space-between; align-items: center;
+    transition: background 0.4s, backdrop-filter 0.4s;
+  }
+  #lp-nav.scrolled {
+    background: rgba(13,13,16,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #2A2A35;
+  }
+  .lp-nav-logo { color: #C8A96E; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; font-family: sans-serif; }
+  .lp-nav-cta {
+    background: #C8A96E; color: #0D0D10 !important;
+    padding: 10px 24px; border-radius: 4px;
+    font-size: 13px; font-family: sans-serif; font-weight: 800;
+    text-decoration: none !important; letter-spacing: 0.04em; text-transform: uppercase;
+    transition: opacity 0.2s; white-space: nowrap;
+  }
+  .lp-nav-cta:hover { opacity: 0.85; }
+
+  /* HERO */
+  .lp-hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 120px 24px 100px;
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 100%, rgba(200,169,110,0.08) 0%, transparent 70%),
+      linear-gradient(180deg, #0D0D10 0%, #111118 100%);
+    text-align: center;
+  }
+  .lp-hero-inner { max-width: 720px; margin: 0 auto; }
+
+  .lp-tag {
+    display: inline-block;
+    border: 1px solid #9E7E4A;
+    color: #C8A96E;
+    font-family: sans-serif; font-size: 11px; font-weight: 700;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    padding: 6px 16px; border-radius: 2px;
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: lpFadeUp 0.7s ease forwards 0.2s;
+  }
+
+  #lp h1 {
+    font-size: clamp(36px, 6vw, 62px);
+    font-weight: 400; line-height: 1.15;
+    color: #fff !important;
+    opacity: 0;
+    animation: lpFadeUp 0.8s ease forwards 0.4s;
+    font-family: 'Georgia', serif;
+    margin: 0 0 24px;
+  }
+  #lp h1 em { color: #C8A96E; font-style: normal; }
+
+  #lp h2 {
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: 400; line-height: 1.2;
+    color: #fff !important; margin-bottom: 24px;
+    font-family: 'Georgia', serif;
+  }
+  #lp h2 em { color: #C8A96E; font-style: normal; }
+
+  #lp h3 { font-size: 18px; font-weight: 400; color: #fff !important; margin-bottom: 6px; font-family: 'Georgia', serif; }
+
+  .lp-hero-sub {
+    font-size: clamp(16px, 2.2vw, 19px);
+    color: #8A8880;
+    opacity: 0;
+    animation: lpFadeUp 0.8s ease forwards 0.6s;
+    margin-bottom: 16px;
+  }
+
+  .lp-hero-price {
+    font-family: sans-serif; font-size: 15px;
+    color: #8A8880;
+    opacity: 0;
+    animation: lpFadeUp 0.6s ease forwards 0.75s;
+    margin-bottom: 0;
+  }
+  .lp-hero-price strong { color: #E8E6E0; }
+
+  .lp-hero-btn {
+    display: inline-block; margin-top: 36px;
+    background: #C8A96E; color: #0D0D10 !important;
+    padding: 20px 56px; border-radius: 6px;
+    font-family: sans-serif; font-weight: 800; font-size: 18px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    text-decoration: none !important;
+    transition: transform 0.2s, box-shadow 0.2s;
+    opacity: 0;
+    animation: lpFadeUp 0.7s ease forwards 0.9s;
+    box-shadow: 0 4px 24px rgba(200,169,110,0.3);
+  }
+  .lp-hero-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 36px rgba(200,169,110,0.4); }
+
+  .lp-hero-note {
+    font-family: sans-serif; font-size: 12px; color: #8A8880;
+    opacity: 0;
+    animation: lpFadeUp 0.6s ease forwards 1.05s;
+    margin-top: 12px; margin-bottom: 0;
+  }
+
+  /* SECTIONS */
+  #lp section { padding: 90px 24px; }
+  #lp .lp-container { max-width: 780px; margin: 0 auto; }
+
+  .lp-label {
+    font-family: sans-serif; font-size: 11px; font-weight: 700;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: #C8A96E; margin-bottom: 12px; display: block;
+  }
+
+  #lp p { color: #8A8880; }
+
+  /* PAIN */
+  .lp-pain { background: #16161C !important; border-top: 1px solid #2A2A35; border-bottom: 1px solid #2A2A35; }
+  .lp-pain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; margin-top: 40px; }
+  .lp-pain-item {
+    background: #0D0D10 !important;
+    border: 1px solid #2A2A35; border-radius: 6px;
+    padding: 24px 22px;
+  }
+  .lp-pain-item .lp-icon { font-size: 28px; margin-bottom: 12px; }
+  .lp-pain-item p { font-size: 15px; margin: 0; }
+
+  /* MODULES */
+  .lp-module-section { background: #16161C !important; border-top: 1px solid #2A2A35; border-bottom: 1px solid #2A2A35; }
+  .lp-module-list { margin-top: 44px; display: flex; flex-direction: column; gap: 20px; }
+  .lp-module-item {
+    display: flex; gap: 20px; align-items: flex-start;
+    background: #0D0D10 !important; border: 1px solid #2A2A35; border-radius: 6px;
+    padding: 24px 26px;
+  }
+  .lp-module-num {
+    flex-shrink: 0; width: 44px; height: 44px;
+    border: 1px solid #9E7E4A; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: sans-serif; font-size: 16px; font-weight: 800;
+    color: #C8A96E; margin-top: 2px;
+  }
+
+  /* INCLUDED */
+  .lp-included-list { margin-top: 36px; display: flex; flex-direction: column; gap: 14px; }
+  .lp-included-item {
+    display: flex; gap: 16px; align-items: flex-start;
+    padding: 18px 22px;
+    background: #16161C !important; border: 1px solid #2A2A35; border-radius: 6px;
+  }
+  .lp-check { color: #C8A96E; font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+  .lp-included-item p { font-size: 15px; margin: 0; }
+
+  /* FOR WHO */
+  .lp-for-who { background: #16161C !important; border-top: 1px solid #2A2A35; border-bottom: 1px solid #2A2A35; }
+  .lp-who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 36px; }
+  .lp-who-yes, .lp-who-no {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 16px 18px; border-radius: 6px;
+    background: #0D0D10 !important; border: 1px solid #2A2A35;
+    font-size: 15px; color: #8A8880;
+  }
+  .lp-who-yes span:first-child { color: #5FCF80; font-size: 17px; flex-shrink: 0; }
+  .lp-who-no span:first-child  { color: #C84A4A; font-size: 17px; flex-shrink: 0; }
+
+  /* PRICE */
+  .lp-price-card {
+    max-width: 540px; margin: 48px auto 0;
+    background: #16161C !important; border: 2px solid #9E7E4A; border-radius: 10px;
+    padding: 48px 44px; text-align: center;
+  }
+  .lp-price-title { font-size: 22px; color: #fff !important; margin-bottom: 4px; font-family: Georgia, serif; }
+  .lp-price-sub { font-family: sans-serif; font-size: 13px; color: #8A8880; margin-bottom: 28px; }
+  .lp-price-amount { font-size: 72px; font-weight: 400; color: #C8A96E !important; line-height: 1; margin-bottom: 4px; font-family: Georgia, serif; }
+  .lp-price-tax { font-family: sans-serif; font-size: 13px; color: #8A8880; margin-bottom: 28px; }
+  .lp-price-list { text-align: left; margin-bottom: 32px; display: flex; flex-direction: column; gap: 10px; }
+  .lp-price-list-item { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; color: #8A8880; }
+  .lp-price-list-item span:first-child { color: #C8A96E; flex-shrink: 0; }
+
+  .lp-price-btn {
+    display: block; width: 100%;
+    background: #C8A96E !important; color: #0D0D10 !important;
+    padding: 20px 24px; border-radius: 6px;
+    font-family: sans-serif; font-weight: 800; font-size: 18px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    text-decoration: none !important;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 24px rgba(200,169,110,0.3);
+  }
+  .lp-price-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 36px rgba(200,169,110,0.4); }
+  .lp-price-guarantee { font-family: sans-serif; font-size: 12px; color: #8A8880; margin-top: 14px; }
+
+  /* MID-PAGE CTA */
+  .lp-mid-cta {
+    text-align: center; padding: 60px 24px;
+    background: linear-gradient(135deg, rgba(200,169,110,0.06) 0%, rgba(13,13,16,0) 60%);
+    border-top: 1px solid #2A2A35; border-bottom: 1px solid #2A2A35;
+  }
+  .lp-mid-cta p { font-size: 18px; color: #E8E6E0 !important; margin-bottom: 8px; }
+  .lp-mid-cta-btn {
+    display: inline-block; margin-top: 24px;
+    background: #C8A96E; color: #0D0D10 !important;
+    padding: 18px 52px; border-radius: 6px;
+    font-family: sans-serif; font-weight: 800; font-size: 17px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    text-decoration: none !important;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 24px rgba(200,169,110,0.3);
+  }
+  .lp-mid-cta-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 36px rgba(200,169,110,0.4); }
+
+  /* UPSELL HINT */
+  .lp-upsell {
+    background: rgba(200,169,110,0.05) !important;
+    border: 1px solid rgba(200,169,110,0.2);
+    border-radius: 8px;
+    padding: 32px 36px; margin-top: 60px; text-align: center;
+  }
+  .lp-upsell p { font-size: 16px; color: #8A8880; }
+  .lp-upsell strong { color: #C8A96E; }
+
+  /* FAQ */
+  .lp-faq { background: #16161C !important; border-top: 1px solid #2A2A35; border-bottom: 1px solid #2A2A35; }
+  .lp-faq-list { margin-top: 40px; display: flex; flex-direction: column; gap: 2px; }
+  .lp-faq-item { border-bottom: 1px solid #2A2A35; }
+  .lp-faq-q {
+    width: 100%; background: none !important; border: none; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 0; color: #fff !important; font-size: 16px; font-family: inherit;
+    text-align: left; gap: 16px;
+  }
+  .lp-faq-q .lp-arrow { color: #C8A96E; font-size: 20px; flex-shrink: 0; transition: transform 0.3s; }
+  .lp-faq-q.open .lp-arrow { transform: rotate(45deg); }
+  .lp-faq-a { display: none; padding-bottom: 20px; font-size: 15px; }
+  .lp-faq-a.open { display: block; }
+
+  /* FOOTER */
+  #lp footer {
+    padding: 48px 24px;
+    text-align: center;
+    border-top: 1px solid #2A2A35;
+    font-family: sans-serif; font-size: 13px; color: #8A8880;
+  }
+  #lp footer a { color: #8A8880 !important; text-decoration: underline; }
+
+  /* STICKY BOTTOM BAR */
+  #lp-sticky {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 300;
+    background: #1A1A1F;
+    border-top: 1px solid #2A2A35;
+    padding: 12px 24px;
+    display: flex; align-items: center; justify-content: center; gap: 20px;
+    box-shadow: 0 -4px 30px rgba(0,0,0,0.6);
+  }
+  #lp-sticky .lp-sticky-text {
+    font-family: sans-serif; font-size: 14px; color: #8A8880; white-space: nowrap;
+  }
+  #lp-sticky .lp-sticky-text strong { color: #E8E6E0; }
+  #lp-sticky .lp-sticky-btn {
+    background: #C8A96E; color: #0D0D10 !important;
+    padding: 12px 36px; border-radius: 4px;
+    font-family: sans-serif; font-weight: 800; font-size: 15px;
+    text-decoration: none !important; letter-spacing: 0.04em; text-transform: uppercase;
+    white-space: nowrap; transition: opacity 0.2s;
+  }
+  #lp-sticky .lp-sticky-btn:hover { opacity: 0.9; }
+
+  /* REVEAL */
+  .lp-reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .lp-reveal.visible { opacity: 1; transform: translateY(0); }
+
+  @keyframes lpFadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 640px) {
+    #lp-nav { padding: 14px 20px; }
+    .lp-nav-logo { font-size: 12px; }
+    #lp section { padding: 60px 20px; }
+    .lp-who-grid { grid-template-columns: 1fr; }
+    .lp-price-card { padding: 32px 24px; }
+    .lp-price-amount { font-size: 56px; }
+    .lp-upsell { padding: 24px 20px; }
+    #lp-sticky .lp-sticky-text { display: none; }
+    #lp-sticky .lp-sticky-btn { width: 100%; text-align: center; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .lp-tag, #lp h1, .lp-hero-sub, .lp-hero-price, .lp-hero-btn, .lp-hero-note { animation: none; opacity: 1; }
+    .lp-reveal { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+</head>
+<body>
+<div id="lp">
+
+<!-- NAV -->
+<nav id="lp-nav">
+  <a href="#" class="lp-nav-logo">Andreas Stock</a>
+  <a href="https://sicher-weiterlesen.com/raus-aus-dem-funktionsmodus" class="lp-nav-cta">Jetzt starten — 37 €</a>
+</nav>
+
+<!-- HERO -->
+<section class="lp-hero">
+  <div class="lp-hero-inner">
+    <div class="lp-tag">Minikurs · Sofortiger Zugriff</div>
+    <h1>Du funktionierst.<br>Aber irgendwie<br>reicht es dir nicht mehr.</h1>
+    <p class="lp-hero-sub">Versteh in drei Modulen, warum du im Autopilot steckst — und mach die ersten Schritte raus. Ohne Druck. In deinem Tempo.</p>
+    <p class="lp-hero-price">Einmaliger Zugang · <strong>37 € inkl. MwSt.</strong></p>
+    <a href="https://sicher-weiterlesen.com/raus-aus-dem-funktionsmodus" class="lp-hero-btn">Jetzt Zugang sichern →</a>
+    <p class="lp-hero-note">Sofortiger digitaler Zugriff nach dem Kauf · Keine Kreditkarte ohne Kauf</p>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section class="lp-pain">
+  <div class="lp-container">
+    <span class="lp-label lp-reveal">Das kennst du</span>
+    <h2 class="lp-reveal">Nach außen alles im Griff.<br><em>Innen schon lange nicht mehr.</em></h2>
+    <div class="lp-pain-grid">
+      <div class="lp-pain-item lp-reveal">
+        <div class="lp-icon">⚙️</div>
+        <p>Du erledigst, was ansteht. Aber ein echtes „Ja" dazu fühlst du schon lange nicht mehr.</p>
+      </div>
+      <div class="lp-pain-item lp-reveal">
+        <div class="lp-icon">🔇</div>
+        <p>Stress-Tipps aus dem Internet hast du alle probiert. Sie greifen nicht — weil sie das falsche Problem lösen.</p>
+      </div>
+      <div class="lp-pain-item lp-reveal">
+        <div class="lp-icon">🧱</div>
+        <p>Du weißt, dass sich etwas ändern muss. Aber du hast keine Energie mehr, wieder irgendwo neu anzufangen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMISE -->
+<section>
+  <div class="lp-container">
+    <span class="lp-label lp-reveal">Was dieser Kurs tut</span>
+    <h2 class="lp-reveal">Kein Coaching. Kein Druck.<br><em>Nur Klarheit, wo es anfängt.</em></h2>
+    <p class="lp-reveal">Dieser Kurs erklärt, warum du im Funktionsmodus gelandet bist — und was das mit dir macht. Kein Schönreden, keine Überforderung. Du nimmst mit, was gerade für dich passt, und lässt den Rest.</p>
+    <p class="lp-reveal">Gedacht für Selbstständige, Unternehmer und Führungskräfte ab 50, die nach außen funktionieren und innerlich spüren: So kann es nicht weitergehen.</p>
+  </div>
+</section>
+
+<!-- MODULES -->
+<section class="lp-module-section">
+  <div class="lp-container">
+    <span class="lp-label lp-reveal">Die drei Module</span>
+    <h2 class="lp-reveal">Ein klarer Weg.<br><em>Drei Schritte.</em></h2>
+    <div class="lp-module-list">
+      <div class="lp-module-item lp-reveal">
+        <div class="lp-module-num">1</div>
+        <div>
+          <h3>Den Funktionsmodus verstehen</h3>
+          <p>Was er ist, woher er kommt — und warum klassische Stress-Bewältigung daran scheitert.</p>
+        </div>
+      </div>
+      <div class="lp-module-item lp-reveal">
+        <div class="lp-module-num">2</div>
+        <div>
+          <h3>Die Mechanismen dahinter</h3>
+          <p>Was in dir passiert, wenn du dauerhaft funktionierst. Warum du dich selbst dabei verlierst — und es trotzdem immer weitergeht.</p>
+        </div>
+      </div>
+      <div class="lp-module-item lp-reveal">
+        <div class="lp-module-num">3</div>
+        <div>
+          <h3>Vom Funktionieren zum Fühlen</h3>
+          <p>Erste konkrete Schritte raus aus dem Autopilot. Kein großer Umbau — nur das, was jetzt möglich ist.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MID-PAGE CTA -->
+<div class="lp-mid-cta lp-reveal">
+  <p><strong style="color:#C8A96E;">37 €</strong> — einmalig, sofortiger Zugriff, kein Abo.</p>
+  <p style="font-size:15px;">Drei Module. In deinem Tempo. Kein Druck.</p>
+  <a href="https://sicher-weiterlesen.com/raus-aus-dem-funktionsmodus" class="lp-mid-cta-btn">Jetzt Zugang sichern →</a>
+</div>
+
+<!-- INCLUDED -->
+<section>
+  <div class="lp-container">
+    <span class="lp-label lp-reveal">Was du bekommst</span>
+    <h2 class="lp-reveal">Kurz. Konkret. <em>Sofort nutzbar.</em></h2>
+    <div class="lp-included-list">
+      <div class="lp-included-item lp-reveal">
+        <span class="lp-check">▸</span>
+        <p>Alle Video-Lektionen — kurz, klar, ohne Füller</p>
+      </div>
+      <div class="lp-included-item lp-reveal">
+        <span class="lp-check">▸</span>
+        <p>Kurze Zusammenfassungen und Mini-Aufgaben direkt in den Lektionen</p>
+      </div>
+      <div class="lp-included-item lp-reveal">
+        <span class="lp-check">▸</span>
+        <p>Praktische Impulse, die du sofort umsetzen kannst — ohne Vorbereitung</p>
+      </div>
+      <div class="lp-included-item lp-reveal">
+        <span class="lp-check">▸</span>
+        <p>Sofortiger Zugriff nach dem Kauf, dauerhaft im Mitgliederbereich</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR WHO -->
+<section class="lp-for-who">
+  <div class="lp-container">
+    <span class="lp-label lp-reveal">Für wen — und für wen nicht</span>
+    <h2 class="lp-reveal">Passt dieser Kurs<br><em>zu dir?</em></h2>
+    <div class="lp-who-grid">
+      <div class="lp-who-yes lp-reveal"><span>✓</span><span>Du funktionierst nach außen, aber innerlich spürst du Leere oder Druck</span></div>
+      <div class="lp-who-no  lp-reveal"><span>✗</span><span>Du erwartest Coaching, Community oder Live-Betreuung</span></div>
+      <div class="lp-who-yes lp-reveal"><span>✓</span><span>Du bist 50+, selbstständig oder in Führung und willst endlich verstehen, was mit dir passiert</span></div>
+      <div class="lp-who-no  lp-reveal"><span>✗</span><span>Du willst eine schnelle Technik-Sammlung ohne Hintergrundverständnis</span></div>
+      <div class="lp-who-yes lp-reveal"><span>✓</span><span>Du willst in deinem Tempo, ohne Druck und ohne komplizierte Methoden</span></div>
+      <div class="lp-who-no  lp-reveal"><span>✗</span><span>Du suchst eine umfassende 1:1-Transformation — dafür gibt es den Hauptkurs</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section>
+  <div class="lp-container">
+    <span class="lp-label lp-reveal" style="text-align:center; display:block;">Dein Zugang</span>
+    <h2 class="lp-reveal" style="text-align:center;">Einmal kaufen.<br><em>Dauerhaft nutzen.</em></h2>
+    <div class="lp-price-card lp-reveal">
+      <p class="lp-price-title">Raus aus dem Funktionsmodus</p>
+      <p class="lp-price-sub">Minikurs · Sofortzugang · Eigenes Tempo</p>
+      <div class="lp-price-amount">37 €</div>
+      <p class="lp-price-tax">inkl. MwSt. · einmalig</p>
+      <div class="lp-price-list">
+        <div class="lp-price-list-item"><span>▸</span><span>Drei Module, kurze Lektionen</span></div>
+        <div class="lp-price-list-item"><span>▸</span><span>Mini-Aufgaben und Zusammenfassungen</span></div>
+        <div class="lp-price-list-item"><span>▸</span><span>Sofortiger Zugriff, dauerhaft verfügbar</span></div>
+        <div class="lp-price-list-item"><span>▸</span><span>Kein Abo, keine versteckten Kosten</span></div>
+        <div class="lp-price-list-item"><span>▸</span><span>Support: info@ansto-finaffairs.com</span></div>
+      </div>
+      <a href="https://sicher-weiterlesen.com/raus-aus-dem-funktionsmodus" class="lp-price-btn">Jetzt Zugang sichern →</a>
+      <p class="lp-price-guarantee">Digitales Produkt · Sofortiger Zugriff nach dem Kauf</p>
+    </div>
+    <div class="lp-upsell lp-reveal">
+      <p>Wenn du beim Anschauen merkst: <strong>Genau das trifft mich — ich will tiefer ran</strong>, gibt es eine nächste Stufe.<br>Den Hinweis bekommst du im Kurs an der richtigen Stelle. Nicht am Anfang.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="lp-faq">
+  <div class="lp-container">
+    <span class="lp-label lp-reveal">Häufige Fragen</span>
+    <h2 class="lp-reveal">Was du noch<br><em>wissen willst</em></h2>
+    <div class="lp-faq-list lp-reveal">
+      <div class="lp-faq-item">
+        <button class="lp-faq-q">Wie lange habe ich Zugriff?<span class="lp-arrow">+</span></button>
+        <div class="lp-faq-a"><p>Dauerhaft. Nach dem Kauf gehört dir der Zugang — ohne Ablaufdatum.</p></div>
+      </div>
+      <div class="lp-faq-item">
+        <button class="lp-faq-q">Wie lange dauert der Kurs?<span class="lp-arrow">+</span></button>
+        <div class="lp-faq-a"><p>Der Kurs ist bewusst kurz gehalten. Drei Module mit kompakten Lektionen — du kannst ihn an einem Wochenende durcharbeiten oder in deinem eigenen Tempo über mehrere Tage verteilen.</p></div>
+      </div>
+      <div class="lp-faq-item">
+        <button class="lp-faq-q">Brauche ich Vorkenntnisse?<span class="lp-arrow">+</span></button>
+        <div class="lp-faq-a"><p>Nein. Der Kurs ist als Einstieg konzipiert. Kein Vorwissen nötig, keine Vorbereitung.</p></div>
+      </div>
+      <div class="lp-faq-item">
+        <button class="lp-faq-q">Was ist der Unterschied zum Hauptkurs „Neustart im Kopf"?<span class="lp-arrow">+</span></button>
+        <div class="lp-faq-a"><p>Dieser Minikurs ist der Einstieg — verstehen, wo du stehst, erste Entlastung. „Neustart im Kopf" baut darauf auf: mehr Tiefe, mehr Struktur, mehr Umsetzung im Alltag. Der richtige Zeitpunkt dafür ergibt sich im Kurs selbst.</p></div>
+      </div>
+      <div class="lp-faq-item">
+        <button class="lp-faq-q">Gibt es Live-Calls oder eine Community?<span class="lp-arrow">+</span></button>
+        <div class="lp-faq-a"><p>Nein. Kein Coaching, keine Community, keine Live-Termine. Du lernst unabhängig, in deinem Tempo — das ist bewusst so gedacht.</p></div>
+      </div>
+      <div class="lp-faq-item">
+        <button class="lp-faq-q">Wie läuft der Kauf ab?<span class="lp-arrow">+</span></button>
+        <div class="lp-faq-a"><p>Nach dem Kauf bekommst du sofort Zugang zum digitalen Mitgliederbereich. Bei technischen Fragen: info@ansto-finaffairs.com.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Andreas Stock · <a href="mailto:info@ansto-finaffairs.com">info@ansto-finaffairs.com</a></p>
+  <p style="margin-top: 8px;"><a href="#">Impressum</a> · <a href="#">Datenschutz</a></p>
+</footer>
+
+</div><!-- #lp -->
+
+<!-- STICKY CTA BAR — immer sichtbar, 100% inline -->
+<div id="lp-sticky">
+  <span class="lp-sticky-text">Minikurs · <strong>37 € einmalig</strong> · Sofortzugang</span>
+  <a href="https://sicher-weiterlesen.com/raus-aus-dem-funktionsmodus" class="lp-sticky-btn">Jetzt kaufen →</a>
+</div>
+
+<script>
+  // Nav scroll
+  const lpNav = document.getElementById('lp-nav');
+  if (lpNav) window.addEventListener('scroll', () => {
+    lpNav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Reveal on scroll
+  const lpObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); lpObserver.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.lp-reveal').forEach(el => lpObserver.observe(el));
+
+  // FAQ
+  document.querySelectorAll('.lp-faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isOpen = btn.classList.contains('open');
+      document.querySelectorAll('.lp-faq-q').forEach(b => { b.classList.remove('open'); b.nextElementSibling.classList.remove('open'); });
+      if (!isOpen) { btn.classList.add('open'); btn.nextElementSibling.classList.add('open'); }
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram Autopilot System — Komplettanleitung</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+      line-height: 1.65;
+    }
+
+    /* DECKBLATT */
+    .cover {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px;
+      border-bottom: 3px solid #1a1a1a;
+      page-break-after: always;
+    }
+    .cover .label { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #999; margin-bottom: 30px; }
+    .cover h1 { font-size: 42px; font-weight: 700; line-height: 1.2; margin-bottom: 20px; }
+    .cover .subtitle { font-size: 18px; color: #555; margin-bottom: 50px; max-width: 500px; }
+    .cover .author { font-size: 14px; color: #999; margin-top: auto; padding-top: 60px; border-top: 1px solid #e0e0e0; }
+
+    /* SEITEN */
+    .page {
+      padding: 60px 80px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .page-break { page-break-before: always; padding-top: 60px; }
+
+    h2 {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #999;
+      margin: 40px 0 16px 0;
+    }
+    h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+
+    .section-title {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid #1a1a1a;
+      margin-bottom: 30px;
+    }
+
+    p { font-size: 14px; color: #333; margin-bottom: 12px; }
+
+    .intro-box {
+      border-left: 3px solid #1a1a1a;
+      padding-left: 20px;
+      margin-bottom: 30px;
+    }
+    .intro-box p { font-size: 16px; color: #1a1a1a; }
+
+    /* CHECKLISTE */
+    .phase-label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #fff;
+      background: #1a1a1a;
+      display: inline-block;
+      padding: 5px 12px;
+      border-radius: 3px;
+      margin: 28px 0 14px 0;
+    }
+    .checklist { list-style: none; }
+    .checklist li {
+      display: flex;
+      gap: 14px;
+      padding: 11px 0;
+      border-bottom: 1px solid #f0f0f0;
+      align-items: flex-start;
+    }
+    .checkbox {
+      width: 18px;
+      height: 18px;
+      border: 2px solid #1a1a1a;
+      border-radius: 3px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .check-content h4 { font-size: 14px; font-weight: 700; margin-bottom: 2px; }
+    .check-content p { font-size: 12px; color: #666; margin: 0; }
+
+    /* SCHRITTE */
+    .step {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 24px;
+      align-items: flex-start;
+    }
+    .step-num {
+      background: #1a1a1a;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .step-content h4 { font-size: 15px; font-weight: 700; margin-bottom: 5px; }
+    .step-content p { font-size: 13px; color: #444; margin: 0 0 5px 0; }
+
+    /* BOXEN */
+    .grey-box {
+      background: #f7f7f7;
+      border-radius: 4px;
+      padding: 20px 24px;
+      margin: 12px 0;
+      font-size: 13px;
+      color: #444;
+      line-height: 1.7;
+    }
+    .code-box {
+      background: #1a1a1a;
+      color: #f0f0f0;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      padding: 20px 24px;
+      border-radius: 4px;
+      line-height: 1.7;
+      white-space: pre-wrap;
+      margin: 12px 0;
+    }
+
+    /* TABELLE */
+    table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 12px 0; }
+    th { text-align: left; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #999; padding: 8px 12px; border-bottom: 2px solid #1a1a1a; }
+    td { padding: 10px 12px; border-bottom: 1px solid #f0f0f0; color: #444; vertical-align: top; }
+    td:first-child { font-weight: 700; color: #1a1a1a; white-space: nowrap; }
+
+    /* PROMPT */
+    .prompt-box {
+      border: 2px solid #1a1a1a;
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 12px 0;
+    }
+    .prompt-header {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .prompt-text {
+      padding: 22px 24px;
+      font-size: 13px;
+      line-height: 1.8;
+      white-space: pre-wrap;
+    }
+
+    /* CTA */
+    .cta-box {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 40px;
+      border-radius: 4px;
+      margin-top: 50px;
+      text-align: center;
+    }
+    .cta-box h3 { font-size: 22px; color: #fff; margin-bottom: 12px; }
+    .cta-box p { font-size: 14px; color: #ccc; margin-bottom: 6px; }
+    .cta-box .email { font-size: 16px; color: #fff; font-weight: 700; margin-top: 16px; }
+
+    /* FOOTER */
+    .footer {
+      margin-top: 60px;
+      padding: 20px 0;
+      border-top: 1px solid #e0e0e0;
+      font-size: 11px;
+      color: #bbb;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media print {
+      .cover { min-height: 100vh; }
+      .phase-label, .step-num, .code-box, .cta-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .grey-box { background: #f7f7f7 !important; -webkit-print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- DECKBLATT -->
+<div class="cover page">
+  <div class="label">Andreas Stock · Business & Spirit</div>
+  <h1>Instagram<br>Autopilot<br>System</h1>
+  <div class="subtitle">Täglich automatisch posten mit KI — ohne einen Knopf zu drücken.</div>
+  <p style="font-size:14px;color:#555;">Diese Anleitung führt dich Schritt für Schritt durch alles — von der Einrichtung bis zum ersten automatischen Post. Du bekommst zusätzlich ein technisches Paket mit allen Dateien per E-Mail.</p>
+  <div class="author">
+    Andreas Stock · neustart-im-kopf.de · info@ansto-finaffairs.com<br>
+    Stand Mai 2026
+  </div>
+</div>
+
+<!-- ÜBERBLICK -->
+<div class="page page-break">
+  <div class="section-title">Was du hier hast</div>
+
+  <div class="intro-box">
+    <p>Du schreibst einmal im Monat einen Plan. Das System postet täglich automatisch ein professionelles Video auf Instagram — mit KI-generiertem Bild, Text und Musik. Du drückst keinen Knopf.</p>
+  </div>
+
+  <h2>So funktioniert es</h2>
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-content">
+      <h4>Einmalig einrichten</h4>
+      <p>Du richtest die vier Tools einmalig ein (ca. 2 Stunden). Danach läuft alles automatisch.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-content">
+      <h4>Contentplan per KI erstellen</h4>
+      <p>Einmal im Monat beantwortest du ein paar Fragen — die KI erstellt 30 fertige Posts in 15 Minuten.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-content">
+      <h4>System läuft automatisch</h4>
+      <p>Täglich um 18 Uhr: KI generiert das Video, fügt Text und Musik hinzu, postet auf Instagram. Ohne dich.</p>
+    </div>
+  </div>
+
+  <h2>Was du brauchst</h2>
+  <table>
+    <tr><th>Tool</th><th>Zweck</th><th>Kosten</th></tr>
+    <tr><td>Make.com</td><td>Steuerung der Automation</td><td>Gratis bis 1.000 Ops/Monat</td></tr>
+    <tr><td>fal.ai</td><td>KI-Videogenerierung</td><td>Ca. 0,25 € pro Video</td></tr>
+    <tr><td>Creatomate</td><td>Text-Overlay + Musik</td><td>Ab 29 $/Monat</td></tr>
+    <tr><td>Instagram Business</td><td>Automatisches Posten</td><td>Kostenlos</td></tr>
+    <tr><td>GitHub</td><td>Musik-Hosting</td><td>Kostenlos</td></tr>
+    <tr><td>Windows PC</td><td>Täglich um 17:55 laufen</td><td>—</td></tr>
+  </table>
+</div>
+
+<!-- CHECKLISTE -->
+<div class="page page-break">
+  <div class="section-title">Schritt-für-Schritt Checkliste</div>
+  <p>Arbeite diese Liste von oben nach unten durch. Hake jeden Punkt ab wenn er erledigt ist.</p>
+
+  <div class="phase-label">Phase 1 — Accounts anlegen</div>
+  <ul class="checklist">
+    <li><div class="checkbox"></div><div class="check-content"><h4>Make.com Account erstellen</h4><p>make.com → kostenlos registrieren</p></div></li>
+    <li><div class="checkbox"></div><div class="check-content"><h4>fal.ai Account + API Key</h4><p>fal.ai → registrieren → API Keys → neuen Key erstellen → notieren</p></div></li>
+    <li><div class="checkbox"></div><div class="check-content"><h4>Creatomate Account + API Key</h4><p>creatomate.com → registrieren → API → Key notieren</p></div></li>
+    <li><div class="checkbox"></div><div class="check-content"><h4>Instagram auf Business umstellen</h4><p>Instagram App → Einstellungen → Konto → Zu professionellem Konto wechseln → Business</p></div></li>
+    <li><div class="checkbox"></div><div class="check-content"><h4>GitHub Account erstellen</h4><p>github.com → kostenlos registrieren</p></div></li>
+  </ul>
+
+  <div class="phase-label">Phase 2 — GitHub einrichten</div>
+  <ul class="checklist">
+    <li><div class="checkbox"></div><div class="check-content"><h4>Öffentliches Repository anlegen</h4><p>GitHub → New Repository → Name: instagram-autopilot → Public → erstellen</p></div></li>
+    <li><div class="checkbox"></div><div class="check-content"><h4>Musik hochladen</h4><p>Ordner "music/" anlegen → MP3-Datei hochladen → URL notieren</p></div></li>
+  </ul>
+
+  <div class="phase-label">Phase 3 — Creatomate Template</div>
+  <ul class="checklist">
+    <li><div class="checkbox"></div><div class="check-content"><h4>Template anlegen</h4><p>app.creatomate.com → Templates → New → Start from JSON → Inhalt von creatomate-template.json einfügen</p></div></li>
+    <li><div class="checkbox"></div><div class="check-content"><h4>Musik-URL anpassen + Template-ID notieren</h4><p>Eigene GitHub-URL eintragen → speichern → Template-ID aus Browser-URL notieren</p></div></li>
+  </ul>
+
+  <div class="phase-label">Phase 4 — Make.com einrichten</div>
+  <ul class="checklist">
+    <li><div class="checkbox"></div><div class="check-content"><h4>Blueprint importieren</h4><p>Scenarios → neues Szenario → ... → Import Blueprint → make-blueprint.json hochladen</p></div></li>
+    <li><div class="checkbox"></div><div class="check-content"><h4>Verbindungen einrichten</h4><p>fal.ai, Creatomate und Instagram Business jeweils mit API Key verbinden</p></div></li>
+    <li><div class="checkbox"></div><div class="check-content"><h4>Template-ID eintragen</h4><p>Creatomate-Modul 20 → Body → DEINE-TEMPLATE-ID ersetzen</p></div></li>
+    <li><div class="checkbox"></div><div class="check-content"><h4>Szenario aktivieren + Webhook-URL notieren</h4><p>Toggle auf blau stellen → Webhook-Modul anklicken → URL kopieren</p></div></li>
+  </ul>
+
+  <div class="phase-label">Phase 5 — Skript einrichten</div>
+  <ul class="checklist">
+    <li><div class="checkbox"></div><div class="check-content"><h4>Ordner anlegen + Dateien reinkopieren</h4><p>z.B. C:\Instagram-Autopilot\ → post-trigger-VORLAGE.ps1 und contentplan_vorlage.csv rein</p></div></li>
+    <li><div class="checkbox"></div><div class="check-content"><h4>Skript anpassen</h4><p>Die 3 Werte oben eintragen: CSV-Pfad, Webhook-URL, Log-Pfad</p></div></li>
+    <li><div class="checkbox"></div><div class="check-content"><h4>Windows Task Scheduler einrichten</h4><p>Aufgabenplanung → täglich 17:55 → powershell.exe → -ExecutionPolicy Bypass -File "C:\PFAD\post-trigger-VORLAGE.ps1"</p></div></li>
+  </ul>
+
+  <div class="phase-label">Phase 6 — Testen</div>
+  <ul class="checklist">
+    <li><div class="checkbox"></div><div class="check-content"><h4>Skript manuell ausführen</h4><p>PowerShell öffnen → .\post-trigger-VORLAGE.ps1 → in Make.com prüfen</p></div></li>
+    <li><div class="checkbox"></div><div class="check-content"><h4>Render in Creatomate prüfen</h4><p>Ca. 2-4 Minuten warten → Video erscheint unter Renders</p></div></li>
+    <li><div class="checkbox"></div><div class="check-content"><h4>Instagram prüfen</h4><p>Reel erschienen? → Fertig. System läuft ab jetzt täglich automatisch.</p></div></li>
+  </ul>
+</div>
+
+<!-- CONTENTPLAN PER KI -->
+<div class="page page-break">
+  <div class="section-title">Contentplan per KI erstellen</div>
+
+  <div class="intro-box">
+    <p>Du brauchst kein Texterlebnis. Du gibst der KI deine Angaben — sie liefert 30 fertige Posts in 15 Minuten.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-content">
+      <h4>ChatGPT oder Claude öffnen</h4>
+      <p>chatgpt.com oder claude.ai — kostenlos, kein Abo nötig.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-content">
+      <h4>Onboarding-Prompt einfügen</h4>
+      <p>Den kompletten Prompt von der nächsten Seite kopieren und einfügen. Die KI stellt dir dann alle Fragen nacheinander.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-content">
+      <h4>Fragen beantworten</h4>
+      <p>Name, Thema, Zielgruppe, CTA-Stichwort, Website — einfach antworten.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">4</div>
+    <div class="step-content">
+      <h4>Ergebnis in CSV eintragen</h4>
+      <p>Die KI liefert Caption, Text-Overlay und Videoprompt für jeden Tag. In die CSV-Vorlage übertragen — fertig.</p>
+    </div>
+  </div>
+
+  <h2>CSV-Spalten Übersicht</h2>
+  <table>
+    <tr><th>Spalte</th><th>Was rein kommt</th></tr>
+    <tr><td>Datum</td><td>Format: 01.06.2026</td></tr>
+    <tr><td>Uhrzeit</td><td>18:00</td></tr>
+    <tr><td>Plattform</td><td>Instagram</td></tr>
+    <tr><td>Post-Typ</td><td>Reel</td></tr>
+    <tr><td>Text</td><td>Die lange Caption mit Hashtags</td></tr>
+    <tr><td>Link</td><td>Deine Website-URL</td></tr>
+    <tr><td>Videoprompt</td><td>KI-Videobeschreibung (englisch)</td></tr>
+    <tr><td>Text-Overlay</td><td>4 kurze Zeilen</td></tr>
+    <tr><td>Status</td><td>Geplant</td></tr>
+    <tr><td>Musik-URL</td><td>GitHub MP3-URL (oder leer für Standard)</td></tr>
+  </table>
+</div>
+
+<!-- ONBOARDING PROMPT -->
+<div class="page page-break">
+  <div class="section-title">Der Onboarding-Prompt</div>
+  <p>Komplett kopieren und in ChatGPT oder Claude einfügen. Die KI führt dich durch alles.</p>
+
+  <div class="prompt-box">
+    <div class="prompt-header">Prompt — alles markieren und kopieren</div>
+    <div class="prompt-text">Du bist mein persönlicher Assistent für den Aufbau eines automatischen Instagram-Posting-Systems. Deine Aufgabe ist es, mich Schritt für Schritt durch das Onboarding zu führen.
+
+Gehe dabei GENAU so vor:
+
+SCHRITT 1 — BEGRÜSSUNG
+Begrüße mich kurz und erkläre in zwei Sätzen was jetzt passiert.
+
+SCHRITT 2 — PROFIL ABFRAGEN
+Stelle mir diese Fragen NACHEINANDER — immer nur eine auf einmal:
+
+Frage 1: "Wie heißt du?"
+Frage 2: "Was ist dein Instagram-Handle?"
+Frage 3: "Was ist dein Thema auf Instagram?"
+Frage 4: "Wer ist deine Zielgruppe? (Alter, Beruf, Problem)"
+Frage 5: "Was bietest du an?"
+Frage 6: "Was ist deine Website?"
+Frage 7: "Welches Stichwort sollen Follower kommentieren? (z.B. KLARHEIT)"
+Frage 8: "Eher direkt und klar — oder warm und einfühlsam?"
+Frage 9: "Für wie viele Tage soll ich den Plan erstellen?"
+
+SCHRITT 3 — ZUSAMMENFASSUNG
+Zeige mir eine Zusammenfassung und frage: "Ist das so richtig?"
+
+SCHRITT 4 — CONTENTPLAN ERSTELLEN
+Für jeden Post:
+① CAPTION (150-200 Wörter, direkt, du-Form, endet mit: "Wenn das bei dir gerade so klingt: schreib [STICHWORT] in die Kommentare. Ich melde mich." + 3 Hashtags)
+② TEXT-OVERLAY (genau 4 Zeilen, letzte Zeile: "Schreib [STICHWORT] – ich antworte dir")
+③ VIDEO-PROMPT (englisch, Cinematic B-Roll, europäischer Mann Ende 50, 9:16, photorealistisch)
+
+SCHRITT 5 — TABELLE
+Alles als Tabelle ausgeben: Datum | Uhrzeit | Plattform | Post-Typ | Text | Link | Videoprompt | Text-Overlay | Status
+
+Fange jetzt mit Schritt 1 an.</div>
+  </div>
+
+  <div class="grey-box">
+    <strong>Tipp:</strong> Klingt ein Post nicht nach dir, sag einfach: "Post 5 bitte nochmal — mehr wie ein Gespräch, weniger werblich." Die KI schreibt ihn sofort neu.
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="page page-break">
+  <div class="section-title">Dein technisches Paket</div>
+
+  <p>Du bekommst zusätzlich zu dieser Anleitung ein ZIP-Paket per E-Mail mit allen technischen Dateien:</p>
+
+  <div class="grey-box">
+    ✓ make-blueprint.json — fertige Make.com Automation zum Importieren<br><br>
+    ✓ creatomate-template.json — fertiges Video-Template<br><br>
+    ✓ post-trigger-VORLAGE.ps1 — das tägliche Trigger-Skript<br><br>
+    ✓ contentplan_vorlage.csv — leere Vorlage mit allen Spalten<br><br>
+    ✓ CLAUDE.md — für Claude Code Nutzer
+  </div>
+
+  <p style="margin-top:20px;">Das Paket wird dir nach dem Kauf an deine E-Mail-Adresse geschickt.</p>
+
+  <div class="cta-box">
+    <h3>Du willst, dass ich alles einrichte?</h3>
+    <p>Komplett-Setup inkl. individuellem Contentplan —</p>
+    <p>zugeschnitten auf dein Thema und deine Zielgruppe.</p>
+    <p style="margin-top:16px;color:#fff;">Plus 60-minütiger Setup-Call. Einmalig 697 €.</p>
+    <div class="email">info@ansto-finaffairs.com</div>
+  </div>
+
+  <div class="footer">
+    <span>Instagram Autopilot System · Andreas Stock</span>
+    <span>Stand Mai 2026 · neustart-im-kopf.de</span>
+  </div>
+</div>
+
+</body>
+</html>
