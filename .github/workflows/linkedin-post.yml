@@ -1,0 +1,49 @@
+name: LinkedIn Autopilot - Post (17:00 UTC)
+
+on:
+  workflow_dispatch:    # Manuell auslösbar + von cron-job.org getriggert
+
+jobs:
+  post-linkedin:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Pause prüfen
+        id: pause_check
+        run: |
+          if [ -f "outputs/pause_linkedin.txt" ]; then
+            echo "paused=true" >> $GITHUB_OUTPUT
+            echo "LinkedIn Autopilot ist pausiert. Kein Post."
+          else
+            echo "paused=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: LinkedIn Post veröffentlichen
+        if: steps.pause_check.outputs.paused == 'false'
+        env:
+          BLOTATO_API_KEY: ${{ secrets.BLOTATO_API_KEY }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+          GITHUB_WORKSPACE: ${{ github.workspace }}
+          TZ: Europe/Berlin
+        shell: pwsh
+        run: |
+          & "${{ github.workspace }}/scripts/post-trigger-linkedin.ps1"
+
+      - name: CSV-Status committen
+        if: steps.pause_check.outputs.paused == 'false'
+        run: |
+          git config user.email "autopilot@github-actions"
+          git config user.name "LinkedIn Autopilot"
+          git add outputs/contentplan_linkedin_*.csv outputs/contentplan_mai_v2.csv outputs/contentplan_juni_v1.csv outputs/post-trigger-linkedin-log.txt || true
+          git diff --staged --quiet || git commit -m "Auto: LinkedIn Post gepostet $(date +'%d.%m.%Y')"
+          for i in 1 2 3; do
+            git pull --rebase origin master && git push && break
+            echo "Push fehlgeschlagen (Versuch $i/3), warte 10s..."
+            sleep 10
+          done
