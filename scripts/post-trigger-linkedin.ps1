@@ -58,7 +58,7 @@ function Write-Log {
     param([string]$msg)
     $line = "$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss') | $msg"
     $line | Out-File -FilePath $logPath -Append -Encoding UTF8
-    Write-Output $line
+    Write-Host $line
 }
 
 function Post-LinkedIn {
