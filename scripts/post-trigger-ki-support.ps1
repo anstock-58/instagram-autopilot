@@ -27,7 +27,7 @@ $apiKey          = if ($env:BLOTATO_API_KEY) { $env:BLOTATO_API_KEY } else { "bl
 $apiBase         = "https://backend.blotato.com/v2"
 $accountIdIG     = "46341"   # @ki_support Instagram
 $aiVideoTemplate = "/base/v2/ai-story-video/5903fe43-514d-40ee-a060-0d6628c5f8fd/v1"
-$voiceName       = "Daniel (British, authoritative)"   # ElevenLabs-Stimme
+$voiceName       = "George"   # ElevenLabs-Stimme (British, warm, deep — beste Deutsch-Prosody unter den 20 Blotato-Stimmen)
 
 $zeitfensterFrueh = -10
 $zeitfensterSpaet = 45
@@ -56,6 +56,32 @@ function Send-Telegram {
     } catch {
         Write-Log "Telegram-Benachrichtigung fehlgeschlagen: $_"
     }
+}
+
+function Optimize-ForTTS {
+    param([string]$text)
+    # Sätze fürs Sprechen optimieren: kurze klare Einheiten, gezielte Pausen
+    $result = $text
+
+    # Leerzeilen als Pause erhalten (werden als Sprechpause interpretiert)
+    # Lange Sätze (>90 Zeichen) an Konjunktionen trennen
+    $result = $result -replace '(.{60,}?)(, aber|, denn|, weil|, wenn|, dass|, und dann|, sodass)', '$1. $2' -replace '^, ', ''
+
+    # "Das ist" / "Das war" / "Das heißt" am Satzanfang nach Leerzeile = kurze Pause davor
+    $result = $result -replace '(\n)(Das ist |Das war |Das heißt |Das bedeutet )', '$1... $2'
+
+    # Rhetorische Fragen bekommen eine kurze Pause danach
+    $result = $result -replace '(\?)\n', "?`n`n"
+
+    # Aufzählungen mit Punkt trennen statt Komma (bessere Sprech-Pausen)
+    # "A. B. C." statt "A, B, C" wenn drei kurze Items in einer Zeile
+    # (Nur wenn Items < 30 Zeichen sind)
+
+    # Trim & bereinigen
+    $result = $result -replace '\n{3,}', "`n`n"
+    $result = $result.Trim()
+
+    return $result
 }
 
 function Create-AIVideo {
@@ -290,7 +316,7 @@ foreach ($row in $heuteRows) {
         default                 { "KI" }
     }
     $ctaScript = "Kommentiere $keyword. Oder klick den Link in der Bio."
-    $voiceover = $voiceoverBase
+    $voiceover = Optimize-ForTTS -text $voiceoverBase
 
     # AI-Video mit Voiceover erstellen
     $videoName     = "KI-Support $typ $heute"
@@ -335,3 +361,4 @@ foreach ($row in $heuteRows) {
 }
 
 Write-Log "=== Fertig ==="
+
