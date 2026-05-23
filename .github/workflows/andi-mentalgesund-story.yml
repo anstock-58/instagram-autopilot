@@ -1,0 +1,52 @@
+name: Andi Mentalgesund Autopilot - Story (09:00)
+
+on:
+  schedule:
+    - cron: '55 6 * * *'   # 06:55 UTC = 08:55 CEST (Sommer)
+  workflow_dispatch:         # Manuell ausloesbar ueber GitHub UI
+
+jobs:
+  post-story:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Pause pruefen
+        id: pause_check
+        run: |
+          if [ -f "PAUSED" ]; then
+            echo "paused=true" >> $GITHUB_OUTPUT
+            echo "Andi Mentalgesund Autopilot ist pausiert. Kein Post."
+          else
+            echo "paused=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Story posten
+        if: steps.pause_check.outputs.paused == 'false'
+        env:
+          BLOTATO_API_KEY: ${{ secrets.BLOTATO_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          MENTALGESUND_ACCOUNT_ID: ${{ secrets.MENTALGESUND_ACCOUNT_ID }}
+          POST_TYPE: story
+          GITHUB_WORKSPACE: ${{ github.workspace }}
+          TZ: Europe/Berlin
+        shell: pwsh
+        run: |
+          & "${{ github.workspace }}/scripts/post-trigger-andi-mentalgesund.ps1"
+
+      - name: CSV-Status committen
+        if: steps.pause_check.outputs.paused == 'false'
+        run: |
+          git config user.email "autopilot@github-actions"
+          git config user.name "Andi Mentalgesund Autopilot"
+          git add outputs/contentplan_andi_mentalgesund_*.csv || true
+          git diff --staged --quiet || git commit -m "Auto: Mentalgesund Story gepostet $(date +'%d.%m.%Y')"
+          for i in 1 2 3; do
+            git pull --rebase origin master && git push && break
+            echo "Push fehlgeschlagen (Versuch $i/3), warte 10s..."
+            sleep 10
+          done
