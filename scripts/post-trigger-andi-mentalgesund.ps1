@@ -291,7 +291,11 @@ foreach ($row in $heuteRows) {
     }
 
     if (-not $imageSource -or $imageSource -eq "") {
-        Write-Log "FEHLER: Weder Videoprompt noch Bild-URL vorhanden. Post uebersprungen."
+        $imageSource = $row.Bildprompt.Trim()
+    }
+
+    if (-not $imageSource -or $imageSource -eq "") {
+        Write-Log "FEHLER: Weder Videoprompt noch Bild-URL noch Bildprompt vorhanden. Post uebersprungen."
         continue
     }
 
