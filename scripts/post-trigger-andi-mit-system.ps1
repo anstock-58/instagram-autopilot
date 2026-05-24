@@ -1,4 +1,4 @@
-# post-trigger-andi-mit-system.ps1
+﻿# post-trigger-andi-mit-system.ps1
 # Erstellt AI-Video mit Voiceover via Blotato Visual Templates API und postet auf Instagram @andi.mit.system.
 # Template: AI Video with AI Voice (ai-story-video)
 # Laeuft taeglich via GitHub Actions (08:55 CEST Story, 17:55 CEST Reel).
@@ -27,7 +27,7 @@ $apiKey          = if ($env:BLOTATO_API_KEY) { $env:BLOTATO_API_KEY } else { "bl
 $apiBase         = "https://backend.blotato.com/v2"
 $accountIdIG     = "46471"   # @andi.mit.system Instagram
 $aiVideoTemplate = "/base/v2/ai-story-video/5903fe43-514d-40ee-a060-0d6628c5f8fd/v1"
-$voiceName       = "Daniel (British, authoritative)"
+$voiceName       = "Charlie (Australian, natural)"
 
 $zeitfensterFrueh = -10
 $zeitfensterSpaet = 45
@@ -191,7 +191,7 @@ try {
     Write-Log "FEHLER: CSV konnte nicht gelesen werden: $_"; exit 1
 }
 
-$postType = $env:POST_TYPE  # "story" oder "reel" — von GitHub Actions gesetzt, leer bei lokalem Lauf
+$postType = $env:POST_TYPE  # "story" oder "reel" â€” von GitHub Actions gesetzt, leer bei lokalem Lauf
 
 $heuteRows = $rows | Where-Object {
     $_.Datum -eq $heute -and $_.Status -eq "Geplant" -and $_.Plattform -eq "Instagram" -and
@@ -200,7 +200,7 @@ $heuteRows = $rows | Where-Object {
      ($postType -eq "reel"  -and $_.'Post-Typ' -ne "Story" -and $_.'Post-Typ' -ne "Karussell"))
 }
 
-if (-not $heuteRows) { Write-Log "Kein geplanter Instagram-Post fuer heute. Fertig."; Send-Telegram "📅 @andi.mit.system — kein Post fuer heute geplant ($heute)"; exit 0 }
+if (-not $heuteRows) { Write-Log "Kein geplanter Instagram-Post fuer heute. Fertig."; Send-Telegram "ðŸ“… @andi.mit.system â€” kein Post fuer heute geplant ($heute)"; exit 0 }
 
 Write-Log "$(@($heuteRows).Count) Instagram-Post(s) fuer heute gefunden."
 
@@ -230,7 +230,7 @@ foreach ($row in $heuteRows) {
     if (-not $imageSource -or $imageSource -eq "") { Write-Log "FEHLER: Kein Videoprompt/Bild-URL. Post uebersprungen."; continue }
 
     # Voiceover aus Caption-Text aufbauen (wie ki-support und business-und-spirit)
-    $voiceoverBase = $caption -replace '[💡📲🎧🎁💻🧠🔥✅❌→←↑↓👆👇👉👈⚡✨🎯💰📈🏆🎤🎵🎶🎼🎙️]', ''
+    $voiceoverBase = $caption -replace '[ðŸ’¡ðŸ“²ðŸŽ§ðŸŽðŸ’»ðŸ§ ðŸ”¥âœ…âŒâ†’â†â†‘â†“ðŸ‘†ðŸ‘‡ðŸ‘‰ðŸ‘ˆâš¡âœ¨ðŸŽ¯ðŸ’°ðŸ“ˆðŸ†ðŸŽ¤ðŸŽµðŸŽ¶ðŸŽ¼ðŸŽ™ï¸]', ''
     $voiceoverBase = $voiceoverBase -replace 'Link in Bio.*', ''
     $voiceoverBase = $voiceoverBase -replace '(?i)(Kommentiere|Schreib)\s+\w+.*', ''  # alle CTAs raus
     $voiceoverBase = $voiceoverBase -replace '#\S+', ''
@@ -266,10 +266,11 @@ foreach ($row in $heuteRows) {
         }
         $rows | Export-Csv -Path $csvPath -Delimiter "," -Encoding UTF8 -NoTypeInformation
         Write-Log "Status auf 'Gepostet' gesetzt."
-        Send-Telegram "✅ @andi.mit.system — $typ gepostet ($heute $uhrzeit)"
+        Send-Telegram "âœ… @andi.mit.system â€” $typ gepostet ($heute $uhrzeit)"
     } else {
-        Send-Telegram "❌ @andi.mit.system — $typ fehlgeschlagen ($heute $uhrzeit)"
+        Send-Telegram "âŒ @andi.mit.system â€” $typ fehlgeschlagen ($heute $uhrzeit)"
     }
 }
 
 Write-Log "=== Fertig ==="
+

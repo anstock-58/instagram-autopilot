@@ -1,4 +1,4 @@
-# post-trigger-andi-mentalgesund.ps1
+﻿# post-trigger-andi-mentalgesund.ps1
 # Erstellt AI-Video mit Voiceover via Blotato Visual Templates API und postet auf Instagram @andi.mentalgesund.
 # Template: AI Video with AI Voice (ai-story-video)
 # Laeuft taeglich via GitHub Actions (06:55 UTC Story, 15:55 UTC Reel).
@@ -27,7 +27,7 @@ $apiKey          = if ($env:BLOTATO_API_KEY) { $env:BLOTATO_API_KEY } else { "bl
 $apiBase         = "https://backend.blotato.com/v2"
 $accountIdIG     = if ($env:MENTALGESUND_ACCOUNT_ID) { $env:MENTALGESUND_ACCOUNT_ID } else { "ACCOUNT_ID_PLACEHOLDER" }
 $aiVideoTemplate = "/base/v2/ai-story-video/5903fe43-514d-40ee-a060-0d6628c5f8fd/v1"
-$voiceName       = "George (British, warm)"   # ElevenLabs-Stimme — beste Deutsch-Prosody unter den 20 Blotato-Stimmen
+$voiceName       = "Charlie (Australian, natural)"   # ElevenLabs-Stimme â€” beste Deutsch-Prosody unter den 20 Blotato-Stimmen
 
 $zeitfensterFrueh = -10
 $zeitfensterSpaet = 45
@@ -241,7 +241,7 @@ try {
     exit 1
 }
 
-$postType = $env:POST_TYPE  # "story" oder "reel" — von GitHub Actions gesetzt, leer bei lokalem Lauf
+$postType = $env:POST_TYPE  # "story" oder "reel" â€” von GitHub Actions gesetzt, leer bei lokalem Lauf
 
 $heuteRows = $rows | Where-Object {
     $_.Datum -eq $heute -and $_.Status -eq "Geplant" -and $_.Plattform -eq "Instagram" -and
@@ -252,7 +252,7 @@ $heuteRows = $rows | Where-Object {
 
 if (-not $heuteRows) {
     Write-Log "Kein geplanter Instagram-Post fuer heute. Fertig."
-    Send-Telegram "📅 @andi.mentalgesund — kein Post fuer heute geplant ($heute)"
+    Send-Telegram "ðŸ“… @andi.mentalgesund â€” kein Post fuer heute geplant ($heute)"
     exit 0
 }
 
@@ -299,8 +299,8 @@ foreach ($row in $heuteRows) {
         continue
     }
 
-    # Voiceover: Hauptbotschaft ohne Emojis, Links und CTAs — CTA kommt einmal in Scene 2
-    $voiceoverBase = $caption -replace '[💡📲🎧🎁💻🧠🔥✅❌→←↑↓👆👇👉👈⚡✨🎯💰📈🏆🎤🎵🎶🎼🎙️😔😤😮💪🕊️]', ''
+    # Voiceover: Hauptbotschaft ohne Emojis, Links und CTAs â€” CTA kommt einmal in Scene 2
+    $voiceoverBase = $caption -replace '[ðŸ’¡ðŸ“²ðŸŽ§ðŸŽðŸ’»ðŸ§ ðŸ”¥âœ…âŒâ†’â†â†‘â†“ðŸ‘†ðŸ‘‡ðŸ‘‰ðŸ‘ˆâš¡âœ¨ðŸŽ¯ðŸ’°ðŸ“ˆðŸ†ðŸŽ¤ðŸŽµðŸŽ¶ðŸŽ¼ðŸŽ™ï¸ðŸ˜”ðŸ˜¤ðŸ˜®ðŸ’ªðŸ•Šï¸]', ''
     $voiceoverBase = $voiceoverBase -replace 'Link in Bio.*', ''
     $voiceoverBase = $voiceoverBase -replace '(?i)(Schreib|Kommentiere)\s+\w+.*', ''  # CTAs raus
     $voiceoverBase = $voiceoverBase -replace '#\S+', ''
@@ -345,10 +345,11 @@ foreach ($row in $heuteRows) {
         }
         $rows | Export-Csv -Path $csvPath -Delimiter "," -Encoding UTF8 -NoTypeInformation
         Write-Log "Status auf 'Gepostet' gesetzt."
-        Send-Telegram "✅ @andi.mentalgesund — $typ gepostet ($heute $uhrzeit)"
+        Send-Telegram "âœ… @andi.mentalgesund â€” $typ gepostet ($heute $uhrzeit)"
     } else {
-        Send-Telegram "❌ @andi.mentalgesund — $typ fehlgeschlagen ($heute $uhrzeit)"
+        Send-Telegram "âŒ @andi.mentalgesund â€” $typ fehlgeschlagen ($heute $uhrzeit)"
     }
 }
 
 Write-Log "=== Fertig ==="
+
