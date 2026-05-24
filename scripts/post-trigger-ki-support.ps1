@@ -27,7 +27,7 @@ $apiKey          = if ($env:BLOTATO_API_KEY) { $env:BLOTATO_API_KEY } else { "bl
 $apiBase         = "https://backend.blotato.com/v2"
 $accountIdIG     = "46341"   # @ki_support Instagram
 $aiVideoTemplate = "/base/v2/ai-story-video/5903fe43-514d-40ee-a060-0d6628c5f8fd/v1"
-$voiceName       = "George"   # ElevenLabs-Stimme (British, warm, deep — beste Deutsch-Prosody unter den 20 Blotato-Stimmen)
+$voiceName       = "George (British, warm)"   # ElevenLabs-Stimme — beste Deutsch-Prosody unter den 20 Blotato-Stimmen
 
 $zeitfensterFrueh = -10
 $zeitfensterSpaet = 45
