@@ -283,6 +283,53 @@ curl -X POST \
 
 ---
 
+## 17. Export-Csv schreibt \r in Status-Felder — Reels werden übersprungen
+
+**Symptom:** Stories werden gepostet, Reels nicht. Kein Fehler sichtbar. GitHub Actions zeigt "success". CSV-Status bleibt auf "Geplant".
+
+**Ursache:** `Export-Csv` auf pwsh 7 (Linux/Ubuntu) schreibt bei mehrzeiligen Zeilen (z.B. Reels mit langem Text) einen `\r` (Carriage Return) direkt vor die schließende Quote des letzten Feldes. Das ergibt `"Geplant\r"` statt `"Geplant"`. `Import-Csv` liest dann den Status als `Geplant\r` → `"Geplant\r" -ne "Geplant"` → kein Match → Post wird übersprungen.
+
+Story-Zeilen sind kürzer (einzeilig oder wenig Inhalt), daher trifft der Bug meist nur Reels.
+
+**Prüfung:** Buggy Zeilen im CSV suchen:
+```bash
+node -e "
+const buf = require('fs').readFileSync('outputs/contentplan_ACCOUNT.csv');
+let pos=0, buggy=0;
+while(true) {
+  const idx=buf.indexOf(Buffer.from('Geplant'),pos);
+  if(idx===-1) break;
+  if(buf[idx+7]===0x0D) { buggy++; console.log('Buggy at ' + idx); }
+  pos=idx+7;
+}
+console.log('Buggy:',buggy);
+"
+```
+
+**Fix 1 (CSV):** Trailing `\r` aus Status-Feldern entfernen:
+```bash
+node -e "
+const fs=require('fs'), f='outputs/contentplan_ACCOUNT.csv';
+const c=fs.readFileSync(f,'utf8');
+const fixed=c.replace(/Geplant\r\"/g,'Geplant\"');
+fs.writeFileSync(f,fixed,'utf8');
+console.log('Fixed:', (c.match(/Geplant\r\"/g)||[]).length, 'entries');
+"
+```
+
+**Fix 2 (Script — dauerhaft):** `.Trim()` beim Status-Vergleich:
+```powershell
+# Vorher:
+$_.Status -eq "Geplant"
+# Nachher:
+$_.Status.Trim() -eq "Geplant"
+```
+Alle 4 Posting-Scripts haben diese Änderung seit Commit `b968d92`.
+
+**Langfristige Lösung:** CSV-Updates nach dem Posten per Node.js statt `Export-Csv` schreiben.
+
+---
+
 ## Schnell-Checkliste bei "kein Post erschienen"
 
 1. GitHub Actions Log öffnen → Fehlermeldung lesen
@@ -297,3 +344,4 @@ curl -X POST \
 10. CSV hat zu viele Zeilen, Links fehlen? → ASCII-Anführungszeichen in Texten prüfen (Fehler 14)
 11. Neuer Account postet am ersten Tag nicht? → Workflow einmalig manuell triggern (Fehler 15)
 12. Scripts kaputt nach Änderung (ParserError, Emojis korrupt)? → PS5.1-Encoding-Problem — immer Node.js verwenden (Fehler 16)
+13. Stories laufen, Reels nicht — kein Fehler sichtbar? → Export-Csv \r-Bug in Status-Feld prüfen (Fehler 17)
