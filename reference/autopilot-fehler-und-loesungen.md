@@ -142,6 +142,147 @@ Nach dem Post wieder auf 45 zurücksetzen.
 
 ---
 
+## 11. Blotato voiceName — vollständiger Name erforderlich
+
+**Symptom:** `FEHLER AI-Video-Erstellung: voiceName: must be one of: ...`
+
+**Ursache:** Die Blotato API erwartet den vollständigen Stimmen-String inklusive Beschreibung in Klammern. Kurzer Name allein wird abgelehnt.
+
+**Falsch:**
+```powershell
+$voiceName = "George"
+```
+
+**Richtig:**
+```powershell
+$voiceName = "George (British, warm)"
+```
+
+**Alle gültigen Stimmen:** Alice (British, confident), Aria (American, expressive), Bill (American, trustworthy), Brian (American, deep), Callum (Transatlantic, intense), Charlie (Australian, natural), Charlotte (Swedish, seductive), Chris (American, casual), Daniel (British, authoritative), Eric (American, friendly), George (British, warm), Jessica (American, expressive), Laura (American, upbeat), Liam (American, articulate), Lily (British, warm), Matilda (American, friendly), River (American, confident), Roger (American, confident), Sarah (American, soft), Will (American, friendly)
+
+---
+
+## 12. Bildprompt als Fallback für Stories
+
+**Symptom:** `FEHLER: Weder Videoprompt noch Bild-URL vorhanden. Post uebersprungen.`
+
+**Ursache:** Das Posting-Skript prüft nur Videoprompt und Bild-URL. Stories nutzen jedoch Bildprompt statt Videoprompt.
+
+**Lösung:** Im Skript nach Bild-URL noch Bildprompt als dritten Fallback prüfen:
+```powershell
+$imageSource = $row.Videoprompt.Trim()
+if (-not $imageSource -or $imageSource -eq "") { $imageSource = $row.'Bild-URL'.Trim() }
+if (-not $imageSource -or $imageSource -eq "") { $imageSource = $row.Bildprompt.Trim() }
+```
+
+**Regel für Contentpläne:**
+- Reels → Videoprompt ausfüllen, Bildprompt leer
+- Stories/Fotos → Bildprompt ausfüllen, Videoprompt leer
+
+---
+
+## 13. Doppelposting durch parallele Trigger
+
+**Symptom:** Post erscheint zweimal — einmal um 09:00, einmal um 11:00.
+
+**Ursache:** GitHub Actions Schedule-Cron (06:55 UTC = 08:55 CEST) und cron-job.org (09:00 CEST) triggern denselben Workflow parallel. Beide finden den Post als "Geplant" bevor der erste den Status auf "Gepostet" setzen konnte.
+
+**Lösung:** Nur EINEN Trigger pro Workflow verwenden. Schedule-Cron aus Story-Workflows entfernen, ausschließlich cron-job.org nutzen:
+```yaml
+on:
+  workflow_dispatch:   # Nur cron-job.org triggert — kein schedule!
+```
+
+**Regel:** Entweder GitHub Actions Cron ODER cron-job.org — niemals beides gleichzeitig für denselben Workflow.
+
+---
+
+## 14. CSV-Parsing bricht durch ASCII-Anführungszeichen in Texten
+
+**Symptom:** PowerShell `Import-Csv` liest 3× mehr Zeilen als erwartet. Viele Zeilen haben Null-Datum, Link-Felder sind leer oder enthalten Videoprompt-Inhalte.
+
+**Ursache:** Texte mit deutschen Dialog-Anführungszeichen wie `„text?"` wo die schließende `"` ein ASCII U+0022 ist (kein typographisches U+201D). PowerShell behandelt dieses `"` als CSV-Feldabschluss → Zeile bricht mittendrin ab.
+
+**Falsch (CSV-Feldabschluss vorzeitig):**
+```
+„Warum bin ich so unzufrieden?" → endet mit U+0022
+```
+
+**Richtig (typographisches Anführungszeichen):**
+```
+„Warum bin ich so unzufrieden?" → endet mit U+201D
+```
+
+**Regel für Contentplan-Generatoren:**
+- Dialog-Anführungszeichen im Text immer als `„text"` (U+201E + U+201D) schreiben
+- Niemals ASCII `"` (U+0022) als schließendes Anführungszeichen in Texten verwenden
+- In JavaScript: `“` für öffnendes, `”` für schließendes Anführungszeichen
+
+---
+
+## 15. Neuer Workflow — erster Cron-Run wird übersprungen
+
+**Symptom:** Neuer Story-Workflow triggert am ersten Tag nicht automatisch, obwohl cron korrekt konfiguriert.
+
+**Ursache:** GitHub Actions führt Cron-Jobs für neu hinzugefügte Workflows manchmal erst ab dem nächsten Zyklus aus.
+
+**Lösung:** Nach dem ersten Push eines neuen Workflows einmal manuell via GitHub API triggern:
+```powershell
+Invoke-RestMethod -Uri "https://api.github.com/repos/[USER]/[REPO]/actions/workflows/[WORKFLOW].yml/dispatches" `
+  -Method POST -Headers @{ Authorization = "Bearer [PAT]"; Accept = "application/vnd.github+json" } `
+  -Body '{"ref":"master"}'
+```
+
+---
+
+## 16. PS5.1 Set-Content zerstört Emojis in Scripts — ParserError
+
+**Symptom:** Scripts laufen plötzlich nicht mehr. GitHub Actions zeigt `ParserError` auf einer Zeile mit Emoji-Zeichen (z.B. Zeile 232, 268). Emojis im Log erscheinen als `âœ…`, `âŒ`, `â€"`.
+
+**Ursache:** PowerShell 5.1 (`Set-Content -Encoding UTF8`) liest UTF-8-Dateien ohne BOM als Windows-1252 (Western European). Die Emoji-Bytes werden falsch interpretiert. Wenn die Datei dann wieder geschrieben wird, entstehen doppelt-kodierte UTF-8-Bytesequenzen — die PS5.1-Runtime kann sie nicht mehr parsen.
+
+Konkret: `✅` (U+2705) wird als `â` + `œ` + `…` gelesen und dann als UTF-8 zurückgeschrieben → `âœ…` = ungültige Syntax.
+
+**Betroffene Operationen:**
+- `Set-Content -Encoding UTF8` nach `Get-Content` ohne `-Encoding UTF8`
+- Das Claude Code Edit-Tool (konvertiert ASCII-Anführungszeichen zu typografischen)
+- Jede manuelle Textbearbeitung über Windows-Text-Tools die als Windows-1252 speichern
+
+**Lösung: Immer Node.js für Script-Änderungen verwenden**
+
+```javascript
+// Richtig: Node.js liest und schreibt UTF-8 korrekt
+const fs = require('fs');
+let content = fs.readFileSync('script.ps1', 'utf8');
+if (content.charCodeAt(0) === 0xFEFF) content = content.slice(1);  // BOM entfernen
+content = content.replace('alter Wert', 'neuer Wert');
+fs.writeFileSync('script.ps1', content, { encoding: 'utf8' });
+```
+
+**Notfall-Restore:** Sauberen Stand aus Git holen und Änderung in einem Schritt anwenden:
+```bash
+git show COMMIT_HASH:scripts/post-trigger-ACCOUNT.ps1 | node -e "
+const fs=require('fs');
+let d='';
+process.stdin.on('data',c=>d+=c);
+process.stdin.on('end',()=>{
+  d=d.replace('OLD_VALUE','NEW_VALUE');
+  fs.writeFileSync('scripts/post-trigger-ACCOUNT.ps1',d,{encoding:'utf8'});
+});
+"
+```
+
+**Manuelle Trigger nach Script-Fixes:** Falls Scripts tagsüber gefixt werden und die Zeitfenster schon abgelaufen sind, kann über GitHub API manuell getriggert werden (workflow_dispatch bypassed Zeitfenster):
+```bash
+curl -X POST \
+  -H "Authorization: token GITHUB_PAT" \
+  -H "Accept: application/vnd.github.v3+json" \
+  https://api.github.com/repos/anstock-58/instagram-autopilot/actions/workflows/WORKFLOW.yml/dispatches \
+  -d '{"ref":"master"}'
+```
+
+---
+
 ## Schnell-Checkliste bei "kein Post erschienen"
 
 1. GitHub Actions Log öffnen → Fehlermeldung lesen
@@ -150,3 +291,9 @@ Nach dem Post wieder auf 45 zurücksetzen.
 4. "404 videos/..."? → Polling-Endpoint prüfen (muss `/v2/videos/creations/{id}` sein)
 5. Status "Gepostet" obwohl nichts auf Instagram? → Write-Output Bug (Write-Host verwenden)
 6. Zwei Workflows aktiv? → Alten Workflow cron deaktivieren
+7. "voiceName: must be one of"? → Vollständigen Stimmen-String mit Klammern verwenden (Fehler 11)
+8. "Weder Videoprompt noch Bild-URL vorhanden"? → Bildprompt-Fallback im Skript ergänzen (Fehler 12)
+9. Post erscheint doppelt? → Schedule-Cron aus Workflow entfernen, nur cron-job.org nutzen (Fehler 13)
+10. CSV hat zu viele Zeilen, Links fehlen? → ASCII-Anführungszeichen in Texten prüfen (Fehler 14)
+11. Neuer Account postet am ersten Tag nicht? → Workflow einmalig manuell triggern (Fehler 15)
+12. Scripts kaputt nach Änderung (ParserError, Emojis korrupt)? → PS5.1-Encoding-Problem — immer Node.js verwenden (Fehler 16)
