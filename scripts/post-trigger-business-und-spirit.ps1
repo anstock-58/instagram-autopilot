@@ -1,4 +1,4 @@
-﻿# post-trigger-business-und-spirit.ps1
+# post-trigger-business-und-spirit.ps1
 # Erstellt AI-Video mit Voiceover via Blotato Visual Templates API und postet auf Instagram @business.und.spirit.
 # Template: AI Video with AI Voice (ai-story-video)
 # Laeuft taeglich via GitHub Actions (08:55 CEST Story, 17:55 CEST Reel).
@@ -229,7 +229,7 @@ foreach ($row in $heuteRows) {
     if (-not $imageSource -or $imageSource -eq "") { $imageSource = $row.'Bild-URL'.Trim() }
     if (-not $imageSource -or $imageSource -eq "") { Write-Log "FEHLER: Kein Videoprompt/Bild-URL. Post uebersprungen."; continue }
 
-    $voiceoverBase = $caption -replace '[ðŸ’¡ðŸ“²ðŸŽ§ðŸŽðŸ’»ðŸ§ ðŸ”¥âœ…âŒâ†’â†â†‘â†“ðŸ‘†ðŸ‘‡ðŸ‘‰ðŸ‘ˆâš¡âœ¨ðŸŽ¯ðŸ’°ðŸ“ˆðŸ†ðŸŽ¤ðŸŽµðŸŽ¶ðŸŽ¼ðŸŽ™ï¸]', ''
+    $voiceoverBase = $caption -replace '[^\p{L}\p{N}\p{P}\p{Z}\n\r]', ''
     $voiceoverBase = $voiceoverBase -replace 'Link in Bio.*', ''
     $voiceoverBase = $voiceoverBase -replace '(?i)(Kommentiere|Schreib)\s+\w+.*', ''  # alle CTAs raus
     $voiceoverBase = $voiceoverBase -replace '#\S+', ''

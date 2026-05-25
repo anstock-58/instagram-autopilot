@@ -1,4 +1,4 @@
-﻿# post-trigger-andi-mentalgesund.ps1
+# post-trigger-andi-mentalgesund.ps1
 # Erstellt AI-Video mit Voiceover via Blotato Visual Templates API und postet auf Instagram @andi.mentalgesund.
 # Template: AI Video with AI Voice (ai-story-video)
 # Laeuft taeglich via GitHub Actions (06:55 UTC Story, 15:55 UTC Reel).
@@ -300,7 +300,7 @@ foreach ($row in $heuteRows) {
     }
 
     # Voiceover: Hauptbotschaft ohne Emojis, Links und CTAs â€” CTA kommt einmal in Scene 2
-    $voiceoverBase = $caption -replace '[ðŸ’¡ðŸ“²ðŸŽ§ðŸŽðŸ’»ðŸ§ ðŸ”¥âœ…âŒâ†’â†â†‘â†“ðŸ‘†ðŸ‘‡ðŸ‘‰ðŸ‘ˆâš¡âœ¨ðŸŽ¯ðŸ’°ðŸ“ˆðŸ†ðŸŽ¤ðŸŽµðŸŽ¶ðŸŽ¼ðŸŽ™ï¸ðŸ˜”ðŸ˜¤ðŸ˜®ðŸ’ªðŸ•Šï¸]', ''
+    $voiceoverBase = $caption -replace '[^\p{L}\p{N}\p{P}\p{Z}\n\r]', ''
     $voiceoverBase = $voiceoverBase -replace 'Link in Bio.*', ''
     $voiceoverBase = $voiceoverBase -replace '(?i)(Schreib|Kommentiere)\s+\w+.*', ''  # CTAs raus
     $voiceoverBase = $voiceoverBase -replace '#\S+', ''
