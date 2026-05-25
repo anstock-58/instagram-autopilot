@@ -27,7 +27,7 @@ $apiKey          = if ($env:BLOTATO_API_KEY) { $env:BLOTATO_API_KEY } else { "bl
 $apiBase         = "https://backend.blotato.com/v2"
 $accountIdIG     = "46341"   # @ki_support Instagram
 $aiVideoTemplate = "/base/v2/ai-story-video/5903fe43-514d-40ee-a060-0d6628c5f8fd/v1"
-$voiceName       = "Charlie (Australian, natural)"   # ElevenLabs-Stimme â€” beste Deutsch-Prosody unter den 20 Blotato-Stimmen
+$voiceName       = "Charlie (Australian, natural)"   # ElevenLabs-Stimme — beste Deutsch-Prosody unter den 20 Blotato-Stimmen
 
 $zeitfensterFrueh = -10
 $zeitfensterSpaet = 45
@@ -60,20 +60,20 @@ function Send-Telegram {
 
 function Optimize-ForTTS {
     param([string]$text)
-    # SÃ¤tze fÃ¼rs Sprechen optimieren: kurze klare Einheiten, gezielte Pausen
+    # Sätze fürs Sprechen optimieren: kurze klare Einheiten, gezielte Pausen
     $result = $text
 
     # Leerzeilen als Pause erhalten (werden als Sprechpause interpretiert)
-    # Lange SÃ¤tze (>90 Zeichen) an Konjunktionen trennen
+    # Lange Sätze (>90 Zeichen) an Konjunktionen trennen
     $result = $result -replace '(.{60,}?)(, aber|, denn|, weil|, wenn|, dass|, und dann|, sodass)', '$1. $2' -replace '^, ', ''
 
-    # "Das ist" / "Das war" / "Das heiÃŸt" am Satzanfang nach Leerzeile = kurze Pause davor
-    $result = $result -replace '(\n)(Das ist |Das war |Das heiÃŸt |Das bedeutet )', '$1... $2'
+    # "Das ist" / "Das war" / "Das heißt" am Satzanfang nach Leerzeile = kurze Pause davor
+    $result = $result -replace '(\n)(Das ist |Das war |Das heißt |Das bedeutet )', '$1... $2'
 
     # Rhetorische Fragen bekommen eine kurze Pause danach
     $result = $result -replace '(\?)\n', "?`n`n"
 
-    # AufzÃ¤hlungen mit Punkt trennen statt Komma (bessere Sprech-Pausen)
+    # Aufzählungen mit Punkt trennen statt Komma (bessere Sprech-Pausen)
     # "A. B. C." statt "A, B, C" wenn drei kurze Items in einer Zeile
     # (Nur wenn Items < 30 Zeichen sind)
 
@@ -246,7 +246,7 @@ try {
     exit 1
 }
 
-$postType = $env:POST_TYPE  # "story" oder "reel" â€” von GitHub Actions gesetzt, leer bei lokalem Lauf
+$postType = $env:POST_TYPE  # "story" oder "reel" — von GitHub Actions gesetzt, leer bei lokalem Lauf
 
 $heuteRows = $rows | Where-Object {
     $_.Datum -eq $heute -and $_.Status -eq "Geplant" -and $_.Plattform -eq "Instagram" -and
@@ -257,7 +257,7 @@ $heuteRows = $rows | Where-Object {
 
 if (-not $heuteRows) {
     Write-Log "Kein geplanter Instagram-Post fuer heute. Fertig."
-    Send-Telegram "ðŸ“… @ki_support â€” kein Post fuer heute geplant ($heute)"
+    Send-Telegram "📅 @ki_support — kein Post fuer heute geplant ($heute)"
     exit 0
 }
 
@@ -301,8 +301,8 @@ foreach ($row in $heuteRows) {
         continue
     }
 
-    # Voiceover: nur Hauptbotschaft, alle CTAs raus â€” CTA kommt einmal in Scene 2
-    $voiceoverBase = $caption -replace '[^\p{L}\p{N}\p{P}\p{Z}\n\r]', ''
+    # Voiceover: nur Hauptbotschaft, alle CTAs raus — CTA kommt einmal in Scene 2
+    $voiceoverBase = $caption -replace '[💡📲🎧🎁💻🧠🔥✅❌→←↑↓👆👇👉👈⚡✨🎯💰📈🏆🎤🎵🎶🎼🎙️]', ''
     $voiceoverBase = $voiceoverBase -replace 'Link in Bio.*', ''
     $voiceoverBase = $voiceoverBase -replace '(?i)(Kommentiere|Schreib)\s+\w+.*', ''  # alle CTAs raus
     $voiceoverBase = $voiceoverBase -replace '#\S+', ''
@@ -310,7 +310,7 @@ foreach ($row in $heuteRows) {
 
     $keyword = switch -Wildcard ($link) {
         "*instagram-autopilot*" { "AUTOPILOT" }
-        "*ki-audio-empire*"     { "HÃ–RBUCH" }
+        "*ki-audio-empire*"     { "HÖRBUCH" }
         "*ki-prompt-paket*"     { "PROMPTS" }
         "*alfima*"              { "TOOL" }
         default                 { "KI" }
@@ -354,12 +354,11 @@ foreach ($row in $heuteRows) {
         }
         $rows | Export-Csv -Path $csvPath -Delimiter "," -Encoding UTF8 -NoTypeInformation
         Write-Log "Status auf 'Gepostet' gesetzt."
-        Send-Telegram "âœ… @ki_support â€” $typ gepostet ($heute $uhrzeit)"
+        Send-Telegram "✅ @ki_support — $typ gepostet ($heute $uhrzeit)"
     } else {
-        Send-Telegram "âŒ @ki_support â€” $typ fehlgeschlagen ($heute $uhrzeit)"
+        Send-Telegram "❌ @ki_support — $typ fehlgeschlagen ($heute $uhrzeit)"
     }
 }
 
 Write-Log "=== Fertig ==="
-
 

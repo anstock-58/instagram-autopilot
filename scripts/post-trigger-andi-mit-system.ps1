@@ -191,7 +191,7 @@ try {
     Write-Log "FEHLER: CSV konnte nicht gelesen werden: $_"; exit 1
 }
 
-$postType = $env:POST_TYPE  # "story" oder "reel" â€” von GitHub Actions gesetzt, leer bei lokalem Lauf
+$postType = $env:POST_TYPE  # "story" oder "reel" — von GitHub Actions gesetzt, leer bei lokalem Lauf
 
 $heuteRows = $rows | Where-Object {
     $_.Datum -eq $heute -and $_.Status -eq "Geplant" -and $_.Plattform -eq "Instagram" -and
@@ -200,7 +200,7 @@ $heuteRows = $rows | Where-Object {
      ($postType -eq "reel"  -and $_.'Post-Typ' -ne "Story" -and $_.'Post-Typ' -ne "Karussell"))
 }
 
-if (-not $heuteRows) { Write-Log "Kein geplanter Instagram-Post fuer heute. Fertig."; Send-Telegram "ðŸ“… @andi.mit.system â€” kein Post fuer heute geplant ($heute)"; exit 0 }
+if (-not $heuteRows) { Write-Log "Kein geplanter Instagram-Post fuer heute. Fertig."; Send-Telegram "📅 @andi.mit.system — kein Post fuer heute geplant ($heute)"; exit 0 }
 
 Write-Log "$(@($heuteRows).Count) Instagram-Post(s) fuer heute gefunden."
 
@@ -230,7 +230,7 @@ foreach ($row in $heuteRows) {
     if (-not $imageSource -or $imageSource -eq "") { Write-Log "FEHLER: Kein Videoprompt/Bild-URL. Post uebersprungen."; continue }
 
     # Voiceover aus Caption-Text aufbauen (wie ki-support und business-und-spirit)
-    $voiceoverBase = $caption -replace '[^\p{L}\p{N}\p{P}\p{Z}\n\r]', ''
+    $voiceoverBase = $caption -replace '[💡📲🎧🎁💻🧠🔥✅❌→←↑↓👆👇👉👈⚡✨🎯💰📈🏆🎤🎵🎶🎼🎙️]', ''
     $voiceoverBase = $voiceoverBase -replace 'Link in Bio.*', ''
     $voiceoverBase = $voiceoverBase -replace '(?i)(Kommentiere|Schreib)\s+\w+.*', ''  # alle CTAs raus
     $voiceoverBase = $voiceoverBase -replace '#\S+', ''
@@ -266,11 +266,10 @@ foreach ($row in $heuteRows) {
         }
         $rows | Export-Csv -Path $csvPath -Delimiter "," -Encoding UTF8 -NoTypeInformation
         Write-Log "Status auf 'Gepostet' gesetzt."
-        Send-Telegram "âœ… @andi.mit.system â€” $typ gepostet ($heute $uhrzeit)"
+        Send-Telegram "✅ @andi.mit.system — $typ gepostet ($heute $uhrzeit)"
     } else {
-        Send-Telegram "âŒ @andi.mit.system â€” $typ fehlgeschlagen ($heute $uhrzeit)"
+        Send-Telegram "❌ @andi.mit.system — $typ fehlgeschlagen ($heute $uhrzeit)"
     }
 }
 
 Write-Log "=== Fertig ==="
-
