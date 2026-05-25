@@ -194,7 +194,7 @@ try {
 $postType = $env:POST_TYPE  # "story" oder "reel" — von GitHub Actions gesetzt, leer bei lokalem Lauf
 
 $heuteRows = $rows | Where-Object {
-    $_.Datum -eq $heute -and $_.Status -eq "Geplant" -and $_.Plattform -eq "Instagram" -and
+    $_.Datum -eq $heute -and $_.Status.Trim() -eq "Geplant" -and $_.Plattform -eq "Instagram" -and
     (-not $postType -or
      ($postType -eq "story" -and $_.'Post-Typ' -eq "Story") -or
      ($postType -eq "reel"  -and $_.'Post-Typ' -ne "Story" -and $_.'Post-Typ' -ne "Karussell"))
@@ -259,7 +259,7 @@ foreach ($row in $heuteRows) {
         "`"$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')`",`"$heute`",`"$uhrzeit`",`"$typ`",`"Instagram`",`"$videoUrl`",`"$($caption -replace '"','""')`"" | Out-File -FilePath $archivPath -Append -Encoding UTF8
 
         $rows | ForEach-Object {
-            if ($_.Datum -eq $heute -and $_.Uhrzeit -eq $uhrzeit -and $_.Plattform -eq "Instagram" -and $_.Status -eq "Geplant") {
+            if ($_.Datum -eq $heute -and $_.Uhrzeit -eq $uhrzeit -and $_.Plattform -eq "Instagram" -and $_.Status.Trim() -eq "Geplant") {
                 $_.Status = "Gepostet"
             }
         }
