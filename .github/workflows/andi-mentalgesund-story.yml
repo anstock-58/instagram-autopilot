@@ -44,6 +44,7 @@ jobs:
           git add outputs/contentplan_andi_mentalgesund_*.csv || true
           git diff --staged --quiet || git commit -m "Auto: Mentalgesund Story gepostet $(date +'%d.%m.%Y')"
           for i in 1 2 3; do
+            git checkout -- . 2>/dev/null || true
             git pull --rebase origin master && git push && break
             echo "Push fehlgeschlagen (Versuch $i/3), warte 10s..."
             sleep 10
