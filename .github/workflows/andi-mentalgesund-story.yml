@@ -1,7 +1,9 @@
 name: Andi Mentalgesund Autopilot - Story (09:00)
 
 on:
-  workflow_dispatch:         # Getriggert von cron-job.org (09:00 Europe/Berlin)
+  schedule:
+    - cron: '55 7 * * *'    # 07:55 UTC = 09:55 CEST (täglich)
+  workflow_dispatch:         # Manuell auslösbar
 
 jobs:
   post-story:

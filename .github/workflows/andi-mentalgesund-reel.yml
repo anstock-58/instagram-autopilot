@@ -1,7 +1,9 @@
 name: Andi Mentalgesund Autopilot - Reel (18:00)
 
 on:
-  workflow_dispatch:         # Manuell ausloesbar ueber GitHub UI (getriggert von cron-job.org)
+  schedule:
+    - cron: '55 15 * * *'   # 15:55 UTC = 17:55 CEST (täglich)
+  workflow_dispatch:         # Manuell auslösbar
 
 jobs:
   post-reel:
