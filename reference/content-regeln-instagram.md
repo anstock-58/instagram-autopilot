@@ -37,6 +37,18 @@ Die TTS-Engine kann den Kontext nicht zuverlässig auflösen.
 
 ---
 
+## Produkt-spezifische Regeln
+
+### KI Audio Empire (@ki_support)
+- ❌ Keinen „7-Tage-Plan" erwähnen — die Einrichtung dauert ca. 30 Minuten
+- ❌ Nicht sagen dass man selbst hochlädt — das System übernimmt den Upload automatisch
+- ❌ Audible nicht erwähnen — funktioniert dort noch nicht
+- ✅ Allgemein von „Shops" oder „Streaming-Plattformen" sprechen
+- ✅ Spotify darf als Beispiel genannt werden
+- ✅ „Covered" (Aufnahme-App) darf als Teaser/Cliffhanger erwähnt werden
+
+---
+
 ## Caption-Struktur (alle Accounts)
 
 - Kurze Sätze — max. 1-2 Zeilen pro Absatz
