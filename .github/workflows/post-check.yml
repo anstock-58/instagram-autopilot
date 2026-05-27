@@ -1,0 +1,121 @@
+name: Post-Check und Retry (alle Accounts)
+
+on:
+  schedule:
+    - cron: '0 9 * * *'    # 09:00 UTC = Story-Check (1h nach Trigger)
+    - cron: '0 17 * * *'   # 17:00 UTC = Reel-Check (1h nach Trigger)
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Post-Check und Retry
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          GH_WORKFLOW_PAT: ${{ secrets.GH_WORKFLOW_PAT }}
+        shell: pwsh
+        run: |
+          $monatMap = @{
+            1="januar"; 2="februar"; 3="maerz"; 4="april"; 5="mai"; 6="juni";
+            7="juli"; 8="august"; 9="september"; 10="oktober"; 11="november"; 12="dezember"
+          }
+          $monat    = $monatMap[(Get-Date).Month]
+          $heute    = (Get-Date).ToString("dd.MM.yyyy")
+          $hourUTC  = [int](Get-Date).ToUniversalTime().ToString("HH")
+          $postType = if ($hourUTC -ge 12) { "Reel" } else { "Story" }
+
+          $telegramToken = $env:TELEGRAM_BOT_TOKEN
+          $chatId        = "1246764172"
+          $pat           = $env:GH_WORKFLOW_PAT
+          $repo          = "anstock-58/instagram-autopilot"
+
+          function Send-Telegram($text) {
+            $body = @{ chat_id = $chatId; text = $text } | ConvertTo-Json -Compress
+            try {
+              Invoke-RestMethod -Uri "https://api.telegram.org/bot$telegramToken/sendMessage" `
+                -Method POST -Body $body -ContentType "application/json" | Out-Null
+            } catch {
+              Write-Host "Telegram fehlgeschlagen: $_"
+            }
+          }
+
+          function Trigger-Workflow($workflow) {
+            $url  = "https://api.github.com/repos/$repo/actions/workflows/$workflow/dispatches"
+            $body = '{"ref":"master"}'
+            try {
+              Invoke-RestMethod -Uri $url -Method POST -Body $body -ContentType "application/json" `
+                -Headers @{Authorization="token $pat"} | Out-Null
+              Write-Host "Getriggert: $workflow"
+            } catch {
+              Write-Host "Trigger fehlgeschlagen fuer $workflow : $_"
+            }
+          }
+
+          function Check-Account($csvPrefix, $accountName, $workflow) {
+            $basePath = "${{ github.workspace }}/outputs"
+            $csvPath  = $null
+            foreach ($v in @("v2", "v1")) {
+              $p = "$basePath/${csvPrefix}_${monat}_${v}.csv"
+              if (Test-Path $p) { $csvPath = $p; break }
+            }
+
+            if (-not $csvPath) {
+              Write-Host "KEIN CSV fuer $accountName ($monat)"
+              return "kein_csv"
+            }
+
+            try {
+              $rows = Import-Csv -Path $csvPath -Delimiter "," -Encoding UTF8
+            } catch {
+              Write-Host "CSV Lesefehler fuer $accountName"
+              return "fehler"
+            }
+
+            $row = $rows | Where-Object {
+              $_.Datum.Trim()       -eq $heute -and
+              $_."Post-Typ".Trim() -eq $postType -and
+              $_.Plattform.Trim()  -eq "Instagram"
+            } | Select-Object -First 1
+
+            if (-not $row) {
+              Write-Host "Kein $postType fuer $accountName heute geplant"
+              return "kein_post"
+            }
+
+            if ($row.Status.Trim() -eq "Gepostet") {
+              Write-Host "OK: $accountName $postType gepostet"
+              return "ok"
+            } else {
+              Write-Host "FEHLT: $accountName $postType — Status: $($row.Status.Trim()) — triggere nach"
+              Trigger-Workflow $workflow
+              Start-Sleep -Seconds 5
+              return "nachgetriggert"
+            }
+          }
+
+          Write-Host "=== Post-Check $heute | $postType | $(Get-Date -Format 'HH:mm') UTC ==="
+
+          $wfSuffix = $postType.ToLower()
+          $r1 = Check-Account "contentplan_business_und_spirit" "@business.und.spirit"  "bus-${wfSuffix}.yml"
+          $r2 = Check-Account "contentplan_ki_support"          "@ki_support"            "ki-support-${wfSuffix}.yml"
+          $r3 = Check-Account "contentplan_andi_mit_system"     "@andi.mit.system"       "andi-mit-system-${wfSuffix}.yml"
+          $r4 = Check-Account "contentplan_andi_mentalgesund"   "@andi.mentalgesund"     "andi-mentalgesund-${wfSuffix}.yml"
+
+          $nachgetriggert = @($r1,$r2,$r3,$r4) | Where-Object { $_ -eq "nachgetriggert" }
+          $fehler         = @($r1,$r2,$r3,$r4) | Where-Object { $_ -eq "fehler" }
+
+          if ($nachgetriggert.Count -gt 0) {
+            Send-Telegram "⚠️ Post-Check $heute ($postType) — $($nachgetriggert.Count) fehlend, automatisch nachgetriggert."
+          } elseif ($fehler.Count -gt 0) {
+            Send-Telegram "❌ Post-Check $heute ($postType) — Fehler beim Lesen. Bitte pruefen."
+          } else {
+            Send-Telegram "✅ Post-Check $heute ($postType) — alle Accounts ok."
+          }
