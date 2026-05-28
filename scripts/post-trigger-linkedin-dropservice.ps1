@@ -40,7 +40,7 @@ $liPersonUrn = if ($env:LINKEDIN_PERSON_URN)    { $env:LINKEDIN_PERSON_URN }    
 $apiBase     = "https://backend.blotato.com/v2"
 $accountIdLI = "21657"   # Dropservice-Profil (Ersu Consulting / Leon Weidner)
 
-$ersterKommentar = "Du willst sehen wie das fuer dein Business aussieht? Schreib mir DEMO -- ich zeig dir in 20 Minuten ein fertiges Beispiel fuer deinen Account."
+$ersterKommentar = "Das System gibt es hier als fertiges Produkt - einmal kaufen, einmal einrichten, laeuft danach von selbst: https://sicher-weiterlesen.com/autopilot-instagram"
 
 # Pause-Datei
 $pauseDS = Join-Path $outputsPath "pause_linkedin_dropservice.txt"
