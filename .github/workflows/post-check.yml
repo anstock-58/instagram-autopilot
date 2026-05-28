@@ -29,8 +29,15 @@ jobs:
           }
           $monat    = $monatMap[(Get-Date).Month]
           $heute    = (Get-Date).ToString("dd.MM.yyyy")
-          $hourUTC  = [int](Get-Date).ToUniversalTime().ToString("HH")
-          $postType = if ($hourUTC -ge 12) { "Reel" } else { "Story" }
+
+          # Posttyp aus dem Cron-Schedule ableiten (nicht aus aktueller Uhrzeit,
+          # weil GitHub Delays von bis zu 3h verursachen können)
+          $schedule = "${{ github.event.schedule }}"
+          $postType = if ($schedule -match "^0 9") { "Story" } elseif ($schedule -match "^0 17") { "Reel" } else {
+            # Fallback für workflow_dispatch: aktuelle Stunde nutzen
+            $hourUTC = [int](Get-Date).ToUniversalTime().ToString("HH")
+            if ($hourUTC -lt 13) { "Story" } else { "Reel" }
+          }
 
           $telegramToken = $env:TELEGRAM_BOT_TOKEN
           $chatId        = "1246764172"
