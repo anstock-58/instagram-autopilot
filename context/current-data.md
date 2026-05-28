@@ -26,6 +26,8 @@
 | Juni-Contentplan | Fertig ✅ | contentplan_juni_v1.csv — 30 Reels (18:00) + 30 Stories (09:00) — alle mit KLARHEIT-CTA — wartet auf Blotato API-Automation |
 | Blotato Direct-API-Automation | Live ✅ (16.05.2026) | Instagram + LinkedIn komplett auf Blotato umgestellt — post-trigger.ps1 postet direkt via Blotato REST API — 2 Windows-Tasks: 08:55 (Story) + 17:55 (Reel) — image-generator.ps1 generiert LinkedIn-Bilder ✅ — Telegram Pause Bot ✅ fertig (telegram-pause-bot.ps1, Windows Task alle 5 Min) — Make.com manuell deaktiviert ✅ — System vollständig unabhängig |
 | LinkedIn Autopilot GitHub Actions | Live ✅ (21.05.2026) | Architektur: cron-job.org 17:50 → GitHub Actions linkedin-post.yml → post-trigger-linkedin.ps1 → Blotato → LinkedIn ID 21656 + automatischer erster Kommentar via LinkedIn API — Secrets: BLOTATO_API_KEY, LINKEDIN_ACCESS_TOKEN, LINKEDIN_PERSON_URN — Token laeuft ab ~18.07.2026 — Windows Task Scheduler abgeloest |
+| LinkedIn Dropservice Autopilot | Eingerichtet ⬜ (29.05.2026) | Architektur identisch mit Neustart im Kopf — Account ID 21657 — Workflow: linkedin-dropservice-post.yml — Script: post-trigger-linkedin-dropservice.ps1 — CSV: contentplan_linkedin_dropservice_juni_v1.csv (9 Posts, 02.06.–30.06.2026) — cron-job.org noch einzurichten — Pause via pause_linkedin_dropservice.txt |
+| AI Creatives Done-for-You Service | Aufgebaut ✅ (29.05.2026) | 60 Instagram Posts/Monat für 497€ — Positionierung auf Dropservice LinkedIn-Profil 21657 — Outreach-Templates (4 Nachrichten, Tim Krasenbrink) für Coaches+Handwerk in reference/linkedin-outreach-templates.md — Contentplan Juni fertig |
 | ALFIMA API-Status | Geklärt ✅ | Ausgehende Webhooks möglich (ALFIMA → Make.com) — eingehende API/Webhooks noch nicht verfügbar — E-Mail-Automationen direkt in ALFIMA einrichten (Pro-Abo enthalten) |
 | Telegram KI Agent (@AndiKIAgent_bot) | Live ✅ | Make.com Szenario 5699211 aktiv — Telegram → Claude Haiku 4.5 → Telegram — System Prompt aktualisiert (17.05.2026): Befehle /pause /resume /status, Facebook Posts Neustart im Kopf, alle Accounts, Zielgruppe 50+, kurze Befehlsantworten — Anleitung in `reference/telegram-ki-agent-setup.md` |
 | Andi Ideen Bot (@AndiIdeenAgent_bot) | Bereit ⬜ | Make.com Szenario 5734031 — wartet auf freien Slot (nach Blotato-Umstieg) — speichert Ideen in Google Sheets Tab „Ideen" — Token: siehe context/secrets.md |
@@ -68,8 +70,20 @@
 
 | Titel | Status |
 | --- | --- |
+| Alter macht nicht weise. Warum Erfahrung allein nichts bewirkt. | Skript fertig (ic-36-skript.txt), im CSV als Offen — produzieren |
 | Selbstsabotage & Ego | Ca. 10 bis 12 Min., viraler Stil, tiefgründig und humorvoll |
 | Videoreihe zu „Das weise Herz" | Chronologisch, aufmerksamkeitsstarke Titel und Thumbnails |
+
+### Kanal: Business & Spirit (bis 29.06.2026)
+
+| Datum | Titel | Status |
+| --- | --- | --- |
+| 02.06. | Für wen baust du das hier eigentlich auf? | Skript fertig (bs-01-skript.txt), im CSV |
+| 07.06. | Warum Kontrolle erschöpft. | Skript fertig (bs-02-skript.txt), im CSV |
+| 10.06. | Du hast Erfolg. Aber du bist nicht frei. | Skript fertig (bs-03-skript.txt), im CSV |
+| 14.06. | Mit 55 denselben Fehler wie mit 35. | Skript fertig (bs-04-skript.txt), im CSV |
+| 21.06. | Energie nach 50. | Skript fertig (bs-05-skript.txt), im CSV |
+| 28.06. | Was bleibt, wenn du gehst? | Skript fertig (bs-06-skript.txt), im CSV |
 
 ---
 

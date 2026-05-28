@@ -1,0 +1,47 @@
+name: LinkedIn Dropservice - Post (17:00 UTC)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  post-linkedin-dropservice:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Pause pruefen
+        id: pause_check
+        run: |
+          if [ -f "outputs/pause_linkedin_dropservice.txt" ]; then
+            echo "paused=true" >> $GITHUB_OUTPUT
+          else
+            echo "paused=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: LinkedIn Dropservice Post veroeffentlichen
+        if: steps.pause_check.outputs.paused == 'false'
+        env:
+          BLOTATO_API_KEY: ${{ secrets.BLOTATO_API_KEY }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+          GITHUB_WORKSPACE: ${{ github.workspace }}
+          TZ: Europe/Berlin
+        shell: pwsh
+        run: |
+          & "${{ github.workspace }}/scripts/post-trigger-linkedin-dropservice.ps1"
+
+      - name: CSV-Status committen
+        if: steps.pause_check.outputs.paused == 'false'
+        run: |
+          git config user.email "autopilot@github-actions"
+          git config user.name "LinkedIn Dropservice Autopilot"
+          git add outputs/contentplan_linkedin_dropservice_*.csv outputs/post-trigger-linkedin-dropservice-log.txt || true
+          git diff --staged --quiet || git commit -m "Auto: Dropservice LinkedIn Post gepostet $(date +'%d.%m.%Y')"
+          for i in 1 2 3; do
+            git pull --rebase origin master && git push && break
+            sleep 10
+          done
