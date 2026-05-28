@@ -1,98 +1,76 @@
-# LinkedIn Outreach Templates — AI Creatives Done-for-You
+# LinkedIn Outreach Templates — Instagram Autopilot Produkt
 Stand: Juni 2026
 
-Methode: Tim Krasenbrink — 4-Nachrichten-Sequenz
-Ziel: Gespräch über "60 automatisierte Instagram Posts / Monat für 497€"
+Methode: Tim Krasenbrink — 4 Nachrichten
+Ziel: Verkauf des Instagram Autopilot Produkts (197€, einmalig)
+Zielgruppe: Coaches und Berater
 
 ---
 
-## Zielgruppe A — Coaches und Berater
-
-### Nachricht 1 — Connection Request (max 300 Zeichen)
+## Nachricht 1 — Connection Request (max 300 Zeichen)
 
 ```
-Hallo [Vorname], ich folge deinem Content zum Thema [Thema/Nische] — spannende Perspektiven. Würde mich freuen dich zu vernetzen.
-```
-
-**Variante wenn kein klares Thema erkennbar:**
-```
-Hallo [Vorname], dein Profil ist mir aufgefallen — wir bewegen uns in ähnlichen Bereichen rund um [Coaching/Beratung/Business]. Würde mich freuen dich zu vernetzen.
+Hallo [Vorname], dein Profil ist mir aufgefallen. Wir bewegen uns in ähnlichen Bereichen rund um [Coaching/Beratung]. Würde mich freuen dich zu vernetzen.
 ```
 
 ---
 
-### Nachricht 2 — Nach Annahme (offene Frage)
+## Nachricht 2 — Nach Annahme
 
 ```
 Danke fürs Vernetzen, [Vorname].
 
-Kurze Frage: Wie handhabst du aktuell deinen Instagram-Content? Postest du regelmäßig selbst oder hast du da schon eine Lösung?
+Kurze Frage: Wie läuft das bei dir mit Instagram gerade? Postest du regelmäßig selbst oder kommt das immer wieder zu kurz?
 ```
 
 ---
 
-### Nachricht 3 — Nach Antwort (Social Proof + Beispiel anbieten)
+## Nachricht 3 — Nach Antwort
 
-*Wenn sie sagen: "mache ich selbst aber unregelmäßig" / "habe keine Zeit dafür" / "läuft nicht wirklich"*
-
-```
-Das kenn ich gut — Instagram landet bei den meisten Selbstständigen am Ende der Liste.
-
-Ich hab das für mehrere Coaches gelöst: ein System das täglich automatisch postet, ohne dass du einen Finger rührst. KI erstellt die Inhalte, alles wird automatisch veröffentlicht. 60 Posts im Monat.
-
-Ich kann dir ein konkretes Beispiel für deinen Account schicken — damit du siehst wie das bei dir aussehen würde. Soll ich das machen?
-```
-
-*Wenn sie sagen: "läuft gut" / "habe jemanden dafür" / "mache ich über eine Agentur"*
+Wenn sie sagen es läuft nicht / keine Zeit / unregelmäßig:
 
 ```
-Das freut mich zu hören. Falls du irgendwann Bedarf an einer günstigeren oder vollautomatischeren Lösung hast — ich hab ein System das vielen Coaches die Agentur-Kosten auf ein Minimum reduziert. Einfach kurz melden wenn das relevant wird.
+Kenn ich gut. Ich hab das jahrelang auch so gemacht bis ich irgendwann aufgehört hab es manuell zu lösen.
+
+Ich hab ein System gebaut das meinen Content automatisch erstellt und postet. Läuft täglich, ich mach nichts mehr dafür.
+
+Das hab ich als fertiges Produkt rausgebracht. Einmal kaufen, einmal einrichten, fertig. Kein Abo, kein monatlicher Aufwand.
+
+Darf ich dir kurz zeigen wie das aussieht?
 ```
 
----
-
-### Nachricht 4 — Abschluss (Kalender-Link)
+Wenn sie sagen es läuft gut:
 
 ```
-Super, [Vorname].
-
-Ich schick dir das Beispiel gerne — aber am besten erkläre ich dir in einem kurzen Gespräch was dahintersteckt. 20 Minuten reichen.
-
-Hier ist mein Kalender: [Link einfügen]
-
-Kein Verkaufsgespräch — ich zeige dir konkret was das System kann und ob es für dich passt.
+Super. Falls du irgendwann einen Weg suchst das mit weniger Aufwand zu machen meld dich gerne. Ich hab ein System das den ganzen Prozess automatisiert.
 ```
 
 ---
 
-## Allgemeine Hinweise
+## Nachricht 4 — Abschluss
 
-**Tagesvolumen:** 50 Connection Requests pro Tag (LinkedIn-Limit)
-
-**Selektionskriterien:**
-- Coaches und Berater mit aktiver LinkedIn-Präsenz aber unregelmäßigem Instagram-Content
-- Accounts die offensichtlich selbst posten (nicht täglich, unregelmäßig)
-- Accounts die gar nicht posten aber trotzdem ein Profil haben
-- Nischen wo KI-generierte Bilder passen: Business Coaching, Mental Coaching, Karriere, Finanzen, Marketing, HR
-
-**Was nicht funktioniert:**
-- Direkt im Connection Request verkaufen
-- Lange Nachrichten in Nachricht 1 oder 2
-- Auf Nicht-Antworten mit weiteren Nachrichten nachfassen (maximal eine Follow-up nach 7 Tagen Schweigen)
-
-**Follow-up nach 7 Tagen Schweigen (einmalig):**
 ```
-Hallo [Vorname], wollte kurz nachfragen ob meine letzte Nachricht angekommen ist. Kein Druck — falls das Thema Instagram-Automation gerade nicht passt ist das völlig in Ordnung.
+Gerne, [Vorname].
+
+Am einfachsten zeig ich dir das in einem kurzen Gespräch, zwanzig Minuten reichen. Dann siehst du genau was das System kann und ob das für dich passt.
+
+Hier kannst du direkt einen Termin buchen: [Kalender-Link]
 ```
 
 ---
 
-## Tracking
+## Hinweise
 
-Alle Outreach-Kontakte in einer einfachen Liste tracken:
+Tagesvolumen: 50 Connection Requests (LinkedIn-Limit)
 
-| Name | Datum CR | Annahme | Antwort N2 | N3 gesendet | N4 gesendet | Status |
-|------|----------|---------|------------|-------------|-------------|--------|
-| ...  | ...      | ...     | ...        | ...         | ...         | ...    |
+Wen ansprechen:
+Coaches und Berater die sichtbar unregelmäßig posten oder gar nicht. Erkennbar an langen Pausen zwischen Posts oder an Profilen die zwar existieren aber kaum aktiv sind.
 
-Status-Werte: Offen / Kein Interesse / Gespräch geplant / Kunde
+Nicht ansprechen:
+Leute die offensichtlich eine Agentur haben oder täglich selbst posten. Das ist verlorene Zeit.
+
+Follow-up nach sieben Tagen ohne Antwort (einmalig):
+
+```
+Hallo [Vorname], wollte kurz nachfragen ob meine Nachricht angekommen ist. Falls das Thema gerade nicht passt ist das völlig okay.
+```
