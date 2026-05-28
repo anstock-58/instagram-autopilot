@@ -178,6 +178,34 @@ function Post-Instagram {
 }
 
 # ============================================================
+
+function Post-Instagram-Karussell {
+    param([string]$caption, [string[]]$mediaUrls)
+
+    $payload = @{
+        post = @{
+            accountId = $accountIdIG
+            content   = @{ text = $caption; platform = "instagram"; mediaUrls = $mediaUrls }
+            target    = @{ targetType = "instagram" }
+        }
+    }
+
+    $json      = $payload | ConvertTo-Json -Depth 10 -Compress
+    $jsonBytes = [System.Text.Encoding]::UTF8.GetBytes($json)
+    $headers   = @{ "blotato-api-key" = $apiKey; "Content-Type" = "application/json; charset=utf-8" }
+
+    Write-Log "Poste Karussell auf Instagram ($($mediaUrls.Count) Slides)"
+
+    try {
+        $response = Invoke-RestMethod -Uri "$apiBase/posts" -Method POST -Headers $headers -Body $jsonBytes -ErrorAction Stop
+        Write-Log "Karussell OK. SubmissionId: $($response.postSubmissionId)"
+        return $true
+    } catch {
+        Write-Log "FEHLER Karussell-Post: $_"
+        return $false
+    }
+}
+
 # HAUPTLOGIK
 # ============================================================
 $heute = (Get-Date).ToString("dd.MM.yyyy")
@@ -197,7 +225,7 @@ $heuteRows = $rows | Where-Object {
     $_.Datum -eq $heute -and $_.Status.Trim() -eq "Geplant" -and $_.Plattform -eq "Instagram" -and
     (-not $postType -or
      ($postType -eq "story" -and $_.'Post-Typ' -eq "Story") -or
-     ($postType -eq "reel"  -and $_.'Post-Typ' -ne "Story" -and $_.'Post-Typ' -ne "Karussell"))
+     ($postType -eq "reel"  -and $_.'Post-Typ' -ne "Story"))
 }
 
 if (-not $heuteRows) { Write-Log "Kein geplanter Instagram-Post fuer heute. Fertig."; Send-Telegram "📅 @business.und.spirit — kein Post fuer heute geplant ($heute)"; exit 0 }
@@ -209,7 +237,25 @@ foreach ($row in $heuteRows) {
     $typ     = $row.'Post-Typ'.Trim()
     $uhrzeit = $row.Uhrzeit.Trim()
 
-    if ($typ -eq "Karussell") { Write-Log "Karussell uebersprungen."; continue }
+    if ($typ -eq "Karussell") {
+        $slidesRaw = $row.'Karussell-Slides'.Trim()
+        if (-not $slidesRaw) { Write-Log "FEHLER: Keine Karussell-Slides. Post uebersprungen."; continue }
+        $slideUrls = $slidesRaw -split "," | ForEach-Object { $_.Trim() } | Where-Object { $_ -ne "" }
+        $caption   = $row.Text
+        $erfolg    = Post-Instagram-Karussell -caption $caption -mediaUrls $slideUrls
+        if ($erfolg) {
+            $rows | ForEach-Object {
+                if ($_.Datum -eq $heute -and $_.Uhrzeit -eq $uhrzeit -and $_.Plattform -eq "Instagram" -and $_.Status.Trim() -eq "Geplant" -and $_.'Post-Typ' -eq "Karussell") {
+                    $_.Status = "Gepostet"
+                }
+            }
+            $rows | Export-Csv -Path $csvPath -Delimiter "," -Encoding UTF8 -NoTypeInformation
+            Send-Telegram "✅ @business.und.spirit — Karussell gepostet ($heute $uhrzeit)"
+        } else {
+            Send-Telegram "❌ @business.und.spirit — Karussell fehlgeschlagen ($heute $uhrzeit)"
+        }
+        continue
+    }
 
     try {
         $postZeit    = [datetime]::ParseExact("$heute $uhrzeit", "dd.MM.yyyy HH:mm", $null)
