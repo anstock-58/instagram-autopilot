@@ -65,74 +65,15 @@ Kein Verkaufsgespräch — ich zeige dir konkret was das System kann und ob es f
 
 ---
 
-## Zielgruppe B — Handwerk und Bauunternehmen
-
-### Nachricht 1 — Connection Request (max 300 Zeichen)
-
-```
-Hallo [Vorname], ich bin über [Kontakt/Branche/Region] auf dein Unternehmen aufmerksam geworden. Würde mich freuen dich zu vernetzen — wir helfen Handwerksbetrieben dabei, online sichtbar zu werden ohne Zeitaufwand.
-```
-
-**Variante über Leon Weidner / Ersu Netzwerk:**
-```
-Hallo [Vorname], ich bin durch Leon Weidner auf dich aufmerksam geworden. Wir unterstützen Betriebe aus dem Handwerk beim digitalen Auftritt — würde mich freuen dich zu vernetzen.
-```
-
----
-
-### Nachricht 2 — Nach Annahme (offene Frage)
-
-```
-Danke fürs Vernetzen, [Vorname].
-
-Kurze Frage: Nutzt du Instagram oder Facebook aktiv für deinen Betrieb? Oder ist das bisher noch nicht wirklich gelaufen?
-```
-
----
-
-### Nachricht 3 — Nach Antwort (Social Proof + Beispiel anbieten)
-
-*Wenn sie sagen: "kein Zeit dafür" / "läuft nicht" / "weiß nicht wie" / "wollen aber haben keine Ressourcen"*
-
-```
-Das höre ich von fast allen Betrieben im Handwerk — man weiß dass man sichtbar sein müsste, aber wer soll das alles machen?
-
-Ich hab eine Lösung die das komplett übernimmt: 60 fertige Instagram-Posts im Monat, KI-erstellt, vollautomatisch veröffentlicht. Du machst nichts. Kein Tippen, kein Filmen, kein Nachdenken.
-
-Darf ich dir zeigen wie das konkret für einen Betrieb wie deinen aussehen würde?
-```
-
-*Wenn sie sagen: "haben wir intern jemanden" / "läuft über Agentur"*
-
-```
-Gut organisiert. Falls die Kosten oder der Aufwand irgendwann nicht mehr stimmen — ich habe eine vollautomatische Lösung die für viele Betriebe günstiger ist als eine klassische Agentur. Einfach melden wenn das Thema wird.
-```
-
----
-
-### Nachricht 4 — Abschluss (Kalender-Link)
-
-```
-Sehr gut, [Vorname].
-
-Ich zeig dir das gerne kurz — 20 Minuten, ich mach dir ein konkretes Beispiel für deinen Betrieb, damit du genau siehst was das bedeutet.
-
-Hier buchst du direkt: [Link einfügen]
-
-Kein Druck, kein Verkaufsgespräch — nur ein kurzes Kennenlernen ob das für euch passt.
-```
-
----
-
 ## Allgemeine Hinweise
 
 **Tagesvolumen:** 50 Connection Requests pro Tag (LinkedIn-Limit)
 
 **Selektionskriterien:**
-- Coaches/Berater mit aktiver LinkedIn-Präsenz aber unregelmäßigem Content
-- Handwerksbetriebe mit unter 1.000 Followern auf Instagram
+- Coaches und Berater mit aktiver LinkedIn-Präsenz aber unregelmäßigem Instagram-Content
 - Accounts die offensichtlich selbst posten (nicht täglich, unregelmäßig)
 - Accounts die gar nicht posten aber trotzdem ein Profil haben
+- Nischen wo KI-generierte Bilder passen: Business Coaching, Mental Coaching, Karriere, Finanzen, Marketing, HR
 
 **Was nicht funktioniert:**
 - Direkt im Connection Request verkaufen
