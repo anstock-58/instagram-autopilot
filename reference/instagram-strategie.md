@@ -61,7 +61,7 @@ Beispiel:
 |---|---|
 | @business.und.spirit | CHECK |
 | @andi.mentalgesund | KLARHEIT |
-| @andi.mit.system | GUIDE |
+| @andi.mit.system | INFO |
 | @ki_support | START |
 
 ---
