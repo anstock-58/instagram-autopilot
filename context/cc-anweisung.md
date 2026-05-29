@@ -120,6 +120,8 @@ Keine Gedankenstriche als Stilmittel. Kein KI-Sprech. Keine Ankündigungsformeln
 
 **Homographen im Voiceover vermeiden:** Couch (statt Coach!), modern, übersetzen, umfahren — durch Synonyme ersetzen.
 
+**Keine langen Relativsätze im Voiceover:** TTS verschluckt Konstruktionen wie "der sich um andere sorgt". Kurze Hauptsätze. Statt "Ein Mensch der fühlt" lieber "Du fühlst das."
+
 **Keywords pro Account — nicht verwechseln:**
 
 | Account | Zielgruppe | Keyword | Produkt/Thema |
