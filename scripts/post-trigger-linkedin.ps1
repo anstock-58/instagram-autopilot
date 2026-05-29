@@ -128,29 +128,27 @@ function Get-NeuesterLinkedInPostUrn {
 function Post-LinkedInKommentar {
     param([string]$shareUrn, [string]$kommentarText)
 
-    $tempFile = [System.IO.Path]::GetTempFileName()
-    $safeText = $kommentarText -replace '\\', '\\\\' -replace '"', '\"'
-    [System.IO.File]::WriteAllText($tempFile, "{`"actor`":`"$liPersonUrn`",`"message`":{`"text`":`"$safeText`"}}", [System.Text.Encoding]::UTF8)
-
     $urnEncoded = [Uri]::EscapeDataString($shareUrn)
+    $bodyObj = @{
+        actor   = $liPersonUrn
+        message = @{ text = $kommentarText }
+    }
+    $bodyJson  = $bodyObj | ConvertTo-Json -Compress
+    $bodyBytes = [System.Text.Encoding]::UTF8.GetBytes($bodyJson)
+    $headers   = @{
+        "Authorization"              = "Bearer $liToken"
+        "Content-Type"               = "application/json"
+        "X-Restli-Protocol-Version"  = "2.0.0"
+    }
 
-    # curl.exe verfuegbar auf GitHub Actions Ubuntu Runner
-    $result = & curl -s -w "`nHTTP_CODE:%{http_code}" --max-time 15 `
-        -X POST `
-        "https://api.linkedin.com/v2/socialActions/$urnEncoded/comments" `
-        -H "Authorization: Bearer $liToken" `
-        -H "Content-Type: application/json" `
-        -H "X-Restli-Protocol-Version: 2.0.0" `
-        --data-binary "@$tempFile"
-
-    Remove-Item $tempFile -Force -ErrorAction SilentlyContinue
-
-    $httpCode = if ($result -match "HTTP_CODE:(\d+)") { $Matches[1] } else { "000" }
-    if ($httpCode -eq "201") {
+    try {
+        Invoke-RestMethod -Uri "https://api.linkedin.com/v2/socialActions/$urnEncoded/comments" `
+            -Method POST -Headers $headers -Body $bodyBytes -ErrorAction Stop | Out-Null
         Write-Log "Erster Kommentar gesetzt."
         return $true
-    } else {
-        Write-Log "FEHLER Kommentar (HTTP $httpCode): $($result -replace 'HTTP_CODE:\d+', '')"
+    } catch {
+        $code = $_.Exception.Response.StatusCode.value__
+        Write-Log "FEHLER Kommentar (HTTP $code): $($_.Exception.Message)"
         return $false
     }
 }
