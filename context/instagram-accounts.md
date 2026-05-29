@@ -63,7 +63,7 @@ Regel: Kein Tool-Name im Voiceover, kein Preis, nur Produktnutzen und Keyword.
 |---|---|
 | @business.und.spirit | Unternehmer und Führungskräfte 50+, im Funktionsmodus feststeckend, suchen Klarheit und Freiheit |
 | @ki_support | Menschen 40+, die KI im Alltag und Business nutzen wollen, ohne technischen Hintergrund |
-| @andi.mit.system | Unternehmer, die Systeme und Strukturen aufbauen wollen, Interessenten TAC 3.0 |
+| @andi.mit.system | Angestellte im Nine to Five die nebenher durch TAC 3.0 und Affiliate Marketing ein zweites Einkommen aufbauen wollen |
 
 ---
 
