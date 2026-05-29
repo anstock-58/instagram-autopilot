@@ -16,6 +16,8 @@ Dies ist ein **Claude Workspace Template** — eine strukturierte Umgebung, die 
 
 **Die Datei `context/cc-anweisung.md` enthält verbindliche Verhaltensregeln für Claude. Diese gelten in jeder Session automatisch — nicht als Option, sondern als Standard. Bei Session-Start mit `/prime` wird diese Datei explizit geladen und ist für die gesamte Session bindend.**
 
+**Die Datei `reference/content-filter.md` ist der Pflichtcheck vor jeder Content-Erstellung. Vor jedem Post, jedem Skript, jeder Caption wird diese Datei konsultiert. Kein Inhalt wird ohne diesen Check erstellt.**
+
 ---
 
 ## Pflicht: Kontext sofort aktualisieren
