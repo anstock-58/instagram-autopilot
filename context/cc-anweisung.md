@@ -108,3 +108,33 @@ Diese Regel gilt ab sofort für jede Session, jeden Task, jeden Output.
 
 Fasse in drei Sätzen zusammen:
 Was wurde erreicht, was ist der nächste logische Schritt und was sollte ich nicht vergessen.
+
+---
+
+### Content-Pflichtregeln — gilt vor JEDEM Post und JEDEM Text
+
+Diese Regeln werden vor jeder Content-Erstellung ohne Ausnahme angewendet. Kein Post, kein Skript, keine Caption ohne diesen Check.
+
+**Schreibstil:**
+Keine Gedankenstriche als Stilmittel. Kein KI-Sprech. Keine Ankündigungsformeln. Keine künstlichen Gegensätze. Keine Dreierreihen. Keine Business-Worthülsen. Texte klingen wie ein echter Mensch.
+
+**Homographen im Voiceover vermeiden:** Couch (statt Coach!), modern, übersetzen, umfahren — durch Synonyme ersetzen.
+
+**Keywords pro Account — nicht verwechseln:**
+
+| Account | Zielgruppe | Keyword | Produkt/Thema |
+|---|---|---|---|
+| @business.und.spirit | Unternehmer / Führungskräfte 50+ im Funktionsmodus | CHECK | Standortcheck, Minikurs 37€, Neustart im Kopf 397€ |
+| @andi.mentalgesund | Männer und Frauen 35+ — Grenzen, Selbstwert, Kopf abschalten | KLARHEIT | Standortcheck, Minikurs, Kopf abschaltet nicht, Nein aus Überzeugung |
+| @ki_support | KI-Einsteiger, Selbstständige | START | KI Prompt Paket, KI Audio Empire (kein Audible, kein 7-Tage-Plan, kein manueller Upload) |
+| @andi.mit.system | Angestellte im Nine to Five die nebenher aufbauen wollen | INFO | TAC 3.0 Workshop — nur Workshop bewerben, passives Einkommen als Konzept ok, KEINE konkreten Zahlen, Link nur über Bio |
+
+**@andi.mit.system:** Zielgruppe sind ANGESTELLTE, keine Unternehmer. Steuern steigen, Job nicht sicher, keine Freiheit — nebenher aufbauen, erst dann kündigen.
+
+**@business.und.spirit:** Weg von "innere Klarheit" — hin zu konkreten Situationen: nachts wachliegen, morgens Druck, nicht abschalten können.
+
+**Hook-Regel:** Hook endet NIE mit einer Frage. Immer Aussage oder Versprechen.
+
+**CTA @andi.mit.system:** Link nur über Bio erwähnen, nie direkt in Caption eintragen.
+
+**Reel-Zeiten (CEST):** B&S 17:55 / mentalgesund 18:05 / ki_support 18:15 / mit.system 18:25
