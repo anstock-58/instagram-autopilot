@@ -163,7 +163,7 @@ function Wait-ForVideoUrl {
     }
 
     Write-Log "Rendering laeuft (Job: $jobId) - warte bis zu 5 Minuten..."
-    $maxWait = 60
+    $maxWait = 120
     for ($i = 1; $i -le $maxWait; $i++) {
         Start-Sleep -Seconds 5
         try {
@@ -185,7 +185,7 @@ function Wait-ForVideoUrl {
             Write-Log "Fehler beim Status-Check: $_"
         }
     }
-    Write-Log "Timeout: Video nach 5 Minuten noch nicht fertig."
+    Write-Log "Timeout: Video nach 10 Minuten noch nicht fertig."
     return $null
 }
 

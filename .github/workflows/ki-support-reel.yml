@@ -1,7 +1,9 @@
 ﻿name: KI-Support Autopilot - Reel (18:00)
 
 on:
-  workflow_dispatch:         # Manuell auslÃ¶sbar Ã¼ber GitHub UI
+  schedule:
+    - cron: '5 16 * * *'    # 16:05 UTC = 18:05 CEST (täglich, 10 min nach bus-reel)
+  workflow_dispatch:         # Manuell auslösbar über GitHub UI
 
 jobs:
   post-reel:
