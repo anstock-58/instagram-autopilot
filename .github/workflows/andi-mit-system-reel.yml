@@ -2,7 +2,7 @@
 
 on:
   schedule:
-    - cron: '15 16 * * *'   # 16:15 UTC = 18:15 CEST (täglich, 20 min nach bus-reel)
+    - cron: '25 16 * * *'   # 16:25 UTC = 18:25 CEST (täglich)
   workflow_dispatch:         # Manuell auslösbar über GitHub UI
 
 jobs:

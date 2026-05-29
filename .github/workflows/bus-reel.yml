@@ -1,7 +1,9 @@
 ﻿name: Business-und-Spirit Autopilot - Reel (18:00)
 
 on:
-  workflow_dispatch:         # Manuell auslÃ¶sbar Ã¼ber GitHub UI
+  schedule:
+    - cron: '55 15 * * *'   # 15:55 UTC = 17:55 CEST (täglich)
+  workflow_dispatch:         # Manuell auslösbar über GitHub UI
 
 jobs:
   post-reel:

@@ -2,7 +2,7 @@ name: Andi Mentalgesund Autopilot - Reel (18:00)
 
 on:
   schedule:
-    - cron: '55 15 * * *'   # 15:55 UTC = 17:55 CEST (täglich)
+    - cron: '5 16 * * *'    # 16:05 UTC = 18:05 CEST (täglich)
   workflow_dispatch:         # Manuell auslösbar
 
 jobs:
