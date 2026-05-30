@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nein aus Überzeugung — 5-Tage-Kurs</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --rot: #e63946;
+    --dunkel: #0d0d0d;
+    --dunkel2: #141414;
+    --dunkel3: #1a1a1a;
+    --text: #f0f0f0;
+    --text-dim: rgba(240,240,240,0.6);
+    --border: rgba(255,255,255,0.07);
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--dunkel);
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  /* LAYOUT */
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  section { padding: 64px 0; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(180deg, #0d0d0d 0%, #1a0a0a 100%);
+    padding: 80px 0 64px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hero .eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--rot);
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 6vw, 58px);
+    font-weight: 900;
+    line-height: 1.05;
+    color: white;
+    margin-bottom: 24px;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--rot);
+  }
+
+  .hero .lead {
+    font-size: 18px;
+    color: var(--text-dim);
+    max-width: 520px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    background: var(--rot);
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 18px 48px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.2s;
+    cursor: pointer;
+  }
+
+  .cta-btn:hover { opacity: 0.9; transform: translateY(-2px); }
+
+  .cta-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.35);
+    margin-top: 12px;
+  }
+
+  /* PROBLEM */
+  .problem {
+    background: var(--dunkel2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .problem-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .problem-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    font-size: 16px;
+    color: var(--text-dim);
+    line-height: 1.6;
+  }
+
+  .problem-list li .icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background: rgba(230,57,70,0.12);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-top: 2px;
+  }
+
+  .problem-list li strong {
+    color: white;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  /* SECTION HEADERS */
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--rot);
+    margin-bottom: 16px;
+  }
+
+  h2 {
+    font-size: clamp(26px, 4vw, 36px);
+    font-weight: 800;
+    line-height: 1.2;
+    color: white;
+    margin-bottom: 20px;
+  }
+
+  h2 em { font-style: normal; color: var(--rot); }
+
+  .body-text {
+    font-size: 16px;
+    color: var(--text-dim);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  /* KURS-INHALT */
+  .module-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .module-card {
+    background: var(--dunkel3);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 28px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .module-day {
+    flex-shrink: 0;
+    background: rgba(230,57,70,0.12);
+    border: 1px solid rgba(230,57,70,0.2);
+    border-radius: 8px;
+    padding: 10px 14px;
+    text-align: center;
+  }
+
+  .module-day .tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--rot);
+    display: block;
+  }
+
+  .module-day .num {
+    font-size: 22px;
+    font-weight: 800;
+    color: white;
+    line-height: 1;
+    margin-top: 2px;
+  }
+
+  .module-content h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 6px;
+  }
+
+  .module-content p {
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.6;
+  }
+
+  /* FÜR WEN */
+  .fuer-wen-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .fuer-wen-card {
+    background: var(--dunkel3);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.6;
+  }
+
+  .fuer-wen-card::before {
+    content: '✓';
+    display: block;
+    color: var(--rot);
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  /* ERGEBNISSE */
+  .ergebnisse-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .ergebnis-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 15px;
+    color: var(--text-dim);
+  }
+
+  .ergebnis-item::before {
+    content: '';
+    flex-shrink: 0;
+    width: 6px;
+    height: 6px;
+    background: var(--rot);
+    border-radius: 50%;
+  }
+
+  .ergebnis-item strong { color: white; }
+
+  /* CHECKOUT BOX */
+  .checkout-box {
+    background: var(--dunkel3);
+    border: 1px solid rgba(230,57,70,0.25);
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .checkout-box .preis-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+  }
+
+  .checkout-box .preis {
+    font-size: 56px;
+    font-weight: 900;
+    color: white;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .checkout-box .preis span {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-dim);
+  }
+
+  .checkout-box .preis-einmalig {
+    font-size: 14px;
+    color: var(--text-dim);
+    margin-bottom: 28px;
+  }
+
+  .checkout-includes {
+    list-style: none;
+    text-align: left;
+    margin: 0 auto 28px;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .checkout-includes li {
+    font-size: 14px;
+    color: var(--text-dim);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .checkout-includes li::before {
+    content: '✓';
+    color: var(--rot);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  /* GUARANTEE */
+  .guarantee {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 32px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 24px;
+    text-align: left;
+  }
+
+  .guarantee .icon {
+    font-size: 32px;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+
+  .guarantee h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 6px;
+  }
+
+  .guarantee p {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.6;
+  }
+
+  /* FAQ */
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .faq-item {
+    background: var(--dunkel3);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+  }
+
+  .faq-item h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  .faq-item p {
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.7;
+  }
+
+  /* ÜBER AUTHOR */
+  .autor-box {
+    background: var(--dunkel3);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    margin-top: 32px;
+  }
+
+  .autor-avatar {
+    flex-shrink: 0;
+    width: 72px;
+    height: 72px;
+    background: rgba(230,57,70,0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: var(--rot);
+    font-weight: 700;
+  }
+
+  .autor-content h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 4px;
+  }
+
+  .autor-content .role {
+    font-size: 13px;
+    color: var(--rot);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .autor-content p {
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.7;
+  }
+
+  /* FINAL CTA */
+  .final-cta {
+    background: linear-gradient(135deg, #1a0a0a 0%, #0d0d0d 100%);
+    text-align: center;
+    border-top: 1px solid var(--border);
+  }
+
+  /* DIVIDER */
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 0;
+  }
+
+  @media (max-width: 600px) {
+    .fuer-wen-grid { grid-template-columns: 1fr; }
+    .autor-box { flex-direction: column; }
+    .checkout-box .preis { font-size: 44px; }
+    .module-card { flex-direction: column; gap: 12px; }
+    .hero h1 { font-size: 30px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">5-Tage-Kurs · Sofort-Download</span>
+    <h1>Warum du nie Nein sagst — und wie du das in <em>5 Tagen</em> änderst</h1>
+    <p class="lead">Ein kompakter Kurs für Menschen, die sich ständig überfordern, weil sie niemanden enttäuschen wollen.</p>
+    <a href="#checkout" class="cta-btn">Jetzt starten — nur 37&nbsp;€</a>
+    <p class="cta-sub">Einmalzahlung · Sofort-Zugang · Kein Abo</p>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="container">
+    <div class="section-label">Kennst du das?</div>
+    <h2>Du sagst Ja — obwohl du <em>eigentlich Nein</em> meinst</h2>
+    <ul class="problem-list">
+      <li>
+        <div class="icon">→</div>
+        <div>
+          <strong>Das automatische Ja</strong>
+          Bevor du nachgedacht hast, hast du schon zugesagt. Das Nein kam gar nicht in Frage.
+        </div>
+      </li>
+      <li>
+        <div class="icon">→</div>
+        <div>
+          <strong>Die Erschöpfung danach</strong>
+          Du hast wieder etwas übernommen, das nicht deins war. Und bist müde davon.
+        </div>
+      </li>
+      <li>
+        <div class="icon">→</div>
+        <div>
+          <strong>Die Angst, zu enttäuschen</strong>
+          Du weißt, dass du Nein sagen könntest. Aber die Vorstellung, wie jemand reagiert — das hält dich zurück.
+        </div>
+      </li>
+      <li>
+        <div class="icon">→</div>
+        <div>
+          <strong>Das Schweigen, das du bereust</strong>
+          Du hättest etwas sagen können. Du hast es nicht. Danach ärgerst du dich.
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- LÖSUNG -->
+<section>
+  <div class="container">
+    <div class="section-label">Der Kurs</div>
+    <h2>„Nein aus Überzeugung" — <em>5 Tage</em>, die wirklich etwas verändern</h2>
+    <p class="body-text">
+      Das hier ist kein Motivationskurs. Und kein Ratgeber mit Tipps, die du längst kennst.
+    </p>
+    <p class="body-text">
+      Wir schauen genau hin: Warum sagst du Ja, obwohl du Nein meinst? Was passiert in dem Moment, bevor du antwortest? Und wie entwickelst du eine Antwort, die aufrichtig ist — nicht nur mutig klingt?
+    </p>
+    <p class="body-text">
+      Jeden Tag eine kurze Video-Einheit. Ein Arbeitsblatt. Ein konkreter Auftrag für den Alltag.
+    </p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- KURS-INHALT -->
+<section style="background: var(--dunkel2);">
+  <div class="container">
+    <div class="section-label">Was dich erwartet</div>
+    <h2>5 Tage — 5 Schritte</h2>
+
+    <div class="module-list">
+      <div class="module-card">
+        <div class="module-day">
+          <span class="tag">Tag</span>
+          <div class="num">1</div>
+        </div>
+        <div class="module-content">
+          <h3>Der Selbstcheck</h3>
+          <p>Verstehe, wie stark das Muster bei dir ausgeprägt ist — und in welchen Situationen es besonders aktiv ist. Das ist keine Kritik an dir. Es ist der erste ehrliche Blick.</p>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-day">
+          <span class="tag">Tag</span>
+          <div class="num">2</div>
+        </div>
+        <div class="module-content">
+          <h3>Die Muster</h3>
+          <p>People-Pleasing ist kein Charakterfehler. Es ist ein erlerntes Verhalten — mit klaren Auslösern. Du lernst, deinen persönlichen Auslöser zu erkennen, bevor er dich steuert.</p>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-day">
+          <span class="tag">Tag</span>
+          <div class="num">3</div>
+        </div>
+        <div class="module-content">
+          <h3>Die Wurzel</h3>
+          <p>Hinter jedem automatischen Ja steckt ein Glaubenssatz: „Ich darf keine Last sein." Oder: „Wenn ich Nein sage, verliere ich die Beziehung." Du findest deinen — und hinterfragst ihn.</p>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-day">
+          <span class="tag">Tag</span>
+          <div class="num">4</div>
+        </div>
+        <div class="module-content">
+          <h3>Der Wendepunkt</h3>
+          <p>Die Drei-Sekunden-Pause. Das wichtigste Werkzeug des Kurses. Du übst, zwischen Anfrage und Antwort einen Moment zu schaffen — und in diesem Moment wirklich zu entscheiden.</p>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-day">
+          <span class="tag">Tag</span>
+          <div class="num">5</div>
+        </div>
+        <div class="module-content">
+          <h3>Das erste echte Nein</h3>
+          <p>Konkrete Sätze. Konkrete Situationen. Du gehst aus dem Kurs mit echten Formulierungen, die sich nach dir anfühlen — nicht nach einem Script.</p>
+        </div>
+      </div>
+      <div class="module-card" style="border-color: rgba(230,57,70,0.2);">
+        <div class="module-day" style="background: rgba(230,57,70,0.15);">
+          <span class="tag" style="font-size: 9px;">Bonus</span>
+          <div class="num" style="font-size: 16px; margin-top: 4px;">+</div>
+        </div>
+        <div class="module-content">
+          <h3>Integration im Alltag</h3>
+          <p>Wie du das Gelernte in deinen Alltag integrierst — dauerhaft. Mit einem 4-Wochen-Tracker und einem klaren Plan für die Momente, wo es wieder schwer wird.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FÜR WEN -->
+<section>
+  <div class="container">
+    <div class="section-label">Für wen ist das?</div>
+    <h2>Dieser Kurs ist <em>für dich</em>, wenn…</h2>
+
+    <div class="fuer-wen-grid">
+      <div class="fuer-wen-card">Du dich nach Gesprächen oft fragst: „Warum habe ich das wieder nicht gesagt?"</div>
+      <div class="fuer-wen-card">Du weißt, dass du Nein sagen könntest — aber die Angst vor der Reaktion dich aufhält.</div>
+      <div class="fuer-wen-card">Du das Gefühl hast, dass andere bestimmen, wie dein Tag aussieht.</div>
+      <div class="fuer-wen-card">Du dir wünschst, mehr bei dir zu sein — ohne dabei kalt oder abweisend zu wirken.</div>
+      <div class="fuer-wen-card">Du Jahrzehnte damit verbracht hast, es allen recht zu machen — und merkst, dass es dich erschöpft.</div>
+      <div class="fuer-wen-card">Du bereit bist, ehrlich hinzuschauen — ohne dich dafür zu verurteilen.</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ERGEBNISSE -->
+<section style="background: var(--dunkel2);">
+  <div class="container">
+    <div class="section-label">Was du mitnimmst</div>
+    <h2>Nach 5 Tagen wirst du…</h2>
+
+    <div class="ergebnisse-list">
+      <div class="ergebnis-item"><span>…verstehen, <strong>warum</strong> du automatisch Ja sagst — und was dahintersteckt</span></div>
+      <div class="ergebnis-item"><span>…deinen persönlichen <strong>Auslöser</strong> kennen, bevor er dich steuert</span></div>
+      <div class="ergebnis-item"><span>…die <strong>Drei-Sekunden-Pause</strong> aktiv nutzen können</span></div>
+      <div class="ergebnis-item"><span>…konkrete <strong>Sätze</strong> haben, die sich nach dir anfühlen</span></div>
+      <div class="ergebnis-item"><span>…dein <strong>erstes echtes Nein</strong> gesagt haben — in einer echten Situation</span></div>
+      <div class="ergebnis-item"><span>…einen <strong>Plan</strong> haben, wie du das in den nächsten Wochen fortsetzt</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- AUTOR -->
+<section>
+  <div class="container">
+    <div class="section-label">Wer steckt dahinter</div>
+    <h2>Andreas Stock</h2>
+
+    <div class="autor-box">
+      <div class="autor-avatar">AS</div>
+      <div class="autor-content">
+        <h4>Andreas Stock</h4>
+        <div class="role">Coach · Kursersteller · Bewusst Einfach</div>
+        <p>
+          Ich beschäftige mich seit Jahren damit, wie wir uns selbst im Weg stehen —
+          und was es braucht, um ehrlicher mit uns und anderen zu werden.
+          Nicht als Theorie, sondern als gelebte Praxis.
+          Dieser Kurs ist entstanden, weil so viele Menschen dasselbe Muster kennen —
+          und so wenige eine wirklich praxisnahe Anleitung bekommen haben.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CHECKOUT -->
+<section id="checkout" style="background: var(--dunkel2);">
+  <div class="container">
+    <div class="section-label">Jetzt starten</div>
+    <h2>Dein Zugang zu<br>„Nein aus Überzeugung"</h2>
+
+    <div class="checkout-box">
+      <div class="preis-label">Einmaliger Preis</div>
+      <div class="preis">37 <span>€</span></div>
+      <div class="preis-einmalig">Einmalzahlung · Sofort-Zugang · Kein Abo</div>
+
+      <ul class="checkout-includes">
+        <li>5 Video-Lektionen + Bonus-Modul</li>
+        <li>Digitales Workbook (30 Seiten)</li>
+        <li>4-Wochen-Tracker für den Alltag</li>
+        <li>Unbegrenzter Zugang</li>
+        <li>Geführte Meditation „Ich bin genug"</li>
+      </ul>
+
+      <a href="https://alfima.com/andreass95/nein-aus-uberzeugung" class="cta-btn">Jetzt kaufen — 37&nbsp;€</a>
+      <p class="cta-sub" style="margin-top: 12px;">Sicher bezahlen · Sofortiger Zugang nach Zahlung</p>
+    </div>
+
+    <div class="guarantee">
+      <div class="icon">🛡</div>
+      <div>
+        <h4>14 Tage Rückgaberecht</h4>
+        <p>Wenn du in den ersten 14 Tagen nicht zufrieden bist, bekommst du dein Geld zurück. Ohne Fragen. Ohne Diskussion. Das ist mein Versprechen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <div class="section-label">Häufige Fragen</div>
+    <h2>Was du noch wissen möchtest</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <h4>Wie lange habe ich Zugang zum Kurs?</h4>
+        <p>Unbegrenzt. Du kannst die Inhalte so oft und so lange nutzen, wie du möchtest.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Wie viel Zeit brauche ich pro Tag?</h4>
+        <p>Jede Tages-Einheit dauert zwischen 10 und 20 Minuten. Dazu kommt die kleine Aufgabe für den Alltag — die kostet keine extra Zeit, weil sie mitten im Leben passiert.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Was, wenn ich schon viele Kurse zu dem Thema gemacht habe?</h4>
+        <p>Dann weißt du wahrscheinlich schon viel. Dieser Kurs fokussiert sich auf eine Sache: den Moment der Entscheidung. Das ist etwas anderes als Wissen über People-Pleasing zu sammeln.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Funktioniert das auch, wenn das Muster sehr tief sitzt?</h4>
+        <p>Ja — gerade dann. Der Kurs geht bis zur Wurzel. Er arbeitet mit den Glaubenssätzen, die hinter dem automatischen Ja stecken. Das ist keine Oberflächen-Übung.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Was ist das Workbook?</h4>
+        <p>Ein 30-seitiges digitales Begleitheft. Du kannst es am Bildschirm ausfüllen oder ausdrucken. Jede Tages-Einheit hat eine eigene Seite mit einer konkreten Übung.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container" style="text-align: center;">
+    <div class="section-label">Bereit?</div>
+    <h2 style="margin-bottom: 16px;">Der erste Schritt ist der ehrlichste</h2>
+    <p class="body-text" style="max-width: 480px; margin: 0 auto 32px;">
+      Du weißt bereits, dass sich etwas verändern muss. Dieser Kurs ist keine Lösung von außen — er hilft dir, die eigene zu finden.
+    </p>
+    <a href="#checkout" class="cta-btn">Jetzt starten — nur 37&nbsp;€</a>
+    <p class="cta-sub" style="margin-top: 12px;">14 Tage Rückgaberecht · Sofort-Zugang</p>
+  </div>
+</section>
+
+</body>
+</html>

@@ -2,7 +2,7 @@ name: Andi Mentalgesund Autopilot - Story (09:00)
 
 on:
   schedule:
-    - cron: '55 7 * * *'    # 07:55 UTC = 09:55 CEST (täglich)
+    - cron: '10 7 * * *'    # 07:10 UTC = 09:10 CEST (täglich)
   workflow_dispatch:         # Manuell auslösbar
 
 jobs:

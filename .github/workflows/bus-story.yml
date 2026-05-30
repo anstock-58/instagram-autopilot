@@ -1,7 +1,9 @@
 name: Business-und-Spirit Autopilot - Story (09:00)
 
 on:
-  workflow_dispatch:         # Getriggert von cron-job.org (09:00 Europe/Berlin)
+  schedule:
+    - cron: '0 7 * * *'     # 07:00 UTC = 09:00 CEST (täglich)
+  workflow_dispatch:
 
 jobs:
   post-story:

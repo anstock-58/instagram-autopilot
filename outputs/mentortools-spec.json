@@ -1,0 +1,223 @@
+﻿{
+    "openapi":  "3.1.0",
+    "info":  {
+                 "title":  "Mentortools Public API",
+                 "description":  "Mentortools public API service",
+                 "version":  "0.1.0"
+             },
+    "paths":  {
+                  "/general/v1/whoami":  {
+                                             "get":  "@{tags=System.Object[]; summary=Get Api Key Info; operationId=api_key_auth_get_api_key_info; responses=; security=System.Object[]}"
+                                         },
+                  "/orders/v1/ipn/payment":  {
+                                                 "post":  "@{tags=System.Object[]; summary=Handle Ipn Payment; operationId=api_key_auth_handle_ipn_payment; requestBody=; responses=; security=System.Object[]}"
+                                             },
+                  "/orders/v1/ipn/refund":  {
+                                                "post":  "@{tags=System.Object[]; summary=Handle Ipn Refund; operationId=api_key_auth_handle_ipn_refund; requestBody=; responses=; security=System.Object[]}"
+                                            },
+                  "/courses/v1/":  {
+                                       "get":  "@{tags=System.Object[]; summary=Get Courses; description=Get simplified list of courses, paginated with limit and offset. Archived courses can be also retrieved via archived query parameter. Total count of courses can be retrieved via /count endpoint.; operationId=api_key_auth_get_courses; parameters=System.Object[]; responses=; security=System.Object[]}",
+                                       "post":  "@{tags=System.Object[]; summary=Add Course; description=Add new course. Returns ID of the newly created course.; operationId=api_key_auth_add_course; requestBody=; responses=; security=System.Object[]}"
+                                   },
+                  "/courses/v1/count":  {
+                                            "get":  "@{tags=System.Object[]; summary=Count Courses; description=Get total count of courses. Archived courses can be also counted via archived query parameter.; operationId=api_key_auth_count_courses; parameters=System.Object[]; responses=; security=System.Object[]}"
+                                        },
+                  "/courses/v1/{course_id}":  {
+                                                  "get":  "@{tags=System.Object[]; summary=Get Course; description=Get course by ID. Returns simplified course information.; operationId=api_key_auth_get_course; parameters=System.Object[]; responses=; security=System.Object[]}",
+                                                  "put":  "@{tags=System.Object[]; summary=Update Course; description=Update course information by ID. Returns True if update was successful.; operationId=api_key_auth_update_course; parameters=System.Object[]; requestBody=; responses=; security=System.Object[]}",
+                                                  "delete":  "@{tags=System.Object[]; summary=Delete Course; description=Delete course by ID. Returns True if deletion was successful.; operationId=api_key_auth_delete_course; parameters=System.Object[]; responses=; security=System.Object[]}",
+                                                  "patch":  "@{tags=System.Object[]; summary=Patch Course; description=Patch course information by ID. If a field is not provided, it will not be updated. Returns True if update was successful.; operationId=api_key_auth_patch_course; parameters=System.Object[]; requestBody=; responses=; security=System.Object[]}"
+                                              },
+                  "/courses/v1/{course_id}/info":  {
+                                                       "get":  "@{tags=System.Object[]; summary=Get Course Info; description=Get detailed course information by ID.; operationId=api_key_auth_get_course_info; parameters=System.Object[]; responses=; security=System.Object[]}"
+                                                   },
+                  "/courses/v1/{course_id}/modules":  {
+                                                          "get":  "@{tags=System.Object[]; summary=Get Course Modules; description=Get list of modules for a course, paginated with limit and offset. Total count of modules can be retrieved via /count endpoint. Returns simplified module information.; operationId=api_key_auth_get_course_modules; parameters=System.Object[]; responses=; security=System.Object[]}",
+                                                          "post":  "@{tags=System.Object[]; summary=Add Course Module; description=Add new module to a course. Returns ID of the newly created module.; operationId=api_key_auth_add_course_module; parameters=System.Object[]; requestBody=; responses=; security=System.Object[]}"
+                                                      },
+                  "/courses/v1/{course_id}/modules/count":  {
+                                                                "get":  "@{tags=System.Object[]; summary=Get Course Module Count; description=Get count of modules for a course. Returns total number of modules.; operationId=api_key_auth_get_course_module_count; parameters=System.Object[]; responses=; security=System.Object[]}"
+                                                            },
+                  "/courses/v1/modules/{module_id}":  {
+                                                          "get":  "@{tags=System.Object[]; summary=Get Course Module; description=Get course module by ID. Returns simplified module information.; operationId=api_key_auth_get_course_module; parameters=System.Object[]; responses=; security=System.Object[]}",
+                                                          "put":  "@{tags=System.Object[]; summary=Update Course Module; description=Update course module by ID. Returns True if update was successful.; operationId=api_key_auth_update_course_module; parameters=System.Object[]; requestBody=; responses=; security=System.Object[]}",
+                                                          "delete":  "@{tags=System.Object[]; summary=Delete Course Module; description=Delete course module by ID. Returns True if deletion was successful.; operationId=api_key_auth_delete_course_module; parameters=System.Object[]; responses=; security=System.Object[]}",
+                                                          "patch":  "@{tags=System.Object[]; summary=Patch Course Module; description=Patch course module by ID. If a field is not provided, it will not be updated. Returns True if update was successful.; operationId=api_key_auth_patch_course_module; parameters=System.Object[]; requestBody=; responses=; security=System.Object[]}"
+                                                      },
+                  "/courses/v1/modules/{module_id}/info":  {
+                                                               "get":  "@{tags=System.Object[]; summary=Get Course Module Info; description=Get detailed information about a course module by ID.; operationId=api_key_auth_get_course_module_info; parameters=System.Object[]; responses=; security=System.Object[]}"
+                                                           },
+                  "/courses/v1/modules/{module_id}/submodules":  {
+                                                                     "get":  "@{tags=System.Object[]; summary=Get Module Submodules; description=Get list of submodules for a course module, paginated with limit and offset. Total count of submodules can be retrieved via /count endpoint. Returns simplified submodule information.; operationId=api_key_auth_get_module_submodules; parameters=System.Object[]; responses=; security=System.Object[]}",
+                                                                     "post":  "@{tags=System.Object[]; summary=Add Module Submodule; description=Add new submodule to a course module. Returns ID of the newly created submodule.; operationId=api_key_auth_add_module_submodule; parameters=System.Object[]; requestBody=; responses=; security=System.Object[]}"
+                                                                 },
+                  "/courses/v1/modules/{module_id}/submodules/count":  {
+                                                                           "get":  "@{tags=System.Object[]; summary=Get Module Submodule Count; description=Get count of submodules for a course module. Returns total number of submodules.; operationId=api_key_auth_get_module_submodule_count; parameters=System.Object[]; responses=; security=System.Object[]}"
+                                                                       },
+                  "/courses/v1/submodules/{submodule_id}":  {
+                                                                "get":  "@{tags=System.Object[]; summary=Get Submodule; description=Get submodule by ID. Returns submodule information.; operationId=api_key_auth_get_submodule; parameters=System.Object[]; responses=; security=System.Object[]}",
+                                                                "put":  "@{tags=System.Object[]; summary=Update Module Submodule; description=Update submodule by ID. Returns True if update was successful.; operationId=api_key_auth_update_module_submodule; parameters=System.Object[]; requestBody=; responses=; security=System.Object[]}",
+                                                                "delete":  "@{tags=System.Object[]; summary=Delete Module Submodule; description=Delete submodule by ID. Returns True if deletion was successful.; operationId=api_key_auth_delete_module_submodule; parameters=System.Object[]; responses=; security=System.Object[]}",
+                                                                "patch":  "@{tags=System.Object[]; summary=Patch Module Submodule; description=Patch submodule by ID. If a field is not provided, it will not be updated. Returns True if update was successful.; operationId=api_key_auth_patch_module_submodule; parameters=System.Object[]; requestBody=; responses=; security=System.Object[]}"
+                                                            },
+                  "/courses/v1/modules/{module_id}/lessons":  {
+                                                                  "get":  "@{tags=System.Object[]; summary=Get Course Module Lessons; description=Get list of lessons for a course module, paginated with limit and offset. Total count of lessons can be retrieved via /count endpoint. Returns simplified lesson information.; operationId=api_key_auth_get_course_module_lessons; parameters=System.Object[]; responses=; security=System.Object[]}",
+                                                                  "post":  "@{tags=System.Object[]; summary=Add Course Module Lessons; description=Add new lesson to a course module. Returns ID of the newly created lesson.; operationId=api_key_auth_add_course_module_lessons; parameters=System.Object[]; requestBody=; responses=; security=System.Object[]}"
+                                                              },
+                  "/courses/v1/modules/{module_id}/lessons/count":  {
+                                                                        "get":  "@{tags=System.Object[]; summary=Get Course Module Lessons Count; description=Get count of lessons for a course module. Returns total number of lessons.; operationId=api_key_auth_get_course_module_lessons_count; parameters=System.Object[]; responses=; security=System.Object[]}"
+                                                                    },
+                  "/courses/v1/lessons/{lesson_id}":  {
+                                                          "get":  "@{tags=System.Object[]; summary=Get Course Module Lesson; description=Get course module lesson by ID. Returns simplified lesson information.; operationId=api_key_auth_get_course_module_lesson; parameters=System.Object[]; responses=; security=System.Object[]}",
+                                                          "put":  "@{tags=System.Object[]; summary=Update Course Module Lesson; description=Update course module lesson by ID. Returns True if update was successful.; operationId=api_key_auth_update_course_module_lesson; parameters=System.Object[]; requestBody=; responses=; security=System.Object[]}",
+                                                          "delete":  "@{tags=System.Object[]; summary=Delete Course Module Lesson; description=Delete course module lesson by ID. Returns True if deletion was successful.; operationId=api_key_auth_delete_course_module_lesson; parameters=System.Object[]; responses=; security=System.Object[]}",
+                                                          "patch":  "@{tags=System.Object[]; summary=Patch Course Module Lesson; description=Patch course module lesson by ID. If a field is not provided, it will not be updated. Returns True if update was successful.; operationId=api_key_auth_patch_course_module_lesson; parameters=System.Object[]; requestBody=; responses=; security=System.Object[]}"
+                                                      },
+                  "/courses/v1/lessons/{lesson_id}/info":  {
+                                                               "get":  "@{tags=System.Object[]; summary=Get Course Module Lesson Info; description=Get detailed information about a course module lesson by ID.; operationId=api_key_auth_get_course_module_lesson_info; parameters=System.Object[]; responses=; security=System.Object[]}"
+                                                           },
+                  "/courses/v1/lessons/{lesson_id}/content_blocks":  {
+                                                                         "get":  "@{tags=System.Object[]; summary=Get Course Module Lesson Content Blocks; description=Get list of content blocks for a course module lesson by ID.; operationId=api_key_auth_get_course_module_lesson_content_blocks; parameters=System.Object[]; responses=; security=System.Object[]}",
+                                                                         "patch":  "@{tags=System.Object[]; summary=Patch Course Module Lesson Content Blocks; description=Patch content blocks of a course module lesson by ID. If id field is not provided, a new content block will be created.; operationId=api_key_auth_patch_course_module_lesson_content_blocks; parameters=System.Object[]; requestBody=; responses=; security=System.Object[]}"
+                                                                     },
+                  "/courses/v1/lessons/{lesson_id}/attached_files":  {
+                                                                         "patch":  "@{tags=System.Object[]; summary=Patch Course Module Lesson Attached Files; description=Patch attached files of a course module lesson by ID. If id field is not provided, a new attached file will be created.; operationId=api_key_auth_patch_course_module_lesson_attached_files; parameters=System.Object[]; requestBody=; responses=; security=System.Object[]}"
+                                                                     },
+                  "/mediastorage/v1/files/upload":  {
+                                                        "post":  "@{tags=System.Object[]; summary=Upload File; description=Upload file to mediastorage; operationId=api_key_auth_upload_file; requestBody=; responses=; security=System.Object[]}"
+                                                    },
+                  "/mediastorage/v1/files/all/count":  {
+                                                           "get":  "@{tags=System.Object[]; summary=Get All Files Count; description=Get file count in mediastorage, nesting is ignored; operationId=api_key_auth_get_all_files_count; responses=; security=System.Object[]}"
+                                                       },
+                  "/mediastorage/v1/files/count":  {
+                                                       "get":  "@{tags=System.Object[]; summary=Get Files Count; description=Get file count in mediastorage, nesting is considered, if parent_folder_id is provided, counts only files in the root folder; operationId=api_key_auth_get_files_count; parameters=System.Object[]; responses=; security=System.Object[]}"
+                                                   },
+                  "/mediastorage/v1/files":  {
+                                                 "get":  "@{tags=System.Object[]; summary=Get Files; description=List files in mediastorage. Files are listed by their parent folder. If no parent folder is provided, lists root files.; operationId=api_key_auth_get_files; parameters=System.Object[]; responses=; security=System.Object[]}"
+                                             },
+                  "/mediastorage/v1/files/all":  {
+                                                     "get":  "@{tags=System.Object[]; summary=Get Files All; description=List files in mediastorage. Files are listed regardless of their parent folder.; operationId=api_key_auth_get_files_all; parameters=System.Object[]; responses=; security=System.Object[]}"
+                                                 },
+                  "/mediastorage/v1/files/{id_}":  {
+                                                       "get":  "@{tags=System.Object[]; summary=Get File; description=Get file from mediastorage by ID; operationId=api_key_auth_get_file; parameters=System.Object[]; responses=; security=System.Object[]}",
+                                                       "put":  "@{tags=System.Object[]; summary=Update File; description=Update folder in mediastorage; operationId=api_key_auth_update_file; parameters=System.Object[]; requestBody=; responses=; security=System.Object[]}",
+                                                       "delete":  "@{tags=System.Object[]; summary=Delete File; description=Get file from mediastorage by ID; operationId=api_key_auth_delete_file; parameters=System.Object[]; responses=; security=System.Object[]}"
+                                                   },
+                  "/mediastorage/v1/folders/all/count":  {
+                                                             "get":  "@{tags=System.Object[]; summary=Get All Folders Count; description=Get folder count in mediastorage, nesting is ignored; operationId=api_key_auth_get_all_folders_count; responses=; security=System.Object[]}"
+                                                         },
+                  "/mediastorage/v1/folders/count":  {
+                                                         "get":  "@{tags=System.Object[]; summary=Get Folders Count; description=Get folder count in mediastorage, nesting is considered, if parent_folder_id is provided, counts only subfolders of the root folder; operationId=api_key_auth_get_folders_count; parameters=System.Object[]; responses=; security=System.Object[]}"
+                                                     },
+                  "/mediastorage/v1/folders/all":  {
+                                                       "get":  "@{tags=System.Object[]; summary=Get All Folders; description=List folders in mediastorage, nesting is ignored; operationId=api_key_auth_get_all_folders; parameters=System.Object[]; responses=; security=System.Object[]}"
+                                                   },
+                  "/mediastorage/v1/folders":  {
+                                                   "get":  "@{tags=System.Object[]; summary=Get Folders; description=List folders in mediastorage; operationId=api_key_auth_get_folders; parameters=System.Object[]; responses=; security=System.Object[]}",
+                                                   "post":  "@{tags=System.Object[]; summary=Create Folder; description=Create folder in mediastorage; operationId=api_key_auth_create_folder; requestBody=; responses=; security=System.Object[]}"
+                                               },
+                  "/mediastorage/v1/folders/{id_}":  {
+                                                         "get":  "@{tags=System.Object[]; summary=Get Folder; description=Get folder from mediastorage by ID; operationId=api_key_auth_get_folder; parameters=System.Object[]; responses=; security=System.Object[]}",
+                                                         "put":  "@{tags=System.Object[]; summary=Update Folder; description=Update folder in mediastorage; operationId=api_key_auth_update_folder; parameters=System.Object[]; requestBody=; responses=; security=System.Object[]}",
+                                                         "delete":  "@{tags=System.Object[]; summary=Delete Folder; description=Delete folder from mediastorage by ID; operationId=api_key_auth_delete_folder; parameters=System.Object[]; responses=; security=System.Object[]}"
+                                                     }
+              },
+    "components":  {
+                       "schemas":  {
+                                       "Address":  "@{properties=; type=object; title=Address}",
+                                       "ApiKeyGet":  "@{properties=; type=object; required=System.Object[]; title=ApiKeyGet}",
+                                       "AttachedFile":  "@{properties=; type=object; required=System.Object[]; title=AttachedFile}",
+                                       "AttachedFileCreate":  "@{properties=; type=object; required=System.Object[]; title=AttachedFileCreate}",
+                                       "AttachedFileCreateOrUpdate":  "@{properties=; type=object; required=System.Object[]; title=AttachedFileCreateOrUpdate}",
+                                       "AttachedFilePatch":  "@{properties=; type=object; required=System.Object[]; title=AttachedFilePatch}",
+                                       "BaseModel":  "@{properties=; type=object; title=BaseModel}",
+                                       "BillingType":  "@{type=string; enum=System.Object[]; title=BillingType; description=An enumeration.}",
+                                       "Body_upload_file_mediastorage_v1_files_upload_post":  "@{properties=; type=object; required=System.Object[]; title=Body_upload_file_mediastorage_v1_files_upload_post}",
+                                       "ButtonPosition":  "@{type=string; enum=System.Object[]; title=ButtonPosition; description=An enumeration.}",
+                                       "ButtonSize":  "@{type=string; enum=System.Object[]; title=ButtonSize; description=An enumeration.}",
+                                       "ButtonTarget":  "@{type=string; enum=System.Object[]; title=ButtonTarget; description=An enumeration.}",
+                                       "CategoryPermissions":  "@{properties=; type=object; title=CategoryPermissions}",
+                                       "Content":  "@{properties=; type=object; title=Content}",
+                                       "ContentBlock":  "@{properties=; type=object; required=System.Object[]; title=ContentBlock}",
+                                       "ContentBlockCreate":  "@{properties=; type=object; required=System.Object[]; title=ContentBlockCreate}",
+                                       "ContentBlockPatch":  "@{properties=; type=object; required=System.Object[]; title=ContentBlockPatch}",
+                                       "ContentBlockTypeStrEnum":  "@{type=string; enum=System.Object[]; title=ContentBlockTypeStrEnum; description=An enumeration.}",
+                                       "ContentBlockUpdate":  "@{properties=; type=object; required=System.Object[]; title=ContentBlockUpdate}",
+                                       "Course":  "@{properties=; type=object; required=System.Object[]; title=Course}",
+                                       "CourseAccessTypeStrEnum":  "@{type=string; enum=System.Object[]; title=CourseAccessTypeStrEnum; description=An enumeration.}",
+                                       "CourseContentBlock":  "@{properties=; type=object; required=System.Object[]; title=CourseContentBlock}",
+                                       "CourseCreate":  "@{properties=; type=object; required=System.Object[]; title=CourseCreate}",
+                                       "CourseModule":  "@{properties=; type=object; required=System.Object[]; title=CourseModule}",
+                                       "CourseModuleCreate":  "@{properties=; type=object; required=System.Object[]; title=CourseModuleCreate}",
+                                       "CourseModulePatch":  "@{properties=; type=object; title=CourseModulePatch}",
+                                       "CourseModuleSimple":  "@{properties=; type=object; required=System.Object[]; title=CourseModuleSimple}",
+                                       "CourseModuleUpdate":  "@{properties=; type=object; required=System.Object[]; title=CourseModuleUpdate}",
+                                       "CourseModuleViewTypeStrEnum":  "@{type=string; enum=System.Object[]; title=CourseModuleViewTypeStrEnum; description=An enumeration.}",
+                                       "CoursePatch":  "@{properties=; type=object; title=CoursePatch}",
+                                       "CoursePaymentTypeStrEnum":  "@{type=string; enum=System.Object[]; title=CoursePaymentTypeStrEnum; description=An enumeration.}",
+                                       "CourseSimple":  "@{properties=; type=object; required=System.Object[]; title=CourseSimple}",
+                                       "CourseSubmodule":  "@{properties=; type=object; required=System.Object[]; title=CourseSubmodule}",
+                                       "CourseSubmoduleCreate":  "@{properties=; type=object; required=System.Object[]; title=CourseSubmoduleCreate}",
+                                       "CourseSubmodulePatch":  "@{properties=; type=object; title=CourseSubmodulePatch}",
+                                       "CourseSubmoduleUpdate":  "@{properties=; type=object; required=System.Object[]; title=CourseSubmoduleUpdate}",
+                                       "CourseUpdate":  "@{properties=; type=object; required=System.Object[]; title=CourseUpdate}",
+                                       "File":  "@{properties=; type=object; required=System.Object[]; title=File}",
+                                       "FileUpdate":  "@{properties=; type=object; required=System.Object[]; title=FileUpdate}",
+                                       "FileUploadResult":  "@{properties=; type=object; required=System.Object[]; title=FileUploadResult}",
+                                       "Folder":  "@{properties=; type=object; required=System.Object[]; title=Folder}",
+                                       "FolderCreate":  "@{properties=; type=object; required=System.Object[]; title=FolderCreate}",
+                                       "FolderUpdate":  "@{properties=; type=object; required=System.Object[]; title=FolderUpdate}",
+                                       "HTTPValidationError":  "@{properties=; type=object; title=HTTPValidationError}",
+                                       "IpnOrderPayment":  "@{properties=; type=object; required=System.Object[]; title=IpnOrderPayment}",
+                                       "IpnOrderPaymentResponse":  "@{properties=; type=object; required=System.Object[]; title=IpnOrderPaymentResponse}",
+                                       "IpnOrderRefund":  "@{properties=; type=object; required=System.Object[]; title=IpnOrderRefund}",
+                                       "IpnOrderRefundResponse":  "@{properties=; type=object; required=System.Object[]; title=IpnOrderRefundResponse}",
+                                       "IpnTransaction":  "@{properties=; type=object; required=System.Object[]; title=IpnTransaction}",
+                                       "LessonTypeStrEnum":  "@{type=string; enum=System.Object[]; title=LessonTypeStrEnum; description=An enumeration.}",
+                                       "MarketplaceBuyer":  "@{properties=; type=object; required=System.Object[]; title=MarketplaceBuyer}",
+                                       "ModuleLesson":  "@{properties=; type=object; required=System.Object[]; title=ModuleLesson}",
+                                       "ModuleLessonCreate":  "@{properties=; type=object; required=System.Object[]; title=ModuleLessonCreate}",
+                                       "ModuleLessonPatch":  "@{properties=; type=object; title=ModuleLessonPatch}",
+                                       "ModuleLessonPatchAttachedFiles":  "@{properties=; type=object; required=System.Object[]; title=ModuleLessonPatchAttachedFiles}",
+                                       "ModuleLessonPatchContent":  "@{properties=; type=object; required=System.Object[]; title=ModuleLessonPatchContent}",
+                                       "ModuleLessonSimple":  "@{properties=; type=object; required=System.Object[]; title=ModuleLessonSimple}",
+                                       "ModuleLessonUpdate":  "@{properties=; type=object; required=System.Object[]; title=ModuleLessonUpdate}",
+                                       "PortalInfo":  "@{properties=; type=object; required=System.Object[]; title=PortalInfo}",
+                                       "PortalMemberBase":  "@{properties=; type=object; required=System.Object[]; title=PortalMemberBase}",
+                                       "ResponseWrapper":  "@{properties=; type=object; required=System.Object[]; title=ResponseWrapper}",
+                                       "ResponseWrapperList_ContentBlock_":  "@{properties=; type=object; required=System.Object[]; title=ResponseWrapperList[ContentBlock]}",
+                                       "ResponseWrapperList_CourseModuleSimple_":  "@{properties=; type=object; required=System.Object[]; title=ResponseWrapperList[CourseModuleSimple]}",
+                                       "ResponseWrapperList_CourseSimple_":  "@{properties=; type=object; required=System.Object[]; title=ResponseWrapperList[CourseSimple]}",
+                                       "ResponseWrapperList_CourseSubmodule_":  "@{properties=; type=object; required=System.Object[]; title=ResponseWrapperList[CourseSubmodule]}",
+                                       "ResponseWrapperList_File_":  "@{properties=; type=object; required=System.Object[]; title=ResponseWrapperList[File]}",
+                                       "ResponseWrapperList_Folder_":  "@{properties=; type=object; required=System.Object[]; title=ResponseWrapperList[Folder]}",
+                                       "ResponseWrapperList_ModuleLessonSimple_":  "@{properties=; type=object; required=System.Object[]; title=ResponseWrapperList[ModuleLessonSimple]}",
+                                       "ResponseWrapper_CourseModuleSimple_":  "@{properties=; type=object; required=System.Object[]; title=ResponseWrapper[CourseModuleSimple]}",
+                                       "ResponseWrapper_CourseModule_":  "@{properties=; type=object; required=System.Object[]; title=ResponseWrapper[CourseModule]}",
+                                       "ResponseWrapper_CourseSimple_":  "@{properties=; type=object; required=System.Object[]; title=ResponseWrapper[CourseSimple]}",
+                                       "ResponseWrapper_CourseSubmodule_":  "@{properties=; type=object; required=System.Object[]; title=ResponseWrapper[CourseSubmodule]}",
+                                       "ResponseWrapper_Course_":  "@{properties=; type=object; required=System.Object[]; title=ResponseWrapper[Course]}",
+                                       "ResponseWrapper_FileUploadResult_":  "@{properties=; type=object; required=System.Object[]; title=ResponseWrapper[FileUploadResult]}",
+                                       "ResponseWrapper_File_":  "@{properties=; type=object; required=System.Object[]; title=ResponseWrapper[File]}",
+                                       "ResponseWrapper_Folder_":  "@{properties=; type=object; required=System.Object[]; title=ResponseWrapper[Folder]}",
+                                       "ResponseWrapper_IpnOrderPaymentResponse_":  "@{properties=; type=object; required=System.Object[]; title=ResponseWrapper[IpnOrderPaymentResponse]}",
+                                       "ResponseWrapper_IpnOrderRefundResponse_":  "@{properties=; type=object; required=System.Object[]; title=ResponseWrapper[IpnOrderRefundResponse]}",
+                                       "ResponseWrapper_ModuleLessonSimple_":  "@{properties=; type=object; required=System.Object[]; title=ResponseWrapper[ModuleLessonSimple]}",
+                                       "ResponseWrapper_ModuleLesson_":  "@{properties=; type=object; required=System.Object[]; title=ResponseWrapper[ModuleLesson]}",
+                                       "ResponseWrapper_TokenInfo_":  "@{properties=; type=object; required=System.Object[]; title=ResponseWrapper[TokenInfo]}",
+                                       "ResponseWrapper_bool_":  "@{properties=; type=object; required=System.Object[]; title=ResponseWrapper[bool]}",
+                                       "ResponseWrapper_int_":  "@{properties=; type=object; required=System.Object[]; title=ResponseWrapper[int]}",
+                                       "TokenInfo":  "@{properties=; type=object; required=System.Object[]; title=TokenInfo}",
+                                       "ValidationError":  "@{properties=; type=object; required=System.Object[]; title=ValidationError}"
+                                   },
+                       "securitySchemes":  {
+                                               "HTTPBearer":  "@{type=http; scheme=bearer}",
+                                               "APIKeyHeader":  "@{type=apiKey; in=header; name=server_name}"
+                                           }
+                   },
+    "servers":  [
+                    {
+                        "url":  "https://app.mentortools.com/public_api"
+                    }
+                ]
+}

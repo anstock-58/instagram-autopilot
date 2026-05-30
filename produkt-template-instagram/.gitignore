@@ -1,0 +1,6 @@
+# Logs
+outputs/autopilot-log.txt
+outputs/post-archiv.csv
+
+# Pause-Datei (lokal, nicht committen)
+# PAUSED wird explizit committed wenn man pausieren will

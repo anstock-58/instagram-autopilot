@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Nein aus Überzeugung — Workbook</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --dark:   #1C1C1E;
+    --accent: #C0392B;
+    --light:  #F5F5F5;
+    --mid:    #D0D0D0;
+    --gray:   #888;
+    --text:   #2D2D2D;
+  }
+
+  body {
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    color: var(--text);
+    background: #fff;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  /* ── PRINT ─────────────────────────────── */
+  @media print {
+    .page { page-break-after: always; }
+    .page:last-child { page-break-after: avoid; }
+    body { font-size: 10pt; }
+    .no-print { display: none; }
+  }
+
+  @page {
+    size: A4;
+    margin: 1.8cm 2cm;
+  }
+
+  /* ── LAYOUT ─────────────────────────────── */
+  .page {
+    max-width: 170mm;
+    margin: 0 auto;
+    padding: 0 0 2cm 0;
+    min-height: 257mm;
+  }
+
+  /* ── COVER ──────────────────────────────── */
+  .cover {
+    background: var(--dark);
+    min-height: 255mm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3cm 2cm;
+    border-radius: 4px;
+  }
+  .cover-label {
+    font-size: 9pt;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.2cm;
+  }
+  .cover-title {
+    font-size: 28pt;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 0.6cm;
+    letter-spacing: -0.5px;
+  }
+  .cover-sub {
+    font-size: 13pt;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 0.3cm;
+  }
+  .cover-meta {
+    font-size: 10pt;
+    color: rgba(255,255,255,0.45);
+    margin-top: 1.5cm;
+    letter-spacing: 1px;
+  }
+  .cover-divider {
+    width: 50px;
+    height: 3px;
+    background: var(--accent);
+    margin: 1cm auto;
+    border-radius: 2px;
+  }
+
+  /* ── MODULE HEADER ──────────────────────── */
+  .module-header {
+    background: var(--dark);
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 6px;
+    margin-bottom: 1cm;
+  }
+  .module-header .tag {
+    font-size: 8pt;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .module-header h2 {
+    font-size: 15pt;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+  .module-header .sub {
+    font-size: 9pt;
+    color: rgba(255,255,255,0.6);
+    margin-top: 2px;
+  }
+
+  /* ── SECTION LABEL ──────────────────────── */
+  .section-label {
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 1cm 0 4px;
+  }
+  .accent-line {
+    height: 2px;
+    background: var(--accent);
+    margin-bottom: 0.5cm;
+    border-radius: 1px;
+  }
+
+  /* ── INTRO TEXT ─────────────────────────── */
+  .intro {
+    font-size: 10pt;
+    color: var(--text);
+    margin-bottom: 0.6cm;
+    line-height: 1.6;
+  }
+
+  /* ── QUESTION BLOCK ─────────────────────── */
+  .question-block { margin-bottom: 0.6cm; }
+  .question-label {
+    font-size: 10.5pt;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 3px;
+  }
+  .question-hint {
+    font-size: 8.5pt;
+    color: var(--gray);
+    font-style: italic;
+    margin-bottom: 5px;
+  }
+  .write-lines { margin-top: 4px; }
+  .write-line {
+    border: none;
+    border-bottom: 1px solid var(--mid);
+    height: 24px;
+    display: block;
+    width: 100%;
+    margin-bottom: 4px;
+  }
+
+  /* ── BELIEF CHECKLIST ───────────────────── */
+  .belief-list { list-style: none; margin: 0.3cm 0; }
+  .belief-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--light);
+    font-size: 10pt;
+  }
+  .checkbox {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    border: 1.5px solid var(--mid);
+    border-radius: 3px;
+    margin-top: 1px;
+  }
+
+  /* ── TEMPLATE BOX ───────────────────────── */
+  .template-box {
+    background: var(--light);
+    border-left: 3px solid var(--accent);
+    padding: 12px 16px;
+    margin-bottom: 5px;
+    border-radius: 0 4px 4px 0;
+  }
+  .template-box .quote {
+    font-size: 12pt;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.4;
+  }
+  .template-box .context {
+    font-size: 8.5pt;
+    color: var(--gray);
+    font-style: italic;
+    margin-top: 4px;
+  }
+
+  /* ── TRACKER ────────────────────────────── */
+  .tracker-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.4cm 0;
+    font-size: 9pt;
+  }
+  .tracker-table th {
+    background: var(--dark);
+    color: #fff;
+    padding: 8px 6px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 8.5pt;
+  }
+  .tracker-table td {
+    border: 1px solid var(--mid);
+    padding: 10px 6px;
+    text-align: center;
+    min-height: 32px;
+  }
+  .tracker-table tr:nth-child(even) td { background: var(--light); }
+  .tracker-table td.week {
+    font-weight: 600;
+    text-align: left;
+    padding-left: 10px;
+    background: #f0f0f0;
+  }
+  .tracker-table td.note { text-align: left; }
+
+  /* ── PRINT HINT ─────────────────────────── */
+  .print-hint {
+    background: #FFF9C4;
+    border: 1px solid #F9A825;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 10pt;
+    color: #5D4037;
+    margin-bottom: 2cm;
+    text-align: center;
+  }
+  .print-hint strong { color: #E65100; }
+</style>
+</head>
+<body>
+
+<!-- DRUCKHINWEIS (nur im Browser sichtbar) -->
+<div class="print-hint no-print">
+  <strong>Als PDF speichern:</strong> Strg+P → Drucker: "Als PDF speichern" → A4 → Ränder: Keine → Hintergrundgrafiken: An → Speichern
+</div>
+
+<!-- ─────────────────────────────────── -->
+<!-- DECKBLATT                          -->
+<!-- ─────────────────────────────────── -->
+<div class="page">
+  <div class="cover">
+    <div class="cover-label">Workbook</div>
+    <div class="cover-title">NEIN AUS<br>ÜBERZEUGUNG</div>
+    <div class="cover-divider"></div>
+    <div class="cover-sub">Dein persönliches Workbook</div>
+    <div class="cover-sub" style="color:rgba(255,255,255,0.5); font-size:11pt; margin-top:6px;">5 Tage · 6 Übungen · Ein echter Schritt</div>
+    <div class="cover-meta">Andreas Stock</div>
+  </div>
+</div>
+
+<!-- ─────────────────────────────────── -->
+<!-- SEITE 1: SELBSTCHECK               -->
+<!-- ─────────────────────────────────── -->
+<div class="page">
+  <div class="module-header">
+    <div class="tag">Seite 1 · Tag 1</div>
+    <h2>Der Selbstcheck</h2>
+    <div class="sub">Erkenne deine Ja-Muster</div>
+  </div>
+
+  <p class="intro">Beantworte die Fragen ehrlich — nicht wie es "richtig" klingt, sondern wie es wirklich ist.</p>
+
+  <!-- ARBEIT -->
+  <div class="section-label">Arbeit</div>
+  <div class="accent-line"></div>
+
+  <div class="question-block">
+    <div class="question-label">Welche Aufgaben übernimmst du, obwohl sie eigentlich nicht deine sind?</div>
+    <div class="write-lines"><span class="write-line"></span><span class="write-line"></span></div>
+  </div>
+  <div class="question-block">
+    <div class="question-label">Wann sagst du bei der Arbeit Ja, obwohl du innerlich Nein meinst?</div>
+    <div class="write-lines"><span class="write-line"></span><span class="write-line"></span></div>
+  </div>
+  <div class="question-block">
+    <div class="question-label">Was befürchtest du, wenn du bei der Arbeit Nein sagst?</div>
+    <div class="write-lines"><span class="write-line"></span><span class="write-line"></span></div>
+  </div>
+
+  <!-- FAMILIE -->
+  <div class="section-label">Familie</div>
+  <div class="accent-line"></div>
+
+  <div class="question-block">
+    <div class="question-label">Welche Erwartungen erfüllst du, obwohl niemand sie laut ausgesprochen hat?</div>
+    <div class="write-lines"><span class="write-line"></span><span class="write-line"></span></div>
+  </div>
+  <div class="question-block">
+    <div class="question-label">In welchen Familiensituationen sagst du automatisch Ja?</div>
+    <div class="write-lines"><span class="write-line"></span><span class="write-line"></span></div>
+  </div>
+  <div class="question-block">
+    <div class="question-label">Was würde passieren, wenn du in der Familie öfter Nein sagst?</div>
+    <div class="question-hint">Deine ehrliche Befürchtung — nicht die vernünftige Antwort.</div>
+    <div class="write-lines"><span class="write-line"></span><span class="write-line"></span></div>
+  </div>
+
+  <!-- FREUNDE -->
+  <div class="section-label">Freunde</div>
+  <div class="accent-line"></div>
+
+  <div class="question-block">
+    <div class="question-label">Wann bist du für Freunde da, obwohl du selbst gerade leer bist?</div>
+    <div class="write-lines"><span class="write-line"></span><span class="write-line"></span></div>
+  </div>
+  <div class="question-block">
+    <div class="question-label">Welcher Freund oder welche Freundin löst bei dir das automatische Ja aus?</div>
+    <div class="write-lines"><span class="write-line"></span><span class="write-line"></span></div>
+  </div>
+  <div class="question-block">
+    <div class="question-label">Was kostet dich das — Zeit, Energie, Ärger auf dich selbst?</div>
+    <div class="write-lines"><span class="write-line"></span><span class="write-line"></span></div>
+  </div>
+</div>
+
+<!-- ─────────────────────────────────── -->
+<!-- SEITE 2: AUSLÖSER-ÜBUNG            -->
+<!-- ─────────────────────────────────── -->
+<div class="page">
+  <div class="module-header">
+    <div class="tag">Seite 2 · Tag 2</div>
+    <h2>Die Auslöser-Übung</h2>
+    <div class="sub">Finde deinen persönlichen Auslöser</div>
+  </div>
+
+  <p class="intro">Bei den meisten gibt es eine bestimmte Person oder Situation, die das automatische Ja besonders zuverlässig auslöst. Die findest du hier.</p>
+
+  <div class="question-block">
+    <div class="question-label">Welche Person löst bei dir am stärksten das automatische Ja aus?</div>
+    <div class="question-hint">Name oder Beschreibung — Chef, Mutter, Partner, Freund ...</div>
+    <div class="write-lines"><span class="write-line"></span><span class="write-line"></span></div>
+  </div>
+  <div class="question-block">
+    <div class="question-label">Was passiert in dem Moment, wo du Ja sagst — was spürst du?</div>
+    <div class="question-hint">Druck im Bauch, Anspannung, ein kurzes Zögern das sofort überspielt wird ...</div>
+    <div class="write-lines"><span class="write-line"></span><span class="write-line"></span><span class="write-line"></span></div>
+  </div>
+  <div class="question-block">
+    <div class="question-label">Was befürchtest du in diesem Moment wirklich?</div>
+    <div class="question-hint">Ablehnung, Wut der anderen Person, als schwierig zu gelten, Beziehung zu verlieren ...</div>
+    <div class="write-lines"><span class="write-line"></span><span class="write-line"></span><span class="write-line"></span></div>
+  </div>
+  <div class="question-block">
+    <div class="question-label">Wie fühlst du dich direkt nach dem automatischen Ja?</div>
+    <div class="question-hint">Erleichterung, leichter Ärger auf dich selbst, Resignation ...</div>
+    <div class="write-lines"><span class="write-line"></span><span class="write-line"></span></div>
+  </div>
+  <div class="question-block">
+    <div class="question-label">Welche Situation ist dein persönlicher "Auslöser-Moment"?</div>
+    <div class="question-hint">Beschreibe eine konkrete Situation, in der das automatische Ja fast immer passiert.</div>
+    <div class="write-lines"><span class="write-line"></span><span class="write-line"></span><span class="write-line"></span><span class="write-line"></span></div>
+  </div>
+</div>
+
+<!-- ─────────────────────────────────── -->
+<!-- SEITE 3: GLAUBENSSATZ-FINDER       -->
+<!-- ─────────────────────────────────── -->
+<div class="page">
+  <div class="module-header">
+    <div class="tag">Seite 3 · Tag 3</div>
+    <h2>Der Glaubenssatz-Finder</h2>
+    <div class="sub">Verstehe die Wurzel</div>
+  </div>
+
+  <p class="intro">Hinter dem automatischen Ja steckt fast immer ein Glaubenssatz — ein innerer Satz, der sich wie Wahrheit anfühlt. Heute gibst du ihm einen Namen.</p>
+
+  <div class="section-label">Erkenne deinen Glaubenssatz</div>
+  <div class="accent-line"></div>
+
+  <ul class="belief-list">
+    <li><span class="checkbox"></span><span>Ich darf keine Last sein.</span></li>
+    <li><span class="checkbox"></span><span>Wenn ich Nein sage, verliere ich die Zuneigung.</span></li>
+    <li><span class="checkbox"></span><span>Konflikte zerstören Beziehungen.</span></li>
+    <li><span class="checkbox"></span><span>Meine Bedürfnisse sind weniger wichtig als die der anderen.</span></li>
+    <li><span class="checkbox"></span><span>Wenn ich nicht helfe, bin ich egoistisch.</span></li>
+    <li><span class="checkbox"></span><span>Ich muss verdienen, dass man mich mag.</span></li>
+  </ul>
+
+  <div class="question-block" style="margin-top:0.4cm;">
+    <div class="question-label">Oder schreib deinen eigenen:</div>
+    <div class="write-lines"><span class="write-line"></span><span class="write-line"></span></div>
+  </div>
+
+  <div class="question-block">
+    <div class="question-label">Wo kommt dieser Glaubenssatz her?</div>
+    <div class="question-hint">Kindheit, Eltern, Schule, eine prägende Erfahrung ...</div>
+    <div class="write-lines"><span class="write-line"></span><span class="write-line"></span><span class="write-line"></span></div>
+  </div>
+  <div class="question-block">
+    <div class="question-label">Gilt dieser Satz heute noch? Warum oder warum nicht?</div>
+    <div class="question-hint">Nicht die vernünftige Antwort — dein ehrliches Gefühl.</div>
+    <div class="write-lines"><span class="write-line"></span><span class="write-line"></span><span class="write-line"></span></div>
+  </div>
+  <div class="question-block">
+    <div class="question-label">Was wäre anders, wenn du diesem Satz nicht mehr glaubst?</div>
+    <div class="question-hint">Im Beruf, in der Familie, mit dir selbst.</div>
+    <div class="write-lines"><span class="write-line"></span><span class="write-line"></span><span class="write-line"></span></div>
+  </div>
+</div>
+
+<!-- ─────────────────────────────────── -->
+<!-- SEITE 4: NEIN-FORMULIERUNGEN       -->
+<!-- ─────────────────────────────────── -->
+<div class="page">
+  <div class="module-header">
+    <div class="tag">Seite 4 · Tag 5</div>
+    <h2>Dein erstes Nein</h2>
+    <div class="sub">Formulierungen zum Anpassen</div>
+  </div>
+
+  <p class="intro">Drei Formulierungen, die funktionieren — ruhig, klar, ohne Entschuldigung. Such dir eine aus oder passe sie an.</p>
+
+  <div class="template-box">
+    <div class="quote">"Das passt gerade nicht für mich."</div>
+    <div class="context">Universell einsetzbar — Arbeit, Familie, Freunde.</div>
+  </div>
+
+  <div class="template-box" style="margin-top:10px;">
+    <div class="quote">"Das kann ich diesmal nicht übernehmen."</div>
+    <div class="context">Gut für berufliche Situationen — klar ohne Erklärung.</div>
+  </div>
+
+  <div class="template-box" style="margin-top:10px;">
+    <div class="quote">"Dafür bin ich gerade nicht der Richtige."</div>
+    <div class="context">Wenn du die Bitte respektierst, aber die Übernahme nicht passt.</div>
+  </div>
+
+  <div class="section-label" style="margin-top:0.7cm;">Mein eigener Satz</div>
+  <div class="accent-line"></div>
+  <div class="question-block">
+    <div class="question-hint">Für meine persönliche Situation:</div>
+    <div class="write-lines"><span class="write-line"></span><span class="write-line"></span></div>
+  </div>
+
+  <div class="section-label" style="margin-top:0.5cm;">Das ist mein Nein für diese Woche</div>
+  <div class="accent-line"></div>
+
+  <div class="question-block">
+    <div class="question-label">Situation:</div>
+    <div class="write-lines"><span class="write-line"></span><span class="write-line"></span></div>
+  </div>
+  <div class="question-block">
+    <div class="question-label">Person:</div>
+    <div class="write-lines"><span class="write-line"></span></div>
+  </div>
+  <div class="question-block">
+    <div class="question-label">Mein Satz:</div>
+    <div class="write-lines"><span class="write-line"></span><span class="write-line"></span></div>
+  </div>
+</div>
+
+<!-- ─────────────────────────────────── -->
+<!-- SEITE 5: ABSCHLUSS-REFLEXION       -->
+<!-- ─────────────────────────────────── -->
+<div class="page">
+  <div class="module-header">
+    <div class="tag">Seite 5 · Tag 5</div>
+    <h2>Abschluss-Reflexion</h2>
+    <div class="sub">Was du mitnimmst</div>
+  </div>
+
+  <p class="intro">Drei Minuten. Drei Fragen. Schreib das erste, was kommt.</p>
+
+  <div class="question-block">
+    <div class="question-label">Was habe ich in diesen 5 Tagen über mich gelernt?</div>
+    <div class="question-hint">Auch wenn es sich klein anfühlt — es ist wichtig.</div>
+    <div class="write-lines">
+      <span class="write-line"></span><span class="write-line"></span>
+      <span class="write-line"></span><span class="write-line"></span><span class="write-line"></span>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <div class="question-label">Was hat sich bereits verändert, auch wenn es nur ein kleiner Moment war?</div>
+    <div class="question-hint">Ein Zögern. Eine Pause. Ein Nein das noch nicht laut war — aber innerlich da.</div>
+    <div class="write-lines">
+      <span class="write-line"></span><span class="write-line"></span>
+      <span class="write-line"></span><span class="write-line"></span><span class="write-line"></span>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <div class="question-label">Was nehme ich als ersten konkreten Schritt mit in den Alltag?</div>
+    <div class="question-hint">Einen Satz. Eine Situation. Eine Person. So konkret wie möglich.</div>
+    <div class="write-lines">
+      <span class="write-line"></span><span class="write-line"></span>
+      <span class="write-line"></span><span class="write-line"></span><span class="write-line"></span>
+    </div>
+  </div>
+</div>
+
+<!-- ─────────────────────────────────── -->
+<!-- SEITE 6: 4-WOCHEN-TRACKER          -->
+<!-- ─────────────────────────────────── -->
+<div class="page">
+  <div class="module-header">
+    <div class="tag">Seite 6 · Bonus-Tag</div>
+    <h2>4-Wochen-Tracker</h2>
+    <div class="sub">Integration im Alltag</div>
+  </div>
+
+  <p class="intro">Jeden Tag eine Frage: Habe ich heute mindestens einmal bewusst die Drei-Sekunden-Pause gemacht?<br>
+  <span style="font-size:9pt; color:var(--gray); font-style:italic;">Kein Druck. Kein Urteil. Nur ehrliche Beobachtung.</span></p>
+
+  <table class="tracker-table">
+    <thead>
+      <tr>
+        <th style="text-align:left; padding-left:10px;">Woche</th>
+        <th>Mo</th><th>Di</th><th>Mi</th><th>Do</th><th>Fr</th><th>Sa</th><th>So</th>
+        <th style="text-align:left; padding-left:8px;">Notiz</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="week">Woche 1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="note"></td></tr>
+      <tr><td class="week">Woche 2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="note"></td></tr>
+      <tr><td class="week">Woche 3</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="note"></td></tr>
+      <tr><td class="week">Woche 4</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="note"></td></tr>
+    </tbody>
+  </table>
+
+  <div class="section-label" style="margin-top:0.7cm;">Wöchentliche Reflexion</div>
+  <div class="accent-line"></div>
+
+  <div class="question-block">
+    <div class="question-label">Woche 1 — Was ist mir aufgefallen?</div>
+    <div class="write-lines"><span class="write-line"></span><span class="write-line"></span></div>
+  </div>
+  <div class="question-block">
+    <div class="question-label">Woche 2 — Was ist mir aufgefallen?</div>
+    <div class="write-lines"><span class="write-line"></span><span class="write-line"></span></div>
+  </div>
+  <div class="question-block">
+    <div class="question-label">Woche 3 — Was ist mir aufgefallen?</div>
+    <div class="write-lines"><span class="write-line"></span><span class="write-line"></span></div>
+  </div>
+  <div class="question-block">
+    <div class="question-label">Woche 4 — Was ist mir aufgefallen?</div>
+    <div class="write-lines"><span class="write-line"></span><span class="write-line"></span></div>
+  </div>
+</div>
+
+</body>
+</html>

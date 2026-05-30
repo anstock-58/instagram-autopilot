@@ -1,7 +1,9 @@
 name: KI-Support Autopilot - Story (09:00)
 
 on:
-  workflow_dispatch:         # Getriggert von cron-job.org (09:00 Europe/Berlin)
+  schedule:
+    - cron: '20 7 * * *'    # 07:20 UTC = 09:20 CEST (täglich)
+  workflow_dispatch:
 
 jobs:
   post-story:

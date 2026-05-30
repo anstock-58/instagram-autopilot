@@ -1,0 +1,47 @@
+﻿2026-05-21 17:55:02 | === LinkedIn Trigger gestartet | 21.05.2026 | 17:55 | CSV: contentplan_mai_v2.csv ===
+2026-05-21 17:55:02 | Kein geplanter LinkedIn-Post fuer heute (21.05.2026). Fertig.
+2026-05-22 17:55:02 | === LinkedIn Trigger gestartet | 22.05.2026 | 17:55 | CSV: contentplan_mai_v2.csv ===
+2026-05-22 17:55:03 | 1 LinkedIn-Post(s) fuer heute gefunden.
+2026-05-22 17:55:03 | Post faellig: Foto | 17:55
+2026-05-22 17:55:03 | Sende an Blotato LinkedIn: 369 Zeichen, Bild: ja
+2026-05-22 17:55:03 | LinkedIn gepostet. SubmissionId: 4c995e5f-c7a9-41ac-92e5-c85fba363edf
+2026-05-22 17:55:03 | Status auf 'Gepostet' gesetzt.
+2026-05-22 17:55:03 | Warte auf neuen LinkedIn-Post (max 3 Min)...
+2026-05-22 17:55:09 | Post-URL gefunden (1): https://linkedin.com/feed/update/urn:li:share:7463618490697154561
+2026-05-22 17:55:09 | Share-URN: 2026-05-22 17:55:03 | Warte auf neuen LinkedIn-Post (max 3 Min)... 2026-05-22 17:55:09 | Post-URL gefunden (1): https://linkedin.com/feed/update/urn:li:share:7463618490697154561 urn:li:share:7463618490697154561
+2026-05-22 17:55:09 | FEHLER Kommentar (HTTP 000): 
+2026-05-22 17:55:09 | === Fertig ===
+2026-05-23 17:55:01 | === LinkedIn Trigger gestartet | 23.05.2026 | 17:55 | CSV: contentplan_mai_v2.csv ===
+2026-05-23 17:55:02 | Kein geplanter LinkedIn-Post fuer heute (23.05.2026). Fertig.
+2026-05-24 17:55:02 | === LinkedIn Trigger gestartet | 24.05.2026 | 17:55 | CSV: contentplan_mai_v2.csv ===
+2026-05-24 17:55:02 | Kein geplanter LinkedIn-Post fuer heute (24.05.2026). Fertig.
+2026-05-25 22:20:40 | === LinkedIn Trigger gestartet | 25.05.2026 | 22:20 | CSV: contentplan_mai_v2.csv ===
+2026-05-25 22:20:41 | 1 LinkedIn-Post(s) fuer heute gefunden.
+2026-05-25 22:20:41 | Zeitfenster nicht passend fuer Foto um 17:55 (diff: 265.7 min).
+2026-05-25 22:20:41 | === Fertig ===
+2026-05-26 17:55:02 | === LinkedIn Trigger gestartet | 26.05.2026 | 17:55 | CSV: contentplan_mai_v2.csv ===
+2026-05-26 17:55:02 | Kein geplanter LinkedIn-Post fuer heute (26.05.2026). Fertig.
+2026-05-27 17:55:02 | === LinkedIn Trigger gestartet | 27.05.2026 | 17:55 | CSV: contentplan_mai_v2.csv ===
+2026-05-27 17:55:02 | 1 LinkedIn-Post(s) fuer heute gefunden.
+2026-05-27 17:55:02 | Post faellig: Foto | 17:55
+2026-05-27 17:55:02 | Sende an Blotato LinkedIn: 401 Zeichen, Bild: ja
+2026-05-27 17:55:03 | LinkedIn gepostet. SubmissionId: bbfb0a7e-0f02-43b7-bbee-58f260b0ab91
+2026-05-27 17:55:03 | Status auf 'Gepostet' gesetzt.
+2026-05-27 17:55:03 | Warte auf neuen LinkedIn-Post (max 3 Min)...
+2026-05-27 17:55:09 | Post-URL gefunden (1): https://linkedin.com/feed/update/urn:li:share:7465430450459721728
+2026-05-27 17:55:09 | Share-URN: urn:li:share:7465430450459721728
+2026-05-27 17:55:09 | FEHLER Kommentar (HTTP 000): 
+2026-05-27 17:55:09 | === Fertig ===
+2026-05-28 17:55:02 | === LinkedIn Trigger gestartet | 28.05.2026 | 17:55 | CSV: contentplan_mai_v2.csv ===
+2026-05-28 17:55:02 | Kein geplanter LinkedIn-Post fuer heute (28.05.2026). Fertig.
+2026-05-29 18:30:43 | === LinkedIn Trigger gestartet | 29.05.2026 | 18:30 | CSV: contentplan_mai_v2.csv ===
+2026-05-29 18:30:43 | 1 LinkedIn-Post(s) fuer heute gefunden.
+2026-05-29 18:30:43 | Post faellig: Foto | 17:55
+2026-05-29 18:30:44 | Sende an Blotato LinkedIn: 452 Zeichen, Bild: ja
+2026-05-29 18:30:45 | LinkedIn gepostet. SubmissionId: d263441d-7a84-4195-98fd-e8757dfacb27
+2026-05-29 18:30:45 | Status auf 'Gepostet' gesetzt.
+2026-05-29 18:30:45 | Warte auf neuen LinkedIn-Post (max 3 Min)...
+2026-05-29 18:30:50 | Post-URL gefunden (1): https://linkedin.com/feed/update/urn:li:share:7466164211497439232
+2026-05-29 18:30:50 | Share-URN: urn:li:share:7466164211497439232
+2026-05-29 18:30:51 | FEHLER Kommentar (HTTP 000): 
+2026-05-29 18:30:51 | === Fertig ===

@@ -22,3 +22,6 @@ Thumbs.db
 # MCP Konfiguration (enthält keine Secrets, aber lokal halten)
 .mcp.json
 scripts/telegram-pause-bot.ps1
+
+# Archivierte Dateien nicht pushen
+archiv/

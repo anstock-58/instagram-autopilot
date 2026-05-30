@@ -1,7 +1,9 @@
 name: Andi-mit-System Autopilot - Story (09:00)
 
 on:
-  workflow_dispatch:         # Getriggert von cron-job.org (09:00 Europe/Berlin)
+  schedule:
+    - cron: '30 7 * * *'    # 07:30 UTC = 09:30 CEST (täglich)
+  workflow_dispatch:
 
 jobs:
   post-story:

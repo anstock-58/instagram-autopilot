@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Die Nein-Formel — Dein Spickzettel</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #0f0f0f;
+    color: #f0f0f0;
+    padding: 40px 20px;
+    min-height: 100vh;
+  }
+
+  .page {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* HEADER */
+  .header {
+    text-align: center;
+    margin-bottom: 48px;
+    padding: 40px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .badge {
+    display: inline-block;
+    background: #e63946;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+
+  .header h1 {
+    font-size: 42px;
+    font-weight: 800;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+
+  .header h1 span {
+    color: #e63946;
+  }
+
+  .header .subtitle {
+    font-size: 16px;
+    color: rgba(255,255,255,0.6);
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* INTRO */
+  .intro {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 40px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.8);
+  }
+
+  .intro strong {
+    color: white;
+  }
+
+  /* SECTION TITLE */
+  .section-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #e63946;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(230,57,70,0.3);
+  }
+
+  /* FORMEL KARTEN */
+  .formeln-grid {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .formel-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 28px 32px;
+    position: relative;
+    transition: border-color 0.2s;
+  }
+
+  .formel-card:hover {
+    border-color: rgba(230,57,70,0.4);
+  }
+
+  .formel-number {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 48px;
+    font-weight: 800;
+    color: rgba(255,255,255,0.04);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .formel-situation {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 10px;
+  }
+
+  .formel-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 16px;
+  }
+
+  .formel-scripts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .script-item {
+    background: rgba(230,57,70,0.08);
+    border-left: 3px solid #e63946;
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    font-size: 15px;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  .formel-hinweis {
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.6;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .formel-hinweis strong {
+    color: rgba(255,255,255,0.6);
+  }
+
+  /* DREI SEKUNDEN BOX */
+  .highlight-box {
+    background: linear-gradient(135deg, rgba(230,57,70,0.15), rgba(230,57,70,0.05));
+    border: 1px solid rgba(230,57,70,0.3);
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .highlight-box h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 12px;
+  }
+
+  .highlight-box p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+    max-width: 560px;
+    margin: 0 auto 20px;
+  }
+
+  .drei-steps {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .drei-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .drei-step .number {
+    width: 44px;
+    height: 44px;
+    background: #e63946;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 800;
+    color: white;
+  }
+
+  .drei-step .label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    font-weight: 600;
+    text-align: center;
+    max-width: 120px;
+    line-height: 1.4;
+  }
+
+  /* NOTFALL FORMELN */
+  .notfall-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .notfall-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .notfall-card .situation {
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  .notfall-card .formel {
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    padding: 32px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    margin-top: 20px;
+  }
+
+  .footer p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.3);
+    line-height: 1.7;
+  }
+
+  .footer .brand {
+    font-weight: 700;
+    color: rgba(255,255,255,0.5);
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  @media print {
+    body { background: white; color: #111; padding: 20px; }
+    .header { background: #1a1a2e; }
+    .formel-card { break-inside: avoid; }
+    .notfall-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="badge">Bonus-Material zum Kurs</div>
+    <h1>Die <span>Nein-Formel</span></h1>
+    <p class="subtitle">27 druckfertige Sätze für jede Situation, in der du früher automatisch Ja gesagt hättest.</p>
+  </div>
+
+  <!-- INTRO -->
+  <div class="intro">
+    <strong>Warum du diese Formeln brauchst:</strong><br>
+    Im Kurs hast du verstanden, <em>warum</em> du kein Nein sagen konntest. Jetzt kommt das Wie.
+    Diese Sätze sind keine Tricks. Sie sind aufrichtige, klare Antworten — die sich trotzdem gut anfühlen.
+    Druck sie aus. Hänge sie an deinen Schreibtisch. Nutze sie, bis sie sich natürlich anfühlen.
+  </div>
+
+  <!-- DIE 5 HAUPT-FORMELN -->
+  <div class="section-title">Die 5 Kern-Formeln</div>
+
+  <div class="formeln-grid">
+
+    <!-- Formel 1 -->
+    <div class="formel-card">
+      <div class="formel-number">01</div>
+      <div class="formel-situation">Wenn jemand um einen Gefallen bittet</div>
+      <div class="formel-title">Die Ehrliche</div>
+      <div class="formel-scripts">
+        <div class="script-item">„Das passt gerade nicht für mich."</div>
+        <div class="script-item">„Das kann ich diesmal nicht übernehmen."</div>
+        <div class="script-item">„Dafür bin ich gerade nicht der Richtige."</div>
+      </div>
+      <div class="formel-hinweis">
+        <strong>Merke:</strong> Kein „leider", kein „eigentlich", keine Entschuldigung. Der Satz steht für sich.
+      </div>
+    </div>
+
+    <!-- Formel 2 -->
+    <div class="formel-card">
+      <div class="formel-number">02</div>
+      <div class="formel-situation">Wenn du Zeit brauchst, um zu entscheiden</div>
+      <div class="formel-title">Die Pause</div>
+      <div class="formel-scripts">
+        <div class="script-item">„Ich schaue mir das an und melde mich bis morgen."</div>
+        <div class="script-item">„Ich brauche kurz einen Moment, um das zu prüfen."</div>
+        <div class="script-item">„Ich gebe dir bis Ende der Woche Bescheid."</div>
+      </div>
+      <div class="formel-hinweis">
+        <strong>Merke:</strong> Die Pause ist kein Ausweichen. Sie ist dein Recht. Nutze die Zeit, um wirklich zu entscheiden.
+      </div>
+    </div>
+
+    <!-- Formel 3 -->
+    <div class="formel-card">
+      <div class="formel-number">03</div>
+      <div class="formel-situation">Wenn du Grenzen bei der Arbeit setzen willst</div>
+      <div class="formel-title">Die Professionelle</div>
+      <div class="formel-scripts">
+        <div class="script-item">„Das liegt außerhalb meiner aktuellen Kapazität."</div>
+        <div class="script-item">„Ich priorisiere gerade X — das muss hinten anstehen."</div>
+        <div class="script-item">„Wenn das dazu kommt, muss etwas anderes rausfallen."</div>
+      </div>
+      <div class="formel-hinweis">
+        <strong>Merke:</strong> Du entschuldigst dich nicht für deine Arbeitsbelastung. Du kommunizierst sie klar.
+      </div>
+    </div>
+
+    <!-- Formel 4 -->
+    <div class="formel-card">
+      <div class="formel-number">04</div>
+      <div class="formel-situation">Wenn du in Familie oder Freundschaft Nein sagst</div>
+      <div class="formel-title">Die Warme</div>
+      <div class="formel-scripts">
+        <div class="script-item">„Ich mag dich sehr — und diesmal kann ich das nicht."</div>
+        <div class="script-item">„Das ist nichts gegen dich. Ich merke, das ist gerade zu viel für mich."</div>
+        <div class="script-item">„Ich würde dir gern helfen — auf diese Art geht es nicht."</div>
+      </div>
+      <div class="formel-hinweis">
+        <strong>Merke:</strong> Nein bedeutet nicht: Ich mag dich nicht. Diese Formel macht das deutlich — ohne nachzugeben.
+      </div>
+    </div>
+
+    <!-- Formel 5 -->
+    <div class="formel-card">
+      <div class="formel-number">05</div>
+      <div class="formel-situation">Wenn jemand nach einer Begründung fragt</div>
+      <div class="formel-title">Die Standfeste</div>
+      <div class="formel-scripts">
+        <div class="script-item">„Das habe ich für mich so entschieden."</div>
+        <div class="script-item">„Ich brauche das nicht weiter zu begründen."</div>
+        <div class="script-item">„Ich habe es mir gut überlegt. Meine Antwort bleibt Nein."</div>
+      </div>
+      <div class="formel-hinweis">
+        <strong>Merke:</strong> Ein Nein braucht keine Rechtfertigung. Dieser Satz schließt die Diskussion — freundlich, aber klar.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DIE DREI-SEKUNDEN-REGEL -->
+  <div class="highlight-box">
+    <h3>Die Drei-Sekunden-Regel</h3>
+    <p>Bevor du antwortest — egal was gefragt wird — atme einmal. Drei Sekunden. Frage dich innerlich: <em>„Will ich das wirklich?"</em> Dann erst öffne den Mund.</p>
+    <div class="drei-steps">
+      <div class="drei-step">
+        <div class="number">1</div>
+        <div class="label">Anfrage kommt rein</div>
+      </div>
+      <div class="drei-step">
+        <div class="number">2</div>
+        <div class="label">3 Sekunden — innerlich fragen</div>
+      </div>
+      <div class="drei-step">
+        <div class="number">3</div>
+        <div class="label">Erst dann antworten</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTFALL-FORMELN -->
+  <div class="section-title">Notfall-Formeln — Wenn du überrumpelt wirst</div>
+
+  <div class="notfall-grid">
+    <div class="notfall-card">
+      <div class="situation">Wenn jemand drängt</div>
+      <div class="formel">„Ich entscheide das nicht unter Druck. Ich melde mich."</div>
+    </div>
+    <div class="notfall-card">
+      <div class="situation">Wenn Schweigen entsteht</div>
+      <div class="formel">„Ich weiß, das ist unangenehm. Meine Antwort bleibt."</div>
+    </div>
+    <div class="notfall-card">
+      <div class="situation">Wenn jemand beleidigt reagiert</div>
+      <div class="formel">„Das tut mir leid. Ich kann nicht anders entscheiden."</div>
+    </div>
+    <div class="notfall-card">
+      <div class="situation">Wenn du noch gar nichts sagst</div>
+      <div class="formel">„Ich brauche einen Moment." — Dann ausatmen.</div>
+    </div>
+    <div class="notfall-card">
+      <div class="situation">Wenn die Bitte wiederholt kommt</div>
+      <div class="formel">„Ich habe das schon beantwortet. Meine Antwort hat sich nicht geändert."</div>
+    </div>
+    <div class="notfall-card">
+      <div class="situation">Wenn du innerlich schwankst</div>
+      <div class="formel">„Ich merke, ich zögere. Das ist ein Zeichen, dass ich noch nicht bereit bin."</div>
+    </div>
+    <div class="notfall-card">
+      <div class="situation">Wenn Schuldgefühle kommen</div>
+      <div class="formel">„Das Gefühl kenne ich. Es bedeutet nicht, dass ich falsch liege."</div>
+    </div>
+    <div class="notfall-card">
+      <div class="situation">Wenn du nichts sagen willst</div>
+      <div class="formel">Stille ist eine Antwort. Du musst nicht jede Pause füllen.</div>
+    </div>
+  </div>
+
+  <!-- DER WICHTIGSTE SATZ -->
+  <div class="highlight-box" style="margin-bottom: 0;">
+    <h3>Der wichtigste Satz dieses Spickzettels</h3>
+    <p style="font-size: 17px; color: rgba(255,255,255,0.9);">
+      <strong style="color: #e63946;">Ein Nein ist kein Angriff.</strong><br>
+      Es ist eine ehrliche Antwort auf eine ehrliche Frage.<br>
+      Die Menschen, die dich wirklich schätzen, werden damit umgehen können.
+    </p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="brand">Nein aus Überzeugung</div>
+    <p>Diese Formeln sind Werkzeuge, keine Skripte. Passe sie an deinen Stil an.<br>
+    Aus dem Kurs „Nein aus Überzeugung" von Andreas Stock.</p>
+  </div>
+
+</div>
+
+</body>
+</html>
