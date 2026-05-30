@@ -137,6 +137,19 @@ Keine Gedankenstriche als Stilmittel. Kein KI-Sprech. Keine Ankündigungsformeln
 
 **Hook-Regel:** Hook endet NIE mit einer Frage. Immer Aussage oder Versprechen.
 
+**Die drei Säulen — gilt für jeden Post:**
+Aufmerksamkeit (Hook der trifft) → Vertrauen (Inhalt der die Situation kennt) → Klarer Schritt (CTA der logisch folgt).
+Kein Post ohne alle drei. "Content posten" ist nicht "Content verkaufen". Der Unterschied ist die Brücke.
+
+**Die Brücke vor dem CTA:**
+Der letzte Satz vor dem Keyword muss erklären warum genau jetzt dieser Schritt Sinn macht. Nie einfach nur "Schreib CHECK." — immer: warum soll er CHECK schreiben, was passiert dann, was bekommt er. Der Zuschauer muss das Gefühl haben: das ist der logische nächste Schritt, nicht eine Werbung.
+
+Beispiel gut: "Schreib CHECK — dann siehst du in 5 Minuten ob du im Funktionsmodus steckst."
+Beispiel schlecht: "Schreib CHECK."
+
+**Aktiv vs. produktiv:**
+Viele Posts sehen aktiv aus aber verkaufen nicht. Jeder Post muss eine Richtung haben. Nicht "interessanter Content" als Ziel — sondern: was soll der Leser danach tun.
+
 **CTA @andi.mit.system:** Link nur über Bio erwähnen, nie direkt in Caption eintragen.
 
 **Reel-Zeiten (CEST):** B&S 17:55 / mentalgesund 18:05 / ki_support 18:15 / mit.system 18:25
