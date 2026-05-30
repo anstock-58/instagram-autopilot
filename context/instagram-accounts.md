@@ -71,7 +71,7 @@ Regel: Kein Tool-Name im Voiceover, kein Preis, nur Produktnutzen und Keyword.
 
 | Account | Thema | Status |
 |---|---|---|
-| @andi.mentalgesund | Mental Health, Resilienz | Manuell |
+| @andi.mentalgesund | 48968 | Mental Health, Resilienz, Grenzen, Selbstwert | post-trigger-andi-mentalgesund.ps1 | andi-mentalgesund-story.yml | andi-mentalgesund-reel.yml |
 | @song.geschenke | Personalisierte Musikgeschenke | Manuell |
 | @stock.und.partner | Business/Beratung | Manuell |
 

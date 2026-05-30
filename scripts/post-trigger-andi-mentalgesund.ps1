@@ -25,7 +25,7 @@ if (-not $csvPath) { Write-Host "FEHLER: Kein Andi-Mentalgesund CSV fuer Monat '
 
 $apiKey          = if ($env:BLOTATO_API_KEY) { $env:BLOTATO_API_KEY } else { "blt_KiCyq1rBxLUqnWdUJaH6Qaij4V07Q6wvcIH8/aQLrXA=" }
 $apiBase         = "https://backend.blotato.com/v2"
-$accountIdIG     = if ($env:MENTALGESUND_ACCOUNT_ID) { $env:MENTALGESUND_ACCOUNT_ID } else { "ACCOUNT_ID_PLACEHOLDER" }
+$accountIdIG     = "48968"   # @andi.mentalgesund Instagram
 $aiVideoTemplate = "/base/v2/ai-story-video/5903fe43-514d-40ee-a060-0d6628c5f8fd/v1"
 $voiceName       = "Charlie (Australian, natural)"   # ElevenLabs-Stimme — beste Deutsch-Prosody unter den 20 Blotato-Stimmen
 
