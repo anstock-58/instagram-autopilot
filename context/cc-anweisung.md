@@ -228,4 +228,23 @@ Hebel 3 — Offer: klares Angebot mit einem Schritt
 Stories und DMs schaffen Nähe — wirksamstes Verkaufswerkzeug.
 Kunden kaufen wegen Problemlösungen — nicht weil jemand postet.
 
+**Story-Typen die immer funktionieren:**
+1. Behind the Scenes: zeigen wie man arbeitet. Menschen kaufen Prozesse, nicht Versprechen.
+2. Mini-Aha-Moment: ein kurzer Tipp oder Gedanke der einen Aha-Moment auslöst.
+3. CTA-Story: "Wenn du das lernen willst, Link in Bio." Direkt, klar, ohne Umwege.
+
+Stories sind kein Entertainment. Sie sind täglicher Kontakt mit potenziellen Kunden.
+
+**Verkaufen in DMs — Struktur, kein Zufall:**
+Erst verstehen, dann führen. Fragen stellen: "Womit kämpfst du gerade? Was wünschst du dir am meisten?"
+Wenn das Problem im Chat klar ist, ist das Angebot die logische Konsequenz.
+Gespräch immer Richtung Lösung führen — nie Richtung Small Talk.
+
+**Conversion-Routinen (Zielwerte):**
+3 Reels pro Woche: Aufmerksamkeit und Autorität
+3-5 Story-Sequenzen pro Tag: Nähe und Vertrauen
+1-2 klare CTAs pro Woche: Action
+
+Hinter jedem Inhalt steht dieselbe Frage: Wie führt das was ich poste jemanden näher an den nächsten Schritt?
+
 **Reel-Zeiten (CEST):** B&S 17:55 / mentalgesund 18:05 / ki_support 18:15 / mit.system 18:25
