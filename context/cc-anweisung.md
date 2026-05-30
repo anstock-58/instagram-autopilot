@@ -208,14 +208,24 @@ Jeder Post muss eine Richtung haben. Ziel ist nicht "interessanter Content" — 
 **CTA @andi.mit.system:** Link nur über Bio erwähnen, nie direkt in Caption eintragen.
 
 **Von Reichweite zu Kunden — die drei Kaufphasen:**
-Content muss alle drei Phasen abdecken, nicht nur eine:
-1. Awareness: Trigger, Problem benennen, Aufmerksamkeit holen
-2. Consideration: Autorität zeigen, Vertrauen aufbauen, Einwände entkräften
-3. Decision: klares Angebot, einfacher Prozess, ein Schritt
+Reichweite ist Rohstoff, kein Ziel. Follower sind nur Potenzial. Umsatz entsteht erst wenn man dieses Potenzial führt.
+Selbstcheck: Wie viele Zuschauer wissen gerade wie sie den nächsten Schritt gehen könnten? Wenn die Antwort "keine Ahnung" ist — fehlt ein System.
 
-Wichtige Hebel: Storytelling, Proof (Beweise), Offer (klares Angebot).
-Stories und DMs: Nähe schaffen und Problemlösung zeigen — wirksames Verkaufswerkzeug.
-Routinen: Regelmäßige Inhalte und CTAs erhöhen Conversion. Klarheit und Struktur führen zur Kundengewinnung.
+Menschen kaufen nicht weil jemand postet. Sie kaufen weil sie das Gefühl haben: du verstehst mein Problem und du hast die Lösung.
+
+Content muss alle drei Phasen abdecken, nicht nur eine:
+1. Awareness: Problem erkennen — Trigger, Schmerz benennen
+2. Consideration: verstehen dass Andi das lösen kann — Autorität, Beweise, Nähe
+3. Decision: entscheiden mit Andi zu arbeiten — klares Angebot, einfacher Schritt
+
+Fehler der meisten: Content bleibt in Phase 1. Triggert Schmerz, zeigt aber keinen Weg. Ergebnis: viel Zustimmung, keine Kunden. Wenn in jedem Post klar wird wohin Andi führt, wird er nicht nur interessant — er wird relevant.
+
+Conversion-Hebel:
+Hebel 1 — Story: echte Kundengeschichten. Wo hat jemand gestartet, was war das Problem, was hat sich verändert?
+Hebel 2 — Proof: Beweise, Ergebnisse, Transparenz
+Hebel 3 — Offer: klares Angebot mit einem Schritt
+
+Stories und DMs schaffen Nähe — wirksamstes Verkaufswerkzeug.
 Kunden kaufen wegen Problemlösungen — nicht weil jemand postet.
 
 **Reel-Zeiten (CEST):** B&S 17:55 / mentalgesund 18:05 / ki_support 18:15 / mit.system 18:25
