@@ -137,18 +137,37 @@ Keine Gedankenstriche als Stilmittel. Kein KI-Sprech. Keine Ankündigungsformeln
 
 **Hook-Regel:** Hook endet NIE mit einer Frage. Immer Aussage oder Versprechen.
 
-**Die drei Säulen — gilt für jeden Post:**
-Aufmerksamkeit (Hook der trifft) → Vertrauen (Inhalt der die Situation kennt) → Klarer Schritt (CTA der logisch folgt).
-Kein Post ohne alle drei. "Content posten" ist nicht "Content verkaufen". Der Unterschied ist die Brücke.
+**The Social System — drei Säulen, gilt für jeden Post:**
+
+Jeder Post wird auf alle drei geprüft. Fehlt eine Säule, funktioniert der Post nicht.
+
+**Säule 1: Aufmerksamkeit (zielgerichtet, nicht Unterhaltung)**
+Viralität bringt Zuschauer. Zuschauer zahlen keine Rechnungen. Was zählt ist zielgerichtete Aufmerksamkeit von Menschen mit echtem Problem.
+Trigger statt Trends. Ein Trigger trifft Emotion: Frust, Druck, Hoffnung, Schmerz.
+Nicht: "So findest du deine innere Ruhe" — spricht alle an, also niemanden.
+Sondern: "Du liegst nachts wach und der Kopf macht weiter" — trifft genau die Richtigen.
+
+Trigger pro Account:
+- @business.und.spirit: nicht abschalten, morgens sofort Druck, Erschöpfung die niemand sieht
+- @andi.mentalgesund: schlechtes Gewissen nach Nein, immer für andere da, Kopf läuft nachts
+- @ki_support: täglich Stunden für Aufgaben die KI in Minuten erledigt
+- @andi.mit.system: jeden Monat dasselbe Gehalt, täglich Zeit gegen Geld, keine Freiheit
+
+**Säule 2: Autorität (Vertrauen durch Wiederholung)**
+Vertrauen durch Geschichten, Beweise und wiederholte Prinzipien. Nicht einmalig behaupten — immer wieder zeigen.
+Andi's Stärke: er kennt das Problem aus eigener Erfahrung. Das muss im Inhalt spürbar sein.
+
+**Säule 3: Aktion (Reichweite in Umsatz verwandeln)**
+Klare CTA, einfacher Prozess. Der Schritt nach dem Post muss so klein und klar sein, dass er sich fast von selbst ergibt.
+"Social Media ist Mathematik in Emotionen verpackt."
 
 **Die Brücke vor dem CTA:**
-Der letzte Satz vor dem Keyword muss erklären warum genau jetzt dieser Schritt Sinn macht. Nie einfach nur "Schreib CHECK." — immer: warum soll er CHECK schreiben, was passiert dann, was bekommt er. Der Zuschauer muss das Gefühl haben: das ist der logische nächste Schritt, nicht eine Werbung.
-
-Beispiel gut: "Schreib CHECK — dann siehst du in 5 Minuten ob du im Funktionsmodus steckst."
-Beispiel schlecht: "Schreib CHECK."
+Nie nur "Schreib CHECK." — immer erklären was passiert wenn man es tut.
+Gut: "Schreib CHECK — dann siehst du in 5 Minuten ob du im Funktionsmodus steckst."
+Schlecht: "Schreib CHECK."
 
 **Aktiv vs. produktiv:**
-Viele Posts sehen aktiv aus aber verkaufen nicht. Jeder Post muss eine Richtung haben. Nicht "interessanter Content" als Ziel — sondern: was soll der Leser danach tun.
+Jeder Post muss eine Richtung haben. Ziel ist nicht "interessanter Content" — Ziel ist: was tut der Leser danach.
 
 **CTA @andi.mit.system:** Link nur über Bio erwähnen, nie direkt in Caption eintragen.
 
