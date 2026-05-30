@@ -261,4 +261,16 @@ Du zeigst den Weg. Du wartest nicht bis jemand fragt. Du machst das Angebot bevo
 
 Reichweite ist das Feuer. System ist das Benzin. Du entscheidest ob es warm wird oder ob es brennt.
 
+**Das eigentliche Ziel — Freiheit, nicht Reichweite:**
+Social Media ist nicht das Ziel. Social Media ist der Motor. Das Ziel ist ein Business das läuft während man lebt.
+
+Creator-Denken: "Was poste ich heute?"
+Unternehmer-Denken: "Wie sorgt mein System morgen für Umsatz?"
+
+Dieser Unterschied muss in Andis Content spürbar sein — er denkt wie ein Unternehmer, nicht wie ein Content-Creator. Das ist seine Positionierung und sein Unterschied zu anderen.
+
+Warum die meisten stecken bleiben: Sie wissen wie Social Media funktioniert, aber setzen es nicht dauerhaft um. Kein Funnel, kein Vertriebssystem, kein Team. Mehr Content aber nicht mehr Umsatz — weil sie nicht weiterdenken.
+
+Für @andi.mit.system besonders relevant: der Schritt von Angestelltem zu Unternehmer ist genau dieser Übergang — vom täglichen Tauschen der Zeit zum System das läuft.
+
 **Reel-Zeiten (CEST):** B&S 17:55 / mentalgesund 18:05 / ki_support 18:15 / mit.system 18:25
