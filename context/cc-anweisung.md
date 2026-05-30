@@ -207,4 +207,15 @@ Jeder Post muss eine Richtung haben. Ziel ist nicht "interessanter Content" — 
 
 **CTA @andi.mit.system:** Link nur über Bio erwähnen, nie direkt in Caption eintragen.
 
+**Von Reichweite zu Kunden — die drei Kaufphasen:**
+Content muss alle drei Phasen abdecken, nicht nur eine:
+1. Awareness: Trigger, Problem benennen, Aufmerksamkeit holen
+2. Consideration: Autorität zeigen, Vertrauen aufbauen, Einwände entkräften
+3. Decision: klares Angebot, einfacher Prozess, ein Schritt
+
+Wichtige Hebel: Storytelling, Proof (Beweise), Offer (klares Angebot).
+Stories und DMs: Nähe schaffen und Problemlösung zeigen — wirksames Verkaufswerkzeug.
+Routinen: Regelmäßige Inhalte und CTAs erhöhen Conversion. Klarheit und Struktur führen zur Kundengewinnung.
+Kunden kaufen wegen Problemlösungen — nicht weil jemand postet.
+
 **Reel-Zeiten (CEST):** B&S 17:55 / mentalgesund 18:05 / ki_support 18:15 / mit.system 18:25
