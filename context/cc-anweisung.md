@@ -153,9 +153,20 @@ Trigger pro Account:
 - @ki_support: täglich Stunden für Aufgaben die KI in Minuten erledigt
 - @andi.mit.system: jeden Monat dasselbe Gehalt, täglich Zeit gegen Geld, keine Freiheit
 
-**Säule 2: Autorität (Vertrauen durch Wiederholung)**
-Vertrauen durch Geschichten, Beweise und wiederholte Prinzipien. Nicht einmalig behaupten — immer wieder zeigen.
-Andi's Stärke: er kennt das Problem aus eigener Erfahrung. Das muss im Inhalt spürbar sein.
+**Säule 2: Autorität (Vertrauen, nicht nur Wissen)**
+Wissen ist überall kostenlos. Menschen suchen Orientierung — jemanden der zeigt: ich versteh dein Problem, ich war da, ich hab's gelöst.
+Autorität entsteht nicht durch Größer-machen. Durch ehrliches Zeigen dass man den Weg kennt.
+
+Drei Content-Typen für Autorität:
+1. Geschichten: wo Andi herkommt, was schiefging, was er gelernt hat. Echte Journey, kein Märchen. Menschen glauben Menschen, nicht Marketing.
+2. Beweise: eigene Ergebnisse oder Kunden-Feedbacks. Nicht zum Angeben — als Beweis. Transparenz schafft Vertrauen, nicht Perfektion.
+3. Prinzipien: klare Aussagen für die Andi steht. Wer sich wiederholt wird wiedererkannt. Wer ständig Themen wechselt ist nur Content-Rauschen.
+
+Ziel: Wer drei Posts von Andi sieht, weiß danach genau wofür er steht.
+
+Gute Aufmerksamkeit: Zuschauer denkt "das bin ich" → führt zu Umsatz.
+Schlechte Aufmerksamkeit: Zuschauer denkt "das war lustig" → führt nur zu Views.
+Ziel ist immer: "das bin ich" auslösen. So konkret treffen, dass der Leser das Gefühl hat, man liest seine Gedanken.
 
 **Säule 3: Aktion (Reichweite in Umsatz verwandeln)**
 Klare CTA, einfacher Prozess. Der Schritt nach dem Post muss so klein und klar sein, dass er sich fast von selbst ergibt.
