@@ -115,6 +115,19 @@ Was wurde erreicht, was ist der nächste logische Schritt und was sollte ich nic
 
 Diese Regeln werden vor jeder Content-Erstellung ohne Ausnahme angewendet. Kein Post, kein Skript, keine Caption ohne diesen Check.
 
+**Drei-Fragen-Gate — vor jedem Post:**
+1. Was löst dieser Post bei der Zielgruppe emotional aus?
+2. Was beweist er über Expertise oder Werte?
+3. Welche konkrete Handlung leitet er ab?
+
+Alle drei Fragen müssen mit Ja beantwortet werden. Wenn nicht: überarbeiten, nicht posten.
+
+Warnung: Fehlt eine Säule, bricht das System:
+Nur Aufmerksamkeit → Influencer ohne Umsatz.
+Nur Autorität → respektierter Experte ohne Sichtbarkeit.
+Nur Action → klingt wie ein Marktschreier.
+Erst das Zusammenspiel ergibt ein funktionierendes System.
+
 **Schreibstil:**
 Keine Gedankenstriche als Stilmittel. Kein KI-Sprech. Keine Ankündigungsformeln. Keine künstlichen Gegensätze. Keine Dreierreihen. Keine Business-Worthülsen. Texte klingen wie ein echter Mensch.
 
