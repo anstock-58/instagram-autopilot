@@ -140,7 +140,7 @@ Keine Gedankenstriche als Stilmittel. Kein KI-Sprech. Keine Ankündigungsformeln
 | Account | Zielgruppe | Keyword | Produkt/Thema |
 |---|---|---|---|
 | @business.und.spirit | Unternehmer / Führungskräfte 50+ im Funktionsmodus | CHECK | Standortcheck, Minikurs 37€, Neustart im Kopf 397€ |
-| @andi.mentalgesund | Männer und Frauen 35+ — Grenzen, Selbstwert, Kopf abschalten | KLARHEIT | Standortcheck, Minikurs, Kopf abschaltet nicht, Nein aus Überzeugung |
+| @andi.mentalgesund | Männer und Frauen 35+ — Grenzen, Selbstwert, Kopf abschalten | KLARHEIT (immer, nie NEIN) | Standortcheck, Minikurs, Kopf abschaltet nicht, Nein aus Überzeugung |
 | @ki_support | KI-Einsteiger, Selbstständige | START | KI Prompt Paket, KI Audio Empire (kein Audible, kein 7-Tage-Plan, kein manueller Upload) |
 | @andi.mit.system | Angestellte im Nine to Five die nebenher aufbauen wollen | INFO | TAC 3.0 Workshop — nur Workshop bewerben, passives Einkommen als Konzept ok, KEINE konkreten Zahlen, Link nur über Bio |
 
