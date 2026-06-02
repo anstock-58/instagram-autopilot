@@ -309,22 +309,26 @@ foreach ($row in $heuteRows) {
     $ctaScript = "Schreib NEIN in die Kommentare. Oder klick den Link in der Bio."
     $voiceover = Optimize-ForTTS -text $voiceoverBase
 
-    # AI-Video mit Voiceover erstellen
-    $videoName     = "Mentalgesund $typ $heute"
-    $videoResponse = Create-AIVideo -imagePrompt $imageSource -voiceScript $voiceover -ctaScript $ctaScript -typ $typ -videoName $videoName
-    if (-not $videoResponse) {
-        Write-Log "AI-Video-Erstellung fehlgeschlagen. Post uebersprungen."
-        continue
+    # FOTO-MODUS: Wenn Bild-URL direkt vorhanden, kein AI-Video rendern (spart Credits)
+    $directImageUrl = $row.'Bild-URL'.Trim()
+    if ($directImageUrl -and $directImageUrl -match "^https://") {
+        Write-Log "Foto-Modus: Direktes Bild posten (keine Credits)"
+        $videoUrl = $directImageUrl
+    } else {
+        # AI-Video mit Voiceover erstellen
+        $videoName     = "Mentalgesund $typ $heute"
+        $videoResponse = Create-AIVideo -imagePrompt $imageSource -voiceScript $voiceover -ctaScript $ctaScript -typ $typ -videoName $videoName
+        if (-not $videoResponse) {
+            Write-Log "AI-Video-Erstellung fehlgeschlagen. Post uebersprungen."
+            continue
+        }
+        $videoUrl = Wait-ForVideoUrl -response $videoResponse
+        if (-not $videoUrl) {
+            Write-Log "Keine Video-URL in Response. Post uebersprungen."
+            continue
+        }
+        Write-Log "Video-URL: $videoUrl"
     }
-
-    # Video-URL aus Response extrahieren (wartet auf async Rendering)
-    $videoUrl = Wait-ForVideoUrl -response $videoResponse
-    if (-not $videoUrl) {
-        Write-Log "Keine Video-URL in Response. Post uebersprungen."
-        continue
-    }
-
-    Write-Log "Video-URL: $videoUrl"
 
     $targetType = "instagram"
     $mediaType  = if ($typ -eq "Story") { "story" } else { "reel" }
