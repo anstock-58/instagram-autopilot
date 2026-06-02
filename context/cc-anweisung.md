@@ -131,7 +131,7 @@ Erst das Zusammenspiel ergibt ein funktionierendes System.
 **Schreibstil:**
 Keine Gedankenstriche als Stilmittel. Kein KI-Sprech. Keine Ankündigungsformeln. Keine künstlichen Gegensätze. Keine Dreierreihen. Keine Business-Worthülsen. Texte klingen wie ein echter Mensch.
 
-**Homographen im Voiceover vermeiden:** Couch (statt Coach!), modern, übersetzen, umfahren — durch Synonyme ersetzen.
+**Homographen und falsch ausgesprochene Begriffe im Voiceover:** Couch (statt Coach!), modern, übersetzen, umfahren — durch Synonyme ersetzen. TAC wird als "Tack" ausgesprochen — nie im Voiceover verwenden, stattdessen "der Workshop". Zufäll ist kein deutsches Wort — immer Zufall.
 
 **Keine langen Relativsätze im Voiceover:** TTS verschluckt Konstruktionen wie "der sich um andere sorgt". Kurze Hauptsätze. Statt "Ein Mensch der fühlt" lieber "Du fühlst das."
 
