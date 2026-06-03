@@ -123,7 +123,7 @@ function Wait-ForVideoUrl {
     if (-not $jobId) { Write-Log "Keine Job-ID gefunden."; return $null }
 
     Write-Log "Rendering laeuft (Job: $jobId)..."
-    $maxWait = 60
+    $maxWait = 120
     for ($i = 1; $i -le $maxWait; $i++) {
         Start-Sleep -Seconds 5
         try {
