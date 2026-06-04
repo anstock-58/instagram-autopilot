@@ -80,7 +80,7 @@ function Create-AIVideo {
             scenes          = $scenes
             enableVoiceover = $true
             voiceName       = $voiceName
-            aiImageModel    = "fal-ai/imagen4/preview/fast"
+            aiImageModel    = "fal-ai/flux/schnell"
             animateAiImages = $false
             captionPosition = "bottom"
             highlightColor  = "#FFFF00"
