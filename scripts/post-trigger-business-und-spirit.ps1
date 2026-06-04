@@ -281,9 +281,9 @@ foreach ($row in $heuteRows) {
     $voiceoverBase = $voiceoverBase -replace '#\S+', ''
     $voiceoverBase = $voiceoverBase.Trim()
 
-    # @business.und.spirit: immer KLARHEIT
-    $keyword = "KLARHEIT"
-    $ctaScript = "Kommentiere $keyword. Oder klick den Link in der Bio."
+    # @business.und.spirit: CHECK -> Standortcheck
+    $keyword = "CHECK"
+    $ctaScript = "Schreib CHECK in die Kommentare — dann schick ich dir den kostenlosen Standortcheck direkt zu."
     $voiceover = $voiceoverBase
 
     # FOTO-MODUS: Wenn Bild-URL direkt vorhanden, kein AI-Video rendern (spart Credits)

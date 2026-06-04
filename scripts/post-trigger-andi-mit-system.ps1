@@ -238,7 +238,7 @@ foreach ($row in $heuteRows) {
 
     # @andi.mit.system: immer INFO
     $keyword = "INFO"
-    $ctaScript = "Kommentiere $keyword. Oder klick den Link in der Bio."
+    $ctaScript = "Wenn dich das interessiert — schreib INFO. Ich schick dir alle Details zum Workshop."
     $voiceover = $voiceoverBase
 
     # FOTO-MODUS: Wenn Bild-URL direkt vorhanden, kein AI-Video rendern

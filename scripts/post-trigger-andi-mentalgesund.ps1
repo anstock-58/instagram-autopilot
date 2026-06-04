@@ -306,7 +306,7 @@ foreach ($row in $heuteRows) {
     $voiceoverBase = $voiceoverBase -replace '#\S+', ''
     $voiceoverBase = $voiceoverBase.Trim()
 
-    $ctaScript = "Schreib NEIN in die Kommentare. Oder klick den Link in der Bio."
+    $ctaScript = "Wenn das bei dir gerade passt — schreib KLARHEIT. Ich schick dir den kostenlosen Standortcheck direkt zu."
     $voiceover = Optimize-ForTTS -text $voiceoverBase
 
     # FOTO-MODUS: Wenn Bild-URL direkt vorhanden, kein AI-Video rendern (spart Credits)
