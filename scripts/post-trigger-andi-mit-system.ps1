@@ -241,12 +241,18 @@ foreach ($row in $heuteRows) {
     $ctaScript = "Kommentiere $keyword. Oder klick den Link in der Bio."
     $voiceover = $voiceoverBase
 
-    $videoName     = "Andi-mit-System $typ $heute"
-    $videoResponse = Create-AIVideo -imagePrompt $imageSource -voiceScript $voiceover -ctaScript $ctaScript -typ $typ -videoName $videoName
-    if (-not $videoResponse) { Write-Log "AI-Video fehlgeschlagen. Post uebersprungen."; continue }
-
-    $videoUrl = Wait-ForVideoUrl -response $videoResponse
-    if (-not $videoUrl) { Write-Log "Keine Video-URL. Post uebersprungen."; continue }
+    # FOTO-MODUS: Wenn Bild-URL direkt vorhanden, kein AI-Video rendern
+    $directImageUrl = $row.'Bild-URL'.Trim()
+    if ($directImageUrl -and $directImageUrl -match "^https://") {
+        Write-Log "Foto-Modus: Direktes Bild posten (keine Credits)"
+        $videoUrl = $directImageUrl
+    } else {
+        $videoName     = "Andi-mit-System $typ $heute"
+        $videoResponse = Create-AIVideo -imagePrompt $imageSource -voiceScript $voiceover -ctaScript $ctaScript -typ $typ -videoName $videoName
+        if (-not $videoResponse) { Write-Log "AI-Video fehlgeschlagen. Post uebersprungen."; continue }
+        $videoUrl = Wait-ForVideoUrl -response $videoResponse
+        if (-not $videoUrl) { Write-Log "Keine Video-URL. Post uebersprungen."; continue }
+    }
 
     $targetType = "instagram"
     $mediaType  = if ($typ -eq "Story") { "story" } else { "reel" }
