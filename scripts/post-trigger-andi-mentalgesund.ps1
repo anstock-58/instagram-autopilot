@@ -109,7 +109,7 @@ function Create-AIVideo {
             scenes          = $scenes
             enableVoiceover = $true
             voiceName       = $voiceName
-            aiImageModel    = "fal-ai/flux/schnell"
+            aiImageModel    = "replicate/black-forest-labs/flux-schnell"
             animateAiImages = $false
             captionPosition = "bottom"
             highlightColor  = "#FFFF00"
