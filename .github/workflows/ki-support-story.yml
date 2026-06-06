@@ -3,6 +3,8 @@ name: KI-Support Autopilot - Story (09:00)
 on:
   schedule:
     - cron: '20 7 * * *'    # 07:20 UTC = 09:20 CEST (täglich)
+    - cron: '57 8 * * *'    # Backup-Lauf (faengt verspaetete/uebersprungene GitHub-Schedule ab)
+    - cron: '43 10 * * *'    # Backup-Lauf (faengt verspaetete/uebersprungene GitHub-Schedule ab)
   workflow_dispatch:
 
 jobs:
