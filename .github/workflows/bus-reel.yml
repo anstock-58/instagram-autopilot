@@ -1,8 +1,10 @@
-﻿name: Business-und-Spirit Autopilot - Reel (18:00)
+name: Business-und-Spirit Autopilot - Reel (18:00)
 
 on:
   schedule:
     - cron: '55 15 * * *'   # 15:55 UTC = 17:55 CEST (täglich)
+    - cron: '37 17 * * *'    # Backup-Lauf (faengt verspaetete/uebersprungene GitHub-Schedule ab)
+    - cron: '23 19 * * *'    # Backup-Lauf (faengt verspaetete/uebersprungene GitHub-Schedule ab)
   workflow_dispatch:         # Manuell auslösbar über GitHub UI
 
 jobs:

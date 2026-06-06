@@ -3,6 +3,8 @@ name: Andi Mentalgesund Autopilot - Story (09:00)
 on:
   schedule:
     - cron: '10 7 * * *'    # 07:10 UTC = 09:10 CEST (täglich)
+    - cron: '47 8 * * *'    # Backup-Lauf (faengt verspaetete/uebersprungene GitHub-Schedule ab)
+    - cron: '33 10 * * *'    # Backup-Lauf (faengt verspaetete/uebersprungene GitHub-Schedule ab)
   workflow_dispatch:         # Manuell auslösbar
 
 jobs:
