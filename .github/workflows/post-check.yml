@@ -2,8 +2,10 @@ name: Post-Check und Retry (alle Accounts)
 
 on:
   schedule:
-    - cron: '0 9 * * *'    # 09:00 UTC = Story-Check (1h nach Trigger)
-    - cron: '0 17 * * *'   # 17:00 UTC = Reel-Check (1h nach Trigger)
+    - cron: '17 9 * * *'    # 09:17 UTC = Story-Check 1 (abseits voller Stunde, zuverlaessiger)
+    - cron: '17 11 * * *'   # 11:17 UTC = Story-Check 2 (Backup, faengt auch Ausfall des Checks selbst ab)
+    - cron: '17 17 * * *'   # 17:17 UTC = Reel-Check 1 (abseits voller Stunde)
+    - cron: '17 19 * * *'   # 19:17 UTC = Reel-Check 2 (Backup)
   workflow_dispatch:
 
 jobs:
@@ -33,7 +35,7 @@ jobs:
           # Posttyp aus dem Cron-Schedule ableiten (nicht aus aktueller Uhrzeit,
           # weil GitHub Delays von bis zu 3h verursachen können)
           $schedule = "${{ github.event.schedule }}"
-          $postType = if ($schedule -match "^0 9") { "Story" } elseif ($schedule -match "^0 17") { "Reel" } else {
+          $postType = if ($schedule -match "^17 (9|11) ") { "Story" } elseif ($schedule -match "^17 (17|19) ") { "Reel" } else {
             # Fallback für workflow_dispatch: aktuelle Stunde nutzen
             $hourUTC = [int](Get-Date).ToUniversalTime().ToString("HH")
             if ($hourUTC -lt 13) { "Story" } else { "Reel" }
