@@ -277,13 +277,13 @@ foreach ($row in $heuteRows) {
 
     $voiceoverBase = $caption -replace '[💡📲🎧🎁💻🧠🔥✅❌→←↑↓👆👇👉👈⚡✨🎯💰📈🏆🎤🎵🎶🎼🎙️]', ''
     $voiceoverBase = $voiceoverBase -replace 'Link in Bio.*', ''
-    $voiceoverBase = $voiceoverBase -replace '(?i)(Kommentiere|Schreib)\s+\w+.*', ''  # alle CTAs raus
+    $voiceoverBase = ($voiceoverBase -split "`n" | Where-Object { $_ -notmatch '(?i)(schreib|kommentiere)\s+\w+' }) -join "`n"  # Ganze CTA-Zeilen raus (nicht nur ab Keyword)
     $voiceoverBase = $voiceoverBase -replace '#\S+', ''
     $voiceoverBase = $voiceoverBase.Trim()
 
     # @business.und.spirit: CHECK -> Standortcheck
     $keyword = "CHECK"
-    $ctaScript = "Schreib CHECK in die Kommentare — dann schick ich dir den kostenlosen Standortcheck direkt zu."
+    $ctaScript = "Schreib CHECK in die Kommentare, dann schick ich dir den kostenlosen Standortcheck direkt zu."
     $voiceover = $voiceoverBase
 
     # FOTO-MODUS: Wenn Bild-URL direkt vorhanden, kein AI-Video rendern (spart Credits)

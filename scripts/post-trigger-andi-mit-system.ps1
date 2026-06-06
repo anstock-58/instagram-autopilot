@@ -232,13 +232,13 @@ foreach ($row in $heuteRows) {
     # Voiceover aus Caption-Text aufbauen (wie ki-support und business-und-spirit)
     $voiceoverBase = $caption -replace '[💡📲🎧🎁💻🧠🔥✅❌→←↑↓👆👇👉👈⚡✨🎯💰📈🏆🎤🎵🎶🎼🎙️]', ''
     $voiceoverBase = $voiceoverBase -replace 'Link in Bio.*', ''
-    $voiceoverBase = $voiceoverBase -replace '(?i)(Kommentiere|Schreib)\s+\w+.*', ''  # alle CTAs raus
+    $voiceoverBase = ($voiceoverBase -split "`n" | Where-Object { $_ -notmatch '(?i)(schreib|kommentiere)\s+\w+' }) -join "`n"  # Ganze CTA-Zeilen raus (nicht nur ab Keyword)
     $voiceoverBase = $voiceoverBase -replace '#\S+', ''
     $voiceoverBase = $voiceoverBase.Trim()
 
     # @andi.mit.system: immer INFO
     $keyword = "INFO"
-    $ctaScript = "Wenn dich das interessiert — schreib INFO. Ich schick dir alle Details zum Workshop."
+    $ctaScript = "Wenn dich das interessiert, schreib INFO. Ich schick dir alle Details zum Workshop."
     $voiceover = $voiceoverBase
 
     # FOTO-MODUS: Wenn Bild-URL direkt vorhanden, kein AI-Video rendern

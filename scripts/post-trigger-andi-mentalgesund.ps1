@@ -302,11 +302,11 @@ foreach ($row in $heuteRows) {
     # Voiceover: Hauptbotschaft ohne Emojis, Links und CTAs — CTA kommt einmal in Scene 2
     $voiceoverBase = $caption -replace '[💡📲🎧🎁💻🧠🔥✅❌→←↑↓👆👇👉👈⚡✨🎯💰📈🏆🎤🎵🎶🎼🎙️😔😤😮💪🕊️]', ''
     $voiceoverBase = $voiceoverBase -replace 'Link in Bio.*', ''
-    $voiceoverBase = $voiceoverBase -replace '(?i)(Schreib|Kommentiere)\s+\w+.*', ''  # CTAs raus
+    $voiceoverBase = ($voiceoverBase -split "`n" | Where-Object { $_ -notmatch '(?i)(schreib|kommentiere)\s+\w+' }) -join "`n"  # Ganze CTA-Zeilen raus (nicht nur ab Keyword)
     $voiceoverBase = $voiceoverBase -replace '#\S+', ''
     $voiceoverBase = $voiceoverBase.Trim()
 
-    $ctaScript = "Wenn das bei dir gerade passt — schreib KLARHEIT. Ich schick dir den kostenlosen Standortcheck direkt zu."
+    $ctaScript = "Wenn das bei dir gerade passt, schreib KLARHEIT. Ich schick dir den kostenlosen Standortcheck direkt zu."
     $voiceover = Optimize-ForTTS -text $voiceoverBase
 
     # FOTO-MODUS: Wenn Bild-URL direkt vorhanden, kein AI-Video rendern (spart Credits)

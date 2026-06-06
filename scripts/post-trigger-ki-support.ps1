@@ -304,7 +304,7 @@ foreach ($row in $heuteRows) {
     # Voiceover: nur Hauptbotschaft, alle CTAs raus — CTA kommt einmal in Scene 2
     $voiceoverBase = $caption -replace '[💡📲🎧🎁💻🧠🔥✅❌→←↑↓👆👇👉👈⚡✨🎯💰📈🏆🎤🎵🎶🎼🎙️]', ''
     $voiceoverBase = $voiceoverBase -replace 'Link in Bio.*', ''
-    $voiceoverBase = $voiceoverBase -replace '(?i)(Kommentiere|Schreib)\s+\w+.*', ''  # alle CTAs raus
+    $voiceoverBase = ($voiceoverBase -split "`n" | Where-Object { $_ -notmatch '(?i)(schreib|kommentiere)\s+\w+' }) -join "`n"  # Ganze CTA-Zeilen raus (nicht nur ab Keyword)
     $voiceoverBase = $voiceoverBase -replace '#\S+', ''
     $voiceoverBase = $voiceoverBase.Trim()
 
@@ -315,7 +315,7 @@ foreach ($row in $heuteRows) {
         "*alfima*"              { "TOOL" }
         default                 { "KI" }
     }
-    $ctaScript = "Wenn dich das interessiert — schreib START. Ich schick dir sofort alle Details."
+    $ctaScript = "Wenn dich das interessiert, schreib START. Ich schick dir sofort alle Details."
     $voiceover = Optimize-ForTTS -text $voiceoverBase
 
     # FOTO-MODUS: Wenn Bild-URL direkt vorhanden, kein AI-Video rendern
