@@ -26,3 +26,14 @@ scripts/telegram-pause-bot.ps1
 
 # Archivierte Dateien nicht pushen
 archiv/
+
+# Schwere Kurs-Medien — lokal halten, nicht versionieren
+outputs/kurse/*/videos/
+outputs/kurse/*/lektions-bilder/
+outputs/kurse/*/modul-bilder/
+outputs/kurse/*/folien/
+
+# Temporaere Dateien (Scratch, entpackte Docx)
+scripts/*_temp.csv
+**/unpacked/
+**/source-unpacked/
