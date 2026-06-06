@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notfallkarte — Herzbruch-Notfall-Kurs</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 24px;
+  }
+
+  .card {
+    width: 210mm;
+    min-height: 297mm;
+    background: #fff;
+    padding: 16mm 16mm 14mm 16mm;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Hintergrund-Akzent */
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 8px;
+    height: 100%;
+    background: linear-gradient(to bottom, #3D0A1A, #7A1830);
+  }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .card { box-shadow: none; width: 100%; min-height: auto; padding: 12mm 14mm 10mm 14mm; }
+    @page { size: A4; margin: 0; }
+  }
+
+  /* Header */
+  .header {
+    margin-left: 12px;
+    margin-bottom: 10mm;
+    padding-bottom: 5mm;
+    border-bottom: 2.5px solid #C9952A;
+  }
+  .kurs-label {
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: #C9952A;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .kurs-title {
+    font-size: 18pt;
+    font-weight: 800;
+    color: #3D0A1A;
+    line-height: 1.2;
+  }
+  .kurs-subtitle {
+    font-size: 9.5pt;
+    color: #777;
+    margin-top: 3px;
+  }
+
+  /* Sektionen */
+  .section {
+    margin-left: 12px;
+    margin-bottom: 7mm;
+  }
+  .section-title {
+    font-size: 10pt;
+    font-weight: 700;
+    color: #3D0A1A;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 3mm;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #D4A8A0;
+  }
+
+  /* Ausfüll-Zeilen */
+  .fill-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 3.5mm;
+  }
+  .fill-label {
+    font-size: 8.5pt;
+    color: #888;
+    white-space: nowrap;
+    min-width: 20px;
+  }
+  .fill-line-input {
+    flex: 1;
+    border: none;
+    border-bottom: 1.5px solid #C9952A;
+    padding: 2px 0 3px 0;
+    font-size: 10.5pt;
+    color: #2D2D2D;
+    background: transparent;
+    outline: none;
+  }
+  .fill-line-input::placeholder {
+    color: #CCC;
+    font-style: italic;
+    font-size: 9pt;
+  }
+
+  /* Hotline Box */
+  .hotline-box {
+    margin-left: 12px;
+    background: #3D0A1A;
+    color: #fff;
+    border-radius: 6px;
+    padding: 5mm 6mm;
+    margin-bottom: 7mm;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .hotline-icon {
+    font-size: 22pt;
+    flex-shrink: 0;
+  }
+  .hotline-text { flex: 1; }
+  .hotline-name {
+    font-size: 8.5pt;
+    color: #C9952A;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .hotline-number {
+    font-size: 18pt;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  .hotline-info {
+    font-size: 8pt;
+    color: #E0C0C0;
+    margin-top: 2px;
+  }
+
+  /* Techniken */
+  .technik-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 4mm;
+    padding: 3mm 4mm;
+    background: #FDF5F0;
+    border-radius: 4px;
+    border-left: 3px solid #C9952A;
+  }
+  .technik-nr {
+    font-size: 14pt;
+    font-weight: 800;
+    color: #C9952A;
+    line-height: 1;
+    flex-shrink: 0;
+    min-width: 22px;
+  }
+  .technik-content { flex: 1; }
+  .technik-name {
+    font-size: 9pt;
+    color: #7A1830;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+  .technik-steps {
+    font-size: 8.5pt;
+    color: #444;
+    line-height: 1.5;
+  }
+
+  /* Mantras */
+  .mantras {
+    margin-left: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3mm;
+    margin-bottom: 7mm;
+  }
+  .mantra {
+    padding: 3mm 4mm;
+    background: #FDF5F0;
+    border-radius: 4px;
+    font-size: 8.5pt;
+    color: #3D0A1A;
+    font-style: italic;
+    line-height: 1.4;
+    border: 1px solid #E8C8C0;
+  }
+
+  /* Footer */
+  .footer {
+    margin-left: 12px;
+    padding-top: 4mm;
+    border-top: 1px solid #E0D0D0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-left {
+    font-size: 7.5pt;
+    color: #AAA;
+  }
+  .footer-right {
+    font-size: 8pt;
+    color: #C9952A;
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+
+  <div class="header">
+    <div class="kurs-label">Herzbruch-Notfall-Kurs</div>
+    <div class="kurs-title">Meine Notfallkarte</div>
+    <div class="kurs-subtitle">Für Momente wo es schwer wird — immer griffbereit</div>
+  </div>
+
+  <!-- SOS-Kontakte -->
+  <div class="section">
+    <div class="section-title">Meine SOS-Kontakte</div>
+    <div class="fill-line">
+      <span class="fill-label">1.</span>
+      <input class="fill-line-input" type="text" placeholder="Name und Nummer...">
+    </div>
+    <div class="fill-line">
+      <span class="fill-label">2.</span>
+      <input class="fill-line-input" type="text" placeholder="Name und Nummer...">
+    </div>
+    <div class="fill-line">
+      <span class="fill-label">3.</span>
+      <input class="fill-line-input" type="text" placeholder="Name und Nummer...">
+    </div>
+  </div>
+
+  <!-- Telefonseelsorge -->
+  <div class="hotline-box">
+    <div class="hotline-icon">&#128222;</div>
+    <div class="hotline-text">
+      <div class="hotline-name">Telefonseelsorge Deutschland</div>
+      <div class="hotline-number">0800 111 0 111</div>
+      <div class="hotline-info">Kostenlos &nbsp;·&nbsp; Anonym &nbsp;·&nbsp; 24 Stunden &nbsp;·&nbsp; 7 Tage die Woche</div>
+    </div>
+  </div>
+
+  <!-- Meine 3 Techniken -->
+  <div class="section">
+    <div class="section-title">Meine 3 Regulationstechniken</div>
+
+    <div class="technik-item">
+      <div class="technik-nr">1</div>
+      <div class="technik-content">
+        <div class="technik-name">4-7-8-Atmung</div>
+        <div class="technik-steps">4 Sek. einatmen &nbsp;→&nbsp; 7 Sek. halten &nbsp;→&nbsp; 8 Sek. ausatmen &nbsp;→&nbsp; 3 Runden</div>
+      </div>
+    </div>
+
+    <div class="technik-item">
+      <div class="technik-nr">2</div>
+      <div class="technik-content">
+        <div class="technik-name">Kälte-Reset</div>
+        <div class="technik-steps">Kaltes Wasser ins Gesicht &nbsp;·&nbsp; Handgelenke kühlen &nbsp;·&nbsp; Sofortige Beruhigung</div>
+      </div>
+    </div>
+
+    <div class="technik-item">
+      <div class="technik-nr">3</div>
+      <div class="technik-content">
+        <div class="technik-name">5-4-3-2-1 Grounding</div>
+        <div class="technik-steps">5 sehen &nbsp;·&nbsp; 4 hören &nbsp;·&nbsp; 3 fühlen &nbsp;·&nbsp; 2 riechen &nbsp;·&nbsp; 1 schmecken</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wenn es zu viel wird -->
+  <div class="section">
+    <div class="section-title">Sätze die helfen</div>
+    <div class="mantras">
+      <div class="mantra">"Das ist eine Welle. Sie kommt. Sie geht."</div>
+      <div class="mantra">"Das ist Entzug, keine Liebe."</div>
+      <div class="mantra">"Das ist schmerzhaft und ich überstehe es."</div>
+      <div class="mantra">"Ich habe schon schlimme Momente überlebt."</div>
+    </div>
+  </div>
+
+  <!-- Meine eigenen Notizen -->
+  <div class="section">
+    <div class="section-title">Mein SOS-Anker</div>
+    <div class="fill-line">
+      <input class="fill-line-input" type="text" placeholder="Was hilft mir in schweren Momenten am meisten?">
+    </div>
+    <div class="fill-line">
+      <input class="fill-line-input" type="text" placeholder="Mein Kontakt-Stopp-Vorhaben:">
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-left">Herzbruch-Notfall-Kurs &nbsp;·&nbsp; Modul 7, Lektion 6</div>
+    <div class="footer-right">Ausdrucken &amp; griffbereit halten</div>
+  </div>
+
+</div>
+</body>
+</html>

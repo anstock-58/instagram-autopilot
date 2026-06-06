@@ -45,3 +45,13 @@
 2026-05-29 18:30:50 | Share-URN: urn:li:share:7466164211497439232
 2026-05-29 18:30:51 | FEHLER Kommentar (HTTP 000): 
 2026-05-29 18:30:51 | === Fertig ===
+2026-06-05 17:55:02 | === LinkedIn Trigger gestartet | 05.06.2026 | 17:55 | CSV: contentplan_linkedin_juni_v1.csv ===
+2026-06-05 17:55:02 | 1 LinkedIn-Post(s) fuer heute gefunden.
+2026-06-05 17:55:02 | Post faellig: Foto | 17:55
+2026-06-05 17:55:02 | Sende an Blotato LinkedIn: 682 Zeichen, Bild: ja
+2026-06-05 17:55:03 | LinkedIn gepostet. SubmissionId: 1aec512c-29bf-485d-b9aa-051749e0e6eb
+2026-06-05 17:55:03 | Status auf 'Gepostet' gesetzt.
+2026-06-05 17:55:03 | Warte auf neuen LinkedIn-Post (max 3 Min)...
+2026-06-05 17:58:13 | Timeout: LinkedIn-Post-URL nach 3 Minuten nicht gefunden.
+2026-06-05 17:58:13 | WARNUNG: Kein erster Kommentar gesetzt -- URN nicht gefunden.
+2026-06-05 17:58:13 | === Fertig ===
