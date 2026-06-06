@@ -18,6 +18,7 @@ Thumbs.db
 
 # Claude lokale Einstellungen
 .claude/settings.local.json
+.claude/worktrees/
 
 # MCP Konfiguration (enthält keine Secrets, aber lokal halten)
 .mcp.json
