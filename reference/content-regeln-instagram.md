@@ -4,6 +4,19 @@ Verbindliche Regeln für alle Captions und Texte in den Contentplänen.
 
 ---
 
+## Wording-Regeln (verbindlich für ALLE Inhalte)
+
+Gilt für jeden Reel, jede Story und jeden Untertitel. Ohne Ausnahme.
+
+- **Struktur**: Jeder Post folgt dem festgelegten Aufbau mit Hook am Anfang und dem kompletten definierten Ablauf.
+- **Keine Wiederholungen**: Aussagen und Formulierungen tauchen nicht doppelt auf.
+- **Zahlen als Wort** ausschreiben, nicht als Ziffer.
+- **Keine gestelzten Aufzählungen** wie erstens, zweitens. Natürlich formulieren.
+- **Klare, geerdete Sprache**: kein Fachgewäsch, keine Floskeln, keine Buzzwords. Ehrlich, nicht nach KI.
+- **Keine Bindestriche und keine Gedankenstriche als Stilmittel**, in keinem Untertitel und in keinem Text. Sätze immer so formulieren, dass sie ohne auskommen.
+
+---
+
 ## Stimme & TTS-Qualität
 
 ### Homographen vermeiden
