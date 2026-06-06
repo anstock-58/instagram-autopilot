@@ -52,7 +52,7 @@ Alle drei Accounts nutzen dasselbe Prinzip:
 
 - **Scene 1**: Caption-Text bereinigt (keine Emojis, keine Hashtags) plus produktspezifischer Abschluss-Satz mit Keyword
 - **Scene 2**: Fester CTA-Text mit dem Account-Keyword (CHECK / KLARHEIT / START / INFO)
-- **Stimme**: Daniel (British, authoritative) via ElevenLabs
+- **Stimme** (Stand 06.06.2026): Charlie (Australian, natural) für @business.und.spirit + @andi.mentalgesund — Daniel (British, authoritative) für @ki_support + @andi.mit.system — via ElevenLabs
 - **Captions**: unten, gelb (#FFFF00), Fade-Übergang, 9:16
 
 Regel: Kein Tool-Name im Voiceover, kein Preis, nur Produktnutzen und Keyword.
