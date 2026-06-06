@@ -9,7 +9,7 @@
 | YouTube Autopilot System | Fertig ✅ (24.05.2026) | Vollständiger Käufer-Workspace unter `outputs/youtube-autopilot-system/` — 7 Skills, anonymisiertes Script, Setup-Anleitung — bereit für ALFIMA-Listing zu 297€ |
 | YouTube InnerCode (@innercode.projekt) | Laufend | Vollautomatische Pipeline aktiv — alle 3 Tage neues Video — nächstes: "Erinnerung" (28.05.) in InProduktion |
 | YouTube BusinessUndSpirit (@business.und.spirit) | NEU LIVE ✅ (24.05.2026) | Erstes Video "30 Jahre aufgebaut" produziert — Zielgruppe: Unternehmer/Führungskräfte 50+, Funktionsmodus-Thema — Google OAuth konfiguriert — in Pipeline integriert |
-| YouTube Bewusst Einfach | Laufend | Vollautomatische Pipeline aktiv — alle 3 Tage neues Video — Produkt-Links in Beschreibungen einbauen |
+| YouTube Bewusst Einfach | **FOKUS-KANAL** ✅ | OAuth Token NEU 30.05.2026: siehe context/secrets.md (Refresh Token Bewusst Einfach) — Stimme: 2OcnG4mH3jIMtWz3vKus — Musik: cdn.pixabay.com/audio/2026/04/21/audio_076e2f430b.mp3 — Blotato: 36987 — Thema: Gesundheit+Langlebigkeit 60+ — CTR-Framework: context/ctr-framework.md |
 | Produkt-Links Videobeschreibungen | Eingerichtet ✅ | Regeln in context/produkt-links.md — max 2-3 Links pro Video — thematisch passend — Standortcheck nur Unternehmer 50+ |
 | ElevenLabs Plan | Creator ✅ | 121.000 Credits/Monat — erneuert am 17. Juni 2026 |
 | Instagram Autopilot System | Live ✅ | Architektur: CSV → GitHub Actions → post-trigger-ACCOUNT.ps1 → Blotato /v2/videos/from-templates → AI Video mit Voiceover → Instagram — Template: ai-story-video (5903fe43) — 2 Scenes: Hauptbotschaft + CTA — **Stimme: Charlie (Australian, natural)** für ALLE 4 Accounts (geändert 25.05.2026) — Captions unten, gelb — cron-job.org triggert 07:55 UTC (Story) + 15:55 UTC (Reel) |

@@ -1,0 +1,2006 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Herzbruch-Notfall-Kurs</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Inter',Arial,sans-serif; font-size:11pt; line-height:1.65; color:#2D2D2D; background:#fff; }
+  .container { max-width:800px; margin:0 auto; padding:40px 48px; }
+
+  /* Druckstile */
+  @media print {
+    @page { size: A4; margin: 18mm 16mm 16mm 16mm; }
+    body { font-size: 10pt; background: #fff; }
+    .container { padding: 0; max-width: 100%; }
+
+    /* Jedes Modul beginnt auf neuer Seite */
+    h1.modul { page-break-before: always; break-before: page;
+      background: #3D0A1A !important; color: #fff !important;
+      -webkit-print-color-adjust: exact; print-color-adjust: exact;
+      padding: 10px 14px; border-left: none; border-radius: 0;
+      font-size: 15pt; margin-top: 0; }
+
+    /* Erste Modul-Überschrift nicht umbrechen */
+    h1.modul:first-of-type { page-break-before: avoid; break-before: avoid; }
+
+    /* Überschriften nie allein am Seitenende */
+    h1, h2, h3 { page-break-after: avoid; break-after: avoid; }
+    h2.lektion { page-break-before: avoid; break-before: avoid;
+      border-bottom: 1.5px solid #C9952A !important;
+      -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    h3.section { page-break-before: avoid; break-before: avoid; }
+
+    /* Modul-Beschreibung mit Überschrift zusammenhalten */
+    .modul-desc { page-break-before: avoid; break-before: avoid;
+      background: #F8F0EC !important;
+      -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+    /* Tabellen nie reißen */
+    table, .tbl-wrap { page-break-inside: avoid; break-inside: avoid; }
+    th { background: #3D0A1A !important; color: #fff !important;
+      -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    tr:nth-child(even) td { background: #FDF5F0 !important;
+      -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+    /* Listen nicht reißen wenn kurz */
+    ul.list { page-break-inside: avoid; break-inside: avoid; }
+
+    /* Seitenzahl */
+    .container::after {
+      content: '';
+      display: block;
+    }
+  }
+
+  /* Titelseite */
+  .doc-title { font-size:28pt; font-weight:800; color:#3D0A1A; line-height:1.2; margin-bottom:16px; }
+  .doc-subtitle { font-size:12pt; color:#555; margin-bottom:40px; padding-bottom:32px; border-bottom:3px solid #C9952A; }
+
+  /* Modul-Überschrift */
+  h1.modul { font-size:18pt; font-weight:800; color:#3D0A1A; margin-top:48px; margin-bottom:8px;
+    padding:16px 20px; background:#FDF5F0; border-left:6px solid #3D0A1A; border-radius:0 6px 6px 0; }
+
+  /* Modul-Beschreibung */
+  .modul-desc { font-size:11pt; color:#444; margin-bottom:32px; padding:16px 20px;
+    background:#FAFAFA; border-left:3px solid #C9952A; border-radius:0 4px 4px 0; }
+
+  /* Lektion-Überschrift */
+  h2.lektion { font-size:14pt; font-weight:700; color:#5C1020; margin-top:36px; margin-bottom:12px;
+    padding-bottom:6px; border-bottom:2px solid #C9952A; }
+
+  /* Unterabschnitt */
+  h3.section { font-size:11.5pt; font-weight:700; color:#7A1830; margin-top:20px; margin-bottom:6px; }
+
+  /* Fließtext */
+  p.body { margin-bottom:10px; color:#333; }
+
+  /* Listen */
+  ul.list { margin:8px 0 12px 24px; }
+  ul.list li { margin-bottom:5px; color:#333; }
+
+  /* Tabellen */
+  .tbl-wrap { margin:16px 0 20px 0; overflow-x:auto; }
+  table { width:100%; border-collapse:collapse; font-size:10.5pt; }
+  th { background:#3D0A1A; color:#fff; font-weight:600; padding:8px 12px; text-align:left; border:1px solid #3D0A1A; }
+  td { padding:8px 12px; border:1px solid #D4A8A0; vertical-align:top; }
+  tr:nth-child(even) td { background:#FDF5F0; }
+  tr:nth-child(odd) td { background:#fff; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1 class="doc-title">Herzbruch-Notfallkurs: Die ersten 30 Tage nach der Trennung ohne Komplettabsturz</h1>
+<p class="doc-subtitle">Ein intensiver Online-Kurs für Menschen direkt nach einer Trennung, die zwischen Schock, Verzweiflung, Trauer, Wut und Zukunftsangst feststecken. Der Kurs greift die emotionale, mentale, körperliche und praktische Ebene auf: Warum Trennungen so weh tun, welche Phasen typisch sind, wie Grübelschleifen entstehen und was in den ersten Tagen wirklich hilft. Mit Fokus auf Kontaktpause, erste Hilfe gegen Gedankenkreisen, Schlafproblemen, Erschöpfung und dem Umgang mit Einsamkeit. Ideal für Betroffene, die schnell wieder Boden unter den Füßen brauchen und in einer klaren Schritt-für-Schritt-Struktur Stabilität finden wollen.</p>
+<h1 class="modul">Modul 1: Sicher landen: Orientierung und Notfall-Fahrplan (Tag 0–3)</h1>
+<p class="doc-subtitle">Die ersten Stunden und Tage nach einer Trennung fühlen sich oft chaotisch, unwirklich und körperlich überwältigend an. In diesem Modul geht es nicht darum, alles zu verstehen oder sofort stark zu sein, sondern zunächst Stabilität herzustellen. Du bekommst einen klaren Notfall-Fahrplan für die ersten 72 Stunden: Orientierung, Selbstschutz, minimale Struktur und konkrete Schritte, die dich vor weiterem Absturz bewahren können.</p>
+<div><h2 class="lektion">Lektion 1. Realitäts-Check: Was ist passiert, was brauchst du jetzt?</h2>
+<p class="body">Worum es in dieser Lektion geht</p>
+<p class="body">Direkt nach einer Trennung ist das Erleben oft von Schock, Verleugnung, Hoffnungssprüngen und gedanklichem Chaos geprägt. Ziel dieser Lektion ist ein erster nüchterner Blick auf die Situation: nicht kalt, sondern stabilisierend. Der Fokus liegt auf dem Unterschied zwischen Fakten, Interpretationen und akuten Bedürfnissen.</p>
+<div><h3 class="section">Kernprinzip</h3>
+<p class="body">Bevor du Entscheidungen triffst, brauchst du Orientierung. In Krisen hilft es, die Lage in drei Ebenen zu sortieren: Was ist passiert?, Was denke ich darüber?, Was brauche ich heute?</p>
+<div><h3 class="section">Orientierungsrahmen</h3>
+<ul class="list">
+<li>Fakten festhalten: Was wurde tatsächlich gesagt oder getan? Ist die Trennung ausgesprochen worden? Gibt es offene organisatorische Punkte?</li>
+<li>Interpretationen erkennen: Gedanken wie „Ich werde nie wieder glücklich“ oder</li>
+</ul>
+<p class="body">„Wenn ich jetzt das Richtige schreibe, kommt alles zurück“ sind Gedanken, keine Tatsachen.</p>
+<ul class="list">
+<li>Akute Bedürfnisse priorisieren: Schlaf, Essen, Flüssigkeit, Ruhe, Sicherheit, Begleitung, Abstand von Triggern.</li>
+</ul>
+<div><h3 class="section">Praktische Leitfragen</h3>
+<ul class="list">
+<li>Was weiß ich sicher über die aktuelle Situation?</li>
+<li>Was weiß ich noch nicht und muss ich heute auch nicht klären?</li>
+<li>Was belastet mich im Moment am stärksten: Schock, Angst, Einsamkeit, Wut, Schuld, Unklarheit?</li>
+<li>Was brauche ich in den nächsten 6 Stunden, nicht in den nächsten 6 Monaten?</li>
+</ul>
+<div><h3 class="section">Mini-Übung: Fakten vs. Geschichten</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Fakten</th><th>Geschichten im Kopf</th><th>Hilfreiche Alternative</th></tr>
+<tr><td>„Die Beziehung wurde beendet.“</td><td>„Damit ist mein Leben zerstört.“</td><td>„Ich erlebe gerade eine akute Krise. Sie ist schwer, aber nicht mein gesamtes Leben.“</td></tr>
+<tr><td>„Wir hatten heute Kontakt.“</td><td>„Der Kontakt bedeutet sicher, dass es noch Hoffnung gibt.“</td><td>„Kontakt sagt noch nichts Verlässliches über die Zukunft aus.“</td></tr>
+<tr><td>„Ich habe kaum gegessen und geschlafen.“</td><td>„Mit mir stimmt etwas nicht.“</td><td>„Starker Stress wirkt auf den Körper. Ich brauche zuerst Stabilisierung.“</td></tr>
+</table></div>
+<div><h3 class="section">Was du heute nicht lösen musst</h3>
+<ul class="list">
+<li>Die gesamte Beziehung analysieren</li>
+<li>Schuld endgültig klären</li>
+<li>Entscheiden, ob es jemals einen Neuanfang gibt</li>
+<li>Allen Menschen sofort alles erzählen</li>
+<li>Dein ganzes zukünftiges Leben planen</li>
+</ul>
+<div><h3 class="section">Erste Prioritätenliste für Tag 0–1</h3>
+<ul class="list">
+<li>Körperlich stabilisieren: trinken, essen, duschen, hinsetzen, atmen.</li>
+<li>Akute Trigger reduzieren: Chatverläufe, Social Media, Alkohol, impulsive Nachrichten.</li>
+<li>Eine Person informieren, die ruhig und verlässlich ist.</li>
+<li>Für die nächsten 24 Stunden einen sehr kleinen Plan machen.</li>
+</ul>
+<div><h3 class="section">Wichtiger Hinweis</h3>
+<p class="body">Starke emotionale Reaktionen nach einer Trennung sind häufig und bedeuten nicht automatisch, dass du „zu schwach“ bist. Entscheidend ist jetzt nicht, wie souverän du wirkst, sondern wie konsequent du dich in den ersten Tagen schützt und versorgst.</p>
+<p class="body">Du sortierst die akute Lage in Fakten, Gedanken und Bedürfnisse. So entsteht ein realistischer Blick auf die Trennung und eine erste Prioritätenliste für die nächsten Stunden.</p>
+<div><h2 class="lektion">Lektion 2. Stabil bleiben: 24–72h Notfall-Rituale (Atmen, Körper, Umfeld)</h2>
+<p class="body">Ziel der Lektion</p>
+<p class="body">In den ersten 24 bis 72 Stunden geht es vor allem um Nervensystem-Regulation. Intensive Gefühle lassen sich meist nicht sofort „wegdenken“, aber du kannst ihren körperlichen Sog abschwächen. Diese Lektion bündelt einfache Notfall-Rituale für Atmung, Körper und Umfeld.</p>
+<div><h3 class="section">Warum Rituale helfen</h3>
+<p class="body">Unter akutem Stress reagiert der Körper oft mit Alarm: Unruhe, Engegefühl, Zittern, Übelkeit, Schlafproblemen, Gedankenkreisen. Kurze, wiederholbare Abläufe schaffen Vorhersagbarkeit und geben dem System Signale von Sicherheit und Struktur.</p>
+<div><h3 class="section">Notfall-Ritual für 5 Minuten</h3>
+<ul class="list">
+<li>Stoppen: Setz dich hin oder stelle beide Füße auf den Boden.</li>
+<li>Atmen: Ruhig ausatmen, die Ausatmung etwas länger als die Einatmung.</li>
+<li>Orientieren: Nenne 5 Dinge, die du siehst, 3 Dinge, die du hörst, 1 Körperkontaktpunkt.</li>
+<li>Versorgen: Ein Glas Wasser, etwas Kleines essen, Schultern lockern.</li>
+<li>Begrenzen: Für die nächsten 30 Minuten keine impulsive Nachricht senden.</li>
+</ul>
+<div><h3 class="section">Konkrete Stabilisierungstechniken</h3>
+<ul class="list">
+<li>Atmung: Langsam und ohne Zwang atmen; Fokus auf verlängerte Ausatmung.</li>
+<li>Bodenkontakt: Füße bewusst spüren, gegen den Boden drücken, Haltung aufrichten.</li>
+<li>Temperaturreiz: Kühle Luft, kaltes Wasser an Hände oder Gesicht können helfen, den Fokus zu verlagern.</li>
+<li>Bewegung: Kurzer Spaziergang, leichtes Dehnen, langsames Gehen statt regungslosem Grübeln.</li>
+<li>Reizarme Umgebung: Licht dimmen, Lärm reduzieren, Handy aus dem Blickfeld legen.</li>
+</ul>
+<div><h3 class="section">Das 24-Stunden-Grundgerüst</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Bereich</th><th>Minimalziel</th></tr>
+<tr><td>Schlaf/Rest</td><td>Ruhefenster schaffen, auch wenn Schlaf nicht sofort gelingt</td></tr>
+<tr><td>Essen/Trinken</td><td>Regelmäßig Flüssigkeit, 2–3 einfache Mahlzeiten oder Snacks</td></tr>
+<tr><td>Bewegung</td><td>1–2 kurze Gänge nach draußen oder in der Wohnung</td></tr>
+<tr><td>Kontakt</td><td>Mindestens eine stabile Person informieren</td></tr>
+<tr><td>Digitale Belastung</td><td>Zeiten begrenzen, kein ständiges Nachsehen</td></tr>
+</table></div>
+<div><h3 class="section">Was in den ersten Tagen oft kontraproduktiv ist</h3>
+<ul class="list">
+<li>Stundenlanges Liegen ohne Essen oder Trinken</li>
+<li>Alkohol oder andere Mittel zur Gefühlsbetäubung</li>
+<li>Dauerhafte Konfrontation mit Fotos, Chats, Profilen</li>
+<li>Immer wieder dieselbe Nachricht umformulieren und senden wollen</li>
+<li>Kompletter sozialer Rückzug trotz Überforderung</li>
+</ul>
+<div><h3 class="section">Abendroutine für akute Unruhe</h3>
+<ul class="list">
+<li>1 Stunde vor dem Schlafen digitale Reize reduzieren</li>
+<li>Etwas Warmes trinken oder leicht essen</li>
+<li>Kurzes Aufschreiben der drängendsten Gedanken</li>
+<li>Beruhigende, vorhersehbare Aktivität: Dusche, Hörbuch, leise Musik</li>
+<li>Ziel nicht: perfekt schlafen; Ziel: den Körper in Ruhe bringen</li>
+</ul>
+<div><h3 class="section">Merksatz</h3>
+<p class="body">Wenn dein Denken chaotisch ist, beginne beim Körper. Erst Stabilisierung, dann Reflexion.</p>
+<p class="body">Diese Lektion zeigt dir einfache Notfall-Rituale, mit denen du in den ersten 72 Stunden Atmung, Körper und Umfeld so regulierst, dass der akute Stress etwas abnimmt.</p>
+<div><h2 class="lektion">Lektion 3. Sicherheitsnetz: SOS-Kontakte, Trigger meiden, Regeln für dich</h2>
+<p class="body">Worum es hier geht</p>
+<p class="body">In einer Trennungskrise brauchst du nicht nur innere Stärke, sondern äußere Absicherung. Ein Sicherheitsnetz reduziert das Risiko von Isolation, impulsiven Handlungen und zusätzlicher Eskalation. Diese Lektion hilft dir, konkrete Schutzstrukturen aufzubauen.</p>
+<div><h3 class="section">Dein persönliches Sicherheitsnetz</h3>
+<p class="body">Ein gutes Sicherheitsnetz ist klein, klar und erreichbar. Es besteht idealerweise aus Menschen, Orten und Regeln.</p>
+<div><h3 class="section">SOS-Kontakte definieren</h3>
+<ul class="list">
+<li>Kontakt 1: Ruhige Person, die zuhören kann, ohne Drama zu verstärken</li>
+<li>Kontakt 2: Praktische Person für Alltagshilfe, z.B. Einkaufen, Begleitung, Kinderthemen</li>
+<li>Kontakt 3: Professionelle Stelle oder bekannte Anlaufstelle für Krisen</li>
+</ul>
+<div><h3 class="section">Was du SOS-Kontakten konkret sagen kannst</h3>
+<ul class="list">
+<li>„Ich bin gerade in einer akuten Trennungskrise und brauche heute etwas Stabilisierung.“</li>
+<li>„Bitte frag mich heute Abend kurz, ob ich gegessen habe und nicht geschrieben habe.“</li>
+<li>„Ich brauche keine Analyse, sondern 15 Minuten ruhiges Dasein.“</li>
+</ul>
+<div><h3 class="section">Trigger erkennen</h3>
+<p class="body">Trigger sind Reize, die dein Stressniveau abrupt erhöhen oder starke Impulse auslösen. Sie sind individuell, aber häufig wiederkehrend.</p>
+<ul class="list">
+<li>Social-Media-Profile, zuletzt-online-Anzeigen, Storys</li>
+<li>Fotos, Geschenke, bestimmte Orte oder Musik</li>
+<li>Alkohol, Schlafmangel, einsame Nachtstunden</li>
+<li>Gemeinsame Freunde, die ungefiltert Informationen weitergeben</li>
+<li>Wiederholtes Lesen alter Chats</li>
+</ul>
+<div><h3 class="section">Trigger-Management statt Vermeidung auf Dauer</h3>
+<p class="body">Für die ersten Tage ist gezielte Triggerreduktion sinnvoll. Es geht nicht darum, für immer vor allem wegzulaufen, sondern in der akuten Phase Überlastung zu senken. Später kann ein bewussterer Umgang entstehen.</p>
+<div><h3 class="section">Deine 72-Stunden-Regeln</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Bereich</th><th>Regel</th></tr>
+<tr><td>Kommunikation</td><td>Keine impulsiven Nachrichten ohne 30-Minuten- Pause</td></tr>
+<tr><td>Digitales</td><td>Profile nicht prüfen, Benachrichtigungen ausschalten</td></tr>
+<tr><td>Substanzen</td><td>Kein Betäuben mit Alkohol oder ähnlichem</td></tr>
+<tr><td>Soziales</td><td>Mindestens 1 check-in pro Tag mit einer vertrauten Person</td></tr>
+<tr><td>Umfeld</td><td>Belastende Erinnerungsstücke vorübergehend aus dem Blickfeld räumen</td></tr>
+</table></div>
+<div><h3 class="section">Wenn du mit der Ex-Person organisatorisch kommunizieren musst</h3>
+<ul class="list">
+<li>Nur sachlich und kurz</li>
+<li>Ein Thema pro Nachricht</li>
+<li>Keine Beziehungsklärung mitten in organisatorischen Chats</li>
+<li>Nachricht vor dem Senden gegenlesen oder prüfen lassen</li>
+</ul>
+<div><h3 class="section">Selbstschutz ist nicht Härte</h3>
+<p class="body">Grenzen in den ersten Tagen sind kein Zeichen von Kälte, sondern von Krisenkompetenz. Du schützt nicht dein Ego, sondern dein überlastetes System.</p>
+<p class="body">Du baust ein kleines, wirksames Sicherheitsnetz auf, definierst SOS-Kontakte und legst klare Regeln fest, um Trigger, Impulse und Eskalationen in den ersten Tagen zu begrenzen.</p>
+<div><h2 class="lektion">Lektion 4. Journaling &amp;amp; Tracking: Gefühlstagebuch und Mini-Ziele starten</h2>
+<p class="body">Ziel der Lektion</p>
+<p class="body">Journaling und einfaches Tracking helfen, innere Unordnung in beobachtbare Muster zu übersetzen. Das reduziert nicht automatisch den Schmerz, kann aber Distanz schaffen, Grübelschleifen sichtbar machen und kleine Fortschritte erkennbar machen.</p>
+<div><h3 class="section">Wofür Journaling in der Akutphase geeignet ist</h3>
+<ul class="list">
+<li>Gefühle benennen statt nur davon überrollt zu werden</li>
+<li>Auslöser und Tageszeiten erkennen</li>
+<li>Bedürfnisse konkretisieren</li>
+<li>Impulsive Handlungen verzögern</li>
+<li>Mini-Ziele dokumentieren</li>
+</ul>
+<div><h3 class="section">Wichtig: Journaling ist keine Endlosanalyse</h3>
+<p class="body">In der Akutphase sollte Schreiben eher strukturieren als eskalieren. Begrenze Dauer und Tiefe. Besser 5 bis 10 Minuten klar schreiben als 90 Minuten kreisend zerlegen.</p>
+<div><h3 class="section">Einfache Vorlage für ein Gefühlstagebuch</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Frage</th><th>Beispiel</th></tr>
+<tr><td>Was fühle ich gerade?</td><td>Trauer, Wut, Leere, Panik, Sehnsucht</td></tr>
+<tr><td>Wie stark ist es von 0 bis 10?</td><td>8/10</td></tr>
+<tr><td>Was hat es ausgelöst?</td><td>Song gehört, allein aufgewacht, Profil angesehen</td></tr>
+<tr><td>Was brauche ich jetzt?</td><td>Wasser, frische Luft, Kontakt zu Freundin, Handy weg</td></tr>
+<tr><td>Was ist mein nächster kleiner Schritt?</td><td>Duschen, essen, 10 Minuten spazieren</td></tr>
+</table></div>
+<div><h3 class="section">Mini-Ziele: klein genug, um wirklich machbar zu sein</h3>
+<ul class="list">
+<li>Heute 1 Liter Wasser trinken</li>
+<li>Vor 12 Uhr duschen</li>
+<li>20 Minuten nicht ins Handy schauen</li>
+<li>Einen SOS-Kontakt informieren</li>
+<li>Eine Mahlzeit essen</li>
+<li>10 Minuten nach draußen gehen</li>
+</ul>
+<div><h3 class="section">Tracken ohne Perfektionismus</h3>
+<p class="body">Es geht nicht um ein perfektes Selbstoptimierungs-System. Tracke nur wenige Variablen, die dir in der Akutphase wirklich helfen, z.B. Schlaf, Essen, Kontaktimpulse, Bewegung, Intensität von Gefühlen.</p>
+<div><h3 class="section">Beispiel für ein simples Tages-Tracking</h3>
+<ul class="list">
+<li>Schlaf: schlecht / mittel / etwas besser</li>
+<li>Essen: nichts / wenig / ausreichend</li>
+<li>Bewegung: nein / kurz / ausreichend</li>
+<li>Kontaktdrang: niedrig / mittel / hoch</li>
+<li>Gefühlsintensität: 0–10</li>
+</ul>
+<div><h3 class="section">Journaling-Fragen für Tag 1–3</h3>
+<ul class="list">
+<li>Was war heute der schwerste Moment?</li>
+<li>Was hat mich ganz leicht stabilisiert?</li>
+<li>Welche Gedanken haben mich hochgezogen oder runtergezogen?</li>
+<li>Was hat heute funktioniert, obwohl es schwer war?</li>
+<li>Was ist mein einziges realistisches Ziel für morgen?</li>
+</ul>
+<div><h3 class="section">Grenze setzen beim Schreiben</h3>
+<p class="body">Wenn du merkst, dass Schreiben dich tiefer in Panik oder endlose Analyse zieht, stoppe bewusst. Wechsle dann zu einem körperlichen Regulierungsschritt: aufstehen, Wasser trinken, atmen, jemanden anrufen.</p>
+<p class="body">Mit einem einfachen Gefühlstagebuch und kleinem Tracking machst du Muster sichtbar, gewinnst Distanz zu Grübelschleifen und setzt dir realistische Mini-Ziele für die ersten Tage.</p>
+<div><h2 class="lektion">Lektion 5. Kontakt-Stopp initialisieren: 72h ohne Kontakt &amp;amp; digitale Hygiene</h2>
+<p class="body">Warum diese Lektion zentral ist</p>
+<p class="body">Direkt nach einer Trennung ist der Impuls zu schreiben, zu prüfen, zu erklären oder Antworten zu erzwingen oft sehr stark. Kurzfristig wirkt Kontakt manchmal entlastend, langfristig verstärkt er in der Akutphase jedoch häufig Hoffnungsschübe, Rückschläge und emotionale Abhängigkeit. Ein 72-Stunden-Kontakt-Stopp dient hier als Erstmaßnahme zur Stabilisierung.</p>
+<div><h3 class="section">Was Kontakt-Stopp bedeutet</h3>
+<ul class="list">
+<li>Keine Nachrichten, Anrufe, Sprachnachrichten</li>
+<li>Keine indirekten Kontaktversuche über Freunde oder Social Media</li>
+<li>Kein „nur mal schauen“, was online passiert</li>
+<li>Keine emotionalen Klärungsversuche in der Akutphase</li>
+</ul>
+<div><h3 class="section">Was Kontakt-Stopp nicht bedeutet</h3>
+<ul class="list">
+<li>Keine endgültige Lebensentscheidung für alle Zeiten</li>
+<li>Keine Bestrafung der anderen Person</li>
+<li>Kein Unterdrücken aller Gefühle</li>
+<li>Keine Verweigerung notwendiger Sachkommunikation, wenn sie wirklich nötig ist</li>
+</ul>
+<div><h3 class="section">Die Logik der ersten 72 Stunden</h3>
+<p class="body">Der Zeitraum ist kurz genug, um machbar zu wirken, und lang genug, um erste Entzugseffekte, Impulswellen und Daueraktivierung etwas abzufangen. Er schafft Abstand zwischen Gefühl und Handlung.</p>
+<div><h3 class="section">Digitale Hygiene konkret</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Bereich</th><th>Empfohlene Maßnahme</th></tr>
+<tr><td>Chats</td><td>Anpinnen entfernen, archivieren oder stummschalten</td></tr>
+<tr><td>Benachrichtigungen</td><td>Push-Mitteilungen deaktivieren</td></tr>
+<tr><td>Social Media</td><td>Entfolgen, stummschalten oder vorübergehend pausieren</td></tr>
+<tr><td>Fotos</td><td>Nicht löschen unter Stress; erst einmal aus dem Sichtfeld nehmen</td></tr>
+<tr><td>Handynutzung</td><td>Feste Check-Zeiten statt Dauerkontrolle</td></tr>
+</table></div>
+<div><h3 class="section">Umgang mit Kontaktimpulsen</h3>
+<ul class="list">
+<li>Impuls benennen: „Ich will gerade schreiben.“</li>
+<li>10 bis 30 Minuten warten, ohne zu senden.</li>
+<li>Den Auslöser notieren: Einsamkeit, Wut, Alkohol, Nacht, Trigger.</li>
+<li>Einen Ersatzschritt machen: laufen, atmen, Freundin schreiben, Handy weglegen.</li>
+<li>Erst danach neu entscheiden.</li>
+</ul>
+<div><h3 class="section">Wenn organisatorischer Kontakt unvermeidbar ist</h3>
+<ul class="list">
+<li>Nur sachbezogen</li>
+<li>Nur zu vereinbarten Zeiten</li>
+<li>Keine versteckten Beziehungsbotschaften</li>
+<li>Vorher Stichpunkte notieren</li>
+<li>Nach dem Kontakt direkt regulieren, nicht analysieren</li>
+</ul>
+<div><h3 class="section">Typische Selbsttäuschungen erkennen</h3>
+<ul class="list">
+<li>„Ich will nur Klarheit.“</li>
+<li>„Eine letzte Nachricht muss noch sein.“</li>
+<li>„Wenn ich mich perfekt ausdrücke, ändert sich alles.“</li>
+<li>„Ich schaue nur kurz auf das Profil.“</li>
+</ul>
+<p class="body">Diese Gedanken sind verständlich, aber in den ersten Tagen oft Ausdruck akuter Aktivierung, nicht guter Timing-Kompetenz.</p>
+<div><h3 class="section">Hilfreicher Ersatzsatz</h3>
+<p class="body">„Ich muss heute nicht handeln, nur weil ich stark fühle.“</p>
+<p class="body">Du richtest einen 72-Stunden-Kontakt-Stopp ein, schützt dich digital vor Rückfällen und lernst, Kontaktimpulse zu erkennen, zu verzögern und durch stabilisierende Alternativen zu ersetzen.</p>
+<div><h2 class="lektion">Lektion 6. Wenn es zu viel wird: Warnsignale erkennen und Hilfe holen</h2>
+<p class="body">Ziel der Lektion</p>
+<p class="body">Eine Trennung kann extrem belasten. Dennoch gibt es einen Unterschied zwischen einer schweren, aber bewältigbaren Krise und einer Situation, in der zusätzliche Hilfe sofort nötig ist. Diese Lektion hilft dir, Warnsignale ernst zu nehmen und Unterstützung frühzeitig zu organisieren.</p>
+<div><h3 class="section">Normale Krisenreaktionen können sein</h3>
+<ul class="list">
+<li>Weinen, innere Unruhe, Schlafprobleme</li>
+<li>Appetitverlust oder Übelkeit</li>
+<li>Starke Sehnsucht, Wut, Grübeln</li>
+<li>Konzentrationsprobleme und Erschöpfung</li>
+</ul>
+<p class="body">Solche Reaktionen können intensiv sein und sind in den ersten Tagen nicht ungewöhnlich. Entscheidend ist, ob du noch minimal für dich sorgen kannst und ob die Belastung weiter eskaliert.</p>
+<div><h3 class="section">Warnsignale, die du ernst nehmen solltest</h3>
+<ul class="list">
+<li>Du kannst über längere Zeit kaum essen oder trinken</li>
+<li>Du schläfst über mehrere Nächte fast gar nicht und dein Zustand kippt deutlich</li>
+<li>Du konsumierst Alkohol oder andere Mittel, um Gefühle auszuschalten</li>
+<li>Du isolierst dich vollständig und bist kaum erreichbar</li>
+<li>Du hast das Gefühl, die Kontrolle über dein Handeln zu verlieren</li>
+<li>Du hast Gedanken, dir etwas anzutun oder nicht mehr da sein zu wollen</li>
+<li>Es gibt Gewalt, Bedrohung, Stalking oder massive Angst vor einer anderen Person</li>
+</ul>
+<div><h3 class="section">Dann ist Hilfe wichtig</h3>
+<p class="body">Suche Unterstützung, wenn du merkst, dass die Krise deine Sicherheit, Gesundheit oder Handlungsfähigkeit deutlich gefährdet. Das ist kein Scheitern, sondern angemessene Krisenreaktion.</p>
+<div><h3 class="section">Wer helfen kann</h3>
+<ul class="list">
+<li>Vertrauensperson, die bei dir bleibt oder mit dir den nächsten Schritt organisiert</li>
+<li>Hausärztliche oder psychotherapeutische Anlaufstellen</li>
+<li>Psychosoziale Beratungsangebote oder Krisendienste in deiner Region</li>
+<li>Im akuten Notfall der Notruf</li>
+</ul>
+<div><h3 class="section">So kannst du Hilfe ansprechen</h3>
+<ul class="list">
+<li>„Ich bin gerade in einer akuten Trennungskrise und brauche heute Unterstützung.“</li>
+<li>„Ich habe Sorge, dass ich allein gerade nicht gut für mich sorgen kann.“</li>
+<li>„Meine Gedanken machen mir Angst, ich möchte jetzt nicht allein bleiben.“</li>
+</ul>
+<div><h3 class="section">Akuter Sicherheitsplan</h3>
+<ul class="list">
+<li>Nicht allein bleiben, wenn du dich unsicher fühlst</li>
+<li>Eine konkrete Person sofort kontaktieren</li>
+<li>Mittel zur Selbstgefährdung aus dem direkten Zugriff bringen, wenn möglich mit Unterstützung</li>
+<li>Keinen Alkohol oder andere betäubende Mittel konsumieren</li>
+<li>Bei akuter Selbst- oder Fremdgefährdung sofort Notruf oder lokale Krisenhilfe kontaktieren</li>
+</ul>
+<div><h3 class="section">Wichtige Haltung</h3>
+<p class="body">Früh Hilfe zu holen ist oft wirksamer, als zu warten, bis alles unerträglich wird. Besonders wenn du merkst, dass du nicht mehr nur traurig bist, sondern gefährdet, stark desorganisiert oder innerlich nicht mehr sicher.</p>
+<p class="body">Du lernst, zwischen intensiver normaler Krisenreaktion und ernsten Warnsignalen zu unterscheiden, und weißt, wann und wie du dir schnell Unterstützung holen solltest.</p>
+<p class="body">In den ersten 72 Stunden nach einer Trennung ist Stabilisierung wichtiger als Analyse oder endgültige Entscheidungen. Ein realistischer Realitäts-Check trennt Fakten von Interpretationen und richtet den Fokus auf akute Bedürfnisse. Kurze Notfall-Rituale für Atmung, Körper und Umfeld helfen, das Stressniveau zu senken und Impulse abzufangen. Ein Sicherheitsnetz aus SOS-Kontakten, Triggerreduktion und klaren Selbstregeln schützt vor zusätzlicher Eskalation. Journaling, Tracking und ein erster Kontakt-Stopp schaffen Distanz zu Grübelschleifen und impulsivem Verhalten.</p>
+<p class="body">Wer Warnsignale früh erkennt und Hilfe holt, erhöht Sicherheit und Handlungsspielraum deutlich.</p>
+<ul class="list">
+<li>Schreibe noch heute drei Punkte auf: Was ist Fakt, was ist Interpretation, was brauche ich in den nächsten 6 Stunden? Lege ein 5-Minuten-Notfall-Ritual fest und führe es heute mindestens zweimal durch. Bestimme zwei SOS-Kontakte und informiere mindestens eine Person aktiv über deine aktuelle Lage. Starte ein einfaches Gefühlstagebuch mit Intensitätsskala, Auslöser und nächstem kleinen Schritt. Initialisiere 72 Stunden Kontakt-Stopp: Chats stummschalten, Benachrichtigungen aus, Social Media begrenzen.</li>
+</ul>
+<p class="body">Definiere drei Mini-Ziele für morgen, z.B. trinken, duschen, kurz nach draußen gehen. Notiere dir klare Warnsignale, bei denen du sofort Unterstützung aktivierst oder professionelle Hilfe kontaktierst.</p>
+<h1 class="modul">Modul 2: Warum es so weh tut: Trennung verstehen</h1>
+<div class="modul-desc"><p>Dieses Modul erklärt, warum eine Trennung nicht nur emotional, sondern auch biologisch und psychisch wie ein Ausnahmezustand wirken kann. Wer versteht, was im Gehirn, Nervensystem und Körper passiert, bewertet die eigenen Reaktionen weniger als</p><p>„Versagen“ und eher als normale Stress- und Trauerantwort. Ziel ist nicht, Schmerz wegzureden, sondern Orientierung zu schaffen und die ersten sinnvollen Schritte zur Stabilisierung zu zeigen.</p></div>
+<div><h2 class="lektion">Lektion 1. Bindungssystem &amp;amp; Entzug: Dein Gehirn im Ausnahmezustand</h2>
+<p class="body">Worum es in dieser Lektion geht</p>
+<p class="body">Nach einer Trennung reagiert das Bindungssystem oft so, als sei eine zentrale Sicherheitsquelle weggebrochen. Das kann sich wie Entzug, innere Alarmbereitschaft, Fixierung auf die andere Person und ständiger Suchimpuls anfühlen. Diese Reaktionen sind belastend, aber in den ersten Tagen und Wochen häufig nachvollziehbar.</p>
+<div><h3 class="section">Kernideen</h3>
+<ul class="list">
+<li>Bindung ist ein Sicherheitssystem: Enge Beziehungen regulieren Nähe, Sicherheit, Vorhersagbarkeit und Stress.</li>
+<li>Trennung aktiviert Alarm: Das Gehirn registriert Verlust, Unsicherheit und Kontrollverlust.</li>
+<li>Belohnung und Gewohnheit spielen mit hinein: Gemeinsame Routinen, Nachrichten, Bilder und Orte sind stark verknüpft und können Suchverhalten auslösen.</li>
+<li>Der Impuls nach Kontakt ist nicht automatisch ein guter Ratgeber: Er kann eher Ausdruck von Aktivierung als von Klarheit sein.</li>
+</ul>
+<div><h3 class="section">Typische Anzeichen des „Ausnahmezustands“</h3>
+<ul class="list">
+<li>Zwanghaftes Prüfen von Handy, Chatverläufen oder Social Media</li>
+<li>Starker Drang, noch einmal zu schreiben, zu erklären oder „nur kurz“ Kontakt aufzunehmen</li>
+<li>Idealisierung der Beziehung oder selektive Erinnerung an gute Momente</li>
+<li>Gefühl von Panik, Leere oder innerem Absturz bei Funkstille</li>
+<li>Unfähigkeit, den Fokus auf Alltag, Arbeit oder Schlaf zu richten</li>
+</ul>
+<div><h3 class="section">Hilfreiche Einordnung</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Erleben</th><th>Häufige Bedeutung</th><th>Hilfreiche Reaktion</th></tr>
+<tr><td>„Ich muss sofort schreiben“</td><td>Akute Bindungsaktivierung, nicht zwingend echte Lösung</td><td>10–20 Minuten aufschieben, Körper beruhigen, erst dann entscheiden</td></tr>
+<tr><td>„Ohne diese Person halte ich das nicht aus“</td><td>Verlust von Co-Regulation und Gewohnheit</td><td>Externe Stabilisierung aufbauen: Menschen, Struktur, Rituale</td></tr>
+<tr><td>„Ich denke nur noch daran“</td><td>Aufmerksamkeitsfokus unter Stress verengt sich</td><td>Reizkontrolle, feste Grübelzeiten, Mediengrenzen</td></tr>
+</table></div>
+<div><h3 class="section">Was in den ersten Tagen realistischer ist als „Loslassen“</h3>
+<ul class="list">
+<li>Kontaktimpulse erkennen, ohne ihnen sofort zu folgen</li>
+<li>Trigger identifizieren: Uhrzeiten, Orte, Songs, Alkohol, Einsamkeit</li>
+<li>Selbstregulation vor Klärung: erst beruhigen, dann entscheiden</li>
+<li>Kontaktpause nicht als Strafe, sondern als Schutzmaßnahme verstehen</li>
+</ul>
+<div><h3 class="section">Mini-Checkliste für akute Momente</h3>
+<ul class="list">
+<li>Benennen: „Mein Bindungssystem ist gerade aktiviert.“</li>
+<li>Handy 15 Minuten außer Reichweite legen.</li>
+<li>3 langsame Atemzyklen oder kurzes Gehen.</li>
+<li>Einer sicheren Person statt der Ex-Person schreiben.</li>
+<li>Erst danach prüfen: Muss ich wirklich handeln?</li>
+</ul>
+<p class="body">Diese Lektion zeigt, warum eine Trennung oft wie Entzug wirkt: Das Bindungssystem verliert eine zentrale Sicherheitsquelle. Wer diese Reaktion versteht, kann Kontaktimpulse und innere Alarmzustände besser einordnen und erste Schutzmaßnahmen umsetzen.</p>
+<div><h2 class="lektion">Lektion 2. Trauer ist zyklisch: Phasen, Wellen und was normal ist</h2>
+<p class="body">Worum es in dieser Lektion geht</p>
+<p class="body">Trennungstrauer verläuft selten sauber in geraden Stufen. Viele Menschen erleben Wellen: morgens funktional, mittags verzweifelt, abends wütend. Das ist nicht automatisch</p>
+<p class="body">ein Rückschritt, sondern oft Teil eines normalen Anpassungsprozesses.</p>
+<div><h3 class="section">Wichtige Orientierung</h3>
+<ul class="list">
+<li>Trauer ist nicht linear: Gefühle wechseln, überlagern sich und kommen in Schüben zurück.</li>
+<li>Mehrere Zustände können gleichzeitig da sein: Trauer, Erleichterung, Schuld, Sehnsucht und Wut schließen sich nicht aus.</li>
+<li>Trigger verstärken Wellen: Jahrestage, Wochenenden, Orte, Musik, Einsamkeit und Schlafmangel.</li>
+</ul>
+<div><h3 class="section">Typische Trauerreaktionen nach Trennungen</h3>
+<ul class="list">
+<li>Schock und Unwirklichkeit</li>
+<li>Sehnsucht und Hoffnung auf Rückkehr</li>
+<li>Wut, Protest, Gerechtigkeitsfragen</li>
+<li>Traurigkeit, Erschöpfung, Sinnverlust</li>
+<li>Langsame Neuorientierung im Alltag</li>
+</ul>
+<div><h3 class="section">Was häufig missverstanden wird</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Erfahrung</th><th>Fehlinterpretation</th><th>Realistischere Einordnung</th></tr>
+<tr><td>Ein guter Tag, dann ein schlechter</td><td>„Ich falle ganz zurück“</td><td>Wellen sind normal; Stabilisierung ist oft ungleichmäßig</td></tr>
+<tr><td>Plötzliche Wut nach viel Trauer</td><td>„Mit mir stimmt etwas nicht“</td><td>Wut kann Teil von Abgrenzung und Schutz sein</td></tr>
+<tr><td>Kurzzeitige Erleichterung</td><td>„Dann war es wohl nicht wichtig“</td><td>Entlastung und Schmerz können parallel existieren</td></tr>
+</table></div>
+<div><h3 class="section">Orientierungsfragen für Betroffene</h3>
+<ul class="list">
+<li>Welche Gefühle kommen in Wellen, welche sind fast dauerhaft?</li>
+<li>Zu welchen Tageszeiten bin ich besonders verletzlich?</li>
+<li>Welche Trigger lösen Abstürze aus?</li>
+<li>Was hilft mir, eine Welle zu überstehen, ohne sie zu verstärken?</li>
+</ul>
+<div><h3 class="section">Praktischer Umgang mit Wellen</h3>
+<ul class="list">
+<li>Gefühl benennen statt bekämpfen.</li>
+<li>Dauer begrenzen: „Diese Welle ist intensiv, aber sie geht vorbei.“</li>
+<li>Kleine Gegenanker nutzen: Wasser, Bewegung, Essen, Kontakt, Licht.</li>
+<li>Nach der Welle kurz notieren: Auslöser, Intensität, hilfreiche Reaktion.</li>
+</ul>
+<p class="body">Trennungstrauer verläuft meist nicht linear, sondern in Wellen. Die Lektion hilft dabei, Schwankungen nicht als Scheitern zu deuten, sondern als normalen Teil von Verlustverarbeitung zu verstehen und besser zu steuern.</p>
+<div><h2 class="lektion">Lektion 3. Grübelschleifen entzaubern: kognitive Verzerrungen erkennen</h2>
+<p class="body">Worum es in dieser Lektion geht</p>
+<p class="body">Nach Trennungen kreisen Gedanken oft stundenlang um dieselben Fragen: Warum? Was hätte ich anders machen müssen? Kommt die Person zurück? Grübeln fühlt sich an wie Problemlösen, führt aber häufig zu Erschöpfung, Schuld und noch mehr innerer Unruhe.</p>
+<div><h3 class="section">Grübeln vs. hilfreiches Nachdenken</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Grübeln</th><th>Hilfreiches Reflektieren</th></tr>
+<tr><td>Wiederholt dieselben Fragen ohne neue Informationen</td><td>Hat eine klare Fragestellung und ein begrenztes Zeitfenster</td></tr>
+<tr><td>Führt zu Ohnmacht und Selbstangriff</td><td>Führt zu Einsicht, Entscheidung oder nächstem Schritt</td></tr>
+<tr><td>Passiert oft nachts oder in Stressspitzen</td><td>Passiert bewusst, schriftlich und strukturiert</td></tr>
+</table></div>
+<div><h3 class="section">Häufige kognitive Verzerrungen nach einer Trennung</h3>
+<ul class="list">
+<li>Katastrophisieren: „Ich werde nie wieder glücklich.“</li>
+<li>Alles-oder-nichts-Denken: „Wenn diese Beziehung gescheitert ist, bin ich beziehungsunfähig.“</li>
+<li>Gedankenlesen: „Die andere Person hat mich nie wirklich geliebt.“</li>
+<li>Selektive Wahrnehmung: Nur die guten oder nur die schlechten Momente sehen.</li>
+<li>Überverantwortung: „Es lag komplett an mir.“</li>
+<li>Emotionales Beweisen: „Weil ich mich wertlos fühle, bin ich wertlos.“</li>
+</ul>
+<div><h3 class="section">Werkzeug: Gedanken prüfen</h3>
+<ul class="list">
+<li>Auslöser notieren: Was ist gerade passiert?</li>
+<li>Automatischen Gedanken erfassen: Welcher Satz schießt mir durch den Kopf?</li>
+<li>Verzerrung benennen: Welche Denkfalle ist aktiv?</li>
+<li>Gegenprüfung: Welche Fakten sprechen dafür, welche dagegen?</li>
+<li>Hilfreiche Alternative: Was ist eine realistischere, weniger zerstörerische Formulierung?</li>
+</ul>
+<div><h3 class="section">Beispiele für hilfreichere Formulierungen</h3>
+<ul class="list">
+<li>Statt „Ich werde nie darüber hinwegkommen“: „Es fühlt sich gerade überwältigend an, aber Gefühle verändern sich in Wellen.“</li>
+<li>Statt „Ich war nicht genug“: „Eine Trennung beweist nicht automatisch meinen Wert oder Unwert.“</li>
+<li>Statt „Ich muss es komplett verstehen, bevor ich weitermachen kann“: „Nicht jede offene Frage braucht sofort eine Antwort.“</li>
+</ul>
+<div><h3 class="section">Praktische Begrenzung von Grübelschleifen</h3>
+<ul class="list">
+<li>Feste Grübelzeit von 10–15 Minuten am Tag statt Dauergrübeln</li>
+<li>Gedanken aufschreiben, nicht im Kopf weiterdrehen</li>
+<li>Nachts keine Beziehungsanalysen</li>
+<li>Aufmerksamkeit aktiv umlenken: Körper, Aufgabe, Umgebung</li>
+</ul>
+<p class="body">Die Lektion unterscheidet zwischen Grübeln und hilfreicher Reflexion und zeigt typische Denkfehler nach Trennungen. Ziel ist, belastende Gedankenschleifen zu erkennen, zu prüfen und zu begrenzen.</p>
+<div><h2 class="lektion">Lektion 4. Nervensystem regulieren: Fight/Flight/Freeze/Fawn beruhigen</h2>
+<p class="body">Worum es in dieser Lektion geht</p>
+<p class="body">Trennungsschmerz ist nicht nur ein „mentales Problem“. Das Nervensystem kann in Schutzmodi gehen: Kampf, Flucht, Erstarrung oder Anpassung. Wer diese Muster erkennt, kann gezielter regulieren, statt sich für das eigene Verhalten zu verurteilen.</p>
+<div><h3 class="section">Die vier häufigen Stressreaktionen</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Modus</th><th>Typische Anzeichen</th><th>Was kurzfristig helfen kann</th></tr>
+<tr><td>Fight</td><td>Wut, Drang zu diskutieren, Vorwürfe, Reizbarkeit</td><td>Abstand, körperliche Entladung, nicht im Peak schreiben</td></tr>
+<tr><td>Flight</td><td>Getriebenheit, Aktionismus, ständiges Beschäftigtsein</td><td>Tempo senken, einfache Routinen, Atem und Bodenkontakt</td></tr>
+<tr><td>Freeze</td><td>Leere, Starre, Entscheidungsunfähigkeit, Erschöpfung</td><td>Mikrobewegung, Wärme, kleine Schritte statt großer Pläne</td></tr>
+<tr><td>Fawn</td><td>Anpassen, Bitten, Übererklären, Selbstverleugnung</td><td>Grenzen erinnern, Kontaktpause, Unterstützung von außen</td></tr>
+</table></div>
+<div><h3 class="section">Grundprinzipien der Regulation</h3>
+<ul class="list">
+<li>Körper zuerst: In hoher Aktivierung helfen reine Einsichten oft wenig.</li>
+<li>Kurz und wiederholt: Mehrere kleine Regulationseinheiten sind oft wirksamer als ein einmaliger großer Versuch.</li>
+<li>Vorhersagbarkeit beruhigt: Feste Abläufe reduzieren Alarm.</li>
+</ul>
+<div><h3 class="section">Niedrigschwellige Techniken</h3>
+<ul class="list">
+<li>Ausatmen verlängern, ohne Leistungsdruck</li>
+<li>Beide Füße spüren, Umgebung mit den Augen abscannen</li>
+<li>Kalte oder warme Reize bewusst einsetzen, je nachdem was beruhigt</li>
+<li>Kurz gehen, Schultern bewegen, Kiefer lösen</li>
+<li>Sich laut orientieren: Datum, Ort, nächster kleiner Schritt</li>
+</ul>
+<div><h3 class="section">Was Regulation nicht ist</h3>
+<ul class="list">
+<li>Nicht: Gefühle wegdrücken</li>
+<li>Nicht: Sich zur Ruhe zwingen</li>
+<li>Nicht: In Hochstress wichtige Beziehungsentscheidungen treffen</li>
+</ul>
+<div><h3 class="section">Notfallablauf für akute Überflutung</h3>
+<ul class="list">
+<li>Stoppen: Nichts senden, nichts entscheiden.</li>
+<li>Orientieren: 5 Dinge sehen, 4 fühlen, 3 hören.</li>
+<li>Atmung beruhigen oder langsam gehen.</li>
+<li>Einfache Selbstanweisung: „Ich bin in Aktivierung, nicht in Klarheit.“</li>
+<li>Erst danach die nächsten 30 Minuten planen.</li>
+</ul>
+<p class="body">Diese Lektion erklärt, wie Trennungsstress das Nervensystem in Schutzmodi versetzen kann. Sie bietet konkrete, körpernahe Methoden, um Überflutung zu senken und wieder handlungsfähiger zu werden.</p>
+<div><h2 class="lektion">Lektion 5. Körperliche Symptome normalisieren: Appetit, Schlaf, Energie</h2>
+<p class="body">Worum es in dieser Lektion geht</p>
+<p class="body">Viele Menschen erschrecken nach einer Trennung über körperliche Reaktionen: kein Appetit, Übelkeit, Herzklopfen, frühes Erwachen, bleierne Müdigkeit oder innere Unruhe. Solche Symptome können Teil einer akuten Stressreaktion sein. Sie verdienen ernsthafte Beachtung, aber nicht sofortige Katastrophisierung.</p>
+<div><h3 class="section">Häufige körperliche Folgen in den ersten Wochen</h3>
+<ul class="list">
+<li>Schlafprobleme: Einschlafen, Durchschlafen, frühes Aufwachen</li>
+<li>Appetitverlust oder emotionales Essen</li>
+<li>Energieeinbruch, Erschöpfung, Konzentrationsstörung</li>
+<li>Innere Unruhe, Druckgefühl, Muskelanspannung</li>
+<li>Magen-Darm-Beschwerden oder Übelkeit</li>
+</ul>
+<div><h3 class="section">Pragmatische Stabilisierung</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Bereich</th><th>Häufiges Problem</th><th>Praktische Hilfe</th></tr>
+<tr><td>Appetit</td><td>Kein Hunger, Essen wird vergessen</td><td>Kleine, einfache Mahlzeiten; Trinkroutine; nicht auf „perfekt“ zielen</td></tr>
+<tr><td>Schlaf</td><td>Nächtliches Grübeln, frühes Erwachen</td><td>Abendroutine, Bildschirmgrenzen, nachts nicht analysieren</td></tr>
+<tr><td>Energie</td><td>Alles fühlt sich zu viel an</td><td>Tagesminimum definieren: duschen, essen, 10 Minuten Bewegung</td></tr>
+<tr><td>Körperanspannung</td><td>Unruhe, Herzrasen, Enge</td><td>Atmung, Gehen, Dehnen, Reizreduktion</td></tr>
+</table></div>
+<div><h3 class="section">Das „Minimum viable day“-Prinzip</h3>
+<p class="body">In akuten Phasen ist nicht Höchstleistung das Ziel, sondern Grundversorgung. Eine sehr kleine Tagesstruktur kann mehr Stabilität bringen als große Vorsätze.</p>
+<ul class="list">
+<li>1 feste Aufstehzeit innerhalb eines realistischen Rahmens</li>
+<li>2 bis 3 Essensanker, auch klein</li>
+<li>Tageslicht und kurze Bewegung</li>
+<li>1 soziale Verbindung</li>
+<li>1 Aufgabe, die den Alltag schützt</li>
+</ul>
+<div><h3 class="section">Wann zusätzliche medizinische Abklärung sinnvoll ist</h3>
+<ul class="list">
+<li>Anhaltende deutliche Schlaflosigkeit über längere Zeit</li>
+<li>Starke Gewichtsveränderungen oder Nahrungsverweigerung</li>
+<li>Ausgeprägte Kreislaufprobleme, Schmerzen oder andere körperliche Beschwerden</li>
+<li>Wenn unklar ist, ob Symptome nur stressbedingt sind</li>
+</ul>
+<div><h3 class="section">Wichtiger Ton in dieser Phase</h3>
+<p class="body">Nicht fragen: „Warum funktioniere ich nicht?“ Besser fragen: „Was braucht mein Körper heute, um die nächsten 12 Stunden zu schaffen?“</p>
+<p class="body">Die Lektion normalisiert häufige körperliche Reaktionen nach einer Trennung und zeigt alltagstaugliche Maßnahmen für Schlaf, Appetit und Energie. Im Fokus steht Grundversorgung statt Perfektion.</p>
+<div><h2 class="lektion">Lektion 6. Richtige Hilfe wählen: Freunde, Beratung, Therapie Worum es in dieser Lektion geht</h2>
+<p class="body">Nicht jede Unterstützung hilft gleich gut. Manche Gespräche entlasten, andere verstärken Grübeln, Abhängigkeit oder Chaos. Diese Lektion hilft dabei, zwischen hilfreichem sozialen Halt, Beratung und psychotherapeutischer Unterstützung zu unterscheiden.</p>
+<div><h3 class="section">Welche Hilfeform wofür geeignet sein kann</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Unterstützung</th><th>Kann besonders helfen bei</th><th>Worauf achten</th></tr>
+<tr><td>Freunde/Familie</td><td>Akuter Halt, Alltagsentlastung, nicht allein sein</td><td>Menschen wählen, die beruhigen statt anheizen</td></tr>
+<tr><td>Beratung/Coaching</td><td>Struktur, Entscheidungen, Routinen, Trennungsorganisation</td><td>Klare Ziele, Grenzen und Qualifikation prüfen</td></tr>
+</table></div>
+<div class="tbl-wrap"><table>
+<tr><th>Psychotherapie</th><th>Starker Leidensdruck, alte Muster, Trauma, Depression, Angst</th><th>Passung, Evidenzorientierung und Sicherheit sind zentral</th></tr>
+</table></div>
+<div><h3 class="section">Merkmale hilfreicher Unterstützung</h3>
+<ul class="list">
+<li>Die Person hört zu, ohne zu drängen.</li>
+<li>Sie hilft bei Regulierung und Alltag, nicht nur bei Analyse.</li>
+<li>Sie respektiert Grenzen und die Kontaktpause.</li>
+<li>Sie verstärkt nicht dauerhaft Rache, Hoffnungsspiralen oder Selbstabwertung.</li>
+</ul>
+<div><h3 class="section">Warnzeichen für unhilfreiche Unterstützung</h3>
+<ul class="list">
+<li>Jedes Gespräch endet in noch mehr Aufwühlung</li>
+<li>Jemand drängt zu Kontakt, Kontrolle oder impulsiven Aktionen</li>
+<li>Deine Gefühle werden klein gemacht oder moralisch bewertet</li>
+<li>Du erzählst immer wieder dieselbe Geschichte, fühlst dich danach aber schlechter</li>
+</ul>
+<div><h3 class="section">Wann professionelle Hilfe besonders wichtig ist</h3>
+<ul class="list">
+<li>Wenn Alltag, Arbeit oder Versorgung stark einbrechen</li>
+<li>Wenn frühere Verluste, Traumata oder Beziehungsmuster massiv aktiviert werden</li>
+<li>Wenn Schlaf, Angst, Panik oder depressive Symptome deutlich zunehmen</li>
+<li>Wenn Selbstwert, Sicherheit oder Impulskontrolle ernsthaft gefährdet sind</li>
+</ul>
+<div><h3 class="section">Praktischer Auswahlrahmen</h3>
+<ul class="list">
+<li>Benennen, was du gerade brauchst: Trost, Struktur, Krisenhilfe oder Therapie.</li>
+<li>1 bis 3 sichere Personen festlegen statt vielen parallel zu schreiben.</li>
+<li>Konkrete Bitte formulieren, z. B. Zuhören, Spaziergang, Essen erinnern, Handy weglegen helfen.</li>
+<li>Bei professioneller Hilfe auf Qualifikation, Passung und klare Arbeitsweise achten.</li>
+</ul>
+<div><h3 class="section">Entlastender Grundsatz</h3>
+<p class="body">Hilfe zu brauchen ist kein Rückschritt. Gute Unterstützung reduziert nicht nur Schmerz, sondern erhöht Handlungsspielraum und Sicherheit.</p>
+<p class="body">Diese Lektion hilft bei der Auswahl passender Unterstützung nach einer Trennung. Sie zeigt, wann Freunde ausreichen, wann strukturierende Beratung sinnvoll ist und wann professionelle psychotherapeutische Hilfe wichtig wird.</p>
+<p class="body">&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;Trennungsschmerz ist oft ein Zusammenspiel aus Bindungsverlust, Stressreaktion, Trauer und Gewohnheitsbruch.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Starke Schwankungen in Gefühlen, Gedanken und Körperreaktionen sind in den ersten Wochen häufig und nicht automatisch ein Zeichen von Rückschritt.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Grübeln wirkt wie Problemlösen, hält viele Betroffene aber in Ohnmacht, Schuld und innerer Unruhe fest.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Regulation beginnt oft körperlich: Atem, Orientierung, Bewegung, Struktur und Reizreduktion helfen, bevor große Entscheidungen sinnvoll sind.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Unterstützung sollte beruhigen, strukturieren und Sicherheit erhöhen statt Chaos, Hoffnungsspiralen oder Selbstabwertung zu verstärken.</p>
+<p class="body">&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;</p>
+<ul class="list">
+<li>&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;Erstelle heute eine persönliche Akut-Notiz mit 3 Sätzen: „Was passiert gerade in mir?“, „Was hilft mir in den nächsten 15 Minuten?“, „Wen kontaktiere ich statt der Ex-Person?“&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Identifiziere deine 5 stärksten Trigger und notiere zu jedem eine konkrete Gegenmaßnahme.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Führe für 3 Tage ein kurzes Wellen-Protokoll: Auslöser, Gefühl, Intensität, was geholfen hat.&amp;lt;/li&amp;gt;</li>
+</ul>
+<p class="body">&amp;lt;li&amp;gt;Setze eine tägliche Grübelzeit von maximal 15 Minuten und stoppe nächtliche Beziehungsanalysen konsequent.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Definiere dein Tagesminimum für die nächste Woche: Aufstehen, essen, trinken, 10 Minuten Bewegung, 1 sozialer Kontakt.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Lege 1 bis 3 sichere Unterstützer fest und formuliere jeweils eine konkrete Bitte.&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;</p>
+<h1 class="modul">Modul 3: Körper zuerst stabilisieren (Tag 1–7)</h1>
+<div class="modul-desc"><p>In den ersten Tagen nach einer Trennung ist der Körper oft im Alarmzustand: Schlaf bricht weg, Appetit kippt, der Puls steigt, Gedanken kreisen. Dieses Modul setzt deshalb nicht bei großen Erkenntnissen an, sondern bei akuter Stabilisierung. Ziel ist, die körperliche Stressreaktion zu senken, damit Sie wieder handlungsfähiger werden und die nächsten Tage besser überstehen.</p></div>
+<div><h2 class="lektion">Lektion 1. Akut-Schlafprotokoll: 3 Säulen für heute Nacht Warum Schlaf jetzt Priorität hat</h2>
+<p class="body">Nach einer Trennung reagiert das Nervensystem häufig mit Übererregung. Einschlafen, Durchschlafen oder frühes Aufwachen werden schwieriger. Schon eine leicht bessere Nacht kann die Belastbarkeit am nächsten Tag verbessern. Ziel ist nicht perfekter Schlaf, sondern ein praktikables Notfallprotokoll für die kommende Nacht.</p>
+<div><h3 class="section">Die 3 Säulen</h3>
+<ul class="list">
+<li>Licht dimmen, Bildschirmhelligkeit reduzieren, keine Trennungsnachrichten lesen.</li>
+<li>Keine Klärungsgespräche, kein Social-Media-Check, keine Fotoarchive.</li>
+<li>Ruhige, monotone Tätigkeiten wählen: duschen, Wäsche falten, Tee zubereiten, leichte Musik.</li>
+<li>Atem beruhigen: längeres Ausatmen als Einatmen, z. B. 4 Sekunden ein, 6–8 Sekunden aus.</li>
+<li>Wärme nutzen: warme Dusche, Wärmflasche, dicke Socken.</li>
+<li>Den Körper lagern: Kissen zur Begrenzung, Seitenlage, Gewicht/Decke als Sicherheitsreiz.</li>
+<li>Vor dem Zubettgehen einen Zettel bereitlegen: „Wenn ich aufwache, mache ich nur Schritt 1–3.“</li>
+<li>Schritt 1: nicht aufs Handy schauen.</li>
+<li>Schritt 2: 10 ruhige Atemzüge oder kurzer Bodyscan.</li>
+<li>Schritt 3: Wenn nach etwa 20–30 Minuten keine Beruhigung eintritt, kurz aufstehen, Licht gedimmt lassen, monotone Tätigkeit, dann wieder hinlegen.</li>
+</ul>
+<div><h3 class="section">Was heute Nacht realistischerweise hilft</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Problem</th><th>Hilfreiche Orientierung</th></tr>
+<tr><td>Gedankenkreisen im Bett</td><td>Gedanken notieren, dann für die Nacht vertagen: „Morgen um 10:00 denke ich darüber 15 Minuten nach.“</td></tr>
+<tr><td>Frühes Erwachen mit Panik</td><td>Erst Körper beruhigen, nicht analysieren. Füße spüren, ausatmen, Wasser trinken.</td></tr>
+<tr><td>Innere Unruhe</td><td>Kein „Ich muss schlafen“, sondern: „Ich ruhe mich aus, auch das hilft meinem System.“</td></tr>
+</table></div>
+<div><h3 class="section">Minimal-Regeln für die erste Woche</h3>
+<ul class="list">
+<li>Keine emotionalen Gespräche im Bett.</li>
+<li>Das Bett möglichst nur für Schlaf und Ruhe nutzen.</li>
+<li>Koffein am späten Nachmittag und Abend vermeiden.</li>
+<li>Alkohol nicht als Einschlafhilfe verwenden; er kann Schlafqualität und nächtliches Aufwachen verschlechtern.</li>
+</ul>
+<div><h3 class="section">Wenn Schlaf kaum möglich ist</h3>
+<ul class="list">
+<li>Für 1–2 Nächte auf Schadensbegrenzung fokussieren, nicht auf Idealzustand.</li>
+<li>Tagsüber Licht, etwas Bewegung und einfache Mahlzeiten priorisieren; das stabilisiert oft auch die nächste Nacht.</li>
+<li>Bei anhaltender schwerer Schlaflosigkeit, massiver Verzweiflung oder Selbstgefährdung professionelle Hilfe einbeziehen.</li>
+</ul>
+<p class="body">Ein konkretes Notfallprotokoll für die erste Nacht: Reize senken, den Körper beruhigen und für nächtliches Aufwachen einen festen Plan bereitlegen.</p>
+<div><h2 class="lektion">Lektion 2. Essen &amp;amp; Trinken: Minimal-Standards und Rettungsmahlzeiten</h2>
+<p class="body">Warum Basisversorgung jetzt entscheidend ist</p>
+<p class="body">Unter akutem Stress verlieren viele Menschen Appetit oder vergessen Essen und Trinken. Gleichzeitig verstärken Unterzuckerung, Dehydrierung und lange Pausen oft Zittern, Schwäche, Gereiztheit und Panikgefühl. In der ersten Woche gelten deshalb Minimal-Standards statt Ernährungsperfektion.</p>
+<div><h3 class="section">Die Minimal-Standards</h3>
+<ul class="list">
+<li>3 Trinkanker pro Tag: morgens, mittags, abends jeweils ein großes Glas Wasser oder ungesüßter Tee.</li>
+<li>Alle 3–4 Stunden etwas Essbares zuführen, auch wenn es klein ist.</li>
+<li>Jede Mini-Mahlzeit enthält möglichst 2 Bausteine: Kohlenhydrat + Eiweiß oder Kohlenhydrat + Fett.</li>
+<li>Vorrang für einfache, verfügbare Lebensmittel statt aufwendiger Zubereitung.</li>
+</ul>
+<div><h3 class="section">Rettungsmahlzeiten für schlechte Tage</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Situation</th><th>Einfache Option</th></tr>
+<tr><td>Kein Appetit, aber Übelkeit geht so</td><td>Banane + Joghurt, Zwieback + Frischkäse, Apfelmus + Skyr</td></tr>
+<tr><td>Zu erschöpft zum Kochen</td><td>Brot + Käse/Hummus, Fertigsuppe + Brot, Mikrowellenreis + Bohnen</td></tr>
+<tr><td>Süßhunger und Crash- Gefühl</td><td>Haferflocken mit Milch/Drink, Nüsse + Obst, Quark mit Honig</td></tr>
+<tr><td>Morgens nichts runterzubekommen</td><td>Trinkjoghurt, Smoothie mit Eiweißquelle, Brühe plus kleines Brot</td></tr>
+</table></div>
+<div><h3 class="section">Praktische Einkaufsorientierung für 3 Tage</h3>
+<ul class="list">
+<li>Getränke: Wasser, Tee, ggf. Elektrolytgetränk bei wenig Essen oder starkem Stress.</li>
+<li>Leicht essbar: Bananen, Äpfel, Beeren, Suppen, Brot, Cracker.</li>
+<li>Eiweiß: Joghurt, Skyr, Eier, Hummus, Käse, Tofu.</li>
+<li>Schnelle Sättigung: Haferflocken, Reis, Kartoffeln, Nüsse.</li>
+</ul>
+<div><h3 class="section">Checkliste: Warnzeichen für Unterversorgung</h3>
+<ul class="list">
+<li>Schwindel, Zittern, Kopfschmerz</li>
+<li>sehr dunkler Urin oder seltenes Wasserlassen</li>
+<li>plötzliche Reizbarkeit oder Weinen ohne erkennbare Auslöser</li>
+<li>Herzklopfen, das sich nach Essen/Trinken etwas beruhigt</li>
+</ul>
+<div><h3 class="section">Leitgedanke für diese Woche</h3>
+<p class="body">„Ausreichend“ schlägt „ideal“. Der Körper braucht Energie und Flüssigkeit, damit emotionale Stabilisierung überhaupt greifen kann.</p>
+<p class="body">Diese Lektion setzt einfache Mindeststandards für Essen und Trinken und bietet konkrete Rettungsmahlzeiten für Tage ohne Kraft und Appetit.</p>
+<div><h2 class="lektion">Lektion 3. Sofort regulieren: TIPP, 4-7-8, Orientierung im Raum Ziel der Akutregulation</h2>
+<p class="body">Wenn der Stresspegel sehr hoch ist, helfen lange Analysen meist nicht. Dann braucht es kurze, körpernahe Methoden, die die Aktivierung dämpfen. Diese Lektion bündelt drei bewährte Sofortwerkzeuge für akute Überflutung.</p>
+<div><h3 class="section">TIPP als Krisenabkürzung</h3>
+<p class="body">TIPP stammt aus der Emotionsregulation und steht für mehrere schnelle körperliche Eingriffe.</p>
+<ul class="list">
+<li>T – Temperatur: kaltes Wasser ins Gesicht, kühler Waschlappen auf Wangen/Augenbereich, kurz ans offene Fenster.</li>
+<li>I – Intensive Bewegung: 30–90 Sekunden zügig auf der Stelle gehen, Treppen, Hampelmänner, kräftiges Ausschütteln.</li>
+<li>P – Paced Breathing: Atmung verlangsamen, besonders das Ausatmen verlängern.</li>
+<li>P – Paired Muscle Relaxation: Muskelgruppen kurz anspannen, dann bewusst lösen.</li>
+</ul>
+<div><h3 class="section">4-7-8-Atmung: so einsetzen</h3>
+<ul class="list">
+<li>4 Sekunden einatmen, 7 Sekunden halten, 8 Sekunden ausatmen.</li>
+<li>Nur nutzen, wenn das Luftanhalten nicht unangenehm macht; sonst besser 4 ein, 6–8 aus.</li>
+<li>2–4 Runden reichen oft am Anfang. Nicht auf Perfektion achten.</li>
+</ul>
+<div><h3 class="section">Orientierung im Raum gegen Überflutung</h3>
+<p class="body">Wenn Gedanken rasen oder Derealisationsgefühle auftreten, hilft Orientierung statt Grübeln.</p>
+<ul class="list">
+<li>Beide Füße fest auf den Boden stellen.</li>
+<li>Im Raum 5 neutrale Dinge benennen, die sichtbar sind.</li>
+<li>4 Berührungen wahrnehmen: Stuhl, Kleidung, Boden, Luft auf der Haut.</li>
+<li>3 Geräusche identifizieren.</li>
+<li>2 Farben bewusst suchen.</li>
+<li>1 Satz sagen: „Ich bin hier, ich bin gerade sicher genug, der Moment geht vorbei.“</li>
+</ul>
+<div><h3 class="section">Welche Methode wann?</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Zustand</th><th>Passendes Tool</th></tr>
+<tr><td>starke körperliche Alarmreaktion</td><td>TIPP mit Temperatur und Bewegung</td></tr>
+<tr><td>Herzrasen, flache Atmung</td><td>verlängertes Ausatmen oder 4-7- 8</td></tr>
+<tr><td>Dissoziatives Wegdriften, Tunnelblick</td><td>Orientierung im Raum</td></tr>
+</table></div>
+<div><h3 class="section">Wichtiger Grundsatz</h3>
+<p class="body">Erst regulieren, dann reflektieren. Akute Aktivierung ist kein guter Zeitpunkt für Kontaktaufnahme, Entscheidungsgespräche oder stundenlanges Nachdenken.</p>
+<p class="body">Sie lernen drei schnelle Werkzeuge zur akuten Beruhigung: TIPP, eine einfache Atemtechnik und Orientierung im Raum bei Überforderung.</p>
+<div><h2 class="lektion">Lektion 4. Bewegung &amp;amp; Tageslicht: 20-Minuten-Reset Warum gerade diese zwei Faktoren so wirksam sind</h2>
+<p class="body">Bewegung und Tageslicht gehören zu den einfachsten Hebeln, um den Körper nach einer Stressspitze zu stabilisieren. Sie können innere Starre reduzieren, den Tag strukturieren und Schlafdruck für die Nacht unterstützen. Es geht nicht um Training, sondern um Regulation.</p>
+<div><h3 class="section">Der 20-Minuten-Reset</h3>
+<ul class="list">
+<li>Minute 1–5: rausgehen oder ans Fenster/Balkon, Tageslicht bewusst aufnehmen.</li>
+<li>Minute 6–15: zügiges Gehen in einem Tempo, bei dem Sie noch sprechen könnten.</li>
+<li>Minute 16–20: langsamer werden, Schultern lockern, 5 tiefe Ausatemzüge.</li>
+</ul>
+<div><h3 class="section">Minimalvariante für sehr schwere Tage</h3>
+<ul class="list">
+<li>5 Minuten vor die Tür.</li>
+<li>1 Runde um den Block oder 100–300 Schritte.</li>
+<li>Wenn das nicht geht: am offenen Fenster stehen, aufrecht atmen, Arme und Beine mobilisieren.</li>
+</ul>
+<div><h3 class="section">Wann der Reset besonders sinnvoll ist</h3>
+<ul class="list">
+<li>morgens nach einer schlechten Nacht</li>
+<li>nach einer Grübelschleife</li>
+<li>nach Kontakt mit Triggern wie Nachrichten, Fotos oder Social Media</li>
+<li>am Nachmittag statt Koffein-Nachladen</li>
+</ul>
+<div><h3 class="section">Fehler, die den Effekt schmälern</h3>
+<ul class="list">
+<li>Bewegung als Selbstüberforderung: zu hart, zu lang, zu leistungsorientiert.</li>
+<li>Dabei weiter chatten, scrollen oder den Ex-Account prüfen.</li>
+<li>Nur auf Motivation warten statt das Minimum fest einplanen.</li>
+</ul>
+<div><h3 class="section">Einfacher Wochenplan Tag 1–7</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Tag</th><th>Ziel</th></tr>
+<tr><td>1– 2</td><td>einmal täglich 10–20 Minuten Licht + Gehen</td></tr>
+<tr><td>3– 4</td><td>zusätzlich 1 kurze Mobilisationspause am Nachmittag</td></tr>
+<tr><td>5– 7</td><td>Routine festigen: möglichst gleiche Uhrzeit wählen</td></tr>
+</table></div>
+<div><h3 class="section">Leitsatz</h3>
+<p class="body">Kleine, wiederholbare Bewegung ist in der Akutphase oft hilfreicher als seltene große Anläufe.</p>
+<p class="body">Diese Lektion zeigt, wie ein einfacher 20-Minuten-Reset mit Tageslicht und Bewegung die ersten Tage strukturieren und den Stresspegel senken kann.</p>
+<div><h2 class="lektion">Lektion 5. Umgang mit Alkohol, Koffein &amp;amp; Social Media</h2>
+<p class="body">Drei Verstärker, die den Ausnahmezustand oft verschlimmern</p>
+<p class="body">Nach einer Trennung wirken Alkohol, Koffein und Social Media oft kurzfristig entlastend, langfristig aber destabilisierend. Sie können Schlaf verschlechtern, Puls und Unruhe steigern oder neue Trigger setzen. Deshalb braucht es klare Grenzen statt spontane Impulse.</p>
+<div><h3 class="section">Alkohol: kurzfristige Betäubung, oft teurer Preis</h3>
+<ul class="list">
+<li>Kann emotionalen Schmerz vorübergehend dämpfen, erhöht aber oft Impulsivität und Kontaktversuche.</li>
+<li>Kann Schlafqualität verschlechtern und nächtliches Erwachen verstärken.</li>
+<li>Erhöht bei manchen Menschen Verzweiflung, Weinen oder Aggression am Folgetag.</li>
+</ul>
+<p class="body">Praxisregel: In den ersten 7 Tagen möglichst vermeiden oder sehr bewusst begrenzen, besonders abends und in Alleinsituationen.</p>
+<div><h3 class="section">Koffein: hilfreich oder Brandbeschleuniger?</h3>
+<ul class="list">
+<li>Kann bei Erschöpfung kurz stabilisieren, aber auch Herzrasen, Zittern und Angst verstärken.</li>
+<li>Später Konsum kann Einschlafen erschweren.</li>
+<li>Besonders vorsichtig bei Panikneigung, leerem Magen und Schlafmangel.</li>
+</ul>
+<p class="body">Praxisregel: Wenn Koffein, dann eher morgens/früh mittags, mit Essen und Wasser kombiniert.</p>
+<div><h3 class="section">Social Media: Trigger-Maschine im Taschenformat</h3>
+<ul class="list">
+<li>Ständiges Prüfen hält Hoffnung, Schmerz und Vergleiche aktiv.</li>
+<li>Unklare Signale wie Stories, Online-Status oder Likes werden leicht überinterpretiert.</li>
+<li>Algorithmische Erinnerungsschleifen verstärken Gedankenkreisen.</li>
+</ul>
+<div><h3 class="section">Schutzmaßnahmen für 72 Stunden</h3>
+<ul class="list">
+<li>Ex-Profile stummschalten, entfolgen oder blockieren, wenn nötig.</li>
+<li>Apps vom Startbildschirm entfernen.</li>
+<li>Feste Check-Zeiten definieren statt Dauerscrolling.</li>
+<li>Kein Social Media im Bett.</li>
+<li>Eine Vertrauensperson bitten, Passwörter oder Sperren mit zu organisieren, wenn die Versuchung sehr hoch ist.</li>
+</ul>
+<div><h3 class="section">Entscheidungshilfe in Akutmomenten</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Impuls</th><th>Bessere Alternative</th></tr>
+<tr><td>„Ich brauche jetzt ein Glas Wein.“</td><td>erst Wasser, Dusche, kurzer Spaziergang, dann neu bewerten</td></tr>
+<tr><td>„Ich checke nur kurz das Profil.“</td><td>10-Minuten-Verzögerung + TIPP oder Orientierung im Raum</td></tr>
+<tr><td>„Ohne Kaffee funktioniere ich nicht.“</td><td>erst essen, trinken, 5 Minuten Tageslicht, dann kleine Menge prüfen</td></tr>
+</table></div>
+<div><h3 class="section">Kernidee</h3>
+<p class="body">Was kurzfristig entlastet, kann den nächsten Absturz vorbereiten. In der Akutphase zählt Schadensbegrenzung und Reizmanagement.</p>
+<p class="body">Hier geht es um klare Grenzen bei Alkohol, Koffein und Social Media, damit kurzfristige Impulse nicht den emotionalen Ausnahmezustand verlängern.</p>
+<div><h2 class="lektion">Lektion 6. Panik-Toolbox: Bodyscan, Kälte, Self-Talk Wozu eine Panik-Toolbox dient</h2>
+<p class="body">Bei akuter Panik ist Denken oft eingeschränkt. Deshalb hilft eine kleine, vorbereitete Toolbox mit wenigen Methoden, die sofort verfügbar sind. Ziel ist nicht, jede Angst vollständig zu stoppen, sondern die Welle zu verkürzen und handlungsfähig zu bleiben.</p>
+<div><h3 class="section">Baustein 1: Mini-Bodyscan</h3>
+<ul class="list">
+<li>Aufrecht sitzen oder stehen.</li>
+<li>Aufmerksamkeit nacheinander auf Füße, Beine, Bauch, Schultern, Hände lenken.</li>
+<li>Pro Bereich nur kurz prüfen: warm/kalt, angespannt/locker, ruhig/unruhig.</li>
+<li>Nichts verändern müssen; wahrnehmen reicht.</li>
+</ul>
+<p class="body">Nutzen: Der Fokus wandert aus der Katastrophenschleife zurück in den Körper.</p>
+<div><h3 class="section">Baustein 2: Kältereiz</h3>
+<ul class="list">
+<li>Kühles Wasser über Hände oder Gesicht.</li>
+<li>Kalter Waschlappen in den Nacken oder auf die Wangen.</li>
+<li>Kurz an die frische Luft treten.</li>
+</ul>
+<p class="body">Nutzen: Ein starker Sinnesreiz kann die Panikkurve unterbrechen und Orientierung zurückbringen.</p>
+<div><h3 class="section">Baustein 3: funktionaler Self-Talk</h3>
+<p class="body">Self-Talk ist kein Schönreden, sondern eine nüchterne innere Ansprache.</p>
+<ul class="list">
+<li>„Das ist Panik, nicht Gefahr.“</li>
+<li>„Mein Körper ist im Alarm, ich helfe ihm jetzt herunter.“</li>
+<li>„Die Welle steigt und fällt wieder.“</li>
+<li>„Ich muss das nicht perfekt lösen, nur durch die nächsten 10 Minuten kommen.“</li>
+</ul>
+<div><h3 class="section">Toolbox-Karte für Handy oder Geldbeutel</h3>
+<ul class="list">
+<li>Stopp. Nicht schreiben, nicht anrufen, nicht scrollen.</li>
+<li>Füße auf den Boden.</li>
+<li>Kälte einsetzen.</li>
+<li>6 lange Ausatmungen.</li>
+<li>Mini-Bodyscan 60 Sekunden.</li>
+<li>Self-Talk-Satz laut oder leise wiederholen.</li>
+<li>Danach Wasser trinken und Ortswechsel, wenn möglich.</li>
+</ul>
+<div><h3 class="section">Wann zusätzliche Hilfe nötig ist</h3>
+<ul class="list">
+<li>wenn Panikattacken sehr häufig werden oder stark zunehmen</li>
+<li>wenn Ohnmachtsgefühl, massiver Kontrollverlust oder Selbstgefährdung dazukommen</li>
+<li>wenn Alltagsfunktionen kaum noch möglich sind</li>
+</ul>
+<div><h3 class="section">Grundsatz</h3>
+<p class="body">Eine vorbereitete Toolbox ist wirksamer als improvisierte Beruhigung im Hochstress. Wenige Schritte, oft geübt, schlagen viele komplizierte Techniken.</p>
+<p class="body">Die Lektion bündelt eine einfache Panik-Toolbox mit Bodyscan, Kältereiz und nüchternem Self-Talk für akute Alarmmomente.</p>
+<ul class="list">
+<li>&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;In den ersten Tagen nach der Trennung ist körperliche Stabilisierung oft die Voraussetzung für emotionale Verarbeitung.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Schlaf, Flüssigkeit,</li>
+</ul>
+<p class="body">einfache Mahlzeiten, Tageslicht und leichte Bewegung wirken als grundlegende Regulierungshebel.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Akute Überforderung lässt sich mit kurzen, körpernahen Techniken wie TIPP, Atemregulation und Orientierung im Raum oft spürbar senken.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Alkohol, spätes Koffein und Social Media können den Ausnahmezustand verlängern und sollten bewusst begrenzt werden.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Eine vorbereitete Panik-Toolbox erhöht die Chance, in Krisenmomenten handlungsfähig zu bleiben.&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;</p>
+<p class="body">1. &amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;Erstellen Sie heute ein Schlaf-Notfallblatt mit 3 Schritten für nächtliches Aufwachen und legen Sie es ans Bett.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Kaufen Sie für die nächsten 3 Tage mindestens 5 Rettungslebensmittel ein, die ohne Aufwand essbar sind.&amp;lt;/li&amp;gt;</p>
+<p class="body">&amp;lt;li&amp;gt;Üben Sie einmal am Tag 2–4 Runden einer beruhigenden Atemtechnik, bevor der Stresspeak kommt.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Planen Sie für die kommenden 7 Tage täglich einen 10- bis 20-minütigen Licht-und-Bewegungs-Slot ein.&amp;lt;/li&amp;gt;</p>
+<p class="body">&amp;lt;li&amp;gt;Stummschalten oder blockieren Sie heute alle Social-Media-Trigger, die Sie aktuell destabilisieren.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Speichern Sie Ihre persönliche Panik-Toolbox als Notiz im Handy und testen Sie sie in einem ruhigen Moment.&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;</p>
+<h1 class="modul">Modul 4: Kopf beruhigen, Gefühle führen (Tag 8–14)</h1>
+<div class="modul-desc"><p>In diesem Modul geht es darum, innere Überflutung zu reduzieren und wieder mehr Steuerungsfähigkeit zu gewinnen. Die zweite Woche nach einer Trennung ist oft geprägt von Triggern, Rückfallimpulsen und Gedankenkreisen. Sie lernen hier konkrete Werkzeuge, um Kontaktgrenzen zu halten, digitale Reize zu reduzieren und intensive Gefühle auszuhalten, ohne von ihnen mitgerissen zu werden.</p></div>
+<div><h2 class="lektion">Lektion 1. Kontaktpause planen &amp;amp; durchhalten: No/Low Contact</h2>
+<p class="body">Warum Kontaktpause oft notwendig ist</p>
+<p class="body">Direkter oder indirekter Kontakt kann das emotionale Alarmsystem immer wieder aktivieren. Gerade in den ersten Wochen hilft eine klare Regelung häufig mehr als spontane Einzelfallentscheidungen. Ziel ist nicht Bestrafung, sondern Stabilisierung, Reizreduktion und Schutz vor impulsiven Rückschritten.</p>
+<ul class="list">
+<li>No Contact: Kein Schreiben, Anrufen, Treffen, Nachfragen über Dritte, kein Social-Media-Checken.</li>
+<li>Low Contact: Nur notwendige, sachliche Kommunikation, z. B. wegen Kindern, Wohnung, Finanzen oder organisatorischen Themen.</li>
+<li>Leitfrage: Dient der Kontakt einem realen Sachanliegen oder der kurzfristigen Emotionsregulation?</li>
+</ul>
+<div class="tbl-wrap"><table>
+<tr><th>Situation</th><th>Sinnvolle Form</th></tr>
+<tr><td>Keine gemeinsamen Verpflichtungen</td><td>No Contact für einen klar definierten Zeitraum</td></tr>
+<tr><td>Organisatorische Restthemen</td><td>Low Contact mit festen Kanälen und Zeiten</td></tr>
+<tr><td>Gemeinsame Kinder</td><td>Low Contact, ausschließlich kindbezogen und strukturiert</td></tr>
+<tr><td>Hohe emotionale Eskalation</td><td>Maximale Reduktion, schriftlich statt spontan</td></tr>
+</table></div>
+<ul class="list">
+<li>Zeitraum festlegen, z. B. 14 oder 30 Tage.</li>
+<li>Kanäle definieren: Was ist erlaubt, was nicht?</li>
+<li>Ausnahmen schriftlich festhalten, z. B. nur E-Mail für Organisatorisches.</li>
+<li>Notfallplan für Rückfallimpulse vorbereiten.</li>
+<li>Eine Vertrauensperson informieren, die mitträgt statt nachgibt.</li>
+<li>Einsamkeit am Abend</li>
+<li>Alkohol, Schlafmangel, Erschöpfung</li>
+<li>Geburtstage, Jahrestage, Wochenenden</li>
+<li>Unklare Hoffnung auf ein versöhnliches Signal</li>
+<li>Drang, Schmerzen durch kurzfristigen Kontakt zu lindern</li>
+<li>10 Minuten Verzögerung einbauen.</li>
+<li>Nachricht zuerst in Notizen statt im Chat schreiben.</li>
+<li>Eine Person aus dem Unterstützerkreis kontaktieren.</li>
+<li>Kurz den Körper regulieren: gehen, atmen, Wasser trinken.</li>
+<li>Fragen: Wird diese Nachricht meine Lage morgen verbessern?</li>
+<li>Kurz, freundlich, sachlich, ohne Beziehungsdiskussion.</li>
+<li>Ein Thema pro Nachricht.</li>
+<li>Keine Rechtfertigungen, keine Vorwürfe, keine versteckten Tests.</li>
+<li>Antworten zeitversetzt statt sofort.</li>
+<li>Wenn möglich ein fester Kanal, z. B. nur E-Mail.</li>
+<li>Kontaktform gewählt: No Contact oder Low Contact</li>
+<li>Startdatum und Dauer festgelegt</li>
+<li>Kommunikationskanäle begrenzt</li>
+<li>Rückfallplan vorbereitet</li>
+<li>Unterstützungsperson informiert</li>
+</ul>
+<p class="body">Diese Lektion zeigt, wie eine Kontaktpause als Schutzmaßnahme geplant und durchgehalten wird. Sie unterscheiden zwischen No Contact und Low Contact, definieren klare Regeln und bauen einen Rückfallplan für schwache Momente auf.</p>
+<div><h2 class="lektion">Lektion 2. Trigger-Management: Orte, Objekte, Routinen</h2>
+<p class="body">Was Trigger nach einer Trennung sind</p>
+<p class="body">Trigger sind Reize, die intensive emotionale Reaktionen auslösen: Orte, Gerüche, Musik, Fotos, Tageszeiten oder Routinen. Sie sind kein Zeichen von Schwäche, sondern Ausdruck gelernter Verknüpfungen im Gehirn. Entscheidend ist, Trigger nicht dem Zufall zu überlassen, sondern aktiv zu managen.</p>
+<ul class="list">
+<li>Erkennen: Welche Reize lösen starke Wellen aus?</li>
+<li>Einordnen: Was passiert dann in Gedanken, Körper und Verhalten?</li>
+<li>Verändern: Vermeiden, dosieren oder neu besetzen.</li>
+</ul>
+<div class="tbl-wrap"><table>
+<tr><th>Kategorie</th><th>Beispiele</th><th>Mögliche Maßnahme</th></tr>
+<tr><td>Orte</td><td>Lieblingscafé, gemeinsame Wege, Wohnungsecken</td><td>Vorübergehend meiden oder bewusst in Begleitung aufsuchen</td></tr>
+<tr><td>Objekte</td><td>Geschenke, Kleidung, Fotos</td><td>In eine Box räumen, außer Sicht lagern, später sortieren</td></tr>
+<tr><td>Routinen</td><td>Abendritual, Sonntage, Serienzeit</td><td>Neue Mikro-Rituale anlegen</td></tr>
+<tr><td>Sinne</td><td>Parfum, Musik, bestimmte Speisen</td><td>Neue Reize gezielt etablieren</td></tr>
+</table></div>
+<ul class="list">
+<li>Was hat ausgelöst?</li>
+<li>Wie stark war die Reaktion auf einer Skala von 0 bis 10?</li>
+<li>Welche Gedanken kamen sofort?</li>
+<li>Was habe ich dann getan?</li>
+<li>Was hätte mir stattdessen geholfen?</li>
+<li>Reiz reduzieren: Stark belastende Auslöser zunächst minimieren.</li>
+<li>Umgebung anpassen: Möbel umstellen, Bettwäsche wechseln, neue Wege gehen.</li>
+<li>Neu verknüpfen: Bisher belastete Orte mit neuer Begleitung oder neuer Aktivität verbinden.</li>
+<li>Vorausschauend planen: Für Wochenenden, Abende und besondere Daten konkrete Alternativen festlegen.</li>
+</ul>
+<p class="body">Es geht nicht darum, jede Erinnerung sofort zu „besiegen“. Zu frühe Überforderung kann die Belastung steigern. Sinnvoll ist eine Kombination aus Schutz und dosierter Konfrontation, angepasst an die eigene Stabilität.</p>
+<ul class="list">
+<li>Eine Erinnerungsbox anlegen und sichtbar belastende Gegenstände verstauen.</li>
+<li>Für zwei typische Trigger-Orte Alternativwege definieren.</li>
+<li>Ein neues Abendritual für 10 bis 20 Minuten festlegen.</li>
+<li>Eine Playlist erstellen, die nicht mit der Beziehung verknüpft ist.</li>
+</ul>
+<p class="body">Sie lernen, emotionale Trigger systematisch zu erkennen und zu entschärfen. Mit einem einfachen Analyse- und Maßnahmenplan reduzieren Sie belastende Auslöser und bauen neue, stabilisierende Routinen auf.</p>
+<div><h2 class="lektion">Lektion 3. Gedankenkreisen stoppen: Worry-Time, Noting, Reframing</h2>
+<p class="body">Warum Grübeln so hartnäckig ist</p>
+<p class="body">Nach einer Trennung versucht der Kopf oft, durch ständiges Nachdenken Kontrolle zurückzugewinnen. Das Problem: Grübeln liefert selten Lösungen, verlängert aber Anspannung und Erschöpfung. Hilfreich ist nicht, Gedanken gewaltsam wegzudrücken, sondern den Umgang mit ihnen zu verändern.</p>
+<p class="body">Gedanken werden nicht den ganzen Tag bekämpft, sondern in ein festes Zeitfenster verschoben.</p>
+<ul class="list">
+<li>Täglich 15 bis 20 Minuten zu einer festen Uhrzeit festlegen, nicht direkt vor dem Schlafen.</li>
+<li>Tagsüber aufkommende Sorgen kurz notieren statt ihnen zu folgen.</li>
+<li>Im Zeitfenster die notierten Punkte ansehen und bewusst denken oder schreiben.</li>
+<li>Nach Ablauf stoppen und in eine konkrete Tätigkeit wechseln.</li>
+</ul>
+<p class="body">Nutzen: Das Gehirn lernt, dass nicht jeder Gedanke sofort bearbeitet werden muss.</p>
+<p class="body">Beim Noting werden innere Vorgänge knapp benannt, ohne in Inhalte einzusteigen.</p>
+<ul class="list">
+<li>Beispiele: „Erinnern“, „Vergleichen“, „Katastrophisieren“, „Sehnsucht“, „Wut“,</li>
+</ul>
+<p class="body">„Planen“</p>
+<ul class="list">
+<li>Dann Aufmerksamkeit zurück auf Atem, Körper oder aktuelle Tätigkeit lenken</li>
+</ul>
+<p class="body">Nutzen: Es entsteht etwas Abstand zwischen Ihnen und dem Gedankensog.</p>
+<p class="body">Reframing bedeutet nicht Schönreden, sondern eine realistischere und hilfreichere Perspektive einzunehmen.</p>
+<div class="tbl-wrap"><table>
+<tr><th>Automatischer Gedanke</th><th>Mögliches Reframing</th></tr>
+<tr><td>„Ich werde nie wieder glücklich.“</td><td>„Ich bin gerade in einer akuten Phase. Gefühle sind intensiv, aber veränderlich.“</td></tr>
+<tr><td>„Wenn ich nur alles richtig gemacht hätte...“</td><td>„Beziehungen scheitern selten an einem einzigen Moment oder einer Person allein.“</td></tr>
+<tr><td>„Ich halte das nicht aus.“</td><td>„Ich halte gerade viel aus. Ich brauche Unterstützung und kleine Schritte.“</td></tr>
+</table></div>
+<ul class="list">
+<li>Stopp-Signal setzen: aufstehen, tief ausatmen.</li>
+<li>Noting: Was passiert gerade mental?</li>
+<li>Gedanke notieren statt analysieren.</li>
+<li>Fragen: Ist das ein lösbares Problem oder Grübeln?</li>
+<li>Bei Grübeln: auf Worry-Time verschieben oder in den Körper wechseln.</li>
+<li>Leere Zeit ohne Struktur</li>
+<li>Social-Media-Reize</li>
+<li>Schlafmangel und Unterzuckerung</li>
+<li>Wiederholte Gespräche, die nur kreisen statt klären</li>
+</ul>
+<p class="body">Eine wirksame Kombination ist: Gedanken notieren, einordnen, verschieben und danach den Körper aktiv einbeziehen. Viele Menschen brauchen diese Unterbrechung mehrmals täglich, besonders in der zweiten Woche nach der Trennung.</p>
+<p class="body">Diese Lektion bietet drei alltagstaugliche Werkzeuge gegen Grübelschleifen: Worry-Time, Noting und Reframing. Sie lernen, Gedanken zu strukturieren, Abstand zu schaffen und aus dem Kreisen zurück in Handlung zu kommen.</p>
+<div><h2 class="lektion">Lektion 4. Digital-Detox: Ex stummschalten, Feed säubern, Filter setzen</h2>
+<p class="body">Warum digitale Reize so belastend sein können</p>
+<p class="body">Digitale Kanäle halten Trennungsschmerz oft künstlich aktiv: Statusanzeigen, alte Chats, Fotos, Vorschläge von Plattformen oder Informationen über Dritte. Schon kurze Checks können Hoffnung, Schmerz, Wut oder Vergleiche neu anfachen. Ein gezielter Digital-Detox reduziert unnötige Aktivierung und schützt die Kontaktpause.</p>
+<ul class="list">
+<li>Profilbesuche und Story-Checks</li>
+<li>Alte Chatverläufe lesen</li>
+<li>Automatische Erinnerungen in Foto-Apps</li>
+<li>Gemeinsame Streaming- oder Cloud-Inhalte</li>
+<li>Algorithmen, die ähnliche Inhalte immer wieder ausspielen</li>
+</ul>
+<div class="tbl-wrap"><table>
+<tr><th>Bereich</th><th>Empfohlene Maßnahme</th></tr>
+<tr><td>Messenger</td><td>Chat archivieren, Benachrichtigungen aus, Verlauf nicht pinnen</td></tr>
+<tr><td>Social Media</td><td>Stummschalten, entfolgen, ggf. blockieren</td></tr>
+<tr><td>Fotos</td><td>Erinnerungen deaktivieren, sensible Alben auslagern</td></tr>
+<tr><td>Feed</td><td>Beziehungscontent, Liebeskummer-Trigger und Vergleichsprofile reduzieren</td></tr>
+<tr><td>Suche</td><td>Namen nicht eingeben, Browser-Verläufe bereinigen</td></tr>
+</table></div>
+<ul class="list">
+<li>App-Limits für kritische Zeiten festlegen.</li>
+<li>Startbildschirm entschlacken, triggernde Apps verschieben.</li>
+<li>Benachrichtigungen fast vollständig deaktivieren.</li>
+<li>Eine Vertrauensperson bitten, technische Hürden mit einzurichten.</li>
+<li>Impuls bemerken, nicht sofort handeln.</li>
+<li>Handy für 10 Minuten außer Reichweite legen.</li>
+<li>Alternativhandlung nutzen: kurzer Spaziergang, Dusche, Sprachnachricht an eine sichere Person.</li>
+<li>Falls doch geschaut wurde: nicht in Selbstabwertung kippen, sondern Schutzmaßnahmen nachschärfen.</li>
+</ul>
+<p class="body">Ein leergeräumter digitaler Raum ist nur der erste Schritt. Danach sollten Inhalte folgen, die beruhigen, strukturieren oder den Alltag stützen, z. B. Bewegung, Schlafhygiene, Kochen, Natur, Humor oder sachliche Selbsthilfeinhalte.</p>
+<ul class="list">
+<li>Ex-bezogene Kontakte stummschalten oder blockieren</li>
+<li>Alte Chats archivieren</li>
+<li>Fotoerinnerungen deaktivieren</li>
+<li>Push-Nachrichten auf das Nötigste begrenzen</li>
+<li>Zwei offline verfügbare Alternativen für Leerlauf bereitlegen</li>
+</ul>
+<p class="body">Sie richten einen digitalen Schutzraum ein, der Rückfälle und unnötige Trigger reduziert. Die Lektion zeigt, wie Sie den Ex stummschalten, Feeds bereinigen und technische Hürden klug nutzen.</p>
+<div><h2 class="lektion">Lektion 5. Selbstmitgefühl &amp;amp; Emotionssurfing in 10 Minuten Warum Selbstmitgefühl gerade jetzt zentral ist</h2>
+<p class="body">Viele Betroffene reagieren nach einer Trennung zusätzlich mit harter Selbstkritik: „Ich bin zu viel“, „Ich hätte es verhindern müssen“, „Andere schaffen das besser“. Selbstmitgefühl bedeutet nicht Selbstmitleid oder Passivität, sondern einen weniger zerstörerischen Umgang mit eigenem Schmerz. Das kann die emotionale Regulation verbessern und Rückfallverhalten reduzieren.</p>
+<p class="body">Gefühle kommen in Wellen. Wer jede Welle sofort wegmachen will, verstärkt oft die Anspannung. Beim Emotionssurfing geht es darum, die Welle zu bemerken, im Körper wahrzunehmen und sie eine Zeit lang zu tragen, ohne impulsiv zu handeln.</p>
+<ul class="list">
+<li>Minute 1: Stoppen und benennen, was da ist: z. B. Trauer, Wut, Sehnsucht, Panik.</li>
+<li>Minute 2: Körperort finden: Wo spüre ich es am stärksten?</li>
+<li>Minute 3–4: Atmung leicht verlängern, besonders die Ausatmung.</li>
+<li>Minute 5–6: Selbstmitfühlende Sätze nutzen: „Das ist gerade schwer.“ „Ich muss das nicht perfekt können.“</li>
+<li>Minute 7–8: Beobachten, wie sich die Intensität verändert: stärker, schwächer, wandernd?</li>
+<li>Minute 9: Kein Problemlösen, nur dabeibleiben.</li>
+<li>Minute 10: Sanfter Übergang in eine hilfreiche Handlung.</li>
+<li>„Es ist verständlich, dass mich das trifft.“</li>
+<li>„Ich darf traurig sein, ohne sofort eine Lösung zu haben.“</li>
+<li>„Gerade brauche ich Schutz, nicht Härte.“</li>
+<li>„Ich kann den nächsten kleinen Schritt gehen.“</li>
+<li>Der Handlungsimpuls wird etwas schwächer.</li>
+<li>Die Körperanspannung verändert sich messbar.</li>
+<li>Sie reagieren weniger sofort auf den Ex, Social Media oder alte Chats.</li>
+<li>Sie erleben, dass Gefühle ansteigen und wieder abfallen können.</li>
+</ul>
+<p class="body">Wenn Gefühle in starke Panik, Dissoziation, Selbstgefährdung oder völlige Überflutung kippen, reicht Selbsthilfe allein möglicherweise nicht aus. Dann sind zusätzliche Unterstützung, ärztliche Abklärung oder psychotherapeutische Hilfe sinnvoll.</p>
+<ul class="list">
+<li>Benennen</li>
+<li>Atmen</li>
+<li>Körper spüren</li>
+<li>Selbstmitfühlenden Satz sagen</li>
+<li>Eine sichere Mikro-Handlung wählen</li>
+</ul>
+<p class="body">Die Lektion vermittelt eine kompakte 10-Minuten-Praxis für akute Gefühlswellen. Sie verbinden Selbstmitgefühl mit Emotionssurfing, um Schmerz auszuhalten, ohne sofort impulsiv zu handeln.</p>
+<div><h2 class="lektion">Lektion 6. Grenzen kommunizieren: kurze Formulierungen fürs Umfeld</h2>
+<p class="body">Warum klare Grenzen entlasten</p>
+<p class="body">Nach einer Trennung können gut gemeinte Fragen, Ratschläge oder Weitergaben von Informationen zusätzlich belasten. Wer keine Grenzen setzt, muss ständig spontan reagieren. Kurze, wiederholbare Formulierungen schaffen Schutz, sparen Energie und machen Unterstützung wahrscheinlicher.</p>
+<ul class="list">
+<li>Kurz statt lang erklären</li>
+<li>Konkret statt vage</li>
+<li>Wunsch und Grenze kombinieren</li>
+<li>Wiederholen statt rechtfertigen</li>
+</ul>
+<div class="tbl-wrap"><table>
+<tr><th>Situation</th><th>Mögliche Formulierung</th></tr>
+<tr><td>Jemand fragt ständig nach Details</td><td>„Ich möchte darüber gerade nicht ausführlich sprechen. Danke, wenn du das respektierst.“</td></tr>
+<tr><td>Freunde geben Updates über den Ex</td><td>„Bitte erzähl mir vorerst nichts über ihn/sie. Das wirft mich zurück.“</td></tr>
+<tr><td>Jemand drängt auf Ablenkung</td><td>„Danke, ich brauche heute eher etwas Ruhiges als Aktion.“</td></tr>
+<tr><td>Familie relativiert den Schmerz</td><td>„Für mich ist das gerade sehr einschneidend. Hilfreich ist vor allem Zuhören statt Bewerten.“</td></tr>
+<tr><td>Sie brauchen konkrete Hilfe</td><td>„Kannst du heute Abend 20 Minuten mit mir telefonieren, damit ich nicht allein ins Grübeln komme?“</td></tr>
+</table></div>
+<ul class="list">
+<li>Grenze ruhig wiederholen.</li>
+<li>Gespräch verkürzen oder Thema wechseln.</li>
+<li>Kontakt für eine Zeit reduzieren.</li>
+<li>Unterstützung gezielt bei verlässlichen Personen suchen.</li>
+<li>„Gerade hilft mir am meisten...“</li>
+<li>„Bitte frag mich dazu im Moment nicht weiter aus.“</li>
+<li>„Ich brauche heute...“</li>
+<li>„Darüber möchte ich erst später sprechen.“</li>
+<li>„Wenn du mich unterstützen willst, dann...“</li>
+</ul>
+<p class="body">Grenzen nach außen funktionieren besser, wenn innerlich klar ist, was gerade schützt und was überfordert. Deshalb lohnt sich vor Gesprächen eine kurze Selbstklärung: Was ist mein Thema, mein Limit, mein Wunsch?</p>
+<ul class="list">
+<li>Was will ich heute nicht besprechen?</li>
+<li>Was ist meine Standardsatz-Antwort?</li>
+<li>Wen kontaktiere ich, wenn mich das Gespräch belastet?</li>
+<li>Wie beende ich freundlich, aber klar?</li>
+</ul>
+<p class="body">Sie lernen, Grenzen gegenüber Freunden, Familie und Bekannten klar und energiesparend zu kommunizieren. Mit kurzen Standardsätzen schützen Sie sich vor Belastung und bitten gezielter um hilfreiche Unterstützung.</p>
+<ul class="list">
+<li>&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;Eine konsequent geplante Kontaktpause reduziert emotionale Überflutung und schützt vor impulsiven Rückschritten.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Trigger lassen sich erkennen, dokumentieren und durch Anpassung von Umgebung, Routinen und Reizdosis deutlich entschärfen.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Gegen Gedankenkreisen helfen strukturierte Methoden wie Worry-Time, Noting und realistische Reframings besser als reines Wegdrücken.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Digitaler Selbstschutz ist ein zentraler Hebel: Stummschalten, Feed-Bereinigung und technische Hürden entlasten das Nervensystem.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Selbstmitgefühl und Emotionssurfing stärken die Fähigkeit, intensive Gefühle auszuhalten, ohne sofort zu reagieren.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Klare Grenzen gegenüber dem Umfeld sparen Kraft und erhöhen die Chance auf wirklich hilfreiche Unterstützung.&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;</li>
+</ul>
+<p class="body">1. &amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;Legen Sie heute fest, ob für Sie No Contact oder Low Contact gilt, und definieren Sie Dauer, Kanäle und Ausnahmen schriftlich.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Erstellen Sie für die nächsten 7 Tage ein Trigger-Protokoll mit Auslöser, Intensität, Gedanken und hilfreicher Gegenmaßnahme.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Führen Sie täglich eine feste Worry-Time</p>
+<p class="body">von 15 bis 20 Minuten ein und verschieben Sie Grübelgedanken konsequent dorthin.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Richten Sie innerhalb von 24 Stunden Ihren Digital-Detox ein: Ex stummschalten, Chats archivieren, Fotoerinnerungen deaktivieren, Benachrichtigungen reduzieren.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Üben Sie einmal täglich die 10-Minuten-Praxis aus Selbstmitgefühl und Emotionssurfing, auch wenn die Belastung nur mittelstark ist.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Formulieren Sie drei Standardsätze für Ihr Umfeld, z. B. zu Nachfragen, Updates über den Ex und konkreter Hilfe.&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;</p>
+<h1 class="modul">Modul 5: Beziehung entflechten – praktisch aufräumen</h1>
+<div class="modul-desc"><p>In diesem Modul geht es um die praktische Seite der Trennung: klare Absprachen, saubere Übergaben und neue Ordnung im Alltag. Gerade in den ersten Wochen senkt organisatorische Klarheit oft den emotionalen Druck, weil weniger ungeklärte Punkte im Raum stehen. Ziel ist nicht Perfektion, sondern Entlastung, Sicherheit und ein möglichst konfliktarmer Neustart.</p></div>
+<div><h2 class="lektion">Lektion 1. Kommunikationsleitfäden für nötigen Kontakt (Kinder, Haushalt)</h2>
+<p class="body">Ziel der Lektion</p>
+<p class="body">Kontakt nach der Trennung ist oft einer der stärksten Trigger. Wenn Austausch nötig ist, hilft eine klare Struktur: sachlich, kurz, planbar und auf das Notwendige begrenzt.</p>
+<p class="body">Besonders bei Kindern, Haushalt oder laufenden Verpflichtungen reduziert ein Leitfaden Missverständnisse und Eskalationen.</p>
+<div><h3 class="section">Grundprinzipien für nötigen Kontakt</h3>
+<ul class="list">
+<li>Nur notwendige Themen: Kinder, Termine, Übergaben, Rechnungen, Verträge, Haushalt.</li>
+<li>Ein Thema pro Nachricht: keine Sammel-Nachrichten mit Vorwürfen, Rückblicken und Organisationspunkten zugleich.</li>
+<li>Kurz und konkret: Wer macht was bis wann?</li>
+<li>Neutraler Ton: keine Ironie, keine versteckten Spitzen, keine Beziehungsauswertung.</li>
+<li>Asynchron bevorzugen: Text oder E-Mail statt spontane Telefonate, wenn Gespräche schnell kippen.</li>
+<li>Antwortfenster definieren: z. B. innerhalb von 24 Stunden, außer bei echten Notfällen.</li>
+</ul>
+<div><h3 class="section">Empfohlene Kommunikationsregeln</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Regel</th><th>Praxisbeispiel</th></tr>
+<tr><td>Beim Thema bleiben</td><td>&quot;Ich schreibe wegen der Abholung am Donnerstag um 16 Uhr.&quot;</td></tr>
+<tr><td>Konkrete Bitte formulieren</td><td>&quot;Bitte bestätige bis morgen 18 Uhr, ob du den Termin übernehmen kannst.&quot;</td></tr>
+</table></div>
+<div class="tbl-wrap"><table>
+<tr><th>Keine Deutungen</th><th>Nicht: &quot;Du willst mich sowieso provozieren.&quot;</th></tr>
+<tr><td>Keine Vergangenheitsdebatte</td><td>Nicht alte Konflikte in organisatorische Nachrichten ziehen.</td></tr>
+<tr><td>Abschluss mit nächstem Schritt</td><td>&quot;Wenn ich nichts höre, gehe ich von Plan A aus.&quot;</td></tr>
+</table></div>
+<div><h3 class="section">Kommunikationsrahmen bei Kindern</h3>
+<ul class="list">
+<li>Kindbezogene Informationen priorisieren: Gesundheit, Schule, Betreuung, Termine, Besonderheiten.</li>
+<li>Kind nicht als Bote einsetzen.</li>
+<li>Keine Loyalitätskonflikte erzeugen: nicht schlecht über den anderen Elternteil sprechen.</li>
+<li>Übergaben möglichst ruhig, pünktlich und vorhersehbar gestalten.</li>
+<li>Wiederkehrende Abläufe schriftlich festhalten, um Diskussionen zu senken.</li>
+</ul>
+<div><h3 class="section">Kommunikationsrahmen bei Haushalt und Organisation</h3>
+<ul class="list">
+<li>Offene Punkte sammeln: Schlüssel, Post, Möbel, Verträge, Abholung von Dingen.</li>
+<li>Eine Liste statt vieler spontaner Einzelkontakte nutzen.</li>
+<li>Für Übergaben möglichst feste Zeitfenster und neutrale Orte vereinbaren.</li>
+<li>Nur entscheidungsreife Themen ansprechen, nicht alles gleichzeitig.</li>
+</ul>
+<div><h3 class="section">Formulierungshilfen</h3>
+<ul class="list">
+<li>&quot;Ich schreibe nur zum organisatorischen Punkt ...&quot;</li>
+<li>&quot;Für mich ist am praktikabelsten ...&quot;</li>
+<li>&quot;Bitte antworte bis ... mit Ja/Nein oder einem konkreten Gegenvorschlag.&quot;</li>
+<li>&quot;Ich möchte das Thema auf die Organisation begrenzen.&quot;</li>
+<li>&quot;Weitere Beziehungsthemen bespreche ich aktuell nicht.&quot;</li>
+</ul>
+<div><h3 class="section">Was bei emotional aufgeladenen Nachrichten hilft</h3>
+<ul class="list">
+<li>Nachricht nicht sofort beantworten.</li>
+<li>Einmal tief lesen, einmal technisch lesen: Was ist der konkrete Punkt?</li>
+<li>Nur auf den sachlichen Kern reagieren.</li>
+<li>Bei Grenzverletzung Antwort verschieben oder sehr kurz halten.</li>
+<li>Im Zweifel Entwurf schreiben, später kürzen.</li>
+</ul>
+<div><h3 class="section">Mini-Checkliste vor dem Senden</h3>
+<ul class="list">
+<li>Ist die Nachricht notwendig?</li>
+<li>Ist sie auf ein Thema begrenzt?</li>
+<li>Enthält sie eine klare Frage oder Bitte?</li>
+<li>Ist der Ton neutral?</li>
+<li>Würde ich wollen, dass diese Nachricht später noch einmal gelesen wird?</li>
+</ul>
+<p class="body">Diese Lektion zeigt, wie nötiger Kontakt nach der Trennung sachlich und konfliktarm gestaltet wird. Im Fokus stehen klare Regeln, kindbezogene Kommunikation und kurze Formulierungen für organisatorische Themen.</p>
+<div><h2 class="lektion">Lektion 2. Besitz, Schlüssel, Haustiere: faire Übergaben planen Ziel der Lektion</h2>
+<p class="body">Unklare Besitzfragen halten Trennungen oft künstlich offen. Eine faire, dokumentierte und zeitlich begrenzte Übergabe schafft Entlastung und verhindert, dass jede Kleinigkeit zum neuen Konfliktherd wird.</p>
+<div><h3 class="section">Prinzipien für faire Übergaben</h3>
+<ul class="list">
+<li>Transparenz: auflisten, was wem gehört oder wer was aktuell nutzt.</li>
+<li>Praktikabilität: nicht alles ideal, sondern umsetzbar lösen.</li>
+<li>Terminierung: Übergaben mit Datum, Uhrzeit, Ort.</li>
+<li>Dokumentation: Liste, Fotos, kurze Bestätigung per Nachricht.</li>
+<li>Sicherheit: persönliche Grenzen beachten, bei Bedarf neutrale Begleitung.</li>
+</ul>
+<div><h3 class="section">Vorgehen bei Gegenständen</h3>
+<ul class="list">
+<li>Alle offenen Punkte sammeln.</li>
+<li>In Kategorien ordnen: eindeutig, gemeinsam angeschafft, emotional aufgeladen, dringend benötigt.</li>
+<li>Priorisieren: zuerst Alltagsnotwendiges, Dokumente, Medikamente, Arbeitsmittel.</li>
+<li>Für strittige Punkte eine Zwischenlösung finden, statt endlos zu diskutieren.</li>
+<li>Übergabe schriftlich bestätigen.</li>
+</ul>
+<div><h3 class="section">Empfohlene Kategorienliste</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Kategorie</th><th>Beispiele</th><th>Hinweis</th></tr>
+</table></div>
+<div class="tbl-wrap"><table>
+<tr><th>Dringend</th><th>Ausweis, Bankunterlagen, Laptop, Medikamente</th><th>Sofort und separat übergeben</th></tr>
+<tr><td>Alltag</td><td>Kleidung, Haushaltsgeräte, Arbeitsmaterial</td><td>In einer Übergabeliste bündeln</td></tr>
+<tr><td>Gemeinsame Anschaffungen</td><td>Möbel, Geräte, Deko</td><td>Nutzung, Kaufbelege, Ausgleich prüfen</td></tr>
+<tr><td>Emotional</td><td>Fotos, Geschenke, Briefe</td><td>Nicht zwischen Tür und Angel entscheiden</td></tr>
+</table></div>
+<div><h3 class="section">Schlüssel sicher regeln</h3>
+<ul class="list">
+<li>Alle vorhandenen Schlüsselarten erfassen: Wohnung, Briefkasten, Keller, Garage, Fahrradschloss, Auto.</li>
+<li>Rückgabe schriftlich bestätigen.</li>
+<li>Bei Unsicherheit Schlösser oder Codes zeitnah ändern.</li>
+<li>Auch digitale Zutritte mitdenken: Smart Lock, Garagen-App, Alarmanlage.</li>
+</ul>
+<div><h3 class="section">Haustiere: realistische und faire Planung</h3>
+<p class="body">Bei Haustieren sollte das Wohl des Tieres im Vordergrund stehen: Stabilität, Versorgung, Bindung, Alltagstauglichkeit, Kosten und rechtliche Rahmenbedingungen.</p>
+<ul class="list">
+<li>Wer kann das Tier zuverlässig versorgen?</li>
+<li>Wer trägt laufende Kosten und Tierarzttermine?</li>
+<li>Wie wird mit Futter, Zubehör, Versicherungen und Papieren verfahren?</li>
+<li>Ist ein Wechselmodell wirklich stressarm oder eher belastend?</li>
+</ul>
+<div><h3 class="section">Übergabe-Checkliste</h3>
+<ul class="list">
+<li>Liste der Gegenstände erstellt</li>
+<li>Ort und Zeit festgelegt</li>
+<li>Transport organisiert</li>
+<li>Zeugin oder Begleitung bei Bedarf eingeplant</li>
+<li>Fotos oder Nachweise gesichert</li>
+<li>Bestätigung nach Übergabe versendet</li>
+</ul>
+<div><h3 class="section">Wenn Konflikte absehbar sind</h3>
+<ul class="list">
+<li>Neutralen Ort wählen.</li>
+<li>Kurzes Zeitfenster setzen.</li>
+<li>Nur vorher vereinbarte Dinge übergeben.</li>
+<li>Keine Beziehungsgespräche während der Übergabe.</li>
+<li>Bei hohem Konfliktniveau schriftliche oder vermittelnde Lösung bevorzugen.</li>
+</ul>
+<p class="body">Die Lektion bietet eine Struktur für faire und klare Übergaben von Besitz, Schlüsseln und Haustieren. Ziel ist, praktische Fragen zügig zu lösen und unnötige neue Konflikte zu vermeiden.</p>
+<div><h2 class="lektion">Lektion 3. Accounts &amp;amp; Passwörter: Zugänge trennen, Datenschutz</h2>
+<p class="body">Ziel der Lektion</p>
+<p class="body">Nach einer Trennung ist digitale Sicherheit ein zentraler Stabilitätsfaktor. Gemeinsame oder bekannte Zugänge können Stress, Kontrollverlust und Datenschutzprobleme verstärken. Deshalb sollten Konten, Geräte und Berechtigungen systematisch überprüft und getrennt werden.</p>
+<div><h3 class="section">Prioritäten in den ersten 48 Stunden</h3>
+<ul class="list">
+<li>Passwörter von E-Mail-Konten ändern.</li>
+<li>Banking- und Zahlungsdienste absichern.</li>
+<li>Zwei-Faktor-Authentifizierung aktivieren oder aktualisieren.</li>
+<li>Geräte und Browser-Sitzungen prüfen und abmelden.</li>
+<li>Cloud, Kalender und Standortfreigaben kontrollieren.</li>
+</ul>
+<div><h3 class="section">Welche Zugänge geprüft werden sollten</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Bereich</th><th>Beispiele</th><th>Aktion</th></tr>
+<tr><td>Kommunikation</td><td>E-Mail, Messenger, Videodienste</td><td>Passwort ändern, Geräte abmelden</td></tr>
+<tr><td>Finanzen</td><td>Online-Banking, PayPal, Wallets</td><td>Zugang prüfen, Benachrichtigungen aktivieren</td></tr>
+<tr><td>Cloud &amp;amp; Dateien</td><td>Drive, Fotos, Backups</td><td>Freigaben entziehen, Ordner trennen</td></tr>
+<tr><td>Shopping &amp;amp; Abos</td><td>Amazon, Streaming, Lieferdienste</td><td>Zahlungsmittel und Profile prüfen</td></tr>
+</table></div>
+<div class="tbl-wrap"><table>
+<tr><th>Standort &amp;amp; Geräte</th><th>iPhone/Android, Smartwatch, Tracker</th><th>Freigaben, Familiengruppen, Ortung deaktivieren</th></tr>
+<tr><td>Smart Home</td><td>Kameras, Türschloss, Licht, Alarm</td><td>Admins und Codes ändern</td></tr>
+</table></div>
+<div><h3 class="section">Passwort-Hygiene</h3>
+<ul class="list">
+<li>Für wichtige Konten einzigartige Passwörter nutzen.</li>
+<li>Passwortmanager erwägen.</li>
+<li>Sicherheitsfragen nicht mit leicht erratbaren Antworten belassen.</li>
+<li>Wiederherstellungs-E-Mail und Telefonnummer aktualisieren.</li>
+</ul>
+<div><h3 class="section">Digitale Trennung im Alltag</h3>
+<ul class="list">
+<li>Gemeinsame Kalender prüfen und aufteilen.</li>
+<li>Familienfreigaben bei Apple, Google oder Streamingdiensten anpassen.</li>
+<li>Geteilte Fotoalben, Notizen, Dokumente und Einkaufslisten überprüfen.</li>
+<li>Gespeicherte Adressen, Zahlungsmittel und Lieferorte bereinigen.</li>
+</ul>
+<div><h3 class="section">Datenschutz und emotionale Selbstfürsorge</h3>
+<ul class="list">
+<li>Kein Kontrollverhalten über Social Media, Standort oder neue Kontakte.</li>
+<li>Keine heimlichen Logins in fremde Konten.</li>
+<li>Digitale Grenzen sind Teil der Kontaktgrenze.</li>
+<li>Benachrichtigungen reduzieren, wenn sie Trigger auslösen.</li>
+</ul>
+<div><h3 class="section">Warnzeichen für erhöhtes Risiko</h3>
+<ul class="list">
+<li>Unbekannte Login-Hinweise</li>
+<li>Passwort-Änderungen ohne eigene Veranlassung</li>
+<li>Plötzlich gelöschte oder verschobene Dateien</li>
+<li>Unerklärliche Standortfreigaben oder neue Geräte</li>
+<li>Zugriff auf E-Mails, Cloud oder Konten nicht mehr möglich</li>
+</ul>
+<div><h3 class="section">Sofortmaßnahmen bei Unsicherheit</h3>
+<ul class="list">
+<li>Wichtigste Passwörter ändern.</li>
+<li>Alle aktiven Sitzungen beenden.</li>
+<li>Wiederherstellungsdaten aktualisieren.</li>
+<li>Bank und Zahlungsdienste prüfen.</li>
+<li>Falls nötig professionelle Hilfe oder Support kontaktieren.</li>
+</ul>
+<p class="body">Diese Lektion hilft dabei, digitale Zugänge sicher zu trennen und Datenschutzlücken nach der Trennung zu schließen. Behandelt werden Passwörter, Geräte, Standortfreigaben und gemeinsame Konten.</p>
+<div><h2 class="lektion">Lektion 4. Wohn- und Alltagsstruktur neu ordnen Ziel der Lektion</h2>
+<p class="body">Nach einer Trennung fehlt oft nicht nur emotionaler Halt, sondern auch die bisherige Alltagsarchitektur. Räume, Routinen und Zuständigkeiten müssen neu sortiert werden. Eine einfache, stabile Grundstruktur reduziert Überforderung und unterstützt Schlaf, Essen, Arbeit und Erholung.</p>
+<div><h3 class="section">Warum Struktur jetzt wichtiger ist als Motivation</h3>
+<p class="body">In Belastungsphasen funktionieren Menschen oft schlechter über Willenskraft, aber besser über klare Routinen. Kleine, wiederkehrende Abläufe senken Entscheidungsstress und geben dem Tag Form.</p>
+<div><h3 class="section">Wohnraum neu ordnen</h3>
+<ul class="list">
+<li>Akute Trigger im Sichtfeld reduzieren.</li>
+<li>Eine Ecke oder ein Raum als beruhigender Rückzugsort definieren.</li>
+<li>Wichtige Dinge sichtbar und leicht erreichbar platzieren: Schlüssel, Unterlagen, Medikamente, Ladegeräte.</li>
+<li>Offene Baustellen begrenzen: nicht die ganze Wohnung auf einmal umgestalten.</li>
+</ul>
+<div><h3 class="section">Alltagsanker für die ersten Wochen</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Bereich</th><th>Minimalstandard</th></tr>
+<tr><td>Schlaf</td><td>Feste Zubettgeh- und Aufstehzeiten annähern</td></tr>
+<tr><td>Essen</td><td>3 einfache Basismahlzeiten oder verlässliche Snacks planen</td></tr>
+<tr><td>Bewegung</td><td>Täglich kurze Aktivierung, z. B. Spaziergang</td></tr>
+<tr><td>Haushalt</td><td>Nur Kernaufgaben: Wäsche, Müll, Spülmaschine, Oberflächen</td></tr>
+<tr><td>Arbeit</td><td>1–3 Prioritäten pro Tag statt langer Listen</td></tr>
+<tr><td>Erholung</td><td>Bildschirmfreie Ruhefenster oder feste Pausen</td></tr>
+</table></div>
+<div><h3 class="section">Die 3-Zonen-Methode</h3>
+<ul class="list">
+<li>Stabil halten: Bereiche, die funktionieren, nicht unnötig verändern.</li>
+<li>Vereinfachen: Was aktuell zu viel Kraft kostet, reduzieren oder automatisieren.</li>
+<li>Neu aufbauen: Eine neue Routine pro Woche etablieren.</li>
+</ul>
+<div><h3 class="section">Praktische Beispiele</h3>
+<ul class="list">
+<li>Essensplan für 5 Standardgerichte erstellen.</li>
+<li>Abendroutine mit 3 festen Schritten definieren.</li>
+<li>Wochentag für Papierkram und Organisation festlegen.</li>
+<li>Wochenende mit einem sozialen oder erholsamen Fixpunkt versehen.</li>
+</ul>
+<div><h3 class="section">Wenn gemeinsame Räume noch geteilt sind</h3>
+<ul class="list">
+<li>Klare Nutzungszeiten und Zuständigkeiten festlegen.</li>
+<li>Eigene Dinge räumlich trennen.</li>
+<li>Neutrale Funktionssprache nutzen statt Beziehungsdebatten.</li>
+<li>Sicherheitsgefühl priorisieren; bei Anspannung Unterstützung organisieren.</li>
+</ul>
+<div><h3 class="section">Mini-Checkliste für den Neustart</h3>
+<ul class="list">
+<li>Wo schlafe ich verlässlich?</li>
+<li>Was esse ich in den nächsten 3 Tagen?</li>
+<li>Welche 3 Haushaltsaufgaben sind wirklich relevant?</li>
+<li>Welche Räume oder Gegenstände triggern mich akut?</li>
+<li>Welche eine neue Routine gibt mir täglich Halt?</li>
+</ul>
+<p class="body">Die Lektion zeigt, wie nach der Trennung eine einfache Wohn- und Alltagsstruktur aufgebaut wird. Im Mittelpunkt stehen Routinen, Entlastung im Haushalt und praktische Stabilität im Tagesablauf.</p>
+<div><h2 class="lektion">Lektion 5. Finanz- und Behörden-Quickcheck Ziel der Lektion</h2>
+<p class="body">Finanzielle und formale Themen wirken in Trennungsphasen oft bedrohlich, werden aber überschaubarer, sobald sie in eine klare Prüfliste übersetzt werden. Diese Lektion bündelt die wichtigsten Bereiche, die zeitnah kontrolliert werden sollten, um Lücken, Fristen und unnötigen Stress zu vermeiden.</p>
+<div><h3 class="section">Finanz-Quickcheck</h3>
+<ul class="list">
+<li>Eigene Konten und Verfügungsrechte prüfen.</li>
+<li>Gemeinsame Konten, Karten oder Vollmachten erfassen.</li>
+<li>Daueraufträge und Lastschriften überprüfen.</li>
+<li>Fixkosten auflisten: Miete, Strom, Internet, Versicherungen, Abos, Kredite.</li>
+<li>Kurzfristige Liquidität für die nächsten 30 Tage sichern.</li>
+</ul>
+<div><h3 class="section">Behörden- und Vertragsbereiche im Blick</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Bereich</th><th>Zu prüfen</th></tr>
+<tr><td>Meldeadresse</td><td>Ist die aktuelle Anschrift korrekt hinterlegt?</td></tr>
+<tr><td>Versicherungen</td><td>Haftpflicht, Hausrat, Rechtsschutz, Krankenversicherung, Kfz</td></tr>
+<tr><td>Steuern</td><td>Relevante Änderungen dokumentieren, ggf. Beratung einholen</td></tr>
+<tr><td>Arbeitgeber</td><td>Falls nötig neue Adresse, Kontodaten oder Notfallkontakt melden</td></tr>
+<tr><td>Verträge</td><td>Telefon, Internet, Strom, Fitness, Streaming, Mitgliedschaften</td></tr>
+<tr><td>Kinderbezogene Stellen</td><td>Schule, Kita, Betreuung, ggf. Unterlagen und Ansprechpartner</td></tr>
+</table></div>
+<div><h3 class="section">Praktische Reihenfolge</h3>
+<ul class="list">
+<li>Existenzielle Punkte zuerst: Konto, Miete, Versicherungsstatus, Erreichbarkeit.</li>
+<li>Dann laufende Kosten und gemeinsame Verträge.</li>
+<li>Danach Optimierung: Abos kündigen, Tarife anpassen, Zuständigkeiten klären.</li>
+</ul>
+<div><h3 class="section">Dokumenten-Ordnung</h3>
+<ul class="list">
+<li>Eine zentrale Mappe oder einen digitalen Ordner anlegen.</li>
+<li>Wichtige Unterlagen bündeln: Ausweis, Mietvertrag, Lohnabrechnungen, Versicherungen, Bankunterlagen.</li>
+<li>Fristen und Rückmeldungen notieren.</li>
+<li>Telefonate mit Datum, Ansprechpartner und Ergebnis festhalten.</li>
+</ul>
+<div><h3 class="section">Warnsignale</h3>
+<ul class="list">
+<li>Unklare Kontobewegungen</li>
+<li>Rechnungen an alte Adresse</li>
+<li>Gemeinsame Verträge ohne klare Zuständigkeit</li>
+<li>Offene Mahnungen oder Fristdruck</li>
+<li>Versicherungsschutz nicht eindeutig</li>
+</ul>
+<div><h3 class="section">Wenn Überforderung hoch ist</h3>
+<ul class="list">
+<li>Mit einer 20-Minuten-Liste starten statt alles auf einmal.</li>
+<li>Nur drei Punkte pro Sitzung bearbeiten.</li>
+<li>Unterstützung durch Vertrauensperson oder Beratung nutzen.</li>
+<li>Komplexe rechtliche oder steuerliche Fragen nicht improvisieren.</li>
+</ul>
+<p class="body">Diese Lektion liefert einen kompakten Überblick über Finanzen, Verträge und Behörden nach der Trennung. Ziel ist, wichtige Formalitäten schnell zu erfassen und existenzielle Lücken zu vermeiden.</p>
+<div><h2 class="lektion">Lektion 6. Erinnerungen managen: Box, Archiv, digitale Ordnung</h2>
+<p class="body">Ziel der Lektion</p>
+<p class="body">Erinnerungsstücke können trösten, aber in der akuten Phase auch starke emotionale Rückfälle auslösen. Es geht nicht darum, alles wegzuwerfen, sondern klug zu dosieren: Was muss aus dem Sichtfeld, was darf aufbewahrt werden, was kann später entschieden werden?</p>
+<div><h3 class="section">Das Prinzip: nicht verdrängen, sondern dosieren</h3>
+<p class="body">In den ersten 30 Tagen ist emotionale Reizreduktion oft hilfreicher als radikale Entscheidungen. Viele Menschen profitieren davon, Erinnerungen zunächst zu verpacken, zu archivieren oder digital zu sortieren, statt sie täglich vor Augen zu haben.</p>
+<div><h3 class="section">Die 3-Kategorien-Methode</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Kategorie</th><th>Was gehört hinein?</th><th>Empfohlene Aktion</th></tr>
+<tr><td>Akut triggernd</td><td>Fotos im Sichtfeld, Geschenke am Bett, Chatverläufe</td><td>Aus dem Alltag entfernen</td></tr>
+<tr><td>Später entscheiden</td><td>Briefe, gemeinsame Erinnerungsstücke, Urlaubsandenken</td><td>In eine Erinnerungsbox oder Archiv</td></tr>
+<tr><td>Neutral oder nützlich</td><td>Praktische Dinge ohne starke emotionale Ladung</td><td>Im Alltag belassen</td></tr>
+</table></div>
+<div><h3 class="section">Die Erinnerungsbox</h3>
+<ul class="list">
+<li>Eine Box, Mappe oder ein verschlossener Behälter für emotionale Gegenstände.</li>
+<li>Nicht ständig öffnen, sondern mit Abstand erneut prüfen.</li>
+<li>Klare Beschriftung mit Datum hilft, die Entscheidung zu vertagen statt zu vermeiden.</li>
+</ul>
+<div><h3 class="section">Digitale Ordnung</h3>
+<ul class="list">
+<li>Fotos in ein Archiv verschieben statt sofort löschen.</li>
+<li>Chatverläufe stummschalten, exportieren oder aus dem Hauptblick nehmen.</li>
+<li>Gemeinsame Alben, Playlists und Favoriten überprüfen.</li>
+<li>Startbildschirm, Hintergrundbilder und Benachrichtigungen enttriggern.</li>
+</ul>
+<div><h3 class="section">Was oft nicht hilfreich ist</h3>
+<ul class="list">
+<li>Nächtliches Durchsehen alter Nachrichten</li>
+<li>Impulsives Löschen in Hochstress-Momenten</li>
+<li>Dauerhafte Konfrontation mit Fotos und Erinnerungsorten</li>
+<li>Erinnerungsstücke als Anlass für erneuten Kontakt nutzen</li>
+</ul>
+<div><h3 class="section">Ein gesunder Mittelweg</h3>
+<ul class="list">
+<li>Nicht alles wegwerfen müssen.</li>
+<li>Nicht alles sichtbar lassen.</li>
+<li>Entscheidungen verschieben, wenn die emotionale Wucht gerade zu hoch ist.</li>
+<li>Nur so viel Nähe zu Erinnerungen zulassen, wie regulierbar bleibt.</li>
+</ul>
+<div><h3 class="section">Praktische Sofortübung</h3>
+<ul class="list">
+<li>5 akut triggernde Dinge identifizieren.</li>
+<li>Davon 3 heute aus dem Sichtfeld nehmen.</li>
+<li>Einen digitalen Ordner oder eine Box anlegen.</li>
+<li>Benachrichtigungen und visuelle Trigger am Smartphone reduzieren.</li>
+<li>In 2 Wochen erneut nüchtern prüfen.</li>
+</ul>
+<p class="body">Die Lektion zeigt, wie Erinnerungen so geordnet werden, dass sie nicht ständig retraumatisieren. Im Fokus stehen eine Erinnerungsbox, digitale Entlastung und ein dosierter Umgang mit emotional aufgeladenen Dingen.</p>
+<p class="body">Praktische Klarheit senkt emotionalen Druck und verhindert viele Folgekonflikte nach der Trennung.&amp;gt;&amp;lt;li&amp;gt;Nötiger Kontakt funktioniert besser mit kurzen, sachlichen und klar begrenzten Kommunikationsregeln.&amp;lt;/li&amp;gt;</p>
+<p class="body">&amp;lt;li&amp;gt;Übergaben von Besitz, Schlüsseln, Haustieren und Dokumenten sollten geplant, priorisiert und dokumentiert werden.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Digitale Sicherheit ist Teil der Stabilisierung: Passwörter, Freigaben, Geräte und gemeinsame Accounts müssen zeitnah geprüft werden.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Neue Wohn- und Alltagsroutinen geben Halt, auch wenn die emotionale Lage noch instabil ist.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Finanzen, Verträge und Erinnerungsstücke werden leichter handhabbar, wenn sie in konkrete Checklisten und Kategorien überführt werden.&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;</p>
+<ul class="list">
+<li>&amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;Erstelle heute eine Liste aller offenen organisatorischen Punkte: Kontakt, Besitz, Schlüssel, Verträge, Zugänge und Erinnerungsstücke.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Definiere ab sofort einen sachlichen Kommunikationsrahmen für nötigen Kontakt, inklusive Antwortzeiten und Themenbegrenzung.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Ändere innerhalb von 24 Stunden die wichtigsten Passwörter und prüfe Standortfreigaben, Cloud-Zugriffe und Zahlungsdienste.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Plane mindestens eine konkrete Übergabe mit Datum, Ort, Liste und schriftlicher Bestätigung.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Richte eine Basis-Alltagsstruktur für die nächsten 7 Tage ein: Schlaf, Essen, Bewegung, Haushalt und Papierkram.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Führe einen 30-Minuten-Finanz- und Behörden-Quickcheck durch und sammle alle relevanten Unterlagen an einem Ort.&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;Nimm heute drei stark triggernde Erinnerungsstücke oder digitale Auslöser aus dem direkten Sichtfeld.&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;</li>
+</ul>
+<h1 class="modul">Modul 6: Kraftquellen aufbauen (Tag 15–30)</h1>
+<div class="modul-desc"><p>In diesem Modul geht es darum, nach der akuten Krisenphase wieder tragfähige Stabilität aufzubauen. Statt nur durch den Tag zu kommen, entwickeln die Teilnehmenden konkrete Routinen, Unterstützungsstrukturen und kleine Energiequellen, die den Alltag verlässlicher machen. Ziel ist nicht, &quot;wieder ganz die alte Person&quot; zu sein, sondern Schritt für Schritt mehr Halt, Orientierung und Selbstwirksamkeit zurückzugewinnen.</p></div>
+<div><h3 class="section">Lektion Tagesstruktur 2.0: Morgen-, Abend- und SOS-Anker Ziel der Lektion</h3>
+<p class="body">Eine einfache, realistische Tagesstruktur entwickeln, die emotionale Schwankungen abfedert und besonders in belastenden Momenten Orientierung gibt. Der Fokus liegt auf wenigen verlässlichen Ankern statt auf perfekter Disziplin.</p>
+<div><h3 class="section">Kernidee</h3>
+<p class="body">Nach einer Trennung ist die innere Stabilität oft vermindert. Feste äußere Strukturen entlasten das Nervensystem, reduzieren Entscheidungsmüdigkeit und helfen, Rückfälle in Grübeln, Kontaktimpulse oder komplettes Abschalten früher zu erkennen.</p>
+<div><h3 class="section">Bausteine einer Tagesstruktur 2.0</h3>
+<ul class="list">
+<li>Morgenanker: 2–4 wiederkehrende Schritte innerhalb der ersten 30 Minuten nach dem Aufstehen.</li>
+<li>Tagesanker: ein fixer Punkt am Vormittag, Nachmittag und Abend.</li>
+<li>Abendanker: klare Übergänge aus dem Tag heraus, um Anspannung zu senken.</li>
+<li>SOS-Anker: Notfallroutine für starke emotionale Wellen.</li>
+</ul>
+<div><h3 class="section">Praxis: Morgenanker definieren</h3>
+<ul class="list">
+<li>Beispielreihenfolge: aufstehen, Wasser trinken, Vorhänge öffnen, kurz duschen oder Gesicht waschen, 3 tiefe Atemzüge, Handy erst danach.</li>
+<li>Maximal 10–15 Minuten planen, damit die Routine auch an schlechten Tagen machbar bleibt.</li>
+<li>Den Morgen nicht mit Ex-Check, Chatverläufen oder Social-Media-Stalking starten.</li>
+<li>Ein Satz zur Ausrichtung kann helfen: „Heute geht es nur um den nächsten stabilen Schritt.“</li>
+</ul>
+<div><h3 class="section">Praxis: Abendanker definieren</h3>
+<ul class="list">
+<li>30–60 Minuten vor dem Schlafen Reizpegel senken: Licht dimmen, Bildschirmzeit reduzieren, schwere Gespräche vermeiden.</li>
+<li>Mini-Abschluss des Tages: Was war schwer? Was hat trotzdem funktioniert?</li>
+<li>Einfache Vorbereitung für den nächsten Morgen: Kleidung rauslegen, Wasser bereitstellen, erste Aufgabe notieren.</li>
+<li>Ein wiederkehrendes Signal einführen: Tee, Decke, Musik, Atemübung, Lesen.</li>
+</ul>
+<div><h3 class="section">SOS-Anker bei emotionalen Spitzen</h3>
+<p class="body">Eine Notfallabfolge sollte kurz, klar und schriftlich festgehalten sein. In Akutsituationen funktionieren einfache Handlungsschritte besser als komplexe Vorsätze.</p>
+<ul class="list">
+<li>Stopp: Handy weglegen, nicht schreiben, nicht anrufen, keine impulsive Entscheidung.</li>
+<li>Körper regulieren: 60–90 Sekunden bewusst ausatmen, aufstehen, kaltes Wasser an Hände oder Gesicht.</li>
+<li>Orientieren: 5 Dinge sehen, 4 Dinge spüren, 3 Dinge hören.</li>
+<li>Kontakt statt Eskalation: eine definierte Person aus dem Support-Netzwerk informieren.</li>
+<li>Überbrücken: 10-Minuten-Aktivität wählen, z. B. kurzer Gang, Dusche, Müll rausbringen, Tee kochen.</li>
+</ul>
+<div><h3 class="section">Typische Fehler</h3>
+<ul class="list">
+<li>Zu große Pläne machen und sich bei Nichterfüllung zusätzlich verurteilen.</li>
+<li>Jeden Tag komplett neu entscheiden, statt Standards festzulegen.</li>
+<li>Struktur mit Leistung verwechseln.</li>
+<li>SOS-Momente erst dann regeln wollen, wenn man schon mitten in der Überflutung ist.</li>
+</ul>
+<div><h3 class="section">Arbeitsauftrag</h3>
+<ul class="list">
+<li>Je 3 feste Schritte für Morgen- und Abendanker notieren.</li>
+<li>Eine SOS-Karte erstellen: Was tue ich in den ersten 10 Minuten eines starken Triggers?</li>
+<li>Für die nächsten 7 Tage nur auf Umsetzbarkeit achten, nicht auf Perfektion.</li>
+</ul>
+<p class="body">Diese Lektion hilft dabei, mit wenigen festen Morgen-, Abend- und Notfallroutinen wieder Halt im Alltag zu schaffen. Ziel ist eine alltagstaugliche Struktur, die auch an schwierigen Tagen trägt.</p>
+<div><h3 class="section">Lektion Support-Netzwerk aktivieren: 1–3 verlässliche Menschen</h3>
+<p class="body">Ziel der Lektion</p>
+<p class="body">Gezielt ein kleines, tragfähiges Unterstützungsnetz aktivieren, statt sich zwischen Rückzug, Scham und wahllosem Oversharing zu verlieren. Qualität geht vor Anzahl.</p>
+<div><h3 class="section">Warum das wichtig ist</h3>
+<p class="body">Trennungsschmerz verstärkt oft Isolation und verzerrte Gedanken. Verlässliche soziale Unterstützung kann emotionale Entlastung bringen, bei der Realitätsprüfung helfen und in Krisen vor impulsiven Handlungen schützen.</p>
+<div><h3 class="section">Wen auswählen?</h3>
+<ul class="list">
+<li>Verlässlich: reagiert meist zeitnah und respektvoll.</li>
+<li>Ruhig: dramatisiert nicht zusätzlich.</li>
+<li>Grenzachtend: drängt nicht zu Kontakt mit dem oder der Ex.</li>
+<li>Praxistauglich: kann auch bei kleinen Dingen helfen, nicht nur mit Worten.</li>
+</ul>
+<div><h3 class="section">Die 3 Rollen im Support-Netzwerk</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Rolle</th><th>Funktion</th><th>Beispiel</th></tr>
+<tr><td>Emotionaler Anker</td><td>Zuhören, beruhigen, da sein</td><td>Freundin, Bruder, enge Bezugsperson</td></tr>
+<tr><td>Alltagsanker</td><td>Hilft bei Struktur, Essen, Terminen, Spaziergängen</td><td>Nachbar, Kollegin, Familienmitglied</td></tr>
+<tr><td>SOS- Kontakt</td><td>Erreichbar bei akuten Rückfall- oder Kontaktimpulsen</td><td>eine besonders stabile Person</td></tr>
+</table></div>
+<div><h3 class="section">Wie man Unterstützung konkret anfragt</h3>
+<ul class="list">
+<li>Kurze, klare Anfrage statt langer Rechtfertigung.</li>
+<li>Konkrete Bitte formulieren: Zuhören, Spaziergang, tägliche Check-in-Nachricht, Begleitung bei organisatorischen Aufgaben.</li>
+<li>Zeitlich eingrenzen: „Kannst du diese Woche 2-mal 10 Minuten mit mir telefonieren?“</li>
+<li>Rollen klären: Nicht jede Person muss alles leisten.</li>
+</ul>
+<div><h3 class="section">Beispiele für klare Bitten</h3>
+<ul class="list">
+<li>„Ich brauche gerade nicht unbedingt Lösungen, sondern jemanden, der mir 10 Minuten zuhört.“</li>
+<li>„Wenn ich dir schreibe, dass ich rückfällig werden will, erinnere mich bitte an die Kontaktpause.“</li>
+<li>„Können wir morgen zusammen eine Runde laufen oder einkaufen gehen?“</li>
+</ul>
+<div><h3 class="section">Grenzen und Dosierung</h3>
+<ul class="list">
+<li>Nicht jede Emotion muss sofort mit allen geteilt werden.</li>
+<li>Die gleichen Geschichten in Endlosschleife zu erzählen, kann Grübeln verstärken.</li>
+<li>Gespräche dürfen zeitlich begrenzt sein.</li>
+<li>Auch unterstützende Menschen brauchen Klarheit und Erholung.</li>
+</ul>
+<div><h3 class="section">Warnsignale für ungeeignete Unterstützung</h3>
+<ul class="list">
+<li>Die Person macht die Situation größer, schürt Hass oder Hoffnungsspiralen.</li>
+<li>Sie nutzt deine Verletzlichkeit für Neugier, Klatsch oder Einfluss.</li>
+<li>Sie bagatellisiert deine Belastung dauerhaft.</li>
+<li>Nach dem Kontakt fühlst du dich regelmäßig unruhiger statt stabiler.</li>
+</ul>
+<div><h3 class="section">Arbeitsauftrag</h3>
+<ul class="list">
+<li>1–3 Namen notieren und jeweils eine klare Rolle vergeben.</li>
+<li>Eine konkrete Nachricht formulieren und heute versenden.</li>
+<li>Für akute Momente festlegen: Wen kontaktiere ich zuerst, wenn ich die Kontaktpause brechen will?</li>
+</ul>
+<p class="body">Die Lektion zeigt, wie aus dem diffusen Wunsch nach Unterstützung ein kleines, verlässliches Netzwerk wird. Teilnehmende wählen gezielt 1–3 Personen aus und definieren klare Rollen und Bitten.</p>
+<div><h3 class="section">Lektion Selbstberuhiger &amp;amp; Mini-Freuden-Liste</h3>
+<p class="body">Ziel der Lektion</p>
+<p class="body">Eine persönliche Liste mit schnell wirksamen Selbstberuhigern und kleinen positiven Reizen erstellen, die emotionale Wellen abmildern, ohne zu verdrängen oder zu betäuben.</p>
+<div><h3 class="section">Grundprinzip</h3>
+<p class="body">In Belastungsphasen hilft es, dem Nervensystem gezielt Signale von Sicherheit, Vorhersagbarkeit und leichter Entlastung zu geben. Kleine angenehme Erfahrungen lösen nicht die Trennung, können aber Überforderung reduzieren und den Tag stabilisierbarer machen.</p>
+<div><h3 class="section">Was sind Selbstberuhiger?</h3>
+<ul class="list">
+<li>Handlungen, die den Körper herunterregulieren.</li>
+<li>Sensorische Reize, die Sicherheit vermitteln.</li>
+<li>Kleine Routinen, die emotionalen Abstand schaffen.</li>
+<li>Aktivitäten, die weder schaden noch zu Vermeidungsexzessen führen.</li>
+</ul>
+<div><h3 class="section">Beispiele für Selbstberuhiger</h3>
+<ul class="list">
+<li>Warme Dusche oder Wärmflasche</li>
+<li>Langsames Ausatmen, Bodyscan, Dehnübungen</li>
+<li>Eine feste beruhigende Playlist</li>
+<li>Spaziergang ohne Handy oder mit klarer Gehroute</li>
+<li>Etwas mit den Händen tun: schneiden, falten, malen, aufräumen, kneten</li>
+<li>Gewicht und Druck nutzen: Decke, Kissen, eingekuschelt sitzen</li>
+</ul>
+<div><h3 class="section">Mini-Freuden-Liste statt großer Glücksansprüche</h3>
+<p class="body">Nach einer Trennung wirken viele Dinge zunächst leer. Deshalb nicht nach intensiver Freude suchen, sondern nach kleinen Momenten von Erleichterung, Interesse oder angenehmer Neutralität.</p>
+<ul class="list">
+<li>Heißes Getränk am Fenster</li>
+<li>Lieblingsjoghurt, frisches Brot, Obst, einfache Komfortmahlzeit</li>
+<li>5 Minuten Sonne oder frische Luft</li>
+<li>Eine Serie, die nicht triggert</li>
+<li>Saubere Bettwäsche</li>
+<li>Kurzer Besuch im Café, Park oder Buchladen</li>
+<li>Ein Duft, eine Creme, ein Lied, ein Ritual</li>
+</ul>
+<div><h3 class="section">Hilfreiche Auswahlkriterien</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Frage</th><th>Prüfung</th></tr>
+<tr><td>Wirkt es regulierend?</td><td>Danach etwas ruhiger, klarer oder weicher?</td></tr>
+<tr><td>Ist es niedrigschwellig?</td><td>Auch an schlechten Tagen machbar?</td></tr>
+<tr><td>Ist es sicher?</td><td>Keine schädliche Kompensation wie übermäßiger Alkohol, exzessives Shoppen, Stalking?</td></tr>
+<tr><td>Ist es konkret?</td><td>Nicht „mal entspannen“, sondern „10 Minuten baden“.</td></tr>
+</table></div>
+<div><h3 class="section">Was eher nicht hilft</h3>
+<ul class="list">
+<li>Betäubung statt Beruhigung: Alkohol, wahlloses Dating, stundenlanges Scrollen</li>
+<li>Alles auf einen großen Befreiungsmoment zu setzen</li>
+<li>Selbstfürsorge nur dann zu erlauben, wenn man „produktiv genug“ war</li>
+</ul>
+<div><h3 class="section">Arbeitsauftrag</h3>
+<ul class="list">
+<li>Eine Liste mit 10 Selbstberuhigern und 10 Mini-Freuden erstellen.</li>
+<li>Die Liste in drei Kategorien sortieren: 2 Minuten, 10 Minuten, 30 Minuten.</li>
+<li>Für den Rest der Woche täglich bewusst 1 Eintrag nutzen und kurz notieren, was spürbar geholfen hat.</li>
+</ul>
+<p class="body">Teilnehmende bauen sich eine persönliche Notfall- und Entlastungsliste auf, die schnell verfügbar ist. Im Mittelpunkt stehen kleine, sichere und realistisch umsetzbare Wege zur Selbstberuhigung.</p>
+<div><h3 class="section">Lektion Sinn &amp;amp; Werte-Update: Kompass statt Chaos Ziel der Lektion</h3>
+<p class="body">Nach der Desorientierung der Trennung wieder innere Richtung gewinnen. Statt die gesamte Zukunft sofort klären zu müssen, geht es darum, persönliche Werte als Kompass für die nächsten Schritte zu nutzen.</p>
+<div><h3 class="section">Warum Werte jetzt wichtig sind</h3>
+<p class="body">Eine Trennung erschüttert oft Identität, Alltagsbild und Zukunftserwartungen. Werte helfen, Entscheidungen nicht nur aus Schmerz, Angst oder Sehnsucht zu treffen, sondern aus</p>
+<p class="body">dem, was langfristig tragen soll.</p>
+<div><h3 class="section">Werte sind keine Ziele</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Werte</th><th>Ziele</th></tr>
+<tr><td>Beschreiben eine Richtung</td><td>Beschreiben ein Ergebnis</td></tr>
+<tr><td>z. B. Selbstachtung, Ehrlichkeit, Verbundenheit, Gesundheit</td><td>z. B. 3-mal Sport pro Woche, neue Wohnung finden</td></tr>
+<tr><td>Begleiten Entscheidungen dauerhaft</td><td>Können erreicht oder verändert werden</td></tr>
+</table></div>
+<div><h3 class="section">Reflexionsfragen</h3>
+<ul class="list">
+<li>Wie möchte ich in dieser Krise mit mir selbst umgehen?</li>
+<li>Welche Art von Mensch will ich trotz Schmerz sein?</li>
+<li>Was soll in meinem Leben künftig mehr Raum bekommen?</li>
+<li>Welche Muster möchte ich nicht weiterführen?</li>
+</ul>
+<div><h3 class="section">Mögliche Wertefelder</h3>
+<ul class="list">
+<li>Selbstachtung: keine demütigenden Kontakte, klare Grenzen, ehrlicher Blick auf die Realität.</li>
+<li>Fürsorge: Schlaf, Essen, Pausen, ärztliche oder therapeutische Hilfe bei Bedarf.</li>
+<li>Verbundenheit: verlässliche Beziehungen pflegen statt sich zu isolieren.</li>
+<li>Wachstum: aus der Krise lernen, ohne sie romantisieren zu müssen.</li>
+<li>Stabilität: Routinen, finanzielle Ordnung, Wohnsicherheit, Körperpflege.</li>
+</ul>
+<div><h3 class="section">Vom Wert zur Handlung</h3>
+<p class="body">Werte werden erst wirksam, wenn sie in kleine, überprüfbare Handlungen übersetzt werden.</p>
+<ul class="list">
+<li>Wert Selbstachtung → Ich schreibe dem oder der Ex nicht nachts aus Einsamkeit.</li>
+<li>Wert Gesundheit → Ich esse heute zwei einfache Mahlzeiten und trinke genug Wasser.</li>
+<li>Wert Verbundenheit → Ich melde mich bei einer sicheren Person statt mich komplett zurückzuziehen.</li>
+<li>Wert Klarheit → Ich notiere Fakten statt Fantasien über ein mögliches Zurück.</li>
+</ul>
+<div><h3 class="section">Typische Stolperfallen</h3>
+<ul class="list">
+<li>Werte mit Schuld oder moralischer Härte verwechseln.</li>
+<li>Aus Werten neue Perfektionsregeln machen.</li>
+<li>Nur in großen Lebensentscheidungen denken, statt im Alltag anzusetzen.</li>
+</ul>
+<div><h3 class="section">Arbeitsauftrag</h3>
+<ul class="list">
+<li>3–5 Werte auswählen, die für die nächsten 30 Tage leitend sein sollen.</li>
+<li>Zu jedem Wert eine sichtbare Mikro-Handlung formulieren.</li>
+<li>Einen kurzen Kompass-Satz schreiben, z. B. „Ich wähle Klarheit, Selbstachtung und Fürsorge vor Impuls und Panik.“</li>
+</ul>
+<p class="body">Diese Lektion unterstützt dabei, nach der Trennung wieder innere Orientierung zu finden. Werte werden als praktische Entscheidungshilfe genutzt, damit der Alltag nicht nur vom Schmerz gesteuert wird.</p>
+<div><h3 class="section">Lektion Energiepflege: Schlaf vertiefen, Ernährung vereinfachen, Bewegung</h3>
+<p class="body">Ziel der Lektion</p>
+<p class="body">Die körperliche Basis stabilisieren, damit emotionale Belastung besser verarbeitet werden kann. Es geht nicht um Optimierung, sondern um minimale, wirksame Selbstfürsorge in drei Bereichen: Schlaf, Essen, Bewegung.</p>
+<div><h3 class="section">Warum die körperliche Ebene entscheidend ist</h3>
+<p class="body">Trennungsschmerz kann Schlaf, Appetit, Verdauung, Energie und Konzentration deutlich beeinträchtigen. Wenn der Körper dauerhaft unterversorgt oder überreizt ist, werden Grübeln, Reizbarkeit und emotionale Abstürze oft stärker.</p>
+<div><h3 class="section">Schlaf vertiefen</h3>
+<ul class="list">
+<li>Feste Aufstehzeit ist oft wirksamer als perfektes Einschlafen.</li>
+<li>Abends Reize reduzieren: Licht, Bildschirm, Konfliktgespräche, schwere Themen.</li>
+<li>Wenn das Bett zur Grübelzone wird: aufstehen, kurz etwas Ruhiges tun, erst bei Müdigkeit zurück.</li>
+<li>Koffeinmenge und -zeitpunkt prüfen.</li>
+<li>Eine wiederkehrende Einschlafroutine etablieren: warmes Getränk, Lesen, Atemübung, leise Musik.</li>
+</ul>
+<div><h3 class="section">Ernährung vereinfachen</h3>
+<p class="body">In Krisen hilft Vereinfachung mehr als Ideallösungen. Ziel ist regelmäßige, ausreichend nährende Versorgung, auch wenn die Motivation niedrig ist.</p>
+<ul class="list">
+<li>Notfall-Lebensmittel bereitlegen: Suppen, Joghurt, Brot, Haferflocken, Eier, Obst, Nüsse, Tiefkühlgemüse.</li>
+<li>Essen nach Baukastenprinzip: Kohlenhydrat + Protein + etwas Frisches oder Einfaches.</li>
+<li>Mini-Ziel: 2–3 Mahlzeiten oder kleinere Essensfenster statt stundenlang nichts.</li>
+<li>Trinken sichtbar machen: Wasserflasche oder Karaffe bereitstellen.</li>
+<li>Bei Appetitverlust kleine, milde und leicht zugängliche Optionen wählen.</li>
+</ul>
+<div><h3 class="section">Bewegung als Regulation, nicht als Selbstbestrafung</h3>
+<ul class="list">
+<li>Kurze, regelmäßige Bewegung ist oft hilfreicher als seltene Maximalanstrengung.</li>
+<li>Gehen, leichtes Krafttraining, Dehnen, Radfahren oder ruhige Kurse können Anspannung abbauen.</li>
+<li>Bewegung bewusst als Stimmungs- und Energiepflege einordnen, nicht als Flucht vor Gefühlen.</li>
+<li>Schwelle niedrig halten: 10 Minuten zählen.</li>
+</ul>
+<div><h3 class="section">Warnzeichen, die ernst genommen werden sollten</h3>
+<ul class="list">
+<li>Mehrere Nächte kaum Schlaf oder deutlich anhaltende Schlafstörung</li>
+<li>Starker Gewichtsverlust, dauerhaftes Nichtessen oder häufiges Überessen aus Kontrollverlust</li>
+<li>Körperliche Erschöpfung, Paniksymptome oder depressive Verschlechterung</li>
+<li>Gedanken an Selbstverletzung oder Suizid: sofort professionelle Hilfe und Akutunterstützung organisieren</li>
+</ul>
+<div><h3 class="section">Wochencheck</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Bereich</th><th>Minimalziel</th></tr>
+<tr><td>Schlaf</td><td>Feste Aufstehzeit an 5 von 7 Tagen</td></tr>
+<tr><td>Ernährung</td><td>Täglich 2 einfache Mahlzeiten plus ausreichend trinken</td></tr>
+<tr><td>Bewegung</td><td>An 4 Tagen mindestens 10–20 Minuten bewegen</td></tr>
+</table></div>
+<div><h3 class="section">Arbeitsauftrag</h3>
+<ul class="list">
+<li>Je ein Minimalziel für Schlaf, Essen und Bewegung für die nächste Woche festlegen.</li>
+<li>Die Küche und den Abend so vorbereiten, dass die Umsetzung leichter wird.</li>
+<li>Nicht den perfekten Tag bewerten, sondern die Wiederholung kleiner Basics.</li>
+</ul>
+<p class="body">Die Lektion stärkt die körperliche Grundlage in einer emotional belastenden Phase. Mit einfachen Minimalzielen für Schlaf, Ernährung und Bewegung wird Energiepflege konkret und machbar.</p>
+<div><h3 class="section">Lektion Momentum: Micro-Ziele, Wins tracken, Rückblick Ziel der Lektion</h3>
+<p class="body">Fortschritt sichtbar machen, ohne sich zu überfordern. Kleine Ziele, bewusste Erfolgserfassung und ein ehrlicher Rückblick helfen, wieder Bewegung in den Alltag zu bringen.</p>
+<div><h3 class="section">Warum Momentum wichtig ist</h3>
+<p class="body">Nach einer Trennung fühlen sich viele Tage gleich schwer an. Ohne sichtbare Marker entsteht leicht der Eindruck, dass nichts besser wird. Micro-Ziele und ein einfaches Tracking stärken Selbstwirksamkeit und zeigen, dass Stabilisierung oft in kleinen Schritten geschieht.</p>
+<div><h3 class="section">Micro-Ziele richtig setzen</h3>
+<ul class="list">
+<li>Klein genug, um auch an mittelmäßigen Tagen machbar zu sein.</li>
+<li>Konkret statt diffus.</li>
+<li>Verhaltensbezogen statt nur ergebnisorientiert.</li>
+<li>Begrenzt auf den heutigen Tag oder diese Woche.</li>
+</ul>
+<div><h3 class="section">Beispiele für gute Micro-Ziele</h3>
+<ul class="list">
+<li>Heute 10 Minuten spazieren.</li>
+<li>Eine Mahlzeit vorbereiten.</li>
+<li>Kein Profil-Check des oder der Ex bis morgen früh.</li>
+<li>Eine Person kurz kontaktieren.</li>
+<li>Vor dem Schlafen 5 Minuten Tagebuch oder Rückblick.</li>
+</ul>
+<div><h3 class="section">Wins tracken</h3>
+<p class="body">Ein Win ist jeder Schritt, der Stabilität, Klarheit oder Selbstschutz unterstützt. Auch kleine Handlungen zählen.</p>
+<ul class="list">
+<li>Kontaktpause gehalten</li>
+<li>Trotz Traurigkeit aufgestanden</li>
+<li>Gegrübelt bemerkt und unterbrochen</li>
+<li>Etwas gegessen</li>
+<li>Unterstützung eingefordert</li>
+<li>Einen Trigger ohne Eskalation überstanden</li>
+</ul>
+<div><h3 class="section">Einfache Tracking-Methoden</h3>
+<div class="tbl-wrap"><table>
+<tr><th>Methode</th><th>Vorteil</th></tr>
+<tr><td>Hakenliste auf Papier</td><td>Schnell, sichtbar, niedrigschwellig</td></tr>
+<tr><td>Notiz im Handy</td><td>Immer verfügbar</td></tr>
+<tr><td>3-Wins-am- Abend</td><td>Lenkt Aufmerksamkeit auf Fortschritt statt Defizit</td></tr>
+<tr><td>Wochenrückblick</td><td>Erkennt Muster und nächste Hebel</td></tr>
+</table></div>
+<div><h3 class="section">Rückblick ohne Selbstabwertung</h3>
+<ul class="list">
+<li>Was hat diese Woche etwas Stabilität gebracht?</li>
+<li>Wann waren Trigger besonders stark?</li>
+<li>Was hat beim Abfangen geholfen?</li>
+<li>Wo war mein Anspruch unrealistisch?</li>
+<li>Was ist der kleinste sinnvolle nächste Schritt?</li>
+</ul>
+<div><h3 class="section">Wichtige Haltung</h3>
+<p class="body">Rückschritte sind in Trennungsprozessen normal. Entscheidend ist nicht, nie wieder einzubrechen, sondern schneller zu erkennen, was passiert, und früher auf hilfreiche Routinen zurückzugreifen.</p>
+<div><h3 class="section">Arbeitsauftrag</h3>
+<ul class="list">
+<li>3 Micro-Ziele für die nächsten 24 Stunden definieren.</li>
+<li>Ab heute jeden Abend 3 Wins notieren.</li>
+<li>Am Ende der Woche einen 10-Minuten-Rückblick machen und genau eine Sache für die nächste Woche anpassen.</li>
+</ul>
+<p class="body">Die Lektion zeigt, wie aus kleinen umsetzbaren Zielen wieder Bewegung und Selbstwirksamkeit entstehen. Fortschritte werden sichtbar gemacht, ohne Druck durch unrealistische Erwartungen aufzubauen.</p>
+<ul class="list">
+<li>Stabile Tage entstehen nach einer Trennung oft durch wenige verlässliche Anker, nicht durch große Motivationsschübe. Ein kleines, klares Support-Netzwerk ist wirksamer als ungerichtete Hilfe von vielen Seiten.</li>
+</ul>
+<p class="body">Selbstberuhigung und Mini-Freuden sind keine Nebensache, sondern praktische Mittel zur Emotionsregulation. Werte geben Orientierung, wenn Gefühle und Zukunftsbilder chaotisch sind. Schlaf, Ernährung und Bewegung bilden die körperliche Basis für emotionale Stabilisierung.</p>
+<p class="body">Micro-Ziele und sichtbare kleine Erfolge fördern Momentum und Selbstwirksamkeit.</p>
+<p class="body">Lege heute je drei feste Schritte für deinen Morgen- und Abendanker fest und schreibe eine SOS-Routine auf. Kontaktiere innerhalb von 24 Stunden mindestens eine verlässliche Person mit einer klaren, konkreten Bitte.</p>
+<p class="body">Erstelle eine persönliche Liste mit 10 Selbstberuhigern und 10 Mini-Freuden und halte sie griffbereit. Wähle 3–5 Werte für die nächsten 30 Tage und formuliere zu jedem eine kleine Alltagshandlung. Setze dir je ein Minimalziel für Schlaf, Ernährung und Bewegung für die kommende Woche.</p>
+<p class="body">Definiere für morgen drei Micro-Ziele und notiere abends drei Wins.</p>
+<h1 class="modul">Modul 7: Ausblick &amp;amp; Rückfallprävention</h1>
+<div class="modul-desc"><p>Dieses Modul richtet den Blick nach vorn: weg vom reinen Überleben, hin zu Stabilität mit Plan. Nach den ersten 30 Tagen ist die akute Krise oft nicht vorbei, aber viele Menschen sind wieder etwas handlungsfähiger. Genau hier hilft ein klarer Rahmen, um Fortschritte realistisch einzuordnen, Rückfälle früh zu erkennen und die nächsten Wochen bewusst zu gestalten.</p></div>
+<div><h2 class="lektion">Lektion 1. Fortschritt messen: Skalen, Marker, Meilensteine</h2>
+<p class="body">Warum Fortschritt nach einer Trennung oft schwer erkennbar ist</p>
+<p class="body">Fortschritt verläuft selten linear. Viele Betroffene bewerten ihren Zustand nur danach, ob sie sich heute schlecht fühlen. Sinnvoller ist es, mehrere Marker gleichzeitig zu beobachten: Intensität der Gefühle, Dauer von Einbrüchen, Funktionsniveau im Alltag und Umgang mit Triggern.</p>
+<ul class="list">
+<li>Nicht nur Stimmung messen, sondern auch Verhalten und Belastbarkeit.</li>
+<li>Tageswerte nicht überinterpretieren; wichtiger sind Trends über 7 bis 14 Tage.</li>
+<li>Rückschritte als normale Schwankungen einordnen, nicht als Scheitern.</li>
+<li>Fortschritt zeigt sich oft zuerst in kürzeren Krisen, nicht in völliger Schmerzfreiheit.</li>
+</ul>
+<div class="tbl-wrap"><table>
+<tr><th>Bereich</th><th>Frage</th><th>Skala</th></tr>
+<tr><td>Emotionaler Schmerz</td><td>Wie stark war der Trennungsschmerz heute insgesamt?</td><td>0 = kaum spürbar, 10 = überwältigend</td></tr>
+<tr><td>Kontaktdrang</td><td>Wie stark war der Impuls, mich beim Ex-Partner zu melden oder nachzusehen?</td><td>0– 10</td></tr>
+<tr><td>Grübeln</td><td>Wie viel Zeit habe ich heute in Gedankenschleifen verbracht?</td><td>0 = fast gar nicht, 10 = fast ständig</td></tr>
+<tr><td>Schlaf</td><td>Wie erholsam war mein Schlaf?</td><td>0 = sehr schlecht, 10 = erholsam</td></tr>
+<tr><td>Alltagsfunktion</td><td>Wie gut konnte ich notwendige Aufgaben erledigen?</td><td>0 = gar nicht, 10 = gut möglich</td></tr>
+</table></div>
+<div class="tbl-wrap"><table>
+<tr><th>Selbstfürsorge</th><th>Wie gut habe ich gegessen, getrunken, mich bewegt und Pausen gemacht?</th><th>0– 10</th></tr>
+</table></div>
+<ul class="list">
+<li>Du brauchst weniger Zeit, um dich nach Triggern zu beruhigen.</li>
+<li>Du handelst seltener impulsiv.</li>
+<li>Der Ex-Partner steht nicht mehr in jedem freien Moment im Zentrum.</li>
+<li>Du schläfst etwas regelmäßiger oder findest schneller zurück in den Schlaf.</li>
+<li>Du schaffst wieder einfache Routinen: Duschen, Essen, Arbeit, Termine.</li>
+<li>Du verträgst Einsamkeit etwas besser, ohne sofort in Panik oder Kontaktsehnsucht zu kippen.</li>
+<li>Akute Überforderung nimmt minimal ab.</li>
+<li>Kontaktpause wird über mehrere Tage oder Wochen gehalten.</li>
+<li>Trigger werden schneller erkannt.</li>
+<li>Erste kleine Zukunftsgedanken tauchen auf.</li>
+<li>Eigene Bedürfnisse werden wieder klarer.</li>
+<li>Das Leben fühlt sich nicht gut, aber wieder führbar an.</li>
+<li>Du bewertest Fortschritt nur danach, ob du gar nicht mehr an die Person denkst.</li>
+<li>Du setzt dich unter Druck, „endlich drüber hinweg“ sein zu müssen.</li>
+<li>Du verwechselst emotionale Betäubung mit Heilung.</li>
+<li>Du ignorierst Funktionsverluste, weil du äußerlich funktionierst.</li>
+<li>Welche drei Skalen will ich in den nächsten 14 Tagen tracken?</li>
+<li>Welche zwei Marker zeigen mir am ehesten echte Stabilisierung?</li>
+<li>Woran erkenne ich einen schlechten Tag, ohne gleich alles infrage zu stellen?</li>
+</ul>
+<p class="body">Diese Lektion zeigt, wie Fortschritt nach einer Trennung realistisch gemessen wird: nicht nur über Gefühle, sondern auch über Verhalten, Belastbarkeit und Erholung. So werden Trends sichtbar, ohne normale Schwankungen als Rückfall zu missverstehen.</p>
+<div><h2 class="lektion">Lektion 2. Rückfallplan: Kontaktdrang, Triggertage, Feiertage</h2>
+<p class="body">Warum ein Rückfallplan wichtig ist</p>
+<p class="body">Rückfälle entstehen häufig nicht aus Schwäche, sondern aus Überlastung, Einsamkeit, Triggern oder ungeplanten Ausnahmesituationen. Ein guter Plan reduziert impulsives Verhalten, weil Entscheidungen vorab getroffen werden, solange du noch klar denken kannst.</p>
+<ul class="list">
+<li>Abende, Wochenenden und Feiertage</li>
+<li>Geburtstage, Jahrestage, gemeinsame Erinnerungsorte</li>
+<li>Alkohol, Schlafmangel, Erschöpfung</li>
+<li>Konflikte im Job oder in der Familie</li>
+<li>Social-Media-Hinweise, Bilder, neue Informationen über den Ex-Partner</li>
+<li>Einsamkeit nach sozial intensiven Tagen oder nach einem „guten“ Tag mit Absturz danach</li>
+<li>Trigger benennen: Welche Situationen lösen bei dir typischerweise Kontaktdrang oder Stalking-Verhalten aus?</li>
+<li>Frühwarnzeichen erkennen: innere Unruhe, Rechtfertigungs-Gedanken, Fantasien über „nur eine kurze Nachricht“, körperlicher Stress.</li>
+<li>Notfallverhalten festlegen: 20-Minuten-Regel, Handy weglegen, Bewegung, Atemübung, Person anrufen, Notizzettel lesen.</li>
+<li>Hürden einbauen: Nummer archivieren, Apps begrenzen, Social-Media-Zugänge anpassen, Fotos aus dem Schnellzugriff entfernen.</li>
+<li>Nachsorge definieren: Was tust du, wenn du trotzdem rückfällig wirst, ohne in Selbsthass zu geraten?</li>
+</ul>
+<div class="tbl-wrap"><table>
+<tr><th>Phase</th><th>Was tun?</th></tr>
+<tr><td>0– 5 Minuten</td><td>Nicht handeln, kein Tippen, kein Prüfen. Drei tiefe Atemzüge. Drang benennen: „Ich habe gerade einen Impuls, ich muss ihm nicht folgen.“</td></tr>
+<tr><td>5– 20 Minuten</td><td>Handy außer Reichweite, Wasser trinken, kurz gehen, kaltes Wasser ins Gesicht, feste Unterbrechung des Musters.</td></tr>
+<tr><td>20– 40 Minuten</td><td>Trigger notieren: Was hat den Drang ausgelöst? Welche Geschichte erzähle ich mir gerade?</td></tr>
+<tr><td>40– 60 Minuten</td><td>Eine sichere Person kontaktieren oder auf eine vorbereitete Alternativliste zugreifen.</td></tr>
+</table></div>
+<div class="tbl-wrap"><table>
+<tr><th>Danach</th><th>Entscheidung erneut prüfen. Meist sinkt die Intensität des Drangs deutlich.</th></tr>
+</table></div>
+<ul class="list">
+<li>Tag im Voraus strukturieren: Aufstehen, Essen, Bewegung, Kontakt, Abendroutine.</li>
+<li>Leere Zeitfenster minimieren, aber nicht komplett überfrachten.</li>
+<li>Reizquellen reduzieren: Social Media, Alkohol, alte Chats, Musik-Playlists mit hohem Triggerpotenzial.</li>
+<li>Ein Mini-Ziel setzen: „Ich komme ohne Kontaktaufnahme durch diesen Tag.“</li>
+<li>Abends kurze Auswertung: Was hat geholfen, was war riskant?</li>
+</ul>
+<p class="body">Wichtiger als Perfektion ist die Geschwindigkeit der Stabilisierung danach. Ein Rückfall muss nicht zu einer Rückfallspirale werden.</p>
+<ul class="list">
+<li>Kein Drama aus einem einzelnen Verhalten machen.</li>
+<li>Sofort Analyse statt Selbstbeschimpfung.</li>
+<li>Auslöser, Zeitpunkt und innere Rechtfertigung notieren.</li>
+<li>Schutzmaßnahme verschärfen, nicht aufgeben.</li>
+<li>Kontaktpause neu beginnen, ohne symbolische Bestrafung.</li>
+<li>Erstelle eine persönliche Liste mit 5 Triggern.</li>
+<li>Lege 3 Notfallkontakte oder sichere Alternativen fest.</li>
+<li>Schreibe einen Satz für Akutsituationen, z. B.: „Ein Impuls ist kein Auftrag.“</li>
+</ul>
+<p class="body">Hier entwickelst du einen konkreten Rückfallplan für Kontaktdrang, Trigger und emotionale Ausnahmetage. Ziel ist nicht Fehlerfreiheit, sondern schnelles Abfangen von Impulsen, bevor sie zur Spirale werden.</p>
+<div><h2 class="lektion">Lektion 3. Regeln ab Tag 30: Ex-Kontakt, Dating, Social Media Warum Regeln ab Tag 30 sinnvoll sind</h2>
+<p class="body">Nach den ersten 30 Tagen steigt oft die Gefahr, zu früh zu lockern: aus Sehnsucht, Hoffnung oder weil die akute Krise etwas abgeflaut ist. Klare Regeln schützen vor Entscheidungen, die kurzfristig entlasten, langfristig aber neue Wunden aufreißen können.</p>
+<p class="body">Kontakt ist nach einer Trennung nur dann sinnvoll, wenn er einen konkreten, sachlichen Zweck erfüllt und emotional tragbar ist.</p>
+<ul class="list">
+<li>Kontakt nur bei organisatorischer Notwendigkeit: Wohnung, Finanzen, Kinder, Verträge, Gegenstände.</li>
+<li>Keine „Gefühlsklärung“ unter hoher innerer Aktivierung.</li>
+<li>Keine Kontaktaufnahme aus Leere, Alkohol, Einsamkeit oder Testen der Reaktion.</li>
+<li>Vor jeder Nachricht prüfen: Was ist mein Ziel? Gibt es eine Alternative? Bin ich bereit für jede mögliche Antwort?</li>
+<li>Ist der Anlass wirklich notwendig?</li>
+<li>Kann ich die Nachricht kurz, sachlich und ohne Nebenbotschaft formulieren?</li>
+<li>Bin ich emotional stabil genug für Ignorieren, Kälte oder Ambivalenz?</li>
+<li>Habe ich eine Nachsorge, falls mich die Antwort belastet?</li>
+</ul>
+<p class="body">Neues Dating ist nicht grundsätzlich falsch. Problematisch wird es, wenn es der Selbstwertregulation, Betäubung oder Eifersuchterzeugung dient.</p>
+<ul class="list">
+<li>Kein Dating, wenn du innerlich noch stark auf den Ex-Partner reagierst.</li>
+<li>Kein Dating, um Schmerz zu vermeiden oder Bestätigung zu erzwingen.</li>
+<li>Vorsicht bei Rebound-Mustern: schnelle Bindung, starke Idealisierung,</li>
+</ul>
+<p class="body">Vergleich mit dem Ex-Partner.</p>
+<ul class="list">
+<li>Wenn Dating, dann transparent, langsam und mit klarer Selbstbeobachtung</li>
+</ul>
+<div class="tbl-wrap"><table>
+<tr><th>Frage</th><th>Worauf achten?</th></tr>
+<tr><td>Suche ich Verbindung oder Flucht?</td><td>Flucht zeigt sich oft in Druck, Rastlosigkeit und starker Bedürftigkeit.</td></tr>
+<tr><td>Kann ich jemanden sehen, ohne ständig zu vergleichen?</td><td>Wenn nicht, ist meist mehr Verarbeitungszeit nötig.</td></tr>
+<tr><td>Wie gehe ich mit Absagen um?</td><td>Wenn sie dich stark destabilisieren, ist dein System evtl. noch zu offen.</td></tr>
+<tr><td>Bin ich ehrlich über meinen Zustand?</td><td>Selbsttäuschung erhöht das Risiko für neue Verletzungen.</td></tr>
+</table></div>
+<p class="body">Wiederholtes Nachsehen wirkt oft wie kurzfristige Beruhigung, hält aber Bindungsaktivierung und Fantasie aufrecht. Deshalb braucht Social Media klare Leitplanken.</p>
+<ul class="list">
+<li>Entfolgen, stummschalten oder blockieren ist Selbstschutz, keine Unreife.</li>
+<li>Keine indirekte Beobachtung über Freunde oder Zweitaccounts.</li>
+<li>Keine kryptischen Posts als Botschaft an den Ex-Partner.</li>
+<li>Eigene Nutzungszeiten begrenzen, besonders morgens und nachts.</li>
+<li>Ex-Kontakt: nur sachlich, geplant, kurz.</li>
+<li>Dating: nur wenn Neugier und Stabilität überwiegen, nicht Mangel und Panik.</li>
+<li>Social Media: keine Selbstverletzung durch Beobachten.</li>
+</ul>
+<p class="body">Regeln sollten schriftlich festgehalten und 14 Tage getestet werden. Danach anpassen, nicht spontan aufweichen. Gute Regeln reduzieren Komplexität und schützen in schwachen Momenten vor Selbstsabotage.</p>
+<p class="body">Diese Lektion definiert klare Leitplanken für die Zeit nach Tag 30: wann Ex-Kontakt sinnvoll ist, woran du unreifes Dating erkennst und wie Social Media als Trigger begrenzt wird. Der Fokus liegt auf Schutz, Klarheit und emotionaler Stabilität.</p>
+<div><h2 class="lektion">Lektion 4. Dein 4-Wochen-Nachsorgeplan Ziel des Nachsorgeplans</h2>
+<p class="body">Nach der Akutphase braucht es keinen Perfektionsplan, sondern einen tragfähigen Rhythmus. Die nächsten vier Wochen dienen dazu, Stabilität zu festigen, Rückfallmuster zu reduzieren und wieder mehr Selbststeuerung im Alltag zu gewinnen.</p>
+<ul class="list">
+<li>Wenige, wiederholbare Schritte schlagen große Vorsätze.</li>
+<li>Regelmäßigkeit ist wichtiger als Motivation.</li>
+<li>Emotionale Verarbeitung und Alltagsfunktion sollen parallel gestärkt werden.</li>
+<li>Der Plan muss an schlechten Tagen machbar bleiben.</li>
+<li>Tägliche Basisroutine prüfen: Schlafenszeit, Essen, Trinken, Bewegung, Hygiene.</li>
+<li>Skalen für Schmerz, Grübeln und Kontaktdrang 1x täglich erfassen.</li>
+<li>Kontaktpause und Social-Media-Grenzen aktiv sichern.</li>
+<li>Zwei feste soziale Anker im Kalender setzen.</li>
+<li>Eine kurze Abendreflexion: Was war heute schwer, was hat geholfen?</li>
+<li>Wiederkehrende Trigger sammeln: Orte, Zeiten, Gedanken, Inhalte, Personen.</li>
+<li>Zwischen Primärgefühl und Handlung unterscheiden: Schmerz ist nicht gleich Nachricht schreiben.</li>
+<li>Notfallkette bei Drang trainieren, bevor der nächste Trigger kommt.</li>
+<li>Belastende Routinen reduzieren, z. B. nachts scrollen oder alte Chats lesen.</li>
+<li>Eine Aktivität aufnehmen, die nichts mit der Trennung zu tun hat.</li>
+<li>Leichte Leistungsfähigkeit zurückholen: Haushalt, Arbeit, Termine strukturieren.</li>
+<li>Selbstwertquellen außerhalb von Beziehung stärken.</li>
+<li>Üben, über die Trennung begrenzt zu sprechen statt endlos zu kreisen.</li>
+<li>Eigene Regeln für Ex-Kontakt, Dating und Social Media schriftlich finalisieren.</li>
+<li>Rückfallplan für Triggerdaten und emotionale Tiefs überarbeiten.</li>
+<li>Die wichtigsten Fortschrittsmarker der letzten vier Wochen zusammenfassen.</li>
+<li>Nächsten Unterstützungsrahmen festlegen: Freunde, Coaching, Therapie, Gruppenangebote.</li>
+</ul>
+<div class="tbl-wrap"><table>
+<tr><th>Bereich</th><th>Minimalstandard</th></tr>
+<tr><td>Körper</td><td>1x täglich essen, ausreichend trinken, 10–20 Minuten Bewegung</td></tr>
+<tr><td>Geist</td><td>5 Minuten Journaling oder Skalen- Check</td></tr>
+<tr><td>Soziales</td><td>2 verlässliche Kontakte pro Woche</td></tr>
+<tr><td>Ordnung</td><td>1 kleine praktische Aufgabe pro Tag</td></tr>
+<tr><td>Erholung</td><td>Abendroutine ohne Triggerquellen</td></tr>
+</table></div>
+<ul class="list">
+<li>Wenn du dauerhaft überfordert bist, reduziere Umfang statt abzubrechen.</li>
+<li>Wenn du unterfordert bist, ergänze sinnvolle Aktivierung.</li>
+<li>Wenn Symptome stark zunehmen, ziehe zusätzliche Unterstützung in Betracht.</li>
+</ul>
+<p class="body">Welche drei Elemente aus diesem 4-Wochen-Plan sind für dich so realistisch, dass du sie auch an einem schlechten Tag umsetzen kannst?</p>
+<p class="body">In dieser Lektion baust du einen realistischen 4-Wochen-Nachsorgeplan auf. Er verbindet Stabilisierung, Triggerarbeit, Alltagsaufbau und Rückfallprävention in einem Rahmen, der auch an schwierigen Tagen umsetzbar bleibt.</p>
+<div><h2 class="lektion">Lektion 5. FAQ: häufige Stolpersteine und Lösungen Häufige Fragen aus der Praxis</h2>
+<p class="body">wieder bei null?“</p>
+<p class="body">Nein. Verarbeitung verläuft in Wellen. Ein schwerer Tag bedeutet nicht, dass die gesamte Entwicklung verloren ist. Wichtiger ist: Wie schnell stabilisierst du dich, und greifst du auf deine Werkzeuge zurück?</p>
+<p class="body">Das ist oft der Versuch, innere Unruhe durch äußere Klärung zu beruhigen. In vielen Fällen bringt eine zusätzliche Nachricht keine echte Ruhe, sondern neue Aktivierung. Prüfe, ob es um Information geht oder um Hoffnung, Kontrolle oder Bindungssehnsucht.</p>
+<p class="body">Kurzfristig kann Nachsehen Spannungsabbau erzeugen, mittelfristig verstärkt es oft Grübeln, Vergleichen und emotionale Reaktivität. Harmlos ist es vor allem dann nicht, wenn du danach schlechter schläfst, mehr kreist oder erneut Kontakt aufnehmen willst.</p>
+<ul class="list">
+<li>Nicht sofort antworten.</li>
+<li>Nachricht nach Inhalt statt nach Sehnsucht bewerten.</li>
+<li>Prüfen: Ist das organisatorisch, ambivalent oder emotional grenzverletzend?</li>
+<li>Wenn nötig, erst nach Rücksprache mit einer Vertrauensperson reagieren.</li>
+</ul>
+<p class="body">Dating kann Verbindung schaffen, löst aber Einsamkeit nicht zuverlässig, wenn dein Nervensystem noch stark auf die Trennung reagiert. Oft hilft zunächst stabilere soziale Einbettung mehr als romantische Ablenkung.</p>
+<p class="body">Teilweise. Alltagsfunktion ist wichtig, ersetzt aber keine emotionale Verarbeitung. Gute Entwicklung bedeutet beides: etwas mehr äußere Struktur und ein etwas reiferer Umgang mit innerem Schmerz.</p>
+<p class="body">Wenn Schlaf, Essen, Arbeitsfähigkeit, Sicherheit oder psychische Stabilität deutlich beeinträchtigt sind, wenn du dich dauerhaft nicht regulieren kannst oder wenn Verzweiflung stark zunimmt, ist professionelle Unterstützung sinnvoll. Das ist kein Versagen, sondern eine angemessene Form von Selbstschutz.</p>
+<div class="tbl-wrap"><table>
+<tr><th>Stolperstein</th><th>Hilfreiche Lösung</th></tr>
+<tr><td>Ich idealisiere nur noch die Beziehung.</td><td>Bewusst auch belastende Realitäten notieren, nicht nur Verlustfantasien.</td></tr>
+<tr><td>Ich rede den ganzen Tag nur noch darüber.</td><td>Feste Gesprächsfenster einführen und danach aktiv umschalten.</td></tr>
+<tr><td>Ich warte auf eine Nachricht.</td><td>Handy-Routinen verändern, Push-Nachrichten reduzieren, Fokusblöcke schaffen.</td></tr>
+<tr><td>Ich bestrafe mich für Rückfälle.</td><td>Analyse statt Abwertung: Was war der Auslöser, was ändere ich konkret?</td></tr>
+<tr><td>Ich vermeide alles, was erinnert.</td><td>Nur so viel meiden wie nötig; langfristig schrittweise Toleranz aufbauen.</td></tr>
+</table></div>
+<p class="body">Diese FAQ beantwortet typische Fragen und Stolpersteine nach der Akutphase. Sie hilft, normale Wellen von echten Warnsignalen zu unterscheiden und für häufige Probleme konkrete Gegenmaßnahmen bereitzuhalten.</p>
+<div><h2 class="lektion">Lektion 6. Ressourcenliste &amp;amp; Notfallkarte zum Ausdrucken</h2>
+<p class="body">Ziel dieser Lektion</p>
+<p class="body">In belasteten Momenten hilft Einfachheit. Eine kompakte Ressourcenliste und eine Notfallkarte reduzieren kognitive Überforderung und machen hilfreiche Schritte sofort verfügbar.</p>
+<p class="body">Die Liste sollte kurz, sichtbar und realistisch sein. Nicht alles, was theoretisch gut wäre, funktioniert in Akutsituationen.</p>
+<ul class="list">
+<li>Menschen: 2–5 Personen, die erreichbar und emotional sicher sind</li>
+<li>Orte: Plätze, an denen du eher runterkommst als eskalierst</li>
+<li>Aktivitäten: kurze, wirksame Regulationshilfen wie Gehen, Duschen, Atemübung, Musik ohne starke Trigger, Aufräumen, Tee kochen</li>
+<li>Professionelle Unterstützung: Therapeutische Praxis, Beratungsstelle, Hausarzt, Krisendienst je nach Bedarf und Region</li>
+<li>Digitale Hilfen: Timer, Notiz-App, App-Blocker, Kalender-Erinnerungen</li>
+</ul>
+<div class="tbl-wrap"><table>
+<tr><th>Element</th><th>Inhalt</th></tr>
+<tr><td>Warnzeichen</td><td>Woran merke ich, dass ich kippe? z. B. Herzrasen, Zwang zu schreiben, nächtliches Scrollen</td></tr>
+<tr><td>Stopp- Satz</td><td>Ein kurzer Satz, der den Impuls unterbricht</td></tr>
+<tr><td>Erste 3 Schritte</td><td>Handy weg, Wasser trinken, 10 Minuten bewegen</td></tr>
+<tr><td>Kontaktperson</td><td>Name und Nummer einer verlässlichen Person</td></tr>
+<tr><td>Schutzregeln</td><td>Kein Schreiben, kein Checken, kein Alkohol bei Triggerlage</td></tr>
+<tr><td>Erinnerung</td><td>Warum ich die Kontaktpause einhalte und was ich schützen will</td></tr>
+</table></div>
+<ul class="list">
+<li>Wenn ich starken Drang habe: Ich handle 30 Minuten lang nicht.</li>
+<li>Ich tue jetzt: Wasser trinken, 10 Minuten gehen, Handy außer Sicht.</li>
+<li>Ich erinnere mich: Kurzfristige Erleichterung ist nicht dasselbe wie Heilung.</li>
+<li>Ich kontaktiere: [Name], [Nummer]</li>
+<li>Heute vermeide ich: Social Media, alte Chats, Alkohol, einsames Grübeln im Bett.</li>
+</ul>
+<p class="body">Wenn du merkst, dass du dich nicht mehr sicher fühlst oder die Situation akut eskaliert, suche umgehend direkte Unterstützung vor Ort oder über passende Krisenangebote in deiner Region. Eine Notfallkarte ersetzt keine akute Hilfe, sie ergänzt sie.</p>
+<ul class="list">
+<li>Ist meine Notfallkarte auf 1 Seite reduzierbar?</li>
+<li>Habe ich mindestens eine echte Kontaktperson eingetragen?</li>
+<li>Sind meine ersten 3 Schritte konkret und einfach?</li>
+<li>Liegt die Karte an einem Ort, an dem ich sie im Akutfall sehe?</li>
+</ul>
+<p class="body">Diese Lektion bündelt deine wichtigsten Hilfen in einer klaren Ressourcenliste und einer druckbaren Notfallkarte. So hast du in belasteten Momenten sofort einen einfachen, greifbaren Handlungsplan zur Verfügung.</p>
+<ul class="list">
+<li>Fortschritt nach einer Trennung zeigt sich besser über Trends, Verhalten und Belastbarkeit als über einzelne gute oder schlechte Tage. Rückfälle lassen sich durch vorbereitete Pläne, Hürden und klare Notfallroutinen deutlich abfedern. Ab Tag 30 sind schriftliche Regeln für Ex-Kontakt, Dating und Social Media ein wirksamer Schutz vor impulsiven Entscheidungen. Ein 4-Wochen-Nachsorgeplan festigt Stabilität, stärkt Alltagsstruktur und reduziert die Wahrscheinlichkeit von Rückfallspiralen. Kurze, konkrete Ressourcen und eine Notfallkarte sind in Krisen oft hilfreicher als komplexe Vorsätze.</li>
+</ul>
+<p class="body">1. Führe ab heute für 14 Tage drei Skalen: Trennungsschmerz, Kontaktdrang und Alltagsfunktion. Schreibe einen persönlichen Rückfallplan mit Triggern, Frühwarnzeichen und einer festen Notfallkette.</p>
+<p class="body">Lege drei schriftliche Regeln fest: für Ex-Kontakt, Dating und Social Media.</p>
+<p class="body">Plane für die nächsten vier Wochen pro Woche zwei soziale Anker und eine feste Abendreflexion ein. Erstelle eine druckbare Notfallkarte mit Stopp-Satz, ersten drei Schritten und einer Kontaktperson.</p>
+</div></body></html>
