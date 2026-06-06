@@ -18,9 +18,10 @@ Alle aktiven Instagram-Accounts mit Automation, Thema und Zuordnung auf einen Bl
 
 | Account | Scene-2-Keyword | Was passiert bei Kommentar |
 |---|---|---|
-| @business.und.spirit | KLARHEIT | Details zum Standortcheck |
-| @ki_support | KI | Kostenloses KI-Starter-Paket |
+| @business.und.spirit | CHECK | Details zum Standortcheck |
+| @ki_support | START | Kostenloses KI-Starter-Paket |
 | @andi.mit.system | INFO | Details zum TAC 3.0 Workshop |
+| @andi.mentalgesund | KLARHEIT | Details zum Standortcheck / Minikurs |
 
 ---
 
@@ -28,9 +29,10 @@ Alle aktiven Instagram-Accounts mit Automation, Thema und Zuordnung auf einen Bl
 
 | Account | Beworbene Produkte | Keyword |
 |---|---|---|
-| @business.und.spirit | Standortcheck (kostenlos), Instagram Autopilot, Neustart Hauptkurs, Minikurs | KLARHEIT, AUTOPILOT |
-| @ki_support | KI-Starter-Paket (kostenlos), Instagram Autopilot (197 Euro), KI Audio Empire, KI-Prompt-Paket | KI, AUTOPILOT, HÖRBUCH, PROMPTS |
+| @business.und.spirit | Standortcheck (kostenlos), Instagram Autopilot, Neustart Hauptkurs, Minikurs | CHECK, AUTOPILOT |
+| @ki_support | KI-Starter-Paket (kostenlos), Instagram Autopilot (197 Euro), KI Audio Empire, KI-Prompt-Paket | START, AUTOPILOT, HÖRBUCH, PROMPTS |
 | @andi.mit.system | TAC 3.0 Workshop | INFO |
+| @andi.mentalgesund | Standortcheck, Minikurs, Kopf abschalten, Nein aus Überzeugung | KLARHEIT |
 
 ---
 
@@ -49,7 +51,7 @@ Alle aktiven Instagram-Accounts mit Automation, Thema und Zuordnung auf einen Bl
 Alle drei Accounts nutzen dasselbe Prinzip:
 
 - **Scene 1**: Caption-Text bereinigt (keine Emojis, keine Hashtags) plus produktspezifischer Abschluss-Satz mit Keyword
-- **Scene 2**: Fester CTA-Text mit dem Account-Keyword (KLARHEIT / KI / INFO)
+- **Scene 2**: Fester CTA-Text mit dem Account-Keyword (CHECK / KLARHEIT / START / INFO)
 - **Stimme**: Daniel (British, authoritative) via ElevenLabs
 - **Captions**: unten, gelb (#FFFF00), Fade-Übergang, 9:16
 
