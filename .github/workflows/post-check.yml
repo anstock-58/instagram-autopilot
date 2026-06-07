@@ -121,10 +121,11 @@ jobs:
           $nachgetriggert = @($r1,$r2,$r3,$r4) | Where-Object { $_ -eq "nachgetriggert" }
           $fehler         = @($r1,$r2,$r3,$r4) | Where-Object { $_ -eq "fehler" }
 
+          # Nur melden wenn etwas zu tun war oder etwas nicht stimmt — keine Routine-"alles ok"-Meldung (Andi-Vorgabe 07.06.2026)
           if ($nachgetriggert.Count -gt 0) {
             Send-Telegram "⚠️ Post-Check $heute ($postType) — $($nachgetriggert.Count) fehlend, automatisch nachgetriggert."
           } elseif ($fehler.Count -gt 0) {
             Send-Telegram "❌ Post-Check $heute ($postType) — Fehler beim Lesen. Bitte pruefen."
           } else {
-            Send-Telegram "✅ Post-Check $heute ($postType) — alle Accounts ok."
+            Write-Host "Alles ok, keine Telegram-Meldung (Routine-Stille gewuenscht)."
           }
