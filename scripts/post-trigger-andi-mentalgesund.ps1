@@ -243,16 +243,21 @@ try {
 
 $postType = $env:POST_TYPE  # "story" oder "reel" — von GitHub Actions gesetzt, leer bei lokalem Lauf
 
-$heuteRows = $rows | Where-Object {
-    $_.Datum -eq $heute -and $_.Status.Trim() -eq "Geplant" -and $_.Plattform -eq "Instagram" -and
+$heuteRowsAlle = $rows | Where-Object {
+    $_.Datum -eq $heute -and $_.Plattform -eq "Instagram" -and
     (-not $postType -or
      ($postType -eq "story" -and $_.'Post-Typ' -eq "Story") -or
      ($postType -eq "reel"  -and $_.'Post-Typ' -ne "Story" -and $_.'Post-Typ' -ne "Karussell"))
 }
+$heuteRows = $heuteRowsAlle | Where-Object { $_.Status.Trim() -eq "Geplant" }
 
+# Kein Telegram bei "schon gepostet" (Backup-Lauf nach erfolgreichem Hauptlauf) oder "nichts geplant" -- beides ist in Ordnung, Stille gewuenscht (07.06.2026)
 if (-not $heuteRows) {
-    Write-Log "Kein geplanter Instagram-Post fuer heute. Fertig."
-    Send-Telegram "📅 @andi.mentalgesund — kein Post fuer heute geplant ($heute)"
+    if (@($heuteRowsAlle | Where-Object { $_.Status.Trim() -eq "Gepostet" }).Count -gt 0) {
+        Write-Log "Bereits gepostet (frueherer Lauf/Backup-Cron). Stille."
+    } else {
+        Write-Log "Kein geplanter Instagram-Post fuer heute. Fertig."
+    }
     exit 0
 }
 
