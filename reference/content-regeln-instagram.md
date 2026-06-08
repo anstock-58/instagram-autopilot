@@ -28,6 +28,8 @@ Die Hook ist der erste Satz oder Moment eines Posts — sie entscheidet, ob jema
 
 Vor jeder Hook-Formulierung diese vier Punkte gegenchecken. Eine Hook, die eines davon nicht erfüllt, wird überarbeitet, bevor der Post in den Plan kommt.
 
+**Konkrete Hook-Typen, Struktur-Formeln und typische Fehler** stehen in der Hook-Bibliothek unter `context/strategy.md` → Abschnitt "Hook-Bibliothek". Diese vier Kriterien hier sind der Check, dem jede daraus gebaute Hook standhalten muss.
+
 ---
 
 ## Stimme & TTS-Qualität

@@ -24,6 +24,26 @@ Zielgruppe: Primär **Personen ab 50 Jahren**, besonders Männer, Unternehmer, S
 
 Satz eins trifft hart. Satz zwei verschärft den Schmerz. Satz drei dreht die Sichtweise. Satz vier öffnet die Schleife.
 
+### Hook-Bibliothek (Kurzformate, z. B. Reels/Shorts)
+
+Ein Hook muss sofort in der ersten bis dritten Sekunde funktionieren, sonst ist der Zuschauer weg.
+
+Die vier verbindlichen Prüfkriterien, an denen jede so gebaute Hook gemessen wird (Scroll stoppen, neugierig machen, richtige Person ansprechen, zur Energie des Beitrags passen), stehen in `reference/content-regeln-instagram.md` → Abschnitt "Hook-Kriterien".
+
+**Hook-Typen:**
+1. Provokation, zum Beispiel "Das ist der größte Fehler, den du auf Instagram machst, wenn du Follower gewinnen willst"
+2. Versprechen, zum Beispiel "So gewinnst du immer wieder neue Kunden"
+3. Identifikation, POV-Format mit konkreter Alltagssituation der Zielgruppe, zum Beispiel "POV: dein Hund hat schon wieder Durchfall, obwohl du ihm seit drei Wochen Reis und Karotten fütterst"
+
+**Hook-Struktur-Formel:**
+- Zahl, Fehler, Konsequenz, zum Beispiel "3 Fehler, die zu deinem Problem führen"
+
+**Hook-Fehler, was vermeiden:**
+- Zu langsam, Spannung geht verloren
+- Füllwörter, jedes Wort muss sitzen
+- Übertriebenes oder leeres Versprechen, das nicht eingelöst wird
+- Zu lang, Hook muss kurz und knackig bleiben
+
 ### Thumbnail-Regeln
 
 - Text immer separat in Canva einfügen, nie in die Bildbeschreibung integrieren
@@ -32,6 +52,41 @@ Satz eins trifft hart. Satz zwei verschärft den Schmerz. Satz drei dreht die Si
 - Fokus auf „den Anderen" statt direkte Selbstansprache (deutsche Zuschauer reagieren stärker darauf)
 - Bevorzugte Trigger-Richtung: „Alarm-Zeichen"
 - Keine durchgehende Personenkontinuität — jede Szene steht für sich
+
+### CTR-Problem und Maßnahmen (Stand Juni 2026)
+
+Klickrate liegt bei rund 1 Prozent — deutlich zu niedrig, obwohl die Impressions von YouTube nicht schlecht sind. Das Problem sitzt also beim Thumbnail/Titel, nicht bei der Reichweite.
+
+**Neuer Thumbnail-Stil (Testbeispiele in `outputs/youtube-produktion/thumbnail-test/`):**
+- Großer, zweizeiliger Text: erste Zeile weiß, zweite Zeile gelb, beide fett und blockig
+- Beispiel-Formel: „DIESEN EINEN FEHLER" (weiß) / „MACHEN FAST ALLE" (gelb)
+- Emotional aufgeladene, fotorealistische Alltagsszenen (z. B. ältere Frau wacht glücklich auf, Mann liegt nachts wach und grübelt)
+- Stärkerer Kontrast und unmittelbarere emotionale Wirkung als der bisherige, eher zurückhaltende Stil
+
+**Schnellere Bildfolge in den Videos:**
+- Erste Hälfte des Videos: Bildwechsel etwa alle 7 bis 8 Sekunden (mehr Bewegung, mehr Reize zu Beginn)
+- Zweite Hälfte: ruhiger, etwa alle 15 Sekunden
+- Ziel: Zuschauer länger halten und die Klickrate über schnellere, dynamischere erste Minuten verbessern
+- Kostenfaktor (mehr generierte Bilder) ist hier zweitrangig — Qualität der Zahlen hat Vorrang
+
+### Erfolgsmuster Topvideo „Der Tod ist nicht das Ende. Das Leben als Zeit-Gefängnis verstehen" (2ucxrOFipoQ)
+
+- Ruhige Landschafts-Kurzszenen kombiniert mit melancholischer Hintergrundmusik — der Zuschauer kann sich „fallen lassen" und wird emotional in die Stimmung mitgenommen
+- Inhalt bleibt das Fundament, aber die Bilder erzeugen den eigentlichen Sog (die „Entführung" in die Stimmung), der zum Verweilen einlädt
+- Lief erfolgreich, obwohl der KI-Sprecher (kein ElevenLabs) einiges seltsam ausspricht — bei diesem ruhigen, melancholischen Format zählt die Bild-/Musik-Atmosphäre offenbar mehr als perfekte Sprecherqualität
+- Ableitung: für ähnliche kontemplative Themen gezielt auf immersive Landschaftsmotive und melancholische Musik setzen, Sprecherqualität ist hier nachrangig
+- Zielgruppe (50+) mag besonders Berge, Gewässer und Wälder — bei Bildmotiven für kontemplative Videos bevorzugt auf diese Landschaftstypen setzen
+
+**Variante: Landschafts-Stockclips statt KI-Bilder (Pixabay/Pexels, kostenlos)**
+
+Idee: für kontemplative Videos echte Landschafts-Videoclips von Pixabay/Pexels statt KI-generierter Bilder verwenden — kostenlos, oft hochwertiger, spart fal.ai-Kosten. Wichtig: pro Video bei einem thematischen Cluster bleiben, damit es wie ein durchgehender Film wirkt (z. B. Wald → Gebirgsbach → Bergsee, nicht abrupt zwischen Schnee/Strand/Wald springen). Drohnen-/Luftaufnahmen sorgen für Bewegung und wirken hochwertiger als Standbilder.
+
+Such-Keyword-Sets:
+
+- *Wald & Berge (Rückzug, Ruhe, Einkehr)*: forest aerial drone, misty forest morning, mountain river drone, alpine lake aerial, waterfall forest, mountain peaks clouds timelapse, pine forest fog
+- *Wasser & Bewegung (Fluss des Lebens, Loslassen)*: river flowing aerial, ocean waves drone, lake reflection sunrise, coastline aerial flight, stream forest slow motion, beach waves slow motion
+- *Weite & Aufbruch (Perspektive, Veränderung)*: landscape drone flight, valley aerial view, open field sunrise, hiking trail mountain, road through mountains aerial
+- *Jahreszeiten* (passend zur Tonalität wählen): Sommer — summer meadow golden hour, lake summer aerial, forest sunlight summer; Herbst — autumn forest aerial, fall foliage drone, misty autumn morning; Winter — snowy mountains drone, winter forest fog, frozen lake aerial; Frühling — spring meadow flowers, blossom forest aerial, green valley spring
 
 ### InnerCode Style Bible
 
