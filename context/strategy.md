@@ -24,11 +24,18 @@ Zielgruppe: Primär **Personen ab 50 Jahren**, besonders Männer, Unternehmer, S
 
 Satz eins trifft hart. Satz zwei verschärft den Schmerz. Satz drei dreht die Sichtweise. Satz vier öffnet die Schleife.
 
+### Hook-Prinzip — gilt plattformübergreifend für jeden Beitrag
+
+Eine starke Hook ist nicht nur für Instagram-Kurzformate wichtig, sondern für **jeden Beitrag auf jeder Plattform** — YouTube-Longform genauso wie Reels, Shorts, Stories. Überall entscheidet der Anfang, ob jemand bleibt oder abspringt. Diese Grundregel zieht sich durch alles, was hier produziert wird:
+
+- **Instagram (Reels, Stories, Posts)**: vier verbindliche Prüfkriterien in `reference/content-regeln-instagram.md` → Abschnitt "Hook-Kriterien", konkrete Hook-Typen und Formeln in der Hook-Bibliothek direkt unten
+- **YouTube (InnerCode, Bewusst Einfach)**: eigene Hook-Prüfung und kanalspezifische Hook-Muster in `reference/yt-regelwerk.md` (Abschnitt 3) und `context/youtube-qualitaet.md` (Hook-Formel)
+
+Der gemeinsame Kern überall: in den ersten Sekunden den Scroll oder Klick stoppen, neugierig machen, die richtige Person treffen und zum restlichen Ton passen — die Umsetzung unterscheidet sich je nach Format und Kanal, das Prinzip dahinter nicht.
+
 ### Hook-Bibliothek (Kurzformate, z. B. Reels/Shorts)
 
 Ein Hook muss sofort in der ersten bis dritten Sekunde funktionieren, sonst ist der Zuschauer weg.
-
-Die vier verbindlichen Prüfkriterien, an denen jede so gebaute Hook gemessen wird (Scroll stoppen, neugierig machen, richtige Person ansprechen, zur Energie des Beitrags passen), stehen in `reference/content-regeln-instagram.md` → Abschnitt "Hook-Kriterien".
 
 **Hook-Typen:**
 1. Provokation, zum Beispiel "Das ist der größte Fehler, den du auf Instagram machst, wenn du Follower gewinnen willst"
