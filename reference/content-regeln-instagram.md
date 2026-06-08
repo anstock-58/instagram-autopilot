@@ -17,6 +17,19 @@ Gilt für jeden Reel, jede Story und jeden Untertitel. Ohne Ausnahme.
 
 ---
 
+## Hook-Kriterien (verbindlich für ALLE Beiträge)
+
+Die Hook ist der erste Satz oder Moment eines Posts — sie entscheidet, ob jemand weiterschaut oder weiterscrollt. Jede Hook in jedem Reel, jeder Story und jedem Untertitel muss diese vier Kriterien erfüllen:
+
+1. **Stoppt den Scroll** — der erste Satz oder Moment muss den Daumen bremsen.
+2. **Macht neugierig / verspricht Konkretes** — nicht vage andeuten, sondern klar zeigen, was gleich kommt.
+3. **Spricht direkt die richtige Person an** — die Zielgruppe muss sich sofort gemeint fühlen (Du-Ansprache, kein "man").
+4. **Passt zur Energie des restlichen Beitrags** — kein Bruch zwischen reißerischem Hook und ruhigem Hauptteil oder umgekehrt.
+
+Vor jeder Hook-Formulierung diese vier Punkte gegenchecken. Eine Hook, die eines davon nicht erfüllt, wird überarbeitet, bevor der Post in den Plan kommt.
+
+---
+
 ## Stimme & TTS-Qualität
 
 ### Homographen vermeiden
