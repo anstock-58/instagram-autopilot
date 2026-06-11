@@ -19,16 +19,44 @@ Gilt für jeden Reel, jede Story und jeden Untertitel. Ohne Ausnahme.
 
 ## Hook-Kriterien (verbindlich für ALLE Beiträge)
 
-Die Hook ist der erste Satz oder Moment eines Posts — sie entscheidet, ob jemand weiterschaut oder weiterscrollt. Jede Hook in jedem Reel, jeder Story und jedem Untertitel muss diese vier Kriterien erfüllen:
+Die Hook ist der erste Satz oder Moment eines Posts — sie entscheidet, ob jemand weiterschaut oder weiterscrollt. Jede Hook in jedem Reel, jeder Story und jedem Untertitel muss diese fünf Kriterien erfüllen:
 
 1. **Stoppt den Scroll** — der erste Satz oder Moment muss den Daumen bremsen.
 2. **Macht neugierig / verspricht Konkretes** — nicht vage andeuten, sondern klar zeigen, was gleich kommt.
 3. **Spricht direkt die richtige Person an** — die Zielgruppe muss sich sofort gemeint fühlen (Du-Ansprache, kein "man").
 4. **Passt zur Energie des restlichen Beitrags** — kein Bruch zwischen reißerischem Hook und ruhigem Hauptteil oder umgekehrt.
+5. **Macht Ist und Soll klar** — die Hook oder die ersten zwei Sätze zeigen sowohl die aktuelle Situation bzw. das Problem des Betrachters (Ist) als auch wohin es gehen soll (Soll). Eine reine Aufzählung von Produktmerkmalen (Module, Preis, Laufzeit) reicht nicht, wenn nicht klar wird, wo der Betrachter gerade steht und wo er landet.
 
-Vor jeder Hook-Formulierung diese vier Punkte gegenchecken. Eine Hook, die eines davon nicht erfüllt, wird überarbeitet, bevor der Post in den Plan kommt.
+Vor jeder Hook-Formulierung diese fünf Punkte gegenchecken. Eine Hook, die eines davon nicht erfüllt, wird überarbeitet, bevor der Post in den Plan kommt.
 
 **Konkrete Hook-Typen, Struktur-Formeln und typische Fehler** stehen in der Hook-Bibliothek unter `context/strategy.md` → Abschnitt "Hook-Bibliothek". Diese vier Kriterien hier sind der Check, dem jede daraus gebaute Hook standhalten muss.
+
+---
+
+## CTA-Produkt-Konsistenz und Rotation (verbindlich)
+
+Hinter jedem Post steckt ein Produkt (Link-Spalte im Contentplan), das beim Schreiben des Keywords verschickt wird. Vor jedem Post diese zwei Punkte checken:
+
+### 1. Text und Link müssen zusammenpassen
+
+Was im Text versprochen wird, muss exakt das sein, was hinter dem Link steckt. Zeigt der Link auf einen bezahlten Kurs, darf der Text nicht „kostenlos" oder „Standortcheck" sagen, sondern kündigt den Kurs an, zum Beispiel „ich schick dir alle Details zum Kurs". Zeigt der Link auf den kostenlosen Standortcheck, darf der Text nicht von einem Kurs oder Modulen sprechen.
+
+### 2. Produkt-Rotation nach Thema
+
+Nicht über viele Tage am Stück dasselbe Produkt bewerben, auch wenn das CTA-Keyword gleich bleibt (zum Beispiel KLARHEIT bei mentalgesund). Welches Produkt hinter dem Link steckt, richtet sich nach dem Thema des jeweiligen Posts, siehe Themen-Zuordnung in `context/produkt-links.md`:
+
+- Erschöpfung, Funktionsmodus, Dauerdruck → Standortcheck oder Minikurs „Raus aus dem Funktionsmodus"
+- Kopf abschalten, Grübeln, Schlaf → Minikurs „Wenn dein Kopf nicht mehr abschaltet"
+- Grenzen setzen, Nein sagen, Selbstverlust → Minikurs „Nein aus Überzeugung"
+- Neustart, Veränderung, neues Leben ab 50 → Kurs „Neustart im Kopf"
+
+Faustregel: maximal drei bis vier Tage hintereinander dasselbe Produkt, danach wechseln.
+
+### Kanal-spezifisch
+
+**@business.und.spirit**: Der Standortcheck ist der Haupt-Funnel-Einstieg und steht im Fokus. Die Brücke vom Inhalt zum CTA folgt dem Muster: Problem benennen, dann zeigen „du bist gerade nicht da, wo du sein willst", das als Orientierungsfrage einordnen, dann „genau dafür gibt es den Standortcheck" als CTA. Sobald ein Post auf einen bezahlten Kurs verlinkt, wird die Brücke entsprechend angepasst (siehe Punkt 1).
+
+**@andi.mentalgesund**: Das CTA-Keyword bleibt KLARHEIT, aber das Produkt dahinter (Link-Spalte) wechselt je nach Thema des Posts gemäß obiger Zuordnung, damit nicht wochenlang nur der Standortcheck verschickt wird.
 
 ---
 
