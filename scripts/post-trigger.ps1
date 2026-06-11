@@ -251,49 +251,60 @@ foreach ($row in $heuteRows) {
 
     Write-Log "Post faellig: $typ | $uhrzeit"
 
-    $imageSource = $row.Videoprompt.Trim()
-    $textOverlay = $row.'Text-Overlay'.Trim()
-    $caption     = $row.Text
+    $caption = $row.Text
 
-    # Fallback: wenn kein Videoprompt, Bild-URL direkt nutzen
-    if (-not $imageSource -or $imageSource -eq "") {
-        $imageSource = $row.'Bild-URL'.Trim()
+    if ($typ -eq "Foto") {
+        # Echtes Foto: kein AI-Video, Bild-URL direkt als statischer Feed-Post
+        $mediaUrl = $row.'Bild-URL'.Trim()
+        if (-not $mediaUrl -or $mediaUrl -eq "") {
+            Write-Log "FEHLER: Keine Bild-URL fuer Foto-Post vorhanden. Post uebersprungen."
+            continue
+        }
+        Write-Log "Foto-Post: verwende echtes Bild $mediaUrl"
+    } else {
+        $imageSource = $row.Videoprompt.Trim()
+        $textOverlay = $row.'Text-Overlay'.Trim()
+
+        # Fallback: wenn kein Videoprompt, Bild-URL direkt nutzen
+        if (-not $imageSource -or $imageSource -eq "") {
+            $imageSource = $row.'Bild-URL'.Trim()
+        }
+
+        if (-not $imageSource -or $imageSource -eq "") {
+            Write-Log "FEHLER: Weder Videoprompt noch Bild-URL vorhanden. Post uebersprungen."
+            continue
+        }
+
+        # AI-Video mit Voiceover erstellen
+        $videoResponse = Create-AIVideo -imagePrompt $imageSource -voiceScript $textOverlay -typ $typ
+        if (-not $videoResponse) {
+            Write-Log "AI-Video-Erstellung fehlgeschlagen. Post uebersprungen."
+            continue
+        }
+
+        # Video-URL aus Response extrahieren (wartet auf async Rendering)
+        $mediaUrl = Wait-ForVideoUrl -response $videoResponse
+        if (-not $mediaUrl) {
+            Write-Log "Keine Video-URL in Response."
+            Write-Log "Post uebersprungen."
+            continue
+        }
+
+        Write-Log "Video-URL: $mediaUrl"
     }
-
-    if (-not $imageSource -or $imageSource -eq "") {
-        Write-Log "FEHLER: Weder Videoprompt noch Bild-URL vorhanden. Post uebersprungen."
-        continue
-    }
-
-    # AI-Video mit Voiceover erstellen
-    $videoResponse = Create-AIVideo -imagePrompt $imageSource -voiceScript $textOverlay -typ $typ
-    if (-not $videoResponse) {
-        Write-Log "AI-Video-Erstellung fehlgeschlagen. Post uebersprungen."
-        continue
-    }
-
-    # Video-URL aus Response extrahieren (wartet auf async Rendering)
-    $videoUrl = Wait-ForVideoUrl -response $videoResponse
-    if (-not $videoUrl) {
-        Write-Log "Keine Video-URL in Response. Volle Response: $($slideshowResponse | ConvertTo-Json -Depth 5)"
-        Write-Log "Post uebersprungen."
-        continue
-    }
-
-    Write-Log "Video-URL: $videoUrl"
 
     # targetType bestimmen
     $targetType = if ($typ -eq "Story") { "instagramStory" } else { "instagram" }
 
     # Auf Instagram posten
-    $erfolg = Post-Instagram -caption $caption -mediaUrl $videoUrl -targetType $targetType
+    $erfolg = Post-Instagram -caption $caption -mediaUrl $mediaUrl -targetType $targetType
 
     if ($erfolg) {
         # Archiv
         if (-not (Test-Path $archivPath)) {
             "Zeitstempel,Datum,Uhrzeit,Post-Typ,Plattform,Media-URL,Caption" | Out-File -FilePath $archivPath -Encoding UTF8
         }
-        $archivZeile = "`"$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')`",`"$heute`",`"$uhrzeit`",`"$typ`",`"Instagram`",`"$videoUrl`",`"$($caption -replace '"','""')`""
+        $archivZeile = "`"$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')`",`"$heute`",`"$uhrzeit`",`"$typ`",`"Instagram`",`"$mediaUrl`",`"$($caption -replace '"','""')`""
         $archivZeile | Out-File -FilePath $archivPath -Append -Encoding UTF8
 
         # Status setzen
