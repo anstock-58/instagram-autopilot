@@ -60,6 +60,33 @@ Faustregel: maximal drei bis vier Tage hintereinander dasselbe Produkt, danach w
 
 ---
 
+## Karussell-Framework (acht Slides)
+
+Sobald Karussell-Posts eingeplant werden (aktuell technisch bereit für @business.und.spirit, siehe `context/instagram-accounts.md`), nach diesem Schema aufbauen:
+
+1. **Slide eins**: Hook, provokante Aussage oder Frage
+2. **Slides zwei und drei**: Problem vertiefen
+3. **Slides vier und fünf**: Lösung beziehungsweise Transformation zeigen
+4. **Slides sechs und sieben**: Social Proof, Beweis
+5. **Slide acht**: Produkt als nächster Schritt plus CTA
+
+---
+
+## Posten, Analysieren, Optimieren, Auswerten
+
+Wiederkehrender Check, nicht nur einmalige Erstellung. Nach jedem Post (oder gebündelt, zum Beispiel wöchentlich) folgende Fragen brutal ehrlich beantworten:
+
+1. **Hook**: Ist sie gut rübergekommen, oder hätte man im ersten Moment schon weitergescrollt?
+2. **Tempo**: Zu viel um den heißen Brei, oder hätte man es kürzer fassen können?
+3. **Energie**: Hat die Energie zum Inhalt gepasst?
+4. **CTA**: Hat der CTA zum Inhalt gepasst (siehe Abschnitt CTA-Produkt-Konsistenz und Rotation)?
+5. **Interaktion**: Kommentare, DMs, Speicherungen, Shares im Vergleich zu ähnlichen Posts?
+6. **Übersprungen-Rate**: Liegt sie unter fünfzig Prozent?
+
+Optimieren heißt nicht zwingend ein neues Thema, sondern oft denselben Inhalt mit anderem Hook, anderem Visual oder anderem CTA noch einmal versuchen. Danach wieder von vorne: posten, analysieren, optimieren, auswerten.
+
+---
+
 ## Stimme & TTS-Qualität
 
 ### Homographen vermeiden

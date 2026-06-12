@@ -46,6 +46,14 @@ Alle aktiven Instagram-Accounts mit Automation, Thema und Zuordnung auf einen Bl
 
 ---
 
+## Karussell-Status
+
+`post-trigger-business-und-spirit.ps1` hat eine fertige `Post-Instagram-Karussell`-Funktion, die die Spalte `Karussell-Slides` (kommagetrennte Bild-URLs) ausliest und als Karussell postet. Technisch einsatzbereit, aber aktuell stehen keine Karussell-Posts im Plan (Stand 12.06.2026). Vorschlag: ab Juli alle drei bis vier Tage einen Karussell-Post nach dem Acht-Slide-Schema einplanen (siehe `reference/content-regeln-instagram.md`).
+
+Bei den anderen drei Accounts (@ki_support, @andi.mit.system, @andi.mentalgesund) ist Karussell in den jeweiligen Skripten noch nicht implementiert.
+
+---
+
 ## Voiceover-Logik
 
 Alle drei Accounts nutzen dasselbe Prinzip:

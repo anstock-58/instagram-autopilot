@@ -162,8 +162,10 @@ Andi gibt mir den Auftrag → ich trage die neue Zeile ins CSV ein → Automatio
 
 **CSV-Spalten** (Reihenfolge): Datum, Uhrzeit, Plattform, Post-Typ, Text, Link, Bild-URL, Bildprompt, Videoprompt, Text-Overlay, Karussell-Slides, Status
 
-**Unterstützte Post-Typen**: Reel (Kling AI Video), Foto (Flux AI Bild)
-**Noch nicht implementiert**: Karussell, Facebook
+**Hinweis (Stand 12.06.2026)**: Diese Architektur mit `post-trigger.ps1`, Make.com und dem Windows Task `NeustartImKopf_PostTrigger` ist der ursprüngliche Aufbau und läuft nicht mehr automatisch, `autopilot-reel.yml`/`autopilot-story.yml` sind nur noch manuell auslösbar. Die aktuell aktive Automation pro Account steht in `context/instagram-accounts.md` (Skripte `post-trigger-*.ps1`, GitHub Actions Workflows).
+
+**Unterstützte Post-Typen** (aktuelle Skripte): Reel (Kling AI Video), Foto (Direktbild aus Bild-URL, kein AI-Rendering, spart Credits), Karussell (für @business.und.spirit implementiert, aktuell keine Karussell-Posts im Plan)
+**Noch nicht implementiert**: Karussell für @ki_support, @andi.mit.system, @andi.mentalgesund; Facebook
 
 ### API-Zugangsdaten
 
