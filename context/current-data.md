@@ -6,17 +6,19 @@
 
 | Projekt | Status | Nächster Schritt |
 | --- | --- | --- |
-| KDP Buch „Das Seil loslassen" | eBook live ✅ / Taschenbuch in Prüfung ⏳ (08.06.2026) | eBook live unter amazon.de/dp/B0GZMZDK5Q (4,99€, KDP Select aktiv) — Taschenbuch-Cover hatte Größenfehler (KDP erwartete 12.444x9.250 Zoll, eingereicht war 11.656x8.750 Zoll) — behoben mit `outputs/buch-02/fix-cover.js` (PDF auf exakte Maße skaliert, gespeichert als `Softcover_Seil_Loslassen-KDP-fixed.pdf`) — neu eingereicht, Preis bereits auf 11,99€ — wartet auf Freigabe (bis zu 72 Std.), E-Mail folgt — danach: Autorenexemplar bestellen |
+| Fable 5 Gratis-Fenster | ⏳ bis 22.06.2026 | Stärkstes Modell (eine Stufe über Opus), normal doppelter Tokenpreis ($10/$50 vs Opus $5/$25). Bis 22.06. kostenlos nutzbar — gezielt für anspruchsvolle Recherche, komplexe Planung und Content-Erstellung einsetzen. AB 23.06. wieder auf Opus zurück, sonst frisst es das Budget. Genaue Aktionsbedingungen im App-Hinweis prüfen |
+| KDP Buch „Das Seil loslassen" | eBook live ✅ / Taschenbuch live ✅ (09.06.2026) | eBook: amazon.de/dp/B0GZMZDK5Q (4,99€, KDP Select aktiv) — Taschenbuch: amazon.de/dp/B0H4PSGZLV (11,99€) — Cover-Größenfehler behoben mit `outputs/buch-02/fix-cover.js` — Amazon Ads Kampagne "Seil loslassen - Auto - DE" läuft (1€/Tag, automatisches Targeting, Standardgebot 0,30€, dynamische Gebote nur senken) — danach: Autorenexemplar bestellen |
 | ALFIMA Kurs "Nein aus Überzeugung" | Live ✅ | 37€ — Cross-sell Kopfklar 7€ — Upsell Kopf abschaltet 27€ — Link: https://sicher-weiterlesen.com/nein-aus-überzeugung — Lektionsbilder lokal bereit zum Hochladen — Promotion: @andi.mentalgesund — Account noch nicht in Blotato, in separater Session einrichten + Contentplan mit Kurs-Posts anlegen |
 | ALFIMA Kurs "Wenn dein Kopf nicht mehr abschaltet" | Bilder fertig ✅ | 30 Lektionsbilder + 6 Modul-Cover lokal generiert — manuell in ALFIMA hochladen |
 | YouTube Autopilot System | Fertig ✅ (24.05.2026) | Vollständiger Käufer-Workspace unter `outputs/youtube-autopilot-system/` — 7 Skills, anonymisiertes Script, Setup-Anleitung — bereit für ALFIMA-Listing zu 297€ |
-| YouTube InnerCode (@innercode.projekt) | Laufend | Vollautomatische Pipeline aktiv — alle 3 Tage neues Video — nächstes: "Erinnerung" (28.05.) in InProduktion |
+| YouTube InnerCode (@innercode.projekt) | Laufend | Vollautomatische Pipeline aktiv — alle 3 Tage neues Video — 12.06.2026: drei nie veröffentlichte Videos entdeckt und live gestellt: „Du stirbst gerade" (sofort öffentlich), „Nie gelernt Schwäche zu zeigen" (A/B-Test, geplant 15.06. 17:00), „Selbstvertrauen IC-39" (geplant 18.06. 17:00, Thumbnail-Text per FFmpeg ergänzt: SICH SELBST / NIE VERTRAUEN) — Lehre: Producer lädt unlisted hoch, Veröffentlichung MUSS als fester Schritt in die Checkliste |
 | TODO InnerCode Musik-Rotation | Offen ⏳ (08.06.2026) | `$MusikPool["InnerCode"]` im Producer-Skript hat bisher nur 1 Pixabay-Track — noch 3-4 weitere lizenzfreie Alternativen heraussuchen und ergänzen (analog zu Bewusst Einfach mit 4 Tracks) — selbstständig in einer ruhigen Session erledigen, ohne dass Andi daran erinnern muss |
 | YouTube BusinessUndSpirit (@business.und.spirit) | NEU LIVE ✅ (24.05.2026) | Erstes Video "30 Jahre aufgebaut" produziert — Zielgruppe: Unternehmer/Führungskräfte 50+, Funktionsmodus-Thema — Google OAuth konfiguriert — in Pipeline integriert |
-| YouTube Bewusst Einfach | **FOKUS-KANAL** ✅ | OAuth Token NEU 30.05.2026: siehe context/secrets.md (Refresh Token Bewusst Einfach) — Stimme: 2OcnG4mH3jIMtWz3vKus — Musik NEU: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\Musik\zen-garden-standard.mp3 (Zen Garden, wird geloopt) — Blotato: 36987 — Thema: Gesundheit+Langlebigkeit, Zielgruppe 65+ mehrheitlich WEIBLICH — Ton: warm+hoffnungsvoll+spirituell-leicht (Sunny Buddha), NICHT Alarm — CTR-Framework: context/ctr-framework.md |
+| YouTube Bewusst Einfach | **FOKUS-KANAL** ✅ | OAuth Token NEU 11.06.2026: siehe context/secrets.md (Refresh Token Bewusst Einfach) — Stimme: 2OcnG4mH3jIMtWz3vKus — Musik NEU: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\Musik\zen-garden-standard.mp3 (Zen Garden, wird geloopt) — Blotato: 36987 — Thema: Gesundheit+Langlebigkeit, Zielgruppe 65+ mehrheitlich WEIBLICH — Ton: warm+hoffnungsvoll+spirituell-leicht (Sunny Buddha), NICHT Alarm — CTR-Framework: context/ctr-framework.md |
 | Produkt-Links Videobeschreibungen | Eingerichtet ✅ | Regeln in context/produkt-links.md — max 2-3 Links pro Video — thematisch passend — Standortcheck nur Unternehmer 50+ |
-| ElevenLabs Plan | Creator ✅ | 121.000 Credits/Monat — erneuert am 17. Juni 2026 |
+| ElevenLabs Plan | Creator ✅ | 122.482 Credits/Monat — erneuert am 24. Juni 2026 — Stand 12.06.: noch ~20.000 Credits übrig (reicht für ca. 2 Videos), bei Engpass auf Erneuerung warten |
 | Instagram Autopilot System | Live ✅ | Architektur: CSV → GitHub Actions → post-trigger-ACCOUNT.ps1 → Blotato /v2/videos/from-templates → AI Video mit Voiceover → Instagram — Template: ai-story-video (5903fe43) — 2 Scenes: Hauptbotschaft + CTA — **Stimmen** (06.06.2026): Charlie (Australian) für business.und.spirit + andi.mentalgesund, Daniel (British, authoritative) für ki_support + andi.mit.system — Captions unten, gelb — cron-job.org triggert 07:55 UTC (Story) + 15:55 UTC (Reel) |
+| Meta-Ausfall 12.06.2026 abends | Bekannt ⚠️ | Alle 4 Reel/Foto-Posts (18:00 Lauf, b&s/ki_support/andi.mit.system/andi.mentalgesund) von Blotato angenommen, aber Instagram-Veröffentlichung schlug fehl (Blotato-Banner: Meta-weite Störung bei Instagram/Facebook-Publishing, alle Drittanbieter betroffen) — Telegram-Bot meldete fälschlich "gepostet", Contentplan-Status der 4 Posts vom 12.06. 18:00 auf "Geplant" zurückgesetzt — offen: Retry über Blotato Failed-Posts-Dashboard (my.blotato.com/failed) sobald Störung behoben, Status danach wieder auf "Gepostet" setzen — mögliche Folge-Aufgabe: Post-Instagram Erfolgsprüfung in den Skripten verbessern (aktuell gilt jeder HTTP-200 von Blotato als Erfolg, unabhängig vom tatsächlichen Instagram-Status) |
 | Persönliche Trust-Posts @business.und.spirit | Eingerichtet ✅ (11.06.2026) | Neuer Post-Typ "Foto" in post-trigger.ps1: postet echtes Bild/Video direkt als Instagram-Feed-Post (kein AI-Video, kein Blotato-Render) — 5 persönliche Geschichten-Posts (12./15./17./19./21.06.) mit echten Fotos aus outputs/fotos-andi/ eingebaut — Andi will hier künftig eher echte Videos von sich machen statt Fotos (mehr Vertrauen) — technisch keine Änderung nötig, mediaUrl kann genauso auf eine Videodatei zeigen, sobald Aufnahmen vorliegen |
 | @business.und.spirit Autopilot | Live ✅ | Blotato ID 46248 — contentplan_business_und_spirit_juni_v2.csv (60 Posts, 01.06.–30.06.2026) — Stimme: Charlie — Emojis: max 2-3 pro Post (dezent/professionell) — Captions 08.06.2026 überarbeitet: alle 49 geplanten Posts haben jetzt eine Brücke zwischen Problem und Standortcheck-CTA (Hook → Brücke → CTA statt CTA als Fremdkörper), zusätzlich 3 Kurs-Promo-Stories korrigiert die fälschlich den Standortcheck statt den Kurs bewarben — 11.06.2026 erneut korrigiert: 6 weitere Posts (23./25./29./30.06., teils Story+Reel) verlinkten bereits auf den Kurs „Neustart im Kopf", versprachen im Text aber noch den kostenlosen Standortcheck, jetzt auf Kurs-Wortlaut angepasst |
 | @ki_support Autopilot | Live ✅ | Blotato ID 46341 — contentplan_ki_support_juni_v2.csv am 06.06.2026 neu gebaut (50 saubere Zeilen 06.–30.06., voll-zitiert, Phantomzeilen entfernt, 23.06 Reel repariert, Gedankenstriche raus) — Backup-Schedule-Zeiten aktiv — Stimme: Daniel (British) — Emojis: 4-6 pro Post — 11.06.2026: Produkt „KI Audio Empire" pausiert (kein brauchbarer Vendor-Link, war aber das meistangefragte Produkt → Interessenten vorerst vertrösten), alle 11 betroffenen Tage (10./13./15./16./17./21./22./24./26./27./29.06., je Story+Reel bzw. 17.06 nur Reel = 21 Posts) inhaltlich neu auf Instagram Autopilot (6 Tage) und KI-Prompt-Paket (5 Tage) umgestellt, jeweils mit klarem Tool-Bezug im Text statt vagem „KI Audio"-Sprech |
@@ -42,27 +44,30 @@
 
 ## Geplante YouTube-Videos
 
+> **Pipeline umgebaut 12.06.2026 nach Daten-Diagnose** (siehe strategy.md): Nur noch Identifikations-/Schicksalsthemen — „das bin ich" oder „der Andere"-Staunen. Erklärthemen umformuliert oder gestrichen.
+
 ### Kanal: Bewusst Einfach
 
-| Titel | Status |
-| --- | --- |
-| Respektlosigkeit ist ein Spiegel | Skript vorhanden |
-| Warum 95% der Menschen kein Selbstvertrauen haben | 45 Abschnitte zu langen Sprechertexten umschreiben |
-| Japans ältester Arzt: Vergiss das nicht — Gehirn ab 60 | In Planung |
-| Sechs stille Anzeichen, dass du außergewöhnlich gesund alterst | In Planung (Thumbnail: 10 Sekunden auf einem Bein stehen) |
-| Sechs Früchte gegen Diabetes (Video 16) | Skript mit 46 Tonspuren vorhanden |
-| Du nennst es Liebe … aber es ist nur Angst, allein zu sein | In Planung, Osho-Perspektive ohne Namensnennung |
-| Ich wurde geboren — aber niemand hat mich gefragt! | Max. 50 Tonspuren, früher CTA |
-| Dein mentales Schutzschild (nach Lebensphilosophie) | In Planung |
-| Die ANDEREN leben — und DU funktionierst nur | Eigenständiges neues Video, altes nicht weiterführen |
+| Titel (NEU nach Erfolgsmuster) | Vorher | Status |
+| --- | --- | --- |
+| Menschen, die dich respektlos behandeln, zeigen dir damit etwas über sich | Respektlosigkeit ist ein Spiegel | Skript vorhanden — Titel/Hook anpassen |
+| Menschen ohne Selbstvertrauen erkennt man an diesen stillen Gewohnheiten | Warum 95% kein Selbstvertrauen haben | 45 Abschnitte umschreiben |
+| Japans ältester Arzt vergaß bis 105 fast nichts. Sein Gehirn-Geheimnis. | Japans ältester Arzt: Gehirn ab 60 | In Planung — Vorgänger lief gut (178 Views) |
+| Sechs stille Anzeichen, dass du außergewöhnlich gesund alterst | unverändert — passt ins Muster | In Planung (Thumbnail: 10 Sek. auf einem Bein) |
+| Menschen, die nie Diabetes bekommen, essen diese sechs Früchte | Sechs Früchte gegen Diabetes | Eintrag war veraltet: Original „Diese 6 Früchte könnten dein Leben retten" läuft seit 08/2025 auf dem Kanal (97 Views, 14 Likes) — Remake mit neuem Titel später sinnvoll, kein fertiges unveröffentlichtes Skript vorhanden |
+| Japans ältester Arzt warnte: Diese 3 Gewohnheiten zerstören dein Gedächtnis nach 60. | NEU 12.06. — erstes Video nach Erfolgsmuster + Wettbewerbs-Formel (Vergleichsvideos: 91k-822k Views) | ✅ PRODUZIERT + QC BESTANDEN (Voll-Transkript geprüft, Audio sauber, Thumbnail nach weiß-gelber Formel) — Veröffentlichung geplant 12.06. 17:00 — youtube.com/watch?v=3TfFhcO_cxE — 8:13 Min — Performance nach 48-72h prüfen als Test der neuen Titelformel |
+| Du nennst es Liebe. Aber es ist nur Angst, allein zu sein. | unverändert — passt ins Muster | In Planung |
+| GESTRICHEN (Erklärthema ohne Identifikation) | Ich wurde geboren — niemand hat mich gefragt | gestrichen 12.06. |
+| GESTRICHEN (abstrakt, kein „das bin ich") | Dein mentales Schutzschild | gestrichen 12.06. |
+| Die ANDEREN leben — und DU funktionierst nur | unverändert — Kernmuster des Kanals | Eigenständiges neues Video |
 
 ### Kanal: InnerCode
 
-| Titel | Status |
-| --- | --- |
-| Alter macht nicht weise. Warum Erfahrung allein nichts bewirkt. | Skript fertig (ic-36-skript.txt), im CSV als Offen — produzieren |
-| Selbstsabotage & Ego | Ca. 10 bis 12 Min., viraler Stil, tiefgründig und humorvoll |
-| Videoreihe zu „Das weise Herz" | Chronologisch, aufmerksamkeitsstarke Titel und Thumbnails |
+| Titel (NEU nach Erfolgsmuster) | Vorher | Status |
+| --- | --- | --- |
+| Menschen, die im Alter verbittern statt weise zu werden. Der Unterschied. | Alter macht nicht weise | Skript fertig (ic-36) — Titel/Hook anpassen |
+| Menschen, die sich immer selbst sabotieren, tragen alle dasselbe Muster | Selbstsabotage & Ego | In Planung |
+| Videoreihe „Das weise Herz" — jede Folge als Menschen-/Schicksalsgeschichte aufziehen | unverändert als Reihe | In Planung |
 
 ### Kanal: Business & Spirit (bis 29.06.2026)
 
