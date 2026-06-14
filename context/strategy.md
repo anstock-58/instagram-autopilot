@@ -147,5 +147,19 @@ Hashtags: #KI #ContentCreator #Zeitsparen (oder gewünschte Variante)
 
 - Beide YouTube-Kanäle monetarisiert und regelmäßig bespielt
 - Konstanter Strom qualifizierter Leads für Dropservice ohne hohe Streuverluste
+
+---
+
+## Content-Ideen-Sammlung (gesammelt, noch nicht verplant)
+
+### @andi.mentalgesund, Thema "Nein aus Überzeugung" (14.06.2026)
+
+Hook-Idee (Annahme brechen, "nett sein" versus "erschöpft sein"):
+
+„Wenn du immer Ja sagst, bist du nicht nett. Du bist erschöpft.
+
+Nein aus Überzeugung ist lernbar. Ohne schlechtes Gewissen."
+
+Erfüllt Hook-Kriterium fünf (Ist und Soll), passt zum Minikurs „Nein aus Überzeugung" und zum KLARHEIT CTA bei mentalgesund. Für künftigen Contentplan (Juli) als Hook für einen Grenzen-Setzen-Tag vormerken.
 - Digistore-Produkt läuft als passives Einkommensmodell
 - InnerCode als eigenständige Marke etabliert (KI-Assistent + Videokurs)
