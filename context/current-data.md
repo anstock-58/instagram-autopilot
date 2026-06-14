@@ -24,7 +24,7 @@
 | @ki_support Autopilot | Live ✅ | Blotato ID 46341 — contentplan_ki_support_juni_v2.csv am 06.06.2026 neu gebaut (50 saubere Zeilen 06.–30.06., voll-zitiert, Phantomzeilen entfernt, 23.06 Reel repariert, Gedankenstriche raus) — Backup-Schedule-Zeiten aktiv — Stimme: Daniel (British) — Emojis: 4-6 pro Post — 11.06.2026: Produkt „KI Audio Empire" pausiert (kein brauchbarer Vendor-Link, war aber das meistangefragte Produkt → Interessenten vorerst vertrösten), alle 11 betroffenen Tage (10./13./15./16./17./21./22./24./26./27./29.06., je Story+Reel bzw. 17.06 nur Reel = 21 Posts) inhaltlich neu auf Instagram Autopilot (6 Tage) und KI-Prompt-Paket (5 Tage) umgestellt, jeweils mit klarem Tool-Bezug im Text statt vagem „KI Audio"-Sprech |
 | Hook-Kriterium Ist+Soll | Umgesetzt ✅ (11.06.2026) | Neues 5. Kriterium in reference/content-regeln-instagram.md: jede Hook muss sowohl Ist-Zustand (Problem/Situation des Betrachters) als auch Soll-Zustand (Ergebnis/Richtung) erkennbar machen, sonst Scroll-Risiko — 4 reine Feature-Listen-Hooks korrigiert (business.und.spirit 22./24./27.06., andi.mentalgesund 27.06.) — ki_support: 4 Posts (11./19./23./30.06., teils Story+Reel) korrigiert, die vage „KI-Tools"-Liste/Review/Setup versprachen statt dem tatsächlich verlinkten KI-Prompt-Paket, jetzt durchgängig „Tool vs. Prompt"-Framing mit passendem CTA |
 | @andi.mit.system Autopilot | Live ✅ | Blotato ID 46471 — contentplan_andi_mit_system_juni_v2.csv — Stimme: Daniel (British) — Emojis: 4-6 pro Post — ACHTUNG: Reels liefen seit 20.05. nicht (Export-Csv \r-Bug, behoben 25.05.2026) — 11.06.2026: 21 Textfehler bereinigt (doppelte Wörter wie „der Der Workshop"/„Workshop Workshop", kaputte Hashtags „#Der Workshop" → „#Workshop", verwirrende „Der Workshop 3.0"-Nennungen, stichworthafte Standalone-Sätze „Der Workshop. Kostenlos." zu vollständigen Sätzen umformuliert) |
-| @andi.mentalgesund Autopilot | Live ✅ | Blotato ID aus Secret MENTALGESUND_ACCOUNT_ID — contentplan_andi_mentalgesund_juni_v2.csv — Stimme: Charlie (Australian) — Emojis: 4-6 pro Post — CTA-Wording 08.06.2026 überarbeitet: „Wenn das bei dir gerade passt, schreib KLARHEIT" wirkte nach Aussagen über Erschöpfung/Überlastung unpassend zu beiläufig, jetzt 5 natürliche Varianten („Wenn das bei dir auch so ist…", „Geht's dir manchmal genauso?", „Kommt dir das bekannt vor?", „Erkennst du dich darin wieder?", „Klingt das nach dir?") rotierend in allen 60 Posts (bereits gepostete Texte im CSV ebenfalls aktualisiert als Vorlage für künftige Posts, Live-Stand bleibt unverändert) — 11.06.2026: Produkt-Rotation korrigiert, 01.–14.06. waren 14 Tage am Stück nur Standortcheck, 11.06. (Ruhe-Thema) jetzt auf Minikurs „Kopf abschaltet" und 13.06. (Grenzen-Thema) auf „Nein aus Überzeugung" verlinkt, ab 15.06. war ohnehin schon gut gemischt |
+| @andi.mentalgesund Autopilot | Live ✅ | Blotato ID aus Secret MENTALGESUND_ACCOUNT_ID — contentplan_andi_mentalgesund_juni_v2.csv — Stimme: Charlie (Australian) — Emojis: 4-6 pro Post — CTA-Wording 08.06.2026 überarbeitet: „Wenn das bei dir gerade passt, schreib KLARHEIT" wirkte nach Aussagen über Erschöpfung/Überlastung unpassend zu beiläufig, jetzt 5 natürliche Varianten („Wenn das bei dir auch so ist…", „Geht's dir manchmal genauso?", „Kommt dir das bekannt vor?", „Erkennst du dich darin wieder?", „Klingt das nach dir?") rotierend in allen 60 Posts (bereits gepostete Texte im CSV ebenfalls aktualisiert als Vorlage für künftige Posts, Live-Stand bleibt unverändert) — 11.06.2026: Produkt-Rotation korrigiert, 01.–14.06. waren 14 Tage am Stück nur Standortcheck, 11.06. (Ruhe-Thema) jetzt auf Minikurs „Kopf abschaltet" und 13.06. (Grenzen-Thema) auf „Nein aus Überzeugung" verlinkt, ab 15.06. war ohnehin schon gut gemischt — 14.06.2026: zusätzlich den hartcodierten Scene-2-CTA im Skript (post-trigger-andi-mentalgesund.ps1, war bisher bei jedem Post wortgleich „Wenn das bei dir gerade passt, schreib KLARHEIT. Ich schick dir den kostenlosen Standortcheck direkt zu.") durch eine link-abhängige Auswahl mit je zwei Varianten pro Produkt (Standortcheck, Kopf-abschalten-Minikurs, Nein-aus-Überzeugung-Minikurs, Raus-starten-Minikurs, Neustart-Kurs) ersetzt — Floskel „Wenn das bei dir gerade passt" entfernt, CTA passt jetzt zum jeweiligen Tagesthema |
 | Instagram Autopilot — Produkt | Live ✅ | Salespage + Komplettanleitung auf Single-Path umgestellt (nur Blotato 29$, kein Make.com+Creatomate mehr) — ALFIMA Willkommensmail aktiviert ✅ — ALFIMA Produktbeschreibung manuell eingetragen — Idee: als Videokurs ausbauen (5 Module, 247-297 EUR), nach aktuellen Projekten angehen |
 | ALFIMA Funnel „Neustart im Kopf" | Live ✅ | Freebie-Landingpage fertig, Traffic läuft |
 | Smart Profit KI Business (Sales Angels) | Aktiver Schwerpunkt | Digistore-Produkt bewerben |
@@ -50,7 +50,7 @@
 
 | Titel (NEU nach Erfolgsmuster) | Vorher | Status |
 | --- | --- | --- |
-| Menschen, die dich respektlos behandeln, zeigen dir damit etwas über sich | Respektlosigkeit ist ein Spiegel | Skript vorhanden — Titel/Hook anpassen |
+| Menschen, die dich respektlos behandeln, zeigen dir damit etwas über sich | Respektlosigkeit ist ein Spiegel | ✅ Skript fertig (be18-skript-respektlosigkeit.txt) — komplett neu geschrieben mit Identifikations-Hook, Projektions-Konzept, 3 Muster + Gegenstrategie, ~1500 Woerter, Thumbnail bewusst anderer Stil (hell, Frau, kein Schwarz). Noch nicht produziert. |
 | Menschen ohne Selbstvertrauen erkennt man an diesen stillen Gewohnheiten | Warum 95% kein Selbstvertrauen haben | 45 Abschnitte umschreiben |
 | Japans ältester Arzt vergaß bis 105 fast nichts. Sein Gehirn-Geheimnis. | Japans ältester Arzt: Gehirn ab 60 | In Planung — Vorgänger lief gut (178 Views) |
 | Sechs stille Anzeichen, dass du außergewöhnlich gesund alterst | unverändert — passt ins Muster | In Planung (Thumbnail: 10 Sek. auf einem Bein) |
@@ -65,7 +65,7 @@
 
 | Titel (NEU nach Erfolgsmuster) | Vorher | Status |
 | --- | --- | --- |
-| Menschen, die im Alter verbittern statt weise zu werden. Der Unterschied. | Alter macht nicht weise | Skript fertig (ic-36) — Titel/Hook anpassen |
+| Menschen, die im Alter verbittern statt weise zu werden. Der Unterschied. | Alter macht nicht weise | ✅ Skript fertig (ic40-skript-verbittern-statt-weise.txt) — Identifikations-Hook neu geschrieben, ~1450 Woerter, Thumbnail-Brief + Kapitel enthalten. Noch nicht produziert (kein ElevenLabs-Verbrauch). |
 | Menschen, die sich immer selbst sabotieren, tragen alle dasselbe Muster | Selbstsabotage & Ego | In Planung |
 | Videoreihe „Das weise Herz" — jede Folge als Menschen-/Schicksalsgeschichte aufziehen | unverändert als Reihe | In Planung |
 
@@ -119,3 +119,27 @@ Vollständige Regeln: `reference/content-regeln-instagram.md`
 
 Editorial-Zeitungsillustrations-Stil. Immer derselbe Avatar: mittelalter bis älterer europäischer Mann, graues oder salt-and-pepper-Haar, kurzer grauer Bart, leicht müdes Gesicht, ruhiger und ernster Ausdruck.
 
+
+---
+
+## Notiz für Skript-Vorratsproduktion (Sonntag 14.06.2026)
+
+Wettbewerbsfund @SilberneWeisheit (14.06.2026): Karikatur-/Illustrations-Thumbnails statt
+Foto-Stil, Thema "Männer über 60" + Einsamkeit/Beziehungen, Ausreißer-Views (über 17.000
+und über 20.000 bei sonst niedrigen Zahlen). Relevant für InnerCode-Themen "Verbittern statt
+weise" und männliche Einsamkeit im Alter:
+- Titel direkter/konfrontativer formulieren, nach Muster "Warum Männer über 60 plötzlich..."
+- Karikatur-Thumbnail-Stil als mögliche Alternative testen (nur nach Absprache mit Andi,
+  größerer Eingriff in Bildgenerierungs-Workflow)
+
+## Zwischenstand Japan-Arzt-Video (14.06.2026, 1.5 Tage nach Veroeffentlichung)
+
+3TfFhcO_cxE: 226 Views, 11 Likes, 0 Kommentare, CTR 6 Prozent, ueber 3.000 Impressionen.
+Liegt damit nach nur anderthalb Tagen schon auf Hoehe der bisherigen Top-Performer des
+Kanals (Bestwert bisher 270 Views ueber gesamte Laufzeit). Tages-Analytics noch nicht
+verarbeitet (1-2 Tage Verzoegerung), naechster Check in 2-3 Tagen sinnvoll.
+
+Erkenntnis fuer Sonntags-Stockpiling: Muster "bekannter Fall/Person + konkrete Zahl +
+Gesundheits-Tabuthema" (z.B. "Japans aeltester Arzt, 105 Jahre, 3 Gewohnheiten") funktioniert
+zusaetzlich zur reinen Identifikations-Schiene ("Menschen, die..."). Beide Linien parallel
+weiterfuehren bei der Themenauswahl.
