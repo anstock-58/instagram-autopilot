@@ -311,7 +311,36 @@ foreach ($row in $heuteRows) {
     $voiceoverBase = $voiceoverBase -replace '#\S+', ''
     $voiceoverBase = $voiceoverBase.Trim()
 
-    $ctaScript = "Wenn das bei dir gerade passt, schreib KLARHEIT. Ich schick dir den kostenlosen Standortcheck direkt zu."
+    # CTA passend zum Link der jeweiligen Zeile waehlen, mit Varianten gegen Wiederholung
+    $ctaVarianten = @{
+        "standortcheck"          = @(
+            "Schreib KLARHEIT, dann schick ich dir den kostenlosen Standortcheck."
+            "Wenn du da tiefer reinschauen willst, schreib KLARHEIT. Du bekommst den kostenlosen Standortcheck."
+        )
+        "kopf-schaltet-nicht-ab"  = @(
+            "Es gibt einen Minikurs genau dafuer. Schreib KLARHEIT, dann schick ich ihn dir."
+            "Schreib KLARHEIT, dann zeig ich dir den Minikurs dazu."
+        )
+        "nein-aus-ueberzeugung"   = @(
+            "Schreib KLARHEIT, dann zeig ich dir den Weg dahin."
+            "Es gibt einen Minikurs genau dazu. Schreib KLARHEIT, dann schick ich ihn dir."
+        )
+        "raus-starten"            = @(
+            "Schreib KLARHEIT fuer den Minikurs, der genau da ansetzt."
+            "Es gibt drei kurze Module dazu. Schreib KLARHEIT, dann schick ich sie dir."
+        )
+        "neustart-kurs"           = @(
+            "Schreib KLARHEIT, dann zeig ich dir wie das geht."
+            "Schreib KLARHEIT fuer mehr zum Kurs dazu."
+        )
+    }
+
+    $ctaKey = "standortcheck"
+    foreach ($key in $ctaVarianten.Keys) {
+        if ($link -match [regex]::Escape($key)) { $ctaKey = $key; break }
+    }
+    $varianten = $ctaVarianten[$ctaKey]
+    $ctaScript = $varianten[$jetzt.Day % $varianten.Count]
     $voiceover = Optimize-ForTTS -text $voiceoverBase
 
     # FOTO-MODUS: Wenn Bild-URL direkt vorhanden, kein AI-Video rendern (spart Credits)
