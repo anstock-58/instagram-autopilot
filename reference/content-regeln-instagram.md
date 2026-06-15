@@ -29,6 +29,10 @@ Die Hook ist der erste Satz oder Moment eines Posts — sie entscheidet, ob jema
 
 Vor jeder Hook-Formulierung diese fünf Punkte gegenchecken. Eine Hook, die eines davon nicht erfüllt, wird überarbeitet, bevor der Post in den Plan kommt.
 
+**Übergreifende Grundformel**: Diese fünf Kriterien sind die Instagram-Anwendung der universellen
+Hook-Formel in `reference/hook-formel-universal.md` (Hammer, Schraube, Wendung, offene Schleife) —
+dieselben vier Elemente gelten mit anderem Zeitfenster auch für YouTube.
+
 **Konkrete Hook-Typen, Struktur-Formeln und typische Fehler** stehen in der Hook-Bibliothek unter `context/strategy.md` → Abschnitt "Hook-Bibliothek". Diese vier Kriterien hier sind der Check, dem jede daraus gebaute Hook standhalten muss.
 
 ---

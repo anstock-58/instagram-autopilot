@@ -94,6 +94,9 @@ Kein Erklärtext. Keine ganzen Sätze. Kein Fragezeichen am Ende von Zeile 2 wen
 
 Das ist die wichtigste halbe Minute des Videos. Sie entscheidet über alles.
 
+Diese vier Sätze sind die YouTube-Anwendung der `reference/hook-formel-universal.md` (Hammer,
+Schraube, Wendung, offene Schleife) — dieselben vier Elemente, nur auf 20-30 Sekunden ausgespielt.
+
 **Die vier Sätze:**
 
 Satz 1 — Der Hammer. Eine Tatsache, ein Bild, eine Szene, die sofort unter die Haut geht. Kein "Hallo und willkommen", kein "Heute sprechen wir über". Direkt rein.

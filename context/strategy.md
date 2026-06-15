@@ -33,6 +33,11 @@ Eine starke Hook ist nicht nur für Instagram-Kurzformate wichtig, sondern für 
 
 Der gemeinsame Kern überall: in den ersten Sekunden den Scroll oder Klick stoppen, neugierig machen, die richtige Person treffen und zum restlichen Ton passen — die Umsetzung unterscheidet sich je nach Format und Kanal, das Prinzip dahinter nicht.
 
+**Verbindliche Grundformel für alle Plattformen**: `reference/hook-formel-universal.md` — die vier
+Elemente Hammer, Schraube, Wendung, offene Schleife, mit Anleitung wie sie sich je nach Zeitfenster
+(YouTube, Reel, Post, Story) verdichten, plus Selbstcheck und Feedback-Schleife über die Performance-
+Daten.
+
 ### Hook-Bibliothek (Kurzformate, z. B. Reels/Shorts)
 
 Ein Hook muss sofort in der ersten bis dritten Sekunde funktionieren, sonst ist der Zuschauer weg.

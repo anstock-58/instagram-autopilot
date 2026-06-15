@@ -24,6 +24,7 @@
 
 ### Pflicht-Struktur
 - [ ] Hook: Erste 30 Sekunden — provokante Aussage oder überraschende Zahl
+- [ ] Hook gegen die 4-Satz-Formel in youtube-qualitaet.md TEIL 3 geprüft: Hammer, Schraube, Wendung, offene Schleife — alle vier Elemente konkret vorhanden, keine Begrüßung/Einleitung davor
 - [ ] Hook-Score: Selbstbewertung 1-10, Minimum 7 erforderlich
 - [ ] Mindestlänge: 1200 Wörter (entspricht ca. 10 Min bei 120 Wörter/Min)
 - [ ] Zielstärke: 1400-1700 Wörter (12-14 Min)
@@ -119,6 +120,15 @@ Was du in diesem Video lernst:
 - [ ] Thumbnail hochgeladen und ausgewählt?
 - [ ] Zeitplan gesetzt (Veröffentlichungsdatum)?
 - [ ] Status im CSV auf "Hochgeladen" gesetzt
+
+---
+
+## Phase 7: Retention-Check (48-72 Std. nach Veröffentlichung)
+
+- [ ] Analytics → Übersicht → Zuschauerbindung-Graph prüfen
+- [ ] Wert bei 0:30 ablesen: Ziel über 55 Prozent. Wiederkehrender Hauptabfall in den ersten 30 Sekunden ist das Hook-Problem, nicht Titel/Thumbnail
+- [ ] Durchschnittliche Wiedergabedauer gesamt: Ziel über 40 Prozent
+- [ ] Bei Wert unter Ziel: Lektion direkt hier oder in current-data.md festhalten und beim nächsten Skript den Hook (TEIL 3) noch konkreter/härter formulieren — CTR allein ist kein ausreichendes Erfolgssignal
 
 ---
 
