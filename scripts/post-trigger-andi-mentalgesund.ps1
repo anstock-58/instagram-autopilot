@@ -318,7 +318,7 @@ foreach ($row in $heuteRows) {
             "Wenn du da tiefer reinschauen willst, schreib KLARHEIT. Du bekommst den kostenlosen Standortcheck."
         )
         "kopf-schaltet-nicht-ab"  = @(
-            "Es gibt einen Minikurs genau dafuer. Schreib KLARHEIT, dann schick ich ihn dir."
+            "Es gibt einen Minikurs genau dafür. Schreib KLARHEIT, dann schick ich ihn dir."
             "Schreib KLARHEIT, dann zeig ich dir den Minikurs dazu."
         )
         "nein-aus-ueberzeugung"   = @(
@@ -326,12 +326,12 @@ foreach ($row in $heuteRows) {
             "Es gibt einen Minikurs genau dazu. Schreib KLARHEIT, dann schick ich ihn dir."
         )
         "raus-starten"            = @(
-            "Schreib KLARHEIT fuer den Minikurs, der genau da ansetzt."
+            "Schreib KLARHEIT für den Minikurs, der genau da ansetzt."
             "Es gibt drei kurze Module dazu. Schreib KLARHEIT, dann schick ich sie dir."
         )
         "neustart-kurs"           = @(
             "Schreib KLARHEIT, dann zeig ich dir wie das geht."
-            "Schreib KLARHEIT fuer mehr zum Kurs dazu."
+            "Schreib KLARHEIT für mehr zum Kurs dazu."
         )
     }
 
