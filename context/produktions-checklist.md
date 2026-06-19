@@ -45,6 +45,15 @@
 
 ---
 
+## Phase 2b: Visueller Stil festlegen (vor Phase 3)
+
+- [ ] Stil entschieden: `KI-Portraits` (psychologische/menschliche Themen, z. B. Selbstvertrauen, Beziehungen) oder `Stockclips-Cluster` (kontemplative/naturverbundene Themen, z. B. Alter, Loslassen, Zeit)
+- [ ] Bei `Stockclips-Cluster`: genau einen Cluster aus `context/strategy.md` (Wald & Berge, Wasser & Bewegung, Weite & Aufbruch, Jahreszeiten) wählen
+- [ ] CSV-Felder gesetzt: `Visueller_Stil` und bei Stockclips zusätzlich `Landschaft_Suchbegriffe` (kommagetrennt, alle aus demselben Cluster)
+- [ ] Kein Mischen der beiden Stile innerhalb eines Videos — die Entscheidung gilt für das ganze Video
+
+---
+
 ## Phase 3: Titel und Thumbnail
 
 ### Titel

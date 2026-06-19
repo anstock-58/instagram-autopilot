@@ -89,9 +89,9 @@ Klickrate liegt bei rund 1 Prozent — deutlich zu niedrig, obwohl die Impressio
 - Ableitung: für ähnliche kontemplative Themen gezielt auf immersive Landschaftsmotive und melancholische Musik setzen, Sprecherqualität ist hier nachrangig
 - Zielgruppe (50+) mag besonders Berge, Gewässer und Wälder — bei Bildmotiven für kontemplative Videos bevorzugt auf diese Landschaftstypen setzen
 
-**Variante: Landschafts-Stockclips statt KI-Bilder (Pixabay/Pexels, kostenlos)**
+**Stockclips-Modus: Landschafts-Videoclips statt KI-Bilder (Pexels, kostenlos) — aktiv nutzbar seit 19.06.2026**
 
-Idee: für kontemplative Videos echte Landschafts-Videoclips von Pixabay/Pexels statt KI-generierter Bilder verwenden — kostenlos, oft hochwertiger, spart fal.ai-Kosten. Wichtig: pro Video bei einem thematischen Cluster bleiben, damit es wie ein durchgehender Film wirkt (z. B. Wald → Gebirgsbach → Bergsee, nicht abrupt zwischen Schnee/Strand/Wald springen). Drohnen-/Luftaufnahmen sorgen für Bewegung und wirken hochwertiger als Standbilder.
+Für kontemplative, naturverbundene Themen kann der Producer (`archiv/scripts/youtube-producer.ps1`) statt KI-generierter Standbilder echte Pexels-Videoclips verwenden — kostenlos, mehr Bewegung im Bild (bessere Retention, siehe `reference/hook-formel-universal.md`), spart fal.ai-Kosten. Aktiviert wird das über das CSV-Feld `Visueller_Stil = Stockclips-Cluster` plus `Landschaft_Suchbegriffe` (kommagetrennte Liste aus genau einem Cluster unten). Pro Video gilt strikt ein einziger Stil, kein Mischen mit KI-Portraits innerhalb eines Videos — sonst entsteht ein visueller Stilbruch. Wichtig: bei einem thematischen Cluster bleiben, damit es wie ein durchgehender Film wirkt (z. B. Wald → Gebirgsbach → Bergsee, nicht abrupt zwischen Schnee/Strand/Wald springen). Drohnen-/Luftaufnahmen sorgen für Bewegung und wirken hochwertiger als Standbilder.
 
 Such-Keyword-Sets:
 
