@@ -28,6 +28,7 @@
 - [ ] Hook-Score: Selbstbewertung 1-10, Minimum 7 erforderlich
 - [ ] Mindestlänge: 1200 Wörter (entspricht ca. 10 Min bei 120 Wörter/Min)
 - [ ] Zielstärke: 1400-1700 Wörter (12-14 Min)
+- [ ] **HARTE GRENZE (19.06.2026): Skript unter 10.000 Zeichen** — ElevenLabs TTS lehnt Anfragen über 10.000 Zeichen ab (`text_too_long`). Ca. 1500-1550 Wörter sind bei deutschem Text das Maximum, das sicher darunter bleibt. Vor dem Eintragen ins CSV immer Zeichenlänge prüfen, nicht nur Wortzahl — Umlaute/lange Komposita schwanken pro Wort stärker als im Englischen
 - [ ] Schluss: Klarer CTA — Kommentar, Abo, oder weiterführende Frage
 
 ### Sprache
