@@ -126,13 +126,11 @@ Die TTS-Engine kann den Kontext nicht zuverlässig auflösen.
 
 ## Produkt-spezifische Regeln
 
-### KI Audio Empire (@ki_support)
-- ❌ Keinen „7-Tage-Plan" erwähnen — die Einrichtung dauert ca. 30 Minuten
-- ❌ Nicht sagen dass man selbst hochlädt — das System übernimmt den Upload automatisch
-- ❌ Audible nicht erwähnen — funktioniert dort noch nicht
-- ✅ Allgemein von „Shops" oder „Streaming-Plattformen" sprechen
-- ✅ Spotify darf als Beispiel genannt werden
-- ✅ „Covered" (Aufnahme-App) darf als Teaser/Cliffhanger erwähnt werden
+### KI Audio Empire (@ki_support) — PAUSIERT seit 11.06.2026
+- ❌ Aktuell nicht bewerben — kein brauchbarer Vendor-Link verfügbar (Stand: Rückmeldung Vendor, "im Moment nicht möglich")
+- ❌ Keine Posts/Reels mehr zu diesem Produkt erstellen bis der Link wieder freigegeben ist
+- ✅ Stattdessen: Instagram Autopilot oder KI-Prompt-Paket bewerben (siehe @ki_support Produkttabelle)
+- Sobald der Vendor-Link wieder verfügbar ist, diesen Abschnitt reaktivieren (alte Regeln: kein „7-Tage-Plan", kein Hinweis auf eigenes Hochladen, Audible nicht erwähnen, „Shops"/„Streaming-Plattformen" allgemein, Spotify als Beispiel ok, „Covered" als Teaser ok)
 
 ---
 
