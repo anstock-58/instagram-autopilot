@@ -2,7 +2,7 @@ name: Andi-mit-System Autopilot - Story (09:00)
 
 on:
   schedule:
-    - cron: '30 7 * * *'    # 07:30 UTC = 09:30 CEST (täglich)
+    - cron: '3 8 * * *'    # 08:03 UTC = 10:03 CEST (täglich)
     - cron: '7 9 * * *'    # Backup-Lauf (faengt verspaetete/uebersprungene GitHub-Schedule ab)
     - cron: '53 10 * * *'    # Backup-Lauf (faengt verspaetete/uebersprungene GitHub-Schedule ab)
   workflow_dispatch:

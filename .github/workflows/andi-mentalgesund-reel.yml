@@ -2,7 +2,7 @@ name: Andi Mentalgesund Autopilot - Reel (18:00)
 
 on:
   schedule:
-    - cron: '5 16 * * *'    # 16:05 UTC = 18:05 CEST (täglich)
+    - cron: '13 16 * * *'    # 16:13 UTC = 18:13 CEST (täglich)
     - cron: '47 17 * * *'    # Backup-Lauf (faengt verspaetete/uebersprungene GitHub-Schedule ab)
     - cron: '33 19 * * *'    # Backup-Lauf (faengt verspaetete/uebersprungene GitHub-Schedule ab)
   workflow_dispatch:         # Manuell auslösbar

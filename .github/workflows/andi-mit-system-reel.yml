@@ -2,7 +2,7 @@ name: Andi-mit-System Autopilot - Reel (18:00)
 
 on:
   schedule:
-    - cron: '25 16 * * *'   # 16:25 UTC = 18:25 CEST (täglich)
+    - cron: '53 16 * * *'   # 16:53 UTC = 18:53 CEST (täglich)
     - cron: '7 18 * * *'    # Backup-Lauf (faengt verspaetete/uebersprungene GitHub-Schedule ab)
     - cron: '53 19 * * *'    # Backup-Lauf (faengt verspaetete/uebersprungene GitHub-Schedule ab)
   workflow_dispatch:         # Manuell auslösbar über GitHub UI

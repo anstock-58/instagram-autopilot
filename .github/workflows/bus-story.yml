@@ -2,7 +2,7 @@ name: Business-und-Spirit Autopilot - Story (09:00)
 
 on:
   schedule:
-    - cron: '0 7 * * *'     # 07:00 UTC = 09:00 CEST (täglich)
+    - cron: '3 7 * * *'     # 07:03 UTC = 09:03 CEST (täglich)
     - cron: '37 8 * * *'    # Backup-Lauf (faengt verspaetete/uebersprungene GitHub-Schedule ab)
     - cron: '23 10 * * *'    # Backup-Lauf (faengt verspaetete/uebersprungene GitHub-Schedule ab)
   workflow_dispatch:

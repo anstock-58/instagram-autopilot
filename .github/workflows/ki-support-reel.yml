@@ -2,7 +2,7 @@ name: KI-Support Autopilot - Reel (18:00)
 
 on:
   schedule:
-    - cron: '15 16 * * *'   # 16:15 UTC = 18:15 CEST (täglich)
+    - cron: '33 16 * * *'   # 16:33 UTC = 18:33 CEST (täglich)
     - cron: '57 17 * * *'    # Backup-Lauf (faengt verspaetete/uebersprungene GitHub-Schedule ab)
     - cron: '43 19 * * *'    # Backup-Lauf (faengt verspaetete/uebersprungene GitHub-Schedule ab)
   workflow_dispatch:         # Manuell auslösbar über GitHub UI
