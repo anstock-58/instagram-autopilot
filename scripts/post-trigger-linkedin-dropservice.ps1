@@ -74,6 +74,8 @@ function Post-LinkedIn {
     }
     if ($mediaUrl -and $mediaUrl.Trim() -ne "") {
         $payloadObj.post.content.mediaUrls = @($mediaUrl.Trim())
+    } else {
+        $payloadObj.post.content.mediaUrls = @()
     }
 
     $json      = $payloadObj | ConvertTo-Json -Depth 10 -Compress
