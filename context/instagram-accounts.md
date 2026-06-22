@@ -29,7 +29,7 @@ Alle aktiven Instagram-Accounts mit Automation, Thema und Zuordnung auf einen Bl
 
 | Account | Beworbene Produkte | Keyword |
 |---|---|---|
-| @business.und.spirit | Standortcheck (kostenlos), Instagram Autopilot, Neustart Hauptkurs, Minikurs | CHECK, AUTOPILOT |
+| @business.und.spirit | NUR Standortcheck (kostenlos) — seit 22.06.2026 keine bezahlten Produkte mehr (Minikurs/Neustart-Kurs raus, siehe content-regeln-instagram.md) | CHECK |
 | @ki_support | KI-Starter-Paket (kostenlos), Instagram Autopilot (197 Euro), KI-Prompt-Paket | START, AUTOPILOT, PROMPTS |
 | @andi.mit.system | TAC 3.0 Workshop | INFO |
 | @andi.mentalgesund | Standortcheck, Minikurs, Kopf abschalten, Nein aus Überzeugung | KLARHEIT |

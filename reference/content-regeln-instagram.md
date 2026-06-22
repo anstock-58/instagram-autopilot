@@ -111,13 +111,15 @@ Die TTS-Engine kann den Kontext nicht zuverlässig auflösen.
 
 ## Emojis in Captions
 
+**Für ALLE Accounts verbindlich:** Die Caption beginnt immer mit einem Emoji, direkt vor dem ersten Wort des Hooks.
+
 ### @business.und.spirit
-- **Maximal 2-3 Emojis** pro Post
-- Dezent, professionell — passt zum Kanal-Ton
-- Vorzugsweise am Ende von Abschnitten, nie mitten im Satz
+- **3-4 Emojis** pro Post (eines davon am Anfang)
+- Dezent, professionell, passt zum Kanal-Ton
+- Eines am Anfang, der Rest vorzugsweise am Ende von Abschnitten, nicht mitten im Satz
 
 ### @ki_support, @andi.mit.system, @andi.mentalgesund
-- **4-6 Emojis** pro Post möglich
+- **4-6 Emojis** pro Post möglich (eines davon am Anfang)
 - Auflockern, bunter, lebendiger Ton
 - Emojis dürfen auch mitten im Text stehen um Punkte zu betonen
 - Nicht übertreiben — jedes Emoji muss zum Inhalt passen
@@ -136,6 +138,12 @@ Die TTS-Engine kann den Kontext nicht zuverlässig auflösen.
 ---
 
 ## Produkt-spezifische Regeln
+
+### @business.und.spirit — NUR Standortcheck, verbindlich seit 22.06.2026
+- ❌ Keine bezahlten Produkte mehr bewerben — kein Minikurs „Raus aus dem Funktionsmodus", kein Neustart-Kurs, keine Euro-Beträge, keine Modul-Anzahl
+- ✅ Ausschließlich der kostenlose Standortcheck (Link `standortcheck`, CTA-Keyword CHECK)
+- Hintergrund: Am 22.06.2026 lief praktisch der gesamte restliche Monat (18 Posts) auf zwei bezahlte Produkte hinaus, mit CHECK als CTA für beide — obwohl CHECK sonst exklusiv für den kostenlosen Standortcheck steht. Andi hat klargestellt, dass das schon mehrfach besprochen war und nicht wieder passieren darf.
+- Minikurs/Neustart-Kurs bleiben als Produkte für andere Accounts (z. B. @andi.mentalgesund) gültig, siehe `context/produkt-links.md` — nur bei @business.und.spirit tabu
 
 ### KI Audio Empire (@ki_support) — PAUSIERT seit 11.06.2026
 - ❌ Aktuell nicht bewerben — kein brauchbarer Vendor-Link verfügbar (Stand: Rückmeldung Vendor, "im Moment nicht möglich")
