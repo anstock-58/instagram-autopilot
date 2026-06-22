@@ -124,6 +124,17 @@ Die TTS-Engine kann den Kontext nicht zuverlässig auflösen.
 
 ---
 
+## Foto-Posts (verbindlich für ALLE Accounts)
+
+**Keine reinen Einzelbild-Posts mehr planen.** Hintergrund: Am 19.06.2026 ging auf @business.und.spirit ein Foto-Post raus, bei dem die Vollkörper-Aufnahme (Kopf ganz oben am Bildrand, Füße unten) beim Zuschnitt auf Quadrat/4:5 in der Feed-Vorschau den Kopf komplett abgeschnitten hat — Gesicht nicht mehr zu sehen.
+
+- ❌ Post-Typ "Foto" mit einem einzelnen Bild ohne Text-Overlay nicht mehr verwenden
+- ✅ Stattdessen: Reel mit KI-B-Roll (Videoprompt) oder Karussell mit mehreren Slides inklusive Text drauf
+- Falls doch ein eigenes Foto verwendet werden soll: nur mit Text-Overlay (Karussell), nie als nacktes Einzelbild
+- Vor jeder Verwendung eines eigenen Fotos die Bildkomposition prüfen — Gesicht muss auch nach einem Zuschnitt auf 1:1 oder 4:5 vollständig sichtbar bleiben (kein Vollkörper-Bild mit Kopf am äußersten Bildrand)
+
+---
+
 ## Produkt-spezifische Regeln
 
 ### KI Audio Empire (@ki_support) — PAUSIERT seit 11.06.2026
