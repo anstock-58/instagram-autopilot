@@ -55,3 +55,14 @@
 2026-06-05 17:58:13 | Timeout: LinkedIn-Post-URL nach 3 Minuten nicht gefunden.
 2026-06-05 17:58:13 | WARNUNG: Kein erster Kommentar gesetzt -- URN nicht gefunden.
 2026-06-05 17:58:13 | === Fertig ===
+2026-06-23 17:50:43 | === LinkedIn Trigger gestartet | 23.06.2026 | 17:50 | CSV: contentplan_linkedin_juni_v1.csv ===
+2026-06-23 17:50:43 | 1 LinkedIn-Post(s) fuer heute gefunden.
+2026-06-23 17:50:43 | Post faellig: Foto | 17:55
+2026-06-23 17:50:43 | Sende an Blotato LinkedIn: 470 Zeichen, Bild: ja
+2026-06-23 17:50:44 | LinkedIn gepostet. SubmissionId: 505106c4-325d-4337-afcc-564ac0cfca27
+2026-06-23 17:50:44 | Status auf 'Gepostet' gesetzt.
+2026-06-23 17:50:44 | Warte auf neuen LinkedIn-Post (max 3 Min)...
+2026-06-23 17:50:49 | Post-URL gefunden (1): https://linkedin.com/feed/update/urn:li:share:7475213776854790144
+2026-06-23 17:50:49 | Share-URN: urn:li:share:7475213776854790144
+2026-06-23 17:50:50 | Erster Kommentar gesetzt.
+2026-06-23 17:50:50 | === Fertig ===
