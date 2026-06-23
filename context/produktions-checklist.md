@@ -112,6 +112,14 @@ Was du in diesem Video lernst:
 
 ---
 
+## Technische Falle: Doppelte UTF-8-Kodierung (23.06.2026)
+
+Wenn Hilfsskripte mit literalen Umlauten per Bash-Heredoc (`cat > x.ps1 << 'EOF'`) erzeugt und direkt mit PowerShell ausgeführt werden, fehlt die UTF-8-BOM. PowerShell 5.1 parst die Datei dann mit der Standard-Codepage statt UTF-8 und kodiert Umlaute in Titel/Beschreibung/Tags doppelt (Mojibake wie "PhÃ¤nomen" statt "Phänomen" auf YouTube).
+
+**Regel:** Literale Umlaute nie direkt in ein per Bash-Heredoc erzeugtes .ps1-Skript schreiben. Stattdessen entweder das Skript danach mit `Get-Content -Raw -Encoding UTF8 | Set-Content -Encoding UTF8` neu speichern (fügt BOM hinzu), oder besser: alle Texte mit Umlauten in eine separate Datei auslagern (per Write-Tool, das korrektes UTF-8 erzeugt) und im PowerShell-Skript nur per `Get-Content -Encoding UTF8` einlesen — das Skript selbst bleibt dann rein ASCII und ist BOM-unabhängig.
+
+---
+
 ## Phase 5: Vor der Produktion (Producer-Aufruf)
 
 - [ ] Skriptdatei gespeichert unter: `scripts/[kanalname]-[nr]-skript.txt`
