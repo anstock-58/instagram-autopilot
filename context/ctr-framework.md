@@ -146,8 +146,11 @@ Hat das Video beides?
 **Bewusst Einfach — erlaubte Themenbereiche:**
 Schlaf und Gehirn nach 60, Demenz vorbeugen, Langlebigkeit und blaue Zonen, Bewegung und Muskel ab 60, Gehirnnahrung und Ernährung, Herzgesundheit, Gelenke und Mobilität, Fehler die Altern beschleunigen, Autorität-Trigger (Arzt, Japan, Studie)
 
+**Bewusst Einfach — Einzelschicksal-Storytelling (NEU, 19.06.2026):**
+Zusätzlich erlaubt: konkrete Einzelschicksale rund ums Lebensende, Sterbeprozess, Nahtoderfahrung, letzte Reuegefühle — aber nur in warmem, hoffnungsvollem Ton (Sunny-Buddha-Stil), nie alarmierend. Erstes Testvideo "Was Menschen sehen, wenn sie sterben" (21.06.2026) als Vorlage. Abgrenzung zu InnerCode: Bewusst Einfach erzählt das Schicksal beobachtend/tröstlich mit Auflösung in Hoffnung, InnerCode konfrontiert direkter und persönlicher ("Du stirbst gerade"). Titel-Trigger: Autorität (Pflegekräfte, Forschung) + konkretes Einzelschicksal statt reiner Symptom-Liste.
+
 **Bewusst Einfach — verbotene Themenbereiche:**
-Psychologie ohne Gesundheitsbezug, Emotionen, Beziehungen, Spiritualität, Funktionsmodus, generische Selbsthilfe, Storytelling ohne Nutzversprechen
+Psychologie ohne Gesundheitsbezug, Emotionen, Beziehungen, Funktionsmodus, generische Selbsthilfe, Storytelling ohne jeden Bezug zu Alter/Lebensende/Gesundheit
 
 **InnerCode — erlaubte Themenbereiche:**
 Tod und Sterblichkeit direkt, was Menschen am Lebensende bereuen, Zeitverschwendung und Lebensversäumnis, Bewusstsein der eigenen Endlichkeit, Konfrontation mit dem eigenen Nicht-Leben
