@@ -11,3 +11,5 @@
 2026-06-23 17:50:57 | === Fertig ===
 2026-06-24 17:50:43 | === Dropservice LinkedIn Trigger | 24.06.2026 | 17:50 | CSV: contentplan_linkedin_dropservice_juni_v1.csv ===
 2026-06-24 17:50:43 | Kein geplanter Dropservice-Post fuer heute (24.06.2026). Fertig.
+2026-06-25 17:50:53 | === Dropservice LinkedIn Trigger | 25.06.2026 | 17:50 | CSV: contentplan_linkedin_dropservice_juni_v1.csv ===
+2026-06-25 17:50:53 | Kein geplanter Dropservice-Post fuer heute (25.06.2026). Fertig.
