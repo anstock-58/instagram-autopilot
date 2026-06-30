@@ -30,3 +30,14 @@
 2026-06-28 17:50:42 | Kein geplanter Dropservice-Post fuer heute (28.06.2026). Fertig.
 2026-06-29 17:50:50 | === Dropservice LinkedIn Trigger | 29.06.2026 | 17:50 | CSV: contentplan_linkedin_dropservice_juni_v1.csv ===
 2026-06-29 17:50:50 | Kein geplanter Dropservice-Post fuer heute (29.06.2026). Fertig.
+2026-06-30 17:50:51 | === Dropservice LinkedIn Trigger | 30.06.2026 | 17:50 | CSV: contentplan_linkedin_dropservice_juni_v1.csv ===
+2026-06-30 17:50:51 | 1 Dropservice-Post(s) fuer heute gefunden.
+2026-06-30 17:50:51 | Post faellig: Foto | 17:55
+2026-06-30 17:50:51 | Sende an Blotato Dropservice: 399 Zeichen, Bild: ja
+2026-06-30 17:50:52 | Dropservice LinkedIn gepostet. SubmissionId: bd6f7524-4958-41c2-b188-639f4717b463
+2026-06-30 17:50:52 | Status auf 'Gepostet' gesetzt.
+2026-06-30 17:50:52 | Warte auf neuen LinkedIn-Post (max 3 Min)...
+2026-06-30 17:50:57 | Post-URL gefunden (1): https://linkedin.com/feed/update/urn:li:share:7477750527762628608
+2026-06-30 17:50:57 | Share-URN: urn:li:share:7477750527762628608
+2026-06-30 17:50:58 | FEHLER Kommentar (HTTP 404): Response status code does not indicate success: 404 (Not Found).
+2026-06-30 17:50:58 | === Fertig ===
