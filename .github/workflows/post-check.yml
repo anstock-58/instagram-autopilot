@@ -56,7 +56,30 @@ jobs:
             }
           }
 
+          function Already-Laufend($workflow) {
+            # Verhindert Staus: kein erneutes Triggern wenn fuer diesen Workflow bereits
+            # ein Lauf wartet/laeuft, oder in den letzten 90 Minuten einer gestartet wurde
+            # (z.B. der reguläre Schedule-Lauf koennte nur verzoegert sein, kein Nachtriggern noetig)
+            $url = "https://api.github.com/repos/$repo/actions/workflows/$workflow/runs?per_page=5"
+            try {
+              $resp = Invoke-RestMethod -Uri $url -Method GET -Headers @{Authorization="token $pat"} -ErrorAction Stop
+              $grenze = (Get-Date).ToUniversalTime().AddMinutes(-90)
+              $aktiv  = $resp.workflow_runs | Where-Object {
+                $_.status -eq "queued" -or $_.status -eq "in_progress" -or
+                ([datetime]$_.created_at) -gt $grenze
+              }
+              return (@($aktiv).Count -gt 0)
+            } catch {
+              Write-Host "Konnte Lauf-Historie nicht pruefen fuer $workflow (sicherheitshalber: nicht triggern): $_"
+              return $true
+            }
+          }
+
           function Trigger-Workflow($workflow) {
+            if (Already-Laufend $workflow) {
+              Write-Host "Ueberspringe Trigger fuer $workflow -- laeuft bereits oder lief vor kurzem (verhindert Stau)."
+              return
+            }
             $url  = "https://api.github.com/repos/$repo/actions/workflows/$workflow/dispatches"
             $body = '{"ref":"master"}'
             try {

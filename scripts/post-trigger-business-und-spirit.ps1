@@ -30,7 +30,7 @@ $aiVideoTemplate = "/base/v2/ai-story-video/5903fe43-514d-40ee-a060-0d6628c5f8fd
 $voiceName       = "Charlie (Australian, natural)"
 
 $zeitfensterFrueh = -10
-$zeitfensterSpaet = 45
+$zeitfensterSpaet = 180
 $isManualRun = $env:GITHUB_EVENT_NAME -eq "workflow_dispatch"
 
 $telegramToken  = $env:TELEGRAM_BOT_TOKEN
