@@ -438,3 +438,282 @@
 2026-05-30 15:25:56 | Starte Produktion: Was mit Maennern passiert, die nach 20 Jahren allein dastehen
 2026-05-30 15:29:17 | === YouTube Producer gestartet ===
 2026-05-30 15:29:18 | Starte Produktion: Was mit Maennern passiert, die nach 20 Jahren allein dastehen
+2026-06-19 16:15:40 | === YouTube Producer gestartet ===
+2026-06-19 16:15:40 | Starte Produktion: Was Menschen sehen, wenn sie sterben. Ärzte können es nicht erklären.
+2026-06-19 16:15:40 | Ordner erstellt: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1
+2026-06-19 16:15:40 | Generiere Audio via ElevenLabs...
+2026-06-19 16:20:22 | === YouTube Producer gestartet ===
+2026-06-19 16:20:22 | Starte Produktion: Was Menschen sehen, wenn sie sterben. Ärzte können es nicht erklären.
+2026-06-19 16:20:22 | Generiere Audio via ElevenLabs...
+2026-06-19 16:22:49 | Audio gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\voiceover.mp3
+2026-06-19 16:22:49 | Kapitelmarken erstellt: 5 Kapitel, Gesamtdauer 686 Sek.
+2026-06-19 16:22:49 | Visueller Stil: Stockclips-Cluster - lade Pexels-Videoclips...
+2026-06-19 16:22:49 | Suche Pexels-Clip fuer 'sunrise timelapse clouds'...
+2026-06-19 16:23:01 | Clip 1 gespeichert ('sunrise timelapse clouds'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\clip-01.mp4
+2026-06-19 16:23:01 | Suche Pexels-Clip fuer 'sunbeams through clouds aerial'...
+2026-06-19 16:23:12 | Clip 2 gespeichert ('sunbeams through clouds aerial'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\clip-02.mp4
+2026-06-19 16:23:12 | Suche Pexels-Clip fuer 'golden hour valley aerial'...
+2026-06-19 16:23:34 | Clip 3 gespeichert ('golden hour valley aerial'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\clip-03.mp4
+2026-06-19 16:23:34 | Suche Pexels-Clip fuer 'open field sunrise'...
+2026-06-19 16:24:07 | Clip 4 gespeichert ('open field sunrise'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\clip-04.mp4
+2026-06-19 16:24:07 | Suche Pexels-Clip fuer 'light through forest canopy'...
+2026-06-19 16:24:37 | Clip 5 gespeichert ('light through forest canopy'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\clip-05.mp4
+2026-06-19 16:24:37 | Suche Pexels-Clip fuer 'mountain peaks clouds timelapse'...
+2026-06-19 16:24:47 | Clip 6 gespeichert ('mountain peaks clouds timelapse'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\clip-06.mp4
+2026-06-19 16:24:47 | Generiere Thumbnail: Modus=portrait, FLUX + Text...
+2026-06-19 16:24:54 | FLUX Thumbnail Status (1): COMPLETED
+2026-06-19 16:24:55 | Thumbnail (portrait-Modus) gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\thumbnail.jpg
+2026-06-19 16:24:55 | Thumbnail-Archiv: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\YT-Thumbnails_Banner\YouTube_Thumbnail_Bewusst_Einfach-49.jpg
+2026-06-19 16:24:56 | Ermittle Audiodauer...
+2026-06-19 16:24:56 | Baue Video mit FFmpeg...
+2026-06-19 16:24:56 | Stockclip-Modus: 6 einzigartige Clips, 86 Segmente insgesamt fuer 685.9 Sek. Audio.
+2026-06-19 16:33:07 | Musik geladen: https://cdn.pixabay.com/audio/2026/04/21/audio_076e2f430b.mp3
+2026-06-19 16:33:29 | Video fertig: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\video_fertig.mp4
+2026-06-19 16:33:29 | Lade Video auf YouTube hoch (Kanal: BewusstEinfach)...
+2026-06-19 16:33:29 | Footer fuer Kanal 'BewusstEinfach' angehaengt.
+2026-06-19 16:33:34 | Upload: 2% (8 MB / 404.2 MB)
+2026-06-19 16:33:36 | Upload: 4% (16 MB / 404.2 MB)
+2026-06-19 16:33:38 | Upload: 6% (24 MB / 404.2 MB)
+2026-06-19 16:33:41 | Upload: 8% (32 MB / 404.2 MB)
+2026-06-19 16:33:43 | Upload: 10% (40 MB / 404.2 MB)
+2026-06-19 16:33:46 | Upload: 12% (48 MB / 404.2 MB)
+2026-06-19 16:33:48 | Upload: 14% (56 MB / 404.2 MB)
+2026-06-19 16:33:52 | Upload: 16% (64 MB / 404.2 MB)
+2026-06-19 16:33:55 | Upload: 18% (72 MB / 404.2 MB)
+2026-06-19 16:33:57 | Upload: 20% (80 MB / 404.2 MB)
+2026-06-19 16:33:59 | Upload: 22% (88 MB / 404.2 MB)
+2026-06-19 16:34:01 | Upload: 24% (96 MB / 404.2 MB)
+2026-06-19 16:34:04 | Upload: 26% (104 MB / 404.2 MB)
+2026-06-19 16:34:06 | Upload: 28% (112 MB / 404.2 MB)
+2026-06-19 16:34:07 | Upload: 30% (120 MB / 404.2 MB)
+2026-06-19 16:34:11 | Upload: 32% (128 MB / 404.2 MB)
+2026-06-19 16:34:15 | Upload: 34% (136 MB / 404.2 MB)
+2026-06-19 16:34:18 | Upload: 36% (144 MB / 404.2 MB)
+2026-06-19 16:34:22 | Upload: 38% (152 MB / 404.2 MB)
+2026-06-19 16:34:25 | Upload: 40% (160 MB / 404.2 MB)
+2026-06-19 16:34:28 | Upload: 42% (168 MB / 404.2 MB)
+2026-06-19 16:34:31 | Upload: 44% (176 MB / 404.2 MB)
+2026-06-19 16:34:36 | Upload: 46% (184 MB / 404.2 MB)
+2026-06-19 16:34:38 | Upload: 47% (192 MB / 404.2 MB)
+2026-06-19 16:34:40 | Upload: 49% (200 MB / 404.2 MB)
+2026-06-19 16:34:42 | Upload: 51% (208 MB / 404.2 MB)
+2026-06-19 16:34:44 | Upload: 53% (216 MB / 404.2 MB)
+2026-06-19 16:34:47 | Upload: 55% (224 MB / 404.2 MB)
+2026-06-19 16:34:49 | Upload: 57% (232 MB / 404.2 MB)
+2026-06-19 16:34:51 | Upload: 59% (240 MB / 404.2 MB)
+2026-06-19 16:34:55 | Upload: 61% (248 MB / 404.2 MB)
+2026-06-19 16:34:59 | Upload: 63% (256 MB / 404.2 MB)
+2026-06-19 16:35:03 | Upload: 65% (264 MB / 404.2 MB)
+2026-06-19 16:35:08 | Upload: 67% (272 MB / 404.2 MB)
+2026-06-19 16:35:11 | Upload: 69% (280 MB / 404.2 MB)
+2026-06-19 16:35:15 | Upload: 71% (288 MB / 404.2 MB)
+2026-06-19 16:35:18 | Upload: 73% (296 MB / 404.2 MB)
+2026-06-19 16:35:21 | Upload: 75% (304 MB / 404.2 MB)
+2026-06-19 16:35:23 | Upload: 77% (312 MB / 404.2 MB)
+2026-06-19 16:35:25 | Upload: 79% (320 MB / 404.2 MB)
+2026-06-19 16:35:28 | Upload: 81% (328 MB / 404.2 MB)
+2026-06-19 16:35:31 | Upload: 83% (336 MB / 404.2 MB)
+2026-06-19 16:35:33 | Upload: 85% (344 MB / 404.2 MB)
+2026-06-19 16:35:36 | Upload: 87% (352 MB / 404.2 MB)
+2026-06-19 16:35:39 | Upload: 89% (360 MB / 404.2 MB)
+2026-06-19 16:35:42 | Upload: 91% (368 MB / 404.2 MB)
+2026-06-19 16:35:44 | Upload: 93% (376 MB / 404.2 MB)
+2026-06-19 16:35:46 | Upload: 95% (384 MB / 404.2 MB)
+2026-06-19 16:35:47 | Upload: 97% (392 MB / 404.2 MB)
+2026-06-19 16:35:50 | Upload: 99% (400 MB / 404.2 MB)
+2026-06-19 16:35:53 | Upload: 100% (404.2 MB / 404.2 MB)
+2026-06-19 16:35:53 | Video hochgeladen (nicht gelistet): https://www.youtube.com/watch?v=z8buees2ZGE
+2026-06-19 16:36:00 | Thumbnail hochgeladen.
+2026-06-19 16:36:00 | YouTube Studio: https://studio.youtube.com/video/z8buees2ZGE/edit
+2026-06-19 16:36:00 | Bitte pruefen und auf Oeffentlich schalten.
+2026-06-19 16:36:00 | Setze vollstaendige Beschreibung...
+2026-06-19 16:36:01 | Vollstaendige Beschreibung gesetzt.
+2026-06-19 16:36:01 | Status auf Produziert gesetzt.
+2026-06-19 16:36:01 | === Produktion abgeschlossen: Was Menschen sehen, wenn sie sterben. Ärzte können es nicht erklären. ===
+2026-06-19 16:36:01 | YouTube URL: https://www.youtube.com/watch?v=z8buees2ZGE
+2026-06-19 19:24:57 | === YouTube Producer gestartet ===
+2026-06-19 19:24:57 | Starte Produktion: Was Menschen sehen, wenn sie sterben. Ärzte können es nicht erklären.
+2026-06-19 19:24:57 | Audio bereits vorhanden, ElevenLabs wird Ã¼bersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\voiceover.mp3
+2026-06-19 19:24:57 | Kapitelmarken erstellt: 5 Kapitel, Gesamtdauer 686 Sek.
+2026-06-19 19:24:57 | Visueller Stil: Stockclips-Cluster - lade Pexels-Videoclips...
+2026-06-19 19:24:57 | Suche Pexels-Clips fuer 'sunrise timelapse clouds'...
+2026-06-19 19:25:09 | Clip 1 gespeichert ('sunrise timelapse clouds'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\clip-01.mp4
+2026-06-19 19:25:33 | Clip 2 gespeichert ('sunrise timelapse clouds'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\clip-02.mp4
+2026-06-19 19:25:46 | Clip 3 gespeichert ('sunrise timelapse clouds'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\clip-03.mp4
+2026-06-19 19:25:46 | Suche Pexels-Clips fuer 'sunbeams through clouds aerial'...
+2026-06-19 19:26:01 | Clip 4 gespeichert ('sunbeams through clouds aerial'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\clip-04.mp4
+2026-06-19 19:26:10 | Clip 5 gespeichert ('sunbeams through clouds aerial'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\clip-05.mp4
+2026-06-19 19:26:24 | Clip 6 gespeichert ('sunbeams through clouds aerial'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\clip-06.mp4
+2026-06-19 19:26:24 | Suche Pexels-Clips fuer 'golden hour valley aerial'...
+2026-06-19 19:26:57 | Clip 7 gespeichert ('golden hour valley aerial'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\clip-07.mp4
+2026-06-19 19:27:45 | Clip 8 gespeichert ('golden hour valley aerial'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\clip-08.mp4
+2026-06-19 19:27:58 | Clip 9 gespeichert ('golden hour valley aerial'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\clip-09.mp4
+2026-06-19 19:27:58 | Suche Pexels-Clips fuer 'open field sunrise'...
+2026-06-19 19:28:25 | Clip 10 gespeichert ('open field sunrise'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\clip-10.mp4
+2026-06-19 19:28:37 | Clip 11 gespeichert ('open field sunrise'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\clip-11.mp4
+2026-06-19 19:28:58 | Clip 12 gespeichert ('open field sunrise'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\clip-12.mp4
+2026-06-19 19:28:58 | Suche Pexels-Clips fuer 'light through forest canopy'...
+2026-06-19 19:29:24 | Clip 13 gespeichert ('light through forest canopy'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\clip-13.mp4
+2026-06-19 19:29:59 | Clip 14 gespeichert ('light through forest canopy'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\clip-14.mp4
+2026-06-19 19:30:13 | Clip 15 gespeichert ('light through forest canopy'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\clip-15.mp4
+2026-06-19 19:30:13 | Suche Pexels-Clips fuer 'mountain peaks clouds timelapse'...
+2026-06-19 19:30:25 | Clip 16 gespeichert ('mountain peaks clouds timelapse'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\clip-16.mp4
+2026-06-19 19:30:33 | Clip 17 gespeichert ('mountain peaks clouds timelapse'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\clip-17.mp4
+2026-06-19 19:30:47 | Clip 18 gespeichert ('mountain peaks clouds timelapse'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\clip-18.mp4
+2026-06-19 19:30:47 | Thumbnail bereits vorhanden, uebersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\thumbnail.jpg
+2026-06-19 19:30:47 | Ermittle Audiodauer...
+2026-06-19 19:30:47 | Baue Video mit FFmpeg...
+2026-06-19 19:30:47 | Stockclip-Modus: 18 einzigartige Clips, 86 Segmente insgesamt fuer 685.9 Sek. Audio.
+2026-06-19 19:38:31 | Musik geladen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\Musik\kyoto-garden.mp3
+2026-06-19 19:38:53 | Video fertig: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Nahtoderfahrung_Video_1\video_fertig.mp4
+2026-06-19 19:38:53 | Lade Video auf YouTube hoch (Kanal: BewusstEinfach)...
+2026-06-19 19:38:53 | Footer fuer Kanal 'BewusstEinfach' angehaengt.
+2026-06-19 19:38:56 | Upload: 2% (8 MB / 321.9 MB)
+2026-06-19 19:38:58 | Upload: 5% (16 MB / 321.9 MB)
+2026-06-19 19:39:01 | Upload: 7% (24 MB / 321.9 MB)
+2026-06-19 19:39:03 | Upload: 10% (32 MB / 321.9 MB)
+2026-06-19 19:39:05 | Upload: 12% (40 MB / 321.9 MB)
+2026-06-19 19:39:07 | Upload: 15% (48 MB / 321.9 MB)
+2026-06-19 19:39:09 | Upload: 17% (56 MB / 321.9 MB)
+2026-06-19 19:39:12 | Upload: 20% (64 MB / 321.9 MB)
+2026-06-19 19:39:14 | Upload: 22% (72 MB / 321.9 MB)
+2026-06-19 19:39:16 | Upload: 25% (80 MB / 321.9 MB)
+2026-06-19 19:39:18 | Upload: 27% (88 MB / 321.9 MB)
+2026-06-19 19:39:20 | Upload: 30% (96 MB / 321.9 MB)
+2026-06-19 19:39:24 | Upload: 32% (104 MB / 321.9 MB)
+2026-06-19 19:39:26 | Upload: 35% (112 MB / 321.9 MB)
+2026-06-19 19:39:28 | Upload: 37% (120 MB / 321.9 MB)
+2026-06-19 19:39:31 | Upload: 40% (128 MB / 321.9 MB)
+2026-06-19 19:39:34 | Upload: 42% (136 MB / 321.9 MB)
+2026-06-19 19:39:37 | Upload: 45% (144 MB / 321.9 MB)
+2026-06-19 19:39:40 | Upload: 47% (152 MB / 321.9 MB)
+2026-06-19 19:39:43 | Upload: 50% (160 MB / 321.9 MB)
+2026-06-19 19:39:46 | Upload: 52% (168 MB / 321.9 MB)
+2026-06-19 19:39:50 | Upload: 55% (176 MB / 321.9 MB)
+2026-06-19 19:39:53 | Upload: 57% (184 MB / 321.9 MB)
+2026-06-19 19:39:56 | Upload: 60% (192 MB / 321.9 MB)
+2026-06-19 19:39:58 | Upload: 62% (200 MB / 321.9 MB)
+2026-06-19 19:40:01 | Upload: 65% (208 MB / 321.9 MB)
+2026-06-19 19:40:03 | Upload: 67% (216 MB / 321.9 MB)
+2026-06-19 19:40:07 | Upload: 70% (224 MB / 321.9 MB)
+2026-06-19 19:40:10 | Upload: 72% (232 MB / 321.9 MB)
+2026-06-19 19:40:13 | Upload: 75% (240 MB / 321.9 MB)
+2026-06-19 19:40:17 | Upload: 77% (248 MB / 321.9 MB)
+2026-06-19 19:40:20 | Upload: 80% (256 MB / 321.9 MB)
+2026-06-19 19:40:23 | Upload: 82% (264 MB / 321.9 MB)
+2026-06-19 19:40:26 | Upload: 84% (272 MB / 321.9 MB)
+2026-06-19 19:40:29 | Upload: 87% (280 MB / 321.9 MB)
+2026-06-19 19:40:32 | Upload: 89% (288 MB / 321.9 MB)
+2026-06-19 19:40:34 | Upload: 92% (296 MB / 321.9 MB)
+2026-06-19 19:40:37 | Upload: 94% (304 MB / 321.9 MB)
+2026-06-19 19:40:38 | Upload: 97% (312 MB / 321.9 MB)
+2026-06-19 19:40:42 | Upload: 99% (320 MB / 321.9 MB)
+2026-06-19 19:40:43 | Upload: 100% (321.9 MB / 321.9 MB)
+2026-06-19 19:40:43 | Video hochgeladen (nicht gelistet): https://www.youtube.com/watch?v=4PerwsTGxmw
+2026-06-19 19:40:51 | Thumbnail hochgeladen.
+2026-06-19 19:40:51 | YouTube Studio: https://studio.youtube.com/video/4PerwsTGxmw/edit
+2026-06-19 19:40:51 | Bitte pruefen und auf Oeffentlich schalten.
+2026-06-19 19:40:51 | Setze vollstaendige Beschreibung...
+2026-06-19 19:40:51 | Vollstaendige Beschreibung gesetzt.
+2026-06-19 19:40:51 | Status auf Produziert gesetzt.
+2026-06-19 19:40:51 | === Produktion abgeschlossen: Was Menschen sehen, wenn sie sterben. Ärzte können es nicht erklären. ===
+2026-06-19 19:40:51 | YouTube URL: https://www.youtube.com/watch?v=4PerwsTGxmw
+2026-06-23 14:26:10 | === YouTube Producer gestartet ===
+2026-06-23 14:26:10 | Starte Produktion: Forscher entdeckten ein PhÃ¤nomen bei Sterbenden. Niemand kann es erklÃ¤ren.
+2026-06-23 14:26:10 | Ordner erstellt: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Terminale_Klarheit_Video_1
+2026-06-23 14:26:10 | Generiere Audio via ElevenLabs...
+2026-06-23 14:28:19 | Audio gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Terminale_Klarheit_Video_1\voiceover.mp3
+2026-06-23 14:28:19 | Kapitelmarken erstellt: 5 Kapitel, Gesamtdauer 615 Sek.
+2026-06-23 14:28:19 | Visueller Stil: Stockclips-Cluster - lade Pexels-Videoclips...
+2026-06-23 14:28:19 | Suche Pexels-Clips fuer 'forest aerial drone'...
+2026-06-23 14:28:56 | Clip 1 gespeichert ('forest aerial drone'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Terminale_Klarheit_Video_1\clip-01.mp4
+2026-06-23 14:29:14 | Clip 2 gespeichert ('forest aerial drone'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Terminale_Klarheit_Video_1\clip-02.mp4
+2026-06-23 14:29:21 | Clip 3 gespeichert ('forest aerial drone'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Terminale_Klarheit_Video_1\clip-03.mp4
+2026-06-23 14:29:21 | Suche Pexels-Clips fuer 'misty forest morning'...
+2026-06-23 14:29:37 | Clip 4 gespeichert ('misty forest morning'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Terminale_Klarheit_Video_1\clip-04.mp4
+2026-06-23 14:30:15 | Clip 5 gespeichert ('misty forest morning'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Terminale_Klarheit_Video_1\clip-05.mp4
+2026-06-23 14:30:46 | Clip 6 gespeichert ('misty forest morning'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Terminale_Klarheit_Video_1\clip-06.mp4
+2026-06-23 14:30:46 | Suche Pexels-Clips fuer 'mountain river drone'...
+2026-06-23 14:30:57 | Clip 7 gespeichert ('mountain river drone'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Terminale_Klarheit_Video_1\clip-07.mp4
+2026-06-23 14:31:07 | Clip 8 gespeichert ('mountain river drone'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Terminale_Klarheit_Video_1\clip-08.mp4
+2026-06-23 14:31:18 | Clip 9 gespeichert ('mountain river drone'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Terminale_Klarheit_Video_1\clip-09.mp4
+2026-06-23 14:31:18 | Suche Pexels-Clips fuer 'alpine lake aerial'...
+2026-06-23 14:31:33 | Clip 10 gespeichert ('alpine lake aerial'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Terminale_Klarheit_Video_1\clip-10.mp4
+2026-06-23 14:31:57 | Clip 11 gespeichert ('alpine lake aerial'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Terminale_Klarheit_Video_1\clip-11.mp4
+2026-06-23 14:32:29 | Clip 12 gespeichert ('alpine lake aerial'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Terminale_Klarheit_Video_1\clip-12.mp4
+2026-06-23 14:32:29 | Suche Pexels-Clips fuer 'waterfall forest'...
+2026-06-23 14:32:37 | Clip 13 gespeichert ('waterfall forest'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Terminale_Klarheit_Video_1\clip-13.mp4
+2026-06-23 14:33:14 | Clip 14 gespeichert ('waterfall forest'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Terminale_Klarheit_Video_1\clip-14.mp4
+2026-06-23 14:33:30 | Clip 15 gespeichert ('waterfall forest'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Terminale_Klarheit_Video_1\clip-15.mp4
+2026-06-23 14:33:30 | Suche Pexels-Clips fuer 'pine forest fog'...
+2026-06-23 14:33:48 | Clip 16 gespeichert ('pine forest fog'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Terminale_Klarheit_Video_1\clip-16.mp4
+2026-06-23 14:34:11 | Clip 17 gespeichert ('pine forest fog'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Terminale_Klarheit_Video_1\clip-17.mp4
+2026-06-23 14:34:21 | Clip 18 gespeichert ('pine forest fog'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Terminale_Klarheit_Video_1\clip-18.mp4
+2026-06-23 14:34:21 | Generiere Thumbnail: Modus=scene, FLUX + Text...
+2026-06-23 14:34:27 | FLUX Thumbnail Status (1): COMPLETED
+2026-06-23 14:34:29 | Thumbnail (scene-Modus) gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Terminale_Klarheit_Video_1\thumbnail.jpg
+2026-06-23 14:34:29 | Thumbnail-Archiv: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\YT-Thumbnails_Banner\YouTube_Thumbnail_Bewusst_Einfach-50.jpg
+2026-06-23 14:34:29 | Ermittle Audiodauer...
+2026-06-23 14:34:29 | Baue Video mit FFmpeg...
+2026-06-23 14:34:29 | Stockclip-Modus: 18 einzigartige Clips, 77 Segmente insgesamt fuer 615.2 Sek. Audio.
+2026-06-23 14:40:05 | Musik geladen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\Musik\spirit-song.mp3
+2026-06-23 14:40:24 | Video fertig: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\BEWUSSTSEIN\Terminale_Klarheit_Video_1\video_fertig.mp4
+2026-06-23 14:40:25 | Lade Video auf YouTube hoch (Kanal: BewusstEinfach)...
+2026-06-23 14:40:25 | Footer fuer Kanal 'BewusstEinfach' angehaengt.
+2026-06-23 14:40:28 | Upload: 2% (8 MB / 378.9 MB)
+2026-06-23 14:40:30 | Upload: 4% (16 MB / 378.9 MB)
+2026-06-23 14:40:32 | Upload: 6% (24 MB / 378.9 MB)
+2026-06-23 14:40:35 | Upload: 8% (32 MB / 378.9 MB)
+2026-06-23 14:40:38 | Upload: 11% (40 MB / 378.9 MB)
+2026-06-23 14:40:40 | Upload: 13% (48 MB / 378.9 MB)
+2026-06-23 14:40:43 | Upload: 15% (56 MB / 378.9 MB)
+2026-06-23 14:40:46 | Upload: 17% (64 MB / 378.9 MB)
+2026-06-23 14:40:49 | Upload: 19% (72 MB / 378.9 MB)
+2026-06-23 14:40:53 | Upload: 21% (80 MB / 378.9 MB)
+2026-06-23 14:40:55 | Upload: 23% (88 MB / 378.9 MB)
+2026-06-23 14:40:58 | Upload: 25% (96 MB / 378.9 MB)
+2026-06-23 14:41:01 | Upload: 27% (104 MB / 378.9 MB)
+2026-06-23 14:41:04 | Upload: 30% (112 MB / 378.9 MB)
+2026-06-23 14:41:07 | Upload: 32% (120 MB / 378.9 MB)
+2026-06-23 14:41:09 | Upload: 34% (128 MB / 378.9 MB)
+2026-06-23 14:41:11 | Upload: 36% (136 MB / 378.9 MB)
+2026-06-23 14:41:14 | Upload: 38% (144 MB / 378.9 MB)
+2026-06-23 14:41:16 | Upload: 40% (152 MB / 378.9 MB)
+2026-06-23 14:41:18 | Upload: 42% (160 MB / 378.9 MB)
+2026-06-23 14:41:20 | Upload: 44% (168 MB / 378.9 MB)
+2026-06-23 14:41:22 | Upload: 46% (176 MB / 378.9 MB)
+2026-06-23 14:41:24 | Upload: 49% (184 MB / 378.9 MB)
+2026-06-23 14:41:26 | Upload: 51% (192 MB / 378.9 MB)
+2026-06-23 14:41:28 | Upload: 53% (200 MB / 378.9 MB)
+2026-06-23 14:41:30 | Upload: 55% (208 MB / 378.9 MB)
+2026-06-23 14:41:33 | Upload: 57% (216 MB / 378.9 MB)
+2026-06-23 14:41:37 | Upload: 59% (224 MB / 378.9 MB)
+2026-06-23 14:41:39 | Upload: 61% (232 MB / 378.9 MB)
+2026-06-23 14:41:42 | Upload: 63% (240 MB / 378.9 MB)
+2026-06-23 14:41:45 | Upload: 65% (248 MB / 378.9 MB)
+2026-06-23 14:41:48 | Upload: 68% (256 MB / 378.9 MB)
+2026-06-23 14:41:51 | Upload: 70% (264 MB / 378.9 MB)
+2026-06-23 14:41:53 | Upload: 72% (272 MB / 378.9 MB)
+2026-06-23 14:41:55 | Upload: 74% (280 MB / 378.9 MB)
+2026-06-23 14:41:58 | Upload: 76% (288 MB / 378.9 MB)
+2026-06-23 14:42:00 | Upload: 78% (296 MB / 378.9 MB)
+2026-06-23 14:42:03 | Upload: 80% (304 MB / 378.9 MB)
+2026-06-23 14:42:06 | Upload: 82% (312 MB / 378.9 MB)
+2026-06-23 14:42:09 | Upload: 84% (320 MB / 378.9 MB)
+2026-06-23 14:42:12 | Upload: 87% (328 MB / 378.9 MB)
+2026-06-23 14:42:15 | Upload: 89% (336 MB / 378.9 MB)
+2026-06-23 14:42:17 | Upload: 91% (344 MB / 378.9 MB)
+2026-06-23 14:42:19 | Upload: 93% (352 MB / 378.9 MB)
+2026-06-23 14:42:21 | Upload: 95% (360 MB / 378.9 MB)
+2026-06-23 14:42:24 | Upload: 97% (368 MB / 378.9 MB)
+2026-06-23 14:42:27 | Upload: 99% (376 MB / 378.9 MB)
+2026-06-23 14:42:29 | Upload: 100% (378.9 MB / 378.9 MB)
+2026-06-23 14:42:29 | Video hochgeladen (nicht gelistet): https://www.youtube.com/watch?v=nnCvdmr8Vnw
+2026-06-23 14:42:36 | Thumbnail hochgeladen.
+2026-06-23 14:42:36 | YouTube Studio: https://studio.youtube.com/video/nnCvdmr8Vnw/edit
+2026-06-23 14:42:36 | Bitte pruefen und auf Oeffentlich schalten.
+2026-06-23 14:42:36 | Setze vollstaendige Beschreibung...
+2026-06-23 14:42:37 | Vollstaendige Beschreibung gesetzt.
+2026-06-23 14:42:37 | Status auf Produziert gesetzt.
+2026-06-23 14:42:37 | === Produktion abgeschlossen: Forscher entdeckten ein PhÃ¤nomen bei Sterbenden. Niemand kann es erklÃ¤ren. ===
+2026-06-23 14:42:37 | YouTube URL: https://www.youtube.com/watch?v=nnCvdmr8Vnw
