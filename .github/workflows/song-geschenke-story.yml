@@ -1,0 +1,55 @@
+name: Song-Geschenke Autopilot - Story (09:00)
+
+on:
+  schedule:
+    - cron: '7 7 * * *'     # 07:07 UTC = 09:07 CEST (täglich)
+    - cron: '41 8 * * *'    # Backup-Lauf (faengt verspaetete/uebersprungene GitHub-Schedule ab)
+    - cron: '27 10 * * *'   # Backup-Lauf (faengt verspaetete/uebersprungene GitHub-Schedule ab)
+  workflow_dispatch:
+
+jobs:
+  post-story:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Pause pruefen
+        id: pause_check
+        run: |
+          if [ -f "PAUSED" ]; then
+            echo "paused=true" >> $GITHUB_OUTPUT
+            echo "Song-Geschenke Autopilot ist pausiert. Kein Post."
+          else
+            echo "paused=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Story posten
+        if: steps.pause_check.outputs.paused == 'false'
+        env:
+          BLOTATO_API_KEY: ${{ secrets.BLOTATO_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          SONG_GESCHENKE_ACCOUNT_ID: ${{ secrets.SONG_GESCHENKE_ACCOUNT_ID }}
+          POST_TYPE: story
+          GITHUB_WORKSPACE: ${{ github.workspace }}
+          TZ: Europe/Berlin
+        shell: pwsh
+        run: |
+          & "${{ github.workspace }}/scripts/post-trigger-song-geschenke.ps1"
+
+      - name: CSV-Status committen
+        if: steps.pause_check.outputs.paused == 'false'
+        run: |
+          git config user.email "autopilot@github-actions"
+          git config user.name "Song-Geschenke Autopilot"
+          git add outputs/contentplan_song_geschenke_*.csv || true
+          git diff --staged --quiet || git commit -m "Auto: Song-Geschenke Story gepostet $(date +'%d.%m.%Y')"
+          for i in 1 2 3; do
+            git checkout -- . 2>/dev/null || true
+            git pull --rebase origin master && git push && break
+            echo "Push fehlgeschlagen (Versuch $i/3), warte 10s..."
+            sleep 10
+          done

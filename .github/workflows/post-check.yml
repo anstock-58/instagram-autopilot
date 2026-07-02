@@ -140,9 +140,10 @@ jobs:
           $r2 = Check-Account "contentplan_ki_support"          "@ki_support"            "ki-support-${wfSuffix}.yml"
           $r3 = Check-Account "contentplan_andi_mit_system"     "@andi.mit.system"       "andi-mit-system-${wfSuffix}.yml"
           $r4 = Check-Account "contentplan_andi_mentalgesund"   "@andi.mentalgesund"     "andi-mentalgesund-${wfSuffix}.yml"
+          $r5 = Check-Account "contentplan_song_geschenke"      "@song.geschenke"        "song-geschenke-${wfSuffix}.yml"
 
-          $nachgetriggert = @($r1,$r2,$r3,$r4) | Where-Object { $_ -eq "nachgetriggert" }
-          $fehler         = @($r1,$r2,$r3,$r4) | Where-Object { $_ -eq "fehler" }
+          $nachgetriggert = @($r1,$r2,$r3,$r4,$r5) | Where-Object { $_ -eq "nachgetriggert" }
+          $fehler         = @($r1,$r2,$r3,$r4,$r5) | Where-Object { $_ -eq "fehler" }
 
           # Nur melden wenn etwas zu tun war oder etwas nicht stimmt — keine Routine-"alles ok"-Meldung (Andi-Vorgabe 07.06.2026)
           if ($nachgetriggert.Count -gt 0) {
