@@ -12,7 +12,7 @@ Alle aktiven Instagram-Accounts mit Automation, Thema und Zuordnung auf einen Bl
 | @ki_support | 46341 | KI-Tipps, KI-Tools, Produktempfehlungen | post-trigger-ki-support.ps1 | ki-support-story.yml | ki-support-reel.yml |
 | @andi.mit.system | 46471 | Systeme, Effizienz, TAC 3.0 Workshop | post-trigger-andi-mit-system.ps1 | andi-mit-system-story.yml | andi-mit-system-reel.yml |
 | @andi.mentalgesund | 48968 | Mental Health, Resilienz, Grenzen, Selbstwert | post-trigger-andi-mentalgesund.ps1 | andi-mentalgesund-story.yml | andi-mentalgesund-reel.yml |
-| @song.geschenke | TBD (Secret: SONG_GESCHENKE_ACCOUNT_ID) | Personalisierte Songs und Vereinshymnen | post-trigger-song-geschenke.ps1 | song-geschenke-story.yml | song-geschenke-reel.yml |
+| @song.geschenke | 48969 | Personalisierte Songs und Vereinshymnen | post-trigger-song-geschenke.ps1 | song-geschenke-story.yml | song-geschenke-reel.yml |
 
 ---
 
