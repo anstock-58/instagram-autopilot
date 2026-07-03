@@ -70,7 +70,7 @@
 | GESTRICHEN (abstrakt, kein „das bin ich") | Dein mentales Schutzschild | gestrichen 12.06. |
 | Die ANDEREN leben — und DU funktionierst nur | unverändert — Kernmuster des Kanals | Eigenständiges neues Video |
 | Forscher entdeckten ein Phänomen bei Sterbenden. Niemand kann es erklären. | NEU 19.06. — Einzelschicksal-Storytelling, terminale Klarheit (Nahm/Greyson 2009) | ✅ PRODUZIERT (23.06.2026) — youtube.com/watch?v=nnCvdmr8Vnw (unlisted), Thumbnail_Modus scene, Musik spirit-song.mp3 — noch prüfen und auf öffentlich/Zeitplan für 24.06. setzen |
-| Ärzte sagen: Dieser eine Sinn funktioniert noch, wenn ein Mensch längst nicht mehr antwortet. | NEU 19.06. — letzter Sinn vor dem Tod (Hörsinn) | Konzept fertig, noch kein Skript |
+| Forscher bewiesen: Sterbende können noch hören. Was das bedeutet. | be22 — UBC-Studie 2020, EEG, Hörsinn als letzter Sinn | ✅ PRODUZIERT (03.07.2026) — youtube.com/watch?v=o9U13Eyt5uE (unlisted) — in YouTube Studio auf 07.07. terminieren und öffentlich stellen |
 | Eine Studie der University of North Carolina widerlegt, was wir über das Sterben glauben. | NEU 19.06. — Kurt Gray/UNC-Studie, Sterben ist ruhiger als erwartet | Konzept fertig, noch kein Skript |
 
 ### Kanal: InnerCode
