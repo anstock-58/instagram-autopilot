@@ -288,10 +288,6 @@ foreach ($row in $heuteRows) {
     $voiceoverBase = $voiceoverBase -replace 'Link in Bio.*', ''
     $voiceoverBase = ($voiceoverBase -split "`n" | Where-Object { $_ -notmatch '(?i)(schreib|kommentiere)\s+\w+' }) -join "`n"  # Ganze CTA-Zeilen raus (nicht nur ab Keyword)
     $voiceoverBase = $voiceoverBase -replace '#\S+', ''
-    # Umlaute fuer englischen Sprecher transliterieren (Charlie: australisches Englisch)
-    $voiceoverBase = $voiceoverBase -replace 'ä', 'ae' -replace 'ö', 'oe' -replace 'ü', 'ue' `
-                                   -replace 'Ä', 'Ae' -replace 'Ö', 'Oe' -replace 'Ü', 'Ue' `
-                                   -replace 'ß', 'ss'
     $voiceoverBase = $voiceoverBase.Trim()
 
     # @business.und.spirit: CHECK -> Standortcheck
