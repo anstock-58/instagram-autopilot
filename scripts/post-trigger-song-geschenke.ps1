@@ -3,7 +3,7 @@
 # Template: AI Video with AI Voice (ai-story-video)
 # Laeuft taeglich via GitHub Actions (09:00 CEST Story, 18:00 CEST Reel).
 # Account: @song.geschenke (Blotato ID via GitHub Secret SONG_GESCHENKE_ACCOUNT_ID)
-# Zwei Produkte: Songgeschenke (SONG, ab 29 Euro) und Hymnenschmiede (HYMNE, ab 59 Euro)
+# Zwei Produkte: Songgeschenke (SONG) und Hymnenschmiede (HYMNE)
 
 # ============================================================
 # KONFIGURATION
@@ -28,7 +28,7 @@ $apiKey          = if ($env:BLOTATO_API_KEY) { $env:BLOTATO_API_KEY } else { "bl
 $apiBase         = "https://backend.blotato.com/v2"
 $accountIdIG     = if ($env:SONG_GESCHENKE_ACCOUNT_ID) { $env:SONG_GESCHENKE_ACCOUNT_ID } else { "XXXXX" }  # GitHub Secret SONG_GESCHENKE_ACCOUNT_ID setzen!
 $aiVideoTemplate = "/base/v2/ai-story-video/5903fe43-514d-40ee-a060-0d6628c5f8fd/v1"
-$voiceName       = "Charlie (Australian, natural)"
+$voiceName       = "Daniel (British, authoritative)"
 
 $zeitfensterFrueh = -10
 $zeitfensterSpaet = 180
