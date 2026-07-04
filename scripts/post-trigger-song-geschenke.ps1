@@ -246,7 +246,7 @@ foreach ($row in $heuteRows) {
 
     # CTA-Script abhaengig vom Produkt (HYMNE vs SONG, erkennbar an Caption-CTA)
     if ($caption -match "(?i)schreib HYMNE") {
-        $ctaScript = "Schreib HYMNE in die Kommentare, dann meld ich mich persoenlich bei dir."
+        $ctaScript = "Schreib HYMNE in die Kommentare, dann meld ich mich persönlich bei dir."
     } else {
         $ctaScript = "Schreib SONG in die Kommentare, dann schick ich dir den Link dazu."
     }
