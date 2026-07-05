@@ -320,7 +320,7 @@ foreach ($row in $heuteRows) {
         "*alfima*"              { "TOOL" }
         default                 { "KI" }
     }
-    $ctaScript = "Wenn dich das interessiert, schreib START. Ich schick dir sofort alle Details."
+    $ctaScript = "Wenn dich das interessiert, schreib START. Ich schick dir sofort alle Details. Oder klick den Link in meiner Bio."
     $voiceover = Optimize-ForTTS -text $voiceoverBase
 
     # FOTO-MODUS: Wenn Bild-URL direkt vorhanden, kein AI-Video rendern

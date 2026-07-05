@@ -717,3 +717,116 @@
 2026-06-23 14:42:37 | Status auf Produziert gesetzt.
 2026-06-23 14:42:37 | === Produktion abgeschlossen: Forscher entdeckten ein PhÃ¤nomen bei Sterbenden. Niemand kann es erklÃ¤ren. ===
 2026-06-23 14:42:37 | YouTube URL: https://www.youtube.com/watch?v=nnCvdmr8Vnw
+2026-07-03 17:13:12 | === YouTube Producer gestartet ===
+2026-07-03 17:13:12 | Starte Produktion: Forscher bewiesen: Sterbende können noch hören. Was das bedeutet.
+2026-07-03 17:13:12 | Ordner erstellt: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1
+2026-07-03 17:13:12 | Generiere Audio via ElevenLabs...
+2026-07-03 17:15:43 | Audio gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1\voiceover.mp3
+2026-07-03 17:15:43 | Kapitelmarken erstellt: 5 Kapitel, Gesamtdauer 652 Sek.
+2026-07-03 17:15:43 | Visueller Stil: Stockclips-Cluster - lade Pexels-Videoclips...
+2026-07-03 17:15:43 | Suche Pexels-Clips fuer 'hospital room window light'...
+2026-07-03 17:15:53 | Clip 1 gespeichert ('hospital room window light'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1\clip-01.mp4
+2026-07-03 17:16:26 | Clip 2 gespeichert ('hospital room window light'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1\clip-02.mp4
+2026-07-03 17:16:36 | Clip 3 gespeichert ('hospital room window light'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1\clip-03.mp4
+2026-07-03 17:16:36 | Suche Pexels-Clips fuer 'hospice garden morning'...
+2026-07-03 17:16:52 | Clip 4 gespeichert ('hospice garden morning'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1\clip-04.mp4
+2026-07-03 17:17:01 | Clip 5 gespeichert ('hospice garden morning'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1\clip-05.mp4
+2026-07-03 17:17:09 | Clip 6 gespeichert ('hospice garden morning'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1\clip-06.mp4
+2026-07-03 17:17:09 | Suche Pexels-Clips fuer 'elderly hand holding'...
+2026-07-03 17:17:20 | Clip 7 gespeichert ('elderly hand holding'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1\clip-07.mp4
+2026-07-03 17:17:27 | Clip 8 gespeichert ('elderly hand holding'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1\clip-08.mp4
+2026-07-03 17:17:38 | Clip 9 gespeichert ('elderly hand holding'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1\clip-09.mp4
+2026-07-03 17:17:38 | Suche Pexels-Clips fuer 'quiet forest path morning'...
+2026-07-03 17:18:15 | Clip 10 gespeichert ('quiet forest path morning'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1\clip-10.mp4
+2026-07-03 17:19:52 | Clip 11 gespeichert ('quiet forest path morning'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1\clip-11.mp4
+2026-07-03 17:20:46 | Clip 12 gespeichert ('quiet forest path morning'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1\clip-12.mp4
+2026-07-03 17:20:46 | Suche Pexels-Clips fuer 'misty lake sunrise'...
+2026-07-03 17:21:04 | Clip 13 gespeichert ('misty lake sunrise'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1\clip-13.mp4
+2026-07-03 17:21:13 | Clip 14 gespeichert ('misty lake sunrise'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1\clip-14.mp4
+2026-07-03 17:21:50 | Clip 15 gespeichert ('misty lake sunrise'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1\clip-15.mp4
+2026-07-03 17:21:50 | Suche Pexels-Clips fuer 'pine forest sunlight'...
+2026-07-03 17:22:12 | Clip 16 gespeichert ('pine forest sunlight'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1\clip-16.mp4
+2026-07-03 17:22:54 | Clip 17 gespeichert ('pine forest sunlight'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1\clip-17.mp4
+2026-07-03 17:23:10 | Clip 18 gespeichert ('pine forest sunlight'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1\clip-18.mp4
+2026-07-03 17:23:10 | Generiere Thumbnail: Modus=scene, FLUX + Text...
+2026-07-03 17:23:17 | FLUX Thumbnail Status (1): COMPLETED
+2026-07-03 17:23:20 | Thumbnail (scene-Modus) gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1\thumbnail.jpg
+2026-07-03 17:23:20 | Thumbnail-Archiv: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\YT-Thumbnails_Banner\YouTube_Thumbnail_Bewusst_Einfach-51.jpg
+2026-07-03 17:23:20 | Ermittle Audiodauer...
+2026-07-03 17:23:20 | Baue Video mit FFmpeg...
+2026-07-03 17:23:20 | Stockclip-Modus: 18 einzigartige Clips, 82 Segmente insgesamt fuer 652.4 Sek. Audio.
+2026-07-03 17:29:16 | Musik geladen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\Musik\kyoto-garden.mp3
+2026-07-03 17:29:34 | Video fertig: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1\video_fertig.mp4
+2026-07-03 17:29:34 | Lade Video auf YouTube hoch (Kanal: BewusstEinfach)...
+2026-07-03 18:14:43 | === YouTube Producer gestartet ===
+2026-07-03 18:14:43 | Kein offenes Video gefunden. Nichts zu tun.
+2026-07-03 18:15:07 | === YouTube Producer gestartet ===
+2026-07-03 18:15:07 | Kein offenes Video gefunden. Nichts zu tun.
+2026-07-03 21:05:00 | === YouTube Producer gestartet ===
+2026-07-03 21:05:00 | Starte Produktion: Forscher bewiesen: Sterbende können noch hören. Was das bedeutet.
+2026-07-03 21:05:00 | Audio bereits vorhanden, ElevenLabs wird Ã¼bersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1\voiceover.mp3
+2026-07-03 21:05:00 | Kapitelmarken erstellt: 5 Kapitel, Gesamtdauer 652 Sek.
+2026-07-03 21:05:00 | Visueller Stil: Stockclips-Cluster - lade Pexels-Videoclips...
+2026-07-03 21:05:00 | Suche Pexels-Clips fuer 'hospital room window light'...
+2026-07-03 21:05:01 | Clip 1 bereits vorhanden, uebersprungen.
+2026-07-03 21:05:01 | Clip 2 bereits vorhanden, uebersprungen.
+2026-07-03 21:05:01 | Clip 3 bereits vorhanden, uebersprungen.
+2026-07-03 21:05:01 | Suche Pexels-Clips fuer 'hospice garden morning'...
+2026-07-03 21:05:01 | Clip 4 bereits vorhanden, uebersprungen.
+2026-07-03 21:05:01 | Clip 5 bereits vorhanden, uebersprungen.
+2026-07-03 21:05:01 | Clip 6 bereits vorhanden, uebersprungen.
+2026-07-03 21:05:01 | Suche Pexels-Clips fuer 'elderly hand holding'...
+2026-07-03 21:05:01 | Clip 7 bereits vorhanden, uebersprungen.
+2026-07-03 21:05:01 | Clip 8 bereits vorhanden, uebersprungen.
+2026-07-03 21:05:01 | Clip 9 bereits vorhanden, uebersprungen.
+2026-07-03 21:05:01 | Suche Pexels-Clips fuer 'quiet forest path morning'...
+2026-07-03 21:05:01 | Clip 10 bereits vorhanden, uebersprungen.
+2026-07-03 21:05:01 | Clip 11 bereits vorhanden, uebersprungen.
+2026-07-03 21:05:01 | Clip 12 bereits vorhanden, uebersprungen.
+2026-07-03 21:05:01 | Suche Pexels-Clips fuer 'misty lake sunrise'...
+2026-07-03 21:05:01 | Clip 13 bereits vorhanden, uebersprungen.
+2026-07-03 21:05:01 | Clip 14 bereits vorhanden, uebersprungen.
+2026-07-03 21:05:01 | Clip 15 bereits vorhanden, uebersprungen.
+2026-07-03 21:05:01 | Suche Pexels-Clips fuer 'pine forest sunlight'...
+2026-07-03 21:05:01 | Clip 16 bereits vorhanden, uebersprungen.
+2026-07-03 21:05:01 | Clip 17 bereits vorhanden, uebersprungen.
+2026-07-03 21:05:01 | Clip 18 bereits vorhanden, uebersprungen.
+2026-07-03 21:05:01 | Thumbnail bereits vorhanden, uebersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1\thumbnail.jpg
+2026-07-03 21:05:01 | Ermittle Audiodauer...
+2026-07-03 21:05:01 | Baue Video mit FFmpeg...
+2026-07-03 21:05:01 | Stockclip-Modus: 18 einzigartige Clips, 82 Segmente insgesamt fuer 652.4 Sek. Audio.
+2026-07-03 21:44:40 | === YouTube Producer gestartet ===
+2026-07-03 21:44:40 | Kein offenes Video gefunden. Nichts zu tun.
+2026-07-03 22:20:12 | === YouTube Producer gestartet ===
+2026-07-03 22:20:12 | Starte Produktion: Forscher bewiesen: Sterbende können noch hören. Was das bedeutet.
+2026-07-03 22:20:12 | Audio bereits vorhanden, ElevenLabs wird Ã¼bersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1\voiceover.mp3
+2026-07-03 22:20:12 | Kapitelmarken erstellt: 5 Kapitel, Gesamtdauer 652 Sek.
+2026-07-03 22:20:12 | Visueller Stil: Stockclips-Cluster - lade Pexels-Videoclips...
+2026-07-03 22:20:12 | Suche Pexels-Clips fuer 'hospital room window light'...
+2026-07-03 22:20:13 | Clip 1 bereits vorhanden, uebersprungen.
+2026-07-03 22:20:13 | Clip 2 bereits vorhanden, uebersprungen.
+2026-07-03 22:20:13 | Clip 3 bereits vorhanden, uebersprungen.
+2026-07-03 22:20:13 | Suche Pexels-Clips fuer 'hospice garden morning'...
+2026-07-03 22:20:13 | Clip 4 bereits vorhanden, uebersprungen.
+2026-07-03 22:20:13 | Clip 5 bereits vorhanden, uebersprungen.
+2026-07-03 22:20:13 | Clip 6 bereits vorhanden, uebersprungen.
+2026-07-03 22:20:13 | Suche Pexels-Clips fuer 'elderly hand holding'...
+2026-07-03 22:20:13 | Clip 7 bereits vorhanden, uebersprungen.
+2026-07-03 22:20:13 | Clip 8 bereits vorhanden, uebersprungen.
+2026-07-03 22:20:13 | Clip 9 bereits vorhanden, uebersprungen.
+2026-07-03 22:20:13 | Suche Pexels-Clips fuer 'quiet forest path morning'...
+2026-07-03 22:20:13 | Clip 10 bereits vorhanden, uebersprungen.
+2026-07-03 22:20:13 | Clip 11 bereits vorhanden, uebersprungen.
+2026-07-03 22:20:13 | Clip 12 bereits vorhanden, uebersprungen.
+2026-07-03 22:20:13 | Suche Pexels-Clips fuer 'misty lake sunrise'...
+2026-07-03 22:20:13 | Clip 13 bereits vorhanden, uebersprungen.
+2026-07-03 22:20:13 | Clip 14 bereits vorhanden, uebersprungen.
+2026-07-03 22:20:13 | Clip 15 bereits vorhanden, uebersprungen.
+2026-07-03 22:20:13 | Suche Pexels-Clips fuer 'pine forest sunlight'...
+2026-07-03 22:20:13 | Clip 16 bereits vorhanden, uebersprungen.
+2026-07-03 22:20:13 | Clip 17 bereits vorhanden, uebersprungen.
+2026-07-03 22:20:14 | Clip 18 bereits vorhanden, uebersprungen.
+2026-07-03 22:20:14 | Thumbnail bereits vorhanden, uebersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\STERBEN\Hoersinn_Video_1\thumbnail.jpg
+2026-07-03 22:20:14 | Ermittle Audiodauer...
+2026-07-03 22:20:14 | Baue Video mit FFmpeg...
+2026-07-03 22:20:14 | Stockclip-Modus: 18 einzigartige Clips, 82 Segmente insgesamt fuer 652.4 Sek. Audio.
