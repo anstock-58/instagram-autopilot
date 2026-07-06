@@ -6,7 +6,7 @@
 
 | Projekt | Status | Nächster Schritt |
 | --- | --- | --- |
-| Fable 5 Gratis-Fenster | ⏳ bis 22.06.2026 | Stärkstes Modell (eine Stufe über Opus), normal doppelter Tokenpreis ($10/$50 vs Opus $5/$25). Bis 22.06. kostenlos nutzbar — gezielt für anspruchsvolle Recherche, komplexe Planung und Content-Erstellung einsetzen. AB 23.06. wieder auf Opus zurück, sonst frisst es das Budget. Genaue Aktionsbedingungen im App-Hinweis prüfen |
+| Fable 5 Gratis-Fenster | ✅ abgelaufen (war bis 22.06.2026) | War stärkstes Modell (eine Stufe über Opus), normal doppelter Tokenpreis ($10/$50 vs Opus $5/$25). Fenster ist vorbei, seit 23.06. wieder regulär Opus/Sonnet — bei knappem Budget nicht extra dafür bezahlen |
 | KDP Buch „Das Seil loslassen" | eBook live ✅ / Taschenbuch live ✅ (09.06.2026) | eBook: amazon.de/dp/B0GZMZDK5Q (4,99€, KDP Select aktiv) — Taschenbuch: amazon.de/dp/B0H4PSGZLV (11,99€) — Cover-Größenfehler behoben mit `outputs/buch-02/fix-cover.js` — Amazon Ads Kampagne "Seil loslassen - Auto - DE" läuft (1€/Tag, automatisches Targeting, Standardgebot 0,30€, dynamische Gebote nur senken) — danach: Autorenexemplar bestellen |
 | ALFIMA Kurs "Nein aus Überzeugung" | Live ✅, Kursinhalt komplett ✅ (15.06.2026) | 37€ — Cross-sell Kopfklar 7€ — Upsell Kopf abschaltet 27€ — Link: https://sicher-weiterlesen.com/nein-aus-überzeugung — 5 Module + Bonus "Integration im Alltag" veröffentlicht, E-Mail-Begleitung nach Kauf eingerichtet (Automation 2291: Tag 1/4/7) — Promotion: @andi.mentalgesund — Account noch nicht in Blotato, in separater Session einrichten + Contentplan mit Kurs-Posts anlegen |
 | ALFIMA Kurs "Wenn dein Kopf nicht mehr abschaltet" | Bilder fertig ✅ | 30 Lektionsbilder + 6 Modul-Cover lokal generiert — manuell in ALFIMA hochladen |

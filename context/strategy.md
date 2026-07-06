@@ -1,6 +1,16 @@
 # Strategie
 
-## Aktueller Fokus
+## Priorität ab 06.07.2026: Hauptbusiness zuerst
+
+Andi hat klar benannt: **Standortcheck + Hauptbusiness „Neustart im Kopf"** (Funktionsmodus-Funnel für Männer 50+ über @business.und.spirit: Standortcheck kostenlos → Minikurs „Raus aus dem Funktionsmodus" → Hauptkurs „Neustart im Kopf") ist die Basis. Alles andere (YouTube-Kanäle, ki_support, andi.mit.system, andi.mentalgesund, Song-Geschenke, Dropservice, Barnaje) ist „on top" — sekundär, läuft automatisiert weiter, bekommt aber keine zusätzliche Fokus-Energie mehr, solange das Hauptbusiness nicht trägt.
+
+Der Funnel selbst ist technisch fertig und geprüft (Linkseite fin-affairs-ansto.systeme.io/2c4bee61 live, keine Platzhalter, siehe Funnel-Diagnose 15.06.2026 in current-data.md). Der Engpass liegt nachweislich oben im Funnel: kaum jemand klickt oder kommentiert trotz Reichweite (6 externe Klicks bei 1659 erreichten Konten in 30 Tagen). Nächster Hebel ist also Hook-/CTA-Stärke auf @business.und.spirit, nicht neue Technik oder neue Produkte.
+
+**Warum:** Andi macht aktuell aus keinem Projekt nennenswerten Umsatz und will das schnellstmöglich ändern (siehe Gespräch 06.07.2026). Fokus auf das eine funktionierende Angebot statt Breite ist der schnellste realistische Weg dahin.
+
+---
+
+## Bisheriger Fokus (drei Hauptstränge, weiterhin gültig als Kontext, aber Priorität siehe oben)
 
 Andi bündelt seine Energie auf drei Hauptstränge:
 
