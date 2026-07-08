@@ -111,3 +111,5 @@
 2026-07-07 17:51:14 | Share-URN: urn:li:share:7480287307766480896
 2026-07-07 17:51:14 | Erster Kommentar gesetzt.
 2026-07-07 17:51:14 | === Fertig ===
+2026-07-08 17:51:06 | === LinkedIn Trigger gestartet | 08.07.2026 | 17:51 | CSV: contentplan_linkedin_juli_v1.csv ===
+2026-07-08 17:51:06 | Kein geplanter LinkedIn-Post fuer heute (08.07.2026). Fertig.
