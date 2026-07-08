@@ -1,10 +1,8 @@
-name: Andi-mit-System Autopilot - Story (09:00)
+﻿name: Andi-mit-System Autopilot - Story (09:00)
 
 on:
-  schedule:
-    - cron: '3 8 * * *'    # 08:03 UTC = 10:03 CEST (täglich)
-    - cron: '7 9 * * *'    # Backup-Lauf (faengt verspaetete/uebersprungene GitHub-Schedule ab)
-    - cron: '53 10 * * *'    # Backup-Lauf (faengt verspaetete/uebersprungene GitHub-Schedule ab)
+  # PAUSIERT bis 04.08.2026 - Instagram Link-Sperre
+  # schedule:
   workflow_dispatch:
 
 jobs:
@@ -52,3 +50,4 @@ jobs:
             echo "Push fehlgeschlagen (Versuch $i/3), warte 10s..."
             sleep 10
           done
+

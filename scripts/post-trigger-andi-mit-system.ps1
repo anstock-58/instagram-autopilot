@@ -1,4 +1,4 @@
-# post-trigger-andi-mit-system.ps1
+﻿# post-trigger-andi-mit-system.ps1
 # Erstellt AI-Video mit Voiceover via Blotato Visual Templates API und postet auf Instagram @andi.mit.system.
 # Template: AI Video with AI Voice (ai-story-video)
 # Laeuft taeglich via GitHub Actions (08:55 CEST Story, 17:55 CEST Reel).
@@ -247,7 +247,7 @@ foreach ($row in $heuteRows) {
 
     # @andi.mit.system: immer INFO
     $keyword = "INFO"
-    $ctaScript = "Wenn dich das interessiert, schreib INFO. Ich schick dir alle Details zum Workshop. Oder klick den Link in meiner Bio."
+    $ctaScript = "Wenn dich das interessiert, schreib INFO. Ich schick dir alle Details zum Workshop."
     $voiceover = $voiceoverBase
 
     # FOTO-MODUS: Wenn Bild-URL direkt vorhanden, kein AI-Video rendern

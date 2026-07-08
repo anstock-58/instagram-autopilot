@@ -1,11 +1,12 @@
 name: Andi-mit-System Autopilot - Reel (18:00)
 
 on:
-  schedule:
-    - cron: '53 16 * * *'   # 16:53 UTC = 18:53 CEST (täglich)
-    - cron: '7 18 * * *'    # Backup-Lauf (faengt verspaetete/uebersprungene GitHub-Schedule ab)
-    - cron: '53 19 * * *'    # Backup-Lauf (faengt verspaetete/uebersprungene GitHub-Schedule ab)
-  workflow_dispatch:         # Manuell auslösbar über GitHub UI
+  # PAUSIERT bis 04.08.2026 - Instagram Link-Sperre auf @andi.mit.system
+  # schedule:
+  #   - cron: '53 16 * * *'
+  #   - cron: '7 18 * * *'
+  #   - cron: '53 19 * * *'
+  workflow_dispatch:
 
 jobs:
   post-reel:
