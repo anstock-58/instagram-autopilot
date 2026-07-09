@@ -113,3 +113,5 @@
 2026-07-07 17:51:14 | === Fertig ===
 2026-07-08 17:51:06 | === LinkedIn Trigger gestartet | 08.07.2026 | 17:51 | CSV: contentplan_linkedin_juli_v1.csv ===
 2026-07-08 17:51:06 | Kein geplanter LinkedIn-Post fuer heute (08.07.2026). Fertig.
+2026-07-09 17:51:08 | === LinkedIn Trigger gestartet | 09.07.2026 | 17:51 | CSV: contentplan_linkedin_juli_v1.csv ===
+2026-07-09 17:51:08 | Kein geplanter LinkedIn-Post fuer heute (09.07.2026). Fertig.
