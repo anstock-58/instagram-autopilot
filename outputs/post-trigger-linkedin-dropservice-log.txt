@@ -58,3 +58,14 @@
 2026-07-08 17:51:07 | Kein geplanter Dropservice-Post fuer heute (08.07.2026). Fertig.
 2026-07-09 17:51:09 | === Dropservice LinkedIn Trigger | 09.07.2026 | 17:51 | CSV: contentplan_linkedin_dropservice_juli_v1.csv ===
 2026-07-09 17:51:09 | Kein geplanter Dropservice-Post fuer heute (09.07.2026). Fertig.
+2026-07-10 17:51:14 | === Dropservice LinkedIn Trigger | 10.07.2026 | 17:51 | CSV: contentplan_linkedin_dropservice_juli_v1.csv ===
+2026-07-10 17:51:14 | 1 Dropservice-Post(s) fuer heute gefunden.
+2026-07-10 17:51:14 | Post faellig: Text | 17:55
+2026-07-10 17:51:14 | Sende an Blotato Dropservice: 387 Zeichen, Bild: nein
+2026-07-10 17:51:14 | Dropservice LinkedIn gepostet. SubmissionId: 13851f18-31d6-4895-a9dd-820b5334337a
+2026-07-10 17:51:14 | Status auf 'Gepostet' gesetzt.
+2026-07-10 17:51:14 | Warte auf neuen LinkedIn-Post (max 3 Min)...
+2026-07-10 17:51:19 | Post-URL gefunden (1): https://linkedin.com/feed/update/urn:li:share:7481374488660590592
+2026-07-10 17:51:19 | Share-URN: urn:li:share:7481374488660590592
+2026-07-10 17:51:20 | Erster Kommentar gesetzt.
+2026-07-10 17:51:20 | === Fertig ===
