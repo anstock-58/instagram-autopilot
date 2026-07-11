@@ -1,10 +1,11 @@
 name: Song-Geschenke Autopilot - Story (09:00)
 
 on:
-  schedule:
-    - cron: '7 7 * * *'     # 07:07 UTC = 09:07 CEST (täglich)
-    - cron: '41 8 * * *'    # Backup-Lauf (faengt verspaetete/uebersprungene GitHub-Schedule ab)
-    - cron: '27 10 * * *'   # Backup-Lauf (faengt verspaetete/uebersprungene GitHub-Schedule ab)
+  # PAUSIERT bis 16.07.2026 - Blotato Credits aufgebraucht
+  # schedule:
+  #   - cron: '7 7 * * *'     # 07:07 UTC = 09:07 CEST (täglich)
+  #   - cron: '41 8 * * *'    # Backup-Lauf
+  #   - cron: '27 10 * * *'   # Backup-Lauf
   workflow_dispatch:
 
 jobs:
