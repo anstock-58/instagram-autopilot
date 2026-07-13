@@ -119,3 +119,14 @@
 2026-07-11 17:51:05 | Kein geplanter LinkedIn-Post fuer heute (11.07.2026). Fertig.
 2026-07-12 17:51:05 | === LinkedIn Trigger gestartet | 12.07.2026 | 17:51 | CSV: contentplan_linkedin_juli_v1.csv ===
 2026-07-12 17:51:05 | Kein geplanter LinkedIn-Post fuer heute (12.07.2026). Fertig.
+2026-07-13 17:51:15 | === LinkedIn Trigger gestartet | 13.07.2026 | 17:51 | CSV: contentplan_linkedin_juli_v1.csv ===
+2026-07-13 17:51:15 | 1 LinkedIn-Post(s) fuer heute gefunden.
+2026-07-13 17:51:15 | Post faellig: Foto | 17:55
+2026-07-13 17:51:15 | Sende an Blotato LinkedIn: 457 Zeichen, Bild: ja
+2026-07-13 17:51:16 | LinkedIn gepostet. SubmissionId: 64a42bef-1b96-4ccd-9fc3-c6a1253a53c4
+2026-07-13 17:51:16 | Status auf 'Gepostet' gesetzt.
+2026-07-13 17:51:16 | Warte auf neuen LinkedIn-Post (max 3 Min)...
+2026-07-13 17:51:21 | Post-URL gefunden (1): https://linkedin.com/feed/update/urn:li:share:7482461671068983297
+2026-07-13 17:51:21 | Share-URN: urn:li:share:7482461671068983297
+2026-07-13 17:51:22 | Erster Kommentar gesetzt.
+2026-07-13 17:51:22 | === Fertig ===
