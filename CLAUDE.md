@@ -18,6 +18,8 @@ Dies ist ein **Claude Workspace Template** — eine strukturierte Umgebung, die 
 
 **Die Datei `reference/content-filter.md` ist der Pflichtcheck vor jeder Content-Erstellung. Vor jedem Post, jedem Skript, jeder Caption wird diese Datei konsultiert. Kein Inhalt wird ohne diesen Check erstellt.**
 
+**Die Datei `reference/kdp-nischen-analyse-prompt.md` ist der Pflicht-Workflow für jede Buch-Nischenrecherche. Sagt Andi „recherchiere die Nische zu Thema X" oder startet ein neues Buchprojekt, wird diese Vorlage automatisch und vollständig angewendet (alle 8 Kriterien, Ampel-Bewertung, Abbruch-Kriterien) — ohne dass er sie erwähnen muss. Recherche läuft über den Chrome-Browser-Tab auf amazon.de, nicht über WebFetch (Amazon blockt).**
+
 ---
 
 ## Pflicht: Kontext sofort aktualisieren

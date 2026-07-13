@@ -289,8 +289,8 @@ dass ihre Augen verschwanden.
 Deine Gefühle sind Wolken.
 Sogar dein Name ist eine Wolke.
 
-Aber du —
-du bist der Himmel dahinter."
+Aber du:
+Du bist der Himmel dahinter."
 
 **Illustrationshinweis:** Nahaufnahme von Omas strahlendem Lächeln. Daneben das Kind mit langsam aufgehendem Verstehen. Zartes Leuchten um beide Figuren.
 
@@ -372,8 +372,8 @@ Du bist der, der schaut.
 
 ### SEITE 30–31
 **Text:**
-Und dieser Schauende in dir —
-das ist das Größte, was es gibt.
+Und dieser Schauende in dir
+ist das Größte, was es gibt.
 
 Stiller als die Stille.
 Weiter als die Welt.
@@ -441,7 +441,7 @@ Er war immer da.
 
 Wenn du dieses Buch vorliest, lies langsam.
 Die Pausen gehören dazu.
-Und wenn dich an einer Stelle etwas leise berührt —
+Und wenn dich an einer Stelle etwas leise berührt,
 dann hat der Himmel in dir gerade kurz durch die Wolken geschaut.
 
 **Illustrationshinweis:** Schlicht, Text auf hellem Grund. Eventuell ein kleines Motiv: eine sich öffnende Wolkendecke mit einem Streifen Blau.

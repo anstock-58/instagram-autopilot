@@ -24,7 +24,7 @@ Hauptprojekte aktuell:
 
 YouTube: Deutsche Bürger ab fünfzig Jahren, Männer, Selbstständige, Unternehmer
 Leadgewinnung: Mittelstand, insbesondere Handwerk – über Facebook, WhatsApp, persönliches Umfeld
-"Neustart im Kopf": Männer, Unternehmer, Selbstständige, Führungskräfte
+"Neustart im Kopf": Unternehmer und Führungskräfte ab 50
 
 ---
 
