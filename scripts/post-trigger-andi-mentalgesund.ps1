@@ -313,34 +313,34 @@ foreach ($row in $heuteRows) {
 
     # CTA passend zum Link der jeweiligen Zeile waehlen, mit Varianten gegen Wiederholung
     $ctaVarianten = @{
-        "standortcheck"          = @(
-            "Schreib KLARHEIT, dann schick ich dir den kostenlosen Standortcheck."
-            "Wenn du da tiefer reinschauen willst, schreib KLARHEIT. Du bekommst den kostenlosen Standortcheck."
-        )
         "kopf-schaltet-nicht-ab"  = @(
-            "Es gibt einen Minikurs genau dafür. Schreib KLARHEIT, dann schick ich ihn dir."
+            "Es gibt einen Minikurs genau dafuer. Schreib KLARHEIT, dann schick ich ihn dir."
             "Schreib KLARHEIT, dann zeig ich dir den Minikurs dazu."
         )
         "nein-aus-ueberzeugung"   = @(
             "Schreib KLARHEIT, dann zeig ich dir den Weg dahin."
             "Es gibt einen Minikurs genau dazu. Schreib KLARHEIT, dann schick ich ihn dir."
         )
-        "raus-starten"            = @(
-            "Schreib KLARHEIT für den Minikurs, der genau da ansetzt."
-            "Es gibt drei kurze Module dazu. Schreib KLARHEIT, dann schick ich sie dir."
+        "das-seil-loslassen"      = @(
+            "Schreib KLARHEIT, dann schick ich dir den Link zum Buch."
+            "Das Buch dazu heisst Das Seil loslassen. Schreib KLARHEIT, dann schick ich dir den Link."
         )
-        "neustart-kurs"           = @(
-            "Schreib KLARHEIT, dann zeig ich dir wie das geht."
-            "Schreib KLARHEIT für mehr zum Kurs dazu."
+        "dein-gehirn"             = @(
+            "Schreib KLARHEIT, dann schick ich dir den Link zum Buch."
+            "Das Buch dazu heisst Dein Gehirn luegt dich an. Schreib KLARHEIT, dann schick ich dir den Link."
         )
     }
 
-    $ctaKey = "standortcheck"
+    $ctaKey = "generisch"
     foreach ($key in $ctaVarianten.Keys) {
         if ($link -match [regex]::Escape($key)) { $ctaKey = $key; break }
     }
-    $varianten = $ctaVarianten[$ctaKey]
-    $ctaScript = $varianten[$jetzt.Day % $varianten.Count]
+    if ($ctaKey -eq "generisch") {
+        $ctaScript = if ($jetzt.Day % 2 -eq 0) { "Wenn das bei dir auch so ist, schreib KLARHEIT in die Kommentare." } else { "Schreib KLARHEIT, ich melde mich bei dir." }
+    } else {
+        $varianten = $ctaVarianten[$ctaKey]
+        $ctaScript = $varianten[$jetzt.Day % $varianten.Count]
+    }
     $voiceover = Optimize-ForTTS -text $voiceoverBase
 
     # FOTO-MODUS: Wenn Bild-URL direkt vorhanden, kein AI-Video rendern (spart Credits)
