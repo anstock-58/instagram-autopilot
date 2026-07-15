@@ -177,7 +177,7 @@ Max. Warenkorbwert: 151 €. Plattform: ALFIMA. Komplette Farm inkl. E-Mail-Sequ
 ## Offene manuelle Aufgaben
 
 - **DRINGEND:** LinkedIn Token erneuern vor dem 18. Juli 2026 (OAuth-Flow)
-- vierunddreißig Lektionsbilder + sieben Cover für Kopf abschaltet manuell in ALFIMA hochladen (Status unbekannt — prüfen)
+- vierunddreißig Lektionsbilder + sieben Cover für Kopf abschaltet: in ALFIMA hochgeladen ✅
 - Workbook für Kopf abschaltet erstellen (Inhalt vorhanden in outputs/buch-kdp/11-anhang.md)
 - Sichtbarkeits-Routine: Facebook-Gruppen beigetreten ✅, täglich fünfzehn bis zwanzig Minuten Kommentar-Engagement läuft (siehe reference/sichtbarkeits-routine.md)
 - Coaching-Bot live ✅ — https://ansto-finaffairs.com/selbstcheck/ (Netlify: luminous-squirrel-7c08f2.netlify.app)
