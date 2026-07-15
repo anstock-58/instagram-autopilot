@@ -329,6 +329,10 @@ foreach ($row in $heuteRows) {
             "Schreib KLARHEIT, dann schick ich dir den Link zum Buch."
             "Das Buch dazu heisst Dein Gehirn luegt dich an. Schreib KLARHEIT, dann schick ich dir den Link."
         )
+        "selbstcheck"             = @(
+            "Mach den kostenlosen Selbstcheck. Den Link findest du in meiner Bio."
+            "Vier Fragen, zwei Minuten, kostenlos. Den Selbstcheck findest du unter meinem Bio-Link."
+        )
     }
 
     $ctaKey = "generisch"

@@ -290,9 +290,13 @@ foreach ($row in $heuteRows) {
     $voiceoverBase = $voiceoverBase -replace '#\S+', ''
     $voiceoverBase = $voiceoverBase.Trim()
 
-    # @business.und.spirit: CHECK -> Standortcheck
+    # @business.und.spirit: CHECK -> Standortcheck; Selbstcheck -> Bio-Link
     $keyword = "CHECK"
-    $ctaScript = "Schreib CHECK in die Kommentare, dann schick ich dir den kostenlosen Standortcheck direkt zu."
+    if ($link -match "selbstcheck") {
+        $ctaScript = "Den Selbstcheck findest du unter meinem Bio-Link. Vier Fragen, zwei Minuten, kostenlos."
+    } else {
+        $ctaScript = "Schreib CHECK in die Kommentare, dann schick ich dir den kostenlosen Standortcheck direkt zu."
+    }
     $voiceover = $voiceoverBase
 
     # FOTO-MODUS: Wenn Bild-URL direkt vorhanden, kein AI-Video rendern (spart Credits)
