@@ -1,11 +1,10 @@
 name: KI-Support Autopilot - Story (09:00)
 
 on:
-  # PAUSIERT bis 16.07.2026 - Blotato Credits aufgebraucht
-  # schedule:
-  #   - cron: '43 7 * * *'    # 07:43 UTC = 09:43 CEST (täglich)
-  #   - cron: '57 8 * * *'    # Backup-Lauf
-  #   - cron: '43 10 * * *'   # Backup-Lauf
+  schedule:
+    - cron: '43 7 * * *'    # 07:43 UTC = 09:43 CEST (täglich)
+    - cron: '57 8 * * *'    # Backup-Lauf
+    - cron: '43 10 * * *'   # Backup-Lauf
   workflow_dispatch:
 
 jobs:

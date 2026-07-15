@@ -1,11 +1,10 @@
 name: KI-Support Autopilot - Reel (18:00)
 
 on:
-  # PAUSIERT bis 16.07.2026 - Blotato Credits aufgebraucht
-  # schedule:
-  #   - cron: '33 16 * * *'   # 16:33 UTC = 18:33 CEST (täglich)
-  #   - cron: '57 17 * * *'   # Backup-Lauf
-  #   - cron: '43 19 * * *'   # Backup-Lauf
+  schedule:
+    - cron: '33 16 * * *'   # 16:33 UTC = 18:33 CEST (täglich)
+    - cron: '57 17 * * *'   # Backup-Lauf
+    - cron: '43 19 * * *'   # Backup-Lauf
   workflow_dispatch:         # Manuell auslösbar über GitHub UI
 
 jobs:
