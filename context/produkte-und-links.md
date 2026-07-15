@@ -29,7 +29,7 @@ Alle eigenen Produkte und Affiliate-Links. Diese Datei ist die einzige Quelle de
 | Produkt | Preis | Beschreibung | Link |
 | --- | --- | --- | --- |
 | Raus aus dem Funktionsmodus | 37 € | Einstiegskurs für Selbstständige und Unternehmer 50+. Drei Module: Funktionsmodus verstehen, Mechanismen erkennen, Übergang vom Funktionieren zum Fühlen. Einstieg in den Hauptkurs Neustart im Kopf. | https://sicher-weiterlesen.com/raus-starten |
-| Wenn dein Kopf nicht mehr abschaltet | 37 € | 7-Tage-Kurs für Männer 50+. Gedanken-Stop, 3-2-1-Abschalt-Ritual, Atem-Reset, Brain-Dump und Schlaf-Prime-Routine. Für alle die nach Feierabend nicht abschalten können. | https://alfima.com/andreass95/wenn-dein-kopf-nicht-mehr-abschaltet |
+| Wenn dein Kopf nicht mehr abschaltet | 37 € | 7-Tage-Kurs für Männer 50+. Gedanken-Stop, 3-2-1-Abschalt-Ritual, Atem-Reset, Brain-Dump und Schlaf-Prime-Routine. Für alle die nach Feierabend nicht abschalten können. | https://sicher-weiterlesen.com/kopf-schaltet-nicht-ab |
 | Nein aus Überzeugung | 37 € | 5-Tage-Kurs über Grenzen setzen. Persönliche Muster erkennen, Auslöser verstehen, Wurzel finden, Drei-Sekunden-Pause als Werkzeug, erstes echtes Nein sagen. | https://sicher-weiterlesen.com/nein-aus-überzeugung |
 
 ---
