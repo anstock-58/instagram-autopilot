@@ -293,7 +293,7 @@ foreach ($row in $heuteRows) {
     # @business.und.spirit: CHECK -> Standortcheck; Selbstcheck -> Bio-Link
     $keyword = "CHECK"
     if ($link -match "selbstcheck") {
-        $ctaScript = "Den Selbstcheck findest du unter meinem Bio-Link. Vier Fragen, zwei Minuten, kostenlos."
+        $ctaScript = "Den Sofortcheck findest du unter meinem Bio-Link. Vier Fragen, zwei Minuten, kostenlos."
     } else {
         $ctaScript = "Schreib CHECK in die Kommentare, dann schick ich dir den kostenlosen Standortcheck direkt zu."
     }
