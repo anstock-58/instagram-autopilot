@@ -142,3 +142,5 @@
   "code": 5002
 }
 2026-07-15 17:51:08 | === Fertig ===
+2026-07-16 17:50:52 | === LinkedIn Trigger gestartet | 16.07.2026 | 17:50 | CSV: contentplan_linkedin_juli_v1.csv ===
+2026-07-16 17:50:52 | Kein geplanter LinkedIn-Post fuer heute (16.07.2026). Fertig.
