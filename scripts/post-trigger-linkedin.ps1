@@ -1,29 +1,25 @@
 # post-trigger-linkedin.ps1
-# Postet LinkedIn-Posts via Blotato REST API und setzt automatisch den ersten Kommentar.
+# Postet LinkedIn-Posts fuer Neustart-im-Kopf-Profil direkt via LinkedIn API.
 # Laeuft via GitHub Actions (workflow_dispatch, getriggert von cron-job.org).
 #
 # Benoetigte GitHub Secrets:
-#   BLOTATO_API_KEY       -- Blotato API Key
 #   LINKEDIN_ACCESS_TOKEN -- LinkedIn OAuth Token (alle 2 Monate erneuern)
 #   LINKEDIN_PERSON_URN   -- urn:li:person:TVPJInaVk9
 
 # ============================================================
 # KONFIGURATION
 # ============================================================
-$basePath   = if ($env:GITHUB_WORKSPACE) { $env:GITHUB_WORKSPACE } else { "C:\Users\andre\claude-workspace-vorlage" }
+$basePath    = if ($env:GITHUB_WORKSPACE) { $env:GITHUB_WORKSPACE } else { "C:\Users\andre\claude-workspace-vorlage" }
 $outputsPath = Join-Path $basePath "outputs"
-$logPath    = Join-Path $outputsPath "post-trigger-linkedin-log.txt"
-$archivPath = Join-Path $outputsPath "post-archiv-linkedin.csv"
+$logPath     = Join-Path $outputsPath "post-trigger-linkedin-log.txt"
+$archivPath  = Join-Path $outputsPath "post-archiv-linkedin.csv"
 
-# CSV automatisch nach aktuellem Monat waehlen
 $monatMap = @{1="januar";2="februar";3="maerz";4="april";5="mai";6="juni";
               7="juli";8="august";9="september";10="oktober";11="november";12="dezember"}
 $monat    = $monatMap[(Get-Date).Month]
 $csvNamen = @(
     "contentplan_linkedin_${monat}_v2.csv",
-    "contentplan_linkedin_${monat}_v1.csv",
-    "contentplan_${monat}_v2.csv",
-    "contentplan_${monat}_v1.csv"
+    "contentplan_linkedin_${monat}_v1.csv"
 )
 $csvPath = $null
 foreach ($name in $csvNamen) {
@@ -35,19 +31,11 @@ if (-not $csvPath) {
     exit 1
 }
 
-# API-Zugangsdaten aus Env-Vars (GitHub Secrets)
-$apiKey       = if ($env:BLOTATO_API_KEY) { $env:BLOTATO_API_KEY } else { "blt_KiCyq1rBxLUqnWdUJaH6Qaij4V07Q6wvcIH8/aQLrXA=" }
-$liToken      = if ($env:LINKEDIN_ACCESS_TOKEN) { $env:LINKEDIN_ACCESS_TOKEN } else { "AQUG9awTudfi_YV61hZFa5WQmwyYTkc68sMtXGVkbAifgc6fhR1BLWJmW_qp2HPx2zLVci5UAHI7KTgPzrfUhAx-dnShKC3jUYo0Na1DzHX3DZTLCHHEuOlmBlw82E9BZIYe9Z426gN7oVN5uM2g4Mu1CVXKkQKDnPQs_XiaiQZGts-rv8UbxMBuMpSWe9MpETWkMR-yP26tWmzYFQz-pRgeKcPTvaJ8jftWbFDvpGuwzsJDDAyxV2Q2XpPaAhpwCC3vGH7UHHAfnsKiQKMuVhlPR4_QEkkHW-BfZQofcTxXiBE0-rs8fautgrzySu7QqwiZAwhHOeAwpsIjKj9X4RvRboMIvg" }
-$liPersonUrn  = if ($env:LINKEDIN_PERSON_URN)   { $env:LINKEDIN_PERSON_URN }   else { "urn:li:person:TVPJInaVk9" }
-$apiBase      = "https://backend.blotato.com/v2"
-$accountIdLI  = "21656"
+$liToken     = if ($env:LINKEDIN_ACCESS_TOKEN) { $env:LINKEDIN_ACCESS_TOKEN } else { "" }
+$liPersonUrn = if ($env:LINKEDIN_PERSON_URN)   { $env:LINKEDIN_PERSON_URN }   else { "urn:li:person:TVPJInaVk9" }
 
-$ersterKommentar = "Mach den Standort-Check und erkenne, ob du im Funktionsmodus bist. Hier kannst du ihn kostenlos herunterladen: https://sicher-weiterlesen.com/standortcheck"
-
-# Pause-Datei (lokal oder im Repo)
-$pauseLI = Join-Path $outputsPath "pause_linkedin.txt"
-
-# Zeitfenster: -30 bis +90 Minuten (grosszuegig fuer GitHub Actions Delays)
+$ersterKommentar  = "Mach den Standort-Check und erkenne, ob du im Funktionsmodus bist. Hier kannst du ihn kostenlos herunterladen: https://sicher-weiterlesen.com/standortcheck"
+$pauseLI          = Join-Path $outputsPath "pause_linkedin.txt"
 $zeitfensterFrueh = -30
 $zeitfensterSpaet = 90
 
@@ -64,83 +52,113 @@ function Write-Log {
 function Post-LinkedIn {
     param([string]$caption, [string]$mediaUrl)
 
-    $payloadObj = @{
-        post = @{
-            accountId = $accountIdLI
-            content   = @{
-                text     = $caption
-                platform = "linkedin"
+    $authHeaders = @{
+        "Authorization"             = "Bearer $liToken"
+        "Content-Type"              = "application/json"
+        "X-Restli-Protocol-Version" = "2.0.0"
+    }
+
+    $assetUrn = $null
+
+    if ($mediaUrl -and $mediaUrl.Trim() -ne "") {
+        # Schritt 1: Upload bei LinkedIn registrieren
+        $registerBody = @{
+            registerUploadRequest = @{
+                recipes              = @("urn:li:digitalmediaRecipe:feedshare-image")
+                owner                = $liPersonUrn
+                serviceRelationships = @(@{
+                    relationshipType = "OWNER"
+                    identifier       = "urn:li:userGeneratedContent"
+                })
             }
-            target = @{ targetType = "linkedin" }
+        } | ConvertTo-Json -Depth 10
+        $registerBytes = [System.Text.Encoding]::UTF8.GetBytes($registerBody)
+
+        try {
+            $registerResponse = Invoke-RestMethod -Uri "https://api.linkedin.com/v2/assets?action=registerUpload" `
+                -Method POST -Headers $authHeaders -Body $registerBytes -ErrorAction Stop
+            $uploadUrl = $registerResponse.value.uploadMechanism.'com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest'.uploadUrl
+            $assetUrn  = $registerResponse.value.asset
+            Write-Log "Bild-Upload registriert. Asset: $assetUrn"
+        } catch {
+            Write-Log "FEHLER beim Registrieren des Bild-Uploads: $_"
+            return $null
+        }
+
+        # Schritt 2: Bild herunterladen und zu LinkedIn hochladen
+        try {
+            $tempFile  = [System.IO.Path]::Combine([System.IO.Path]::GetTempPath(), ([System.Guid]::NewGuid().ToString() + ".jpg"))
+            Invoke-WebRequest -Uri $mediaUrl.Trim() -OutFile $tempFile -ErrorAction Stop
+            $imageBytes = [System.IO.File]::ReadAllBytes($tempFile)
+            Remove-Item -LiteralPath $tempFile -Force
+
+            Invoke-RestMethod -Uri $uploadUrl -Method PUT -Body $imageBytes `
+                -ContentType "image/jpeg" -ErrorAction Stop | Out-Null
+            Write-Log "Bild hochgeladen ($($imageBytes.Length) Bytes)."
+        } catch {
+            Write-Log "FEHLER beim Bild-Upload: $_"
+            return $null
         }
     }
-    if ($mediaUrl -and $mediaUrl.Trim() -ne "") {
-        $payloadObj.post.content.mediaUrls = @($mediaUrl.Trim())
+
+    # Schritt 3: Post erstellen
+    if ($assetUrn) {
+        $postObj = @{
+            author          = $liPersonUrn
+            lifecycleState  = "PUBLISHED"
+            specificContent = @{
+                "com.linkedin.ugc.ShareContent" = @{
+                    shareCommentary    = @{ text = $caption }
+                    shareMediaCategory = "IMAGE"
+                    media              = @(@{
+                        status      = "READY"
+                        description = @{ text = "" }
+                        media       = $assetUrn
+                        title       = @{ text = "" }
+                    })
+                }
+            }
+            visibility = @{ "com.linkedin.ugc.MemberNetworkVisibility" = "PUBLIC" }
+        }
     } else {
-        $payloadObj.post.content.mediaUrls = @()
+        $postObj = @{
+            author          = $liPersonUrn
+            lifecycleState  = "PUBLISHED"
+            specificContent = @{
+                "com.linkedin.ugc.ShareContent" = @{
+                    shareCommentary    = @{ text = $caption }
+                    shareMediaCategory = "NONE"
+                }
+            }
+            visibility = @{ "com.linkedin.ugc.MemberNetworkVisibility" = "PUBLIC" }
+        }
     }
 
-    $json      = $payloadObj | ConvertTo-Json -Depth 10 -Compress
-    $jsonBytes = [System.Text.Encoding]::UTF8.GetBytes($json)
-    $headers   = @{
-        "blotato-api-key" = $apiKey
-        "Content-Type"    = "application/json; charset=utf-8"
-    }
-
-    Write-Log "Sende an Blotato LinkedIn: $($caption.Length) Zeichen, Bild: $(if($mediaUrl -and $mediaUrl.Trim() -ne ''){'ja'}else{'nein'})"
+    $postBytes = [System.Text.Encoding]::UTF8.GetBytes(($postObj | ConvertTo-Json -Depth 10))
 
     try {
-        $response = Invoke-RestMethod -Uri "$apiBase/posts" -Method POST -Headers $headers -Body $jsonBytes -ErrorAction Stop
-        Write-Log "LinkedIn gepostet. SubmissionId: $($response.postSubmissionId)"
-        return $response.postSubmissionId
+        $response = Invoke-RestMethod -Uri "https://api.linkedin.com/v2/ugcPosts" `
+            -Method POST -Headers $authHeaders -Body $postBytes -ErrorAction Stop
+        Write-Log "LinkedIn gepostet. URN: $($response.id)"
+        return $response.id
     } catch {
         Write-Log "FEHLER beim LinkedIn-Post: $_"
         return $null
     }
 }
 
-function Get-NeuesterLinkedInPostUrn {
-    # Holt die Share-URN des neuesten LinkedIn-Posts via Blotato GET /v2/posts
-    # Wartet bis zu 3 Minuten auf den neuen Post
-    $headers = @{ "blotato-api-key" = $apiKey }
-    $maxWait = 36   # 36 x 5 Sekunden = 3 Minuten
-    Write-Log "Warte auf neuen LinkedIn-Post (max 3 Min)..."
-
-    for ($i = 1; $i -le $maxWait; $i++) {
-        Start-Sleep -Seconds 5
-        try {
-            $r = Invoke-RestMethod -Uri "$apiBase/posts?limit=5" -Method GET -Headers $headers -ErrorAction Stop
-            $liPost = $r.items | Where-Object { $_.platform -eq "linkedin" -and $_.state.type -eq "published" -and $_.state.postUrl } | Select-Object -First 1
-            if ($liPost) {
-                $postUrl = $liPost.state.postUrl
-                Write-Log "Post-URL gefunden ($i): $postUrl"
-                # URN aus URL extrahieren: https://linkedin.com/feed/update/urn:li:share:XXXX
-                if ($postUrl -match "urn:li:[^/\s?&]+") {
-                    return $Matches[0]
-                }
-            }
-        } catch {
-            Write-Log "Fehler beim Blotato-Status-Check: $_"
-        }
-    }
-    Write-Log "Timeout: LinkedIn-Post-URL nach 3 Minuten nicht gefunden."
-    return $null
-}
-
 function Post-LinkedInKommentar {
     param([string]$shareUrn, [string]$kommentarText)
 
     $urnEncoded = [Uri]::EscapeDataString($shareUrn)
-    $bodyObj = @{
+    $bodyBytes  = [System.Text.Encoding]::UTF8.GetBytes((@{
         actor   = $liPersonUrn
         message = @{ text = $kommentarText }
-    }
-    $bodyJson  = $bodyObj | ConvertTo-Json -Compress
-    $bodyBytes = [System.Text.Encoding]::UTF8.GetBytes($bodyJson)
-    $headers   = @{
-        "Authorization"              = "Bearer $liToken"
-        "Content-Type"               = "application/json"
-        "X-Restli-Protocol-Version"  = "2.0.0"
+    } | ConvertTo-Json -Compress))
+    $headers = @{
+        "Authorization"             = "Bearer $liToken"
+        "Content-Type"              = "application/json"
+        "X-Restli-Protocol-Version" = "2.0.0"
     }
 
     try {
@@ -161,9 +179,8 @@ function Post-LinkedInKommentar {
 $heute = (Get-Date).ToString("dd.MM.yyyy")
 $jetzt = Get-Date
 
-Write-Log "=== LinkedIn Trigger gestartet | $heute | $($jetzt.ToString('HH:mm')) | CSV: $(Split-Path $csvPath -Leaf) ==="
+Write-Log "=== LinkedIn Trigger | $heute | $($jetzt.ToString('HH:mm')) | CSV: $(Split-Path $csvPath -Leaf) ==="
 
-# Pause-Check
 if (Test-Path $pauseLI) {
     Write-Log "LinkedIn pausiert (pause_linkedin.txt). Abbruch."
     exit 0
@@ -181,18 +198,17 @@ $heuteRows = $rows | Where-Object {
 }
 
 if (-not $heuteRows) {
-    Write-Log "Kein geplanter LinkedIn-Post fuer heute ($heute). Fertig."
+    Write-Log "Kein geplanter Post fuer heute ($heute). Fertig."
     exit 0
 }
 
-Write-Log "$(@($heuteRows).Count) LinkedIn-Post(s) fuer heute gefunden."
+Write-Log "$(@($heuteRows).Count) Post(s) fuer heute gefunden."
 
 foreach ($row in $heuteRows) {
 
     $typ     = $row.'Post-Typ'.Trim()
     $uhrzeit = $row.Uhrzeit.Trim()
 
-    # Zeitfenster pruefen
     try {
         $postZeit    = [datetime]::ParseExact("$heute $uhrzeit", "dd.MM.yyyy HH:mm", $null)
         $diffMinuten = ($jetzt - $postZeit).TotalMinutes
@@ -215,18 +231,15 @@ foreach ($row in $heuteRows) {
         continue
     }
 
-    # Posten
-    $submissionId = Post-LinkedIn -caption $caption -mediaUrl $mediaUrl
+    $shareUrn = Post-LinkedIn -caption $caption -mediaUrl $mediaUrl
 
-    if ($submissionId) {
-        # Archiv
+    if ($shareUrn) {
         if (-not (Test-Path $archivPath)) {
             "Zeitstempel,Datum,Uhrzeit,Post-Typ,Plattform,Media-URL,Caption" | Out-File -FilePath $archivPath -Encoding UTF8
         }
         "`"$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')`",`"$heute`",`"$uhrzeit`",`"$typ`",`"LinkedIn`",`"$mediaUrl`",`"$($caption -replace '"','""')`"" |
             Out-File -FilePath $archivPath -Append -Encoding UTF8
 
-        # Status setzen
         $rows | ForEach-Object {
             if ($_.Datum -eq $heute -and $_.Uhrzeit -eq $uhrzeit -and $_.Plattform -eq "LinkedIn" -and $_.Status -eq "Geplant") {
                 $_.Status = "Gepostet"
@@ -235,14 +248,7 @@ foreach ($row in $heuteRows) {
         $rows | Export-Csv -Path $csvPath -Delimiter "," -Encoding UTF8 -NoTypeInformation
         Write-Log "Status auf 'Gepostet' gesetzt."
 
-        # Erster Kommentar
-        $shareUrn = Get-NeuesterLinkedInPostUrn
-        if ($shareUrn) {
-            Write-Log "Share-URN: $shareUrn"
-            Post-LinkedInKommentar -shareUrn $shareUrn -kommentarText $ersterKommentar
-        } else {
-            Write-Log "WARNUNG: Kein erster Kommentar gesetzt -- URN nicht gefunden."
-        }
+        Post-LinkedInKommentar -shareUrn $shareUrn -kommentarText $ersterKommentar
     }
 }
 
