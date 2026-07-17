@@ -144,3 +144,14 @@
 2026-07-15 17:51:08 | === Fertig ===
 2026-07-16 17:50:52 | === LinkedIn Trigger gestartet | 16.07.2026 | 17:50 | CSV: contentplan_linkedin_juli_v1.csv ===
 2026-07-16 17:50:52 | Kein geplanter LinkedIn-Post fuer heute (16.07.2026). Fertig.
+2026-07-17 17:50:49 | === LinkedIn Trigger | 17.07.2026 | 17:50 | CSV: contentplan_linkedin_juli_v1.csv ===
+2026-07-17 17:50:49 | 1 Post(s) fuer heute gefunden.
+2026-07-17 17:50:49 | Post faellig: Foto | 17:55
+2026-07-17 17:50:49 | FEHLER beim Registrieren des Bild-Uploads: 
+{
+  "status": 401,
+  "serviceErrorCode": 65602,
+  "code": "EXPIRED_ACCESS_TOKEN",
+  "message": "The token used in the request has expired"
+}
+2026-07-17 17:50:49 | === Fertig ===
