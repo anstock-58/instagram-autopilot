@@ -101,3 +101,5 @@
   "message": "The token used in the request has expired"
 }
 2026-07-17 17:50:50 | === Fertig ===
+2026-07-18 17:50:40 | === Dropservice LinkedIn Trigger | 18.07.2026 | 17:50 | CSV: contentplan_linkedin_dropservice_juli_v1.csv ===
+2026-07-18 17:50:40 | Kein geplanter Dropservice-Post fuer heute (18.07.2026). Fertig.

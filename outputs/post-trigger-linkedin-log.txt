@@ -155,3 +155,5 @@
   "message": "The token used in the request has expired"
 }
 2026-07-17 17:50:49 | === Fertig ===
+2026-07-18 17:50:39 | === LinkedIn Trigger | 18.07.2026 | 17:50 | CSV: contentplan_linkedin_juli_v1.csv ===
+2026-07-18 17:50:39 | Kein geplanter Post fuer heute (18.07.2026). Fertig.
