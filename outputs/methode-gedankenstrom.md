@@ -1,6 +1,8 @@
-# Eigene Methode: Frieden mit dem Gedankenstrom
+# Die Bahnsteig-Methode
 
-Konzeptpapier, Stand 19.07.2026. Arbeitstitel, Name wird nach dem Inhalt gesucht.
+Eigene Methode für den Umgang mit dem Gedankenstrom. Konzeptpapier, Stand 19.07.2026. Name von Andi bestätigt am 19.07.2026.
+
+Das namensgebende Bild: Gedanken sind Züge, die in einen Bahnhof einfahren. Du stehst auf dem Bahnsteig. Du kannst einsteigen, oder du lässt sie durchfahren. Beides steht dir frei, und genau dieses Wahlrecht ist es, was die Methode vermittelt.
 Baut auf `outputs/nervensystem-fundament.md` auf und dockt an das Buch „Das Seil loslassen" und den Minikurs „Wenn dein Kopf nicht mehr abschaltet" an.
 
 Regel wie beim Fundament: kein Versprechen, das die Quellenlage nicht hergibt. Jede Übung hier ist entweder belegt oder klar als Erfahrungswissen markiert.
