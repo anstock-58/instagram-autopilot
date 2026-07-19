@@ -1,11 +1,12 @@
 name: Post-Check und Retry (alle Accounts)
 
 on:
-  schedule:
-    - cron: '17 9 * * *'    # 09:17 UTC = Story-Check 1 (abseits voller Stunde, zuverlaessiger)
-    - cron: '17 11 * * *'   # 11:17 UTC = Story-Check 2 (Backup, faengt auch Ausfall des Checks selbst ab)
-    - cron: '17 17 * * *'   # 17:17 UTC = Reel-Check 1 (abseits voller Stunde)
-    - cron: '17 19 * * *'   # 19:17 UTC = Reel-Check 2 (Backup)
+  # PAUSIERT - Automation gestoppt 16.07.2026
+  # schedule:
+  #   - cron: '17 9 * * *'    # 09:17 UTC = Story-Check 1 (abseits voller Stunde, zuverlaessiger)
+  #   - cron: '17 11 * * *'   # 11:17 UTC = Story-Check 2 (Backup, faengt auch Ausfall des Checks selbst ab)
+  #   - cron: '17 17 * * *'   # 17:17 UTC = Reel-Check 1 (abseits voller Stunde)
+  #   - cron: '17 19 * * *'   # 19:17 UTC = Reel-Check 2 (Backup)
   workflow_dispatch:
 
 jobs:
