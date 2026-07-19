@@ -508,8 +508,8 @@ const DRUCK_TEXTE = [
 const GRUEBELN_TEXTE = [
   'Dein Kopf schaltet ab wenn er soll. Das ist keine Selbstverständlichkeit.',
   'Die Gedanken kreisen gelegentlich. Noch kein Alarm, aber ein Muster das sich verfestigen kann.',
-  'Dein Kopf findet kaum zur Ruhe. Das kostet Energie die du im Alltag dringend brauchst, und verhindert echte Erholung. Ein Bild, das dabei hilft: Gedanken sind wie Züge, die in einen Bahnhof einfahren. Du musst nicht in jeden einsteigen.',
-  'Der Kopf läuft auf Hochtouren, auch wenn du es eigentlich abstellen willst. Das ist erschöpfend. Du merkst es vielleicht erst dann richtig, wenn du mal wirklich zur Ruhe kommst. Und je mehr du versuchst, die Gedanken wegzudrücken, desto lauter werden sie. Das ist kein Versagen, das ist messbar so. Der Ausweg ist ein anderer Umgang: Gedanken wie Züge einfahren lassen, ohne einzusteigen.'
+  'Dein Kopf findet kaum zur Ruhe. Das kostet Energie die du im Alltag dringend brauchst, und verhindert echte Erholung.',
+  'Der Kopf läuft auf Hochtouren, auch wenn du es eigentlich abstellen willst. Das ist erschöpfend. Du merkst es vielleicht erst dann richtig, wenn du mal wirklich zur Ruhe kommst.'
 ];
 
 const NAECHSTER_SCHRITT = {
@@ -579,19 +579,6 @@ function showResult() {
   if (text.includes('druck') || text.includes('morgens') || text.includes('pause')) schritt = NAECHSTER_SCHRITT.druck;
 
   var botschaft = BOTSCHAFTEN[total % BOTSCHAFTEN.length];
-
-  // Produktempfehlung passend zum stärksten Bereich
-  var gruebelnVorn = (schritt === NAECHSTER_SCHRITT.gruebeln);
-  var ctaIntro, primaryHref, primaryText;
-  if (gruebelnVorn) {
-    ctaIntro = 'Der Check hat dir gezeigt, wo du stehst. Dein stärkstes Signal ist der Kopf, der nicht zur Ruhe kommt. Genau dafür gibt es einen eigenen Minikurs: kurze, konkrete Einheiten, die dir zeigen, wie du aus dem Grübelkreislauf aussteigst, ohne gegen deine Gedanken zu kämpfen.';
-    primaryHref = 'https://sicher-weiterlesen.com/kopf-schaltet-nicht-ab';
-    primaryText = 'Minikurs: Wenn dein Kopf nicht mehr abschaltet &rarr;';
-  } else {
-    ctaIntro = 'Der Check hat dir gezeigt, wo du stehst. Aber Klarheit allein verändert nichts. Entscheidend ist was du jetzt damit machst. Der Minikurs gibt dir in kurzen, konkreten Einheiten genau das Werkzeug, das du brauchst, um aus dem Funktionsmodus herauszukommen: ohne großen Aufwand, ohne leere Versprechen, direkt anwendbar im Alltag.';
-    primaryHref = 'https://sicher-weiterlesen.com/raus-aus-dem-funktionsmodus';
-    primaryText = 'Minikurs: Raus aus dem Funktionsmodus &rarr;';
-  }
   lastResult = {n0:n0, n1:n1, n2:n2, n3:n3, einschaetzung:einschaetzung, schlafTxt:schlafTxt, druckTxt:druckTxt, gruebelTxt:gruebelTxt, schritt:schritt, botschaft:botschaft};
 
   var lvl1 = scoreLevel(n1, 4);
@@ -648,11 +635,11 @@ function showResult() {
         '<span class="sep-txt">Dein nächster Schritt</span>' +
         '<div class="sep-line"></div>' +
       '</div>' +
-      '<p class="cta-intro">' + esc(ctaIntro) + '</p>' +
+      '<p class="cta-intro">Der Check hat dir gezeigt, wo du stehst. Aber Klarheit allein verändert nichts. Entscheidend ist was du jetzt damit machst. Der Minikurs gibt dir in kurzen, konkreten Einheiten genau das Werkzeug, das du brauchst, um aus dem Funktionsmodus herauszukommen: ohne großen Aufwand, ohne leere Versprechen, direkt anwendbar im Alltag.</p>' +
       '<div class="cta-links">' +
-        '<a class="cta-link primary" href="' + primaryHref + '" target="_blank" rel="noopener">' +
+        '<a class="cta-link primary" href="https://sicher-weiterlesen.com/raus-aus-dem-funktionsmodus" target="_blank" rel="noopener">' +
           '<span class="cta-link-label">Empfohlener nächster Schritt</span>' +
-          primaryText +
+          'Minikurs: Raus aus dem Funktionsmodus &rarr;' +
         '</a>' +
         '<a class="cta-link secondary" href="https://sicher-weiterlesen.com/neustart-im-kopf" target="_blank" rel="noopener">' +
           '<span class="cta-link-label">Für mehr Tiefe</span>' +
