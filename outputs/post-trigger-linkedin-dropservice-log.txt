@@ -90,3 +90,16 @@
 2026-07-15 17:51:09 | Kein geplanter Dropservice-Post fuer heute (15.07.2026). Fertig.
 2026-07-16 17:50:53 | === Dropservice LinkedIn Trigger | 16.07.2026 | 17:50 | CSV: contentplan_linkedin_dropservice_juli_v1.csv ===
 2026-07-16 17:50:53 | Kein geplanter Dropservice-Post fuer heute (16.07.2026). Fertig.
+2026-07-17 17:50:50 | === Dropservice LinkedIn Trigger | 17.07.2026 | 17:50 | CSV: contentplan_linkedin_dropservice_juli_v1.csv ===
+2026-07-17 17:50:50 | 1 Post(s) fuer heute gefunden.
+2026-07-17 17:50:50 | Post faellig: Foto | 17:55
+2026-07-17 17:50:50 | FEHLER beim Registrieren des Bild-Uploads: 
+{
+  "status": 401,
+  "serviceErrorCode": 65602,
+  "code": "EXPIRED_ACCESS_TOKEN",
+  "message": "The token used in the request has expired"
+}
+2026-07-17 17:50:50 | === Fertig ===
+2026-07-18 17:50:40 | === Dropservice LinkedIn Trigger | 18.07.2026 | 17:50 | CSV: contentplan_linkedin_dropservice_juli_v1.csv ===
+2026-07-18 17:50:40 | Kein geplanter Dropservice-Post fuer heute (18.07.2026). Fertig.
