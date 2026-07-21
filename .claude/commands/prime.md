@@ -17,6 +17,13 @@ CLAUDE.md
 ./context/current-data.md
 ./context/cc-basics.md
 ./context/cc-anweisung.md
+./context/produkte-und-links.md
+./context/wordpress-tech.md
+./reference/content-beispiele.md
+./reference/content-regeln-instagram.md
+./reference/instagram-strategie.md
+./reference/sichtbarkeits-routine.md
+./reference/zielgruppen-tiefenanalyse.md
 
 ## Zusammenfassung
 
