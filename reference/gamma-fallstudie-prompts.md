@@ -8,6 +8,10 @@ Universell einsetzbar für jede Branche. Ergebnis je nach Kontext anpassen: inne
 
 Erstelle eine 10-Folien Präsentation auf Deutsch. Authentisch, direkt, keine Marketing-Sprache. Keine Gedankenstriche verwenden.
 
+KONTEXT: [DEIN NAME], [DEIN BRAND], [WAS DU ANBIETEST FÜR WEN MIT WELCHEM NUTZEN]
+
+DEINE GESCHICHTE: [KURZE ZUSAMMENFASSUNG: Wer du warst, was passiert ist, was du erkannt hast, wie du heute arbeitest]
+
 Folie 1: Hook. Headline: [DER STÄRKSTE SATZ DEINER GESCHICHTE, der Moment der alles verändert hat]. Subtext: [DEIN NAME], [DEIN BRAND]
 
 Folie 2: Wer ich vorher war. [BESCHREIBE DEN ZUSTAND VOR DEM WENDEPUNKT: Rolle, Status, was nach außen stimmte, was innen fehlte]
@@ -35,6 +39,12 @@ Erstelle 10 Folien, je mit Headline, kurzem Text und passendem Bild. Professione
 ## Prompt 2: Echte Fallstudie (Kundentransformation)
 
 Erstelle eine 10-Folien Präsentation auf Deutsch. Konkret, glaubwürdig, keine Werbesprache. Keine Gedankenstriche verwenden.
+
+KONTEXT: [DEIN NAME], [DEIN BRAND], [WAS DU ANBIETEST FÜR WEN MIT WELCHEM NUTZEN]
+
+KUNDE: [VORNAME ODER PSEUDONYM], [BERUF/SITUATION], [KERNPROBLEM DES KUNDEN]
+
+ERGEBNIS: [WAS SICH KONKRET VERÄNDERT HAT, so spezifisch wie möglich]
 
 Folie 1: Hook. Headline: [DAS ERGEBNIS DES KUNDEN IN EINEM SATZ, so konkret wie möglich]. Subtext: Die Geschichte von [VORNAME ODER PSEUDONYM]
 
