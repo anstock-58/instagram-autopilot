@@ -105,3 +105,25 @@
 2026-07-18 17:50:40 | Kein geplanter Dropservice-Post fuer heute (18.07.2026). Fertig.
 2026-07-19 17:50:44 | === Dropservice LinkedIn Trigger | 19.07.2026 | 17:50 | CSV: contentplan_linkedin_dropservice_juli_v1.csv ===
 2026-07-19 17:50:44 | Kein geplanter Dropservice-Post fuer heute (19.07.2026). Fertig.
+2026-07-20 17:50:45 | === Dropservice LinkedIn Trigger | 20.07.2026 | 17:50 | CSV: contentplan_linkedin_dropservice_juli_v1.csv ===
+2026-07-20 17:50:45 | Kein geplanter Dropservice-Post fuer heute (20.07.2026). Fertig.
+2026-07-21 17:50:46 | === Dropservice LinkedIn Trigger | 21.07.2026 | 17:50 | CSV: contentplan_linkedin_dropservice_juli_v1.csv ===
+2026-07-21 17:50:46 | 1 Post(s) fuer heute gefunden.
+2026-07-21 17:50:46 | Post faellig: Text | 17:55
+2026-07-21 17:50:46 | Dropservice LinkedIn gepostet. URN: urn:li:share:7485360634054864896
+2026-07-21 17:50:46 | Status auf 'Gepostet' gesetzt.
+2026-07-21 17:50:46 | Erster Kommentar gesetzt.
+2026-07-21 17:50:46 | === Fertig ===
+2026-07-22 17:50:46 | === Dropservice LinkedIn Trigger | 22.07.2026 | 17:50 | CSV: contentplan_linkedin_dropservice_juli_v1.csv ===
+2026-07-22 17:50:46 | Kein geplanter Dropservice-Post fuer heute (22.07.2026). Fertig.
+2026-07-23 17:50:50 | === Dropservice LinkedIn Trigger | 23.07.2026 | 17:50 | CSV: contentplan_linkedin_dropservice_juli_v1.csv ===
+2026-07-23 17:50:50 | Kein geplanter Dropservice-Post fuer heute (23.07.2026). Fertig.
+2026-07-24 17:50:39 | === Dropservice LinkedIn Trigger | 24.07.2026 | 17:50 | CSV: contentplan_linkedin_dropservice_juli_v1.csv ===
+2026-07-24 17:50:39 | 1 Post(s) fuer heute gefunden.
+2026-07-24 17:50:39 | Post faellig: Foto | 17:55
+2026-07-24 17:50:41 | Bild-Upload registriert. Asset: urn:li:digitalmediaAsset:D4E22AQE1zCRW3F-aBg
+2026-07-24 17:50:41 | Bild hochgeladen (107506 Bytes).
+2026-07-24 17:50:42 | Dropservice LinkedIn gepostet. URN: urn:li:share:7486447779532144640
+2026-07-24 17:50:42 | Status auf 'Gepostet' gesetzt.
+2026-07-24 17:50:42 | Erster Kommentar gesetzt.
+2026-07-24 17:50:42 | === Fertig ===
