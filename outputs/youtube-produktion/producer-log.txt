@@ -878,3 +878,42 @@
 2026-07-17 21:04:14 | Clip 14 gespeichert ('peaceful sleep bedroom'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\GESUNDHEIT\Cortisol_Video_1\clip-14.mp4
 2026-07-17 21:04:25 | Clip 15 gespeichert ('peaceful sleep bedroom'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\GESUNDHEIT\Cortisol_Video_1\clip-15.mp4
 2026-07-17 21:04:25 | Generiere Thumbnail: Modus=scene, FLUX + Text...
+2026-07-19 18:21:36 | === YouTube Producer gestartet ===
+2026-07-19 18:21:36 | Kein offenes Video gefunden. Nichts zu tun.
+2026-07-21 20:43:04 | === YouTube Producer gestartet ===
+2026-07-21 20:43:05 | Starte Produktion: Dein Kopf hört nachts nicht auf. Weil du ihn zwingen willst.
+2026-07-21 20:43:05 | Generiere Audio via ElevenLabs...
+2026-07-21 20:45:32 | Audio gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Gedankenstrom_Video_1\voiceover.mp3
+2026-07-21 20:45:32 | Kapitelmarken erstellt: 5 Kapitel, Gesamtdauer 635 Sek.
+2026-07-21 20:45:32 | Visueller Stil: Stockclips-Cluster - lade Pexels-Videoclips...
+2026-07-21 20:45:33 | Suche Pexels-Clips fuer 'train station platform night'...
+2026-07-21 20:45:59 | Clip 1 gespeichert ('train station platform night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Gedankenstrom_Video_1\clip-01.mp4
+2026-07-21 20:46:21 | Clip 2 gespeichert ('train station platform night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Gedankenstrom_Video_1\clip-02.mp4
+2026-07-21 20:46:45 | Clip 3 gespeichert ('train station platform night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Gedankenstrom_Video_1\clip-03.mp4
+2026-07-21 20:46:45 | Suche Pexels-Clips fuer 'person awake in bed dark room'...
+2026-07-21 20:48:00 | Clip 4 gespeichert ('person awake in bed dark room'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Gedankenstrom_Video_1\clip-04.mp4
+2026-07-21 20:48:12 | Clip 5 gespeichert ('person awake in bed dark room'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Gedankenstrom_Video_1\clip-05.mp4
+2026-07-21 20:48:34 | Clip 6 gespeichert ('person awake in bed dark room'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Gedankenstrom_Video_1\clip-06.mp4
+2026-07-21 20:48:34 | Suche Pexels-Clips fuer 'writing notebook desk lamp night'...
+2026-07-21 20:48:42 | Clip 7 gespeichert ('writing notebook desk lamp night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Gedankenstrom_Video_1\clip-07.mp4
+2026-07-21 20:48:57 | Clip 8 gespeichert ('writing notebook desk lamp night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Gedankenstrom_Video_1\clip-08.mp4
+2026-07-21 20:49:09 | Clip 9 gespeichert ('writing notebook desk lamp night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Gedankenstrom_Video_1\clip-09.mp4
+2026-07-21 20:49:09 | Suche Pexels-Clips fuer 'slow breathing meditation chair'...
+2026-07-21 20:49:18 | Clip 10 gespeichert ('slow breathing meditation chair'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Gedankenstrom_Video_1\clip-10.mp4
+2026-07-21 20:49:28 | Clip 11 gespeichert ('slow breathing meditation chair'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Gedankenstrom_Video_1\clip-11.mp4
+2026-07-21 20:49:41 | Clip 12 gespeichert ('slow breathing meditation chair'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Gedankenstrom_Video_1\clip-12.mp4
+2026-07-21 20:49:41 | Suche Pexels-Clips fuer 'empty train arriving station'...
+2026-07-21 20:50:09 | Clip 13 gespeichert ('empty train arriving station'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Gedankenstrom_Video_1\clip-13.mp4
+2026-07-21 20:50:26 | Clip 14 gespeichert ('empty train arriving station'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Gedankenstrom_Video_1\clip-14.mp4
+2026-07-21 20:50:37 | Clip 15 gespeichert ('empty train arriving station'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Gedankenstrom_Video_1\clip-15.mp4
+2026-07-21 20:50:37 | Generiere Thumbnail: Modus=ki, FLUX + Text...
+2026-07-21 20:50:44 | FLUX Thumbnail Status (1): COMPLETED
+2026-07-21 20:50:45 | Thumbnail (ki-Modus) gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Gedankenstrom_Video_1\thumbnail.jpg
+2026-07-21 20:50:45 | Thumbnail-Archiv: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\YT-Thumbnails_Banner\YouTube_Thumbnail_Bewusst_Einfach-52.jpg
+2026-07-21 20:50:45 | Ermittle Audiodauer...
+2026-07-21 20:50:45 | Baue Video mit FFmpeg...
+2026-07-21 20:50:46 | Stockclip-Modus: 15 einzigartige Clips, 80 Segmente insgesamt fuer 634.9 Sek. Audio.
+2026-07-21 20:56:34 | Musik geladen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\Musik\spirit-song.mp3
+2026-07-21 20:56:54 | Video fertig: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Gedankenstrom_Video_1\video_fertig.mp4
+2026-07-21 20:56:54 | Lade Video auf YouTube hoch (Kanal: BewusstEinfach)...
+2026-07-21 21:13:17 | be24 Upload abgeschlossen: Video-ID=pyFGAYxIoeQ, Titel=Dein Kopf hoert nachts nicht auf. Weil du ihn zwingen willst.
