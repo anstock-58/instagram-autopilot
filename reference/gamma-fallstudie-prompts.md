@@ -6,67 +6,79 @@ Universell einsetzbar für jede Branche. Ergebnis je nach Kontext anpassen: inne
 
 ## Prompt 1: Persönliche Geschichte (eigene Story)
 
-Erstelle eine 10-Folien Präsentation auf Deutsch. Authentisch, direkt, keine Marketing-Sprache. Keine Gedankenstriche verwenden.
+Kopiere alles ab hier und fülle die Platzhalter in eckigen Klammern aus:
 
-KONTEXT: [DEIN NAME], [DEIN BRAND], [WAS DU ANBIETEST FÜR WEN MIT WELCHEM NUTZEN]
+---
 
-DEINE GESCHICHTE: [KURZE ZUSAMMENFASSUNG: Wer du warst, was passiert ist, was du erkannt hast, wie du heute arbeitest]
+Du bist Präsentations-Experte und Storytelling-Spezialist. Erstelle eine professionelle 10-Folien Präsentation auf Deutsch basierend auf der persönlichen Geschichte unten. Authentisch, direkt, keine Marketing-Sprache, keine Gedankenstriche.
 
-Folie 1: Hook. Headline: [DER STÄRKSTE SATZ DEINER GESCHICHTE, der Moment der alles verändert hat]. Subtext: [DEIN NAME], [DEIN BRAND]
+ÜBER MICH:
+Name: [DEIN NAME]
+Brand: [DEIN BRAND]
+Angebot: [WAS DU ANBIETEST FÜR WEN MIT WELCHEM NUTZEN]
 
-Folie 2: Wer ich vorher war. [BESCHREIBE DEN ZUSTAND VOR DEM WENDEPUNKT: Rolle, Status, was nach außen stimmte, was innen fehlte]
+MEINE GESCHICHTE:
+Wer ich vorher war: [Rolle, Status, was nach außen stimmte, was innen fehlte]
+Was passiert ist: [Der konkrete Einschnitt oder Wendepunkt]
+Was ich erkannt habe: [Das Muster oder die Wahrheit dahinter]
+Wie ich heute arbeite: [Für wen, womit, mit welchem Ergebnis]
 
-Folie 3: Was passiert ist. [DER KONKRETE EINSCHNITT: Was ist passiert, was hat sich verändert, was ist weggefallen]
+STRUKTUR DER FOLIEN:
+Folie 1: Hook. Der stärkste Satz der Geschichte als Headline. Mein Name und Brand als Subtext.
+Folie 2: Wer ich vorher war.
+Folie 3: Was passiert ist.
+Folie 4: Der tiefste Punkt und die Frage die er aufgeworfen hat.
+Folie 5: Die Erkenntnis.
+Folie 6: Der Weg zurück.
+Folie 7: Was sich verändert hat.
+Folie 8: Für wen ich heute arbeite.
+Folie 9: Die direkte Ansprache an den Zuschauer.
+Folie 10: Der nächste Schritt mit Angebot und Link: [LINK]
 
-Folie 4: Der tiefste Punkt. [DIE KERNFRAGE DIE DIESER MOMENT AUFGEWORFEN HAT: Was musste ich zum ersten Mal wirklich anschauen]
+Jede Folie bekommt eine klare Headline, kurzen Text und ein passendes Bild. Professionelles, dunkles Design.
 
-Folie 5: Die Erkenntnis. [WAS ICH VERSTANDEN HABE: Das Muster, das dahinterlag, was wirklich los war]
-
-Folie 6: Der Weg zurück. [NICHT DIE LÖSUNG SELBST, sondern wie der Ansatz aussah: was ich anders gemacht habe, was geholfen hat]
-
-Folie 7: Was sich verändert hat. [DAS ERGEBNIS: Konkret, persönlich, keine großen Versprechen]
-
-Folie 8: Für wen ich heute arbeite. [ZIELGRUPPE + LEITSATZ: Wer, welches Problem, welcher Nutzen, was du nicht tust]
-
-Folie 9: Die Brücke zum Zuschauer. [DIREKTE ANSPRACHE: Wenn du das kennst, wenn du nickst, dann bist du hier richtig]
-
-Folie 10: Der nächste Schritt. [PRODUKT ODER ANGEBOT + LINK]
-
-Erstelle 10 Folien, je mit Headline, kurzem Text und passendem Bild. Professionelles, dunkles Design.
+---
 
 ---
 
 ## Prompt 2: Echte Fallstudie (Kundentransformation)
 
-Erstelle eine 10-Folien Präsentation auf Deutsch. Konkret, glaubwürdig, keine Werbesprache. Keine Gedankenstriche verwenden.
+Kopiere alles ab hier und fülle die Platzhalter in eckigen Klammern aus:
 
-KONTEXT: [DEIN NAME], [DEIN BRAND], [WAS DU ANBIETEST FÜR WEN MIT WELCHEM NUTZEN]
+---
 
-KUNDE: [VORNAME ODER PSEUDONYM], [BERUF/SITUATION], [KERNPROBLEM DES KUNDEN]
+Du bist Präsentations-Experte und Storytelling-Spezialist. Erstelle eine professionelle 10-Folien Präsentation auf Deutsch basierend auf der Kundenfallstudie unten. Konkret, glaubwürdig, keine Werbesprache, keine Gedankenstriche.
 
-ERGEBNIS: [WAS SICH KONKRET VERÄNDERT HAT, so spezifisch wie möglich]
+ÜBER MICH:
+Name: [DEIN NAME]
+Brand: [DEIN BRAND]
+Angebot: [WAS DU ANBIETEST FÜR WEN MIT WELCHEM NUTZEN]
 
-Folie 1: Hook. Headline: [DAS ERGEBNIS DES KUNDEN IN EINEM SATZ, so konkret wie möglich]. Subtext: Die Geschichte von [VORNAME ODER PSEUDONYM]
+DER KUNDE:
+Name oder Pseudonym: [VORNAME ODER PSEUDONYM]
+Beruf und Situation: [BERUF, LAGE VOR DER ZUSAMMENARBEIT]
+Das Problem: [WARUM KAM ER ZU MIR, WAS HAT NICHT GESTIMMT]
+Was er vorher versucht hat: [GESCHEITERTE LÖSUNGSVERSUCHE]
+Was wir gemacht haben: [KURZE BESCHREIBUNG DER ZUSAMMENARBEIT]
+Der Wendepunkt: [DAS KONKRETE AHA-ERLEBNIS ODER ERSTE SPÜRBARE VERÄNDERUNG]
+Das Ergebnis: [WAS SICH KONKRET VERÄNDERT HAT, so spezifisch wie möglich]
+Was er heute sagen würde: [ZITAT ODER ZUSAMMENFASSUNG]
 
-Folie 2: Wer diese Person ist. [KURZES PORTRAIT: Beruf, Situation, was nach außen stimmte]
+STRUKTUR DER FOLIEN:
+Folie 1: Hook. Das Ergebnis des Kunden als Headline, so konkret wie möglich.
+Folie 2: Wer der Kunde ist.
+Folie 3: Das Problem.
+Folie 4: Was er vorher versucht hat.
+Folie 5: Warum er sich jetzt entschieden hat.
+Folie 6: Die Zusammenarbeit.
+Folie 7: Der Wendepunkt.
+Folie 8: Das Ergebnis.
+Folie 9: Was der Kunde heute sagen würde.
+Folie 10: Der nächste Schritt mit Angebot und Link: [LINK]
 
-Folie 3: Das Problem. [WAS NICHT STIMMTE: Das konkrete Problem mit dem der Kunde zu dir kam, in seinen eigenen Worten wenn möglich]
+Jede Folie bekommt eine klare Headline, kurzen Text und ein passendes Bild. Professionelles, dunkles Design.
 
-Folie 4: Was schon versucht wurde. [GESCHEITERTE LÖSUNGSVERSUCHE: Was der Kunde vorher probiert hat, warum es nicht geholfen hat]
-
-Folie 5: Der erste Schritt. [WIE DER KONTAKT ENTSTAND: Was der Auslöser war, warum er sich jetzt entschieden hat]
-
-Folie 6: Die Zusammenarbeit. [WAS IHR GEMEINSAM GEMACHT HABT: Ohne technische Details, fokussiert auf die Erfahrung des Kunden]
-
-Folie 7: Der Wendepunkt. [DER MOMENT DER SICH VERÄNDERT HAT: Das konkrete Aha-Erlebnis oder die erste spürbare Veränderung]
-
-Folie 8: Das Ergebnis. [KONKRETE VERÄNDERUNG: Was anders ist, was der Kunde heute sagt, am besten mit O-Ton]
-
-Folie 9: Was der Kunde heute sagen würde. [DIREKTES ZITAT ODER ZUSAMMENFASSUNG: Was er jemandem raten würde der in derselben Situation ist]
-
-Folie 10: Der nächste Schritt. [DEIN ANGEBOT + LINK: Für alle die sich in dieser Geschichte wiedererkennen]
-
-Erstelle 10 Folien, je mit Headline, kurzem Text und passendem Bild. Professionelles, dunkles Design.
+---
 
 ---
 
