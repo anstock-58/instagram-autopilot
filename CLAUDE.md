@@ -20,6 +20,10 @@ Dies ist ein **Claude Workspace Template** — eine strukturierte Umgebung, die 
 
 **Die Datei `reference/kdp-nischen-analyse-prompt.md` ist der Pflicht-Workflow für jede Buch-Nischenrecherche. Sagt Andi „recherchiere die Nische zu Thema X" oder startet ein neues Buchprojekt, wird diese Vorlage automatisch und vollständig angewendet (alle 8 Kriterien, Ampel-Bewertung, Abbruch-Kriterien) — ohne dass er sie erwähnen muss. Recherche läuft über den Chrome-Browser-Tab auf amazon.de, nicht über WebFetch (Amazon blockt).**
 
+**Die Datei `reference/ki-prozessberatung-kmu-methode.md` ist die Vorlage für jede KI-Prozessberatung bei einem Unternehmen. Sagt Andi „analysiere die Firma X" oder startet ein neues KI-Beratungsprojekt, wird diese Methode automatisch und vollständig angewendet (alle 8 Analyseschritte plus Interview-Leitfaden, Mitarbeiter-Fragebogen, Berichtsvorlage und Checkliste aus dem Anhang) — ohne dass er sie erwähnen muss.**
+
+**Die Datei `reference/ai-avatar-factory-methode.md` ist die Vorlage für jedes Avatar- und Content-System, das für einen Account oder ein Unternehmen entwickelt wird. Sagt Andi „erstelle das Avatar-System für Account/Firma X" oder „wende die Avatar Factory an", wird diese Methode automatisch und vollständig angewendet (alle 8 Stufen von Unternehmensanalyse bis Content-System, plus Fragebogen, Avatar-Prompt-Baukasten und Checkliste aus dem Anhang) — ohne dass er sie erwähnen muss. Erste Anwendung läuft aktuell intern an den eigenen Instagram-Accounts, beginnend mit @business.und.spirit (siehe `outputs/business-und-spirit/avatar-factory-analyse.md`), bevor es als Angebot für fremde Kunden ausgebaut wird.**
+
 ---
 
 ## Pflicht: Kontext sofort aktualisieren

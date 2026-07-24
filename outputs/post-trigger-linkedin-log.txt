@@ -166,10 +166,8 @@
 2026-07-17 17:55:03 | === Fertig ===
 2026-07-18 18:55:41 | === LinkedIn Trigger | 18.07.2026 | 18:55 | CSV: contentplan_linkedin_juli_v1.csv ===
 2026-07-18 18:55:45 | Kein geplanter Post fuer heute (18.07.2026). Fertig.
-2026-07-19 17:50:41 | === LinkedIn Trigger | 19.07.2026 | 17:50 | CSV: contentplan_linkedin_juli_v1.csv ===
-2026-07-19 17:50:41 | 1 Post(s) fuer heute gefunden.
-2026-07-19 17:50:41 | Post faellig: Text | 17:55
-2026-07-19 17:50:42 | LinkedIn gepostet. URN: urn:li:share:7484635841491841024
-2026-07-19 17:50:42 | Status auf 'Gepostet' gesetzt.
-2026-07-19 17:50:43 | Erster Kommentar gesetzt.
-2026-07-19 17:50:43 | === Fertig ===
+2026-07-19 17:55:02 | === LinkedIn Trigger | 19.07.2026 | 17:55 | CSV: contentplan_linkedin_juli_v1.csv ===
+2026-07-19 17:55:02 | 1 Post(s) fuer heute gefunden.
+2026-07-19 17:55:02 | Post faellig: Text | 17:55
+2026-07-19 17:55:03 | FEHLER beim LinkedIn-Post: Der Remoteserver hat einen Fehler zurückgegeben: (401) Nicht autorisiert.
+2026-07-19 17:55:03 | === Fertig ===
