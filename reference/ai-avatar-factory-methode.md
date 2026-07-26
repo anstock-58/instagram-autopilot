@@ -73,6 +73,8 @@ Fester Charakter-Block nach dem Muster aus `scripts/generate-avatar-mentalgesund
 
 Technische Eckdaten für die Umsetzung über fal.ai (wie im bestehenden Pilot): Modell `fal-ai/imagen4/preview/fast`, Format `portrait_16_9` für 9:16-Content, ein Bild pro Aufruf, keine Textelemente im Bild, keine Logos.
 
+Optionale Szenen-Bibliothek (nur lokal vorhanden, nicht im Repo): `reference/tac-prompt-datenbank.md` beschreibt eine fertige Sammlung von 106 Szenen-Prompts aus einem Kurs, die als Ausgangspunkt für Szenenideen dienen kann. Die eigentlichen Prompt-Dateien liegen nur lokal (Lizenzlage ungeklärt), bei Bedarf dort nachsehen.
+
 ---
 
 ## ANHANG C: Content-System-Vorlage
