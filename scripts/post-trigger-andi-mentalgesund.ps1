@@ -314,7 +314,7 @@ foreach ($row in $heuteRows) {
     # CTA passend zum Link der jeweiligen Zeile waehlen, mit Varianten gegen Wiederholung
     $ctaVarianten = @{
         "kopf-schaltet-nicht-ab"  = @(
-            "Es gibt einen Minikurs genau dafuer. Schreib KLARHEIT, dann schick ich ihn dir."
+            "Es gibt einen Minikurs genau dafür. Schreib KLARHEIT, dann schick ich ihn dir."
             "Schreib KLARHEIT, dann zeig ich dir den Minikurs dazu."
         )
         "nein-aus-ueberzeugung"   = @(
@@ -323,11 +323,11 @@ foreach ($row in $heuteRows) {
         )
         "das-seil-loslassen"      = @(
             "Schreib KLARHEIT, dann schick ich dir den Link zum Buch."
-            "Das Buch dazu heisst Das Seil loslassen. Schreib KLARHEIT, dann schick ich dir den Link."
+            "Das Buch dazu heißt Das Seil loslassen. Schreib KLARHEIT, dann schick ich dir den Link."
         )
         "dein-gehirn"             = @(
             "Schreib KLARHEIT, dann schick ich dir den Link zum Buch."
-            "Das Buch dazu heisst Dein Gehirn luegt dich an. Schreib KLARHEIT, dann schick ich dir den Link."
+            "Das Buch dazu heißt Dein Gehirn lügt dich an. Schreib KLARHEIT, dann schick ich dir den Link."
         )
         "selbstcheck"             = @(
             "Mach den kostenlosen Sofortcheck. Den Link findest du in meiner Bio."
