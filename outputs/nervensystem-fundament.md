@@ -15,7 +15,59 @@ Genau deshalb ist sie auch so leicht zu verkaufen.
 
 ---
 
-## 2. Was gesichert ist
+## 2. Wie das Nervensystem arbeitet
+
+Damit man weiß, wo man ansetzen kann, hilft ein einfaches Bild davon, wie das Ding überhaupt funktioniert. Kein Lehrbuch, nur das, was man für die Praxis braucht.
+
+### Zwei Grundzustände: Gas und Bremse
+
+Das vegetative Nervensystem, also der Teil, den du nicht bewusst steuerst, hat zwei Seiten. Der Sympathikus ist der Gashebel. Er macht dich wach, angespannt, leistungsbereit. Kampf oder Flucht. Der Parasympathikus ist die Bremse. Er fährt dich runter, Erholung, Verdauung, Schlaf. Rest and digest.
+
+Gesund heißt nicht, immer ruhig zu sein. Gesund heißt, zwischen beiden wechseln zu können. Anspannung, wenn sie gebraucht wird, und danach wieder runter. Chronischer Stress ist im Kern ein Bremsproblem. Der Gashebel klemmt, die Bremse kommt nicht mehr durch. Der Körper bleibt oben, auch wenn keine Gefahr mehr da ist.
+
+### Das Fenster, in dem du handlungsfähig bist
+
+Es gibt einen mittleren Bereich, in dem du wach, klar und ansprechbar bist. In der Fachsprache heißt er Toleranzfenster. Solange du darin bist, kannst du denken, fühlen und entscheiden zugleich.
+
+Über dem Fenster liegt die Übererregung. Herzrasen, Gedankenrasen, Reizbarkeit, das Gefühl, getrieben zu sein. Unter dem Fenster liegt die Untererregung. Leere, Erstarrung, Rückzug, das Gefühl, innerlich abgeschaltet zu haben. Vieles, was Menschen an sich selbst nicht verstehen, ist schlicht das Verlassen dieses Fensters. Das ist kein Charakterfehler, das ist ein Zustand. Und Zustände kann man beeinflussen.
+
+### Der Hoffnungsteil: das Nervensystem lernt
+
+Das Nervensystem ist nicht festgelegt. Es verändert sich ein Leben lang, das nennt man Neuroplastizität. Es bildet neue Verbindungen und schwächt alte ab, je nachdem, was es regelmäßig tut.
+
+Das ist die eigentlich gute Nachricht. Ein Körper, der über Jahre einen Daueralarm gelernt hat, kann auch wieder einen anderen Zustand lernen. Aber, und das ist der Haken, nicht durch Einsicht. Verstehen allein verändert das Nervensystem nicht. Es lernt über Wiederholung und Erfahrung, nicht über Argumente. Deshalb wirkt einmal lesen nichts und tägliche kleine Praxis viel. Genau daran hängt, warum überhaupt etwas hilft.
+
+---
+
+## 3. Die Hebel, mit dem Nervensystem zu arbeiten
+
+Wenn das Nervensystem lernt und zwischen Zuständen wechselt, dann ist die Frage: an welchen Stellen kann ich eingreifen? Hier eine Übersicht, sortiert nach Stärke der Belege, nicht nach Spektakel. Die vier stärksten sind im nächsten Abschnitt im Detail belegt, hier nur als Landkarte.
+
+### Gut belegt
+
+Das sind die Hebel mit der besten Studienlage. Sie sind unspektakulär, und genau deshalb verkauft sie kaum jemand.
+
+1. **Atmung.** Langsam, mit verlängerter Ausatmung. Der direkteste bewusste Zugang zur Bremse. Details im nächsten Abschnitt.
+2. **Bewegung.** Regelmäßige, eher moderate Bewegung verbessert nachweislich die Fähigkeit des Körpers, nach Belastung wieder runterzukommen. Spazieren zählt.
+3. **Schlaf.** Regelmäßige Zeiten. Der Zustand, in dem das Nervensystem sich sortiert.
+4. **Echte soziale Nähe.** Regulation passiert auch zwischen Menschen. Ein beruhigendes Gegenüber verschiebt deinen Zustand, ganz ohne Technik. Das ist einer der am besten belegten Faktoren überhaupt.
+
+### Solide, aber schwächer belegt
+
+Wirken bei vielen, sind aber weniger gut untersucht oder kleiner im Effekt.
+
+5. **Kältereize.** Kaltes Wasser, besonders ins Gesicht, löst über den Tauchreflex eine schnelle Verlangsamung des Herzschlags aus. Kurzfristig ein wirksamer Notknopf, langfristig weniger klar.
+6. **Summen, Singen, Gurgeln.** Werden oft als Vagus-Training verkauft. Plausibel, aber deutlich schwächer belegt als Atmung.
+
+### Möglich, aber nicht der Schwerpunkt
+
+7. **Klang und Frequenzen.** Binaurale Beats und ähnliche Klangwege, wie du sie bei Neowake kennengelernt hast, arbeiten über Höreindrücke, die den Zustand verschieben sollen. Das ist ein ernstzunehmender Weg, den manche Menschen als spürbar hilfreich erleben, und er gehört fairerweise mit auf die Liste. Die Studienlage dazu ist allerdings gemischt und schwächer als die zur Atmung. Effekte auf Entspannung und Angst werden in einzelnen Studien berichtet, andere finden wenig. Als angenehme Unterstützung sinnvoll, als tragende Grundlage überzogen. Deshalb steht es hier bewusst hinten, nicht weil es nichts wäre, sondern weil die belastbaren Hebel oben liegen. Wer damit arbeiten will, sollte es als Zusatz behandeln, nicht als Ersatz für die vier oben.
+
+Der wichtigste Hebel überhaupt steht in keinem dieser Punkte allein: die tägliche Wiederholung. Ohne sie lernt das Nervensystem nichts Neues, egal welchen Weg man wählt. Genau hier setzt die Bahnsteig-Methode an (siehe `outputs/methode-gedankenstrom.md`): erst den Körper runterfahren, dann den Umgang mit den Gedanken ändern.
+
+---
+
+## 4. Was gesichert ist
 
 ### Der Körper reagiert schneller als der Verstand
 
@@ -39,7 +91,7 @@ Regelmäßige Bewegung, ausreichender und regelmäßiger Schlaf und echte sozial
 
 ---
 
-## 3. Was unklar oder falsch ist
+## 5. Was unklar oder falsch ist
 
 ### Die Polyvagal-Theorie ist Hypothese, nicht Lehrbuchwissen
 
@@ -59,7 +111,7 @@ Wo Anbieter mit „Quantencomputer im Gehirn" argumentieren, wird meist auf die 
 
 ---
 
-## 4. Die zwei Marktbeispiele, neutral betrachtet
+## 6. Die zwei Marktbeispiele, neutral betrachtet
 
 Beide sind hier nicht als Grundlage aufgeführt, sondern als Anschauungsmaterial. Sie stehen stellvertretend für den Markt, in dem sich deine Leute bewegen.
 
@@ -89,7 +141,7 @@ Kostenloser Einstieg, hohe emotionale Aufladung, extrem verkürzte Zeitversprech
 
 ---
 
-## 5. Was davon in die eigene Praxis geht
+## 7. Was davon in die eigene Praxis geht
 
 Vier Dinge, in dieser Reihenfolge, ohne Zubehör und ohne Kosten.
 
@@ -104,7 +156,7 @@ Was bewusst fehlt: Eisbäder, Atem-Extremtechniken, Geräte, Programme. Nicht we
 
 ---
 
-## 6. Content-Winkel, die aus diesem Fundament folgen
+## 8. Content-Winkel, die aus diesem Fundament folgen
 
 Der stärkste Winkel ist nicht die nächste Technik. Es ist die Frage, die sich deine Leute beim Scrollen wirklich stellen: Ist das seriös oder werde ich hier gerade abgeholt? Diese Frage beantwortet fast niemand, weil fast alle im Markt selbst etwas verkaufen wollen.
 
@@ -128,6 +180,9 @@ Vor der Umsetzung eines Themas gilt weiterhin der übliche Weg: Wettbewerbs-Rech
 * The Effect of Slow-Paced Breathing on Cardiovascular and Emotion Functions, Metaanalyse, Mindfulness, 2023: https://link.springer.com/article/10.1007/s12671-023-02294-2
 * Effects of slow breathing rate on heart rate variability and arterial baroreflex sensitivity in essential hypertension: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6392805/
 * The vagus nerve: a cornerstone for mental health and performance, Frontiers in Psychology, 2025: https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1639866/full
+* Übersicht über das autonome Nervensystem (Sympathikus, Parasympathikus), MSD Manual: https://www.msdmanuals.com/de/profi/neurologische-krankheiten/autonomes-nervensystem/%C3%BCbersicht-%C3%BCber-das-autonome-nervensystem
+* Vegetatives Nervensystem, AMBOSS: https://www.amboss.com/de/wissen/vegetatives-nervensystem
+* Nervous System Regulation, science-backed overview (Hebel: Atmung, Bewegung, Schlaf, Kälte, soziale Nähe), Simply Psychology, 2026: https://www.simplypsychology.com/articles/nervous-system-regulation
 * Polyvagal-Theorie, Erklärung und Kritik (Blackroll): https://blackroll.com/de/artikel/polyvagal-theorie
 * Kritik an der Polyvagaltheorie (Polyvagal Akademie, Sicht der Befürworter): https://polyvagal-akademie.com/kritik-an-der-polyvagaltheorie-eine-umfassende-analyse
 * Vogler und Vogler, Angebotsseite, abgerufen 19.07.2026: https://www.voglerundvogler.de/
