@@ -73,6 +73,26 @@ Fester Charakter-Block nach dem Muster aus `scripts/generate-avatar-mentalgesund
 
 Technische Eckdaten für die Umsetzung über fal.ai (wie im bestehenden Pilot): Modell `fal-ai/imagen4/preview/fast`, Format `portrait_16_9` für 9:16-Content, ein Bild pro Aufruf, keine Textelemente im Bild, keine Logos.
 
+### Blanko-Prompt (Vorlage für jeden neuen Charakter)
+
+Eckige Klammern ausfüllen, alles andere wortgleich übernehmen. Ergebnis ist der feste Charakter-Block, der in jedem Bildprompt für diesen Charakter identisch vorangestellt wird.
+
+```
+a [ALTER] year old [HERKUNFT/WIRKUNG, z. B. German] [man/woman] named [NAME], [FRISUR: Farbe, Länge, Stil], [GESICHTSMERKMALE: Bart, Falten, markante Züge], [AUGEN- UND GESICHTSAUSDRUCK], [STATUR], wearing [KLEIDUNGSSTIL: Kleidungsstücke, Farben, Material], [FARBPALETTE, z. B. muted natural color palette], [LICHTSTIMMUNG, z. B. soft natural light], photorealistic editorial portrait photography, shallow depth of field, [GRUNDSTIMMUNG/AUSSTRAHLUNG], no text, no logo
+```
+
+**Vollständiger Szenen-Prompt** (Charakter-Block plus konkrete Szene, Struktur nach dem Muster der TAC-Prompt-Datenbank in `reference/tac-prompt-datenbank.md`):
+
+```
+[CHARAKTER-BLOCK VON OBEN]. [Action]: [was die Person tut, konkrete Handlung, eine einzige]. [Environment]: [Ort und Umgebung]. [Cinematography]: [Einstellungsgröße, Perspektive, z. B. waist-up shot, eye level, 9:16]. [Lighting/Style]: [Lichtstimmung, Grundgefühl der Szene]. [Technical]: Photorealistic, ultra-detailed.
+```
+
+**Video-Prompt-Vorlage** (Image-to-Video, 5 Sekunden, passend zum Bildprompt):
+
+```
+[Was sich in der Szene leicht bewegt, ein bis zwei Bewegungen], [was die Person selbst tut, kleine natürliche Bewegung], [eine Kamerabewegung: static camera / slow push-in / slow pull-back / slow pan], natural realistic motion, face stays consistent and stable, no morphing.
+```
+
 Optionale Szenen-Bibliothek (nur lokal vorhanden, nicht im Repo): `reference/tac-prompt-datenbank.md` beschreibt eine fertige Sammlung von 106 Szenen-Prompts aus einem Kurs, die als Ausgangspunkt für Szenenideen dienen kann. Die eigentlichen Prompt-Dateien liegen nur lokal (Lizenzlage ungeklärt), bei Bedarf dort nachsehen.
 
 ---
