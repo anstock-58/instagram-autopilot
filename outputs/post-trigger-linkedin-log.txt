@@ -211,3 +211,5 @@
 2026-07-27 17:55:02 | Post faellig: Foto | 17:55
 2026-07-27 17:55:03 | FEHLER beim Registrieren des Bild-Uploads: Der Remoteserver hat einen Fehler zurückgegeben: (401) Nicht autorisiert.
 2026-07-27 17:55:03 | === Fertig ===
+2026-07-28 17:55:02 | === LinkedIn Trigger | 28.07.2026 | 17:55 | CSV: contentplan_linkedin_juli_v1.csv ===
+2026-07-28 17:55:02 | Kein geplanter Post fuer heute (28.07.2026). Fertig.
