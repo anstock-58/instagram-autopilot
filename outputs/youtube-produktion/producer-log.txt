@@ -917,3 +917,174 @@
 2026-07-21 20:56:54 | Video fertig: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Gedankenstrom_Video_1\video_fertig.mp4
 2026-07-21 20:56:54 | Lade Video auf YouTube hoch (Kanal: BewusstEinfach)...
 2026-07-21 21:13:17 | be24 Upload abgeschlossen: Video-ID=pyFGAYxIoeQ, Titel=Dein Kopf hoert nachts nicht auf. Weil du ihn zwingen willst.
+2026-07-26 19:11:04 | === YouTube Producer gestartet ===
+2026-07-26 19:11:04 | Starte Produktion: Du glaubst, du hast dich beruhigt. Dein Körper glaubt dir nicht.
+2026-07-26 19:11:04 | Ordner erstellt: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1
+2026-07-26 19:11:04 | Generiere Audio via ElevenLabs...
+2026-07-26 19:12:46 | Audio gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\voiceover.mp3
+2026-07-26 19:12:46 | Kapitelmarken erstellt: 4 Kapitel, Gesamtdauer 467 Sek.
+2026-07-26 19:12:46 | Visueller Stil: KI-Portraits - generiere Bilder via fal.ai...
+2026-07-26 19:12:46 | Bild 1 generieren...
+2026-07-26 19:12:47 | fal.ai Request ID: 019f9f6a-3c77-7751-95b0-9ab22e76e027
+2026-07-26 19:12:51 | Bild 1 gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\bild-01.jpg
+2026-07-26 19:12:51 | Bild 2 generieren...
+2026-07-26 19:12:52 | fal.ai Request ID: 019f9f6a-4f04-7ac3-a4be-d35610592edb
+2026-07-26 19:12:56 | Bild 2 gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\bild-02.jpg
+2026-07-26 19:12:56 | Bild 3 generieren...
+2026-07-26 19:12:56 | fal.ai Request ID: 019f9f6a-6006-76f2-9347-e02ba47c311d
+2026-07-26 19:13:00 | Bild 3 gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\bild-03.jpg
+2026-07-26 19:13:00 | Bild 4 generieren...
+2026-07-26 19:13:01 | fal.ai Request ID: 019f9f6a-72ba-7973-9942-7d5cc0db5072
+2026-07-26 19:13:05 | Bild 4 gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\bild-04.jpg
+2026-07-26 19:13:05 | Bild 5 generieren...
+2026-07-26 19:13:05 | fal.ai Request ID: 019f9f6a-84e2-7bb1-a674-8d03d85f8a7d
+2026-07-26 19:13:10 | Bild 5 gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\bild-05.jpg
+2026-07-26 19:13:10 | Bild 6 generieren...
+2026-07-26 19:13:10 | fal.ai Request ID: 019f9f6a-978b-75f3-b0c2-435453bb8735
+2026-07-26 19:13:14 | Bild 6 gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\bild-06.jpg
+2026-07-26 19:13:14 | Bild 7 generieren...
+2026-07-26 19:13:15 | fal.ai Request ID: 019f9f6a-a9bf-7881-aa9c-5dcd4f51e3f5
+2026-07-26 19:13:19 | Bild 7 gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\bild-07.jpg
+2026-07-26 19:13:19 | Bild 8 generieren...
+2026-07-26 19:13:19 | fal.ai Request ID: 019f9f6a-bbe6-7900-9df0-1efd71fb564c
+2026-07-26 19:13:24 | Bild 8 gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\bild-08.jpg
+2026-07-26 19:13:24 | Bild 9 generieren...
+2026-07-26 19:13:24 | fal.ai Request ID: 019f9f6a-ced7-7793-9463-1366b3717873
+2026-07-26 19:13:28 | Bild 9 gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\bild-09.jpg
+2026-07-26 19:13:28 | Bild 10 generieren...
+2026-07-26 19:13:29 | fal.ai Request ID: 019f9f6a-e0d7-7c10-adf8-ea0552fe9d5e
+2026-07-26 19:13:33 | Bild 10 gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\bild-10.jpg
+2026-07-26 19:13:33 | Bild 11 generieren...
+2026-07-26 19:13:33 | fal.ai Request ID: 019f9f6a-f2d5-7010-95f8-be65ec73b794
+2026-07-26 19:13:37 | WARNUNG: fal.ai Result-Fetch Fehler Versuch 1 - warte 5 Sek...
+2026-07-26 19:13:42 | WARNUNG: fal.ai Result-Fetch Fehler Versuch 2 - warte 5 Sek...
+2026-07-26 19:13:47 | WARNUNG: fal.ai Result-Fetch Fehler Versuch 3 - warte 5 Sek...
+2026-07-26 19:13:52 | WARNUNG: Bild 11 Fallback auf vorheriges Bild.
+2026-07-26 19:13:52 | Bild 12 generieren...
+2026-07-26 19:13:52 | fal.ai Request ID: 019f9f6b-3d3b-7853-a255-989bde4f61bd
+2026-07-26 19:13:56 | WARNUNG: fal.ai Result-Fetch Fehler Versuch 1 - warte 5 Sek...
+2026-07-26 19:14:01 | WARNUNG: fal.ai Result-Fetch Fehler Versuch 2 - warte 5 Sek...
+2026-07-26 19:14:06 | WARNUNG: fal.ai Result-Fetch Fehler Versuch 3 - warte 5 Sek...
+2026-07-26 19:14:11 | WARNUNG: Bild 12 Fallback auf vorheriges Bild.
+2026-07-26 19:14:11 | Bild 13 generieren...
+2026-07-26 19:14:11 | fal.ai Request ID: 019f9f6b-876c-7480-b0ac-d896e05bd738
+2026-07-26 19:14:15 | WARNUNG: fal.ai Result-Fetch Fehler Versuch 1 - warte 5 Sek...
+2026-07-26 19:14:20 | WARNUNG: fal.ai Result-Fetch Fehler Versuch 2 - warte 5 Sek...
+2026-07-26 19:14:25 | WARNUNG: fal.ai Result-Fetch Fehler Versuch 3 - warte 5 Sek...
+2026-07-26 19:14:30 | WARNUNG: Bild 13 Fallback auf vorheriges Bild.
+2026-07-26 19:14:30 | Bild 14 generieren...
+2026-07-26 19:14:31 | fal.ai Request ID: 019f9f6b-d1b0-79b2-b375-74c421e8e260
+2026-07-26 19:14:34 | WARNUNG: fal.ai Result-Fetch Fehler Versuch 1 - warte 5 Sek...
+2026-07-26 19:14:39 | WARNUNG: fal.ai Result-Fetch Fehler Versuch 2 - warte 5 Sek...
+2026-07-26 19:14:44 | WARNUNG: fal.ai Result-Fetch Fehler Versuch 3 - warte 5 Sek...
+2026-07-26 19:14:49 | WARNUNG: Bild 14 Fallback auf vorheriges Bild.
+2026-07-26 19:14:49 | Bild 15 generieren...
+2026-07-26 19:14:49 | fal.ai Request ID: 019f9f6c-1be4-7da1-ad26-65d3bad855b5
+2026-07-26 19:14:53 | WARNUNG: fal.ai Result-Fetch Fehler Versuch 1 - warte 5 Sek...
+2026-07-26 19:14:58 | WARNUNG: fal.ai Result-Fetch Fehler Versuch 2 - warte 5 Sek...
+2026-07-26 19:15:03 | WARNUNG: fal.ai Result-Fetch Fehler Versuch 3 - warte 5 Sek...
+2026-07-26 19:15:08 | WARNUNG: Bild 15 Fallback auf vorheriges Bild.
+2026-07-26 19:15:08 | Generiere Thumbnail: Modus=ki, FLUX + Text...
+2026-07-26 19:15:15 | FLUX Thumbnail Status (1): COMPLETED
+2026-07-26 19:29:52 | === YouTube Producer gestartet ===
+2026-07-26 19:29:52 | Kein offenes Video gefunden. Nichts zu tun.
+2026-07-26 19:30:28 | === YouTube Producer gestartet ===
+2026-07-26 19:30:28 | Starte Produktion: Du glaubst, du hast dich beruhigt. Dein Körper glaubt dir nicht.
+2026-07-26 19:30:28 | Audio bereits vorhanden, ElevenLabs wird Ã¼bersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\voiceover.mp3
+2026-07-26 19:30:28 | Kapitelmarken erstellt: 4 Kapitel, Gesamtdauer 467 Sek.
+2026-07-26 19:30:28 | Visueller Stil: KI-Portraits - generiere Bilder via fal.ai...
+2026-07-26 19:30:28 | Bild 1 bereits vorhanden, uebersprungen.
+2026-07-26 19:30:28 | Bild 2 bereits vorhanden, uebersprungen.
+2026-07-26 19:30:28 | Bild 3 bereits vorhanden, uebersprungen.
+2026-07-26 19:30:28 | Bild 4 bereits vorhanden, uebersprungen.
+2026-07-26 19:30:28 | Bild 5 bereits vorhanden, uebersprungen.
+2026-07-26 19:30:28 | Bild 6 bereits vorhanden, uebersprungen.
+2026-07-26 19:30:28 | Bild 7 bereits vorhanden, uebersprungen.
+2026-07-26 19:30:28 | Bild 8 bereits vorhanden, uebersprungen.
+2026-07-26 19:30:28 | Bild 9 bereits vorhanden, uebersprungen.
+2026-07-26 19:30:28 | Bild 10 bereits vorhanden, uebersprungen.
+2026-07-26 19:30:28 | Bild 11 bereits vorhanden, uebersprungen.
+2026-07-26 19:30:28 | Bild 12 bereits vorhanden, uebersprungen.
+2026-07-26 19:30:28 | Bild 13 bereits vorhanden, uebersprungen.
+2026-07-26 19:30:28 | Bild 14 bereits vorhanden, uebersprungen.
+2026-07-26 19:30:28 | Bild 15 bereits vorhanden, uebersprungen.
+2026-07-26 19:30:28 | Generiere Thumbnail: Modus=ki, FLUX + Text...
+2026-07-26 19:30:35 | FLUX Thumbnail Status (1): COMPLETED
+2026-07-26 19:30:38 | Thumbnail (ki-Modus) gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\thumbnail.jpg
+2026-07-26 19:30:38 | Thumbnail-Archiv: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\YT-Thumbnails_Banner\YouTube_Thumbnail_Bewusst_Einfach-53.jpg
+2026-07-26 19:30:38 | Ermittle Audiodauer...
+2026-07-26 19:30:38 | Baue Video mit FFmpeg...
+2026-07-26 19:30:38 | Gesamtdauer Audio: 466.6 Sekunden - 32 Sekunden pro Bild
+2026-07-26 19:32:01 | Musik geladen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\Musik\japanese-water-garden.mp3
+2026-07-26 19:32:16 | Video fertig: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\video_fertig.mp4
+2026-07-26 19:32:16 | Lade Video auf YouTube hoch (Kanal: BewusstEinfach)...
+2026-07-26 22:44:05 | === YouTube Producer gestartet ===
+2026-07-26 22:44:05 | Kein offenes Video gefunden. Nichts zu tun.
+2026-07-26 22:44:40 | === YouTube Producer gestartet ===
+2026-07-26 22:44:40 | Starte Produktion: Du glaubst, du hast dich beruhigt. Dein Körper glaubt dir nicht.
+2026-07-26 22:44:40 | Audio bereits vorhanden, ElevenLabs wird Ã¼bersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\voiceover.mp3
+2026-07-26 22:44:40 | Kapitelmarken erstellt: 4 Kapitel, Gesamtdauer 467 Sek.
+2026-07-26 22:44:40 | Visueller Stil: KI-Portraits - generiere Bilder via fal.ai...
+2026-07-26 22:44:40 | Bild 1 bereits vorhanden, uebersprungen.
+2026-07-26 22:44:40 | Bild 2 bereits vorhanden, uebersprungen.
+2026-07-26 22:44:40 | Bild 3 bereits vorhanden, uebersprungen.
+2026-07-26 22:44:40 | Bild 4 bereits vorhanden, uebersprungen.
+2026-07-26 22:44:40 | Bild 5 bereits vorhanden, uebersprungen.
+2026-07-26 22:44:40 | Bild 6 bereits vorhanden, uebersprungen.
+2026-07-26 22:44:41 | Bild 7 bereits vorhanden, uebersprungen.
+2026-07-26 22:44:41 | Bild 8 bereits vorhanden, uebersprungen.
+2026-07-26 22:44:41 | Bild 9 bereits vorhanden, uebersprungen.
+2026-07-26 22:44:41 | Bild 10 bereits vorhanden, uebersprungen.
+2026-07-26 22:44:41 | Bild 11 bereits vorhanden, uebersprungen.
+2026-07-26 22:44:41 | Bild 12 bereits vorhanden, uebersprungen.
+2026-07-26 22:44:41 | Bild 13 bereits vorhanden, uebersprungen.
+2026-07-26 22:44:41 | Bild 14 bereits vorhanden, uebersprungen.
+2026-07-26 22:44:41 | Bild 15 bereits vorhanden, uebersprungen.
+2026-07-26 22:44:41 | Thumbnail bereits vorhanden, uebersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\thumbnail.jpg
+2026-07-26 22:44:41 | Ermittle Audiodauer...
+2026-07-26 22:44:41 | Baue Video mit FFmpeg...
+2026-07-26 22:44:41 | Gesamtdauer Audio: 466.6 Sekunden - 32 Sekunden pro Bild
+2026-07-26 22:46:00 | Musik geladen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\Musik\spirit-song.mp3
+2026-07-26 22:46:13 | Video fertig: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\video_fertig.mp4
+2026-07-26 22:46:13 | Lade Video auf YouTube hoch (Kanal: BewusstEinfach)...
+2026-07-28 14:57:19 | === YouTube Producer gestartet ===
+2026-07-28 14:57:20 | Kein offenes Video gefunden. Nichts zu tun.
+2026-07-28 14:58:26 | === YouTube Producer gestartet ===
+2026-07-28 14:58:26 | Starte Produktion: Du glaubst, du hast dich beruhigt. Dein Körper glaubt dir nicht.
+2026-07-28 14:58:26 | Audio bereits vorhanden, ElevenLabs wird Ã¼bersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\voiceover.mp3
+2026-07-28 14:58:26 | Kapitelmarken erstellt: 4 Kapitel, Gesamtdauer 467 Sek.
+2026-07-28 14:58:26 | Visueller Stil: KI-Portraits - generiere Bilder via fal.ai...
+2026-07-28 14:58:26 | Bild 1 bereits vorhanden, uebersprungen.
+2026-07-28 14:58:26 | Bild 2 bereits vorhanden, uebersprungen.
+2026-07-28 14:58:26 | Bild 3 bereits vorhanden, uebersprungen.
+2026-07-28 14:58:26 | Bild 4 bereits vorhanden, uebersprungen.
+2026-07-28 14:58:26 | Bild 5 bereits vorhanden, uebersprungen.
+2026-07-28 14:58:26 | Bild 6 bereits vorhanden, uebersprungen.
+2026-07-28 14:58:26 | Bild 7 bereits vorhanden, uebersprungen.
+2026-07-28 14:58:26 | Bild 8 bereits vorhanden, uebersprungen.
+2026-07-28 14:58:26 | Bild 9 bereits vorhanden, uebersprungen.
+2026-07-28 14:58:26 | Bild 10 bereits vorhanden, uebersprungen.
+2026-07-28 14:58:26 | Bild 11 bereits vorhanden, uebersprungen.
+2026-07-28 14:58:26 | Bild 12 bereits vorhanden, uebersprungen.
+2026-07-28 14:58:27 | Bild 13 bereits vorhanden, uebersprungen.
+2026-07-28 14:58:27 | Bild 14 bereits vorhanden, uebersprungen.
+2026-07-28 14:58:27 | Bild 15 bereits vorhanden, uebersprungen.
+2026-07-28 14:58:27 | Thumbnail bereits vorhanden, uebersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\thumbnail.jpg
+2026-07-28 14:58:27 | Ermittle Audiodauer...
+2026-07-28 14:58:27 | Baue Video mit FFmpeg...
+2026-07-28 14:58:27 | Gesamtdauer Audio: 466.6 Sekunden - 32 Sekunden pro Bild
+2026-07-28 14:59:43 | Musik geladen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\Musik\spirit-song.mp3
+2026-07-28 14:59:56 | Video fertig: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\video_fertig.mp4
+2026-07-28 14:59:56 | Lade Video auf YouTube hoch (Kanal: BewusstEinfach)...
+2026-07-28 14:59:57 | Footer fuer Kanal 'BewusstEinfach' angehaengt.
+2026-07-28 15:00:00 | Upload: 53% (8 MB / 15.1 MB)
+2026-07-28 15:00:03 | Upload: 100% (15.1 MB / 15.1 MB)
+2026-07-28 15:00:03 | Video hochgeladen (nicht gelistet): https://www.youtube.com/watch?v=fB90RdX9VEM
+2026-07-28 15:00:11 | Thumbnail hochgeladen.
+2026-07-28 15:00:11 | YouTube Studio: https://studio.youtube.com/video/fB90RdX9VEM/edit
+2026-07-28 15:00:11 | Bitte pruefen und auf Oeffentlich schalten.
+2026-07-28 15:00:11 | Setze vollstaendige Beschreibung...
+2026-07-28 15:00:12 | Vollstaendige Beschreibung gesetzt.
+2026-07-28 15:00:12 | Status auf Produziert gesetzt.
+2026-07-28 15:00:12 | === Produktion abgeschlossen: Du glaubst, du hast dich beruhigt. Dein Körper glaubt dir nicht. ===
+2026-07-28 15:00:12 | YouTube URL: https://www.youtube.com/watch?v=fB90RdX9VEM

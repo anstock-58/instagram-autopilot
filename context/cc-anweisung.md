@@ -185,9 +185,9 @@ Ziel ist immer: "das bin ich" auslösen. So konkret treffen, dass der Leser das 
 Viele machen tollen Content aber keinen CTA. Sie denken Verkaufen ist unsympathisch. Falsch: Unklarheit ist unsympathisch, nicht Verkaufen.
 Menschen wollen geführt werden. Wer keinen nächsten Schritt zeigt, lässt sie einfach weiterscrollen.
 
-Kein Post ohne Grund. Kein Reel ohne Richtung. Kein Video ohne nächsten Schritt.
+Kein Post ohne Grund. Kein Reel ohne Richtung. Aber nicht jeder Post braucht eine harte Aufforderung: reine Awareness-Beiträge dürfen echte Berührung sein, ohne Verkaufsabsicht, das sehen die drei Kaufphasen weiter unten ausdrücklich vor. Ein klarer nächster Schritt beziehungsweise CTA ist dort Pflicht, wo ein Beitrag bewusst auf Consideration oder Decision zielt, nicht in jedem einzelnen Post (Update 28.07.2026, nach Andis Werteklärung: „nicht beeindrucken, sondern berühren", ohne Bedürftigkeit).
 
-Jeder Post ist ein Verkäufer der 24 Stunden arbeitet — aber nur wenn man ihm beibringt was er sagen soll. Ohne CTA ist das wie ein Verkäufer im Laden der nicht weiß was er verkauft.
+Jeder Post ist ein Verkäufer der 24 Stunden arbeitet — aber nur wenn man ihm beibringt was er sagen soll. Wo ein CTA gebraucht wird, gilt: ohne CTA ist das wie ein Verkäufer im Laden der nicht weiß was er verkauft.
 
 Den Weg einfach machen: ein klarer Satz, ein klarer Schritt, ein klarer Prozess. Nie drei Links. Nie Umwege.
 
@@ -240,10 +240,8 @@ Erst verstehen, dann führen. Fragen stellen: "Womit kämpfst du gerade? Was wü
 Wenn das Problem im Chat klar ist, ist das Angebot die logische Konsequenz.
 Gespräch immer Richtung Lösung führen — nie Richtung Small Talk.
 
-**Conversion-Routinen (Zielwerte):**
-3 Reels pro Woche: Aufmerksamkeit und Autorität
-3-5 Story-Sequenzen pro Tag: Nähe und Vertrauen
-1-2 klare CTAs pro Woche: Action
+**Conversion-Routinen (Rhythmus statt feste Zielzahl, Update 28.07.2026):**
+Keine festen Mengenziele mehr pro Woche oder Tag. Qualität und Tiefe der einzelnen Beiträge zählen mehr als die Anzahl, passend zu Andis Werteklärung „Tiefe statt Oberflächlichkeit". Der Rhythmus richtet sich nach der aktuellen Priorität statt nach einer starren Quote, aktuell zum Beispiel: Hook-Qualität bei business.und.spirit vor neuem Volumen über alle Accounts gleichzeitig.
 
 Hinter jedem Inhalt steht dieselbe Frage: Wie führt das was ich poste jemanden näher an den nächsten Schritt?
 
