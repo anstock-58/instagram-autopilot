@@ -233,3 +233,12 @@
 2026-07-29 17:51:00 | === Fertig ===
 2026-07-30 17:50:46 | === LinkedIn Trigger | 30.07.2026 | 17:50 | CSV: contentplan_linkedin_juli_v1.csv ===
 2026-07-30 17:50:47 | Kein geplanter Post fuer heute (30.07.2026). Fertig.
+2026-07-31 17:50:56 | === LinkedIn Trigger | 31.07.2026 | 17:50 | CSV: contentplan_linkedin_juli_v1.csv ===
+2026-07-31 17:50:56 | 1 Post(s) fuer heute gefunden.
+2026-07-31 17:50:56 | Post faellig: Foto | 17:55
+2026-07-31 17:50:57 | Bild-Upload registriert. Asset: urn:li:digitalmediaAsset:D4E22AQHR1SLgRFlS8Q
+2026-07-31 17:50:57 | Bild hochgeladen (74532 Bytes).
+2026-07-31 17:50:57 | LinkedIn gepostet. URN: urn:li:share:7488984559636619264
+2026-07-31 17:50:57 | Status auf 'Gepostet' gesetzt.
+2026-07-31 17:50:58 | Erster Kommentar gesetzt.
+2026-07-31 17:50:58 | === Fertig ===
