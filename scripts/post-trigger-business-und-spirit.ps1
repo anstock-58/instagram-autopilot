@@ -167,12 +167,19 @@ function Post-Instagram {
 
     Write-Log "Poste auf Instagram ($targetType / $mediaType)"
 
+    Write-Log "Payload: $json"
     try {
         $response = Invoke-RestMethod -Uri "$apiBase/posts" -Method POST -Headers $headers -Body $jsonBytes -ErrorAction Stop
-        Write-Log "Instagram OK. SubmissionId: $($response.postSubmissionId)"
+        Write-Log "Instagram OK. Response: $($response | ConvertTo-Json -Compress)"
         return $true
     } catch {
-        Write-Log "FEHLER Instagram-Post: $_"
+        $statusCode = $_.Exception.Response.StatusCode.value__
+        try {
+            $stream = $_.Exception.Response.GetResponseStream()
+            $reader = New-Object System.IO.StreamReader($stream)
+            $body   = $reader.ReadToEnd()
+        } catch { $body = "(kein Body)" }
+        Write-Log "FEHLER Instagram-Post HTTP $statusCode`: $body"
         return $false
     }
 }
