@@ -3,8 +3,8 @@
 # Laeuft via GitHub Actions (workflow_dispatch, getriggert von cron-job.org).
 #
 # Benoetigte GitHub Secrets:
-#   LINKEDIN_ACCESS_TOKEN    -- LinkedIn OAuth Token (alle 2 Monate erneuern)
-#   LINKEDIN_PERSON_URN_DS   -- urn:li:person:TVPJInaVk9 (Dropservice-Profil)
+#   LINKEDIN_ACCESS_TOKEN_DS -- LinkedIn OAuth Token fuer Dropservice (fin.affairs.ansto, alle 2 Monate erneuern)
+#   LINKEDIN_PERSON_URN_DS   -- urn:li:person:da9CqePqC2 (Dropservice-Profil)
 
 # ============================================================
 # KONFIGURATION
@@ -31,8 +31,8 @@ if (-not $csvPath) {
     exit 1
 }
 
-$liToken     = if ($env:LINKEDIN_ACCESS_TOKEN)  { $env:LINKEDIN_ACCESS_TOKEN }  else { "" }
-$liPersonUrn = if ($env:LINKEDIN_PERSON_URN)    { $env:LINKEDIN_PERSON_URN }    else { "urn:li:person:TVPJInaVk9" }
+$liToken     = if ($env:LINKEDIN_ACCESS_TOKEN_DS)  { $env:LINKEDIN_ACCESS_TOKEN_DS }  else { "" }
+$liPersonUrn = if ($env:LINKEDIN_PERSON_URN_DS)    { $env:LINKEDIN_PERSON_URN_DS }    else { "urn:li:person:da9CqePqC2" }
 
 $ersterKommentar  = "Du willst mehr wissen oder einen Termin vereinbaren? Hier geht es zur Kontaktseite: https://ansto-finaffairs.com/terminbuchung/"
 $pauseDS          = Join-Path $outputsPath "pause_linkedin_dropservice.txt"

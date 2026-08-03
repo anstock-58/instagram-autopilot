@@ -49,8 +49,8 @@ jobs:
         if: steps.pause_check_ds.outputs.paused == 'false'
         env:
           BLOTATO_API_KEY: ${{ secrets.BLOTATO_API_KEY }}
-          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
-          LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+          LINKEDIN_ACCESS_TOKEN_DS: ${{ secrets.LINKEDIN_ACCESS_TOKEN_DS }}
+          LINKEDIN_PERSON_URN_DS: ${{ secrets.LINKEDIN_PERSON_URN_DS }}
           GITHUB_WORKSPACE: ${{ github.workspace }}
           TZ: Europe/Berlin
         shell: pwsh
