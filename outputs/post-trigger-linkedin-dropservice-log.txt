@@ -155,3 +155,5 @@
 2026-07-31 17:51:00 | Status auf 'Gepostet' gesetzt.
 2026-07-31 17:51:00 | Erster Kommentar gesetzt.
 2026-07-31 17:51:00 | === Fertig ===
+2026-08-04 17:50:54 | === Dropservice LinkedIn Trigger | 04.08.2026 | 17:50 | CSV: contentplan_linkedin_dropservice_august_v1.csv ===
+2026-08-04 17:50:54 | Kein geplanter Dropservice-Post fuer heute (04.08.2026). Fertig.
