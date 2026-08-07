@@ -71,6 +71,24 @@ $SZENEN = @(
         Prompt      = "Distinguished European man in his late 50s, silver slicked-back hair, short grey beard, grey wool blazer over dark grey t-shirt, sitting alone on a park bench in autumn light, looking into the distance, hands resting on knees, quiet and still, golden afternoon light through trees, 9:16 vertical, photorealistic editorial"
         KlingPrompt = "subtle breathing, slow blink, leaves gently move in background, stillness and depth"
     }
+    @{
+        Nr          = 10
+        Name        = "matthias-v2-10-cafe"
+        Prompt      = "Distinguished European man in his late 50s, silver slicked-back hair, short grey beard, grey wool blazer over dark grey t-shirt, sitting alone at a small cafe table in morning light, coffee cup in front of him, empty chair across, hands wrapped around cup, quiet reflective expression, warm soft daylight through window, 9:16 vertical, photorealistic editorial"
+        KlingPrompt = "subtle breathing, slow blink, fingers gently shift around cup, quiet morning atmosphere"
+    }
+    @{
+        Nr          = 11
+        Name        = "matthias-v2-11-treppenhaus"
+        Prompt      = "Distinguished European man in his late 50s, silver slicked-back hair, short grey beard, grey wool blazer over dark grey t-shirt, pausing on a staircase landing in an office building, one hand on railing, looking downward with a brief moment of stillness, cool neutral light, 9:16 vertical, photorealistic editorial"
+        KlingPrompt = "subtle breathing, slow blink, gaze moves slightly downward then back, stillness in motion"
+    }
+    @{
+        Nr          = 12
+        Name        = "matthias-v2-12-waldrand"
+        Prompt      = "Distinguished European man in his late 50s, silver slicked-back hair, short grey beard, grey wool blazer over dark grey t-shirt, standing at the edge of a forest looking out into open light, hands in pockets, calm and still, golden autumn afternoon light filtering through trees behind him, sense of openness and quiet clarity, 9:16 vertical, photorealistic editorial"
+        KlingPrompt = "subtle breathing, slow blink, faint breeze moves jacket slightly, sense of vast stillness"
+    }
 )
 
 # ---- Hilfsfunktionen ----
@@ -138,7 +156,7 @@ function Generate-KlingVideo($imageUrl, $prompt) {
 # ---- Hauptprogramm ----
 
 Write-Host ""
-Write-Host "Matthias V2 — Konsistenter Avatar via Flux PuLID + Kling" -ForegroundColor Yellow
+Write-Host "Matthias V2 — 12 Szenen via Flux PuLID + Kling" -ForegroundColor Yellow
 Write-Host "Mastergesicht: $MASTER_IMG" -ForegroundColor Gray
 Write-Host ""
 
@@ -229,4 +247,4 @@ $ergebnisse | ForEach-Object {
 $ergebnisse | Export-Csv -Path (Join-Path $VIDEO_DIR "matthias-v2-urls.csv") -NoTypeInformation -Encoding UTF8
 Write-Host ""
 Write-Host "Fertig! URLs in matthias-v2-urls.csv" -ForegroundColor Green
-Write-Host "Naechster Schritt: URLs in den September-Contentplan eintragen." -ForegroundColor Yellow
+Write-Host "Naechster Schritt: URLs in den Contentplan eintragen (ab 12.08 im August-Plan, dann September)." -ForegroundColor Yellow
