@@ -147,47 +147,78 @@ function Wait-ForVideoUrl {
     return $null
 }
 
-function Render-Creatomate {
+function Render-Local {
     param([string]$videoUrl, [string]$overlayText)
 
-    $cmKey        = "7321a5bd11844c0baf2a356f66df764e2d1cf7b41b86eb901f431de929b32c04048406b117a3005bff742fe0cd50f16c"
-    $templateId   = "b7392c62-3d93-4ef5-8bd5-462fdc830815"
-    $cmHeaders    = @{ "Authorization" = "Bearer $cmKey"; "Content-Type" = "application/json; charset=utf-8" }
+    $falKey     = if ($env:FAL_KEY) { $env:FAL_KEY } else { "7600112e-4d6f-4202-b107-b899fe36595c:4faa681903cdd51d757c18b7d0cc6c11" }
+    $falHeaders = @{ "Authorization" = "Key $falKey"; "Content-Type" = "application/json" }
 
-    $body = @{
-        template_id   = $templateId
-        modifications = @{
-            "video"        = $videoUrl
-            "overlay_text" = $overlayText
-            "music"        = @{ volume = "20%" }
-        }
-    } | ConvertTo-Json -Depth 5 -Compress
+    $tmpDir     = [System.IO.Path]::GetTempPath()
+    $inputFile  = Join-Path $tmpDir "bus_input_$(Get-Random).mp4"
+    $outputFile = Join-Path $tmpDir "bus_output_$(Get-Random).mp4"
+    $musicFile  = Join-Path $basePath "assets\music\background.mp3"
+    $fontFile   = "C\:/Windows/Fonts/arialbd.ttf"
 
-    Write-Log "Creatomate: Render starten..."
     try {
-        $r = Invoke-RestMethod -Uri "https://api.creatomate.com/v1/renders" `
-            -Method POST -Headers $cmHeaders `
-            -Body ([System.Text.Encoding]::UTF8.GetBytes($body)) -ErrorAction Stop
+        Write-Log "FFmpeg: Video herunterladen..."
+        Invoke-WebRequest -Uri $videoUrl -OutFile $inputFile -ErrorAction Stop
 
-        $renderId = if ($r -is [array]) { $r[0].id } else { $r.id }
-        Write-Log "Creatomate Render-ID: $renderId"
+        # Overlay-Text in 3 Zeilen aufteilen
+        $lines = $overlayText -split "`n"
+        $line1 = if ($lines.Count -gt 0) { $lines[0].Trim() } else { "" }
+        $line2 = if ($lines.Count -gt 1) { $lines[1].Trim() } else { "" }
+        $line3 = if ($lines.Count -gt 2) { $lines[2].Trim() } else { "" }
 
-        for ($i = 0; $i -lt 60; $i++) {
-            Start-Sleep -Seconds 5
-            $status = Invoke-RestMethod -Uri "https://api.creatomate.com/v1/renders/$renderId" `
-                -Method GET -Headers $cmHeaders -ErrorAction Stop
-            Write-Log "Creatomate Status ($($i+1)): $($status.status)"
-            if ($status.status -eq "succeeded") { return $status.url }
-            if ($status.status -eq "failed") {
-                Write-Log "Creatomate fehlgeschlagen: $($status.error_message)"
-                return $null
-            }
+        # Sonderzeichen escapen fuer FFmpeg drawtext
+        $line1 = $line1 -replace ":", "\:" -replace "'", "'\\'''"
+        $line2 = $line2 -replace ":", "\:" -replace "'", "'\\'''"
+        $line3 = $line3 -replace ":", "\:" -replace "'", "'\\'''"
+
+        $box = "box=1:boxcolor=white@0.85:boxborderw=14"
+        $dt = "drawtext=fontfile='$fontFile':text='$line1':x=(w-tw)/2:y=h*0.63:fontsize=40:fontcolor=#1A2230:$box," +
+              "drawtext=fontfile='$fontFile':text='$line2':x=(w-tw)/2:y=h*0.72:fontsize=40:fontcolor=#1A2230:$box," +
+              "drawtext=fontfile='$fontFile':text='$line3':x=(w-tw)/2:y=h*0.81:fontsize=34:fontcolor=#1A2230:$box"
+
+        if (Test-Path $musicFile) {
+            Write-Log "FFmpeg: Render mit Text + Musik..."
+            & ffmpeg -y -i $inputFile -i $musicFile `
+                -filter_complex "[0:v]$dt[v];[1:a]volume=0.15,aloop=loop=-1:size=2147483647[a]" `
+                -map "[v]" -map "[a]" -shortest -c:v libx264 -c:a aac $outputFile 2>&1 | Out-Null
+        } else {
+            Write-Log "FFmpeg: Render mit Text (kein Musikfile unter assets/music/background.mp3)..."
+            & ffmpeg -y -i $inputFile -vf $dt -c:v libx264 -c:a copy $outputFile 2>&1 | Out-Null
         }
-        Write-Log "Creatomate Timeout"
-        return $null
+
+        if (-not (Test-Path $outputFile) -or (Get-Item $outputFile).Length -lt 10000) {
+            Write-Log "FFmpeg fehlgeschlagen — Output fehlt oder zu klein"
+            return $null
+        }
+
+        Write-Log "FFmpeg OK. Hochladen auf fal.ai..."
+        $fileName = "bus_rendered_$(Get-Date -Format 'yyyyMMdd_HHmmss').mp4"
+        $initBody = @{ file_name = $fileName; content_type = "video/mp4" } | ConvertTo-Json
+        $init = Invoke-RestMethod -Uri "https://rest.alpha.fal.ai/storage/upload/initiate" `
+            -Method POST -Headers $falHeaders `
+            -Body ([System.Text.Encoding]::UTF8.GetBytes($initBody)) `
+            -ContentType "application/json; charset=utf-8" -ErrorAction Stop
+
+        $fileBytes = [System.IO.File]::ReadAllBytes($outputFile)
+        try {
+            Invoke-RestMethod -Uri $init.upload_url -Method PUT -Body $fileBytes `
+                -ContentType "video/mp4" -ErrorAction Stop | Out-Null
+        } catch {
+            if ($_.Exception.Response.StatusCode.value__ -notin @(200, 204)) { throw }
+        }
+
+        Write-Log "Upload OK: $($init.file_url)"
+        return $init.file_url
+
     } catch {
-        Write-Log "FEHLER Creatomate: $_"
+        Write-Log "FEHLER Render-Local: $_"
         return $null
+    } finally {
+        if (Test-Path $inputFile)  { Remove-Item $inputFile  -Force -ErrorAction SilentlyContinue }
+        if (Test-Path $outputFile) { Remove-Item $outputFile -Force -ErrorAction SilentlyContinue }
     }
 }
 
@@ -355,13 +386,13 @@ foreach ($row in $heuteRows) {
     if ($directImageUrl -and $directImageUrl -match "^https://") {
         $overlayText = $row.'Text-Overlay'.Trim()
         if ($overlayText -and $typ -ne "Story") {
-            Write-Log "Creatomate-Modus: Video + Overlay + Musik rendern"
-            $renderedUrl = Render-Creatomate -videoUrl $directImageUrl -overlayText $overlayText
+            Write-Log "FFmpeg-Modus: Video + Overlay + Musik rendern"
+            $renderedUrl = Render-Local -videoUrl $directImageUrl -overlayText $overlayText
             if ($renderedUrl) {
-                Write-Log "Creatomate OK: $renderedUrl"
+                Write-Log "FFmpeg OK: $renderedUrl"
                 $videoUrl = $renderedUrl
             } else {
-                Write-Log "Creatomate fehlgeschlagen — nutze Original-Video ohne Overlay"
+                Write-Log "FFmpeg fehlgeschlagen — nutze Original-Video ohne Overlay"
                 $videoUrl = $directImageUrl
             }
         } else {
