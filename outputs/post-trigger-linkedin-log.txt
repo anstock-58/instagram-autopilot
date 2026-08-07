@@ -253,3 +253,5 @@
 2026-08-04 17:50:53 | === Fertig ===
 2026-08-05 17:50:38 | === LinkedIn Trigger | 05.08.2026 | 17:50 | CSV: contentplan_linkedin_august_v1.csv ===
 2026-08-05 17:50:38 | Kein geplanter Post fuer heute (05.08.2026). Fertig.
+2026-08-07 17:50:48 | === LinkedIn Trigger | 07.08.2026 | 17:50 | CSV: contentplan_linkedin_august_v1.csv ===
+2026-08-07 17:50:48 | Kein geplanter Post fuer heute (07.08.2026). Fertig.
