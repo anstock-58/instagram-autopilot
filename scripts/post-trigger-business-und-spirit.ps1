@@ -156,7 +156,7 @@ function Render-Local {
     $tmpDir     = [System.IO.Path]::GetTempPath()
     $inputFile  = Join-Path $tmpDir "bus_input_$(Get-Random).mp4"
     $outputFile = Join-Path $tmpDir "bus_output_$(Get-Random).mp4"
-    $musicFile  = Join-Path $basePath "assets\music\background.mp3"
+    $musicFile  = Join-Path $basePath "music\background-chill.mp3"
     $fontFile   = "C\:/Windows/Fonts/arialbd.ttf"
 
     try {
@@ -182,7 +182,7 @@ function Render-Local {
         if (Test-Path $musicFile) {
             Write-Log "FFmpeg: Render mit Text + Musik..."
             & ffmpeg -y -i $inputFile -i $musicFile `
-                -filter_complex "[0:v]$dt[v];[1:a]volume=0.15,aloop=loop=-1:size=2147483647[a]" `
+                -filter_complex "[0:v]$dt[v];[1:a]volume=0.15[a]" `
                 -map "[v]" -map "[a]" -shortest -c:v libx264 -c:a aac $outputFile 2>&1 | Out-Null
         } else {
             Write-Log "FFmpeg: Render mit Text (kein Musikfile unter assets/music/background.mp3)..."
