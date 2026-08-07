@@ -147,6 +147,50 @@ function Wait-ForVideoUrl {
     return $null
 }
 
+function Render-Creatomate {
+    param([string]$videoUrl, [string]$overlayText)
+
+    $cmKey        = "7321a5bd11844c0baf2a356f66df764e2d1cf7b41b86eb901f431de929b32c04048406b117a3005bff742fe0cd50f16c"
+    $templateId   = "b7392c62-3d93-4ef5-8bd5-462fdc830815"
+    $cmHeaders    = @{ "Authorization" = "Bearer $cmKey"; "Content-Type" = "application/json; charset=utf-8" }
+
+    $body = @{
+        template_id   = $templateId
+        modifications = @{
+            "video"        = $videoUrl
+            "overlay_text" = $overlayText
+            "music"        = @{ volume = "20%" }
+        }
+    } | ConvertTo-Json -Depth 5 -Compress
+
+    Write-Log "Creatomate: Render starten..."
+    try {
+        $r = Invoke-RestMethod -Uri "https://api.creatomate.com/v1/renders" `
+            -Method POST -Headers $cmHeaders `
+            -Body ([System.Text.Encoding]::UTF8.GetBytes($body)) -ErrorAction Stop
+
+        $renderId = if ($r -is [array]) { $r[0].id } else { $r.id }
+        Write-Log "Creatomate Render-ID: $renderId"
+
+        for ($i = 0; $i -lt 60; $i++) {
+            Start-Sleep -Seconds 5
+            $status = Invoke-RestMethod -Uri "https://api.creatomate.com/v1/renders/$renderId" `
+                -Method GET -Headers $cmHeaders -ErrorAction Stop
+            Write-Log "Creatomate Status ($($i+1)): $($status.status)"
+            if ($status.status -eq "succeeded") { return $status.url }
+            if ($status.status -eq "failed") {
+                Write-Log "Creatomate fehlgeschlagen: $($status.error_message)"
+                return $null
+            }
+        }
+        Write-Log "Creatomate Timeout"
+        return $null
+    } catch {
+        Write-Log "FEHLER Creatomate: $_"
+        return $null
+    }
+}
+
 function Post-Instagram {
     param([string]$caption, [string]$mediaUrl, [string]$targetType, [string]$mediaType = "")
 
@@ -306,11 +350,24 @@ foreach ($row in $heuteRows) {
     }
     $voiceover = $voiceoverBase
 
-    # FOTO-MODUS: Wenn Bild-URL direkt vorhanden, kein AI-Video rendern (spart Credits)
+    # FOTO-MODUS: Wenn Bild-URL direkt vorhanden, Creatomate fuer Overlay + Musik
     $directImageUrl = $row.'Bild-URL'.Trim()
     if ($directImageUrl -and $directImageUrl -match "^https://") {
-        Write-Log "Foto-Modus: Direktes Bild posten (keine Credits)"
-        $videoUrl = $directImageUrl
+        $overlayText = $row.'Text-Overlay'.Trim()
+        if ($overlayText -and $typ -ne "Story") {
+            Write-Log "Creatomate-Modus: Video + Overlay + Musik rendern"
+            $renderedUrl = Render-Creatomate -videoUrl $directImageUrl -overlayText $overlayText
+            if ($renderedUrl) {
+                Write-Log "Creatomate OK: $renderedUrl"
+                $videoUrl = $renderedUrl
+            } else {
+                Write-Log "Creatomate fehlgeschlagen — nutze Original-Video ohne Overlay"
+                $videoUrl = $directImageUrl
+            }
+        } else {
+            Write-Log "Foto-Modus: Direktes Video posten (kein Overlay)"
+            $videoUrl = $directImageUrl
+        }
     } else {
         $videoName     = "Business-und-Spirit $typ $heute"
         $videoResponse = Create-AIVideo -imagePrompt $imageSource -voiceScript $voiceover -ctaScript $ctaScript -typ $typ -videoName $videoName
