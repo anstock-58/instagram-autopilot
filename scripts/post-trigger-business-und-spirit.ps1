@@ -157,7 +157,7 @@ function Render-Local {
     $inputFile  = Join-Path $tmpDir "bus_input_$(Get-Random).mp4"
     $outputFile = Join-Path $tmpDir "bus_output_$(Get-Random).mp4"
     $musicFile  = Join-Path $basePath "music\background-chill.mp3"
-    $fontFile   = "C\:/Windows/Fonts/arialbd.ttf"
+    $fontFile   = if ($env:GITHUB_WORKSPACE) { "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf" } else { "C\:/Windows/Fonts/arialbd.ttf" }
 
     try {
         Write-Log "FFmpeg: Video herunterladen..."
