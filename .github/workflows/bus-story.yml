@@ -1,11 +1,10 @@
 name: Business-und-Spirit Autopilot - Story (09:00)
 
 on:
-  # PAUSIERT - Automation gestoppt 16.07.2026
-  # schedule:
-  #   - cron: '3 7 * * *'     # 07:03 UTC = 09:03 CEST (täglich)
-  #   - cron: '37 8 * * *'    # Backup-Lauf
-  #   - cron: '23 10 * * *'   # Backup-Lauf
+  schedule:
+    - cron: '3 7 * * *'     # 07:03 UTC = 09:03 CEST (täglich)
+    - cron: '37 8 * * *'    # Backup-Lauf
+    - cron: '23 10 * * *'   # Backup-Lauf
   workflow_dispatch:
 
 jobs:
