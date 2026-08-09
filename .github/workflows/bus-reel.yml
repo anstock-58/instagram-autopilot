@@ -27,12 +27,6 @@ jobs:
             echo "paused=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: FFmpeg und Fonts installieren
-        if: steps.pause_check.outputs.paused == 'false'
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y --no-install-recommends fonts-liberation
-
       - name: Reel verÃ¶ffentlichen
         if: steps.pause_check.outputs.paused == 'false'
         env:

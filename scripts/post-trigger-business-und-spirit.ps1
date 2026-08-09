@@ -157,7 +157,7 @@ function Render-Local {
     $inputFile  = Join-Path $tmpDir "bus_input_$(Get-Random).mp4"
     $outputFile = Join-Path $tmpDir "bus_output_$(Get-Random).mp4"
     $musicFile  = Join-Path $basePath "music\background-chill.mp3"
-    $fontFile   = if ($env:GITHUB_WORKSPACE) { "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf" } else { "C\:/Windows/Fonts/arialbd.ttf" }
+    $fontFile   = if ($env:GITHUB_WORKSPACE) { "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" } else { "C\:/Windows/Fonts/arialbd.ttf" }
 
     try {
         Write-Log "FFmpeg: Video herunterladen..."
@@ -180,13 +180,15 @@ function Render-Local {
               "drawtext=fontfile='$fontFile':text='$line3':x=(w-tw)/2:y=h*0.81:fontsize=34:fontcolor=#1A2230:$box"
 
         if (Test-Path $musicFile) {
-            Write-Log "FFmpeg: Render mit Text + Musik..."
-            & ffmpeg -y -i $inputFile -i $musicFile `
+            Write-Log "FFmpeg: Render mit Text + Musik (Font: $fontFile)..."
+            $ffmpegOut = & ffmpeg -y -i $inputFile -i $musicFile `
                 -filter_complex "[0:v]$dt[v];[1:a]volume=0.15[a]" `
-                -map "[v]" -map "[a]" -shortest -c:v libx264 -c:a aac $outputFile 2>&1 | Out-Null
+                -map "[v]" -map "[a]" -shortest -c:v libx264 -c:a aac $outputFile 2>&1
+            $ffmpegOut | Select-Object -Last 20 | ForEach-Object { Write-Log "ffmpeg: $_" }
         } else {
-            Write-Log "FFmpeg: Render mit Text (kein Musikfile unter assets/music/background.mp3)..."
-            & ffmpeg -y -i $inputFile -vf $dt -c:v libx264 -c:a copy $outputFile 2>&1 | Out-Null
+            Write-Log "FFmpeg: Render mit Text (kein Musikfile)..."
+            $ffmpegOut = & ffmpeg -y -i $inputFile -vf $dt -c:v libx264 -c:a copy $outputFile 2>&1
+            $ffmpegOut | Select-Object -Last 20 | ForEach-Object { Write-Log "ffmpeg: $_" }
         }
 
         if (-not (Test-Path $outputFile) -or (Get-Item $outputFile).Length -lt 10000) {
