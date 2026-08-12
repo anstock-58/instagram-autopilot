@@ -27,4 +27,4 @@ In anderen Bereichen (Affiliate, TAC, digitale Produkte) läuft weiter das beste
 
 ## Für andere Sessions
 
-Wenn du diese Datei in eine andere Session einfügst: das bedeutet, mehr eigene Stimme, mehr echte Geschichte, weniger Zurückhaltung, aber immer noch innerhalb der bestehenden Regeln aus `reference/content-regeln-instagram.md` und `context/brand-dna-neustart-im-kopf.md`, kein Widerspruch dazu, sondern mehr davon.
+Wenn du diese Datei in eine andere Session einfügst: das bedeutet, mehr eigene Stimme, mehr echte Geschichte, weniger Zurückhaltung, aber immer noch innerhalb der bestehenden Regeln aus [content-regeln-instagram.md](content-regeln-instagram.md) und [brand-dna-neustart-im-kopf.md](../context/brand-dna-neustart-im-kopf.md), kein Widerspruch dazu, sondern mehr davon.

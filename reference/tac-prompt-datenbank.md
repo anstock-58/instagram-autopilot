@@ -9,8 +9,8 @@
 ## Aufbau des Sheets (drei Tabs)
 
 1. **Anleitung** (gid 1025494030): Erklärt die beiden Workflows unten.
-2. **Charakter-Tools** (gid 408316936): 106 Prompts für Tools mit gespeichertem Charakter (OpenArt, HeyGen). Lokal: `reference/tac-prompt-datenbank-charakter-tools.csv`.
-3. **Referenzbilder (ChatGPT-Gemini)** (gid 774020590): Dieselben 106 Szenen, aber jeder Prompt verweist auf zwei bis drei angehängte Referenzbilder statt auf einen gespeicherten Charakter. Für Tools ohne Charakter-Speicher. Lokal: `reference/tac-prompt-datenbank-referenzbilder.csv`.
+2. **Charakter-Tools** (gid 408316936): 106 Prompts für Tools mit gespeichertem Charakter (OpenArt, HeyGen). Lokal: [tac-prompt-datenbank-charakter-tools.csv](tac-prompt-datenbank-charakter-tools.csv).
+3. **Referenzbilder (ChatGPT-Gemini)** (gid 774020590): Dieselben 106 Szenen, aber jeder Prompt verweist auf zwei bis drei angehängte Referenzbilder statt auf einen gespeicherten Charakter. Für Tools ohne Charakter-Speicher. Lokal: [tac-prompt-datenbank-referenzbilder.csv](tac-prompt-datenbank-referenzbilder.csv).
 
 ## Die zwei Workflows (aus dem Anleitung-Tab)
 
@@ -32,7 +32,7 @@ Reise & Strand, Fashion & Editorial, Food & Café, Morgenroutine, Fitness & Gym,
 
 ## Verhältnis zur AI Avatar Factory
 
-Ergänzt `reference/ai-avatar-factory-methode.md` (Stufe 7, Anhang B) um eine fertige Szenen-Bibliothek: statt für jeden Account eigene Szenen zu erfinden, können passende Zeilen aus dieser Datenbank als Ausgangspunkt dienen und mit dem festen Charakter-Prompt-Block des jeweiligen Accounts kombiniert werden (Workflow 1, wenn das Zieltool wie fal.ai/HeyGen einen festen Charakter nutzt).
+Ergänzt [ai-avatar-factory-methode.md](ai-avatar-factory-methode.md) (Stufe 7, Anhang B) um eine fertige Szenen-Bibliothek: statt für jeden Account eigene Szenen zu erfinden, können passende Zeilen aus dieser Datenbank als Ausgangspunkt dienen und mit dem festen Charakter-Prompt-Block des jeweiligen Accounts kombiniert werden (Workflow 1, wenn das Zieltool wie fal.ai/HeyGen einen festen Charakter nutzt).
 
 ---
 

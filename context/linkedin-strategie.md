@@ -155,6 +155,48 @@ Basis: Andis funktionierendes Instagram Autopilot System (Blotato, GitHub Action
 
 ---
 
+## KI-Prozessberatung für KMU — neues Angebot auf LinkedIn (ab August 2026)
+
+Zweites Standbein neben AI Creatives, auf demselben Dropservice-Profil und im selben Netzwerk (Hakan Ersu, Leon Weidner), nicht ein separater Account. Vollständige Methodik in `reference/ki-prozessberatung-kmu-methode.md` (8-Schritt-Analyse, Interview-Leitfaden, Mitarbeiter-Fragebogen, Checkliste, plus Anhang E speziell für kleine Handwerksbetriebe).
+
+### Das Angebot
+KI-Prozessberatung für kleine und mittelständische Unternehmen. Analyse der echten Betriebsabläufe, konkrete KI- und Automatisierungslösungen statt generischer KI-Ideen von der Stange. Ausgangspunkt ist immer der reale Ablauf im jeweiligen Betrieb.
+
+### Positionierungssatz
+„Ich helfe kleinen und mittelständischen Unternehmen, mit KI wirklich Zeit und Kosten zu sparen, ausgehend von euren echten Abläufen, nicht von fertigen KI-Ideen von der Stange."
+
+### Zielgruppen (nach Priorität)
+1. Handwerks- und Sanierungsbetriebe aus dem eigenen Netzwerk (Malerhandwerk, Dachdecker, Bautenschutz). Niedrigschwellig ansprechbar, Faustregel aus Anhang E: unter 10 bis 15 Mitarbeitern reicht der Chef/die Chefin allein als Ansprechpartner, der Interview-Link kann direkt verschickt werden statt erst ein persönliches Treffen zu vereinbaren.
+2. Mittelständische Bauunternehmen/Ingenieurbau (wie B+H Bau). Größerer Rahmen, mehrere Ansprechpartner (Geschäftsführung, IT, Gesellschafter), persönlicher Erstkontakt sinnvoller als reiner Formular-Link.
+3. Perspektivisch: Coaches und Berater, überschneidet sich mit der bestehenden Zielgruppe von AI Creatives, dort eher als Zusatzangebot für die interne Prozessseite statt nur Content-Automatisierung.
+
+### Referenzen, die Andi bereits hat
+- Vollständige, ausgearbeitete Methodik mit acht Analyseschritten und fünf Anhängen
+- Zwei fertige digitale Erhebungsformulare live: Geschäftsführer-Interview (`ansto-finaffairs.com/ki-analyse-interview.html`) und ein eigenes für kleine Handwerksbetriebe
+- Drei interaktive Demos zum Zeigen: E-Mail-Automatisierung, Statusübersicht, Bautagebuch per Spracherkennung
+- Laufender Pilotkunde B+H Bau GmbH (Ingenieurbau, Termin Mitte August 2026), sobald gelaufen als echte Case Study nutzbar, vorher nicht als abgeschlossene Referenz ausgeben
+
+### Outreach-Strategie
+Gleiche Grundstruktur wie bei AI Creatives (Tim Krasenbrink, 4 Nachrichten, siehe `reference/linkedin-outreach-templates.md` als Vorlage), inhaltlich angepasst:
+1. Connection Request: kurzer persönlicher Bezug zum Gewerk oder gemeinsamen Netzwerk-Kontakt
+2. Nach Annahme: offene Frage zu KI/Digitalisierung im eigenen Betrieb, keine Verkaufsabsicht erkennbar
+3. Nach Antwort: kurzer Social Proof (sobald B+H Bau als Referenz nutzbar) plus Angebot des kostenlosen Kurz-Checks, Link zum passenden Formular als niedrigschwelliger erster Schritt
+4. Terminvorschlag für ein kurzes Auswertungsgespräch nach dem ausgefüllten Formular
+
+### Für klickstarke Texte und Posts
+Dieselbe Hook-Formel wie überall anwenden, siehe `reference/hook-formel-universal.md` (Hammer, Schraube, Wendung, offene Schleife), dieselben Content-Grundregeln wie oben in diesem Dokument (150 bis 250 Wörter, kurze Absätze, klare Keyword-CTA statt Bekenntnisfrage am Ende). Ein funktionierender Content-Winkel aus einer echten Diskussion: KI ist nur so gut wie die Organisation dahinter, eine unstrukturierte Firma wird durch einen KI-Agenten nicht automatisch besser oder schneller, sondern nur schneller unorganisiert. Dieser Kontrast (Ordnung zuerst, dann KI) funktioniert als Hook, weil er dem üblichen KI-Hype widerspricht und damit die Wendung liefert.
+
+### Mögliche spätere Erweiterung: Mitarbeitersuche, noch nicht ausgearbeitet
+Aus einem Gespräch mit Matthias (B+H Bau) entstanden: Fachkräftemangel ist im Handwerk/Bau real, über dasselbe Netzwerk (Hakan Ersu) könnte Mitarbeitergewinnung/Recruiting als drittes Standbein neben AI Creatives und KI-Prozessberatung angeboten werden. Bewusst noch nicht konkretisiert, erst angehen wenn die KI-Prozessberatung als Angebot selbst steht, damit nicht zu viele Themen gleichzeitig aufgebaut werden.
+
+### Profil-Update, noch offen
+Das Profil auf diesem Account muss die neue Positionierung aufnehmen, About-Text und Headline. Der genaue Text wird in der LinkedIn-Session selbst erarbeitet, hier nur als offener Punkt vermerkt, nicht vorweggenommen.
+
+### Trigger für die LinkedIn Session
+„Bauen wir die KI-Prozessberatung als neues Angebot auf dem Dropservice-LinkedIn-Profil auf."
+
+---
+
 ## Automation (aktueller Stand)
 
 - Instagram + LinkedIn laufen vollständig über Blotato REST API ✅ — kein Make.com mehr für Posts

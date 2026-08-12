@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo: KI-Unterstützung im Postfach</title>
+<style>
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  :root {
+    --bg:#f3f4f6;
+    --panel:#ffffff;
+    --border:#e2e4e9;
+    --text:#1f2430;
+    --text-soft:#5b6270;
+    --muted:#8b93a3;
+    --accent:#2563eb;
+    --accent-soft:#eaf0ff;
+    --hoch:#dc2626; --hoch-bg:#fde8e8;
+    --mittel:#b7791f; --mittel-bg:#fdf3d9;
+    --niedrig:#15803d; --niedrig-bg:#e6f6ec;
+  }
+  body {
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
+    background:var(--bg); color:var(--text);
+    min-height:100vh; padding:1.5rem;
+  }
+  .demo-tag {
+    max-width:1180px; margin:0 auto .9rem; font-size:.78rem; color:var(--muted);
+    display:flex; justify-content:space-between; align-items:center;
+  }
+  .demo-tag b { color:var(--text-soft); }
+  .app {
+    max-width:1180px; margin:0 auto; background:var(--panel); border:1px solid var(--border);
+    border-radius:12px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,.06), 0 10px 30px rgba(0,0,0,.05);
+  }
+  .topbar {
+    background:#111827; color:#fff; padding:.85rem 1.3rem; display:flex; align-items:center; gap:.7rem;
+    font-size:.92rem; font-weight:600;
+  }
+  .topbar .dot { width:9px; height:9px; border-radius:50%; background:#22c55e; display:inline-block; }
+  .topbar .sub { font-weight:400; color:#9ca3af; font-size:.8rem; margin-left:auto; }
+
+  .layout { display:grid; grid-template-columns:240px 340px 1fr; min-height:560px; }
+  .folders { background:#f8f9fb; border-right:1px solid var(--border); padding:1.1rem .9rem; }
+  .folders .acct { font-size:.82rem; font-weight:600; margin-bottom:1rem; color:var(--text-soft); }
+  .folders .item { padding:.55rem .7rem; border-radius:7px; font-size:.87rem; color:var(--text-soft); margin-bottom:.15rem; cursor:default; }
+  .folders .item.active { background:var(--accent-soft); color:var(--accent); font-weight:600; }
+  .folders .item .count { float:right; color:var(--muted); font-size:.78rem; }
+
+  .list { border-right:1px solid var(--border); overflow-y:auto; }
+  .list-head { padding:.9rem 1rem .6rem; font-size:.8rem; font-weight:700; color:var(--text-soft); text-transform:uppercase; letter-spacing:.03em; }
+  .mail-item { padding:.85rem 1rem; border-bottom:1px solid var(--border); cursor:pointer; transition:background .15s; }
+  .mail-item:hover { background:#f8f9fb; }
+  .mail-item.active { background:var(--accent-soft); border-left:3px solid var(--accent); padding-left:calc(1rem - 3px); }
+  .mail-top { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:.2rem; }
+  .mail-from { font-size:.88rem; font-weight:600; color:var(--text); }
+  .mail-time { font-size:.74rem; color:var(--muted); }
+  .mail-subject { font-size:.85rem; color:var(--text-soft); margin-bottom:.35rem; }
+  .badge { display:inline-block; font-size:.68rem; font-weight:700; padding:.15rem .5rem; border-radius:20px; letter-spacing:.02em; }
+  .badge.hoch { color:var(--hoch); background:var(--hoch-bg); }
+  .badge.mittel { color:var(--mittel); background:var(--mittel-bg); }
+  .badge.niedrig { color:var(--niedrig); background:var(--niedrig-bg); }
+
+  .detail { padding:1.3rem 1.5rem; overflow-y:auto; }
+  .detail-head { border-bottom:1px solid var(--border); padding-bottom:1rem; margin-bottom:1rem; }
+  .detail-subject { font-size:1.15rem; font-weight:700; margin-bottom:.5rem; }
+  .detail-meta { font-size:.85rem; color:var(--text-soft); }
+  .detail-meta b { color:var(--text); }
+  .detail-body { font-size:.92rem; line-height:1.7; color:var(--text); white-space:pre-wrap; margin-bottom:1.4rem; }
+
+  .ai-panel { border:1.5px solid var(--accent); border-radius:10px; overflow:hidden; }
+  .ai-head { background:var(--accent-soft); padding:.7rem 1rem; display:flex; align-items:center; gap:.5rem; }
+  .ai-icon { width:22px; height:22px; border-radius:50%; background:var(--accent); color:#fff; display:flex; align-items:center; justify-content:center; font-size:.75rem; font-weight:700; flex-shrink:0; }
+  .ai-head-text { font-size:.85rem; font-weight:700; color:#1e3a8a; }
+  .ai-tags { padding:.8rem 1rem 0; display:flex; gap:.5rem; flex-wrap:wrap; }
+  .ai-tags .tag { font-size:.76rem; background:#eef1f6; color:var(--text-soft); padding:.25rem .6rem; border-radius:6px; }
+  .ai-body { padding:1rem; }
+  .ai-label { font-size:.72rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); margin-bottom:.4rem; font-weight:700; }
+  .ai-draft { background:#fafbfc; border:1px solid var(--border); border-radius:8px; padding:.85rem .95rem; font-size:.88rem; line-height:1.65; color:var(--text); white-space:pre-wrap; min-height:80px; }
+  .ai-actions { display:flex; gap:.6rem; margin-top:.9rem; }
+  .btn { font-size:.83rem; font-weight:600; padding:.55rem 1.1rem; border-radius:7px; cursor:pointer; border:none; }
+  .btn-primary { background:var(--accent); color:#fff; }
+  .btn-ghost { background:#fff; border:1px solid var(--border); color:var(--text-soft); }
+  .ai-note { font-size:.74rem; color:var(--muted); margin-top:.7rem; text-align:center; }
+
+  @media (max-width:900px) {
+    .layout { grid-template-columns:1fr; }
+    .folders { display:none; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="demo-tag">
+    <span>Demo, keine echten Daten &mdash; Beispiel für eine E-Mail-Automatisierung im Ingenieurbau</span>
+    <span><b>Postfach: info@musterbau-ingenieurbau.de</b></span>
+  </div>
+
+  <div class="app">
+    <div class="topbar">
+      <span class="dot"></span> Posteingang &mdash; KI-Unterstützung aktiv
+      <span class="sub">3 ungelesen</span>
+    </div>
+
+    <div class="layout">
+      <div class="folders">
+        <div class="acct">Musterbau GmbH</div>
+        <div class="item active">Posteingang <span class="count">3</span></div>
+        <div class="item">Gesendet</div>
+        <div class="item">Entwürfe</div>
+        <div class="item">Archiv</div>
+        <div class="item">Angebote</div>
+        <div class="item">Reklamationen</div>
+      </div>
+
+      <div class="list" id="mailList"></div>
+
+      <div class="detail" id="detail"></div>
+    </div>
+  </div>
+
+<script>
+const MAILS = [
+  {
+    id: 1,
+    from: "Dipl.-Ing. Frank Bergmann (Landesbetrieb Straßen.NRW)",
+    time: "08:14",
+    subject: "Rückfrage zum Nachtragsangebot Baugrund BW 12",
+    body: "Sehr geehrte Damen und Herren,\n\nzu Ihrem Nachtragsangebot Nr. 3 für Bauwerk BW 12 (abweichende Baugrundverhältnisse Widerlager Ost) haben wir noch Rückfragen zur Kostenermittlung.\n\nKönnen Sie uns kurzfristig eine Aufschlüsselung der Mehrmengen sowie eine Stellungnahme des Baugrundgutachters nachreichen? Der Bauzeitenplan hängt aktuell an dieser Freigabe.\n\nMit freundlichen Grüßen\nFrank Bergmann",
+    kategorie: "Nachtragsmanagement / Baugrund",
+    dringlichkeit: "hoch",
+    dringlichkeitLabel: "Hoch",
+    zustaendig: "Projektleiter M. Hartmann",
+    tags: ["Bauwerk BW 12", "Nachtrag Nr. 3"],
+    draft: "Sehr geehrter Herr Bergmann,\n\nvielen Dank für Ihre Rückfrage. Die Aufschlüsselung der Mehrmengen sowie die Stellungnahme des Baugrundgutachters reichen wir bis Freitag nach, damit der Bauzeitenplan zeitnah wieder freigegeben werden kann.\n\nMit freundlichen Grüßen\nProjektleitung"
+  },
+  {
+    id: 2,
+    from: "Sabine Reuter (DB Netz AG, Bauüberwachung)",
+    time: "09:02",
+    subject: "Abstimmung Sperrpause Gleisquerung KW 34",
+    body: "Guten Tag,\n\nfür die geplanten Arbeiten an der Gleisquerung benötigen wir die finale Bestätigung des Sperrpausenfensters in KW 34. Bitte teilen Sie uns die exakten Zeiten mit, damit wir die betrieblichen Vorbereitungen einleiten können.\n\nFreundliche Grüße\nSabine Reuter",
+    kategorie: "Terminabstimmung Bahn",
+    dringlichkeit: "mittel",
+    dringlichkeitLabel: "Mittel",
+    zustaendig: "Bauleiter T. Schmidt",
+    tags: ["Gleisquerung", "Sperrpause KW 34"],
+    draft: "Guten Tag Frau Reuter,\n\ndie Sperrpause ist bei uns eingeplant von Freitag 22 Uhr bis Sonntag 6 Uhr, KW 34. Die Kolonne ist entsprechend disponiert, wir bestätigen die Zeiten hiermit verbindlich.\n\nFreundliche Grüße\nBauleitung"
+  },
+  {
+    id: 3,
+    from: "Kreisverwaltung Olpe, Fachbereich Tiefbau",
+    time: "10:47",
+    subject: "Anfrage Angebot Sanierung Brückenbauwerk K23",
+    body: "Sehr geehrte Damen und Herren,\n\nim Zuge der Sanierung des Brückenbauwerks an der K23 bitten wir um ein unverbindliches Angebot. Die Ausschreibungsunterlagen können wir Ihnen auf Anfrage zusenden.\n\nMit freundlichen Grüßen\nFachbereich Tiefbau, Kreis Olpe",
+    kategorie: "Angebotsanfrage / Ausschreibung",
+    dringlichkeit: "niedrig",
+    dringlichkeitLabel: "Niedrig",
+    zustaendig: "Kalkulation S. Lang",
+    tags: ["Kreis Olpe", "Neuanfrage"],
+    draft: "Sehr geehrte Damen und Herren,\n\nvielen Dank für Ihre Anfrage zur Sanierung des Brückenbauwerks K23. Bitte senden Sie uns die Ausschreibungsunterlagen zu, wir prüfen diese und melden uns mit einem Angebot zurück.\n\nMit freundlichen Grüßen\nKalkulation"
+  }
+];
+
+let active = 1;
+
+function renderList() {
+  const list = document.getElementById('mailList');
+  list.innerHTML = '<div class="list-head">Posteingang</div>' + MAILS.map(m => `
+    <div class="mail-item ${m.id === active ? 'active' : ''}" onclick="selectMail(${m.id})">
+      <div class="mail-top">
+        <span class="mail-from">${m.from}</span>
+        <span class="mail-time">${m.time}</span>
+      </div>
+      <div class="mail-subject">${m.subject}</div>
+      <span class="badge ${m.dringlichkeit}">${m.dringlichkeitLabel}</span>
+    </div>
+  `).join('');
+}
+
+function renderDetail() {
+  const m = MAILS.find(x => x.id === active);
+  const detail = document.getElementById('detail');
+  detail.innerHTML = `
+    <div class="detail-head">
+      <div class="detail-subject">${m.subject}</div>
+      <div class="detail-meta"><b>${m.from}</b> &nbsp;&middot;&nbsp; heute, ${m.time} Uhr</div>
+    </div>
+    <div class="detail-body">${m.body}</div>
+
+    <div class="ai-panel">
+      <div class="ai-head">
+        <span class="ai-icon">KI</span>
+        <span class="ai-head-text">Automatisch erkannt und vorbereitet</span>
+      </div>
+      <div class="ai-tags">
+        <span class="tag">Kategorie: ${m.kategorie}</span>
+        <span class="tag">Dringlichkeit: ${m.dringlichkeitLabel}</span>
+        <span class="tag">Zuständig: ${m.zustaendig}</span>
+        ${m.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+      </div>
+      <div class="ai-body">
+        <div class="ai-label">Vorgeschlagene Antwort</div>
+        <div class="ai-draft">${m.draft}</div>
+        <div class="ai-actions">
+          <button class="btn btn-primary">Antwort senden</button>
+          <button class="btn btn-ghost">Bearbeiten</button>
+        </div>
+        <div class="ai-note">Die KI schlägt nur vor. Ein Mensch liest gegen und bestätigt, bevor etwas rausgeht.</div>
+      </div>
+    </div>
+  `;
+}
+
+function selectMail(id) {
+  active = id;
+  renderList();
+  renderDetail();
+}
+
+renderList();
+renderDetail();
+</script>
+</body>
+</html>

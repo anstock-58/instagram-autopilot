@@ -6,6 +6,12 @@
       "runtimeExecutable": "npx",
       "runtimeArgs": ["serve", "outputs", "-p", "3333", "--no-clipboard"],
       "port": 3333
+    },
+    {
+      "name": "n8n-test",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["n8n"],
+      "port": 5678
     }
   ]
 }

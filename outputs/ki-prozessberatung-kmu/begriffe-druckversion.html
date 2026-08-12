@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Begriffe zum Ausdrucken</title>
+<style>
+  @page { size: A4; margin: 16mm 16mm; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", Arial, sans-serif;
+    color: #201f2b;
+    background: #ffffff;
+  }
+
+  header {
+    text-align: center;
+    padding-bottom: 6mm;
+    margin-bottom: 6mm;
+    border-bottom: 2px solid #a9822f;
+  }
+
+  .eyebrow {
+    color: #a9822f;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 3mm 0 2mm;
+  }
+
+  .lede {
+    color: #6b6478;
+    font-size: 11px;
+    margin: 0;
+  }
+
+  .category {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #a9822f;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 5mm 0 3mm;
+    break-after: avoid;
+  }
+
+  .category::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #e4dcc8;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3mm 4mm;
+  }
+
+  .term {
+    background: #fbf9f4;
+    border: 1px solid #e4dcc8;
+    border-left: 2.5px solid #a9822f;
+    border-radius: 4px;
+    padding: 3mm 4mm;
+    break-inside: avoid;
+  }
+
+  .term-head {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 1.3mm;
+  }
+
+  .badge {
+    display: inline-block;
+    background: #a9822f22;
+    color: #8a6a24;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .term-title {
+    font-family: Georgia, "Palatino Linotype", "Book Antiqua", serif;
+    font-size: 12.5px;
+    font-weight: 700;
+  }
+
+  .term p {
+    font-size: 9.7px;
+    line-height: 1.36;
+    margin: 0 0 1.3mm;
+  }
+
+  .term .beispiel {
+    font-size: 9px;
+    line-height: 1.32;
+    color: #6b6478;
+    font-style: italic;
+    margin: 0;
+  }
+
+  footer {
+    text-align: center;
+    color: #9a97a8;
+    font-size: 8px;
+    margin-top: 5mm;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="eyebrow">Nachschlagen im Kundengespräch</div>
+    <h1>KI-Prozessberatung: Begriffe griffbereit</h1>
+    <p class="lede">Kurze, einfache Erklärungen für Fachbegriffe, die im Gespräch mit Kunden auftauchen können</p>
+  </header>
+
+  <div class="category">Datenschutz &amp; Recht</div>
+  <div class="grid">
+    <div class="term">
+      <div class="term-head"><span class="badge">AVV</span><span class="term-title">Auftragsverarbeitungsvertrag</span></div>
+      <p>Wie bei einer externen Reinigungsfirma fürs Büro: sie hat Zugang zu den Räumen, deshalb gibt es vorher einen Vertrag mit Regeln. Der AVV ist dasselbe, nur mit Daten statt Räumen. Legt fest, dass ein KI-Anbieter Kunden-/Mitarbeiterdaten nur im Auftrag verarbeitet, nicht weitergibt.</p>
+      <p class="beispiel">Ohne AVV ist die Nutzung mit echten Kundendaten eigentlich nicht erlaubt.</p>
+    </div>
+    <div class="term">
+      <div class="term-head"><span class="badge">DSFA</span><span class="term-title">Datenschutz-Folgenabschätzung</span></div>
+      <p>Eine Risikoprüfung vor dem Start, wie eine Gefährdungsbeurteilung vor einer neuen Maschine auf der Baustelle. Prüft vorab, was für Betroffene schiefgehen könnte, bevor KI systematisch personenbezogene Daten auswertet.</p>
+      <p class="beispiel">Nur bei größeren, systematischen Fällen nötig, nicht bei jedem kleinen Schritt.</p>
+    </div>
+    <div class="term">
+      <div class="term-head"><span class="term-title">Personenbezogene Daten</span></div>
+      <p>Alles, was sich auf eine konkrete Person zurückführen lässt: Name, E-Mail, Kundennummer, Telefonnummer, Foto. Der Auslöser für fast alle Datenschutzpflichten.</p>
+      <p class="beispiel">Sobald solche Daten im Spiel sind, greifen die Regeln aus Anhang F.</p>
+    </div>
+    <div class="term">
+      <div class="term-head"><span class="term-title">Hochrisiko-KI-System</span></div>
+      <p>Anwendungsfall mit besonders strengen EU-AI-Act-Regeln, weil eine falsche KI-Entscheidung große Auswirkungen hätte: Bewerberauswahl, Bonitätsprüfung, sicherheitsrelevante Entscheidungen.</p>
+      <p class="beispiel">Bei sowas: sofort externe Fachperson dazuholen, nicht selbst einschätzen.</p>
+    </div>
+    <div class="term">
+      <div class="term-head"><span class="term-title">KI-Kompetenz-Pflicht</span></div>
+      <p>Vorgabe aus dem EU AI Act (Art. 4): Unternehmen müssen sicherstellen, dass Mitarbeitende, die mit KI-Tools arbeiten, dafür ausreichend geschult sind. Reine Nutzung ohne Verständnis reicht rechtlich nicht mehr.</p>
+    </div>
+  </div>
+
+  <div class="category">Technik-Grundbegriffe</div>
+  <div class="grid">
+    <div class="term">
+      <div class="term-head"><span class="badge">LLM</span><span class="term-title">KI-Modell / Sprachmodell</span></div>
+      <p>Das "Gehirn" hinter ChatGPT oder Claude. Mit riesigen Textmengen trainiert, kann Sprache verstehen und selbst Texte erzeugen.</p>
+      <p class="beispiel">Wie ein extrem belesener Kollege, der berechnet, welches Wort am wahrscheinlichsten als Nächstes passt.</p>
+    </div>
+    <div class="term">
+      <div class="term-head"><span class="term-title">Prompt</span></div>
+      <p>Die Anweisung oder Frage, die man der KI gibt. Je genauer, desto besser das Ergebnis.</p>
+      <p class="beispiel">Wie eine Bestellung beim Bäcker: "ein Brot" ist ungenau, "ein dunkles Roggenbrot, mittelgroß" liefert genau das.</p>
+    </div>
+    <div class="term">
+      <div class="term-head"><span class="term-title">Halluzination</span></div>
+      <p>Die KI erfindet manchmal selbstbewusst falsche Fakten. KI-Ergebnisse müssen deshalb immer von einem Menschen geprüft werden.</p>
+      <p class="beispiel">Wie ein Kollege, der lieber eine plausible Antwort erfindet, als "weiß ich nicht" zu sagen.</p>
+    </div>
+    <div class="term">
+      <div class="term-head"><span class="term-title">Automatisierung vs. KI</span></div>
+      <p>Automatisierung folgt starren Regeln ("wenn X, dann immer Y"). KI trifft eigenständige Einschätzungen, auch bei nicht exakt festgelegten Fällen.</p>
+      <p class="beispiel">Automatisierung sortiert jede "Rechnung"-Mail gleich ein. KI liest und entscheidet auch bei Unklarheit selbst.</p>
+    </div>
+    <div class="term">
+      <div class="term-head"><span class="badge">API</span><span class="term-title">Schnittstelle</span></div>
+      <p>Die Verbindung, über die zwei Programme automatisch Daten austauschen, ohne dass ein Mensch von Hand kopiert.</p>
+      <p class="beispiel">Wie eine Steckdose mit genormtem Stecker: passendes Gerät kann sich einfach anschließen.</p>
+    </div>
+    <div class="term">
+      <div class="term-head"><span class="badge">No-Code</span><span class="term-title">Automatisierung ohne Code</span></div>
+      <p>Ein Flussdiagramm, das man am Bildschirm zusammenklickt statt zu programmieren: "wenn E-Mail mit 'Angebot'" → "Inhalt auslesen" → "in Tabelle eintragen". Werkzeuge: Make.com, n8n.</p>
+      <p class="beispiel">Vorteil: der Kunde kann später selbst kleine Änderungen vornehmen.</p>
+    </div>
+    <div class="term">
+      <div class="term-head"><span class="badge">SaaS</span><span class="term-title">Spezialisierte SaaS-Tools</span></div>
+      <p>"Software as a Service": monatliche Gebühr für ein Tool im Browser, nichts wird lokal installiert. "Spezialisiert" heißt: kann eine Sache richtig gut.</p>
+      <p class="beispiel">Gegenteil: ein Alleskönner wie ChatGPT.</p>
+    </div>
+  </div>
+
+  <div class="category">Prozess &amp; Umsetzung</div>
+  <div class="grid">
+    <div class="term">
+      <div class="term-head"><span class="term-title">Meetings transkribieren</span></div>
+      <p>Gesprochene Sprache wird automatisch in Text umgewandelt. Ein Tool hört mit, schreibt mit und fasst hinterher Entscheidungen und Aufgaben zusammen.</p>
+    </div>
+    <div class="term">
+      <div class="term-head"><span class="term-title">Interne Wissens-KI</span></div>
+      <p>Für Betriebe mit vielen internen Dokumenten: Mitarbeitende fragen einfach nach, alles bleibt innerhalb einer abgesicherten, firmeneigenen Umgebung.</p>
+      <p class="beispiel">Wie eine Suchmaschine nur für die eigenen Firmendokumente, mit Schloss drum herum.</p>
+    </div>
+    <div class="term">
+      <div class="term-head"><span class="term-title">Bus-Faktor</span></div>
+      <p>Wie viele Personen müssten ausfallen, damit ein Prozess stillsteht? Bus-Faktor 1 heißt: nur eine Person weiß, wie's geht, hohes Risiko.</p>
+      <p class="beispiel">Zentraler Punkt bei der Zeitfresser-Analyse.</p>
+    </div>
+    <div class="term">
+      <div class="term-head"><span class="term-title">Workflow</span></div>
+      <p>Die Kette automatisierter Schritte, das, was tatsächlich in Make.com oder n8n gebaut wird.</p>
+      <p class="beispiel">Wie ein Fließband: Anfrage rein → geprüft → richtiges System → nächste Aktion.</p>
+    </div>
+    <div class="term">
+      <div class="term-head"><span class="term-title">Skalierbarkeit</span></div>
+      <p>Ob eine Lösung auch bei zehnfach so vielen Anfragen noch funktioniert, ohne zehnfachen Aufwand.</p>
+      <p class="beispiel">10 oder 100 Anfragen kosten eine gute Automatisierung fast gleich viel "Mühe".</p>
+    </div>
+  </div>
+
+  <footer>Vollständige Methodik: ki-prozessberatung-kmu-methode.md, Anhang G &nbsp;·&nbsp; digital: ansto-finaffairs.com/begriffe-griffbereit.html</footer>
+</body>
+</html>

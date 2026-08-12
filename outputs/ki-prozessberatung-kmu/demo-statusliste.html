@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo: Statusliste für Kundenanfragen</title>
+<style>
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  :root {
+    --bg:#f3f4f6;
+    --panel:#ffffff;
+    --border:#e2e4e9;
+    --text:#1f2430;
+    --text-soft:#5b6270;
+    --muted:#8b93a3;
+    --accent:#2563eb;
+    --accent-soft:#eaf0ff;
+    --hoch:#dc2626; --hoch-bg:#fde8e8;
+    --mittel:#b7791f; --mittel-bg:#fdf3d9;
+    --niedrig:#15803d; --niedrig-bg:#e6f6ec;
+    --gruen:#16a34a; --gelb:#d97706; --rot:#dc2626;
+  }
+  body {
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
+    background:var(--bg); color:var(--text);
+    min-height:100vh; padding:1.5rem;
+  }
+  .demo-tag {
+    max-width:1180px; margin:0 auto .9rem; font-size:.78rem; color:var(--muted);
+  }
+  .wrap { max-width:1180px; margin:0 auto; }
+  .head {
+    background:#111827; color:#fff; padding:.9rem 1.3rem; border-radius:12px 12px 0 0;
+    font-size:.92rem; font-weight:600; display:flex; align-items:center; gap:.6rem;
+  }
+  .head .sub { font-weight:400; color:#9ca3af; font-size:.8rem; margin-left:auto; }
+
+  .board {
+    background:var(--panel); border:1px solid var(--border); border-top:none;
+    border-radius:0 0 12px 12px; padding:1.3rem; display:grid;
+    grid-template-columns:repeat(3, 1fr); gap:1.1rem;
+    box-shadow:0 1px 3px rgba(0,0,0,.06), 0 10px 30px rgba(0,0,0,.05);
+  }
+  .col-head { font-size:.8rem; font-weight:700; color:var(--text-soft); text-transform:uppercase;
+              letter-spacing:.03em; margin-bottom:.7rem; display:flex; justify-content:space-between; }
+  .col-head .n { color:var(--muted); font-weight:600; }
+  .col { background:#f8f9fb; border-radius:10px; padding:.9rem; min-height:120px; }
+
+  .card { background:#fff; border:1px solid var(--border); border-radius:9px; padding:.8rem .9rem;
+          margin-bottom:.8rem; cursor:pointer; transition:box-shadow .15s, border-color .15s; }
+  .card:hover { box-shadow:0 3px 10px rgba(0,0,0,.07); border-color:#c7cbd4; }
+  .card.selected { border-color:var(--accent); box-shadow:0 0 0 2px var(--accent-soft); }
+  .card-title { font-size:.87rem; font-weight:700; margin-bottom:.15rem; }
+  .card-kunde { font-size:.78rem; color:var(--muted); margin-bottom:.55rem; }
+  .card-row { display:flex; align-items:center; gap:.4rem; flex-wrap:wrap; margin-bottom:.4rem; }
+  .badge { display:inline-block; font-size:.68rem; font-weight:700; padding:.15rem .5rem; border-radius:20px; }
+  .badge.hoch { color:var(--hoch); background:var(--hoch-bg); }
+  .badge.mittel { color:var(--mittel); background:var(--mittel-bg); }
+  .badge.niedrig { color:var(--niedrig); background:var(--niedrig-bg); }
+  .ampel { width:9px; height:9px; border-radius:50%; display:inline-block; flex-shrink:0; }
+  .ampel.gruen { background:var(--gruen); }
+  .ampel.gelb { background:var(--gelb); }
+  .ampel.rot { background:var(--rot); }
+  .card-frist { font-size:.76rem; color:var(--text-soft); }
+  .card-zust { font-size:.78rem; color:var(--text); font-weight:600; }
+  .warn-chip { display:inline-block; font-size:.68rem; font-weight:700; color:#fff; background:var(--rot);
+               padding:.15rem .5rem; border-radius:5px; margin-top:.4rem; }
+
+  .detail { max-width:1180px; margin:1.2rem auto 0; background:var(--panel); border:1px solid var(--border);
+            border-radius:12px; padding:1.3rem 1.5rem; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+  .detail-empty { color:var(--muted); font-size:.9rem; text-align:center; padding:1rem 0; }
+  .detail-title { font-size:1.05rem; font-weight:700; margin-bottom:.9rem; }
+  .timeline { position:relative; padding-left:1.4rem; }
+  .timeline::before { content:''; position:absolute; left:5px; top:6px; bottom:6px; width:1.5px; background:var(--border); }
+  .tl-item { position:relative; margin-bottom:.9rem; }
+  .tl-item::before { content:''; position:absolute; left:-1.4rem; top:3px; width:8px; height:8px; border-radius:50%;
+                      background:var(--accent); border:2px solid #fff; box-shadow:0 0 0 1px var(--border); }
+  .tl-item.critical::before { background:var(--rot); }
+  .tl-time { font-size:.72rem; color:var(--muted); font-weight:600; }
+  .tl-text { font-size:.87rem; color:var(--text); margin-top:.1rem; }
+  .tl-text.critical { color:var(--rot); font-weight:600; }
+
+  .note { font-size:.78rem; color:var(--muted); margin-top:1.1rem; text-align:center; }
+
+  @media (max-width:820px) { .board { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+  <div class="demo-tag">Demo, keine echten Daten &mdash; Statusliste für Vorgänge im Ingenieurbau, unabhängig davon wer gerade zuständig ist</div>
+
+  <div class="wrap">
+    <div class="head">
+      Kundenanfragen &mdash; Statusübersicht
+      <span class="sub">4 laufende Fälle</span>
+    </div>
+    <div class="board">
+      <div>
+        <div class="col-head">Offen <span class="n" id="cnt-offen"></span></div>
+        <div class="col" id="col-offen"></div>
+      </div>
+      <div>
+        <div class="col-head">In Bearbeitung <span class="n" id="cnt-bearbeitung"></span></div>
+        <div class="col" id="col-bearbeitung"></div>
+      </div>
+      <div>
+        <div class="col-head">Beantwortet <span class="n" id="cnt-beantwortet"></span></div>
+        <div class="col" id="col-beantwortet"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail" id="detail">
+    <div class="detail-empty">Auf einen Fall klicken, um den zeitlichen Verlauf zu sehen.</div>
+  </div>
+
+<script>
+const FAELLE = [
+  {
+    id: 1,
+    status: "bearbeitung",
+    title: "Nachtragsangebot Baugrund BW 12",
+    kunde: "Landesbetrieb Straßen.NRW",
+    prioritaet: "hoch", prioritaetLabel: "Hoch",
+    zustaendig: "Projektleiter M. Hartmann",
+    ampel: "gelb",
+    frist: "30 Min. bis zur Erinnerung",
+    timeline: [
+      { time: "08:14", text: "Mail eingegangen. KI ordnet zu: Projektleiter M. Hartmann, Frist 4 Std." },
+      { time: "08:20", text: "Weitergeleitet an Projektleiter Hartmann, inklusive Entwurf." },
+      { time: "jetzt", text: "Noch keine Antwort beim Auftraggeber. Fall bleibt offen, Uhr läuft weiter.", critical: true }
+    ]
+  },
+  {
+    id: 2,
+    status: "beantwortet",
+    title: "Abstimmung Sperrpause Gleisquerung",
+    kunde: "DB Netz AG",
+    prioritaet: "mittel", prioritaetLabel: "Mittel",
+    zustaendig: "Bauleiter T. Schmidt",
+    ampel: "gruen",
+    frist: "erledigt",
+    timeline: [
+      { time: "09:02", text: "Mail eingegangen. KI ordnet zu: Bauleiter T. Schmidt, Frist 1 Tag." },
+      { time: "09:15", text: "Bauleiter Schmidt bestätigt den KI-Entwurf und sendet direkt an die Bauüberwachung." },
+      { time: "09:15", text: "Fall erledigt, kein weiteres Fristrisiko." }
+    ]
+  },
+  {
+    id: 3,
+    status: "offen",
+    title: "Angebotsanfrage Sanierung K23",
+    kunde: "Kreis Olpe, Fachbereich Tiefbau",
+    prioritaet: "niedrig", prioritaetLabel: "Niedrig",
+    zustaendig: "Kalkulation S. Lang",
+    ampel: "gruen",
+    frist: "noch 2 Tage 22 Std.",
+    timeline: [
+      { time: "10:47", text: "Mail eingegangen. KI ordnet zu: Kalkulation S. Lang, Frist 3 Tage." },
+      { time: "10:50", text: "Weitergeleitet an Kalkulation, inklusive Entwurf." },
+      { time: "jetzt", text: "Noch nicht bearbeitet, aber reichlich Zeit bis zur Frist." }
+    ]
+  },
+  {
+    id: 4,
+    status: "bearbeitung",
+    title: "Rissbildung Brückenpfeiler BW 7",
+    kunde: "Landesbetrieb Straßen.NRW (Bauüberwachung)",
+    prioritaet: "hoch", prioritaetLabel: "Hoch",
+    zustaendig: "Projektleiter Hartmann → Prüfingenieur Dr. Weller",
+    ampel: "rot",
+    frist: "überfällig",
+    warn: "Frist überschritten, Eskalation ausgelöst",
+    timeline: [
+      { time: "gestern 14:00", text: "Mail eingegangen: Bauüberwachung meldet sichtbare Haarrisse am Pfeiler BW 7, bittet um Einschätzung. KI ordnet zu: Projektleiter M. Hartmann, Frist 4 Std. (sicherheitsrelevant, hohe Priorität)." },
+      { time: "gestern 14:10", text: "Projektleiter Hartmann beantwortet nicht selbst, sondern gibt eine Anweisung an den internen Prüfingenieur Dr. Weller weiter: vor Ort prüfen und Standsicherheit einschätzen." },
+      { time: "gestern 18:00", text: "Frist überschritten, noch keine Rückmeldung beim Landesbetrieb. Automatische interne Erinnerung an Dr. Weller verschickt.", critical: true },
+      { time: "heute 09:00", text: "Weiterhin keine Antwort beim Auftraggeber. Eskalation an die Geschäftsführung ausgelöst, unabhängig davon wer zuletzt zuständig war.", critical: true }
+    ]
+  }
+];
+
+let selected = null;
+
+function renderBoard() {
+  const cols = { offen: document.getElementById('col-offen'), bearbeitung: document.getElementById('col-bearbeitung'), beantwortet: document.getElementById('col-beantwortet') };
+  Object.values(cols).forEach(c => c.innerHTML = '');
+  const counts = { offen: 0, bearbeitung: 0, beantwortet: 0 };
+
+  FAELLE.forEach(f => {
+    counts[f.status]++;
+    const el = document.createElement('div');
+    el.className = 'card' + (selected === f.id ? ' selected' : '');
+    el.onclick = () => { selected = f.id; renderBoard(); renderDetail(); };
+    el.innerHTML = `
+      <div class="card-title">${f.title}</div>
+      <div class="card-kunde">${f.kunde}</div>
+      <div class="card-row">
+        <span class="badge ${f.prioritaet}">${f.prioritaetLabel}</span>
+        <span class="ampel ${f.ampel}"></span>
+        <span class="card-frist">${f.frist}</span>
+      </div>
+      <div class="card-zust">Zuständig: ${f.zustaendig}</div>
+      ${f.warn ? `<div class="warn-chip">${f.warn}</div>` : ''}
+    `;
+    cols[f.status].appendChild(el);
+  });
+
+  document.getElementById('cnt-offen').textContent = counts.offen;
+  document.getElementById('cnt-bearbeitung').textContent = counts.bearbeitung;
+  document.getElementById('cnt-beantwortet').textContent = counts.beantwortet;
+}
+
+function renderDetail() {
+  const detail = document.getElementById('detail');
+  if (selected === null) {
+    detail.innerHTML = '<div class="detail-empty">Auf einen Fall klicken, um den zeitlichen Verlauf zu sehen.</div>';
+    return;
+  }
+  const f = FAELLE.find(x => x.id === selected);
+  detail.innerHTML = `
+    <div class="detail-title">${f.title} &nbsp;&middot;&nbsp; ${f.kunde}</div>
+    <div class="timeline">
+      ${f.timeline.map(t => `
+        <div class="tl-item ${t.critical ? 'critical' : ''}">
+          <div class="tl-time">${t.time}</div>
+          <div class="tl-text ${t.critical ? 'critical' : ''}">${t.text}</div>
+        </div>
+      `).join('')}
+    </div>
+    <div class="note">Die Frist hängt am Fall, nicht an einer bestimmten Person. Auch nach internen Weitergaben läuft sie einfach weiter.</div>
+  `;
+}
+
+renderBoard();
+renderDetail();
+</script>
+</body>
+</html>

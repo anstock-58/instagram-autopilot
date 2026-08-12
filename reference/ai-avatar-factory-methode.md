@@ -4,7 +4,7 @@
 
 **Auslöser:** Andi wollte ursprünglich ein Produkt für fremde Kunden (Coaches, Berater, KMU) daraus machen. Entschieden am 24.07.2026: zuerst intern an den eigenen Instagram-Accounts anwenden und beweisen, dass es funktioniert, bevor es als Angebot für andere ausgebaut wird. Erster Anwendungsfall ist @business.und.spirit, siehe `outputs/business-und-spirit/avatar-factory-analyse.md`.
 
-**Verwendung:** Sagt Andi „erstelle das Avatar-System für Account/Firma X" oder „wende die Avatar Factory auf X an", wird diese Methode automatisch und vollständig angewendet. Bei einem bereits bestehenden Instagram-Account zuerst den vorhandenen Kontext lesen (`context/instagram-accounts.md`, `context/instagram-strategie.md`, `context/deep-research-zielgruppe.md`, `reference/content-regeln-instagram.md`, bisherige Contentpläne) statt Zielgruppe und Stil neu zu erfinden. Fehlt der Kontext (z. B. bei einem echten fremden Kunden), Anhang A als Fragebogen nutzen.
+**Verwendung:** Sagt Andi „erstelle das Avatar-System für Account/Firma X" oder „wende die Avatar Factory auf X an", wird diese Methode automatisch und vollständig angewendet. Bei einem bereits bestehenden Instagram-Account zuerst den vorhandenen Kontext lesen ([instagram-accounts.md](../context/instagram-accounts.md), `context/instagram-strategie.md` (Datei aktuell nicht vorhanden), [deep-research-zielgruppe.md](../context/deep-research-zielgruppe.md), [content-regeln-instagram.md](content-regeln-instagram.md), bisherige Contentpläne) statt Zielgruppe und Stil neu zu erfinden. Fehlt der Kontext (z. B. bei einem echten fremden Kunden), Anhang A als Fragebogen nutzen.
 
 ---
 
@@ -38,7 +38,7 @@ Wofür steht der Account im Vergleich zu ähnlichen Angeboten, welcher bekannte 
 
 ### 5. Kommunikationsstil
 
-Tonfall, Satzlänge, erlaubte und verbotene Wörter, Hook-Formel, CTA-Formel, Emoji-Dichte, Umgang mit Fachbegriffen. Wo vorhanden, an bestehende plattformübergreifende Regeln anknüpfen (`reference/hook-formel-universal.md`, `reference/content-regeln-instagram.md`).
+Tonfall, Satzlänge, erlaubte und verbotene Wörter, Hook-Formel, CTA-Formel, Emoji-Dichte, Umgang mit Fachbegriffen. Wo vorhanden, an bestehende plattformübergreifende Regeln anknüpfen ([hook-formel-universal.md](hook-formel-universal.md), [content-regeln-instagram.md](content-regeln-instagram.md)).
 
 ### 6. Avatar-Entwicklung
 
@@ -81,7 +81,7 @@ Eckige Klammern ausfüllen, alles andere wortgleich übernehmen. Ergebnis ist de
 a [ALTER] year old [HERKUNFT/WIRKUNG, z. B. German] [man/woman] named [NAME], [FRISUR: Farbe, Länge, Stil], [GESICHTSMERKMALE: Bart, Falten, markante Züge], [AUGEN- UND GESICHTSAUSDRUCK], [STATUR], wearing [KLEIDUNGSSTIL: Kleidungsstücke, Farben, Material], [FARBPALETTE, z. B. muted natural color palette], [LICHTSTIMMUNG, z. B. soft natural light], photorealistic editorial portrait photography, shallow depth of field, [GRUNDSTIMMUNG/AUSSTRAHLUNG], no text, no logo
 ```
 
-**Vollständiger Szenen-Prompt** (Charakter-Block plus konkrete Szene, Struktur nach dem Muster der TAC-Prompt-Datenbank in `reference/tac-prompt-datenbank.md`):
+**Vollständiger Szenen-Prompt** (Charakter-Block plus konkrete Szene, Struktur nach dem Muster der TAC-Prompt-Datenbank in [tac-prompt-datenbank.md](tac-prompt-datenbank.md)):
 
 ```
 [CHARAKTER-BLOCK VON OBEN]. [Action]: [was die Person tut, konkrete Handlung, eine einzige]. [Environment]: [Ort und Umgebung]. [Cinematography]: [Einstellungsgröße, Perspektive, z. B. waist-up shot, eye level, 9:16]. [Lighting/Style]: [Lichtstimmung, Grundgefühl der Szene]. [Technical]: Photorealistic, ultra-detailed.
@@ -93,13 +93,13 @@ a [ALTER] year old [HERKUNFT/WIRKUNG, z. B. German] [man/woman] named [NAME], [F
 [Was sich in der Szene leicht bewegt, ein bis zwei Bewegungen], [was die Person selbst tut, kleine natürliche Bewegung], [eine Kamerabewegung: static camera / slow push-in / slow pull-back / slow pan], natural realistic motion, face stays consistent and stable, no morphing.
 ```
 
-Optionale Szenen-Bibliothek (nur lokal vorhanden, nicht im Repo): `reference/tac-prompt-datenbank.md` beschreibt eine fertige Sammlung von 106 Szenen-Prompts aus einem Kurs, die als Ausgangspunkt für Szenenideen dienen kann. Die eigentlichen Prompt-Dateien liegen nur lokal (Lizenzlage ungeklärt), bei Bedarf dort nachsehen.
+Optionale Szenen-Bibliothek (nur lokal vorhanden, nicht im Repo): [tac-prompt-datenbank.md](tac-prompt-datenbank.md) beschreibt eine fertige Sammlung von 106 Szenen-Prompts aus einem Kurs, die als Ausgangspunkt für Szenenideen dienen kann. Die eigentlichen Prompt-Dateien liegen nur lokal (Lizenzlage ungeklärt), bei Bedarf dort nachsehen.
 
 ---
 
 ## ANHANG C: Content-System-Vorlage
 
-Contentplan-Spalten wie in den bestehenden CSVs (`outputs/contentplan_*.csv`): Datum, Uhrzeit, Plattform, Post-Typ, Text, Link, Bild-URL, Bildprompt, Videoprompt, Text-Overlay, Karussell-Slides, Status. Grundrhythmus 30 Tage, Story morgens und Reel abends (Standardzeiten siehe `context/instagram-accounts.md`), Produktverlinkung passend zum Tagesthema statt wochenlang gleich (siehe „Produkt-Rotation nach Thema" in `reference/content-regeln-instagram.md`).
+Contentplan-Spalten wie in den bestehenden CSVs (`outputs/contentplan_*.csv`, Dateimuster, kein einzelner Link): Datum, Uhrzeit, Plattform, Post-Typ, Text, Link, Bild-URL, Bildprompt, Videoprompt, Text-Overlay, Karussell-Slides, Status. Grundrhythmus 30 Tage, Story morgens und Reel abends (Standardzeiten siehe [instagram-accounts.md](../context/instagram-accounts.md)), Produktverlinkung passend zum Tagesthema statt wochenlang gleich (siehe „Produkt-Rotation nach Thema" in [content-regeln-instagram.md](content-regeln-instagram.md)).
 
 ---
 
@@ -108,7 +108,7 @@ Contentplan-Spalten wie in den bestehenden CSVs (`outputs/contentplan_*.csv`): D
 1. Passt der Avatar wirklich zur Zielgruppe aus Stufe 3, oder wurde er nur „hübsch" statt „passend" gestaltet?
 2. Widerspricht der Avatar an irgendeiner Stelle der Positionierung aus Stufe 4 (z. B. zu glatt, zu jung, zu perfekt für eine Marke, die Ehrlichkeit verspricht)?
 3. Ist der Charakter-Prompt-Block so präzise, dass er in mehreren Bildern zum gleichen Gesicht führt?
-4. Sind Hook und CTA gegen die bestehenden plattformübergreifenden Kriterien geprüft (`reference/hook-formel-universal.md`, `reference/content-regeln-instagram.md`)?
+4. Sind Hook und CTA gegen die bestehenden plattformübergreifenden Kriterien geprüft ([hook-formel-universal.md](hook-formel-universal.md), [content-regeln-instagram.md](content-regeln-instagram.md))?
 5. Ist geklärt, welches Produkt hinter welchem CTA-Keyword steht, und stimmt das mit den aktuellen Produktregeln des Accounts überein?
 6. Wurde die Bildgenerierung an einer kleinen Stichprobe (wenige Bilder) getestet, bevor ein ganzer Contentplan darauf aufgebaut wird?
 
