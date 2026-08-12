@@ -16,7 +16,7 @@ Dies ist ein **Claude Workspace Template** — eine strukturierte Umgebung, die 
 
 **Die Datei `context/cc-anweisung.md` enthält verbindliche Verhaltensregeln für Claude. Diese gelten in jeder Session automatisch — nicht als Option, sondern als Standard. Bei Session-Start mit `/prime` wird diese Datei explizit geladen und ist für die gesamte Session bindend.**
 
-**Die Datei `reference/content-filter.md` ist der Pflichtcheck vor jeder Content-Erstellung. Vor jedem Post, jedem Skript, jeder Caption wird diese Datei konsultiert. Kein Inhalt wird ohne diesen Check erstellt.**
+**Die Datei `reference/content-regeln-instagram.md` ist der Pflichtcheck vor jeder Content-Erstellung. Vor jedem Post, jedem Skript, jeder Caption wird diese Datei konsultiert. Kein Inhalt wird ohne diesen Check erstellt.**
 
 **Die Datei `reference/kdp-nischen-analyse-prompt.md` ist der Pflicht-Workflow für jede Buch-Nischenrecherche. Sagt Andi „recherchiere die Nische zu Thema X" oder startet ein neues Buchprojekt, wird diese Vorlage automatisch und vollständig angewendet (alle 8 Kriterien, Ampel-Bewertung, Abbruch-Kriterien) — ohne dass er sie erwähnen muss. Recherche läuft über den Chrome-Browser-Tab auf amazon.de, nicht über WebFetch (Amazon blockt).**
 
