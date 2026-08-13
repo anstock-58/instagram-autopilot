@@ -153,6 +153,12 @@ Die TTS-Engine kann den Kontext nicht zuverlässig auflösen.
 
 ---
 
+## Abschluss-Signatur @business.und.spirit
+
+Verbindlich seit 13.08.2026: Beiträge und Reels auf @business.und.spirit schließen, wo ein Abschluss-Satz passt, mit **„Bleib online. Mit dir."** Doppeldeutig gemeint, online im Sinne von verbunden mit sich selbst und dem Moment, gleichzeitig wörtlich als Plattform-Bezug. Nicht erzwingen, wenn der Post schon einen anderen klaren CTA-Abschluss hat, aber als Standard-Sign-off bevorzugt einsetzen.
+
+---
+
 ## Caption-Struktur (alle Accounts)
 
 - Kurze Sätze — max. 1-2 Zeilen pro Absatz
