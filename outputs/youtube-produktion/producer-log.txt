@@ -1088,3 +1088,671 @@
 2026-07-28 15:00:12 | Status auf Produziert gesetzt.
 2026-07-28 15:00:12 | === Produktion abgeschlossen: Du glaubst, du hast dich beruhigt. Dein Körper glaubt dir nicht. ===
 2026-07-28 15:00:12 | YouTube URL: https://www.youtube.com/watch?v=fB90RdX9VEM
+2026-08-04 16:28:52 | === YouTube Producer gestartet ===
+2026-08-04 16:28:52 | Starte Produktion: Du glaubst, du hast dich beruhigt. Dein Körper glaubt dir nicht.
+2026-08-04 16:28:52 | Audio bereits vorhanden, ElevenLabs wird Ã¼bersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\voiceover.mp3
+2026-08-04 16:28:52 | Kapitelmarken erstellt: 4 Kapitel, Gesamtdauer 467 Sek.
+2026-08-04 16:28:52 | Visueller Stil: KI-Portraits - generiere Bilder via fal.ai...
+2026-08-04 16:28:52 | Bild 1 bereits vorhanden, uebersprungen.
+2026-08-04 16:28:53 | Bild 2 bereits vorhanden, uebersprungen.
+2026-08-04 16:28:53 | Bild 3 bereits vorhanden, uebersprungen.
+2026-08-04 16:28:53 | Bild 4 bereits vorhanden, uebersprungen.
+2026-08-04 16:28:53 | Bild 5 bereits vorhanden, uebersprungen.
+2026-08-04 16:28:53 | Bild 6 bereits vorhanden, uebersprungen.
+2026-08-04 16:28:53 | Bild 7 bereits vorhanden, uebersprungen.
+2026-08-04 16:28:53 | Bild 8 bereits vorhanden, uebersprungen.
+2026-08-04 16:28:53 | Bild 9 bereits vorhanden, uebersprungen.
+2026-08-04 16:28:53 | Bild 10 bereits vorhanden, uebersprungen.
+2026-08-04 16:28:53 | Bild 11 bereits vorhanden, uebersprungen.
+2026-08-04 16:28:53 | Bild 12 bereits vorhanden, uebersprungen.
+2026-08-04 16:28:53 | Bild 13 bereits vorhanden, uebersprungen.
+2026-08-04 16:28:53 | Bild 14 bereits vorhanden, uebersprungen.
+2026-08-04 16:28:53 | Bild 15 bereits vorhanden, uebersprungen.
+2026-08-04 16:28:53 | Thumbnail bereits vorhanden, uebersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\thumbnail.jpg
+2026-08-04 16:28:53 | Ermittle Audiodauer...
+2026-08-04 16:28:53 | Baue Video mit FFmpeg...
+2026-08-04 16:28:53 | Gesamtdauer Audio: 466.6 Sekunden - 32 Sekunden pro Bild
+2026-08-04 16:30:05 | Musik geladen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\Musik\spirit-song.mp3
+2026-08-04 16:30:18 | Video fertig: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\video_fertig.mp4
+2026-08-04 16:30:18 | Lade Video auf YouTube hoch (Kanal: BewusstEinfach)...
+2026-08-04 16:30:19 | Footer fuer Kanal 'BewusstEinfach' angehaengt.
+2026-08-04 16:30:22 | Upload: 53% (8 MB / 15.1 MB)
+2026-08-04 16:30:24 | Upload: 100% (15.1 MB / 15.1 MB)
+2026-08-04 16:30:24 | Video hochgeladen (nicht gelistet): https://www.youtube.com/watch?v=bOwmmldMe28
+2026-08-04 16:30:33 | Thumbnail hochgeladen.
+2026-08-04 16:30:33 | YouTube Studio: https://studio.youtube.com/video/bOwmmldMe28/edit
+2026-08-04 16:30:33 | Bitte pruefen und auf Oeffentlich schalten.
+2026-08-04 16:30:33 | Setze vollstaendige Beschreibung...
+2026-08-04 16:30:34 | Vollstaendige Beschreibung gesetzt.
+2026-08-04 16:30:34 | Status auf Produziert gesetzt.
+2026-08-04 16:30:34 | === Produktion abgeschlossen: Du glaubst, du hast dich beruhigt. Dein Körper glaubt dir nicht. ===
+2026-08-04 16:30:34 | YouTube URL: https://www.youtube.com/watch?v=bOwmmldMe28
+2026-08-04 16:50:05 | === YouTube Producer gestartet ===
+2026-08-04 16:50:05 | Kein offenes Video gefunden. Nichts zu tun.
+2026-08-04 16:53:04 | === YouTube Producer gestartet ===
+2026-08-04 16:53:04 | Starte Produktion: Du glaubst, du hast dich beruhigt. Dein Körper glaubt dir nicht.
+2026-08-04 16:53:04 | Audio bereits vorhanden, ElevenLabs wird Ã¼bersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\voiceover.mp3
+2026-08-04 16:53:04 | Kapitelmarken erstellt: 4 Kapitel, Gesamtdauer 467 Sek.
+2026-08-04 16:53:04 | Visueller Stil: KI-Portraits - generiere Bilder via fal.ai...
+2026-08-04 16:53:05 | Bild 1 bereits vorhanden (139KB), uebersprungen.
+2026-08-04 16:53:05 | Bild 2 generieren...
+2026-08-04 16:53:05 | fal.ai Request ID: 019fcd43-95fc-7190-9a7b-0834d44fba0b
+2026-08-04 16:53:09 | Bild 2 gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\bild-02.jpg
+2026-08-04 16:53:34 | === YouTube Producer gestartet ===
+2026-08-04 16:53:34 | Kein offenes Video gefunden. Nichts zu tun.
+2026-08-04 16:54:46 | === YouTube Producer gestartet ===
+2026-08-04 16:54:46 | Starte Produktion: Du glaubst, du hast dich beruhigt. Dein Körper glaubt dir nicht.
+2026-08-04 16:54:46 | Audio bereits vorhanden, ElevenLabs wird Ã¼bersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\voiceover.mp3
+2026-08-04 16:54:46 | Kapitelmarken erstellt: 4 Kapitel, Gesamtdauer 467 Sek.
+2026-08-04 16:54:46 | Visueller Stil: KI-Portraits - generiere Bilder via fal.ai...
+2026-08-04 16:54:46 | Bild 1 bereits vorhanden (139KB), uebersprungen.
+2026-08-04 16:54:46 | Bild 2 generieren...
+2026-08-04 16:54:47 | fal.ai Request ID: 019fcd45-21f0-7173-8f9c-617176c51952
+2026-08-04 16:54:51 | Bild 2 gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\bild-02.jpg (168KB)
+2026-08-04 16:54:51 | Bild 3 bereits vorhanden (139KB), uebersprungen.
+2026-08-04 16:54:51 | Bild 4 bereits vorhanden (158KB), uebersprungen.
+2026-08-04 16:54:51 | Bild 5 bereits vorhanden (177KB), uebersprungen.
+2026-08-04 16:54:51 | Bild 6 bereits vorhanden (135KB), uebersprungen.
+2026-08-04 16:54:51 | Bild 7 bereits vorhanden (158KB), uebersprungen.
+2026-08-04 16:54:51 | Bild 8 bereits vorhanden (165KB), uebersprungen.
+2026-08-04 16:54:51 | Bild 9 bereits vorhanden (121KB), uebersprungen.
+2026-08-04 16:54:51 | Bild 10 bereits vorhanden (159KB), uebersprungen.
+2026-08-04 16:54:51 | Bild 11 bereits vorhanden (159KB), uebersprungen.
+2026-08-04 16:54:51 | Bild 12 bereits vorhanden (159KB), uebersprungen.
+2026-08-04 16:54:52 | Bild 13 bereits vorhanden (159KB), uebersprungen.
+2026-08-04 16:54:52 | Bild 14 bereits vorhanden (159KB), uebersprungen.
+2026-08-04 16:54:52 | Bild 15 bereits vorhanden (159KB), uebersprungen.
+2026-08-04 16:54:52 | Thumbnail bereits vorhanden, uebersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\thumbnail.jpg
+2026-08-04 16:54:52 | Ermittle Audiodauer...
+2026-08-04 16:54:52 | Baue Video mit FFmpeg...
+2026-08-04 16:54:52 | Gesamtdauer Audio: 466.6 Sekunden - 32 Sekunden pro Bild
+2026-08-04 16:56:13 | Musik geladen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\Musik\japanese-water-garden.mp3
+2026-08-04 16:56:27 | Video fertig: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\video_fertig.mp4
+2026-08-04 16:56:27 | WARNUNG: Video nur 467 Sek (7.8 Min) - Ziel ist mindestens 8 Minuten (480 Sek). Skript pruefen.
+2026-08-04 16:57:51 | === YouTube Producer gestartet ===
+2026-08-04 16:57:51 | Kein offenes Video gefunden. Nichts zu tun.
+2026-08-04 16:58:06 | === YouTube Producer gestartet ===
+2026-08-04 16:58:06 | Starte Produktion: Du glaubst, du hast dich beruhigt. Dein Körper glaubt dir nicht.
+2026-08-04 16:58:06 | Audio bereits vorhanden, ElevenLabs wird Ã¼bersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\voiceover.mp3
+2026-08-04 16:58:07 | Kapitelmarken erstellt: 4 Kapitel, Gesamtdauer 467 Sek.
+2026-08-04 16:58:07 | Visueller Stil: KI-Portraits - generiere Bilder via fal.ai...
+2026-08-04 16:58:07 | Bild 1 bereits vorhanden (139KB), uebersprungen.
+2026-08-04 16:58:07 | Bild 2 bereits vorhanden (168KB), uebersprungen.
+2026-08-04 16:58:07 | Bild 3 bereits vorhanden (139KB), uebersprungen.
+2026-08-04 16:58:07 | Bild 4 bereits vorhanden (158KB), uebersprungen.
+2026-08-04 16:58:07 | Bild 5 bereits vorhanden (177KB), uebersprungen.
+2026-08-04 16:58:07 | Bild 6 bereits vorhanden (135KB), uebersprungen.
+2026-08-04 16:58:07 | Bild 7 bereits vorhanden (158KB), uebersprungen.
+2026-08-04 16:58:07 | Bild 8 bereits vorhanden (165KB), uebersprungen.
+2026-08-04 16:58:07 | Bild 9 bereits vorhanden (121KB), uebersprungen.
+2026-08-04 16:58:07 | Bild 10 bereits vorhanden (159KB), uebersprungen.
+2026-08-04 16:58:07 | Bild 11 bereits vorhanden (159KB), uebersprungen.
+2026-08-04 16:58:07 | Bild 12 bereits vorhanden (159KB), uebersprungen.
+2026-08-04 16:58:07 | Bild 13 bereits vorhanden (159KB), uebersprungen.
+2026-08-04 16:58:07 | Bild 14 bereits vorhanden (159KB), uebersprungen.
+2026-08-04 16:58:07 | Bild 15 bereits vorhanden (159KB), uebersprungen.
+2026-08-04 16:58:07 | Thumbnail bereits vorhanden, uebersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\thumbnail.jpg
+2026-08-04 16:58:07 | Ermittle Audiodauer...
+2026-08-04 16:58:07 | Baue Video mit FFmpeg...
+2026-08-04 16:58:07 | Gesamtdauer Audio: 466.6 Sekunden - 32 Sekunden pro Bild
+2026-08-04 16:59:35 | Musik geladen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\Musik\spirit-song.mp3
+2026-08-04 16:59:56 | Video fertig: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\PSYCHOLOGIE\Koerper_Erinnert_Video_1\video_fertig.mp4
+2026-08-04 16:59:56 | WARNUNG: Video nur 467 Sek (7.8 Min) - Ziel ist mindestens 8 Minuten (480 Sek). Skript pruefen.
+2026-08-04 16:59:56 | Lade Video auf YouTube hoch (Kanal: BewusstEinfach)...
+2026-08-04 16:59:57 | Footer fuer Kanal 'BewusstEinfach' angehaengt.
+2026-08-04 16:59:59 | Upload: 50% (8 MB / 16.1 MB)
+2026-08-04 17:00:01 | Upload: 99% (16 MB / 16.1 MB)
+2026-08-04 17:00:01 | Upload: 100% (16.1 MB / 16.1 MB)
+2026-08-04 17:00:01 | Video hochgeladen (nicht gelistet): https://www.youtube.com/watch?v=uUPjkeO5yaA
+2026-08-04 17:00:12 | Thumbnail hochgeladen.
+2026-08-04 17:00:12 | YouTube Studio: https://studio.youtube.com/video/uUPjkeO5yaA/edit
+2026-08-04 17:00:12 | Bitte pruefen und auf Oeffentlich schalten.
+2026-08-04 17:00:12 | Setze vollstaendige Beschreibung...
+2026-08-04 17:00:13 | Vollstaendige Beschreibung gesetzt.
+2026-08-04 17:00:13 | Status auf Produziert gesetzt.
+2026-08-04 17:00:13 | === Produktion abgeschlossen: Du glaubst, du hast dich beruhigt. Dein Körper glaubt dir nicht. ===
+2026-08-04 17:00:13 | YouTube URL: https://www.youtube.com/watch?v=uUPjkeO5yaA
+2026-08-04 17:09:27 | === YouTube Producer gestartet ===
+2026-08-04 17:09:27 | Starte Produktion: Wach um 3 Uhr nachts? Das ist kein Schlafproblem.
+2026-08-04 17:09:27 | Ordner erstellt: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1
+2026-08-04 17:09:28 | Generiere Audio via ElevenLabs...
+2026-08-04 17:11:13 | Audio gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\voiceover.mp3
+2026-08-04 17:11:14 | Kapitelmarken erstellt: 1 Kapitel, Gesamtdauer 543 Sek.
+2026-08-04 17:11:14 | Visueller Stil: Stockclips-Cluster - lade Pexels-Videoclips...
+2026-08-04 17:11:14 | Suche Pexels-Clips fuer 'sleeping person bedroom night'...
+2026-08-04 17:11:21 | Clip 1 gespeichert ('sleeping person bedroom night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-01.mp4
+2026-08-04 17:11:28 | Clip 2 gespeichert ('sleeping person bedroom night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-02.mp4
+2026-08-04 17:11:33 | Clip 3 gespeichert ('sleeping person bedroom night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-03.mp4
+2026-08-04 17:11:33 | Suche Pexels-Clips fuer 'insomnia dark bedroom'...
+2026-08-04 17:12:10 | Clip 4 gespeichert ('insomnia dark bedroom'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-04.mp4
+2026-08-04 17:12:21 | Clip 5 gespeichert ('insomnia dark bedroom'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-05.mp4
+2026-08-04 17:12:27 | Clip 6 gespeichert ('insomnia dark bedroom'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-06.mp4
+2026-08-04 17:12:27 | Suche Pexels-Clips fuer 'alarm clock 3am night'...
+2026-08-04 17:12:36 | Clip 7 gespeichert ('alarm clock 3am night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-07.mp4
+2026-08-04 17:12:57 | Clip 8 gespeichert ('alarm clock 3am night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-08.mp4
+2026-08-04 17:13:06 | Clip 9 gespeichert ('alarm clock 3am night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-09.mp4
+2026-08-04 17:13:06 | Suche Pexels-Clips fuer 'night sky stars calm'...
+2026-08-04 17:13:14 | Clip 10 gespeichert ('night sky stars calm'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-10.mp4
+2026-08-04 17:13:29 | Clip 11 gespeichert ('night sky stars calm'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-11.mp4
+2026-08-04 17:13:47 | Clip 12 gespeichert ('night sky stars calm'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-12.mp4
+2026-08-04 17:13:47 | Suche Pexels-Clips fuer 'bedroom morning light peaceful'...
+2026-08-04 17:13:55 | Clip 13 gespeichert ('bedroom morning light peaceful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-13.mp4
+2026-08-04 17:14:10 | Clip 14 gespeichert ('bedroom morning light peaceful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-14.mp4
+2026-08-04 17:14:20 | Clip 15 gespeichert ('bedroom morning light peaceful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-15.mp4
+2026-08-04 17:14:20 | Suche Pexels-Clips fuer 'person waking up bed'...
+2026-08-04 17:14:25 | Clip 16 gespeichert ('person waking up bed'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-16.mp4
+2026-08-04 17:14:42 | Clip 17 gespeichert ('person waking up bed'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-17.mp4
+2026-08-04 17:14:51 | Clip 18 gespeichert ('person waking up bed'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-18.mp4
+2026-08-04 17:14:51 | Generiere Thumbnail: Modus=FLUX, FLUX + Text...
+2026-08-04 17:14:57 | FLUX Thumbnail Status (1): COMPLETED
+2026-08-04 17:15:03 | Thumbnail (FLUX-Modus) gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\thumbnail.jpg
+2026-08-04 17:15:03 | Thumbnail-Archiv: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\YT-Thumbnails_Banner\YouTube_Thumbnail_Bewusst_Einfach-54.jpg
+2026-08-04 17:15:03 | Ermittle Audiodauer...
+2026-08-04 17:15:03 | Baue Video mit FFmpeg...
+2026-08-04 17:15:03 | Stockclip-Modus: 18 einzigartige Clips, 68 Segmente insgesamt fuer 543.3 Sek. Audio.
+2026-08-04 17:19:14 | Musik geladen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\Musik\japanese-water-garden.mp3
+2026-08-04 17:19:39 | Video fertig: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\video_fertig.mp4
+2026-08-04 17:19:39 | QC: Videodauer 9.1 Min - OK.
+2026-08-04 17:19:39 | Lade Video auf YouTube hoch (Kanal: BewusstEinfach)...
+2026-08-04 17:19:40 | Footer fuer Kanal 'BewusstEinfach' angehaengt.
+2026-08-04 17:19:44 | Upload: 6% (8 MB / 138.6 MB)
+2026-08-04 17:19:45 | Upload: 12% (16 MB / 138.6 MB)
+2026-08-04 17:19:47 | Upload: 17% (24 MB / 138.6 MB)
+2026-08-04 17:19:48 | Upload: 23% (32 MB / 138.6 MB)
+2026-08-04 17:19:50 | Upload: 29% (40 MB / 138.6 MB)
+2026-08-04 17:19:51 | Upload: 35% (48 MB / 138.6 MB)
+2026-08-04 17:19:53 | Upload: 40% (56 MB / 138.6 MB)
+2026-08-04 17:19:54 | Upload: 46% (64 MB / 138.6 MB)
+2026-08-04 17:19:56 | Upload: 52% (72 MB / 138.6 MB)
+2026-08-04 17:19:57 | Upload: 58% (80 MB / 138.6 MB)
+2026-08-04 17:20:03 | Upload: 63% (88 MB / 138.6 MB)
+2026-08-04 17:20:08 | Upload: 69% (96 MB / 138.6 MB)
+2026-08-04 17:20:12 | Upload: 75% (104 MB / 138.6 MB)
+2026-08-04 17:20:14 | Upload: 81% (112 MB / 138.6 MB)
+2026-08-04 17:20:16 | Upload: 87% (120 MB / 138.6 MB)
+2026-08-04 17:20:17 | Upload: 92% (128 MB / 138.6 MB)
+2026-08-04 17:20:19 | Upload: 98% (136 MB / 138.6 MB)
+2026-08-04 17:20:20 | Upload: 100% (138.6 MB / 138.6 MB)
+2026-08-04 17:20:20 | Video hochgeladen (nicht gelistet): https://www.youtube.com/watch?v=t9Zoh8iaOFA
+2026-08-04 17:20:28 | Thumbnail hochgeladen.
+2026-08-04 17:20:28 | YouTube Studio: https://studio.youtube.com/video/t9Zoh8iaOFA/edit
+2026-08-04 17:20:28 | Bitte pruefen und auf Oeffentlich schalten.
+2026-08-04 17:20:28 | Setze vollstaendige Beschreibung...
+2026-08-04 17:20:29 | Vollstaendige Beschreibung gesetzt.
+2026-08-04 17:20:29 | Status auf Produziert gesetzt.
+2026-08-04 17:20:29 | === Produktion abgeschlossen: Wach um 3 Uhr nachts? Das ist kein Schlafproblem. ===
+2026-08-04 17:20:29 | YouTube URL: https://www.youtube.com/watch?v=t9Zoh8iaOFA
+2026-08-12 23:28:23 | === YouTube Producer gestartet ===
+2026-08-12 23:28:23 | Starte Produktion: Wach um 3 Uhr nachts? Das ist kein Schlafproblem.
+2026-08-12 23:28:23 | Audio bereits vorhanden, ElevenLabs wird Ã¼bersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\voiceover.mp3
+2026-08-12 23:28:23 | Kapitelmarken erstellt: 1 Kapitel, Gesamtdauer 543 Sek.
+2026-08-12 23:28:23 | Visueller Stil: Stockclips-Cluster - lade Pexels-Videoclips...
+2026-08-12 23:28:23 | Suche Pexels-Clips fuer 'sleeping person bedroom night'...
+2026-08-12 23:28:33 | Clip 1 gespeichert ('sleeping person bedroom night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-01.mp4
+2026-08-12 23:28:42 | Clip 2 gespeichert ('sleeping person bedroom night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-02.mp4
+2026-08-12 23:28:51 | Clip 3 gespeichert ('sleeping person bedroom night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-03.mp4
+2026-08-12 23:28:51 | Suche Pexels-Clips fuer 'insomnia dark bedroom'...
+2026-08-12 23:29:42 | Clip 4 gespeichert ('insomnia dark bedroom'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-04.mp4
+2026-08-12 23:29:53 | Clip 5 gespeichert ('insomnia dark bedroom'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-05.mp4
+2026-08-12 23:30:11 | Clip 6 gespeichert ('insomnia dark bedroom'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-06.mp4
+2026-08-12 23:30:11 | Suche Pexels-Clips fuer 'alarm clock 3am night'...
+2026-08-12 23:30:28 | Clip 7 gespeichert ('alarm clock 3am night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-07.mp4
+2026-08-12 23:30:57 | Clip 8 gespeichert ('alarm clock 3am night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-08.mp4
+2026-08-12 23:31:11 | Clip 9 gespeichert ('alarm clock 3am night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-09.mp4
+2026-08-12 23:31:11 | Suche Pexels-Clips fuer 'night sky stars calm'...
+2026-08-12 23:31:32 | Clip 10 gespeichert ('night sky stars calm'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-10.mp4
+2026-08-12 23:31:44 | Clip 11 gespeichert ('night sky stars calm'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-11.mp4
+2026-08-12 23:32:10 | Clip 12 gespeichert ('night sky stars calm'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-12.mp4
+2026-08-12 23:32:10 | Suche Pexels-Clips fuer 'bedroom morning light peaceful'...
+2026-08-12 23:32:32 | Clip 13 gespeichert ('bedroom morning light peaceful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-13.mp4
+2026-08-12 23:32:55 | Clip 14 gespeichert ('bedroom morning light peaceful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-14.mp4
+2026-08-12 23:33:10 | Clip 15 gespeichert ('bedroom morning light peaceful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-15.mp4
+2026-08-12 23:33:10 | Suche Pexels-Clips fuer 'person waking up bed'...
+2026-08-12 23:33:42 | Clip 16 gespeichert ('person waking up bed'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-16.mp4
+2026-08-12 23:33:56 | Clip 17 gespeichert ('person waking up bed'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-17.mp4
+2026-08-12 23:34:19 | Clip 18 gespeichert ('person waking up bed'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-18.mp4
+2026-08-12 23:34:19 | Thumbnail bereits vorhanden, uebersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\thumbnail.jpg
+2026-08-12 23:34:19 | Ermittle Audiodauer...
+2026-08-12 23:34:19 | Baue Video mit FFmpeg...
+2026-08-12 23:34:20 | Stockclip-Modus: 18 einzigartige Clips, 68 Segmente insgesamt fuer 543.3 Sek. Audio.
+2026-08-12 23:44:46 | Musik geladen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\Musik\spirit-song.mp3
+2026-08-12 23:45:01 | Video fertig: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\video_fertig.mp4
+2026-08-12 23:45:01 | QC: Videodauer 9.1 Min - OK.
+2026-08-12 23:45:01 | Lade Video auf YouTube hoch (Kanal: BewusstEinfach)...
+2026-08-12 23:45:01 | Footer fuer Kanal 'BewusstEinfach' angehaengt.
+2026-08-12 23:45:04 | Upload: 6% (8 MB / 132.7 MB)
+2026-08-12 23:45:10 | Upload: 12% (16 MB / 132.7 MB)
+2026-08-12 23:45:13 | Upload: 18% (24 MB / 132.7 MB)
+2026-08-12 23:45:16 | Upload: 24% (32 MB / 132.7 MB)
+2026-08-12 23:45:19 | Upload: 30% (40 MB / 132.7 MB)
+2026-08-12 23:45:23 | Upload: 36% (48 MB / 132.7 MB)
+2026-08-12 23:45:26 | Upload: 42% (56 MB / 132.7 MB)
+2026-08-12 23:45:29 | Upload: 48% (64 MB / 132.7 MB)
+2026-08-12 23:45:33 | Upload: 54% (72 MB / 132.7 MB)
+2026-08-12 23:45:37 | Upload: 60% (80 MB / 132.7 MB)
+2026-08-12 23:45:40 | Upload: 66% (88 MB / 132.7 MB)
+2026-08-12 23:45:44 | Upload: 72% (96 MB / 132.7 MB)
+2026-08-12 23:45:48 | Upload: 78% (104 MB / 132.7 MB)
+2026-08-12 23:45:51 | Upload: 84% (112 MB / 132.7 MB)
+2026-08-12 23:45:56 | Upload: 90% (120 MB / 132.7 MB)
+2026-08-12 23:45:58 | Upload: 96% (128 MB / 132.7 MB)
+2026-08-12 23:46:01 | Upload: 100% (132.7 MB / 132.7 MB)
+2026-08-12 23:46:01 | Video hochgeladen (nicht gelistet): https://www.youtube.com/watch?v=ep_ezKsKCg4
+2026-08-12 23:46:08 | Thumbnail hochgeladen.
+2026-08-12 23:46:08 | YouTube Studio: https://studio.youtube.com/video/ep_ezKsKCg4/edit
+2026-08-12 23:46:08 | Bitte pruefen und auf Oeffentlich schalten.
+2026-08-12 23:46:08 | Setze vollstaendige Beschreibung...
+2026-08-12 23:46:09 | Vollstaendige Beschreibung gesetzt.
+2026-08-12 23:46:09 | Status auf Produziert gesetzt.
+2026-08-12 23:46:09 | === Produktion abgeschlossen: Wach um 3 Uhr nachts? Das ist kein Schlafproblem. ===
+2026-08-12 23:46:09 | YouTube URL: https://www.youtube.com/watch?v=ep_ezKsKCg4
+2026-08-13 00:36:51 | === YouTube Producer gestartet ===
+2026-08-13 00:36:51 | Starte Produktion: Wach um 3 Uhr nachts? Das ist kein Schlafproblem.
+2026-08-13 00:36:51 | Audio bereits vorhanden, ElevenLabs wird Ã¼bersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\voiceover.mp3
+2026-08-13 00:36:51 | Kapitelmarken erstellt: 1 Kapitel, Gesamtdauer 543 Sek.
+2026-08-13 00:36:51 | Visueller Stil: Stockclips-Cluster - lade Pexels-Videoclips...
+2026-08-13 00:36:51 | Suche Pexels-Clips fuer 'middle aged man sleeping bedroom night'...
+2026-08-13 00:37:00 | Clip 1 gespeichert ('middle aged man sleeping bedroom night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-01.mp4
+2026-08-13 00:37:09 | Clip 2 gespeichert ('middle aged man sleeping bedroom night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-02.mp4
+2026-08-13 00:37:16 | Clip 3 gespeichert ('middle aged man sleeping bedroom night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-03.mp4
+2026-08-13 00:37:30 | Clip 4 gespeichert ('middle aged man sleeping bedroom night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-04.mp4
+2026-08-13 00:37:43 | Clip 5 gespeichert ('middle aged man sleeping bedroom night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-05.mp4
+2026-08-13 00:37:43 | Suche Pexels-Clips fuer 'mature adult insomnia dark bedroom'...
+2026-08-13 00:38:02 | Clip 6 gespeichert ('mature adult insomnia dark bedroom'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-06.mp4
+2026-08-13 00:38:43 | Clip 7 gespeichert ('mature adult insomnia dark bedroom'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-07.mp4
+2026-08-13 00:38:56 | Clip 8 gespeichert ('mature adult insomnia dark bedroom'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-08.mp4
+2026-08-13 00:39:45 | Clip 9 gespeichert ('mature adult insomnia dark bedroom'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-09.mp4
+2026-08-13 00:40:35 | Clip 10 gespeichert ('mature adult insomnia dark bedroom'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-10.mp4
+2026-08-13 00:40:35 | Suche Pexels-Clips fuer 'older man waking up night worried'...
+2026-08-13 00:41:30 | Clip 11 gespeichert ('older man waking up night worried'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-11.mp4
+2026-08-13 00:41:53 | Clip 12 gespeichert ('older man waking up night worried'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-12.mp4
+2026-08-13 00:42:35 | Clip 13 gespeichert ('older man waking up night worried'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-13.mp4
+2026-08-13 00:43:40 | Clip 14 gespeichert ('older man waking up night worried'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-14.mp4
+2026-08-13 00:44:22 | Clip 15 gespeichert ('older man waking up night worried'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-15.mp4
+2026-08-13 00:44:22 | Suche Pexels-Clips fuer 'night sky stars calm peaceful'...
+2026-08-13 00:44:50 | Clip 16 gespeichert ('night sky stars calm peaceful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-16.mp4
+2026-08-13 00:46:34 | Clip 17 gespeichert ('night sky stars calm peaceful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-17.mp4
+2026-08-13 00:47:34 | Clip 18 gespeichert ('night sky stars calm peaceful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-18.mp4
+2026-08-13 00:49:33 | Clip 19 gespeichert ('night sky stars calm peaceful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-19.mp4
+2026-08-13 00:50:39 | Clip 20 gespeichert ('night sky stars calm peaceful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-20.mp4
+2026-08-13 00:50:39 | Suche Pexels-Clips fuer 'mature adult sitting bed awake night'...
+2026-08-13 00:51:19 | Clip 21 gespeichert ('mature adult sitting bed awake night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-21.mp4
+2026-08-13 00:54:05 | Clip 22 gespeichert ('mature adult sitting bed awake night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-22.mp4
+2026-08-13 00:54:51 | Clip 23 gespeichert ('mature adult sitting bed awake night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-23.mp4
+2026-08-13 00:55:24 | Clip 24 gespeichert ('mature adult sitting bed awake night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-24.mp4
+2026-08-13 00:56:14 | Clip 25 gespeichert ('mature adult sitting bed awake night'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-25.mp4
+2026-08-13 00:56:14 | Suche Pexels-Clips fuer 'older person bedroom morning light resting'...
+2026-08-13 00:56:54 | Clip 26 gespeichert ('older person bedroom morning light resting'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-26.mp4
+2026-08-13 00:57:17 | Clip 27 gespeichert ('older person bedroom morning light resting'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-27.mp4
+2026-08-13 00:58:13 | Clip 28 gespeichert ('older person bedroom morning light resting'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-28.mp4
+2026-08-13 00:59:25 | Clip 29 gespeichert ('older person bedroom morning light resting'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-29.mp4
+2026-08-13 01:00:31 | Clip 30 gespeichert ('older person bedroom morning light resting'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-30.mp4
+2026-08-13 01:00:31 | Thumbnail bereits vorhanden, uebersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\thumbnail.jpg
+2026-08-13 01:00:31 | Ermittle Audiodauer...
+2026-08-13 01:00:31 | Baue Video mit FFmpeg...
+2026-08-13 01:00:31 | Stockclip-Modus: 30 einzigartige Clips, 68 Segmente insgesamt fuer 543.3 Sek. Audio.
+2026-08-13 11:12:56 | Musik geladen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\Musik\spirit-song.mp3
+2026-08-13 11:13:22 | Video fertig: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\video_fertig.mp4
+2026-08-13 11:13:22 | QC: Videodauer 9.1 Min - OK.
+2026-08-13 11:13:22 | Lade Video auf YouTube hoch (Kanal: BewusstEinfach)...
+2026-08-13 11:13:22 | Footer fuer Kanal 'BewusstEinfach' angehaengt.
+2026-08-13 11:13:25 | Upload: 6% (8 MB / 145 MB)
+2026-08-13 11:13:28 | Upload: 11% (16 MB / 145 MB)
+2026-08-13 11:13:31 | Upload: 17% (24 MB / 145 MB)
+2026-08-13 11:13:34 | Upload: 22% (32 MB / 145 MB)
+2026-08-13 11:13:37 | Upload: 28% (40 MB / 145 MB)
+2026-08-13 11:13:40 | Upload: 33% (48 MB / 145 MB)
+2026-08-13 11:13:44 | Upload: 39% (56 MB / 145 MB)
+2026-08-13 11:13:46 | Upload: 44% (64 MB / 145 MB)
+2026-08-13 11:13:48 | Upload: 50% (72 MB / 145 MB)
+2026-08-13 11:13:49 | Upload: 55% (80 MB / 145 MB)
+2026-08-13 11:13:51 | Upload: 61% (88 MB / 145 MB)
+2026-08-13 11:13:53 | Upload: 66% (96 MB / 145 MB)
+2026-08-13 11:13:54 | Upload: 72% (104 MB / 145 MB)
+2026-08-13 11:13:55 | Upload: 77% (112 MB / 145 MB)
+2026-08-13 11:13:57 | Upload: 83% (120 MB / 145 MB)
+2026-08-13 11:13:59 | Upload: 88% (128 MB / 145 MB)
+2026-08-13 11:14:00 | Upload: 94% (136 MB / 145 MB)
+2026-08-13 11:14:02 | Upload: 99% (144 MB / 145 MB)
+2026-08-13 11:14:03 | Upload: 100% (145 MB / 145 MB)
+2026-08-13 11:14:03 | Video hochgeladen (nicht gelistet): https://www.youtube.com/watch?v=OQLRySDRXBU
+2026-08-13 11:14:11 | Thumbnail hochgeladen.
+2026-08-13 11:14:11 | YouTube Studio: https://studio.youtube.com/video/OQLRySDRXBU/edit
+2026-08-13 11:14:11 | Bitte pruefen und auf Oeffentlich schalten.
+2026-08-13 11:14:11 | Setze vollstaendige Beschreibung...
+2026-08-13 11:14:12 | Vollstaendige Beschreibung gesetzt.
+2026-08-13 11:14:12 | Status auf Produziert gesetzt.
+2026-08-13 11:14:12 | === Produktion abgeschlossen: Wach um 3 Uhr nachts? Das ist kein Schlafproblem. ===
+2026-08-13 11:14:12 | YouTube URL: https://www.youtube.com/watch?v=OQLRySDRXBU
+2026-08-13 13:01:30 | === YouTube Producer gestartet ===
+2026-08-13 13:01:30 | Starte Produktion: Wach um 3 Uhr nachts? Das ist kein Schlafproblem.
+2026-08-13 13:01:30 | Audio bereits vorhanden, ElevenLabs wird Ã¼bersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\voiceover.mp3
+2026-08-13 13:01:30 | Kapitelmarken erstellt: 1 Kapitel, Gesamtdauer 543 Sek.
+2026-08-13 13:01:30 | Visueller Stil: Stockclips-Cluster - lade Pexels-Videoclips...
+2026-08-13 13:01:30 | Suche Pexels-Clips fuer 'middle aged man sleeping bedroom night'...
+2026-08-13 13:01:31 | Clip 1 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:31 | Clip 2 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:31 | Clip 3 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:31 | Clip 4 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:31 | Clip 5 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:31 | Suche Pexels-Clips fuer 'mature adult insomnia dark bedroom'...
+2026-08-13 13:01:31 | Clip 6 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:31 | Clip 7 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:31 | Clip 8 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:31 | Clip 9 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:31 | Clip 10 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:31 | Suche Pexels-Clips fuer 'older man waking up night worried'...
+2026-08-13 13:01:31 | Clip 11 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:31 | Clip 12 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:31 | Clip 13 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:31 | Clip 14 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:31 | Clip 15 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:31 | Suche Pexels-Clips fuer 'night sky stars calm peaceful'...
+2026-08-13 13:01:31 | Clip 16 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:31 | Clip 17 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:31 | Clip 18 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:31 | Clip 19 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:32 | Clip 20 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:32 | Suche Pexels-Clips fuer 'mature adult sitting bed awake night'...
+2026-08-13 13:01:32 | Clip 21 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:32 | Clip 22 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:32 | Clip 23 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:32 | Clip 24 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:32 | Clip 25 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:32 | Suche Pexels-Clips fuer 'older person bedroom morning light resting'...
+2026-08-13 13:01:32 | Clip 26 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:32 | Clip 27 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:32 | Clip 28 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:32 | Clip 29 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:32 | Clip 30 bereits vorhanden, uebersprungen.
+2026-08-13 13:01:32 | Thumbnail bereits vorhanden, uebersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\thumbnail.jpg
+2026-08-13 13:01:32 | Ermittle Audiodauer...
+2026-08-13 13:01:32 | Baue Video mit FFmpeg...
+2026-08-13 13:01:32 | Stockclip-Modus: 30 einzigartige Clips, 43 Segmente insgesamt fuer 543.3 Sek. Audio.
+2026-08-13 13:10:29 | Musik geladen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\Musik\spirit-song.mp3
+2026-08-13 13:11:05 | Video fertig: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\video_fertig.mp4
+2026-08-13 13:11:05 | QC: Videodauer 9.1 Min - OK.
+2026-08-13 13:11:05 | Lade Video auf YouTube hoch (Kanal: BewusstEinfach)...
+2026-08-13 13:11:06 | Footer fuer Kanal 'BewusstEinfach' angehaengt.
+2026-08-13 13:11:08 | Upload: 6% (8 MB / 145 MB)
+2026-08-13 13:11:10 | Upload: 11% (16 MB / 145 MB)
+2026-08-13 13:11:11 | Upload: 17% (24 MB / 145 MB)
+2026-08-13 13:11:13 | Upload: 22% (32 MB / 145 MB)
+2026-08-13 13:11:14 | Upload: 28% (40 MB / 145 MB)
+2026-08-13 13:11:16 | Upload: 33% (48 MB / 145 MB)
+2026-08-13 13:11:17 | Upload: 39% (56 MB / 145 MB)
+2026-08-13 13:11:19 | Upload: 44% (64 MB / 145 MB)
+2026-08-13 13:11:21 | Upload: 50% (72 MB / 145 MB)
+2026-08-13 13:11:24 | Upload: 55% (80 MB / 145 MB)
+2026-08-13 13:11:26 | Upload: 61% (88 MB / 145 MB)
+2026-08-13 13:11:28 | Upload: 66% (96 MB / 145 MB)
+2026-08-13 13:11:29 | Upload: 72% (104 MB / 145 MB)
+2026-08-13 13:11:31 | Upload: 77% (112 MB / 145 MB)
+2026-08-13 13:11:34 | Upload: 83% (120 MB / 145 MB)
+2026-08-13 13:11:36 | Upload: 88% (128 MB / 145 MB)
+2026-08-13 13:11:38 | Upload: 94% (136 MB / 145 MB)
+2026-08-13 13:11:39 | Upload: 99% (144 MB / 145 MB)
+2026-08-13 13:11:40 | Upload: 100% (145 MB / 145 MB)
+2026-08-13 13:11:40 | Video hochgeladen (nicht gelistet): https://www.youtube.com/watch?v=DszoIqqe-QM
+2026-08-13 13:11:50 | Thumbnail hochgeladen.
+2026-08-13 13:11:50 | YouTube Studio: https://studio.youtube.com/video/DszoIqqe-QM/edit
+2026-08-13 13:11:50 | Bitte pruefen und auf Oeffentlich schalten.
+2026-08-13 13:11:50 | Setze vollstaendige Beschreibung...
+2026-08-13 13:11:51 | Vollstaendige Beschreibung gesetzt.
+2026-08-13 13:11:51 | Status auf Produziert gesetzt.
+2026-08-13 13:11:51 | === Produktion abgeschlossen: Wach um 3 Uhr nachts? Das ist kein Schlafproblem. ===
+2026-08-13 13:11:51 | YouTube URL: https://www.youtube.com/watch?v=DszoIqqe-QM
+2026-08-13 14:55:46 | === YouTube Producer gestartet ===
+2026-08-13 14:55:46 | Starte Produktion: Wach um 3 Uhr nachts? Das ist kein Schlafproblem.
+2026-08-13 14:55:46 | Audio bereits vorhanden, ElevenLabs wird Ã¼bersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\voiceover.mp3
+2026-08-13 14:55:46 | Kapitelmarken erstellt: 1 Kapitel, Gesamtdauer 543 Sek.
+2026-08-13 14:55:46 | Visueller Stil: Stockclips-Cluster - lade Pexels-Videoclips...
+2026-08-13 14:55:46 | Suche Pexels-Clips fuer 'older man waking up night bedroom dark'...
+2026-08-13 14:56:06 | Clip 1 gespeichert ('older man waking up night bedroom dark'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-01.mp4
+2026-08-13 14:56:19 | Clip 2 gespeichert ('older man waking up night bedroom dark'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-02.mp4
+2026-08-13 14:56:32 | Clip 3 gespeichert ('older man waking up night bedroom dark'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-03.mp4
+2026-08-13 14:57:20 | Clip 4 gespeichert ('older man waking up night bedroom dark'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-04.mp4
+2026-08-13 14:57:49 | Clip 5 gespeichert ('older man waking up night bedroom dark'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-05.mp4
+2026-08-13 14:57:49 | Suche Pexels-Clips fuer 'mature adult morning coffee kitchen calm contemplative'...
+2026-08-13 14:57:56 | Clip 6 gespeichert ('mature adult morning coffee kitchen calm contemplative'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-06.mp4
+2026-08-13 14:58:04 | Clip 7 gespeichert ('mature adult morning coffee kitchen calm contemplative'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-07.mp4
+2026-08-13 14:58:11 | Clip 8 gespeichert ('mature adult morning coffee kitchen calm contemplative'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-08.mp4
+2026-08-13 14:58:17 | Clip 9 gespeichert ('mature adult morning coffee kitchen calm contemplative'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-09.mp4
+2026-08-13 14:58:32 | Clip 10 gespeichert ('mature adult morning coffee kitchen calm contemplative'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-10.mp4
+2026-08-13 14:58:32 | Suche Pexels-Clips fuer 'sunrise forest peaceful nature calm'...
+2026-08-13 14:59:28 | Clip 11 gespeichert ('sunrise forest peaceful nature calm'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-11.mp4
+2026-08-13 14:59:52 | Clip 12 gespeichert ('sunrise forest peaceful nature calm'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-12.mp4
+2026-08-13 15:00:22 | Clip 13 gespeichert ('sunrise forest peaceful nature calm'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-13.mp4
+2026-08-13 15:01:14 | Clip 14 gespeichert ('sunrise forest peaceful nature calm'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-14.mp4
+2026-08-13 15:01:24 | Clip 15 gespeichert ('sunrise forest peaceful nature calm'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-15.mp4
+2026-08-13 15:01:24 | Suche Pexels-Clips fuer 'older person walking park autumn thoughtful'...
+2026-08-13 15:01:36 | Clip 16 gespeichert ('older person walking park autumn thoughtful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-16.mp4
+2026-08-13 15:01:51 | Clip 17 gespeichert ('older person walking park autumn thoughtful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-17.mp4
+2026-08-13 15:02:00 | Clip 18 gespeichert ('older person walking park autumn thoughtful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-18.mp4
+2026-08-13 15:02:18 | Clip 19 gespeichert ('older person walking park autumn thoughtful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-19.mp4
+2026-08-13 15:02:31 | Clip 20 gespeichert ('older person walking park autumn thoughtful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-20.mp4
+2026-08-13 15:02:32 | Suche Pexels-Clips fuer 'night sky stars dark peaceful'...
+2026-08-13 15:02:44 | Clip 21 gespeichert ('night sky stars dark peaceful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-21.mp4
+2026-08-13 15:03:00 | Clip 22 gespeichert ('night sky stars dark peaceful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-22.mp4
+2026-08-13 15:03:07 | Clip 23 gespeichert ('night sky stars dark peaceful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-23.mp4
+2026-08-13 15:03:33 | Clip 24 gespeichert ('night sky stars dark peaceful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-24.mp4
+2026-08-13 15:03:43 | Clip 25 gespeichert ('night sky stars dark peaceful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-25.mp4
+2026-08-13 15:03:43 | Suche Pexels-Clips fuer 'mature adult sitting quietly window light thoughtful'...
+2026-08-13 15:03:50 | Clip 26 gespeichert ('mature adult sitting quietly window light thoughtful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-26.mp4
+2026-08-13 15:04:01 | Clip 27 gespeichert ('mature adult sitting quietly window light thoughtful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-27.mp4
+2026-08-13 15:04:15 | Clip 28 gespeichert ('mature adult sitting quietly window light thoughtful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-28.mp4
+2026-08-13 15:04:31 | Clip 29 gespeichert ('mature adult sitting quietly window light thoughtful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-29.mp4
+2026-08-13 15:04:48 | Clip 30 gespeichert ('mature adult sitting quietly window light thoughtful'): C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\clip-30.mp4
+2026-08-13 15:04:48 | Thumbnail bereits vorhanden, uebersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\thumbnail.jpg
+2026-08-13 15:04:48 | Ermittle Audiodauer...
+2026-08-13 15:04:48 | Baue Video mit FFmpeg...
+2026-08-13 15:04:48 | Stockclip-Modus: 30 einzigartige Clips, 30 Segmente insgesamt fuer 543.3 Sek. Audio.
+2026-08-13 15:09:05 | Musik geladen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\Musik\zen-garden-standard.mp3
+2026-08-13 15:09:27 | Video fertig: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\video_fertig.mp4
+2026-08-13 15:09:27 | QC: Videodauer 8 Min - OK.
+2026-08-13 15:09:27 | Lade Video auf YouTube hoch (Kanal: BewusstEinfach)...
+2026-08-13 15:09:27 | Footer fuer Kanal 'BewusstEinfach' angehaengt.
+2026-08-13 15:09:30 | Upload: 4% (8 MB / 195.6 MB)
+2026-08-13 15:09:32 | Upload: 8% (16 MB / 195.6 MB)
+2026-08-13 15:09:33 | Upload: 12% (24 MB / 195.6 MB)
+2026-08-13 15:09:36 | Upload: 16% (32 MB / 195.6 MB)
+2026-08-13 15:09:38 | Upload: 20% (40 MB / 195.6 MB)
+2026-08-13 15:09:39 | Upload: 25% (48 MB / 195.6 MB)
+2026-08-13 15:09:41 | Upload: 29% (56 MB / 195.6 MB)
+2026-08-13 15:09:43 | Upload: 33% (64 MB / 195.6 MB)
+2026-08-13 15:09:44 | Upload: 37% (72 MB / 195.6 MB)
+2026-08-13 15:09:48 | Upload: 41% (80 MB / 195.6 MB)
+2026-08-13 15:09:54 | Upload: 45% (88 MB / 195.6 MB)
+2026-08-13 15:09:59 | Upload: 49% (96 MB / 195.6 MB)
+2026-08-13 15:10:02 | Upload: 53% (104 MB / 195.6 MB)
+2026-08-13 15:10:04 | Upload: 57% (112 MB / 195.6 MB)
+2026-08-13 15:10:05 | Upload: 61% (120 MB / 195.6 MB)
+2026-08-13 15:10:07 | Upload: 65% (128 MB / 195.6 MB)
+2026-08-13 15:10:08 | Upload: 70% (136 MB / 195.6 MB)
+2026-08-13 15:10:10 | Upload: 74% (144 MB / 195.6 MB)
+2026-08-13 15:10:11 | Upload: 78% (152 MB / 195.6 MB)
+2026-08-13 15:10:12 | Upload: 82% (160 MB / 195.6 MB)
+2026-08-13 15:10:14 | Upload: 86% (168 MB / 195.6 MB)
+2026-08-13 15:10:15 | Upload: 90% (176 MB / 195.6 MB)
+2026-08-13 15:10:17 | Upload: 94% (184 MB / 195.6 MB)
+2026-08-13 15:10:18 | Upload: 98% (192 MB / 195.6 MB)
+2026-08-13 15:10:20 | Upload: 100% (195.6 MB / 195.6 MB)
+2026-08-13 15:10:20 | Video hochgeladen (nicht gelistet): https://www.youtube.com/watch?v=G1OTs3zM2jA
+2026-08-13 15:10:30 | Thumbnail hochgeladen.
+2026-08-13 15:10:30 | YouTube Studio: https://studio.youtube.com/video/G1OTs3zM2jA/edit
+2026-08-13 15:10:30 | Bitte pruefen und auf Oeffentlich schalten.
+2026-08-13 15:10:30 | Setze vollstaendige Beschreibung...
+2026-08-13 15:10:31 | Vollstaendige Beschreibung gesetzt.
+2026-08-13 15:10:31 | Status auf Produziert gesetzt.
+2026-08-13 15:10:31 | === Produktion abgeschlossen: Wach um 3 Uhr nachts? Das ist kein Schlafproblem. ===
+2026-08-13 15:10:31 | YouTube URL: https://www.youtube.com/watch?v=G1OTs3zM2jA
+2026-08-13 15:41:49 | === YouTube Producer gestartet ===
+2026-08-13 15:41:49 | Starte Produktion: Wach um 3 Uhr nachts? Das ist kein Schlafproblem.
+2026-08-13 15:41:49 | Audio bereits vorhanden, ElevenLabs wird Ã¼bersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\voiceover.mp3
+2026-08-13 15:41:49 | Kapitelmarken erstellt: 1 Kapitel, Gesamtdauer 543 Sek.
+2026-08-13 15:41:49 | Visueller Stil: Stockclips-Cluster - lade Pexels-Videoclips...
+2026-08-13 15:41:49 | Suche Pexels-Clips fuer 'older man waking up night bedroom dark'...
+2026-08-13 15:41:50 | Clip 1 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:50 | Clip 2 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:50 | Clip 3 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:50 | Clip 4 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:50 | Clip 5 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:50 | Suche Pexels-Clips fuer 'mature adult morning coffee kitchen calm contemplative'...
+2026-08-13 15:41:50 | Clip 6 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:50 | Clip 7 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:50 | Clip 8 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:50 | Clip 9 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:50 | Clip 10 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:50 | Suche Pexels-Clips fuer 'sunrise forest peaceful nature calm'...
+2026-08-13 15:41:50 | Clip 11 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:50 | Clip 12 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:50 | Clip 13 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:50 | Clip 14 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:50 | Clip 15 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:50 | Suche Pexels-Clips fuer 'older person walking park autumn thoughtful'...
+2026-08-13 15:41:50 | Clip 16 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:50 | Clip 17 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:50 | Clip 18 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:50 | Clip 19 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:50 | Clip 20 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:50 | Suche Pexels-Clips fuer 'night sky stars dark peaceful'...
+2026-08-13 15:41:51 | Clip 21 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:51 | Clip 22 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:51 | Clip 23 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:51 | Clip 24 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:51 | Clip 25 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:51 | Suche Pexels-Clips fuer 'mature adult sitting quietly window light thoughtful'...
+2026-08-13 15:41:51 | Clip 26 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:51 | Clip 27 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:51 | Clip 28 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:51 | Clip 29 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:51 | Clip 30 bereits vorhanden, uebersprungen.
+2026-08-13 15:41:51 | Thumbnail bereits vorhanden, uebersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\thumbnail.jpg
+2026-08-13 15:41:51 | Ermittle Audiodauer...
+2026-08-13 15:41:51 | Baue Video mit FFmpeg...
+2026-08-13 15:41:51 | Stockclip-Modus: 30 einzigartige Clips, 30 Segmente insgesamt fuer 543.3 Sek. Audio.
+2026-08-13 15:45:37 | Musik geladen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\Musik\japanese-water-garden.mp3
+2026-08-13 15:45:59 | Video fertig: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\video_fertig.mp4
+2026-08-13 15:45:59 | QC: Videodauer 8 Min - OK.
+2026-08-13 15:45:59 | Lade Video auf YouTube hoch (Kanal: BewusstEinfach)...
+2026-08-13 15:45:59 | Footer fuer Kanal 'BewusstEinfach' angehaengt.
+2026-08-13 15:46:02 | Upload: 4% (8 MB / 195.5 MB)
+2026-08-13 15:46:04 | Upload: 8% (16 MB / 195.5 MB)
+2026-08-13 15:46:05 | Upload: 12% (24 MB / 195.5 MB)
+2026-08-13 15:46:06 | Upload: 16% (32 MB / 195.5 MB)
+2026-08-13 15:46:08 | Upload: 20% (40 MB / 195.5 MB)
+2026-08-13 15:46:09 | Upload: 25% (48 MB / 195.5 MB)
+2026-08-13 15:46:11 | Upload: 29% (56 MB / 195.5 MB)
+2026-08-13 15:46:12 | Upload: 33% (64 MB / 195.5 MB)
+2026-08-13 15:46:14 | Upload: 37% (72 MB / 195.5 MB)
+2026-08-13 15:46:15 | Upload: 41% (80 MB / 195.5 MB)
+2026-08-13 15:46:16 | Upload: 45% (88 MB / 195.5 MB)
+2026-08-13 15:46:18 | Upload: 49% (96 MB / 195.5 MB)
+2026-08-13 15:46:19 | Upload: 53% (104 MB / 195.5 MB)
+2026-08-13 15:46:21 | Upload: 57% (112 MB / 195.5 MB)
+2026-08-13 15:46:22 | Upload: 61% (120 MB / 195.5 MB)
+2026-08-13 15:46:24 | Upload: 65% (128 MB / 195.5 MB)
+2026-08-13 15:46:25 | Upload: 70% (136 MB / 195.5 MB)
+2026-08-13 15:46:27 | Upload: 74% (144 MB / 195.5 MB)
+2026-08-13 15:46:28 | Upload: 78% (152 MB / 195.5 MB)
+2026-08-13 15:46:29 | Upload: 82% (160 MB / 195.5 MB)
+2026-08-13 15:46:31 | Upload: 86% (168 MB / 195.5 MB)
+2026-08-13 15:46:32 | Upload: 90% (176 MB / 195.5 MB)
+2026-08-13 15:46:34 | Upload: 94% (184 MB / 195.5 MB)
+2026-08-13 15:46:35 | Upload: 98% (192 MB / 195.5 MB)
+2026-08-13 15:46:36 | Upload: 100% (195.5 MB / 195.5 MB)
+2026-08-13 15:46:36 | Video hochgeladen (nicht gelistet): https://www.youtube.com/watch?v=cFJ-yNCWJmI
+2026-08-13 15:46:44 | Thumbnail hochgeladen.
+2026-08-13 15:46:44 | YouTube Studio: https://studio.youtube.com/video/cFJ-yNCWJmI/edit
+2026-08-13 15:46:44 | Bitte pruefen und auf Oeffentlich schalten.
+2026-08-13 15:46:44 | Setze vollstaendige Beschreibung...
+2026-08-13 15:46:46 | Vollstaendige Beschreibung gesetzt.
+2026-08-13 15:46:46 | Status auf Produziert gesetzt.
+2026-08-13 15:46:46 | === Produktion abgeschlossen: Wach um 3 Uhr nachts? Das ist kein Schlafproblem. ===
+2026-08-13 15:46:46 | YouTube URL: https://www.youtube.com/watch?v=cFJ-yNCWJmI
+2026-08-13 17:22:51 | === YouTube Producer gestartet ===
+2026-08-13 17:22:51 | Starte Produktion: Wach um 3 Uhr nachts? Das ist kein Schlafproblem.
+2026-08-13 17:22:51 | Audio bereits vorhanden, ElevenLabs wird Ã¼bersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\voiceover.mp3
+2026-08-13 17:22:51 | Kapitelmarken erstellt: 1 Kapitel, Gesamtdauer 543 Sek.
+2026-08-13 17:22:51 | Visueller Stil: Stockclips-Cluster - lade Pexels-Videoclips...
+2026-08-13 17:22:51 | Suche Pexels-Clips fuer 'older man waking up night bedroom dark'...
+2026-08-13 17:22:51 | Clip 1 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:51 | Clip 2 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:51 | Clip 3 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:51 | Clip 4 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:51 | Clip 5 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:51 | Suche Pexels-Clips fuer 'mature adult morning coffee kitchen calm contemplative'...
+2026-08-13 17:22:51 | Clip 6 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:51 | Clip 7 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:51 | Clip 8 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:51 | Clip 9 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:52 | Clip 10 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:52 | Suche Pexels-Clips fuer 'sunrise forest peaceful nature calm'...
+2026-08-13 17:22:52 | Clip 11 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:52 | Clip 12 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:52 | Clip 13 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:52 | Clip 14 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:52 | Clip 15 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:52 | Suche Pexels-Clips fuer 'older person walking park autumn thoughtful'...
+2026-08-13 17:22:52 | Clip 16 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:52 | Clip 17 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:52 | Clip 18 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:52 | Clip 19 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:52 | Clip 20 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:52 | Suche Pexels-Clips fuer 'night sky stars dark peaceful'...
+2026-08-13 17:22:52 | Clip 21 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:52 | Clip 22 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:52 | Clip 23 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:52 | Clip 24 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:52 | Clip 25 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:52 | Suche Pexels-Clips fuer 'mature adult sitting quietly window light thoughtful'...
+2026-08-13 17:22:52 | Clip 26 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:52 | Clip 27 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:52 | Clip 28 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:52 | Clip 29 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:52 | Clip 30 bereits vorhanden, uebersprungen.
+2026-08-13 17:22:52 | Thumbnail bereits vorhanden, uebersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\thumbnail.jpg
+2026-08-13 17:22:52 | Ermittle Audiodauer...
+2026-08-13 17:22:52 | Baue Video mit FFmpeg...
+2026-08-13 17:22:54 | Stockclip-Modus: 30 einzigartige Clips, 35 Segmente insgesamt fuer 543.3 Sek. Audio.
+2026-08-13 17:27:58 | Musik geladen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\Musik\spirit-song.mp3
+2026-08-13 17:28:23 | Video fertig: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\SCHLAF\DreiUhr_Video_1\video_fertig.mp4
+2026-08-13 17:28:23 | QC: Videodauer 9.1 Min - OK.
+2026-08-13 17:28:23 | Lade Video auf YouTube hoch (Kanal: BewusstEinfach)...
+2026-08-13 17:28:23 | Footer fuer Kanal 'BewusstEinfach' angehaengt.
+2026-08-13 17:28:26 | Upload: 4% (8 MB / 208.9 MB)
+2026-08-13 17:28:27 | Upload: 8% (16 MB / 208.9 MB)
+2026-08-13 17:28:28 | Upload: 11% (24 MB / 208.9 MB)
+2026-08-13 17:28:30 | Upload: 15% (32 MB / 208.9 MB)
+2026-08-13 17:28:31 | Upload: 19% (40 MB / 208.9 MB)
+2026-08-13 17:28:33 | Upload: 23% (48 MB / 208.9 MB)
+2026-08-13 17:28:34 | Upload: 27% (56 MB / 208.9 MB)
+2026-08-13 17:28:36 | Upload: 31% (64 MB / 208.9 MB)
+2026-08-13 17:28:37 | Upload: 34% (72 MB / 208.9 MB)
+2026-08-13 17:28:39 | Upload: 38% (80 MB / 208.9 MB)
+2026-08-13 17:28:40 | Upload: 42% (88 MB / 208.9 MB)
+2026-08-13 17:28:41 | Upload: 46% (96 MB / 208.9 MB)
+2026-08-13 17:28:43 | Upload: 50% (104 MB / 208.9 MB)
+2026-08-13 17:28:44 | Upload: 54% (112 MB / 208.9 MB)
+2026-08-13 17:28:46 | Upload: 57% (120 MB / 208.9 MB)
+2026-08-13 17:28:47 | Upload: 61% (128 MB / 208.9 MB)
+2026-08-13 17:28:49 | Upload: 65% (136 MB / 208.9 MB)
+2026-08-13 17:28:50 | Upload: 69% (144 MB / 208.9 MB)
+2026-08-13 17:28:52 | Upload: 73% (152 MB / 208.9 MB)
+2026-08-13 17:28:53 | Upload: 77% (160 MB / 208.9 MB)
+2026-08-13 17:28:55 | Upload: 80% (168 MB / 208.9 MB)
+2026-08-13 17:28:56 | Upload: 84% (176 MB / 208.9 MB)
+2026-08-13 17:28:57 | Upload: 88% (184 MB / 208.9 MB)
+2026-08-13 17:28:59 | Upload: 92% (192 MB / 208.9 MB)
+2026-08-13 17:29:00 | Upload: 96% (200 MB / 208.9 MB)
+2026-08-13 17:29:02 | Upload: 100% (208 MB / 208.9 MB)
+2026-08-13 17:29:03 | Upload: 100% (208.9 MB / 208.9 MB)
+2026-08-13 17:29:03 | Video hochgeladen (nicht gelistet): https://www.youtube.com/watch?v=OWjWM8_7HNc
+2026-08-13 17:29:10 | Thumbnail hochgeladen.
+2026-08-13 17:29:10 | YouTube Studio: https://studio.youtube.com/video/OWjWM8_7HNc/edit
+2026-08-13 17:29:10 | Bitte pruefen und auf Oeffentlich schalten.
+2026-08-13 17:29:11 | Setze vollstaendige Beschreibung...
+2026-08-13 17:29:11 | Vollstaendige Beschreibung gesetzt.
+2026-08-13 17:29:11 | Status auf Produziert gesetzt.
+2026-08-13 17:29:11 | === Produktion abgeschlossen: Wach um 3 Uhr nachts? Das ist kein Schlafproblem. ===
+2026-08-13 17:29:11 | YouTube URL: https://www.youtube.com/watch?v=OWjWM8_7HNc
