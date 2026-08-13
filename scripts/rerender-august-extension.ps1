@@ -46,7 +46,7 @@ function Upload-ToFal {
 function Render-Video {
     param([string]$datum, [string]$l1, [string]$l2, [string]$l3, [string]$src, [string]$music)
     $safe   = $datum -replace "\.", "_"
-    $outMp4 = Join-Path $tmpDir "aug2_${safe}_out.mp4"
+    $outMp4 = Join-Path $tmpDir "aug3_${safe}_out.mp4"
 
     $e1 = $l1 -replace ":", "\:" -replace "'", ""
     $e2 = $l2 -replace ":", "\:" -replace "'", ""
@@ -54,9 +54,9 @@ function Render-Video {
 
     $box   = "box=1:boxcolor=white@0.88:boxborderw=18"
     $scale = "scale=1080:1920:flags=lanczos:force_original_aspect_ratio=decrease,pad=1080:1920:(ow-iw)/2:(oh-ih)/2"
-    $dt    = "drawtext=fontfile='$fontFile':text='$e1':x=(w-tw)/2:y=h*0.64:fontsize=56:fontcolor=#1A2230:$box," +
-             "drawtext=fontfile='$fontFile':text='$e2':x=(w-tw)/2:y=h*0.725:fontsize=56:fontcolor=#1A2230:$box," +
-             "drawtext=fontfile='$fontFile':text='$e3':x=(w-tw)/2:y=h*0.81:fontsize=40:fontcolor=#1A2230:$box"
+    $dt    = "drawtext=fontfile='$fontFile':text='$e1':x=(w-tw)/2:y=h*0.63:fontsize=68:fontcolor=#1A2230:$box," +
+             "drawtext=fontfile='$fontFile':text='$e2':x=(w-tw)/2:y=h*0.715:fontsize=68:fontcolor=#1A2230:$box," +
+             "drawtext=fontfile='$fontFile':text='$e3':x=(w-tw)/2:y=h*0.81:fontsize=46:fontcolor=#1A2230:$box"
 
     if (Test-Path $music) {
         & ffmpeg -y -i $src -i $music `
