@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo '{\"systemMessage\": \"⚠️  Session nicht vergessen zu beenden! Tippe /shutdown um alles zu speichern.\"}'"
+            "command": "cd 'C:\\Users\\andre\\claude-workspace-vorlage' && git add -u && git diff --cached --quiet || (git commit -m \"Auto-Shutdown: $(date +%Y-%m-%d)\" && git push origin master)"
           }
         ]
       }
