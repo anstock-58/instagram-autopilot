@@ -55,4 +55,43 @@ Auf **„Test this trigger"** bzw. „Execute step" klicken. n8n prüft dann das
 
 ---
 
-*Erstellt 13.08.2026, während des ersten eigenen n8n-Tests mit dem eigenen Gmail-Postfach. Gehört inhaltlich zu Anhang G (Tool-Referenz) der Kernmethodik.*
+## Bekanntes Problem: Deutsche Umlaute werden falsch dargestellt
+
+Der IMAP-Trigger-Baustein hat einen bekannten, noch offenen Fehler bei bestimmten Zeichensätzen (offizieller Bug-Report bei n8n auf GitHub, Issue #10230). Deutsche Sonderzeichen (ä, ö, ü, ß) kommen manchmal verstümmelt an, zum Beispiel wird "Straße" zu "StraÃe". Es gibt keine saubere Einstellung, die das direkt behebt.
+
+**Notlösung: eigener Code-Baustein zur Korrektur.** Zwischen den IMAP-Trigger und den nächsten Baustein (z. B. „If") einen **„Code"**-Baustein (Sprache JavaScript) einfügen mit folgendem Inhalt:
+
+```javascript
+function fixEncoding(text) {
+  if (typeof text !== 'string') return text;
+  const replacements = [
+    ['Ã', 'ß'],
+    ['Ã¤', 'ä'], ['Ã¶', 'ö'], ['Ã¼', 'ü'],
+    ['Ã„', 'Ä'], ['Ã–', 'Ö'], ['Ãœ', 'Ü'],
+    ['ÃŸ', 'ß'], ['Ã©', 'é'], ['Ã¨', 'è'],
+    ['â€™', '’'], ['â€œ', '“'], ['â€', '”'],
+    ['â€"', '–'], ['Â ', ' '],
+    ['Ã', 'ß'],
+  ];
+  let fixed = text;
+  for (const [broken, correct] of replacements) {
+    fixed = fixed.split(broken).join(correct);
+  }
+  return fixed;
+}
+
+for (const item of $input.all()) {
+  if (item.json.textPlain) item.json.textPlain = fixEncoding(item.json.textPlain);
+  if (item.json.textHtml) item.json.textHtml = fixEncoding(item.json.textHtml);
+  if (item.json.subject) item.json.subject = fixEncoding(item.json.subject);
+}
+return $input.all();
+```
+
+Wichtig: Die erste Ersetzungsregel (`Ã` gefolgt vom unsichtbaren Steuerzeichen ``) muss vor der letzten, allgemeinen Regel (nur `Ã`) stehen, sonst bleibt ein unsichtbares Zeichen hinter dem reparierten „ß" übrig (sichtbar als leere Box in manchen Texteditoren). Getestet und bestätigt funktionierend am 14.08.2026.
+
+Diese Lösung ist ein Notbehelf, kein echter Fix des zugrunde liegenden n8n-Fehlers, deckt aber die häufigsten Fälle bei deutschen Geschäftstexten ab.
+
+---
+
+*Erstellt 13.08.2026, während des ersten eigenen n8n-Tests mit dem eigenen Gmail-Postfach. Gehört inhaltlich zu Anhang G (Tool-Referenz) der Kernmethodik. Umlaut-Fix ergänzt 14.08.2026.*
