@@ -284,7 +284,9 @@ Für Betriebe mit vielen Besprechungen oder Kundengesprächen: ein Transkription
 
 **5. Kundenanfragen und Erstkontakt**
 
-Für Betriebe mit hohem Aufkommen an Standardanfragen (Preise, Verfügbarkeit, erste Fragen): ein Chatbot, der aus vorhandenen Website-Inhalten und FAQs trainiert wird, für die Website. Für telefonische Anfragen gibt es vergleichbare Dienste, die Anrufe annehmen, zusammenfassen und strukturiert weitergeben — besonders relevant für kleine Betriebe, in denen niemand ständig ans Telefon kann.
+Für Betriebe mit hohem Aufkommen an Standardanfragen (Preise, Verfügbarkeit, erste Fragen): ein Chatbot, der aus vorhandenen Website-Inhalten und FAQs trainiert wird, für die Website.
+
+Für telefonische Anfragen gibt es vergleichbare Dienste (KI-Telefonassistenten), die Anrufe automatisch annehmen, Standardfragen beantworten, Termine buchen und wichtige Gespräche strukturiert weiterleiten — besonders relevant für kleine Betriebe, in denen niemand ständig ans Telefon kann, im Handwerk klassisch das Dilemma „wer auf der Baustelle ist, kann nicht ans Telefon, wer ans Telefon geht, ist nicht auf der Baustelle". Aktuelle Anbieter mit Fokus auf deutsche KMU (Stand 2026): Vokaro (branchenspezifisch), Fonio (Pay-per-Use statt Grundgebühr, gut für schwankendes Anrufaufkommen), Livestep (Mittelstand-Fokus), voiceOne (deutscher Anbieter, hohes Anrufaufkommen), Telfo. Bei Kosten-Nutzen-Rechnungen von Anbieterseite (z. B. konkrete ROI-Prozentzahlen) skeptisch bleiben und nicht ungeprüft gegenüber Kunden übernehmen, oft Einzelfall-Marketingbeispiele statt verlässlicher Branchenzahlen.
 
 **6. Interne Wissensnutzung mit sensiblen Daten**
 

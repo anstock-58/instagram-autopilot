@@ -87,6 +87,8 @@ Gemappt auf die Tool-Referenz aus Anhang G der Kernmethodik.
 
 **Nachtragsmanagement-Unterstützung.** Eine KI hilft, Abweichungen vom Bauablauf frühzeitig zu erkennen, zum Beispiel aus Bautagebuch-Einträgen, und erinnert an die fristgerechte Dokumentation, bevor Ansprüche verfallen.
 
+**Telefonassistenz.** Trifft das klassische Bau-Dilemma besonders genau: wer auf der Baustelle ist, kann nicht ans Telefon, wer ans Telefon geht, ist nicht auf der Baustelle. Ein KI-Telefonassistent nimmt eingehende Anrufe automatisch an, beantwortet Standardfragen, bucht Termine und leitet wichtige Gespräche strukturiert weiter, statt dass Anfragen komplett verloren gehen. Aktuelle Anbieter mit Fokus auf deutsche KMU: Vokaro, Fonio (Pay-per-Use), Livestep, voiceOne, Telfo, siehe Anhang G der Kernmethodik für Details. Bei konkreten ROI-Zahlen von Anbieterseite skeptisch bleiben, siehe Hinweis dort.
+
 **Rechnungsprüfung.** Automatischer Abgleich eingehender Nachunternehmer-Rechnungen gegen den erfassten Aufmaß- oder Leistungsstand, markiert Abweichungen zur manuellen Prüfung, statt alles von Hand zu vergleichen.
 
 **Angebotskalkulation-Unterstützung.** Eine KI durchsucht frühere Kalkulationen und Ausschreibungen nach vergleichbaren Positionen und beschleunigt so die Ersterstellung eines Angebots.
