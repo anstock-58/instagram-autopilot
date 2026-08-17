@@ -286,7 +286,21 @@ Für Betriebe mit vielen Besprechungen oder Kundengesprächen: ein Transkription
 
 Für Betriebe mit hohem Aufkommen an Standardanfragen (Preise, Verfügbarkeit, erste Fragen): ein Chatbot, der aus vorhandenen Website-Inhalten und FAQs trainiert wird, für die Website.
 
-Für telefonische Anfragen gibt es vergleichbare Dienste (KI-Telefonassistenten), die Anrufe automatisch annehmen, Standardfragen beantworten, Termine buchen und wichtige Gespräche strukturiert weiterleiten — besonders relevant für kleine Betriebe, in denen niemand ständig ans Telefon kann, im Handwerk klassisch das Dilemma „wer auf der Baustelle ist, kann nicht ans Telefon, wer ans Telefon geht, ist nicht auf der Baustelle". Aktuelle Anbieter mit Fokus auf deutsche KMU (Stand 2026): Vokaro (branchenspezifisch), Fonio (Pay-per-Use statt Grundgebühr, gut für schwankendes Anrufaufkommen), Livestep (Mittelstand-Fokus), voiceOne (deutscher Anbieter, hohes Anrufaufkommen), Telfo. Bei Kosten-Nutzen-Rechnungen von Anbieterseite (z. B. konkrete ROI-Prozentzahlen) skeptisch bleiben und nicht ungeprüft gegenüber Kunden übernehmen, oft Einzelfall-Marketingbeispiele statt verlässlicher Branchenzahlen.
+Für telefonische Anfragen gibt es vergleichbare Dienste (KI-Telefonassistenten), die Anrufe automatisch annehmen, Standardfragen beantworten, Termine buchen und wichtige Gespräche strukturiert weiterleiten — besonders relevant für kleine Betriebe, in denen niemand ständig ans Telefon kann, im Handwerk klassisch das Dilemma „wer auf der Baustelle ist, kann nicht ans Telefon, wer ans Telefon geht, ist nicht auf der Baustelle".
+
+Typische Kernfunktionen dieser Telefonassistenten:
+
+- Rund-um-die-Uhr-Erreichbarkeit, auch außerhalb der Geschäftszeiten und am Wochenende
+- Echtes Gespräch statt Tastendruck-Menü, versteht natürliche Sprache
+- Strukturierte Aufnahme der wichtigen Details (z. B. Adresse, Art des Problems, Dringlichkeit)
+- Direkte Terminbuchung im Kalender, ohne dass jemand zurückrufen muss
+- Automatische Bestätigungs-SMS an den Kunden
+- Dringlichkeits-Einordnung (Triage): eilige Fälle direkt an eine echte Person weiterleiten, Standardanfragen erledigt die KI selbst
+- Antwortzeit unter einer Sekunde, kein Warten in der Leitung
+
+Aktuelle Anbieter mit Fokus auf deutsche KMU (Stand 2026): Vokaro (branchenspezifisch), Fonio (Pay-per-Use statt Grundgebühr, gut für schwankendes Anrufaufkommen), Livestep (Mittelstand-Fokus), voiceOne (deutscher Anbieter, hohes Anrufaufkommen), Telfo.
+
+Berichteter Effekt aus der Praxis: Handwerksbetriebe berichten von bis zu 40 % weniger verpassten Anfragen nach der Einführung — als "berichtet", nicht als garantiert kennzeichnen, wenn das gegenüber einem Kunden erwähnt wird. Bei Kosten-Nutzen-Rechnungen von Anbieterseite (z. B. konkrete ROI-Prozentzahlen) generell skeptisch bleiben und nicht ungeprüft übernehmen, oft Einzelfall-Marketingbeispiele statt verlässlicher Branchenzahlen.
 
 **6. Interne Wissensnutzung mit sensiblen Daten**
 
