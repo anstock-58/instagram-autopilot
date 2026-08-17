@@ -1756,3 +1756,8 @@
 2026-08-13 17:29:11 | Status auf Produziert gesetzt.
 2026-08-13 17:29:11 | === Produktion abgeschlossen: Wach um 3 Uhr nachts? Das ist kein Schlafproblem. ===
 2026-08-13 17:29:11 | YouTube URL: https://www.youtube.com/watch?v=OWjWM8_7HNc
+2026-08-17 23:21:49 | === YouTube Producer gestartet ===
+2026-08-17 23:21:49 | Starte Produktion: Nach diesem Video wirst du jeden Abend anders einschlafen | 8 Buddhistische Lehren
+2026-08-17 23:21:49 | Ordner erstellt: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Buddhistische_Lehren_Abend
+2026-08-17 23:21:49 | Generiere Audio via ElevenLabs...
+2026-08-17 23:21:49 | Generiere Audio mit Timestamps (Untertitel-Modus)...
