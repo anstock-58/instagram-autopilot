@@ -1797,3 +1797,5 @@
 2026-08-17 23:23:29 | Baue Video mit FFmpeg...
 2026-08-17 23:23:29 | Gesamtdauer Audio: 348 Sekunden - 44 Sekunden pro Bild
 2026-08-17 23:23:29 | Untertitel werden eingebrannt: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Buddhistische_Lehren_Abend\untertitel.ass
+2026-08-17 23:32:19 | === YouTube Producer gestartet ===
+2026-08-17 23:32:19 | Kein offenes Video gefunden. Nichts zu tun.
