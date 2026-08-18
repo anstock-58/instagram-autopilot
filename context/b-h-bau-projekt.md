@@ -24,13 +24,13 @@ Matthias ist ein Freund von Andi, über den die ganze KI-Prozessberatung als neu
 
 Matthias hat Andis Fragen zum Unternehmen bereits per Mail direkt beantwortet (nicht über das digitale Interview-Formular, siehe Abschnitt „Digitale Erhebungsformulare" unten — den Link dazu hat er zwar bekommen, aber bewusst nicht genutzt, wollte das eigentliche Gespräch erst am Montag abwarten).
 
-## Erster Termin: VERSCHOBEN (Stand 02.08.2026)
+## Erster Termin: BESTÄTIGT — Donnerstag, 20.08.2026, 11:00 Uhr
 
-Der ursprünglich für Montag, 03.08.2026, geplante Termin wurde verschoben. Neuer Termin: frühestens in der Woche ab 17.08.2026, ca. zwei Wochen später als ursprünglich geplant. Genaues Datum/Uhrzeit noch offen, Matthias meldet sich.
+Ursprünglich für Montag, 03.08.2026, geplant, dann verschoben, jetzt final bestätigt (Stand 14.08.2026).
 
-**Grund laut Andi:** Am (verschobenen) Termintag wurden bei B+H Bau drei neue Mitarbeiter eingestellt und im Besprechungsraum eingeführt (zwei Poliere, ein Auszubildender) — der Raum war dadurch belegt, das Gespräch fiel deshalb teilweise aus.
+**Grund für die Verschiebung:** Am ursprünglichen Termintag wurden bei B+H Bau drei neue Mitarbeiter eingestellt und im Besprechungsraum eingeführt (zwei Poliere, ein Auszubildender) — der Raum war dadurch belegt, das Gespräch fiel deshalb teilweise aus.
 
-Teilnehmer weiterhin geplant: Matthias, sein IT-Verantwortlicher, die Geschäftsführung (Sohn, Mitgesellschafter). Andi nimmt den Laptop mit, sobald der neue Termin steht — Übersichtsseite mit allen Links (Demos + Unterlagen + Live-Formulare) zum Anklicken: `outputs/ki-prozessberatung-kmu/termin-uebersicht.html`.
+Teilnehmer: Matthias, sein IT-Verantwortlicher, die Geschäftsführung (Sohn, Mitgesellschafter). Andi nimmt den Laptop mit — Übersichtsseite mit allen Links (Demos + Unterlagen + Live-Formulare) zum Anklicken: `outputs/ki-prozessberatung-kmu/termin-uebersicht.html`.
 
 **Erkenntnis aus einem Telefonat mit Matthias (02.08.2026):** Andi sollte an seiner Stelle erst mal zuhören und grundlegend erfassen, wie die Firma strukturiert ist (Abteilungen usw.), bevor irgendwas vorgeschlagen wird. Bestätigt genau die ARBEITSWEISE aus `reference/ki-prozessberatung-kmu-methode.md` ("Zuerst gezielte Fragen stellen und Informationen sammeln, bevor irgendetwas bewertet wird") — keine Planänderung nötig, eher eine Bestätigung, den ersten Termin bewusst als reine Bestandsaufnahme zu führen statt schon Lösungen zu pitchen.
 
