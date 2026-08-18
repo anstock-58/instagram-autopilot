@@ -9594,3 +9594,21 @@
 2026-08-18 15:07:25 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
 2026-08-18 15:12:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
 2026-08-18 15:12:27 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-08-18 15:17:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-18 15:17:25 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-08-18 15:22:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-18 15:22:25 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-08-18 15:27:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-18 15:27:25 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-08-18 15:32:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-18 15:32:46 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-08-18 15:37:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-18 15:37:25 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-08-18 15:42:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-18 15:42:25 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-08-18 15:47:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-18 15:47:27 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-08-18 15:52:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-18 15:52:46 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-08-18 15:57:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-18 15:57:25 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
