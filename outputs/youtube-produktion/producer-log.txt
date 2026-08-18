@@ -1936,3 +1936,24 @@
 2026-08-18 13:21:33 | Upload: 28% (8 MB / 28.6 MB)
 2026-08-18 13:21:35 | Upload: 56% (16 MB / 28.6 MB)
 2026-08-18 13:21:37 | Upload: 84% (24 MB / 28.6 MB)
+2026-08-18 13:21:39 | Upload: 100% (28.6 MB / 28.6 MB)
+2026-08-18 13:21:39 | Video hochgeladen (nicht gelistet): https://www.youtube.com/watch?v=F1l9iSIihuI
+2026-08-18 13:21:47 | Thumbnail hochgeladen.
+2026-08-18 13:21:47 | YouTube Studio: https://studio.youtube.com/video/F1l9iSIihuI/edit
+2026-08-18 13:21:47 | Bitte pruefen und auf Oeffentlich schalten.
+2026-08-18 13:21:47 | Setze vollstaendige Beschreibung...
+2026-08-18 13:21:48 | Vollstaendige Beschreibung gesetzt.
+2026-08-18 13:21:48 | Status auf Produziert gesetzt.
+2026-08-18 13:21:48 | === Produktion abgeschlossen: Nach diesem Video wirst du jeden Abend anders einschlafen | 8 Buddhistische Lehren ===
+2026-08-18 13:21:48 | YouTube URL: https://www.youtube.com/watch?v=F1l9iSIihuI
+2026-08-18 13:21:48 | Starte Produktion: Was dein Körper dir sagen will | Die Stille hinter deinen Symptomen
+2026-08-18 13:21:48 | Ordner erstellt: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Koerper_Sprache_Symptome
+2026-08-18 13:21:48 | Generiere Audio via ElevenLabs...
+2026-08-18 13:21:48 | Generiere Audio mit Timestamps (Untertitel-Modus)...
+2026-08-18 13:21:50 | Audio + ASS-Untertitel gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Koerper_Sprache_Symptome\untertitel.ass
+2026-08-18 13:21:50 | Audio gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Koerper_Sprache_Symptome\voiceover.mp3
+2026-08-18 13:21:50 | Visueller Stil: Illustration-Zen - generiere Aquarell-Illustrationen via fal.ai...
+2026-08-18 13:21:50 | Ermittle Audiodauer...
+2026-08-18 13:21:50 | Baue Video mit FFmpeg...
+2026-08-18 13:21:50 | Gesamtdauer Audio: 0.5 Sekunden - Infinity Sekunden pro Bild
+2026-08-18 13:21:50 | Untertitel werden eingebrannt: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Koerper_Sprache_Symptome\untertitel.ass
