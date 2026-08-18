@@ -9534,3 +9534,9 @@
 2026-08-17 23:52:28 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
 2026-08-17 23:57:24 | === Telegram Pause Bot gestartet | Offset: 1 ===
 2026-08-17 23:57:24 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-08-18 12:48:18 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-18 12:48:19 | FEHLER beim Abrufen der Telegram-Updates: Der Remotename konnte nicht aufgelöst werden: 'api.telegram.org'
+2026-08-18 12:54:16 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-18 12:54:17 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-08-18 12:57:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-18 12:57:25 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
