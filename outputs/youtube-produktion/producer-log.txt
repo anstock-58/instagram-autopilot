@@ -2142,3 +2142,21 @@
 2026-08-18 14:39:03 | Status auf Produziert gesetzt.
 2026-08-18 14:39:03 | === Produktion abgeschlossen: Nach diesem Video wirst du jeden Abend anders einschlafen | 8 Buddhistische Lehren ===
 2026-08-18 14:39:03 | YouTube URL: https://www.youtube.com/watch?v=qrJJt-q39XY
+2026-08-18 14:51:45 | === YouTube Producer gestartet ===
+2026-08-18 14:51:45 | Starte Produktion: Nach diesem Video wirst du jeden Abend anders einschlafen | 8 Buddhistische Lehren
+2026-08-18 14:51:45 | Audio bereits vorhanden, ElevenLabs wird übersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Buddhistische_Lehren_Abend\voiceover.mp3
+2026-08-18 14:51:45 | Kapitelmarken erstellt: 10 Kapitel, Gesamtdauer 538 Sek.
+2026-08-18 14:51:45 | Visueller Stil: Illustration-Zen - generiere Aquarell-Illustrationen via fal.ai...
+2026-08-18 14:51:45 | Bild 1 bereits vorhanden (308KB), uebersprungen.
+2026-08-18 14:51:45 | Bild 2 bereits vorhanden (175KB), uebersprungen.
+2026-08-18 14:51:45 | Bild 3 bereits vorhanden (203KB), uebersprungen.
+2026-08-18 14:51:45 | Bild 4 bereits vorhanden (103KB), uebersprungen.
+2026-08-18 14:51:45 | Bild 5 bereits vorhanden (296KB), uebersprungen.
+2026-08-18 14:51:45 | Bild 6 bereits vorhanden (209KB), uebersprungen.
+2026-08-18 14:51:45 | Bild 7 bereits vorhanden (228KB), uebersprungen.
+2026-08-18 14:51:45 | Bild 8 bereits vorhanden (227KB), uebersprungen.
+2026-08-18 14:51:45 | Thumbnail bereits vorhanden, uebersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Buddhistische_Lehren_Abend\thumbnail.jpg
+2026-08-18 14:51:45 | Ermittle Audiodauer...
+2026-08-18 14:51:45 | Baue Video mit FFmpeg...
+2026-08-18 14:51:45 | Gesamtdauer Audio: 538.2 Sekunden - 68 Sekunden pro Bild (1700 Frames)
+2026-08-18 14:51:57 | Untertitel werden eingebrannt: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Buddhistische_Lehren_Abend\untertitel.ass
