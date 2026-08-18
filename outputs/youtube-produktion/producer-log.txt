@@ -1910,3 +1910,29 @@
 2026-08-18 09:58:43 | Status auf Produziert gesetzt.
 2026-08-18 09:58:43 | === Produktion abgeschlossen: Nach diesem Video wirst du jeden Abend anders einschlafen | 8 Buddhistische Lehren ===
 2026-08-18 09:58:43 | YouTube URL: https://www.youtube.com/watch?v=7CFQ0tGlOqo
+2026-08-18 13:19:32 | === YouTube Producer gestartet ===
+2026-08-18 13:19:32 | Starte Produktion: Nach diesem Video wirst du jeden Abend anders einschlafen | 8 Buddhistische Lehren
+2026-08-18 13:19:32 | Audio bereits vorhanden, ElevenLabs wird übersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Buddhistische_Lehren_Abend\voiceover.mp3
+2026-08-18 13:19:32 | Kapitelmarken erstellt: 10 Kapitel, Gesamtdauer 477 Sek.
+2026-08-18 13:19:32 | Visueller Stil: Illustration-Zen - generiere Aquarell-Illustrationen via fal.ai...
+2026-08-18 13:19:32 | Bild 1 bereits vorhanden (308KB), uebersprungen.
+2026-08-18 13:19:32 | Bild 2 bereits vorhanden (175KB), uebersprungen.
+2026-08-18 13:19:32 | Bild 3 bereits vorhanden (203KB), uebersprungen.
+2026-08-18 13:19:32 | Bild 4 bereits vorhanden (103KB), uebersprungen.
+2026-08-18 13:19:32 | Bild 5 bereits vorhanden (296KB), uebersprungen.
+2026-08-18 13:19:32 | Bild 6 bereits vorhanden (209KB), uebersprungen.
+2026-08-18 13:19:32 | Bild 7 bereits vorhanden (228KB), uebersprungen.
+2026-08-18 13:19:32 | Bild 8 bereits vorhanden (227KB), uebersprungen.
+2026-08-18 13:19:32 | Thumbnail bereits vorhanden, uebersprungen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Buddhistische_Lehren_Abend\thumbnail.jpg
+2026-08-18 13:19:32 | Ermittle Audiodauer...
+2026-08-18 13:19:32 | Baue Video mit FFmpeg...
+2026-08-18 13:19:32 | Gesamtdauer Audio: 477.4 Sekunden - 60 Sekunden pro Bild
+2026-08-18 13:19:32 | Untertitel werden eingebrannt: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Buddhistische_Lehren_Abend\untertitel.ass
+2026-08-18 13:21:16 | Musik geladen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\Musik\kyoto-garden.mp3
+2026-08-18 13:21:29 | Video fertig: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Buddhistische_Lehren_Abend\video_fertig.mp4
+2026-08-18 13:21:29 | WARNUNG: Video nur 478 Sek (8 Min) - Ziel ist mindestens 8 Minuten (480 Sek). Skript pruefen.
+2026-08-18 13:21:29 | Lade Video auf YouTube hoch (Kanal: BewusstEinfach)...
+2026-08-18 13:21:29 | Footer fuer Kanal 'BewusstEinfach' angehaengt.
+2026-08-18 13:21:33 | Upload: 28% (8 MB / 28.6 MB)
+2026-08-18 13:21:35 | Upload: 56% (16 MB / 28.6 MB)
+2026-08-18 13:21:37 | Upload: 84% (24 MB / 28.6 MB)
