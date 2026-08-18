@@ -2100,3 +2100,5 @@
 2026-08-18 14:13:08 | Status auf Produziert gesetzt.
 2026-08-18 14:13:08 | === Produktion abgeschlossen: Nach diesem Video wirst du jeden Abend anders einschlafen | 8 Buddhistische Lehren ===
 2026-08-18 14:13:08 | YouTube URL: https://www.youtube.com/watch?v=WiMZn2rtqpE
+2026-08-18 14:31:18 | === YouTube Producer gestartet ===
+2026-08-18 14:31:18 | Kein offenes Video gefunden. Nichts zu tun.
