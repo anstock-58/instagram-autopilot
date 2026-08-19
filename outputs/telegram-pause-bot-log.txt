@@ -9770,3 +9770,17 @@
 2026-08-18 22:27:25 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
 2026-08-18 22:32:24 | === Telegram Pause Bot gestartet | Offset: 1 ===
 2026-08-18 22:32:24 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-08-18 22:37:24 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-18 22:37:24 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-08-18 22:42:24 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-18 22:42:24 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-08-18 22:47:24 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-18 22:47:26 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-08-18 22:52:24 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-18 22:52:46 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-08-18 22:57:24 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-18 22:57:24 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-08-18 23:02:24 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-18 23:02:25 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-08-18 23:07:24 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-18 23:07:25 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
