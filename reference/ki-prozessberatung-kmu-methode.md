@@ -27,6 +27,25 @@ Praktisch bedeutet das:
 
 ---
 
+## ARBEITSWEISE: REMOTE-FIRST, VOR ORT NUR BEI BEDARF
+
+Der Regelfall bei jedem Kunden ist Heimarbeit, nicht dauerhafte Präsenz vor Ort — ergibt sich direkt aus der Werkzeugwahl (cloudbasierte No-Code-Automatisierung) und passt zur Grundhaltung „Übergabe statt Abhängigkeit": alles läuft über Zugänge, nicht über physische Anwesenheit. Gut, das schon im Erstgespräch beiläufig klarzustellen, nimmt beiden Seiten eine unausgesprochene Sorge (Kunde: „müssen wir den Berater dauerhaft bei uns haben?", Berater: „muss ich ständig anreisen?").
+
+Vor Ort wirklich nötig sind in der Regel nur zwei Momente:
+
+- Der Auftakttermin (Erstgespräch, Startbereich festlegen, IT-Bestandsaufnahme).
+- Optional die Team-Einweisung am Ende einer Phase — baut bei skeptischer Belegschaft persönlich mehr Vertrauen auf, ist aber keine technische Notwendigkeit, funktioniert genauso per Video-Call.
+
+Alles dazwischen läuft remote:
+
+- Diagnose-Phase: Interview-Antworten auswerten, Abschlussbericht schreiben.
+- Abstimmungstermine: Video-Call oder Telefon reicht.
+- Zugänge einrichten: der Kunde macht das selbst online (siehe Konto-Empfehlung oben), keine gemeinsame Anwesenheit nötig.
+- Der eigentliche Aufbau der Automatisierung: komplett vom eigenen Schreibtisch aus.
+- Testphase und laufender Betrieb: ebenfalls remote.
+
+---
+
 ## DER PROMPT
 
 > Führe eine vollständige KI-Prozessanalyse durch für folgendes Unternehmen: **[FIRMENNAME]**, Branche **[BRANCHE]**, ungefähre Größe **[MITARBEITERANZAHL / UMSATZ]**.
