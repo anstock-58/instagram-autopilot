@@ -28,9 +28,24 @@ Matthias Bieker ist ein Freund von Andi, über den die ganze KI-Prozessberatung 
 
 Matthias Bieker hat Andis Fragen zum Unternehmen bereits per Mail direkt beantwortet (nicht über das digitale Interview-Formular, siehe Abschnitt „Digitale Erhebungsformulare" unten — den Link dazu hat er zwar bekommen, aber bewusst nicht genutzt, wollte das eigentliche Gespräch erst am Montag abwarten).
 
-## Erster Termin: BESTÄTIGT — Donnerstag, 20.08.2026, 11:00 Uhr
+## Erster Termin: STATTGEFUNDEN — Donnerstag, 20.08.2026
 
-Ursprünglich für Montag, 03.08.2026, geplant, dann verschoben, jetzt final bestätigt (Stand 14.08.2026).
+Ursprünglich für Montag, 03.08.2026, geplant, dann verschoben, dann für 11:00 Uhr final bestätigt. Fand statt, verlief aber deutlich anders als vorbereitet.
+
+**Tatsächlicher Ablauf:** Nur Matthias Bieker zu Beginn anwesend, kein ITler. Nach einer Weile kam Lilli Kettenbach (laut Impressum die eingetragene Geschäftsführerin) für rund 30 Minuten dazu. Die geplante technische Bestandsaufnahme mit dem ITler (Agenda-Punkt 3) hat NICHT stattgefunden, ist weiterhin komplett offen — kein neuer Termin dafür bekannt.
+
+**Größerer Rahmen als erwartet:** Matthias sieht das Projekt eingebettet in eine breitere "Sanierung" der Firma — nicht primär wirtschaftlich, sondern personell: jeder Bereich soll darauf geprüft werden, wo es nicht rund läuft, wo Unterbesetzung oder mangelnde Qualifikation vorliegt. KI-Prozessunterstützung soll dabei einfließen, wo sinnvoll. Deckt sich mit dem separat gefundenen Dokument `B+H GmbH/KI-Beauftragter_BH-Bau-GmbH.docx` (Unterkategorie im internen Projekt „Neuausrichtung B+H Bau GmbH").
+
+**Wichtige Grenzziehung von Andi selbst (bestätigt 20.08.2026):** Andi übernimmt NICHT die Sanierung selbst, sondern begleitet sie mit seinem eigenen Thema — KI-Unterstützung, wo möglich und nötig. Keine Personalbeurteilung, keine Organisationsberatung im engeren Sinne. Wichtig, weil "personell auf den Prüfstand stellen" in Deutschland an Mitbestimmungsrechte und Diskriminierungsrecht rühren kann, sobald KI-gestützt Rückschlüsse auf einzelne Mitarbeiter gezogen würden — das bleibt bewusst außerhalb von Andis Rolle.
+
+**E-Mail bleibt erste Idee** für den Startbereich, auch nach dem größeren Rahmen — noch nicht formal im Termin festgelegt, da ITler fehlte.
+
+**Neue Fakten aus dem Termin:**
+- Es gibt bei B+H Bau bereits eine App für Baustellenprotokolle im Einsatz, vermutlich von einem französischen Anbieter (genauer Name nicht genannt — evtl. Finalcad, unbestätigte Vermutung, noch verifizieren). Relevant für Phase 3 (Bautagebuch): eher andocken/ergänzen als komplett neu bauen, sobald der Name bekannt ist.
+- Sprachliche Situation im Team ist ein echtes Thema: manche Mitarbeiter sind der deutschen Sprache nicht vollständig mächtig — relevant sowohl für Bautagebuch per Spracherkennung (KI könnte unsauberes/nicht-muttersprachliches Deutsch in saubere Berichte umwandeln, macht aus einer Schwäche ein Argument für KI-Einsatz) als auch für E-Mail-Kommunikation. Sensibel, vertraulich behandeln.
+- Matthias hat am Samstag (22.08.2026) einen Gesprächstermin mit seinen Söhnen (Mehrzahl bestätigt) — vermutlich zur Nachfolge-/Unternehmensausrichtung, Ausgang unbekannt, könnte nächste Schritte beeinflussen.
+
+**Honorar-Modell geändert (wichtig, weicht von bisheriger Empfehlung ab):** Matthias wünscht **Abrechnung auf Stundenbasis statt Festpreis**, explizit zur besseren Transparenz. Weicht von der bisher erarbeiteten Festpreis-Empfehlung ab (siehe Abschnitt „Abrechnung" unten, muss überarbeitet werden). Kein Stundensatz bisher festgelegt.
 
 **Grund für die Verschiebung:** Am ursprünglichen Termintag wurden bei B+H Bau drei neue Mitarbeiter eingestellt und im Besprechungsraum eingeführt (zwei Poliere, ein Auszubildender) — der Raum war dadurch belegt, das Gespräch fiel deshalb teilweise aus.
 
@@ -147,20 +162,26 @@ Für später, nicht für Montag: `beispielrechnung-ki-beratung-firma-xy.docx`, `
 
 ## Abrechnung
 
-Festpreis für die klar abgegrenzte erste Phase (nicht Stunden nach Aufwand), das lässt sich gegenüber der wirtschaftlich denkenden Geschäftsführung klarer vergleichen, zum Beispiel gegen die Kosten einer zusätzlichen Verwaltungskraft. Grundprinzip: **jede der 5 Phasen aus der Startreihenfolge bekommt ihr eigenes, separates Angebot**, erst wenn die vorherige läuft und sich bewährt hat — kein Gesamtprojektpreis von Anfang an.
+**Geändert 20.08.2026, live im Termin:** Matthias wünscht Abrechnung auf Stundenbasis statt Festpreis, explizit zur besseren Transparenz. Bisherige Festpreis-Logik (unten als Kostenrahmen-Richtwerte erhalten) wird dafür umgerechnet, nicht verworfen.
 
-**Baustein 1 — Diagnose-Phase (bepreist, 10.08.2026): 1.200 bis 2.000 € Festpreis** für die komplette erste Phase (Interview, ggf. Mitarbeiter-Fragebogen, vollständiger Abschlussbericht nach Anhang C) — bewusster Pilotpreis mit rund 40 bis 50 % Abschlag gegenüber dem vollen Marktwert (2.500 bis 4.000 € für etablierte Berater), im Gegenzug Recht auf Nutzung als Referenz sobald gelaufen. Zahlungsstruktur: 50 % bei Start, 50 % bei Übergabe des Berichts.
+**Empfohlener Stundensatz: 100 €/h** (Empfehlung von Claude, 20.08.2026, zurückgerechnet aus den bisherigen Festpreis-Richtwerten: 1.200–2.000 € Diagnose-Phase ÷ 100 €/h ≈ 12–20 Stunden, 1.500–3.000 € Umsetzung Phase 1 ÷ 100 €/h ≈ 15–30 Stunden — beides realistische Aufwände. Entspricht der bisherigen Pilotpreis-Logik, rund 40–50 % Abschlag gegenüber dem für spezialisierte KI-Automatisierungsberatung üblichen Marktsatz von 150–180 €/h, den Andi ansetzen kann sobald er mehr Referenzen hat).
 
-**Baustein 2 — Umsetzungs-Phase 1, E-Mail-Automatisierung (Richtwert, noch nicht final beziffert, ergänzt 10.08.2026): 1.500 bis 3.000 € Festpreis.** Umfasst: Make.com/n8n einrichten, Postfach anbinden, KI-Klassifizierung und Entwurf-Erstellung bauen, testen, Team einweisen, kurze Doku für den ITler. Genaue Zahl erst nach dem Termin festlegen, wenn der tatsächliche Umfang klar ist (Anzahl Postfächer, Anzahl Kategorien). Gleiche Logik wie Baustein 1: Pilotpreis, Referenz-Gegenleistung.
+**Umsetzung, um Transparenz UND Kostenkontrolle zu verbinden:** Pro Phase weiterhin einen geschätzten Kostenrahmen vorab nennen (Stundenspanne × Stundensatz), echte Abrechnung dann nach tatsächlichem Aufwand plus kurze, nachvollziehbare Stundenübersicht je Rechnung. Grundprinzip bleibt: **jede der 5 Phasen aus der Startreihenfolge bekommt ihren eigenen Kostenrahmen**, erst wenn die vorherige läuft und sich bewährt hat — kein Gesamtprojektpreis von Anfang an.
 
-**Weitere Phasen (Rechnungsprüfung, Bautagebuch, Kalkulation, Nachtragsmanagement):** jeweils eigenes Angebot erst, wenn die vorherige Phase läuft, noch nicht beziffert.
+**Baustein 1 — Diagnose-Phase: ca. 12–20 Stunden à 100 €, voraussichtlich 1.200–2.000 €** für die komplette erste Phase (Interview, ggf. Mitarbeiter-Fragebogen, vollständiger Abschlussbericht nach Anhang C) — im Gegenzug Recht auf Nutzung als Referenz sobald gelaufen. Zahlungsstruktur: 50 % Anzahlung bei Start, Rest nach tatsächlichem Aufwand bei Übergabe des Berichts.
+
+**Baustein 2 — Umsetzungs-Phase 1, E-Mail-Automatisierung: ca. 15–30 Stunden à 100 €, voraussichtlich 1.500–3.000 €.** Umfasst: n8n/Make.com einrichten, Postfach anbinden, KI-Klassifizierung und Entwurf-Erstellung bauen, testen, Team einweisen, kurze Doku für den ITler. Genauer Rahmen erst final, wenn der tatsächliche Umfang geklärt ist (Anzahl Postfächer, Anzahl Kategorien) — hängt auch vom noch ausstehenden Technik-Gespräch mit dem ITler ab.
+
+**Weitere Phasen (Rechnungsprüfung, Bautagebuch, Kalkulation, Nachtragsmanagement):** jeweils eigener Kostenrahmen erst, wenn die vorherige Phase läuft, noch nicht beziffert.
 
 Danach bei Bedarf laufende Betreuung, Pauschale oder Aufwand, siehe „Übergabe statt Abhängigkeit" — Betreuung ist optional, kein Zwang, falls B+H Bau lieber selbst übernimmt.
 
-## Nächste Schritte
+## Nächste Schritte (Stand 20.08.2026, nach dem ersten Termin)
 
-1. **Offen, wartet auf Matthias Bieker (Stand 02.08.2026):** Andi hat Matthias Bieker gebeten, in der Zwischenzeit eine Form der Firmenstruktur zu schicken (Organigramm, Zeichnung, oder eine schriftliche Beschreibung, wie die Firma aufgebaut ist). Zweck: Andi will sich das vorab anschauen und schon mal überlegen, wo Schnittstellen liegen und wo KI-Einsatz sinnvoll sein könnte, bevor der eigentliche Termin stattfindet. Sobald das ankommt, in dieser Session einreichen — passt zu Schritt 1 (Unternehmensprofil) und Schritt 3 (Prozess-Mapping) der Methodik.
-2. Neuer Termin: Startbereich gemeinsam festlegen (voraussichtlich E-Mail), IT-Bestandsaufnahme läuft in diesem Termin mit (Agenda-Punkt 3 im Leitfaden). Bei Matthias Bieker selbst keine tiefen technischen Herleitungen, siehe Kommunikations-Hinweis oben.
-3. Falls die Zeit im Termin nicht reicht: separates, kurzes Technik-Gespräch nur mit dem ITler.
-4. Danach: Festpreis-Angebot für die konkret abgegrenzte erste Phase erstellen.
-5. Beiläufig, nicht als Pitch: nach der Personalsituation fragen (Fachkräftemangel), als möglicher Ansatzpunkt für eine spätere, komplett separate Idee über Andis Dropservice-Netzwerk mit Hakan Ersu — nicht im Termin selbst ansprechen.
+1. **Offen:** Technik-Gespräch mit dem ITler nachholen — hat im ersten Termin nicht stattgefunden (Agenda-Punkt 3 entfallen, ITler war nicht anwesend). Noch kein neuer Termin dafür bekannt.
+2. **Offen:** Name des bestehenden französischen Baustellenprotokoll-Anbieters klären — relevant für Phase 3 (Bautagebuch), eher andocken als neu bauen.
+3. **Abwarten:** Ausgang von Matthias' Gesprächstermin mit seinen Söhnen am Samstag, 22.08.2026 — kann die nächsten Schritte beeinflussen.
+4. Kostenrahmen für die Diagnose-Phase auf Stundenbasis (100 €/h, siehe „Abrechnung") konkret anbieten, sobald Matthias grünes Licht gibt.
+5. Startbereich E-Mail-Kommunikation bleibt erste Idee, aber noch nicht formal vereinbart — final klären, sobald ITler-Gespräch stattgefunden hat.
+6. Andis eigene Rolle bewusst eng halten: begleitet die Sanierung nur mit dem Thema KI-Unterstützung, keine Personalbeurteilung oder Organisationsberatung — siehe Abschnitt oben.
+7. Beiläufig, nicht als Pitch: falls die Personalsituation (Fachkräftemangel) im weiteren Verlauf zum Thema wird, das im Hinterkopf behalten als möglicher Ansatzpunkt für eine spätere, komplett separate Idee über Andis Dropservice-Netzwerk mit Hakan Ersu — nicht aktiv ansprechen.
