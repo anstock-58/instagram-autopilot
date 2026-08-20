@@ -9,14 +9,8 @@ $augCsvPath = "$basePath\outputs\contentplan_business_und_spirit_august_v2.csv"
 
 if (-not (Test-Path $tmpDir)) { New-Item -ItemType Directory -Path $tmpDir | Out-Null }
 
-$srcVideos = @(
-    "$blankoDir\WhatsApp Video 2026-08-12 at 22.45.39 (1).mp4",
-    "$blankoDir\WhatsApp Video 2026-08-12 at 22.45.39 (2).mp4",
-    "$blankoDir\WhatsApp Video 2026-08-12 at 22.45.39 (5).mp4",
-    "$blankoDir\WhatsApp Video 2026-08-12 at 22.45.39 (6).mp4",
-    "$blankoDir\WhatsApp Video 2026-08-12 at 22.45.39 (7).mp4",
-    "$blankoDir\WhatsApp Video 2026-08-12 at 22.45.39 (8).mp4"
-)
+$srcVideos = @(Get-ChildItem "$blankoDir\*.mp4" | Sort-Object Name | Select-Object -ExpandProperty FullName)
+Write-Host "$($srcVideos.Count) Blanko-Clips gefunden." -ForegroundColor DarkGray
 
 function Upload-ToFal {
     param([string]$filePath)
