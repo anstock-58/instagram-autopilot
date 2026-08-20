@@ -22,6 +22,8 @@ Vollständiges Firmenschema mit internen Bereichen und externen Partnern: `outpu
 
 Andi ist Dipl.-Ing. (bestätigt 20.08.2026, live im Termin) — korrekt in offiziellen Unterlagen (z. B. `B+H GmbH/KI-Beauftragter_BH-Bau-GmbH.docx`, Sitzungsprotokoll führt ihn als "Dipl.-Ing. Andreas Stock"), keine falsche Selbstdarstellung, echter Abschluss.
 
+**Steuerlich relevant:** Ingenieur ist ein Katalogberuf nach § 18 EStG, das eröffnet eine mögliche Freiberufler-Argumentation für die KI-Beratung (statt der bereits erfolgten Gewerbeanmeldung), gerade weil der Fokus auf Bauunternehmen/Ingenieurbüros liegt. Details und nächster Schritt in `context/current-data.md`, Eintrag „Gewerbe-Erweiterung".
+
 ## Kontaktperson und Auslöser
 
 Matthias Bieker ist ein Freund von Andi, über den die ganze KI-Prozessberatung als neues Standbein entstanden ist (siehe auch `reference/ki-prozessberatung-kmu-methode.md`). Matthias Bieker ist offen für KI, will das Unternehmen voranbringen, entscheidet am Ende. Sein Sohn ist Mitgesellschafter und in der Übergabe.
