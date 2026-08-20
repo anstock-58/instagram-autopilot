@@ -46,6 +46,18 @@ Alles dazwischen läuft remote:
 
 ---
 
+## ABRECHNUNG: FESTPREIS ODER STUNDENBASIS, JE NACH KUNDENWUNSCH
+
+Zwei gleichwertige Modelle, keine feste Vorgabe — welches passt, hängt davon ab, was dem jeweiligen Kunden wichtiger ist: Planungssicherheit oder Nachvollziehbarkeit. Am Beispiel B+H Bau (siehe `context/b-h-bau-projekt.md`): ursprünglich Festpreis vorgeschlagen, nach dem Erstgespräch auf ausdrücklichen Kundenwunsch auf Stundenbasis umgestellt.
+
+**Festpreis** — pro klar abgegrenzter Phase, kein Gesamtprojektpreis von Anfang an. Vorteil: lässt sich für eine wirtschaftlich denkende Geschäftsführung leicht mit Alternativen vergleichen (z. B. Kosten einer zusätzlichen Verwaltungskraft), kein Kostenrisiko für den Kunden bei unerwartetem Mehraufwand.
+
+**Stundenbasis** — Stundensatz statt Paketpreis, sinnvoll wenn der Kunde ausdrücklich Transparenz einfordert. Empfohlener Richtwert: **100 €/h als Pilotsatz** (rund 40–50 % Abschlag gegenüber dem für spezialisierte KI-Automatisierungsberatung üblichen Marktsatz von 150–180 €/h, gleiche Logik wie beim Festpreis-Pilotrabatt). Damit reines Stundenzählen nicht wie ein Blankoscheck wirkt: pro Phase trotzdem einen geschätzten Kostenrahmen (Stundenspanne × Satz) vorab nennen, echte Abrechnung dann nach Aufwand mit kurzer, nachvollziehbarer Stundenaufstellung je Rechnung — verbindet Transparenz mit Kostenkontrolle.
+
+Faustregel zur Umrechnung zwischen den Modellen: Festpreis-Richtwert ÷ 100 €/h ergibt eine plausible Stundenschätzung für die gleiche Phase.
+
+---
+
 ## DER PROMPT
 
 > Führe eine vollständige KI-Prozessanalyse durch für folgendes Unternehmen: **[FIRMENNAME]**, Branche **[BRANCHE]**, ungefähre Größe **[MITARBEITERANZAHL / UMSATZ]**.
