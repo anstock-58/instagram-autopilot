@@ -212,14 +212,17 @@ Lang, persönlich, mit konkreten Punkten. Wichtigste Inhalte:
 - **Persönlicher Hintergrund:** Matthias und Andi kennen sich seit einer gemeinsamen Ausbildungs-/Studienzeit vor rund 40 Jahren („40 Jahre später also noch einmal unser gemeinsamer Aufstieg") — erklärt die Tiefe des Vertrauens hinter diesem Projekt.
 - **Honorar-Logik langfristig:** Entgelt muss zum tatsächlichen Nutzen für B+H passen, nicht immer in Euro messbar, Matthias beurteilt und vertritt das gegenüber Geschäftsleitung/Gesellschaftern. Nach ca. sechs Monaten strukturierte Mitarbeiterbefragung geplant (Zeitersparnis, Fehlerreduktion, Prozessverbesserung, wirtschaftlicher Nutzen, verbleibende Widerstände) — Grundlage für Andis weitere Rolle und Honorar.
 
+## Antwort-Mail an Matthias — VERSCHICKT (21.08.2026)
+
+Andi hat die Antwort-Mail abgeschickt. Enthielt: Bestätigung des Sitzungsprotokolls, Freiberufler-/Rechnungslegungs-Hinweis (inkl. Bitte um Steuerberater-Check wegen der bestehenden Gewerbe-Anmeldung), ehrlicher Zwischenstand zum externen KI-Spezialisten (Eckdaten fest: 4 Monate/6.400 €, aber Umsetzung abhängig von B+H-Unterstützung, finale Klärung nach dem Anbieter-Gespräch am Dienstag 25.08.), sowie fünf Anhänge: `fragenkatalog-mitarbeiteranalyse-vorlage.docx`, `kurzueberblick-b-h-bau.pdf`, `schema-vorselektion-prioritaet-zuordnung.docx`, `beispielszenarien-ki-unterstuetzung.docx`, `demo-bautagebuch-spracherkennung.html`.
+
 ## Nächste Schritte (Stand 21.08.2026)
 
-1. **Sofort:** Prüfen, ob Matthias' separate E-Mail angekommen ist.
-2. **Sofort:** Vorselektierte Materialien an Matthias schicken (mindestens `fragenkatalog-mitarbeiteranalyse-vorlage.docx`, ggf. weitere aus dem `B+H GmbH/`-Ordner) — passt zur Protokoll-Aufgabe und zu seiner direkten Bitte.
-3. **Offen:** Vertragliche Rahmenbedingungen mit dem externen KI-Experten klären (Ausgang Anton-Call abwarten) und Andis eigene Freiberufler-vs-Gewerbe-/Rechnungslegungs-Situation sauber darstellen — beides von Matthias explizit erbeten.
-4. **Vorbereiten:** Termin 01.09.2026 mit Geschäftsführung und Gesellschaftern — braucht eine überzeugende, praxisnahe Präsentation von Programm/Struktur/Nutzen, größerer Rahmen als der 20.08.-Termin.
-5. **Offen:** Technik-Gespräch mit dem ITler nachholen — hat im ersten Termin nicht stattgefunden. Noch kein neuer Termin dafür bekannt.
-6. **Offen:** Name des bestehenden französischen Baustellenprotokoll-Anbieters klären — relevant für Phase 3 (Bautagebuch).
-7. **Abwarten:** Ausgang von Matthias' Geschäftsführungs-Gespräch mit seinen Söhnen am Samstag, 22.08.2026.
-8. Andis eigene Rolle bewusst eng halten: begleitet die Sanierung nur mit dem Thema KI-Unterstützung, keine Personalbeurteilung oder Organisationsberatung — siehe Abschnitt oben.
-9. Beiläufig, nicht als Pitch: falls die Personalsituation (Fachkräftemangel) im weiteren Verlauf zum Thema wird, im Hinterkopf behalten als möglicher Ansatzpunkt für eine spätere, komplett separate Idee über Andis Dropservice-Netzwerk mit Hakan Ersu — nicht aktiv ansprechen.
+1. **Offen:** Vertragliche Rahmenbedingungen mit dem externen KI-Experten final klären — abhängig vom Abschlussgespräch mit Anton am Dienstag, 25.08.2026, UND von B+H's Bereitschaft zur Unterstützung/Finanzierung (siehe oben, Andi macht es nicht ohne).
+2. **Vorbereiten:** Termin 01.09.2026 mit Geschäftsführung und Gesellschaftern — braucht eine überzeugende, praxisnahe Präsentation von Programm/Struktur/Nutzen, größerer Rahmen als der 20.08.-Termin.
+3. **Offen:** Technik-Gespräch mit dem ITler nachholen — hat im ersten Termin nicht stattgefunden. Noch kein neuer Termin dafür bekannt.
+4. **Offen:** Name des bestehenden französischen Baustellenprotokoll-Anbieters klären — relevant für Phase 3 (Bautagebuch).
+5. **Abwarten:** Ausgang von Matthias' Geschäftsführungs-Gespräch mit seinen Söhnen am Samstag, 22.08.2026.
+6. **Abwarten:** Reaktion von Matthias auf die verschickte Mail — insbesondere ob er die Freiberufler-Frage mit seinem Steuerberater klärt und wie B+H zur Unterstützungsfrage beim KI-Experten steht.
+7. Andis eigene Rolle bewusst eng halten: begleitet die Sanierung nur mit dem Thema KI-Unterstützung, keine Personalbeurteilung oder Organisationsberatung — siehe Abschnitt oben.
+8. Beiläufig, nicht als Pitch: falls die Personalsituation (Fachkräftemangel) im weiteren Verlauf zum Thema wird, im Hinterkopf behalten als möglicher Ansatzpunkt für eine spätere, komplett separate Idee über Andis Dropservice-Netzwerk mit Hakan Ersu — nicht aktiv ansprechen.
