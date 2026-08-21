@@ -424,6 +424,16 @@
       });
   }
 
+  (function prefillFirma() {
+    const params = new URLSearchParams(window.location.search);
+    const firma = params.get('firma');
+    if (firma) {
+      const field = document.getElementById('f-firma');
+      field.value = firma;
+      field.readOnly = true;
+    }
+  })();
+
   renderProgress();
 </script>
 </body>

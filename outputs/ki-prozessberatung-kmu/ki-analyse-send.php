@@ -3,12 +3,14 @@
 $to = 'info@ansto-finaffairs.com';
 $cc = null;
 
-// Kunden-spezifische Weiterleitung für Mitarbeiter-Fragebögen: geht direkt an den
-// Kunden-Ansprechpartner, CC an Andi. Ohne Eintrag hier bleibt es beim Standardverhalten
-// (nur an info@ansto-finaffairs.com), damit neue Kunden nichts extra konfigurieren müssen.
-$mitarbeiterRouting = [
+// Kunden-spezifische Weiterleitung für Mitarbeiter- und Geschäftsführungs-Fragebögen:
+// geht direkt an den Kunden-Ansprechpartner, CC an Andi. Ohne Eintrag hier bleibt es beim
+// Standardverhalten (nur an info@ansto-finaffairs.com), damit neue Kunden nichts extra
+// konfigurieren müssen.
+$kundenRouting = [
     'B+H Bau GmbH' => ['to' => 'MB@MB-ING.eu', 'cc' => 'info@ansto-finaffairs.com'],
 ];
+$routedFormtypen = ['mitarbeiter', 'interview'];
 
 function clean($v) {
     // Entfernt Zeilenumbrüche/Steuerzeichen, verhindert Header-Injection
@@ -146,9 +148,9 @@ if ($firma === '') {
     exit;
 }
 
-if ($formtyp === 'mitarbeiter' && isset($mitarbeiterRouting[$firma])) {
-    $to = $mitarbeiterRouting[$firma]['to'];
-    $cc = $mitarbeiterRouting[$firma]['cc'];
+if (in_array($formtyp, $routedFormtypen, true) && isset($kundenRouting[$firma])) {
+    $to = $kundenRouting[$firma]['to'];
+    $cc = $kundenRouting[$firma]['cc'];
 }
 
 $replyTo = null;
