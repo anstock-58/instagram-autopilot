@@ -190,12 +190,28 @@ Am 21.08. ist im `B+H GmbH/`-Ordner ein neues, von Matthias' Seite erstelltes Do
 
 **Geliefert (21.08.2026):** `outputs/ki-prozessberatung-kmu/fragenkatalog-mitarbeiteranalyse-vorlage.docx/pdf` (auch in `B+H GmbH/`) — editierbare Vorlage aus Anhang A (Geschäftsführung/Bereichsleitung) und Anhang B (Mitarbeiter, 10 Fragen), die Matthias pro Mitarbeiter/Funktion anpassen kann. Ersetzt/ergänzt die bisherigen Live-Webformulare, die für diesen Zweck (individuelles Anpassen durch Matthias) nicht editierbar genug waren.
 
+## WhatsApp-Antwort von Matthias (21.08.2026, auf Andis Nachfrage wegen benötigter Dokumente für den 22.08.)
+
+Lang, persönlich, mit konkreten Punkten. Wichtigste Inhalte:
+
+- **Materialien-Anfrage:** Matthias will Andis bisherige Ausarbeitungen „vorselektiert" vorab, um sie an B+H-Strukturen anzupassen und als Gesprächsgrundlage auszudrucken — deckt sich mit der Protokoll-Aufgabe, deckt sich mit dem bereits gelieferten `fragenkatalog-mitarbeiteranalyse-vorlage.docx`.
+- **Rückfrage von Matthias:** „Hast du meine E-Mail bekommen?" — separate E-Mail von ihm, noch nicht bestätigt ob Andi sie hat.
+- **Zwei Klärungen von Andi erwartet:** (1) vertragliche Rahmenbedingungen für die Zusammenarbeit mit dem externen KI-Experten (Tim Krasenbrink/Anton, siehe oben), (2) Andis eigene Situation bei Zusammenarbeit und Rechnungslegung sauber darstellen — hängt am offenen Freiberufler-vs-Gewerbe-Punkt, siehe `context/current-data.md` Eintrag „Gewerbe-Erweiterung". Zweck laut Matthias: Klarheit/Überzeugung gegenüber den Hauptgesellschaftern.
+- **Erster Honorarvertrag geplant:** Matthias will danach einen ersten „auskömmlichen" Honorarvertrag aufsetzen, damit Andi eine erste Pauschalrechnung über 1.500 € stellen kann. **Julian** (neuer Name, vermutlich einer der Söhne) könnte diese nächste Woche bezahlen.
+- **Neuer Termin: Montag, 01.09.2026** (unter Vorbehalt) mit Geschäftsführung UND Gesellschaftern — Vorstellung von Programm, Struktur und vor allem konkretem Nutzen für B+H, muss „überzeugend und praxisnah" sein. Größerer/formellerer Rahmen als der Auftakttermin am 20.08.
+- **Erwarteter Widerstand:** technische Leitung und ausführende Mitarbeiter — Matthias zitiert Andis eigene Einschätzung („Haben wir immer schon so gemacht"). KI darf nicht als theoretisches Zusatzprojekt wirken, muss im Tagesgeschäft sichtbaren Nutzen bringen.
+- **Langfristige Perspektive, bewusst nicht heute entschieden:** Matthias sieht langfristig Bedarf für einen „klar Verantwortlichen für das Gesamtsystem" (Projekte, Planung, Kalkulation, Ergebniskontrolle, Jahresabschlüsse, Unternehmenssteuerung) — ob das Andi wird oder jemand anderes, wird bewusst offengelassen.
+- **Persönlicher Hintergrund:** Matthias und Andi kennen sich seit einer gemeinsamen Ausbildungs-/Studienzeit vor rund 40 Jahren („40 Jahre später also noch einmal unser gemeinsamer Aufstieg") — erklärt die Tiefe des Vertrauens hinter diesem Projekt.
+- **Honorar-Logik langfristig:** Entgelt muss zum tatsächlichen Nutzen für B+H passen, nicht immer in Euro messbar, Matthias beurteilt und vertritt das gegenüber Geschäftsleitung/Gesellschaftern. Nach ca. sechs Monaten strukturierte Mitarbeiterbefragung geplant (Zeitersparnis, Fehlerreduktion, Prozessverbesserung, wirtschaftlicher Nutzen, verbleibende Widerstände) — Grundlage für Andis weitere Rolle und Honorar.
+
 ## Nächste Schritte (Stand 21.08.2026)
 
-1. **Offen:** Technik-Gespräch mit dem ITler nachholen — hat im ersten Termin nicht stattgefunden (Agenda-Punkt 3 entfallen, ITler war nicht anwesend). Noch kein neuer Termin dafür bekannt.
-2. **Offen:** Name des bestehenden französischen Baustellenprotokoll-Anbieters klären — relevant für Phase 3 (Bautagebuch), eher andocken als neu bauen.
-3. **Abwarten:** Ausgang von Matthias' Gesprächstermin mit seinen Söhnen am Samstag, 22.08.2026 — kann die nächsten Schritte beeinflussen.
-4. Kostenrahmen für die Diagnose-Phase auf Stundenbasis (100 €/h, siehe „Abrechnung") konkret anbieten, sobald Matthias grünes Licht gibt.
-5. Startbereich E-Mail-Kommunikation bleibt erste Idee, aber noch nicht formal vereinbart — final klären, sobald ITler-Gespräch stattgefunden hat.
-6. Andis eigene Rolle bewusst eng halten: begleitet die Sanierung nur mit dem Thema KI-Unterstützung, keine Personalbeurteilung oder Organisationsberatung — siehe Abschnitt oben.
-7. Beiläufig, nicht als Pitch: falls die Personalsituation (Fachkräftemangel) im weiteren Verlauf zum Thema wird, das im Hinterkopf behalten als möglicher Ansatzpunkt für eine spätere, komplett separate Idee über Andis Dropservice-Netzwerk mit Hakan Ersu — nicht aktiv ansprechen.
+1. **Sofort:** Prüfen, ob Matthias' separate E-Mail angekommen ist.
+2. **Sofort:** Vorselektierte Materialien an Matthias schicken (mindestens `fragenkatalog-mitarbeiteranalyse-vorlage.docx`, ggf. weitere aus dem `B+H GmbH/`-Ordner) — passt zur Protokoll-Aufgabe und zu seiner direkten Bitte.
+3. **Offen:** Vertragliche Rahmenbedingungen mit dem externen KI-Experten klären (Ausgang Anton-Call abwarten) und Andis eigene Freiberufler-vs-Gewerbe-/Rechnungslegungs-Situation sauber darstellen — beides von Matthias explizit erbeten.
+4. **Vorbereiten:** Termin 01.09.2026 mit Geschäftsführung und Gesellschaftern — braucht eine überzeugende, praxisnahe Präsentation von Programm/Struktur/Nutzen, größerer Rahmen als der 20.08.-Termin.
+5. **Offen:** Technik-Gespräch mit dem ITler nachholen — hat im ersten Termin nicht stattgefunden. Noch kein neuer Termin dafür bekannt.
+6. **Offen:** Name des bestehenden französischen Baustellenprotokoll-Anbieters klären — relevant für Phase 3 (Bautagebuch).
+7. **Abwarten:** Ausgang von Matthias' Geschäftsführungs-Gespräch mit seinen Söhnen am Samstag, 22.08.2026.
+8. Andis eigene Rolle bewusst eng halten: begleitet die Sanierung nur mit dem Thema KI-Unterstützung, keine Personalbeurteilung oder Organisationsberatung — siehe Abschnitt oben.
+9. Beiläufig, nicht als Pitch: falls die Personalsituation (Fachkräftemangel) im weiteren Verlauf zum Thema wird, im Hinterkopf behalten als möglicher Ansatzpunkt für eine spätere, komplett separate Idee über Andis Dropservice-Netzwerk mit Hakan Ersu — nicht aktiv ansprechen.
