@@ -178,7 +178,18 @@ Für später, nicht für Montag: `beispielrechnung-ki-beratung-firma-xy.docx`, `
 
 Danach bei Bedarf laufende Betreuung, Pauschale oder Aufwand, siehe „Übergabe statt Abhängigkeit" — Betreuung ist optional, kein Zwang, falls B+H Bau lieber selbst übernimmt.
 
-## Nächste Schritte (Stand 20.08.2026, nach dem ersten Termin)
+## Sitzungsprotokoll und Fragenkatalog (Stand 21.08.2026)
+
+Am 21.08. ist im `B+H GmbH/`-Ordner ein neues, von Matthias' Seite erstelltes Dokument aufgetaucht: `BH-Bau_Zukunft-gemeinsam-gestalten_Protokoll.docx`, formelles Sitzungsprotokoll zur „1. Sitzung – Auftakt am 20.08.2026". **Noch nicht von Andi bestätigt.** Legt eine Aufgabenverteilung fest:
+- **Matthias:** prüft/aktualisiert QM-System-Sollzustand pro Bereich/Mitarbeiter, passt Fragenkataloge individuell pro Mitarbeiter/Funktion an, vereinbart Termine und führt die Mitarbeiter-Analysegespräche selbst, gibt Ergebnisse an Andi zur KI-spezifischen Auswertung.
+- **Andi:** schickt vorhandene Fragenkataloge per E-Mail an MB@MB-ING.eu, wertet Matthias' Ergebnisse KI-spezifisch aus, prüft parallel einen möglichen externen KI-Spezialisten zur Unterstützung und macht Matthias dazu einen Vorschlag.
+- **Projektstart Mitarbeiteranalysen: Montag, 31.08.2026.**
+
+**Externer KI-Spezialist:** könnte Tim Krasenbrinks Team (Akquise International Professional Development Training) sein — Andi hatte am 21.08. dazu ein 60-Minuten-Orientierungsgespräch mit Anton (KI-Experte aus dem Team), Vorbereitung in `outputs/call-vorbereitung-tim-krasenbrink-freitag.docx` und `outputs/fragenkatalog-orientierungsgespraech-tim-krasenbrink.docx`. Entscheidung: Protokoll erst nach diesem Call gegenüber Matthias bestätigen, nicht vorher.
+
+**Geliefert (21.08.2026):** `outputs/ki-prozessberatung-kmu/fragenkatalog-mitarbeiteranalyse-vorlage.docx/pdf` (auch in `B+H GmbH/`) — editierbare Vorlage aus Anhang A (Geschäftsführung/Bereichsleitung) und Anhang B (Mitarbeiter, 10 Fragen), die Matthias pro Mitarbeiter/Funktion anpassen kann. Ersetzt/ergänzt die bisherigen Live-Webformulare, die für diesen Zweck (individuelles Anpassen durch Matthias) nicht editierbar genug waren.
+
+## Nächste Schritte (Stand 21.08.2026)
 
 1. **Offen:** Technik-Gespräch mit dem ITler nachholen — hat im ersten Termin nicht stattgefunden (Agenda-Punkt 3 entfallen, ITler war nicht anwesend). Noch kein neuer Termin dafür bekannt.
 2. **Offen:** Name des bestehenden französischen Baustellenprotokoll-Anbieters klären — relevant für Phase 3 (Bautagebuch), eher andocken als neu bauen.
