@@ -26,7 +26,7 @@ Andi ist Dipl.-Ing. (bestätigt 20.08.2026, live im Termin) — korrekt in offiz
 
 ## Kontaktperson und Auslöser
 
-Matthias Bieker ist ein Freund von Andi, über den die ganze KI-Prozessberatung als neues Standbein entstanden ist (siehe auch `reference/ki-prozessberatung-kmu-methode.md`). Matthias Bieker ist offen für KI, will das Unternehmen voranbringen, entscheidet am Ende. Sein Sohn ist Mitgesellschafter und in der Übergabe.
+Matthias Bieker ist ein Freund von Andi, über den die ganze KI-Prozessberatung als neues Standbein entstanden ist (siehe auch `reference/ki-prozessberatung-kmu-methode.md`). Matthias Bieker ist offen für KI, will das Unternehmen voranbringen, entscheidet am Ende. **Geschäftsführung besteht aus mehreren Personen** (bestätigt 21.08.2026): Matthias, seine Söhne (Mitgesellschafter, in der Übergabe) und Lilli Kettenbach (laut Impressum eingetragene Geschäftsführerin) — nicht nur Matthias allein entscheidet.
 
 Matthias Bieker hat Andis Fragen zum Unternehmen bereits per Mail direkt beantwortet (nicht über das digitale Interview-Formular, siehe Abschnitt „Digitale Erhebungsformulare" unten — den Link dazu hat er zwar bekommen, aber bewusst nicht genutzt, wollte das eigentliche Gespräch erst am Montag abwarten).
 
@@ -45,7 +45,8 @@ Ursprünglich für Montag, 03.08.2026, geplant, dann verschoben, dann für 11:00
 **Neue Fakten aus dem Termin:**
 - Es gibt bei B+H Bau bereits eine App für Baustellenprotokolle im Einsatz, vermutlich von einem französischen Anbieter (genauer Name nicht genannt — evtl. Finalcad, unbestätigte Vermutung, noch verifizieren). Relevant für Phase 3 (Bautagebuch): eher andocken/ergänzen als komplett neu bauen, sobald der Name bekannt ist.
 - Sprachliche Situation im Team ist ein echtes Thema: manche Mitarbeiter sind der deutschen Sprache nicht vollständig mächtig — relevant sowohl für Bautagebuch per Spracherkennung (KI könnte unsauberes/nicht-muttersprachliches Deutsch in saubere Berichte umwandeln, macht aus einer Schwäche ein Argument für KI-Einsatz) als auch für E-Mail-Kommunikation. Sensibel, vertraulich behandeln.
-- Matthias hat am Samstag (22.08.2026) einen Gesprächstermin mit seinen Söhnen (Mehrzahl bestätigt) — vermutlich zur Nachfolge-/Unternehmensausrichtung, Ausgang unbekannt, könnte nächste Schritte beeinflussen.
+- Matthias hat am Samstag (22.08.2026) einen Gesprächstermin mit seinen Söhnen — **bestätigt 21.08.2026: internes Geschäftsführungs-Gespräch** (nicht nur privat/familiär), da die Söhne selbst zur Geschäftsführung gehören. Ausgang unbekannt, könnte nächste Schritte beeinflussen.
+- **Das digitale Interview-Formular (`ki-analyse-interview.html`, Anhang A) wurde am 20.08. nur exemplarisch durchgespielt, nicht mit echten Daten ausgefüllt** (bestätigt 21.08.2026). Die eigentliche Diagnose-Interview mit der (mehrköpfigen) Geschäftsführung steht also noch aus — sinnvoll erst nach dem Geschäftsführungs-Gespräch vom 22.08., wenn klar ist, wer wie eingebunden werden will.
 
 **Honorar-Modell geändert (wichtig, weicht von bisheriger Empfehlung ab):** Matthias wünscht **Abrechnung auf Stundenbasis statt Festpreis**, explizit zur besseren Transparenz. Weicht von der bisher erarbeiteten Festpreis-Empfehlung ab (siehe Abschnitt „Abrechnung" unten, muss überarbeitet werden). Kein Stundensatz bisher festgelegt.
 
