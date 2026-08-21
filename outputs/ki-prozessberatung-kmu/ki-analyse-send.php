@@ -1,6 +1,14 @@
 <?php
 // Empfänger fest hinterlegt, nicht durch den Client änderbar
 $to = 'info@ansto-finaffairs.com';
+$cc = null;
+
+// Kunden-spezifische Weiterleitung für Mitarbeiter-Fragebögen: geht direkt an den
+// Kunden-Ansprechpartner, CC an Andi. Ohne Eintrag hier bleibt es beim Standardverhalten
+// (nur an info@ansto-finaffairs.com), damit neue Kunden nichts extra konfigurieren müssen.
+$mitarbeiterRouting = [
+    'B+H Bau GmbH' => ['to' => 'MB@MB-ING.eu', 'cc' => 'info@ansto-finaffairs.com'],
+];
 
 function clean($v) {
     // Entfernt Zeilenumbrüche/Steuerzeichen, verhindert Header-Injection
@@ -136,6 +144,11 @@ if ($firma === '') {
     http_response_code(400);
     echo json_encode(['ok' => false, 'error' => 'Der Name der Firma fehlt.']);
     exit;
+}
+
+if ($formtyp === 'mitarbeiter' && isset($mitarbeiterRouting[$firma])) {
+    $to = $mitarbeiterRouting[$firma]['to'];
+    $cc = $mitarbeiterRouting[$firma]['cc'];
 }
 
 $replyTo = null;
@@ -376,6 +389,9 @@ $boundary = 'kianalyse_' . md5(uniqid((string)mt_rand(), true));
 
 $headers   = [];
 $headers[] = 'From: KI-Prozessanalyse <info@ansto-finaffairs.com>';
+if ($cc !== null) {
+    $headers[] = 'Cc: ' . $cc;
+}
 if ($replyTo !== null) {
     $headers[] = 'Reply-To: ' . $replyTo;
 }
