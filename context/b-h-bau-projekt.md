@@ -216,12 +216,24 @@ Lang, persönlich, mit konkreten Punkten. Wichtigste Inhalte:
 
 Andi hat die Antwort-Mail abgeschickt. Enthielt: Bestätigung des Sitzungsprotokolls, Freiberufler-/Rechnungslegungs-Hinweis (inkl. Bitte um Steuerberater-Check wegen der bestehenden Gewerbe-Anmeldung), ehrlicher Zwischenstand zum externen KI-Spezialisten (Eckdaten fest: 4 Monate/6.400 €, aber Umsetzung abhängig von B+H-Unterstützung, finale Klärung nach dem Anbieter-Gespräch am Dienstag 25.08.), sowie fünf Anhänge: `fragenkatalog-mitarbeiteranalyse-vorlage.docx`, `kurzueberblick-b-h-bau.pdf`, `schema-vorselektion-prioritaet-zuordnung.docx`, `beispielszenarien-ki-unterstuetzung.docx`, `demo-bautagebuch-spracherkennung.html`.
 
-## Nächste Schritte (Stand 21.08.2026)
+## Antwort von Matthias per E-Mail (22.08.2026, 09:40) — sehr fundiert, deutlich mehr Steuer-Sachkenntnis als erwartet
 
-1. **Offen:** Vertragliche Rahmenbedingungen mit dem externen KI-Experten final klären — abhängig vom Abschlussgespräch mit Anton am Dienstag, 25.08.2026, UND von B+H's Bereitschaft zur Unterstützung/Finanzierung (siehe oben, Andi macht es nicht ohne).
-2. **Vorbereiten:** Termin 01.09.2026 mit Geschäftsführung und Gesellschaftern — braucht eine überzeugende, praxisnahe Präsentation von Programm/Struktur/Nutzen, größerer Rahmen als der 20.08.-Termin.
-3. **Offen:** Technik-Gespräch mit dem ITler nachholen — hat im ersten Termin nicht stattgefunden. Noch kein neuer Termin dafür bekannt.
-4. **Offen:** Name des bestehenden französischen Baustellenprotokoll-Anbieters klären — relevant für Phase 3 (Bautagebuch).
+- **Materialien:** kommen an, werden auf B+H-Strukturen angepasst und im Termin genutzt.
+- **Freiberufler-Frage — konkreter Vorschlag von Matthias:** bestätigt grundsätzlich §18 EStG (Ingenieur = Katalogberuf), aber die konkrete Tätigkeit muss fachlich echten Ingenieurbezug haben. Empfiehlt, im Vertrag NICHT allgemein „KI-Beratung" zu schreiben, sondern konkret: **„Ingenieurtechnische Beratung zur Digitalisierung und zum Einsatz KI-gestützter Verfahren in den technischen und operativen Prozessen der B+H Bau GmbH."** Gute, verwendbare Formulierung für den späteren Honorarvertrag.
+- **Bestätigt das Abfärbe-Risiko** (Gewerbe-Erweiterung im August deckt schon „Digitalisierung/KI-Beratung" ab) — Empfehlung: vertraglich, in der Leistungsdokumentation und buchhalterisch sauber zwischen Gewerbe und freiberuflicher B+H-Tätigkeit trennen.
+- **Umsatzsteuer:** Matthias bestätigt (korrekt), dass Gewerbe und freiberufliche Tätigkeit umsatzsteuerlich ZUSAMMEN betrachtet werden (ein Unternehmer, eine Kleinunternehmergrenze für die Gesamtumsätze). Braucht von Andi drei Angaben: (1) Gesamtumsatz aus selbstständiger Tätigkeit 2025, (2) ob aktuell mit oder ohne 19 % USt fakturiert wird, (3) ob je zur Regelbesteuerung optiert wurde. **Zu (2): schon beantwortbar** — Andis reale Rechnungen (`RE-2024-10-001` u. a.) laufen nach § 19 Abs. 1 UStG ohne Umsatzsteuer, also aktuell Kleinunternehmer. (1) und (3) muss Andi selbst liefern/prüfen.
+- **Erster Honorarvertrag:** wird aufgesetzt, sobald diese drei Angaben da sind, danach Rechnung über 1.500 € möglich.
+- **Externer KI-Spezialist — kritische, berechtigte Rückfrage:** Matthias trennt das explizit vom persönlichen Honorar und will vor einer Finanzierungsentscheidung wissen, was der Anbieter konkret leistet und was Andi selbst leistet. Wörtlich: „B+H Bau kauft sich mit dir einen Experten ein, und der Experte muss einen Experten einkaufen — die Abgrenzung ist für uns nicht erkennbar." **Das muss Andi vor/im Dienstags-Gespräch mit Anton klar beantworten können** — worin liegt der Mehrwert des externen Anbieters, der über das hinausgeht, was Andi selbst (mit Unterstützung durch Claude Code) leistet. Entscheidung fällt danach gemeinsam: sofort einsteigen, später, oder ohne.
+- **01.09.-Termin:** Ziel bestätigt, Fokus auf konkrete Einsatzbereiche/Vorgehensweise/Verantwortlichkeiten/erste Umsetzungsschritte, nicht allgemeines KI-Gerede.
+
+## Nächste Schritte (Stand 22.08.2026)
+
+1. **Sofort:** Matthias die drei Steuerangaben liefern — Gesamtumsatz 2025 (Andi muss nachsehen), aktuell Kleinunternehmer ohne USt (bereits bekannt), nie zur Regelbesteuerung optiert (Andi muss bestätigen/prüfen).
+2. **Vor Dienstag vorbereiten:** klare, ehrliche Antwort auf Matthias' "zwei Experten"-Frage — was der externe KI-Spezialist zusätzlich zu Andi selbst liefern würde.
+3. **Offen:** Vertragliche Rahmenbedingungen mit dem externen KI-Experten final klären — abhängig vom Abschlussgespräch mit Anton am Dienstag, 25.08.2026, UND von B+H's Bereitschaft zur Unterstützung/Finanzierung.
+4. **Vorbereiten:** Termin 01.09.2026 mit Geschäftsführung und Gesellschaftern — braucht eine überzeugende, praxisnahe Präsentation von Programm/Struktur/Nutzen, größerer Rahmen als der 20.08.-Termin.
+5. **Offen:** Technik-Gespräch mit dem ITler nachholen — hat im ersten Termin nicht stattgefunden. Noch kein neuer Termin dafür bekannt.
+6. **Offen:** Name des bestehenden französischen Baustellenprotokoll-Anbieters klären — relevant für Phase 3 (Bautagebuch).
 5. **Abwarten:** Ausgang von Matthias' Geschäftsführungs-Gespräch mit seinen Söhnen am Samstag, 22.08.2026.
 6. **Abwarten:** Reaktion von Matthias auf die verschickte Mail — insbesondere ob er die Freiberufler-Frage mit seinem Steuerberater klärt und wie B+H zur Unterstützungsfrage beim KI-Experten steht.
 7. Andis eigene Rolle bewusst eng halten: begleitet die Sanierung nur mit dem Thema KI-Unterstützung, keine Personalbeurteilung oder Organisationsberatung — siehe Abschnitt oben.
