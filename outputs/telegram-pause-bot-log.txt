@@ -10370,3 +10370,9 @@
 2026-08-22 19:27:25 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
 2026-08-22 19:32:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
 2026-08-22 19:32:25 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":401,"description":"Unauthorized"}
+2026-08-22 19:36:28 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-22 19:36:29 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-08-22 19:37:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-22 19:37:46 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-08-22 19:38:43 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-22 19:38:49 | Keine neuen Nachrichten.
