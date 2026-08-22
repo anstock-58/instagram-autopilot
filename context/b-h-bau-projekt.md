@@ -226,10 +226,13 @@ Andi hat die Antwort-Mail abgeschickt. Enthielt: Bestätigung des Sitzungsprotok
 - **Externer KI-Spezialist — kritische, berechtigte Rückfrage:** Matthias trennt das explizit vom persönlichen Honorar und will vor einer Finanzierungsentscheidung wissen, was der Anbieter konkret leistet und was Andi selbst leistet. Wörtlich: „B+H Bau kauft sich mit dir einen Experten ein, und der Experte muss einen Experten einkaufen — die Abgrenzung ist für uns nicht erkennbar." **Das muss Andi vor/im Dienstags-Gespräch mit Anton klar beantworten können** — worin liegt der Mehrwert des externen Anbieters, der über das hinausgeht, was Andi selbst (mit Unterstützung durch Claude Code) leistet. Entscheidung fällt danach gemeinsam: sofort einsteigen, später, oder ohne.
 - **01.09.-Termin:** Ziel bestätigt, Fokus auf konkrete Einsatzbereiche/Vorgehensweise/Verantwortlichkeiten/erste Umsetzungsschritte, nicht allgemeines KI-Gerede.
 
+## Antwort-Mail an Matthias (Anrede „Matthes") — VERSCHICKT (22.08.2026)
+
+Beantwortet alle drei Steuerfragen: Gesamtumsatz 2025 weit unter Kleinunternehmergrenze, aktuell Kleinunternehmer ohne USt nach § 19 UStG, nie zur Regelbesteuerung optiert. Übernimmt Matthias' Vertragsformulierung „Ingenieurtechnische Beratung zur Digitalisierung...". Zur externen Unterstützung: noch keine Entscheidung, aber Andi nennt (ohne Namen) bereits eine Tendenz zu einem der beiden geprüften Anbieter — Lehrgang mit begleitender Betreuung, geht spezifisch auf laufende Projekte ein, TÜV-Zertifizierungsmöglichkeit (das ist Digital Beat, siehe oben). Verweist auf klärende Gespräche (Digital Beat morgen, Anton am Dienstag 25.08.) für eine begründete Einschätzung danach.
+
 ## Nächste Schritte (Stand 22.08.2026)
 
-1. **Sofort:** Matthias die drei Steuerangaben liefern — Gesamtumsatz 2025 (Andi muss nachsehen), aktuell Kleinunternehmer ohne USt (bereits bekannt), nie zur Regelbesteuerung optiert (Andi muss bestätigen/prüfen).
-2. **Vor Dienstag vorbereiten:** klare, ehrliche Antwort auf Matthias' "zwei Experten"-Frage — was der externe KI-Spezialist zusätzlich zu Andi selbst liefern würde.
+1. **Vor/nach dem Digital-Beat-Gespräch morgen und dem Anton-Gespräch Dienstag:** klare, ehrliche Antwort auf Matthias' "zwei Experten"-Frage finalisieren — was der externe KI-Spezialist zusätzlich zu Andi selbst liefern würde, dann Matthias informieren.
 3. **Offen:** Vertragliche Rahmenbedingungen mit dem externen KI-Experten final klären — abhängig vom Abschlussgespräch mit Anton am Dienstag, 25.08.2026, UND von B+H's Bereitschaft zur Unterstützung/Finanzierung.
 4. **Vorbereiten:** Termin 01.09.2026 mit Geschäftsführung und Gesellschaftern — braucht eine überzeugende, praxisnahe Präsentation von Programm/Struktur/Nutzen, größerer Rahmen als der 20.08.-Termin.
 5. **Offen:** Technik-Gespräch mit dem ITler nachholen — hat im ersten Termin nicht stattgefunden. Noch kein neuer Termin dafür bekannt.
