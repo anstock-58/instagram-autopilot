@@ -16,7 +16,7 @@ Ingenieurbau-Unternehmen für Brücken- und Tunnelbau sowie Bahn-/Verkehrswegeba
 
 Vollständiges Firmenschema mit internen Bereichen und externen Partnern: `outputs/ki-prozessberatung-kmu/firmenuebersicht-b-h-bau.docx`.
 
-**Bestätigt/korrigiert 22.08.2026 von Andi:** Lilli Kettenbach ist die **alleinige Geschäftsführerin**. Die Söhne sind **Mitgesellschafter**, nicht Geschäftsführer (eine gegenteilige Angabe war zuvor versehentlich so an einen externen KI-Chat weitergegeben worden, stammte also von Andi selbst, nicht von der anderen KI erfunden). Matthias Biekers genauer aktueller Titel ist weiterhin offen, spielt für die Zusammenarbeit aber keine große Rolle.
+**Bestätigt/korrigiert 22.08.2026 von Andi:** Lilli Kettenbach ist die **alleinige Geschäftsführerin**. Die Söhne sind **Mitgesellschafter**, nicht Geschäftsführer. Andi hatte einem externen KI-Chat korrekt "Gesellschafter" genannt, die andere KI hatte das eigenständig zu "Geschäftsführer" fehlinterpretiert/verkürzt — ein Beispiel, warum unbestätigte Angaben aus fremden KI-Chats grundsätzlich gegengecheckt werden, bevor sie in Unterlagen landen. Matthias Biekers genauer aktueller Titel ist weiterhin offen, spielt für die Zusammenarbeit aber keine große Rolle.
 
 ## Andis Titel
 
