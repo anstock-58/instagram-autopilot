@@ -6,7 +6,7 @@ Stand: 02.08.2026. Diese Datei bündelt alles Wichtige zum ersten Pilotkunden de
 
 B+H Bau GmbH, Simonspike 7, 57489 Drolshagen. Amtsgericht Siegen HRB 13365. Tel. 02761 7298522, info@b-h-bau.de, Website b-h-bau.de.
 
-Ingenieurbau-Unternehmen für Brücken- und Tunnelbau sowie Bahn-/Verkehrswegebau, gegründet 2011, seit Februar 2023 in Drolshagen (vorher 10 Jahre Ettlingen). **Kein normaler Wohnungsbaubetrieb** — bei allen Beispielen und Unterlagen auf Ingenieurbau-Kontext achten (Nachtragsmanagement wegen Baugrund, Abstimmung mit der Bahn zu Sperrpausen, öffentliche Ausschreibungen, Statik/Prüfingenieure), nicht auf Häuslebauer-Szenarien.
+Ingenieurbau-Unternehmen für Brücken- und Tunnelbau sowie Bahn-/Verkehrswegebau, gegründet 2011, seit Februar 2023 in Drolshagen (vorher 10 Jahre Ettlingen). **Ergänzt 21.08.2026 (von Andi bestätigt):** Kerngeschäft konkret **konstruktiver Ingenieurbau und Spezialtiefbau** (Gründungen, Pfähle, Anker, Bohrarbeiten), Auftraggeber Deutsche Bahn und öffentliche Auftraggeber. **Kein normaler Wohnungsbaubetrieb** — bei allen Beispielen und Unterlagen auf Ingenieurbau-/Spezialtiefbau-Kontext achten (Nachtragsmanagement wegen Baugrund, Abstimmung mit der Bahn zu Sperrpausen, öffentliche Ausschreibungen, Statik/Prüfingenieure, Pfahl-/Bohrprotokolle), nicht auf Häuslebauer-Szenarien. Achtung: konkrete Einzelfälle/Projektnamen (z. B. "Pfahlprotokoll 47", "DB Los 3") sind bisher nicht verifiziert — Genre stimmt, Einzelbeispiele nicht ungeprüft übernehmen.
 
 **Kerngeschäftsfelder:** konstruktiver Ingenieurbau (Stahlbetonbrücken, massive Stützbauwerke, Bauen unter Eisenbahnbetrieb), Spezialtiefbau (Gründungen, Pfähle, Verankerungen), allgemeiner Erd-/Tiefbau. DB-präqualifiziert in allen drei Bereichen.
 
