@@ -2481,3 +2481,7 @@
 2026-08-23 13:08:38 | Status auf Produziert gesetzt.
 2026-08-23 13:08:38 | === Produktion abgeschlossen: Selbstheilung beginnt hier | 7 Dinge die dein Nervensystem braucht ===
 2026-08-23 13:08:38 | YouTube URL: https://www.youtube.com/watch?v=JeoB6wshM-A
+2026-08-23 15:54:30 | === YouTube Producer gestartet ===
+2026-08-23 15:54:30 | Starte Produktion: Was dein Körper dir sagen will | Die Stille hinter deinen Symptomen
+2026-08-23 15:54:30 | Generiere Audio via ElevenLabs...
+2026-08-23 15:54:30 | Generiere Audio mit Timestamps (Untertitel-Modus)...
