@@ -10490,3 +10490,39 @@
 2026-08-23 15:52:30 | Keine neuen Nachrichten.
 2026-08-23 15:57:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
 2026-08-23 15:57:31 | Keine neuen Nachrichten.
+2026-08-23 16:02:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-23 16:02:30 | Keine neuen Nachrichten.
+2026-08-23 16:07:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-23 16:07:30 | Keine neuen Nachrichten.
+2026-08-23 16:12:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-23 16:12:30 | Keine neuen Nachrichten.
+2026-08-23 16:17:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-23 16:17:30 | Keine neuen Nachrichten.
+2026-08-23 16:22:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-23 16:22:30 | Keine neuen Nachrichten.
+2026-08-23 16:27:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-23 16:27:30 | Keine neuen Nachrichten.
+2026-08-23 16:32:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-23 16:32:30 | Keine neuen Nachrichten.
+2026-08-23 16:37:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-23 16:37:30 | Keine neuen Nachrichten.
+2026-08-23 16:42:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-23 16:42:51 | Keine neuen Nachrichten.
+2026-08-23 16:47:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-23 16:47:30 | Keine neuen Nachrichten.
+2026-08-23 16:52:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-23 16:52:30 | Keine neuen Nachrichten.
+2026-08-23 16:57:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-23 16:57:30 | Keine neuen Nachrichten.
+2026-08-23 17:02:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-23 17:02:30 | Keine neuen Nachrichten.
+2026-08-23 17:07:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-23 17:07:30 | Keine neuen Nachrichten.
+2026-08-23 17:12:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-23 17:12:30 | Keine neuen Nachrichten.
+2026-08-23 17:17:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-23 17:17:30 | Keine neuen Nachrichten.
+2026-08-23 17:44:49 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-23 17:44:49 | FEHLER beim Abrufen der Telegram-Updates: Der Remotename konnte nicht aufgelöst werden: 'api.telegram.org'
+2026-08-23 21:23:12 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-23 21:23:12 | FEHLER beim Abrufen der Telegram-Updates: Der Remotename konnte nicht aufgelöst werden: 'api.telegram.org'
