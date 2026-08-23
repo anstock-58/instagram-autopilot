@@ -7,39 +7,38 @@
 
 ## BEWUSST EINFACH — Entscheidungsbaum
 
-**Kern-Trigger:** Zahl + Mehrheit + Geheimnis + Autorität + Angst vor Verlust
+**Kern-Trigger:** Universelle menschliche Erfahrung + psychologische Tiefe + Erkenntnis die überrascht
 
-### Schritt 1: Autoritäts-Check (Pflicht)
+**Zielgruppe:** Eher älteres Publikum (40-65+), aber NICHT stur auf 60+ fixiert. Themen müssen nicht primär gesundheitlich sein — sie müssen emotional relevant und interessant genug sein um geklickt zu werden.
 
-Hat das Thema mindestens EINEN dieser Autorität-Anker?
+### Schritt 1: Relevanz-Check (Pflicht)
 
-- Arzt ("Was dein Arzt nie sagt", "3 von 4 Ärzten")
-- Wissenschaft/Studie ("Forscher haben gemessen", "Studien zeigen")
-- Japan/Langlebigkeit ("Japanische Ärzte", "ältester Arzt", "Okinawa")
-- Zahl ("87% schlafen falsch", "92% wissen es nicht")
-- Zeit ("seit 50 Jahren", "seit Jahrzehnten bekannt")
+Trifft das Thema eine universelle menschliche Erfahrung?
 
-**Kein Anker vorhanden = sofort stoppen.**
+- Emotionen die jeder kennt (Festhalten, Erschöpfung, Schmerz, Einsamkeit)
+- Körper-Geist-Zusammenhänge die überraschen
+- Psychologische Erkenntnisse die dem Alltag widersprechen
+- Lebensweisheit mit wissenschaftlicher oder spiritueller Tiefe
 
-### Schritt 2: Risiko-Check (Pflicht)
+**Kein universeller Treffer = Thema schärfen.**
 
-Spricht das Thema direkt eine dieser Ängste an?
+### Schritt 2: Überraschungs-Check (Pflicht)
 
-- Gehirnabbau / Demenz
-- Schlafprobleme / Erschöpfung
-- Körperabbau / Mobilität verlieren
-- Früher sterben / kürzer leben
-- Fehler machen der gesundheitlich schadet
+Hat das Thema eine Wendung, die den Zuschauer überrascht oder herausfordert?
 
-**Keine Angst angesprochen = sofort stoppen.**
+- Widerspricht einer gängigen Annahme ("Loslassen ist keine Entscheidung")
+- Benennt etwas das jeder fühlt aber nie gehört hat
+- Liefert eine Erklärung die Erleichterung verschafft
 
-### Schritt 3: Zielgruppen-Check
+**Keine Wendung = sofort stoppen.**
 
-Passt das Thema direkt auf 60 plus?
+### Schritt 3: Emotionaler Sog
 
-- Ja, explizit: "ab sechzig", "im Alter", "nach der Rente" → +2 Punkte
-- Ja, implizit: Thema ist naturgemäß für 60+ (Schlaf, Demenz, Gelenke) → +1 Punkt
-- Nein, generisch ohne Altersbezug → +0 Punkte, Thema umformulieren
+Erzeugt der Titel allein schon ein Gefühl?
+
+- Starke Emotion direkt angesprochen → +2
+- Neugier oder leichte Irritation → +1
+- Neutral, informativ ohne Gefühl → +0
 
 ### Schritt 4: Titel-Formel
 
