@@ -219,3 +219,12 @@
 2026-08-21 17:50:40 | Kein geplanter Dropservice-Post fuer heute (21.08.2026). Fertig.
 2026-08-22 17:50:38 | === Dropservice LinkedIn Trigger | 22.08.2026 | 17:50 | CSV: contentplan_linkedin_dropservice_august_v1.csv ===
 2026-08-22 17:50:38 | Kein geplanter Dropservice-Post fuer heute (22.08.2026). Fertig.
+2026-08-23 17:50:35 | === Dropservice LinkedIn Trigger | 23.08.2026 | 17:50 | CSV: contentplan_linkedin_dropservice_august_v1.csv ===
+2026-08-23 17:50:36 | 1 Post(s) fuer heute gefunden.
+2026-08-23 17:50:36 | Post faellig: Foto | 17:55
+2026-08-23 17:50:36 | Bild-Upload registriert. Asset: urn:li:digitalmediaAsset:D4E22AQEwmXrqd3MUKg
+2026-08-23 17:50:37 | Bild hochgeladen (147784 Bytes).
+2026-08-23 17:50:38 | Dropservice LinkedIn gepostet. URN: urn:li:share:7497319397724770305
+2026-08-23 17:50:38 | Status auf 'Gepostet' gesetzt.
+2026-08-23 17:50:38 | Erster Kommentar gesetzt.
+2026-08-23 17:50:38 | === Fertig ===
