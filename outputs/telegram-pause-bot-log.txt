@@ -10450,3 +10450,5 @@
 2026-08-23 14:12:30 | Keine neuen Nachrichten.
 2026-08-23 14:17:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
 2026-08-23 14:17:30 | Keine neuen Nachrichten.
+2026-08-23 14:22:25 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-23 14:22:51 | Keine neuen Nachrichten.
