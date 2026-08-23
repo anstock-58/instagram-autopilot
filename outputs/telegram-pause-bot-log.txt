@@ -10526,3 +10526,7 @@
 2026-08-23 17:44:49 | FEHLER beim Abrufen der Telegram-Updates: Der Remotename konnte nicht aufgelöst werden: 'api.telegram.org'
 2026-08-23 21:23:12 | === Telegram Pause Bot gestartet | Offset: 1 ===
 2026-08-23 21:23:12 | FEHLER beim Abrufen der Telegram-Updates: Der Remotename konnte nicht aufgelöst werden: 'api.telegram.org'
+2026-08-23 21:27:24 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-23 21:27:29 | Keine neuen Nachrichten.
+2026-08-23 21:32:24 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-23 21:32:29 | Keine neuen Nachrichten.
