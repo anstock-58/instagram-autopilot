@@ -10722,3 +10722,15 @@
 2026-08-24 21:17:29 | Keine neuen Nachrichten.
 2026-08-24 21:22:24 | === Telegram Pause Bot gestartet | Offset: 1 ===
 2026-08-24 21:22:29 | Keine neuen Nachrichten.
+2026-08-25 13:22:21 | === Telegram Pause Bot gestartet | Offset: 1 ===
+2026-08-25 13:22:22 | Nachricht von Chat 1246764172 : 'bitte dazu einen beitrag schreiben als werbung für den standortcheck mein online business'
+2026-08-25 13:22:22 | Nachricht von Chat 1246764172 : '/check'
+2026-08-25 13:22:22 | Nachricht von Chat 1246764172 : '/check'
+2026-08-25 13:22:22 | Nachricht von Chat 1246764172 : '/status'
+2026-08-25 13:22:22 | Nachricht von Chat 1246764172 : 'status'
+2026-08-25 13:22:22 | Antwort gesendet: Aktueller Posting-Status:
+
+Instagram: aktiv âœ…
+LinkedIn:  aktiv âœ…
+2026-08-25 13:22:22 | Nachricht von Chat 1246764172 : '/status'
+2026-08-25 13:22:22 | === Fertig | Letztes Update: 795558836 ===
