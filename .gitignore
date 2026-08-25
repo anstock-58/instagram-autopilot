@@ -37,3 +37,4 @@ outputs/kurse/*/folien/
 scripts/*_temp.csv
 **/unpacked/
 **/source-unpacked/
+outputs/telegram-bot-last-update.txt
