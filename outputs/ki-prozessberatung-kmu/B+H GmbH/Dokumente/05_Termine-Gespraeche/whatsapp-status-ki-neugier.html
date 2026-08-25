@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>WhatsApp Status</title>
+<style>
+  @font-face {
+    font-family: 'Playfair Display';
+    src: local('Playfair Display');
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1080px;
+    height: 1920px;
+    background: radial-gradient(circle at 50% 30%, #23233f 0%, #1a1a2e 55%, #111122 100%);
+    font-family: 'DM Sans', 'Segoe UI', Arial, sans-serif;
+    overflow: hidden;
+  }
+  .frame {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 90px;
+    position: relative;
+  }
+  .kicker {
+    color: #c9a84c;
+    font-size: 32px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 60px;
+  }
+  .question {
+    color: #ffffff;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 64px;
+    line-height: 1.35;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 70px;
+  }
+  .body-text {
+    color: #d8d4c8;
+    font-size: 38px;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 820px;
+    margin-bottom: 90px;
+  }
+  .cta {
+    border: 2px solid #c9a84c;
+    border-radius: 100px;
+    padding: 28px 60px;
+    color: #c9a84c;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .cta span {
+    color: #ffffff;
+  }
+  .line {
+    position: absolute;
+    bottom: 140px;
+    width: 120px;
+    height: 4px;
+    background: #c9a84c;
+  }
+</style>
+</head>
+<body>
+  <div class="frame">
+    <div class="kicker">An alle mit eigenem Betrieb</div>
+    <div class="question">Wo verliert ihr im Alltag<br>am meisten Zeit,<br>ohne dass es euch auffällt?</div>
+    <div class="body-text">Genau das finde ich gerade systematisch raus.<br>KI als Werkzeug, nicht als Selbstzweck.</div>
+    <div class="cta">Wer's genauer wissen will: <span>„KI"</span> schreiben</div>
+    <div class="line"></div>
+  </div>
+</body>
+</html>
