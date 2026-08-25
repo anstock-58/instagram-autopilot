@@ -10738,3 +10738,5 @@ LinkedIn:  aktiv âœ…
 2026-08-25 13:29:19 | Nachricht von Chat 1246764172 : '/check'
 2026-08-25 13:29:19 | Nachricht von Chat 1246764172 : '/status'
 2026-08-25 13:29:19 | === Fertig | Letztes Update: 795558839 ===
+2026-08-25 13:34:31 | === Telegram Pause Bot gestartet | Offset: 795558840 ===
+2026-08-25 13:34:58 | Keine neuen Nachrichten.
