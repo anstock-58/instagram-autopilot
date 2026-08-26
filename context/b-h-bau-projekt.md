@@ -241,3 +241,16 @@ Beantwortet alle drei Steuerfragen: Gesamtumsatz 2025 weit unter Kleinunternehme
 6. **Abwarten:** Reaktion von Matthias auf die verschickte Mail — insbesondere ob er die Freiberufler-Frage mit seinem Steuerberater klärt und wie B+H zur Unterstützungsfrage beim KI-Experten steht.
 7. Andis eigene Rolle bewusst eng halten: begleitet die Sanierung nur mit dem Thema KI-Unterstützung, keine Personalbeurteilung oder Organisationsberatung — siehe Abschnitt oben.
 8. Beiläufig, nicht als Pitch: falls die Personalsituation (Fachkräftemangel) im weiteren Verlauf zum Thema wird, im Hinterkopf behalten als möglicher Ansatzpunkt für eine spätere, komplett separate Idee über Andis Dropservice-Netzwerk mit Hakan Ersu — nicht aktiv ansprechen.
+
+## Kurswechsel: Matthias stellt Lehrgangs-/KI-Spezialist-Thema klar zurück (26.08.2026)
+
+Andi hatte am 25./26.08. den Anbietervergleich (Digital Beat vs. Krasenbrink/Anton Guehl) fertiggestellt und Matthias per Mail geschickt — bewusst zurückhaltend formuliert (Anrede „Matthes", explizit als reine Entscheidungsgrundlage ohne eigene Forderung, siehe Mail-Entwurf in dieser Session). Matthias' Antwort per E-Mail (26.08.2026) ist eine klare, inhaltlich gut begründete Priorisierung:
+
+- **Reihenfolge klargestellt:** Erst gemeinsam die B+H-Prozesse analysieren, konkrete Verbesserungspotenziale definieren und erste sinnvolle Maßnahmen umsetzen — mit Andis **aktuellem** Wissen und Können, bis zu einem für B+H sichtbaren Ergebnis (nicht nur konzeptionell).
+- **Erst wenn dabei eine echte fachliche Grenze erreicht wird**, soll konkret geprüft werden, ob eine Weiterbildung oder externe Fachkompetenz für eine spezielle Aufgabe nötig ist.
+- **Finanzierungs-Diskussion zum Lehrgang (50/50-Split) explizit zurückgestellt** — Matthias will nicht zusätzliche Kosten für Lehrgänge/externe Berater aufbauen, bevor der praktische Nutzen der laufenden Zusammenarbeit nachgewiesen ist. Wörtlich: „Wir haben mit deinem Engagement bereits einen Kostenblock, dessen praktischen Nutzen wir zunächst gemeinsam nachweisen müssen."
+- Formuliert es auch als Chance für Andi, konkreten Mehrwert zu zeigen, bevor über zusätzliche Investitionen gesprochen wird.
+
+**Konsequenz für das Projekt:** Digital-Beat-Lehrgang, Krasenbrink-Vergleich und die 50/50-Kostensplit-Frage sind **pausiert, nicht abgesagt** — sie kommen erst wieder auf den Tisch, wenn im laufenden Projekt eine konkrete fachliche Grenze erreicht wird. Priorität jetzt: die Mitarbeiteranalysen (ab 31.08.) durchziehen und daraus schnell sichtbare, konkrete erste Maßnahmen für B+H ableiten und umsetzen — nicht nur Konzepte liefern. Das ist auch inhaltlich eine faire Position von Matthias, kein Vertrauensproblem.
+
+**NÄCHSTES:** Antwort an Matthias, die den Kurswechsel akzeptiert und den Fokus auf konkrete erste Maßnahmen bestätigt, noch offen (Stand 26.08., 15:04 Uhr).
