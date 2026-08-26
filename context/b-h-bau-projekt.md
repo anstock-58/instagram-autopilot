@@ -259,7 +259,7 @@ Andi hatte am 25./26.08. den Anbietervergleich (Digital Beat vs. Krasenbrink/Ant
 
 **Wichtig, Stand 26.08.2026: Der Ball liegt jetzt bei B+H, nicht bei Andi**, auf drei offenen Punkten:
 1. Mitarbeiteranalysen (ab 31.08.) — Andi liefert nur die Fragenkataloge, die eigentliche Durchführung und die Ergebnisse müssen von B+H kommen, bevor Andi darauf aufbauen kann.
-2. Erste Honorarrechnung (2026-08-001, 1.500 €) — noch nicht bestätigt, Andi wartet auf das OK von B+H.
+2. Erste Honorarrechnung (2026-08-001, 1.500 €) und der Honorarvertrag Diagnose-Phase — **beide liegen nur als fertige Entwürfe vor, keins von beiden ist bisher unterschrieben bzw. tatsächlich verschickt** (Andi-Klarstellung 26.08.2026). Das Rechnungsdatum (25.08.2026) muss vor dem tatsächlichen Versand noch auf den echten Versandtag aktualisiert werden, sonst stimmt das 7-Tage-Zahlungsziel nicht mehr. Formal ist die Diagnose-Phase damit auch vertraglich noch nicht gestartet, nicht nur die Umsetzung.
 3. NRW.BANK-Förderfrage — weiterhin offen, beeinflusst auch, ab wann die eigentliche KI-Unterstützung (Phase B) überhaupt beginnen darf (Vorhabenbeginn-Regel aus der Förderrichtlinie).
 
 Solange diese drei Punkte offen sind, kann Andi nicht sinnvoll weiter vorpreschen — das nächste konkrete To-do liegt bei B+H, nicht bei ihm.
