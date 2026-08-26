@@ -265,3 +265,5 @@ Andi hatte am 25./26.08. den Anbietervergleich (Digital Beat vs. Krasenbrink/Ant
 Solange diese drei Punkte offen sind, kann Andi nicht sinnvoll weiter vorpreschen — das nächste konkrete To-do liegt bei B+H, nicht bei ihm.
 
 **Antwort von Matthias auf die Honorarvertrags-Frage (26.08.2026):** Der Vertrag wird am 02.09.2026 besprochen, ebenso die weitere Vorgehensweise. Die Geschäftsführungs-Sitzung ist jetzt für den 10.09.2026 angedacht (**löst den zuvor genannten 01.09.2026-Termin ab** — neuer Termin, nicht zusätzlich). Matthias kündigt an, sich am 27.08.2026 nochmal mit Details zu melden.
+
+**Wichtige Einordnung von Andi (26.08.2026): Matthias ist persönlich Befürworter des Projekts, hat aber nicht die Mehrheit in der Firma.** Erklärt die vorsichtige Gangart und warum vieles (Honorarvertrag, Lehrgangs-/Förderfrage) erst über die GF-Sitzung am 10.09.2026 läuft, nicht allein über Matthias entschieden wird. Die GF-Sitzung ist damit der eigentliche Entscheidungspunkt, nicht nur eine Formalität — passt zur bekannten Konstellation (Lilli Kettenbach alleinige Geschäftsführerin, Matthias' Söhne Mitgesellschafter, siehe oben).
