@@ -255,4 +255,11 @@ Andi hatte am 25./26.08. den Anbietervergleich (Digital Beat vs. Krasenbrink/Ant
 
 **Konsequenz für das Projekt:** Digital-Beat-Lehrgang, Krasenbrink-Vergleich und die 50/50-Kostensplit-Frage sind **pausiert, nicht abgesagt** — sie kommen erst wieder auf den Tisch, wenn im laufenden Projekt eine konkrete fachliche Grenze erreicht wird. Priorität jetzt: die Mitarbeiteranalysen (ab 31.08.) durchziehen und daraus schnell sichtbare, konkrete erste Maßnahmen für B+H ableiten und umsetzen — nicht nur Konzepte liefern. Das ist auch inhaltlich eine faire Position von Matthias, kein Vertrauensproblem.
 
-**NÄCHSTES:** Antwort an Matthias, die den Kurswechsel akzeptiert und den Fokus auf konkrete erste Maßnahmen bestätigt, noch offen (Stand 26.08., 15:04 Uhr).
+**NÄCHSTES:** Antwort an Matthias verschickt (26.08.2026), akzeptiert den Kurswechsel, Anrede „Matthes", ohne Rechtfertigung, mit dem Hinweis, dass die Recherche zum externen Spezialisten wegen der TÜV-Rheinland-Zertifizierung als möglichem Qualitätsnachweis gegenüber Auftraggebern/Förderbanken gedacht war, nicht aus persönlichem Bedarf, und dass die Entscheidung darüber immer bei B+H lag. Der Digital-Beat-Starttermin (02.09.2026) wurde bewusst NICHT erwähnt, um keinen Zeitdruck zu erzeugen — Kurs beginnt trotzdem an dem Datum, falls das Thema doch schneller wieder relevant wird.
+
+**Wichtig, Stand 26.08.2026: Der Ball liegt jetzt bei B+H, nicht bei Andi**, auf drei offenen Punkten:
+1. Mitarbeiteranalysen (ab 31.08.) — Andi liefert nur die Fragenkataloge, die eigentliche Durchführung und die Ergebnisse müssen von B+H kommen, bevor Andi darauf aufbauen kann.
+2. Erste Honorarrechnung (2026-08-001, 1.500 €) — noch nicht bestätigt, Andi wartet auf das OK von B+H.
+3. NRW.BANK-Förderfrage — weiterhin offen, beeinflusst auch, ab wann die eigentliche KI-Unterstützung (Phase B) überhaupt beginnen darf (Vorhabenbeginn-Regel aus der Förderrichtlinie).
+
+Solange diese drei Punkte offen sind, kann Andi nicht sinnvoll weiter vorpreschen — das nächste konkrete To-do liegt bei B+H, nicht bei ihm.
