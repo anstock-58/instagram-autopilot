@@ -263,3 +263,5 @@ Andi hatte am 25./26.08. den Anbietervergleich (Digital Beat vs. Krasenbrink/Ant
 3. NRW.BANK-Förderfrage — weiterhin offen, beeinflusst auch, ab wann die eigentliche KI-Unterstützung (Phase B) überhaupt beginnen darf (Vorhabenbeginn-Regel aus der Förderrichtlinie).
 
 Solange diese drei Punkte offen sind, kann Andi nicht sinnvoll weiter vorpreschen — das nächste konkrete To-do liegt bei B+H, nicht bei ihm.
+
+**Antwort von Matthias auf die Honorarvertrags-Frage (26.08.2026):** Der Vertrag wird am 02.09.2026 besprochen, ebenso die weitere Vorgehensweise. Die Geschäftsführungs-Sitzung ist jetzt für den 10.09.2026 angedacht (**löst den zuvor genannten 01.09.2026-Termin ab** — neuer Termin, nicht zusätzlich). Matthias kündigt an, sich am 27.08.2026 nochmal mit Details zu melden.
