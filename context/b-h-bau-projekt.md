@@ -30,6 +30,8 @@ Matthias Bieker ist ein Freund von Andi, über den die ganze KI-Prozessberatung 
 
 Matthias Bieker hat Andis Fragen zum Unternehmen bereits per Mail direkt beantwortet (nicht über das digitale Interview-Formular, siehe Abschnitt „Digitale Erhebungsformulare" unten — den Link dazu hat er zwar bekommen, aber bewusst nicht genutzt, wollte das eigentliche Gespräch erst am Montag abwarten).
 
+**Anrede in Mails an Matthias (Stand 26.08.2026):** immer „Hallo Matthes", „Hey Matthes" oder „Hi Matthes" — nicht „Lieber Matthias".
+
 ## Erster Termin: STATTGEFUNDEN — Donnerstag, 20.08.2026
 
 Ursprünglich für Montag, 03.08.2026, geplant, dann verschoben, dann für 11:00 Uhr final bestätigt. Fand statt, verlief aber deutlich anders als vorbereitet.
