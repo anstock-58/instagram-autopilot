@@ -2534,3 +2534,16 @@
 2026-08-27 19:52:27 | Baue Video mit FFmpeg...
 2026-08-27 19:52:27 | Gesamtdauer Audio: 572.1 Sekunden - 58 Sekunden pro Bild (1450 Frames)
 2026-08-27 19:52:49 | Untertitel werden eingebrannt: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Psychologie_Loslassen\untertitel.ass
+2026-08-27 19:58:03 | Bild 7 gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Gedanken_Koerper_Verbindung\bild-07.jpg (552KB)
+2026-08-27 19:58:03 | Bild 8 generieren...
+2026-08-27 19:58:03 | fal.ai Request ID: 01a0445f-2c67-7bf0-8e98-fc0ab13735a9
+2026-08-27 19:58:07 | Bild 8 gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Gedanken_Koerper_Verbindung\bild-08.jpg (270KB)
+2026-08-27 19:58:07 | Bild 9 generieren...
+2026-08-27 19:58:08 | fal.ai Request ID: 01a0445f-3e38-77c0-8427-720eab311b91
+2026-08-27 19:58:12 | Bild 9 gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Gedanken_Koerper_Verbindung\bild-09.jpg (394KB)
+2026-08-27 19:58:12 | Bild 10 generieren...
+2026-08-27 19:58:13 | fal.ai Request ID: 01a0445f-51c3-7c61-832b-0140b5440fed
+2026-08-27 19:58:18 | Bild 10 gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Gedanken_Koerper_Verbindung\bild-10.jpg (623KB)
+2026-08-27 19:58:18 | Generiere Thumbnail: Buddha-Modus...
+2026-08-27 19:58:19 | Canvas-Hintergrund: RGB(0,100,80)
+2026-08-27 19:58:19 | Buddha-Pose: leaning forward with knowing grin
