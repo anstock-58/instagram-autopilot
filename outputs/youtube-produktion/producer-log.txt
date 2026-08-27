@@ -2547,3 +2547,62 @@
 2026-08-27 19:58:18 | Generiere Thumbnail: Buddha-Modus...
 2026-08-27 19:58:19 | Canvas-Hintergrund: RGB(0,100,80)
 2026-08-27 19:58:19 | Buddha-Pose: leaning forward with knowing grin
+2026-08-27 19:58:24 | Buddha-Bild generiert.
+2026-08-27 19:58:29 | Hintergrund entfernt.
+2026-08-27 19:58:29 | Buddha-Thumbnail gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Gedanken_Koerper_Verbindung\thumbnail.jpg
+2026-08-27 19:58:29 | Thumbnail-Archiv: YouTube_Thumbnail_Bewusst_Einfach-64.jpg
+2026-08-27 19:58:29 | Ermittle Audiodauer...
+2026-08-27 19:58:29 | Baue Video mit FFmpeg...
+2026-08-27 19:58:29 | Gesamtdauer Audio: 418.5 Sekunden - 42 Sekunden pro Bild (1050 Frames)
+2026-08-27 19:58:37 | Untertitel werden eingebrannt: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Gedanken_Koerper_Verbindung\untertitel.ass
+2026-08-27 20:00:28 | Musik geladen: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\Medien\Musik\zen-garden-standard.mp3
+2026-08-27 20:00:46 | Video fertig: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Gedanken_Koerper_Verbindung\video_fertig.mp4
+2026-08-27 20:00:47 | WARNUNG: Video nur 418 Sek (7 Min) - Ziel ist mindestens 8 Minuten (480 Sek). Skript pruefen.
+2026-08-27 20:00:47 | Lade Video auf YouTube hoch (Kanal: BewusstEinfach)...
+2026-08-27 20:00:47 | Footer fuer Kanal 'BewusstEinfach' angehaengt.
+2026-08-27 20:00:50 | Upload: 32% (8 MB / 24.6 MB)
+2026-08-27 20:00:51 | Upload: 65% (16 MB / 24.6 MB)
+2026-08-27 20:00:53 | Upload: 97% (24 MB / 24.6 MB)
+2026-08-27 20:00:54 | Upload: 100% (24.6 MB / 24.6 MB)
+2026-08-27 20:00:54 | Video hochgeladen (nicht gelistet): https://www.youtube.com/watch?v=6t_UiBurltw
+2026-08-27 20:01:02 | Thumbnail hochgeladen.
+2026-08-27 20:01:02 | YouTube Studio: https://studio.youtube.com/video/6t_UiBurltw/edit
+2026-08-27 20:01:02 | Bitte pruefen und auf Oeffentlich schalten.
+2026-08-27 20:01:02 | Setze vollstaendige Beschreibung...
+2026-08-27 20:01:02 | Vollstaendige Beschreibung gesetzt.
+2026-08-27 20:01:02 | Status auf Produziert gesetzt.
+2026-08-27 20:01:02 | === Produktion abgeschlossen: Die Verbindung zwischen Gedanken und Körper | Was die Forschung wirklich sagt ===
+2026-08-27 20:01:02 | YouTube URL: https://www.youtube.com/watch?v=6t_UiBurltw
+2026-08-27 20:01:02 | Starte Produktion: Selbstheilung beginnt hier | 7 Dinge die dein Nervensystem braucht
+2026-08-27 20:01:02 | Generiere Audio via ElevenLabs...
+2026-08-27 20:01:02 | Generiere Audio mit Timestamps (Untertitel-Modus)...
+2026-08-27 20:02:08 | Audio + ASS-Untertitel gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Selbstheilung_Nervensystem\untertitel.ass
+2026-08-27 20:02:08 | Audio gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Selbstheilung_Nervensystem\voiceover.mp3
+2026-08-27 20:02:08 | Kapitelmarken erstellt: 6 Kapitel, Gesamtdauer 464 Sek.
+2026-08-27 20:02:08 | Visueller Stil: Illustration-Zen - generiere Aquarell-Illustrationen via fal.ai...
+2026-08-27 20:02:08 | Bild 1 generieren...
+2026-08-27 20:02:09 | fal.ai Request ID: 01a04462-ec38-7271-bd6b-4a90c3ab5a6f
+2026-08-27 20:02:17 | Bild 1 gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Selbstheilung_Nervensystem\bild-01.jpg (392KB)
+2026-08-27 20:02:17 | Bild 2 generieren...
+2026-08-27 20:02:17 | fal.ai Request ID: 01a04463-0cda-74f3-91db-1562c44d9646
+2026-08-27 20:02:25 | Bild 2 gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Selbstheilung_Nervensystem\bild-02.jpg (323KB)
+2026-08-27 20:02:25 | Bild 3 generieren...
+2026-08-27 20:02:25 | fal.ai Request ID: 01a04463-2c61-7b31-8f9f-563832edd995
+2026-08-27 20:02:31 | Bild 3 gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Selbstheilung_Nervensystem\bild-03.jpg (573KB)
+2026-08-27 20:02:31 | Bild 4 generieren...
+2026-08-27 20:02:31 | fal.ai Request ID: 01a04463-41f5-7132-a3b2-7fed1bc3fe8e
+2026-08-27 20:02:36 | Bild 4 gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Selbstheilung_Nervensystem\bild-04.jpg (461KB)
+2026-08-27 20:02:36 | Bild 5 generieren...
+2026-08-27 20:02:36 | fal.ai Request ID: 01a04463-56bd-7e81-b0ee-60a17090644e
+2026-08-27 20:02:41 | Bild 5 gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Selbstheilung_Nervensystem\bild-05.jpg (352KB)
+2026-08-27 20:02:41 | Bild 6 generieren...
+2026-08-27 20:02:41 | fal.ai Request ID: 01a04463-69c3-7800-a05a-ca67da5563d6
+2026-08-27 20:02:46 | Bild 6 gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Selbstheilung_Nervensystem\bild-06.jpg (683KB)
+2026-08-27 20:02:46 | Bild 7 generieren...
+2026-08-27 20:02:47 | fal.ai Request ID: 01a04463-7fc6-7f61-9f95-3180d734403c
+2026-08-27 20:02:51 | Bild 7 gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Selbstheilung_Nervensystem\bild-07.jpg (292KB)
+2026-08-27 20:02:51 | Bild 8 generieren...
+2026-08-27 20:02:52 | fal.ai Request ID: 01a04463-92d3-7d90-baa2-b9c9b3b2120f
+2026-08-27 20:02:56 | Bild 8 gespeichert: C:\Users\Andreas\Medien_Business\Business_YT_Bewusst_Einfach\YT-Videos\WEISHEIT\Selbstheilung_Nervensystem\bild-08.jpg (419KB)
+2026-08-27 20:02:56 | Bild 9 generieren...
+2026-08-27 20:02:57 | fal.ai Request ID: 01a04463-a70d-7921-abaa-ec7c95427b38
