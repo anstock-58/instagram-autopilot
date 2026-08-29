@@ -374,3 +374,5 @@
 2026-08-28 17:50:39 | Status auf 'Gepostet' gesetzt.
 2026-08-28 17:50:40 | Erster Kommentar gesetzt.
 2026-08-28 17:50:40 | === Fertig ===
+2026-08-29 17:50:42 | === LinkedIn Trigger | 29.08.2026 | 17:50 | CSV: contentplan_linkedin_august_v1.csv ===
+2026-08-29 17:50:42 | Kein geplanter Post fuer heute (29.08.2026). Fertig.
