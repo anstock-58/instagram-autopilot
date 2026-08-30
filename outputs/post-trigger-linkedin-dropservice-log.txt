@@ -247,3 +247,5 @@
 2026-08-28 17:50:40 | Kein geplanter Dropservice-Post fuer heute (28.08.2026). Fertig.
 2026-08-29 17:50:43 | === Dropservice LinkedIn Trigger | 29.08.2026 | 17:50 | CSV: contentplan_linkedin_dropservice_august_v1.csv ===
 2026-08-29 17:50:43 | Kein geplanter Dropservice-Post fuer heute (29.08.2026). Fertig.
+2026-08-30 17:50:44 | === Dropservice LinkedIn Trigger | 30.08.2026 | 17:50 | CSV: contentplan_linkedin_dropservice_august_v1.csv ===
+2026-08-30 17:50:44 | Kein geplanter Dropservice-Post fuer heute (30.08.2026). Fertig.
