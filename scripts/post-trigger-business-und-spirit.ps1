@@ -175,9 +175,9 @@ function Render-Local {
         $line3 = $line3 -replace ":", "\:" -replace "'", "'\\'''"
 
         $box = "box=1:boxcolor=white@0.85:boxborderw=14"
-        $dt = "drawtext=fontfile='$fontFile':text='$line1':x=(w-tw)/2:y=h*0.63:fontsize=40:fontcolor=#1A2230:$box," +
-              "drawtext=fontfile='$fontFile':text='$line2':x=(w-tw)/2:y=h*0.72:fontsize=40:fontcolor=#1A2230:$box," +
-              "drawtext=fontfile='$fontFile':text='$line3':x=(w-tw)/2:y=h*0.81:fontsize=34:fontcolor=#1A2230:$box"
+        $dt = "drawtext=fontfile='$fontFile':text='$line1':x=(w-tw)/2:y=h*0.63:fontsize=32:fontcolor=#1A2230:$box," +
+              "drawtext=fontfile='$fontFile':text='$line2':x=(w-tw)/2:y=h*0.72:fontsize=32:fontcolor=#1A2230:$box," +
+              "drawtext=fontfile='$fontFile':text='$line3':x=(w-tw)/2:y=h*0.81:fontsize=26:fontcolor=#1A2230:$box"
 
         if ($overlayText.Trim() -eq "") {
             # Story-Modus: nur Original-Ton entfernen + Musik drauf, kein Text
