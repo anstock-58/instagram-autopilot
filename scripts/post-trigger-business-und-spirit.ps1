@@ -148,7 +148,7 @@ function Wait-ForVideoUrl {
 }
 
 function Render-Local {
-    param([string]$videoUrl, [string]$overlayText = "")
+    param([string]$videoUrl, [string]$overlayText = "", [bool]$isStory = $false)
 
     $falKey     = if ($env:FAL_KEY) { $env:FAL_KEY } else { "7600112e-4d6f-4202-b107-b899fe36595c:4faa681903cdd51d757c18b7d0cc6c11" }
     $falHeaders = @{ "Authorization" = "Key $falKey"; "Content-Type" = "application/json" }
@@ -175,9 +175,17 @@ function Render-Local {
         $line3 = $line3 -replace ":", "\:" -replace "'", "'\\'''"
 
         $box = "box=1:boxcolor=white@0.85:boxborderw=14"
-        $dt = "drawtext=fontfile='$fontFile':text='$line1':x=(w-tw)/2:y=h*0.63:fontsize=32:fontcolor=#1A2230:$box," +
-              "drawtext=fontfile='$fontFile':text='$line2':x=(w-tw)/2:y=h*0.72:fontsize=32:fontcolor=#1A2230:$box," +
-              "drawtext=fontfile='$fontFile':text='$line3':x=(w-tw)/2:y=h*0.81:fontsize=26:fontcolor=#1A2230:$box"
+        # Story: Text oben (nicht ueber Bildmitte), Reel: Text unten
+        if ($isStory) {
+            $y1 = "h*0.06"; $y2 = "h*0.15"; $y3 = "h*0.24"
+        } else {
+            $y1 = "h*0.63"; $y2 = "h*0.72"; $y3 = "h*0.81"
+        }
+        $dtParts = @()
+        if ($line1 -ne "") { $dtParts += "drawtext=fontfile='$fontFile':text='$line1':x=(w-tw)/2:y=$y1:fontsize=32:fontcolor=#1A2230:$box" }
+        if ($line2 -ne "") { $dtParts += "drawtext=fontfile='$fontFile':text='$line2':x=(w-tw)/2:y=$y2:fontsize=32:fontcolor=#1A2230:$box" }
+        if ($line3 -ne "") { $dtParts += "drawtext=fontfile='$fontFile':text='$line3':x=(w-tw)/2:y=$y3:fontsize=26:fontcolor=#1A2230:$box" }
+        $dt = $dtParts -join ","
 
         if ($overlayText.Trim() -eq "") {
             # Story-Modus: nur Original-Ton entfernen + Musik drauf, kein Text
@@ -402,7 +410,7 @@ foreach ($row in $heuteRows) {
         if ($overlayText -or $typ -eq "Story") {
             $modus = if ($typ -eq "Story") { "Story (Musik" + $(if ($overlayText) { " + Text" } else { ", kein Text" }) + ")" } else { "Reel + Overlay + Musik" }
             Write-Log "FFmpeg-Modus: $modus"
-            $renderedUrl = Render-Local -videoUrl $directImageUrl -overlayText $overlayText
+            $renderedUrl = Render-Local -videoUrl $directImageUrl -overlayText $overlayText -isStory ($typ -eq "Story")
             if ($renderedUrl) {
                 Write-Log "FFmpeg OK: $renderedUrl"
                 $videoUrl = $renderedUrl
