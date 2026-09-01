@@ -175,17 +175,13 @@ function Render-Local {
         $line3 = $line3 -replace ":", "\:" -replace "'", "'\\'''"
 
         $box = "box=1:boxcolor=white@0.85:boxborderw=14"
-        # Story: Text oben (nicht ueber Bildmitte), Reel: Text unten
-        if ($isStory) {
-            $y1 = "h*0.06"; $y2 = "h*0.15"; $y3 = "h*0.24"
-        } else {
-            $y1 = "h*0.63"; $y2 = "h*0.72"; $y3 = "h*0.81"
-        }
-        $dtParts = @()
-        if ($line1 -ne "") { $dtParts += "drawtext=fontfile='$fontFile':text='$line1':x=(w-tw)/2:y=$y1:fontsize=32:fontcolor=#1A2230:$box" }
-        if ($line2 -ne "") { $dtParts += "drawtext=fontfile='$fontFile':text='$line2':x=(w-tw)/2:y=$y2:fontsize=32:fontcolor=#1A2230:$box" }
-        if ($line3 -ne "") { $dtParts += "drawtext=fontfile='$fontFile':text='$line3':x=(w-tw)/2:y=$y3:fontsize=26:fontcolor=#1A2230:$box" }
-        $dt = $dtParts -join ","
+        # Story: Text oben (absolute Pixel), Reel: Text unten (relativ)
+        $y1 = if ($isStory) { "110" } else { "h*0.63" }
+        $y2 = if ($isStory) { "210" } else { "h*0.72" }
+        $y3 = if ($isStory) { "300" } else { "h*0.81" }
+        $dt = "drawtext=fontfile='$fontFile':text='$line1':x=(w-tw)/2:y=$y1:fontsize=32:fontcolor=#1A2230:$box"
+        if ($line2 -ne "") { $dt += ",drawtext=fontfile='$fontFile':text='$line2':x=(w-tw)/2:y=$y2:fontsize=32:fontcolor=#1A2230:$box" }
+        if ($line3 -ne "") { $dt += ",drawtext=fontfile='$fontFile':text='$line3':x=(w-tw)/2:y=$y3:fontsize=26:fontcolor=#1A2230:$box" }
 
         if ($overlayText.Trim() -eq "") {
             # Story-Modus: nur Original-Ton entfernen + Musik drauf, kein Text
