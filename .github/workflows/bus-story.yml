@@ -27,6 +27,9 @@ jobs:
             echo "paused=false" >> $GITHUB_OUTPUT
           fi
 
+      - name: FFmpeg installieren
+        run: sudo apt-get install -y ffmpeg
+
       - name: Story posten
         if: steps.pause_check.outputs.paused == 'false'
         env:
