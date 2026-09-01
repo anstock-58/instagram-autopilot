@@ -11497,3 +11497,49 @@ LinkedIn:  aktiv âœ…
 2026-09-01 16:03:06 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
 2026-09-01 16:08:06 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
 2026-09-01 16:08:07 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-01 16:13:07 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-01 16:13:07 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-01 16:18:07 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-01 16:18:07 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-01 16:23:07 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-01 16:23:07 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-01 16:28:07 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-01 16:28:07 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-01 16:33:07 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-01 16:33:29 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-01 16:38:29 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-01 16:38:29 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-01 16:43:29 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-01 16:43:29 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-01 16:48:29 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-01 16:48:29 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-01 16:53:29 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-01 16:53:29 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-01 16:58:29 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-01 16:58:30 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-01 17:03:30 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-01 17:03:30 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-01 17:08:30 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-01 17:08:30 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-01 17:13:30 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-01 17:13:30 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-01 17:18:30 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-01 17:18:30 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-01 17:23:30 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-01 17:23:31 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-01 17:28:31 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-01 17:28:31 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-01 17:33:31 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-01 17:33:31 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-01 17:38:31 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-01 17:38:31 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-01 17:43:31 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-01 17:43:31 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-01 17:48:31 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-01 17:48:32 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-01 17:53:32 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-01 17:53:53 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-01 17:58:53 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-01 17:58:53 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-01 21:07:49 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-01 21:07:50 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
