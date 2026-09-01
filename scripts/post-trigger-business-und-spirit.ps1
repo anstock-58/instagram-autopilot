@@ -399,19 +399,10 @@ foreach ($row in $heuteRows) {
     $directImageUrl = $row.'Bild-URL'.Trim()
     if ($directImageUrl -and $directImageUrl -match "^https://") {
         $overlayText = $row.'Text-Overlay'.Trim()
-        if ($overlayText -and $typ -ne "Story") {
-            Write-Log "FFmpeg-Modus: Video + Overlay + Musik rendern"
+        if ($overlayText -or $typ -eq "Story") {
+            $modus = if ($typ -eq "Story") { "Story (Musik" + $(if ($overlayText) { " + Text" } else { ", kein Text" }) + ")" } else { "Reel + Overlay + Musik" }
+            Write-Log "FFmpeg-Modus: $modus"
             $renderedUrl = Render-Local -videoUrl $directImageUrl -overlayText $overlayText
-            if ($renderedUrl) {
-                Write-Log "FFmpeg OK: $renderedUrl"
-                $videoUrl = $renderedUrl
-            } else {
-                Write-Log "FFmpeg fehlgeschlagen — nutze Original-Video ohne Overlay"
-                $videoUrl = $directImageUrl
-            }
-        } elseif ($typ -eq "Story") {
-            Write-Log "FFmpeg-Modus: Story — Original-Ton raus, Musik drauf"
-            $renderedUrl = Render-Local -videoUrl $directImageUrl -overlayText ""
             if ($renderedUrl) {
                 Write-Log "FFmpeg OK: $renderedUrl"
                 $videoUrl = $renderedUrl
