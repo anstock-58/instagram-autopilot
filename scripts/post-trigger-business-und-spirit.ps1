@@ -197,13 +197,15 @@ function Render-Local {
             $ffmpegOut | Select-Object -Last 20 | ForEach-Object { Write-Log "ffmpeg: $_" }
         } elseif (Test-Path $musicFile) {
             Write-Log "FFmpeg: Render mit Text + Musik (Font: $fontFile)..."
+            Write-Log "FFmpeg dt: [$($dt)]"
+            $fc = "[0:v]$($dt)[v];[1:a]volume=0.15[a]"
             $ffmpegOut = & ffmpeg -y -i $inputFile -i $musicFile `
-                -filter_complex "[0:v]$dt[v];[1:a]volume=0.15[a]" `
+                -filter_complex $fc `
                 -map "[v]" -map "[a]" -shortest -c:v libx264 -c:a aac $outputFile 2>&1
             $ffmpegOut | Select-Object -Last 20 | ForEach-Object { Write-Log "ffmpeg: $_" }
         } else {
             Write-Log "FFmpeg: Render mit Text (kein Musikfile)..."
-            $ffmpegOut = & ffmpeg -y -i $inputFile -vf $dt -c:v libx264 -c:a copy $outputFile 2>&1
+            $ffmpegOut = & ffmpeg -y -i $inputFile -vf "$($dt)" -c:v libx264 -c:a copy $outputFile 2>&1
             $ffmpegOut | Select-Object -Last 20 | ForEach-Object { Write-Log "ffmpeg: $_" }
         }
 
