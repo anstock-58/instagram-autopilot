@@ -148,7 +148,7 @@ function Wait-ForVideoUrl {
 }
 
 function Render-Local {
-    param([string]$videoUrl, [string]$overlayText)
+    param([string]$videoUrl, [string]$overlayText = "")
 
     $falKey     = if ($env:FAL_KEY) { $env:FAL_KEY } else { "7600112e-4d6f-4202-b107-b899fe36595c:4faa681903cdd51d757c18b7d0cc6c11" }
     $falHeaders = @{ "Authorization" = "Key $falKey"; "Content-Type" = "application/json" }
@@ -179,7 +179,19 @@ function Render-Local {
               "drawtext=fontfile='$fontFile':text='$line2':x=(w-tw)/2:y=h*0.72:fontsize=40:fontcolor=#1A2230:$box," +
               "drawtext=fontfile='$fontFile':text='$line3':x=(w-tw)/2:y=h*0.81:fontsize=34:fontcolor=#1A2230:$box"
 
-        if (Test-Path $musicFile) {
+        if ($overlayText.Trim() -eq "") {
+            # Story-Modus: nur Original-Ton entfernen + Musik drauf, kein Text
+            if (Test-Path $musicFile) {
+                Write-Log "FFmpeg: Story-Modus (Musik, kein Text)..."
+                $ffmpegOut = & ffmpeg -y -i $inputFile -i $musicFile `
+                    -filter_complex "[1:a]volume=0.15[a]" `
+                    -map "0:v" -map "[a]" -shortest -c:v copy -c:a aac $outputFile 2>&1
+            } else {
+                Write-Log "FFmpeg: Story-Modus (stumm, kein Musikfile)..."
+                $ffmpegOut = & ffmpeg -y -i $inputFile -an -c:v copy $outputFile 2>&1
+            }
+            $ffmpegOut | Select-Object -Last 20 | ForEach-Object { Write-Log "ffmpeg: $_" }
+        } elseif (Test-Path $musicFile) {
             Write-Log "FFmpeg: Render mit Text + Musik (Font: $fontFile)..."
             $ffmpegOut = & ffmpeg -y -i $inputFile -i $musicFile `
                 -filter_complex "[0:v]$dt[v];[1:a]volume=0.15[a]" `
@@ -395,6 +407,16 @@ foreach ($row in $heuteRows) {
                 $videoUrl = $renderedUrl
             } else {
                 Write-Log "FFmpeg fehlgeschlagen — nutze Original-Video ohne Overlay"
+                $videoUrl = $directImageUrl
+            }
+        } elseif ($typ -eq "Story") {
+            Write-Log "FFmpeg-Modus: Story — Original-Ton raus, Musik drauf"
+            $renderedUrl = Render-Local -videoUrl $directImageUrl -overlayText ""
+            if ($renderedUrl) {
+                Write-Log "FFmpeg OK: $renderedUrl"
+                $videoUrl = $renderedUrl
+            } else {
+                Write-Log "FFmpeg fehlgeschlagen — nutze Original-Video"
                 $videoUrl = $directImageUrl
             }
         } else {
