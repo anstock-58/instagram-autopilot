@@ -28,7 +28,7 @@ jobs:
           fi
 
       - name: FFmpeg installieren
-        run: sudo apt-get install -y ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y --fix-missing ffmpeg
 
       - name: Story posten
         if: steps.pause_check.outputs.paused == 'false'
