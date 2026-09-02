@@ -2957,3 +2957,22 @@
 2026-09-02 15:58:10 | Lade Video auf YouTube hoch (Kanal: InnerCode)...
 2026-09-02 16:09:41 | === YouTube Producer gestartet ===
 2026-09-02 16:09:41 | Kein offenes Video gefunden. Nichts zu tun.
+2026-09-02 16:10:19 | === YouTube Producer gestartet ===
+2026-09-02 16:10:19 | Starte Produktion: Du stirbst zweimal. Das erste Mal passiert gerade.
+2026-09-02 16:10:20 | Audio bereits vorhanden, ElevenLabs wird übersprungen: C:\Users\Andreas\Medien_Business\Business_YT_InnerCode\YouTube_Videos\BEWUSSTSEIN_UND_LEBEN\Zweimal_Sterben_Video_1\voiceover.mp3
+2026-09-02 16:10:20 | Kapitelmarken erstellt: 1 Kapitel, Gesamtdauer 512 Sek.
+2026-09-02 16:10:20 | Visueller Stil: KI-Portraits - generiere Bilder via fal.ai...
+2026-09-02 16:10:20 | Bild 1 bereits vorhanden (453KB), uebersprungen.
+2026-09-02 16:10:20 | Bild 2 bereits vorhanden (493KB), uebersprungen.
+2026-09-02 16:10:20 | Bild 3 bereits vorhanden (385KB), uebersprungen.
+2026-09-02 16:10:20 | Bild 4 bereits vorhanden (441KB), uebersprungen.
+2026-09-02 16:10:20 | Bild 5 bereits vorhanden (874KB), uebersprungen.
+2026-09-02 16:10:20 | Bild 6 bereits vorhanden (374KB), uebersprungen.
+2026-09-02 16:10:20 | Bild 7 bereits vorhanden (437KB), uebersprungen.
+2026-09-02 16:10:20 | Bild 8 bereits vorhanden (384KB), uebersprungen.
+2026-09-02 16:10:20 | Bild 9 bereits vorhanden (435KB), uebersprungen.
+2026-09-02 16:10:20 | Bild 10 bereits vorhanden (436KB), uebersprungen.
+2026-09-02 16:10:20 | Thumbnail bereits vorhanden, uebersprungen: C:\Users\Andreas\Medien_Business\Business_YT_InnerCode\YouTube_Videos\BEWUSSTSEIN_UND_LEBEN\Zweimal_Sterben_Video_1\thumbnail.jpg
+2026-09-02 16:10:20 | Ermittle Audiodauer...
+2026-09-02 16:10:20 | Baue Video mit FFmpeg...
+2026-09-02 16:10:20 | Gesamtdauer Audio: 512.1 Sekunden - 52 Sekunden pro Bild (1300 Frames)
