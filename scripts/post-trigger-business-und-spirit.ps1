@@ -197,7 +197,7 @@ function Render-Local {
         $y1 = if ($isStory) { "110" } else { "h*0.63" }
         $y2 = if ($isStory) { "210" } else { "h*0.72" }
         $y3 = if ($isStory) { "300" } else { "h*0.81" }
-        $fs = if ($isStory) { 26 } else { 32 }
+        $fs = if ($isStory) { 22 } else { 32 }
         $dt = "drawtext=fontfile='$fontFile':text='$line1':x=(w-tw)/2:y=$($y1):fontsize=$($fs):fontcolor=#1A2230:$box"
         if ($line2 -ne "") { $dt += ",drawtext=fontfile='$fontFile':text='$line2':x=(w-tw)/2:y=$($y2):fontsize=$($fs):fontcolor=#1A2230:$box" }
         if ($line3 -ne "") { $dt += ",drawtext=fontfile='$fontFile':text='$line3':x=(w-tw)/2:y=$($y3):fontsize=26:fontcolor=#1A2230:$box" }
