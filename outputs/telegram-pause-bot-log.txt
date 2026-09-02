@@ -11821,3 +11821,13 @@ LinkedIn:  aktiv âœ…
 2026-09-02 22:15:51 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
 2026-09-02 22:20:51 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
 2026-09-02 22:20:51 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-02 22:25:51 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-02 22:25:51 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-02 22:30:51 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-02 22:30:51 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-02 22:35:51 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-02 22:35:51 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-02 22:40:51 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-02 22:40:51 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-02 22:45:51 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-02 22:45:52 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
