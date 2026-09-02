@@ -11789,3 +11789,7 @@ LinkedIn:  aktiv âœ…
 2026-09-02 20:55:27 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
 2026-09-02 21:00:27 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
 2026-09-02 21:00:27 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-02 21:05:27 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-02 21:05:27 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
+2026-09-02 21:10:27 | === Telegram Pause Bot gestartet | Offset: 795558846 ===
+2026-09-02 21:10:48 | FEHLER beim Abrufen der Telegram-Updates: {"ok":false,"error_code":409,"description":"Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"}
