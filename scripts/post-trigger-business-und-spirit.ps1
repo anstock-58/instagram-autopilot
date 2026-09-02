@@ -156,7 +156,25 @@ function Render-Local {
     $tmpDir     = [System.IO.Path]::GetTempPath()
     $inputFile  = Join-Path $tmpDir "bus_input_$(Get-Random).mp4"
     $outputFile = Join-Path $tmpDir "bus_output_$(Get-Random).mp4"
-    $musicFile  = Join-Path $basePath "music\background-chill.mp3"
+    $musicTracks = @(
+        "background-chill.mp3",
+        "joyinsound-corporate-background-music-quiet-progress-507151.mp3",
+        "joyinsound-driving-progress-507159.mp3",
+        "music_for_video-just-relax-11157.mp3",
+        "soulfuljamtracks-inspiring-epic-cinematic-247677.mp3",
+        "moodmode-no-copyright-music-201745.mp3",
+        "nastelbom-no-copyright-music-513426.mp3",
+        "ikoliks_aj-no-copyright-music-468179.mp3",
+        "nell444-house-deep-house-527106.mp3",
+        "nell444-house-deep-house-527109.mp3",
+        "desifreemusic-copyright-free-background-music-no-copyright-music-406802.mp3",
+        "kontraa-no-sleep-hiphop-music-473847.mp3",
+        "kontraa-whip-afro-dancehall-music-110235.mp3",
+        "desifreemusic-rising-tension-dramatic-snare-build-505313.mp3"
+    )
+    $musicIdx  = (Get-Date).Day % $musicTracks.Count
+    $musicFile = Join-Path $basePath "music\$($musicTracks[$musicIdx])"
+    Write-Log "Musik: $($musicTracks[$musicIdx]) (Track $($musicIdx + 1)/$($musicTracks.Count))"
     $fontFile   = if ($env:GITHUB_WORKSPACE) { "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" } else { "C\:/Windows/Fonts/arialbd.ttf" }
 
     try {
@@ -179,8 +197,9 @@ function Render-Local {
         $y1 = if ($isStory) { "110" } else { "h*0.63" }
         $y2 = if ($isStory) { "210" } else { "h*0.72" }
         $y3 = if ($isStory) { "300" } else { "h*0.81" }
-        $dt = "drawtext=fontfile='$fontFile':text='$line1':x=(w-tw)/2:y=$($y1):fontsize=32:fontcolor=#1A2230:$box"
-        if ($line2 -ne "") { $dt += ",drawtext=fontfile='$fontFile':text='$line2':x=(w-tw)/2:y=$($y2):fontsize=32:fontcolor=#1A2230:$box" }
+        $fs = if ($isStory) { 26 } else { 32 }
+        $dt = "drawtext=fontfile='$fontFile':text='$line1':x=(w-tw)/2:y=$($y1):fontsize=$($fs):fontcolor=#1A2230:$box"
+        if ($line2 -ne "") { $dt += ",drawtext=fontfile='$fontFile':text='$line2':x=(w-tw)/2:y=$($y2):fontsize=$($fs):fontcolor=#1A2230:$box" }
         if ($line3 -ne "") { $dt += ",drawtext=fontfile='$fontFile':text='$line3':x=(w-tw)/2:y=$($y3):fontsize=26:fontcolor=#1A2230:$box" }
 
         if ($overlayText.Trim() -eq "") {
