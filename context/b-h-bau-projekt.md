@@ -303,3 +303,17 @@ Nach einem Microsoft-bedingten Komplettausfall hat Matthias über Nacht mit Chat
 - **10.09.2026 GF-Sitzung:** Hier ist Andi selbst dabei, muss zu den ihn persönlich betreffenden Punkten (Budget, Rolle, Zusammenarbeitsmodell, Laptop/ChatGPT-Vorschlag) Stellung beziehen — der eigentlich für Andi entscheidende Termin.
 
 **NÄCHSTES:** Matthias' Antwort zur Budget/Förderungs-Überschneidung abwarten, Ergebnis der Gesellschafterversammlung am 02.09. abwarten, dann Vorbereitung für die eigene Positionierung am 10.09.
+
+## Telefonat mit Matthias und Neustart der Zusammenarbeit (02.09.2026)
+
+Nach der Gesellschafterversammlung am Vormittag hat Matthias mit Andi telefoniert: Es geht jetzt richtig los, gemeinsame Analyse-Termine, Andi wird eingebunden. B+H hat aktuell reale Liquiditätsprobleme, viele Dinge liegen brach, Matthias sieht großen analytischen Handlungsbedarf.
+
+**Wichtige Entscheidung zum Honorarvertrag (auf Matthias' ausdrücklichen Wunsch):**
+- Der Vertrag für diese erste Phase soll **bewusst „ohne KI"** formuliert sein, primär als Prozess-/Struktur-/Organisationsanalyse, nicht als KI-Beratung. §1 entsprechend umformuliert (ergebnisoffen, ohne Festlegung auf Werkzeuge/Technologien).
+- Rechnung bleibt **pauschal bei 1.500 €**, aber mit einem **separaten Stundennachweis als Anlage** (nicht Teil der Rechnung selbst), der die 1.500 € über Stunden herleitet.
+- **Stundensatz: 30 €/Std.** (= 50 Std. für die 1.500 €). Grund laut Matthias: gute Verkaufbarkeit gegenüber den Gesellschaftern, sein Bild dazu: „Wir haben es mit einem Abstiegskandidaten zu tun, nicht mit einem Premier-League-Verein."
+- **Wichtig, von Andi bestätigt (02.09.2026): Die 30 €/Std. sind ausdrücklich nur ein Einstiegspreis für diese erste, bereits gelaufene Analysephase, kein Dauersatz.** Muss am 10.09. explizit klargestellt werden, sonst wird die niedrige Zahl zum Anker für die künftige Vergütung (die im Masterplan-Entwurf mit ca. 100 €/h bzw. bis 3.000 €/Monat deutlich höher angesetzt war).
+
+**Umgesetzt (02.09.2026):** Honorarvertrag §1 angepasst, Rechnungsdatum auf 02.09.2026 aktualisiert (Hinweis „Anlage: Stundennachweis" ergänzt), neuer Stundennachweis erstellt (11 Positionen, 20.08.–02.09.2026, 50,0 Std. × 30 € = 1.500 €, aus dem dokumentierten Projektverlauf rekonstruiert, noch von Andi gegenzuprüfen). Alle drei Dokumente in `B+H GmbH/Dokumente/01_Vertraege-Rechnungen/`.
+
+**NÄCHSTES:** Stundennachweis von Andi auf Richtigkeit prüfen/anpassen, dann Vertrag/Rechnung an Matthias schicken. Bei der Positionierung am 10.09. den Einstiegspreis-Charakter der 30 €/Std. aktiv ansprechen, bevor er als Dauersatz missverstanden wird.
