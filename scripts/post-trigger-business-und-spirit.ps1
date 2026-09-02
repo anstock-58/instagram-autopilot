@@ -181,11 +181,22 @@ function Render-Local {
         Write-Log "FFmpeg: Video herunterladen..."
         Invoke-WebRequest -Uri $videoUrl -OutFile $inputFile -ErrorAction Stop
 
-        # Overlay-Text in 3 Zeilen aufteilen
+        # Overlay-Text in Zeilen aufteilen; zu lange erste Zeile automatisch umbrechen
         $lines = $overlayText -split "`n"
         $line1 = if ($lines.Count -gt 0) { $lines[0].Trim() } else { "" }
         $line2 = if ($lines.Count -gt 1) { $lines[1].Trim() } else { "" }
         $line3 = if ($lines.Count -gt 2) { $lines[2].Trim() } else { "" }
+        # Story: Zeile 1 bei > 28 Zeichen am letzten Leerzeichen umbrechen
+        if ($isStory -and $line1.Length -gt 28) {
+            $cutAt = $line1.LastIndexOf(' ', 28)
+            if ($cutAt -lt 0) { $cutAt = $line1.IndexOf(' ') }
+            if ($cutAt -gt 0) {
+                $extra = $line1.Substring($cutAt).Trim()
+                $line1  = $line1.Substring(0, $cutAt).Trim()
+                $line3  = $line2  # Schreib CHECK. rückt eine Zeile nach unten
+                $line2  = $extra
+            }
+        }
 
         # Sonderzeichen escapen fuer FFmpeg drawtext
         $line1 = $line1 -replace ":", "\:" -replace "'", "'\\'''"
@@ -197,7 +208,7 @@ function Render-Local {
         $y1 = if ($isStory) { "110" } else { "h*0.63" }
         $y2 = if ($isStory) { "210" } else { "h*0.72" }
         $y3 = if ($isStory) { "300" } else { "h*0.81" }
-        $fs = if ($isStory) { 22 } else { 32 }
+        $fs = if ($isStory) { 24 } else { 32 }
         $dt = "drawtext=fontfile='$fontFile':text='$line1':x=(w-tw)/2:y=$($y1):fontsize=$($fs):fontcolor=#1A2230:$box"
         if ($line2 -ne "") { $dt += ",drawtext=fontfile='$fontFile':text='$line2':x=(w-tw)/2:y=$($y2):fontsize=$($fs):fontcolor=#1A2230:$box" }
         if ($line3 -ne "") { $dt += ",drawtext=fontfile='$fontFile':text='$line3':x=(w-tw)/2:y=$($y3):fontsize=26:fontcolor=#1A2230:$box" }
