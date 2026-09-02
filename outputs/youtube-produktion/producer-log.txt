@@ -2955,3 +2955,5 @@
 2026-09-02 15:58:10 | Video fertig: C:\Users\Andreas\Medien_Business\Business_YT_InnerCode\YouTube_Videos\BEWUSSTSEIN_UND_LEBEN\Zweimal_Sterben_Video_1\video_fertig.mp4
 2026-09-02 15:58:10 | QC: Videodauer 8.5 Min - OK.
 2026-09-02 15:58:10 | Lade Video auf YouTube hoch (Kanal: InnerCode)...
+2026-09-02 16:09:41 | === YouTube Producer gestartet ===
+2026-09-02 16:09:41 | Kein offenes Video gefunden. Nichts zu tun.
