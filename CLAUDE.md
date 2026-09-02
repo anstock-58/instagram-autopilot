@@ -31,20 +31,13 @@ Dies ist ein **Claude Workspace Template** — eine strukturierte Umgebung, die 
 Alle Texte die für Andreas Stock geschrieben werden, folgen diesem Stil.
 
 **Grundprinzip**
-Texte sollen sich anfühlen, als hätte sie ein echter Mensch geschrieben. Klar, direkt, natürlich. Nicht geschniegelt. Nicht künstlich. Nicht wie ein Lehrbuch oder Werbetext.
+Schreibe Texte, die sich anfühlen, als hätte sie ein echter Mensch geschrieben. Klar, direkt, natürlich. Nicht geschniegelt. Nicht künstlich. Nicht wie ein Lehrbuch, Werbetext oder eine perfekt formulierte KI-Antwort. Schreibe so, als würde ein erfahrener Mensch einem klugen Gegenüber etwas persönlich erklären.
 
 **Stimme und Haltung**
-- Ruhig, direkt, menschlich
-- Keine künstliche Motivation, kein Predigen, kein erhobener Zeigefinger
-- Der Autor muss nicht auf alles eine Antwort haben
-- Darf nachdenklich sein, etwas offenlassen, auch sagen wenn etwas schwierig ist
-- Haltung: Mensch mit Lebenserfahrung — nicht Opfer, nicht Guru
+Die Sprache ist ruhig, direkt und menschlich. Keine künstliche Motivation. Kein Predigen. Kein erhobener Zeigefinger. Der Autor muss nicht so klingen, als hätte er auf alles eine Antwort. Er darf nachdenklich sein. Er darf etwas offenlassen. Er darf auch sagen, wenn etwas schwierig, widersprüchlich oder unbequem ist. Die Haltung ist die eines Menschen mit Lebenserfahrung, der selbst Krisen, Zweifel und Veränderungen kennt. Nicht als Opfer. Nicht als Guru. Sondern als jemand, der ehrlich über Dinge spricht.
 
 **Sprachstil**
-- Unterschiedliche Satzlängen — kurze und lange Sätze wechseln sich ab
-- Absätze bewusst einsetzen, damit Gedanken Raum bekommen
-- Kleine Brüche sind erlaubt
-- Natürlichkeit ist wichtiger als sprachliche Perfektion
+Verwende unterschiedliche Satzlängen. Auf längere, ruhigere Sätze dürfen kurze Sätze folgen. Manchmal reicht ein Satz. Oder auch nur eine kurze Zeile. Nutze Absätze bewusst, damit Gedanken Raum bekommen. Ein Text darf kleine Brüche haben. Nicht jeder Gedanke muss perfekt ausformuliert werden. Nicht jede Aussage muss vollständig erklärt werden. Natürlichkeit ist wichtiger als sprachliche Perfektion.
 
 **Verbotene Formulierungen**
 - „In der heutigen Zeit", „Zudem", „Darüber hinaus", „Nicht zuletzt"
@@ -53,10 +46,11 @@ Texte sollen sich anfühlen, als hätte sie ein echter Mensch geschrieben. Klar,
 - Keine künstliche Business-Sprache, keine KI-Floskeln
 - Keine leeren Motivationssätze, keine übertriebenen Superlative
 - Keine perfekt symmetrisch aufgebauten Absätze
+- Keine gleich langen Sätze hintereinander
+- Keine unnötigen Wiederholungen
 
 **Kein künstliches Ende**
-- Kein automatisches Fazit oder Zusammenfassung am Ende
-- Der Text darf mit einem Gedanken, einer offenen Frage oder klaren Aussage enden
+Kein automatisches Fazit oder Zusammenfassung am Ende. Der Text darf mit einem Gedanken, einer offenen Frage oder klaren Aussage enden.
 
 ---
 
