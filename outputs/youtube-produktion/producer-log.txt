@@ -3003,3 +3003,39 @@
 2026-09-02 16:27:49 | Video fertig: C:\Users\Andreas\Medien_Business\Business_YT_InnerCode\YouTube_Videos\BEWUSSTSEIN_UND_LEBEN\Zweimal_Sterben_Video_1\video_fertig.mp4
 2026-09-02 16:27:49 | QC: Videodauer 8.5 Min - OK.
 2026-09-02 16:27:49 | Lade Video auf YouTube hoch (Kanal: InnerCode)...
+2026-09-02 16:34:17 | === YouTube Producer gestartet ===
+2026-09-02 16:34:17 | Starte Produktion: Du stirbst zweimal. Das erste Mal passiert gerade.
+2026-09-02 16:34:17 | Audio bereits vorhanden, ElevenLabs wird übersprungen: C:\Users\Andreas\Medien_Business\Business_YT_InnerCode\YouTube_Videos\BEWUSSTSEIN_UND_LEBEN\Zweimal_Sterben_Video_1\voiceover.mp3
+2026-09-02 16:34:18 | Kapitelmarken erstellt: 1 Kapitel, Gesamtdauer 512 Sek.
+2026-09-02 16:34:18 | Visueller Stil: KI-Portraits - generiere Bilder via fal.ai...
+2026-09-02 16:34:18 | Bild 1 bereits vorhanden (453KB), uebersprungen.
+2026-09-02 16:34:18 | Bild 2 bereits vorhanden (493KB), uebersprungen.
+2026-09-02 16:34:18 | Bild 3 bereits vorhanden (385KB), uebersprungen.
+2026-09-02 16:34:18 | Bild 4 bereits vorhanden (441KB), uebersprungen.
+2026-09-02 16:34:18 | Bild 5 bereits vorhanden (874KB), uebersprungen.
+2026-09-02 16:34:18 | Bild 6 bereits vorhanden (374KB), uebersprungen.
+2026-09-02 16:34:18 | Bild 7 bereits vorhanden (437KB), uebersprungen.
+2026-09-02 16:34:18 | Bild 8 bereits vorhanden (384KB), uebersprungen.
+2026-09-02 16:34:18 | Bild 9 bereits vorhanden (435KB), uebersprungen.
+2026-09-02 16:34:18 | Bild 10 bereits vorhanden (436KB), uebersprungen.
+2026-09-02 16:34:18 | Thumbnail bereits vorhanden, uebersprungen: C:\Users\Andreas\Medien_Business\Business_YT_InnerCode\YouTube_Videos\BEWUSSTSEIN_UND_LEBEN\Zweimal_Sterben_Video_1\thumbnail.jpg
+2026-09-02 16:34:18 | Ermittle Audiodauer...
+2026-09-02 16:34:18 | Baue Video mit FFmpeg...
+2026-09-02 16:34:18 | Gesamtdauer Audio: 512.1 Sekunden - 52 Sekunden pro Bild (1300 Frames)
+2026-09-02 16:36:35 | Musik geladen: https://cdn.pixabay.com/audio/2026/04/23/audio_a45fc6bbad.mp3
+2026-09-02 16:36:48 | Video fertig: C:\Users\Andreas\Medien_Business\Business_YT_InnerCode\YouTube_Videos\BEWUSSTSEIN_UND_LEBEN\Zweimal_Sterben_Video_1\video_fertig.mp4
+2026-09-02 16:36:48 | QC: Videodauer 8.5 Min - OK.
+2026-09-02 16:36:48 | Lade Video auf YouTube hoch (Kanal: InnerCode)...
+2026-09-02 16:36:48 | Footer fuer Kanal 'InnerCode' angehaengt.
+2026-09-02 16:36:52 | Upload: 39% (8 MB / 20.8 MB)
+2026-09-02 16:36:53 | Upload: 77% (16 MB / 20.8 MB)
+2026-09-02 16:36:56 | Upload: 100% (20.8 MB / 20.8 MB)
+2026-09-02 16:36:56 | Video hochgeladen (nicht gelistet): https://www.youtube.com/watch?v=_j5vwcCzseE
+2026-09-02 16:37:03 | Thumbnail hochgeladen.
+2026-09-02 16:37:03 | YouTube Studio: https://studio.youtube.com/video/_j5vwcCzseE/edit
+2026-09-02 16:37:04 | Bitte pruefen und auf Oeffentlich schalten.
+2026-09-02 16:37:04 | Setze vollstaendige Beschreibung...
+2026-09-02 16:37:04 | Vollstaendige Beschreibung gesetzt.
+2026-09-02 16:37:04 | Status auf Produziert gesetzt.
+2026-09-02 16:37:04 | === Produktion abgeschlossen: Du stirbst zweimal. Das erste Mal passiert gerade. ===
+2026-09-02 16:37:04 | YouTube URL: https://www.youtube.com/watch?v=_j5vwcCzseE
