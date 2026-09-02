@@ -264,7 +264,9 @@ function Render-Local {
         return $init.file_url
 
     } catch {
-        Write-Log "FEHLER Render-Local: $_"
+        $errMsg = $_.Exception.Message
+        $errStatus = try { $_.Exception.Response.StatusCode.value__ } catch { "?" }
+        Write-Log "FEHLER Render-Local: $errMsg (HTTP $errStatus)"
         return $null
     } finally {
         if (Test-Path $inputFile)  { Remove-Item $inputFile  -Force -ErrorAction SilentlyContinue }
