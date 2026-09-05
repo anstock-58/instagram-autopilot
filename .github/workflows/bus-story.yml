@@ -36,6 +36,7 @@ jobs:
           BLOTATO_API_KEY: ${{ secrets.BLOTATO_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           POST_TYPE: story
+          GITHUB_TOKEN: ${{ github.token }}
           GITHUB_WORKSPACE: ${{ github.workspace }}
           TZ: Europe/Berlin
         shell: pwsh
