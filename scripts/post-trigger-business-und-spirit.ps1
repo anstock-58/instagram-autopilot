@@ -150,9 +150,6 @@ function Wait-ForVideoUrl {
 function Render-Local {
     param([string]$videoUrl, [string]$overlayText = "", [bool]$isStory = $false)
 
-    $falKey     = if ($env:FAL_KEY) { $env:FAL_KEY } else { "7600112e-4d6f-4202-b107-b899fe36595c:4faa681903cdd51d757c18b7d0cc6c11" }
-    $falHeaders = @{ "Authorization" = "Key $falKey"; "Content-Type" = "application/json" }
-
     $tmpDir     = [System.IO.Path]::GetTempPath()
     $inputFile  = Join-Path $tmpDir "bus_input_$(Get-Random).mp4"
     $outputFile = Join-Path $tmpDir "bus_output_$(Get-Random).mp4"
@@ -244,24 +241,30 @@ function Render-Local {
             return $null
         }
 
-        Write-Log "FFmpeg OK. Hochladen auf fal.ai..."
-        $fileName = "bus_rendered_$(Get-Date -Format 'yyyyMMdd_HHmmss').mp4"
-        $initBody = @{ file_name = $fileName; content_type = "video/mp4" } | ConvertTo-Json
-        $init = Invoke-RestMethod -Uri "https://rest.alpha.fal.ai/storage/upload/initiate" `
-            -Method POST -Headers $falHeaders `
-            -Body ([System.Text.Encoding]::UTF8.GetBytes($initBody)) `
-            -ContentType "application/json; charset=utf-8" -ErrorAction Stop
+        Write-Log "FFmpeg OK. Hochladen auf GitHub Releases..."
+        $fileName   = "bus_rendered_$(Get-Date -Format 'yyyyMMdd_HHmmss').mp4"
+        $ghToken    = $env:GITHUB_TOKEN
+        $ghHeaders  = @{ "Authorization" = "token $ghToken"; "Accept" = "application/vnd.github.v3+json" }
+        $repoApi    = "https://api.github.com/repos/anstock-58/instagram-autopilot"
+        $releaseTag = "rendered-videos"
 
-        $fileBytes = [System.IO.File]::ReadAllBytes($outputFile)
+        # Release holen oder anlegen
         try {
-            Invoke-RestMethod -Uri $init.upload_url -Method PUT -Body $fileBytes `
-                -ContentType "video/mp4" -ErrorAction Stop | Out-Null
+            $release = Invoke-RestMethod -Uri "$repoApi/releases/tags/$releaseTag" -Headers $ghHeaders -ErrorAction Stop
         } catch {
-            if ($_.Exception.Response.StatusCode.value__ -notin @(200, 204)) { throw }
+            $releaseBody = @{ tag_name = $releaseTag; name = "Rendered Videos"; draft = $false; prerelease = $false } | ConvertTo-Json
+            $release = Invoke-RestMethod -Uri "$repoApi/releases" -Method POST -Headers $ghHeaders `
+                -Body ([System.Text.Encoding]::UTF8.GetBytes($releaseBody)) -ContentType "application/json" -ErrorAction Stop
         }
 
-        Write-Log "Upload OK: $($init.file_url)"
-        return $init.file_url
+        # Asset hochladen
+        $uploadUrl     = $release.upload_url -replace '\{[^}]+\}', "?name=$fileName"
+        $fileBytes     = [System.IO.File]::ReadAllBytes($outputFile)
+        $uploadHeaders = @{ "Authorization" = "token $ghToken"; "Content-Type" = "video/mp4" }
+        $uploaded      = Invoke-RestMethod -Uri $uploadUrl -Method POST -Headers $uploadHeaders -Body $fileBytes -ErrorAction Stop
+
+        Write-Log "Upload OK: $($uploaded.browser_download_url)"
+        return $uploaded.browser_download_url
 
     } catch {
         $errMsg = $_.Exception.Message
